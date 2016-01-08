@@ -1,0 +1,69 @@
+= Ikonli
+:linkattrs:
+:project-owner: aalmiray
+:project-repo: kordamp
+:project-name: ikonli-core
+
+image:http://img.shields.io/badge/license-GPL3-blue.svg["GPL3 Licensed", link="http://opensource.org/licenses/GPL3"]
+image:http://img.shields.io/badge/license-ASL2-blue.svg["ASL3 Licensed", link="http://opensource.org/licenses/ASL2"]
+image:https://api.bintray.com/packages/{project-owner}/{project-repo}/{project-name}/images/download.svg[link="https://bintray.com/{project-owner}/{project-repo}/{project-name}/_latestVersion"]
+
+---
+
+Ikonli provides icon packs that can be used in Java applications. Currently Swing and JavaFX UI toolkits are supported.
+
+== Licensing
+
+Ikonli is open source software with dual licensing, under GPLv3 and ASLv2. GPLv3 is the base license that governs all
+source code. If you make use of Ikonli with either the link:https://github.com/griffon/griffon[Griffon Framework] or
+the link:https://github.com/basilisk-fw/basilisk[Basilisk Framework] then the GPLv3 is suspended and ASLv2 applies.
+
+== Installing
+
+You can get the latest version of **Ikonli** directly from link:https://bintray.com[Bintray's JCenter] repository.
+
+Refer to the link:http://aalmiray.github.io/ikonli/[guide, window="_blank"] for further information on configuration
+and usage.
+
+== Building
+
+You must meet the following requirements:
+
+ * JDK8u40 as a minimum
+ * Gradle 2.10
+
+You may used the included gradle wrapper script if you don't have `gradle` installed.
+
+=== Installing Gradle
+
+.Manual
+
+ . Download Gradle from http://gradle.org/downloads
+ . Unzip the file into a directory without spaces (recommended).
+ . Create a GRADLE_HOME environment variable that points to this directory.
+ . Adjust your PATH environment variable to include $GRADLE_HOME/bin (%GRADLE_HOME%\bin on Windows).
+ . Test your setup by invoking `gradle --version`.
+
+.GVM
+
+ . Follow the instructions found at http://gvmtool.net/ to install GVM.
+ . You need a POSIX environment if running Windows. We recommend using Babun Shell (http://babun.github.io/)
+ . Once GVM is installed invoke `gvm install gradle 2.6`.
+ . Test your setup by invoking `gradle --version`.
+
+.Gdub
+
+GDub is a wrapper script that facilitates invoking gradle tasks anywhere within a Gradle project. It's smart enough
+to use the gradle wrapper if available or your global gradle command. This is an optional download.
+
+ . Follow the instructions found at https://github.com/dougborg/gdub to install gdub
+
+=== Next Steps
+
+ . Make a full build issuing `gradle build`.
+ . Run the sampler application by invoking the following commands
+[source]
+----
+$ cd subprojects/sampler
+$ gradle run
+----

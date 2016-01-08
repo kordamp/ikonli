@@ -1,0 +1,7 @@
+apply from: rootProject.file('gradle/javafx.gradle')
+
+dependencies {
+    compileOnly project.files(project.jfxrtLocation)
+    testCompileOnly project.files(project.jfxrtLocation)
+    compile project(':ikonli-core')
+}

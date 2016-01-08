@@ -1,0 +1,140 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.4.0'
+        classpath 'nl.javadude.gradle.plugins:license-gradle-plugin:0.11.0'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.5'
+        classpath 'org.ajoberstar:gradle-git:1.3.2'
+        classpath 'org.kordamp.gradle:stats-gradle-plugin:0.1.5'
+        classpath 'com.github.ben-manes:gradle-versions-plugin:0.11.3'
+    }
+}
+
+apply plugin: 'org.ajoberstar.github-pages'
+
+allprojects {
+    apply plugin: 'base'
+    apply plugin: 'idea'
+    apply plugin: 'com.github.ben-manes.versions'
+
+    repositories {
+        jcenter()
+    }
+
+    if (JavaVersion.current().isJava8Compatible()) {
+        tasks.withType(Javadoc) {
+            options.addStringOption('Xdoclint:none', '-quiet')
+        }
+    }
+}
+
+idea {
+    project {
+        jdkName "1.8"
+        languageLevel "1.8"
+    }
+}
+
+subprojects { subproj ->
+    apply plugin: 'java'
+    apply plugin: 'com.github.kt3k.coveralls'
+    apply plugin: 'org.kordamp.gradle.stats'
+    apply from: rootProject.file('gradle/code-coverage.gradle')
+    apply from: rootProject.file('gradle/code-quality.gradle')
+
+    configurations {
+        compileOnly
+        testCompileOnly
+    }
+
+    subproj.tasks.withType(JavaCompile) {
+        sourceCompatibility = subproj.sourceCompatibility
+        targetCompatibility = subproj.targetCompatibility
+    }
+
+    repositories {
+        jcenter()
+    }
+
+    sourceSets {
+        main {
+            compileClasspath += [configurations.compileOnly]
+        }
+        test {
+            compileClasspath += [configurations.testCompileOnly]
+        }
+    }
+
+    javadoc {
+        classpath += [configurations.compileOnly]
+    }
+
+    idea {
+        module {
+            scopes.PROVIDED.plus += [configurations.compileOnly]
+            scopes.PROVIDED.plus += [configurations.testCompileOnly]
+        }
+    }
+
+    if (subproj.name.contains('pack') || subproj.name.contains('core')) {
+        apply from: rootProject.file('gradle/publishing.gradle')
+
+        javadoc {
+            excludes = ['**/*.html', 'META-INF/**']
+
+            options.use         = true
+            options.splitIndex  = true
+            options.encoding    = 'UTF-8'
+            options.author      = true
+            options.version     = true
+            options.windowTitle = "$project.name $project.version API"
+            options.docTitle    = "$project.name $project.version API"
+            options.links       = ['http://docs.oracle.com/javase/8/docs/api/',
+                                   'http://docs.oracle.com/javase/8/javafx/api/']
+        }
+
+        task sourcesJar(type: Jar) {
+            group 'Build'
+            description 'An archive of the source code'
+            classifier 'sources'
+            from sourceSets.main.allSource
+        }
+
+        task javadocJar(type: Jar) {
+            group 'Build'
+            description 'An archive of the javadoc'
+            classifier 'javadoc'
+            from javadoc.destinationDir
+        }
+
+        jar.finalizedBy sourcesJar
+        jar.finalizedBy javadocJar
+
+        artifacts {
+            sourcesJar
+            javadocJar
+        }
+    }
+}
+
+evaluationDependsOnChildren()
+
+if (!project.hasProperty('githubUsername')) ext.githubUsername = ''
+if (!project.hasProperty('githubPassword')) ext.githubPassword = ''
+
+githubPages {
+    repoUri = project.project_scm
+    pages {
+        from project(':ikonli-guide').guide.outputs.files
+    }
+
+    credentials {
+        username = githubUsername
+        password = githubPassword
+    }
+}
+
+publishGhPages.dependsOn(project(':ikonli-guide').guide)

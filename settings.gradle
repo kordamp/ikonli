@@ -1,0 +1,28 @@
+include 'subprojects/ikonli-core'
+include 'subprojects/ikonli-javafx'
+include 'subprojects/ikonli-swing'
+include 'subprojects/ikonli-devicons-pack'
+include 'subprojects/ikonli-elusive-pack'
+include 'subprojects/ikonli-fontawesome-pack'
+include 'subprojects/ikonli-fontelico-pack'
+include 'subprojects/ikonli-foundation-pack'
+include 'subprojects/ikonli-maki-pack'
+include 'subprojects/ikonli-materialdesign-pack'
+include 'subprojects/ikonli-octicons-pack'
+include 'subprojects/ikonli-openiconic-pack'
+include 'subprojects/ikonli-typicons-pack'
+include 'subprojects/ikonli-weathericons-pack'
+include 'subprojects/ikonli-guide'
+include 'subprojects/sampler'
+
+rootProject.name = 'ikonli'
+rootProject.children.each { project ->
+    int slash = project.name.indexOf('/')
+    String fileBaseName = project.name[(slash + 1)..-1]
+    String projectDirName = project.name
+    project.name = fileBaseName
+    project.projectDir = new File(settingsDir, projectDirName)
+    project.buildFileName = "${fileBaseName}.gradle"
+    assert project.projectDir.isDirectory()
+    assert project.buildFile.isFile()
+}

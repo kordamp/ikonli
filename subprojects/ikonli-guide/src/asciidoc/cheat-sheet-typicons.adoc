@@ -1,0 +1,13 @@
+= Typicons
+
+++++
+<link href='./css/typicons.min.css' rel='stylesheet'>
+<style>
+    .typcn {
+        font-size: 32px;
+    }
+</style>
+++++
+
+include::{projectDir}/build/tmp/_typicons_cheat_sheet.adoc[]
+

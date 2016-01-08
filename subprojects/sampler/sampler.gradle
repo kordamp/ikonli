@@ -1,0 +1,19 @@
+apply from: rootProject.file('gradle/javafx.gradle')
+apply plugin: 'application'
+
+mainClassName = 'org.kordamp.ikonli.Sampler'
+
+dependencies {
+    compile project(':ikonli-javafx')
+    compile project(':ikonli-devicons-pack')
+    compile project(':ikonli-elusive-pack')
+    compile project(':ikonli-fontawesome-pack')
+    compile project(':ikonli-fontelico-pack')
+    compile project(':ikonli-foundation-pack')
+    compile project(':ikonli-maki-pack')
+    compile project(':ikonli-materialdesign-pack')
+    compile project(':ikonli-octicons-pack')
+    compile project(':ikonli-openiconic-pack')
+    compile project(':ikonli-typicons-pack')
+    compile project(':ikonli-weathericons-pack')
+}

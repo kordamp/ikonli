@@ -1,0 +1,48 @@
+
+[[_cheat_sheets]]
+= Icon Packs
+
+== DevIcons
+ * link:http://vorillaz.github.io/devicons/[]
+ * link:cheat-sheet-devicons.html[Cheat-Sheet]
+
+== Elusive
+ * link:https://github.com/fontello/elusive.font[]
+ * link:cheat-sheet-elusive.html[Cheat-Sheet]
+
+== FontAwesome
+ * link:http://fortawesome.github.io/Font-Awesome/[]
+ * link:cheat-sheet-fontawesome.html[Cheat-Sheet]
+
+== Fontelico
+ * link:https://github.com/fontello/fontelico.font[]
+ * link:cheat-sheet-fontelico.html[Cheat-Sheet]
+
+== Foundation
+ * link:http://zurb.com/playground/foundation-icon-fonts-3[]
+ * link:cheat-sheet-foundation.html[Cheat-Sheet]
+
+== Maki
+ * link:https://github.com/mapbox/maki[]
+ * link:cheat-sheet-maki.html[Cheat-Sheet]
+
+== MaterialDesign
+ * link:https://github.com/Templarian/MaterialDesign[]
+ * link:cheat-sheet-materialdesign.html[Cheat-Sheet]
+
+== Octicons
+ * link:https://github.com/github/octicons[]
+ * link:cheat-sheet-octicons.html[Cheat-Sheet]
+
+== OpenIconic
+ * link:https://useiconic.com/open/[]
+ * link:cheat-sheet-openiconic.html[Cheat-Sheet]
+
+== Typicons
+ * link:https://github.com/stephenhutchings/typicons.font[]
+ * link:cheat-sheet-typicons.html[Cheat-Sheet]
+
+== Weathericons
+ * link:http://erikflowers.github.io/weather-icons/[]
+ * link:cheat-sheet-weathericons.html[Cheat-Sheet]
+

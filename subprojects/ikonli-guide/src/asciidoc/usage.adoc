@@ -1,0 +1,47 @@
+
+[[_usage]]
+= Usage
+
+== Swing
+
+The `ikonli-swing:{project-version}` JAR provides a new Icon class: `{api_link_fonticon_swing}`.
+You may use this class with any Swing component that supports an Icon property.
+
+== JavaFX
+
+The `ikonli-javafx:{project-version}` JAR provides a new Node class: `{api_link_fonticon_javafx}`.
+You may use this class with any JavaFX control that accepts a graphic property. You may also use the icon directly as
+it is a subclass of `javafx.scene.control.Label`. The icon class can be used inside an FXML file too.
+
+[source,xml]
+----
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.GridPane?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<GridPane prefHeight="60.0" prefWidth="200.0"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="org.example.AppController">
+    <children>
+        <Button GridPane.columnIndex="0" GridPane.rowIndex="0"
+                mnemonicParsing="false"
+                prefWidth="200.0">
+            <graphic>
+                <FontIcon iconLiteral="di-java" iconSize="64"/>
+            </graphic>
+        </Button>
+    </children>
+</GridPane>
+----
+
+.Stylable Properties
+
+`{api_link_fonticon_javafx}` Exposes the following properties that can be styled using CSS:
+
+[horizontal]
+-fx-icon-code:: An icon literal such as `di-java` or `fa-github`.
+-fx-icon-size:: The size of the icon, in pixels.
+-fx-icon-color:: A JavaFx `Paint` definition, such as a plain color or gradient.
+
