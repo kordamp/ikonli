@@ -2,7 +2,7 @@
 :linkattrs:
 :project-owner: aalmiray
 :project-repo: kordamp
-:project-name: ikonli-core
+:project-name: ikonli
 
 image:http://img.shields.io/badge/license-GPL3-blue.svg["GPL3 Licensed", link="http://opensource.org/licenses/GPL3"]
 image:http://img.shields.io/badge/license-ASL2-blue.svg["ASL3 Licensed", link="http://opensource.org/licenses/ASL2"]
