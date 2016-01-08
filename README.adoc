@@ -48,7 +48,7 @@ You may used the included gradle wrapper script if you don't have `gradle` insta
 
  . Follow the instructions found at http://sdkman.io/ to install SDKMAN.
  . You need a POSIX environment if running Windows. We recommend using Babun Shell (http://babun.github.io/)
- . Once SDKMAN is installed invoke `sdk install gradle 2.6`.
+ . Once SDKMAN is installed invoke `sdk install gradle 2.10`.
  . Test your setup by invoking `gradle --version`.
 
 .Gdub

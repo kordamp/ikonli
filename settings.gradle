@@ -12,8 +12,8 @@ include 'subprojects/ikonli-octicons-pack'
 include 'subprojects/ikonli-openiconic-pack'
 include 'subprojects/ikonli-typicons-pack'
 include 'subprojects/ikonli-weathericons-pack'
-include 'subprojects/ikonli-guide'
-include 'subprojects/sampler'
+include 'subprojects/guide'
+include 'subprojects/sampler-javafx'
 
 rootProject.name = 'ikonli'
 rootProject.children.each { project ->
