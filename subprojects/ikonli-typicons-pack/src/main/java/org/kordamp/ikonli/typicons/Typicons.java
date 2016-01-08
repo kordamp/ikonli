@@ -50,7 +50,6 @@
  */
 package org.kordamp.ikonli.typicons;
 
-import javafx.scene.text.Font;
 import org.kordamp.ikonli.Ikon;
 
 /**
@@ -395,13 +394,6 @@ public enum Typicons implements Ikon {
     ZOOM_OUTLINE("typ-zoom-outline", '\ue14e'),
     ZOOM_OUT_OUTLINE("typ-zoom-out-outline", '\ue14c');
 
-    private static final String FONT_RESOURCE = "META-INF/resources/typicons/2.0.7/fonts/typicons.ttf";
-    private static final Font FONT;
-
-    static {
-        FONT = Font.loadFont(Typicons.class.getClassLoader().getResource(FONT_RESOURCE).toExternalForm(), 16);
-    }
-
     public static Typicons findByDescription(String description) {
         for (Typicons font : values()) {
             if (font.getDescription().equals(description)) {
@@ -411,21 +403,12 @@ public enum Typicons implements Ikon {
         throw new IllegalArgumentException("Icon description '" + description + "' is invalid!");
     }
 
-    public static Font getFont() {
-        return FONT;
-    }
-
     private String description;
     private char code;
 
     Typicons(String description, char code) {
         this.description = description;
         this.code = code;
-    }
-
-    @Override
-    public String getFontFamily() {
-        return FONT.getFamily();
     }
 
     @Override

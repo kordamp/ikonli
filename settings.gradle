@@ -14,6 +14,7 @@ include 'subprojects/ikonli-typicons-pack'
 include 'subprojects/ikonli-weathericons-pack'
 include 'subprojects/guide'
 include 'subprojects/sampler-javafx'
+include 'subprojects/sampler-swing'
 
 rootProject.name = 'ikonli'
 rootProject.children.each { project ->

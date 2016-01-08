@@ -48,35 +48,47 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.kordamp.ikonli.fontawesome;
+package org.kordamp.ikonli.javafx;
 
-import org.kordamp.ikonli.AbstractIkonHandler;
+import javafx.scene.text.Font;
 import org.kordamp.ikonli.Ikon;
 import org.kordamp.ikonli.IkonHandler;
-import org.kordamp.jipsy.ServiceProviderFor;
+
+import java.util.LinkedHashSet;
+import java.util.ServiceLoader;
+import java.util.Set;
 
 /**
  * @author Andres Almiray
  */
-@ServiceProviderFor(IkonHandler.class)
-public class FontAwesomeIkonHandler extends AbstractIkonHandler {
-    @Override
-    public boolean supports(String description) {
-        return description != null && description.startsWith("fa-");
+public class IkonResolver {
+    private static final IkonResolver INSTANCE;
+    private static final Set<IkonHandler> HANDLERS = new LinkedHashSet<>();
+
+    static {
+        INSTANCE = new IkonResolver();
+
+        ServiceLoader<IkonHandler> loader = ServiceLoader.load(IkonHandler.class);
+        for (IkonHandler handler : loader) {
+            HANDLERS.add(handler);
+            handler.setFont(Font.loadFont(IkonResolver.class.getClassLoader().getResource(handler.getFontResourcePath()).toExternalForm(), 16));
+        }
     }
 
-    @Override
-    public Ikon resolve(String description) {
-        return FontAwesome.findByDescription(description);
+    private IkonResolver() {
+
     }
 
-    @Override
-    public String getFontResourcePath() {
-        return "META-INF/resources/fontawesome/4.5.0/fonts/fontawesome-webfont.ttf";
+    public static IkonResolver getInstance() {
+        return INSTANCE;
     }
 
-    @Override
-    public String getFontFamily() {
-        return "FontAwesome";
+    public IkonHandler resolveIkonHandler(String value) {
+        for (IkonHandler handler : HANDLERS) {
+            if (handler.supports(value)) {
+                return handler;
+            }
+        }
+        return null;
     }
 }

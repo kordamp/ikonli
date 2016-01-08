@@ -50,40 +50,17 @@
  */
 package org.kordamp.ikonli;
 
-import java.util.LinkedHashSet;
-import java.util.ServiceLoader;
-import java.util.Set;
-
 /**
  * @author Andres Almiray
  */
-public class IkonResolver {
-    private static final IkonResolver INSTANCE;
-    private static final Set<IkonHandler> HANDLERS = new LinkedHashSet<>();
+public abstract class AbstractIkonHandler implements IkonHandler {
+    private Object font;
 
-    static {
-        INSTANCE = new IkonResolver();
-
-        ServiceLoader<IkonHandler> loader = ServiceLoader.load(IkonHandler.class);
-        for (IkonHandler handler : loader) {
-            HANDLERS.add(handler);
-        }
+    public Object getFont() {
+        return font;
     }
 
-    private IkonResolver() {
-
-    }
-
-    public static IkonResolver getInstance() {
-        return INSTANCE;
-    }
-
-    public Ikon resolve(String value) {
-        for (IkonHandler handler : HANDLERS) {
-            if (handler.supports(value)) {
-                return handler.resolve(value);
-            }
-        }
-        return null;
+    public void setFont(Object font) {
+        this.font = font;
     }
 }

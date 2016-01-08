@@ -54,7 +54,7 @@ import javafx.css.ParsedValue;
 import javafx.css.StyleConverter;
 import javafx.scene.text.Font;
 import org.kordamp.ikonli.Ikon;
-import org.kordamp.ikonli.IkonResolver;
+import org.kordamp.ikonli.javafx.IkonResolver;
 
 /**
  * @author Andres Almiray
@@ -80,7 +80,8 @@ public class IconFontConverter extends StyleConverter<String, Ikon> {
 
     @Override
     public Ikon convert(ParsedValue<String, Ikon> value, Font font) {
-        return IkonResolver.getInstance().resolve(value.getValue().trim());
+        String description = value.getValue().trim();
+        return IkonResolver.getInstance().resolveIkonHandler(description).resolve(description);
     }
 
     public static final class SequenceConverter extends StyleConverter<String, Ikon[]> {
@@ -97,7 +98,8 @@ public class IconFontConverter extends StyleConverter<String, Ikon> {
             String[] descriptions = value.getValue().split(",");
             Ikon[] ikons = new Ikon[descriptions.length];
             for (int i = 0; i < descriptions.length; i++) {
-                ikons[i] = IkonResolver.getInstance().resolve(descriptions[i].trim());
+                String description = descriptions[i].trim();
+                ikons[i] = IkonResolver.getInstance().resolveIkonHandler(description).resolve(description);
             }
             return ikons;
         }

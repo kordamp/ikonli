@@ -48,35 +48,59 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.kordamp.ikonli.fontawesome;
+package org.kordamp.ikonli.swing;
 
-import org.kordamp.ikonli.AbstractIkonHandler;
-import org.kordamp.ikonli.Ikon;
 import org.kordamp.ikonli.IkonHandler;
-import org.kordamp.jipsy.ServiceProviderFor;
+
+import java.awt.Font;
+import java.awt.FontFormatException;
+import java.awt.GraphicsEnvironment;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.LinkedHashSet;
+import java.util.ServiceLoader;
+import java.util.Set;
 
 /**
  * @author Andres Almiray
  */
-@ServiceProviderFor(IkonHandler.class)
-public class FontAwesomeIkonHandler extends AbstractIkonHandler {
-    @Override
-    public boolean supports(String description) {
-        return description != null && description.startsWith("fa-");
+public class IkonResolver {
+    private static final IkonResolver INSTANCE;
+    private static final Set<IkonHandler> HANDLERS = new LinkedHashSet<>();
+
+    static {
+        INSTANCE = new IkonResolver();
+
+        ServiceLoader<IkonHandler> loader = ServiceLoader.load(IkonHandler.class);
+        for (IkonHandler handler : loader) {
+            HANDLERS.add(handler);
+
+            try {
+                InputStream stream = Thread.currentThread().getContextClassLoader().getResourceAsStream(handler.getFontResourcePath());
+                Font font = Font.createFont(Font.TRUETYPE_FONT, stream);
+                GraphicsEnvironment.getLocalGraphicsEnvironment().registerFont(font);
+                stream.close();
+                handler.setFont(font);
+            } catch (FontFormatException | IOException ffe) {
+                throw new IllegalStateException(ffe);
+            }
+        }
     }
 
-    @Override
-    public Ikon resolve(String description) {
-        return FontAwesome.findByDescription(description);
+    private IkonResolver() {
+
     }
 
-    @Override
-    public String getFontResourcePath() {
-        return "META-INF/resources/fontawesome/4.5.0/fonts/fontawesome-webfont.ttf";
+    public static IkonResolver getInstance() {
+        return INSTANCE;
     }
 
-    @Override
-    public String getFontFamily() {
-        return "FontAwesome";
+    public IkonHandler resolve(String value) {
+        for (IkonHandler handler : HANDLERS) {
+            if (handler.supports(value)) {
+                return handler;
+            }
+        }
+        return null;
     }
 }

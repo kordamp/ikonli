@@ -50,7 +50,6 @@
  */
 package org.kordamp.ikonli.fontelico;
 
-import javafx.scene.text.Font;
 import org.kordamp.ikonli.Ikon;
 
 /**
@@ -92,13 +91,6 @@ public enum Fontelico implements Ikon {
     CROWN_MINUS("ftl-crown-minus", '\ue846'),
     MARQUEE("ftl-marquee", '\ue847');
 
-    private static final String FONT_RESOURCE = "META-INF/resources/fontelico/0.0/fonts/fontelico.ttf";
-    private static final Font FONT;
-
-    static {
-        FONT = Font.loadFont(Fontelico.class.getClassLoader().getResource(FONT_RESOURCE).toExternalForm(), 16);
-    }
-
     public static Fontelico findByDescription(String description) {
         for (Fontelico font : values()) {
             if (font.getDescription().equals(description)) {
@@ -108,21 +100,12 @@ public enum Fontelico implements Ikon {
         throw new IllegalArgumentException("Icon description '" + description + "' is invalid!");
     }
 
-    public static Font getFont() {
-        return FONT;
-    }
-
     private String description;
     private char code;
 
     Fontelico(String description, char code) {
         this.description = description;
         this.code = code;
-    }
-
-    @Override
-    public String getFontFamily() {
-        return FONT.getFamily();
     }
 
     @Override

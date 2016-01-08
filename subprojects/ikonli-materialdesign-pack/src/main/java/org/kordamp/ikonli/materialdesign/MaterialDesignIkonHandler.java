@@ -50,6 +50,7 @@
  */
 package org.kordamp.ikonli.materialdesign;
 
+import org.kordamp.ikonli.AbstractIkonHandler;
 import org.kordamp.ikonli.Ikon;
 import org.kordamp.ikonli.IkonHandler;
 import org.kordamp.jipsy.ServiceProviderFor;
@@ -58,7 +59,7 @@ import org.kordamp.jipsy.ServiceProviderFor;
  * @author Andres Almiray
  */
 @ServiceProviderFor(IkonHandler.class)
-public class MaterialDesignIkonHandler implements IkonHandler {
+public class MaterialDesignIkonHandler extends AbstractIkonHandler {
     @Override
     public boolean supports(String description) {
         return description != null && description.startsWith("mdi-");
@@ -67,5 +68,15 @@ public class MaterialDesignIkonHandler implements IkonHandler {
     @Override
     public Ikon resolve(String description) {
         return MaterialDesign.findByDescription(description);
+    }
+
+    @Override
+    public String getFontResourcePath() {
+        return "META-INF/resources/materialdesignicons/1.1.70/fonts/materialdesignicons-webfont.ttf";
+    }
+
+    @Override
+    public String getFontFamily() {
+        return "MaterialDesignIcons";
     }
 }

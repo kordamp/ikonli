@@ -50,6 +50,7 @@
  */
 package org.kordamp.ikonli.octicons;
 
+import org.kordamp.ikonli.AbstractIkonHandler;
 import org.kordamp.ikonli.Ikon;
 import org.kordamp.ikonli.IkonHandler;
 import org.kordamp.jipsy.ServiceProviderFor;
@@ -58,7 +59,7 @@ import org.kordamp.jipsy.ServiceProviderFor;
  * @author Andres Almiray
  */
 @ServiceProviderFor(IkonHandler.class)
-public class OcticonsIkonHandler implements IkonHandler {
+public class OcticonsIkonHandler extends AbstractIkonHandler {
     @Override
     public boolean supports(String description) {
         return description != null && description.startsWith("oct-");
@@ -67,5 +68,15 @@ public class OcticonsIkonHandler implements IkonHandler {
     @Override
     public Ikon resolve(String description) {
         return Octicons.findByDescription(description);
+    }
+
+    @Override
+    public String getFontResourcePath() {
+        return "META-INF/resources/octicons/3.3.0/fonts/octicons.ttf";
+    }
+
+    @Override
+    public String getFontFamily() {
+        return "octicons";
     }
 }

@@ -50,7 +50,6 @@
  */
 package org.kordamp.ikonli.devicons;
 
-import javafx.scene.text.Font;
 import org.kordamp.ikonli.Ikon;
 
 /**
@@ -249,13 +248,6 @@ public enum Devicons implements Ikon {
     YII("di-yii", '\ue682'),
     ZEND("di-zend", '\ue678');
 
-    private static final String FONT_RESOURCE = "META-INF/resources/devicons/1.8.0/fonts/devicons.ttf";
-    private static final Font FONT;
-
-    static {
-        FONT = Font.loadFont(Devicons.class.getClassLoader().getResource(FONT_RESOURCE).toExternalForm(), 16);
-    }
-
     public static Devicons findByDescription(String description) {
         for (Devicons font : values()) {
             if (font.getDescription().equals(description)) {
@@ -265,21 +257,12 @@ public enum Devicons implements Ikon {
         throw new IllegalArgumentException("Icon description '" + description + "' is invalid!");
     }
 
-    public static Font getFont() {
-        return FONT;
-    }
-
     private String description;
     private char code;
 
     Devicons(String description, char code) {
         this.description = description;
         this.code = code;
-    }
-
-    @Override
-    public String getFontFamily() {
-        return FONT.getFamily();
     }
 
     @Override

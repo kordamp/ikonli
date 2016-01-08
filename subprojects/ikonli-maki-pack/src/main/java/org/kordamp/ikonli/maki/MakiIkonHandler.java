@@ -50,6 +50,7 @@
  */
 package org.kordamp.ikonli.maki;
 
+import org.kordamp.ikonli.AbstractIkonHandler;
 import org.kordamp.ikonli.Ikon;
 import org.kordamp.ikonli.IkonHandler;
 import org.kordamp.jipsy.ServiceProviderFor;
@@ -58,7 +59,7 @@ import org.kordamp.jipsy.ServiceProviderFor;
  * @author Andres Almiray
  */
 @ServiceProviderFor(IkonHandler.class)
-public class MakiIkonHandler implements IkonHandler {
+public class MakiIkonHandler extends AbstractIkonHandler {
     @Override
     public boolean supports(String description) {
         return description != null && description.startsWith("maki-");
@@ -67,5 +68,15 @@ public class MakiIkonHandler implements IkonHandler {
     @Override
     public Ikon resolve(String description) {
         return Maki.findByDescription(description);
+    }
+
+    @Override
+    public String getFontResourcePath() {
+        return "META-INF/resources/maki/0.5.0/fonts/maki.ttf";
+    }
+
+    @Override
+    public String getFontFamily() {
+        return "Font Awesome";
     }
 }

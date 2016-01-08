@@ -50,7 +50,6 @@
  */
 package org.kordamp.ikonli.openiconic;
 
-import javafx.scene.text.Font;
 import org.kordamp.ikonli.Ikon;
 
 /**
@@ -282,13 +281,6 @@ public enum Openiconic implements Ikon {
     ZOOM_IN("oi-zoom-in", '\ue0dd'),
     ZOOM_OUT("oi-zoom-out", '\ue0de'),;
 
-    private static final String FONT_RESOURCE = "META-INF/resources/openiconic/1.1.0/fonts/open-iconic.ttf";
-    private static final Font FONT;
-
-    static {
-        FONT = Font.loadFont(Openiconic.class.getClassLoader().getResource(FONT_RESOURCE).toExternalForm(), 16);
-    }
-
     public static Openiconic findByDescription(String description) {
         for (Openiconic font : values()) {
             if (font.getDescription().equals(description)) {
@@ -298,21 +290,12 @@ public enum Openiconic implements Ikon {
         throw new IllegalArgumentException("Icon description '" + description + "' is invalid!");
     }
 
-    public static Font getFont() {
-        return FONT;
-    }
-
     private String description;
     private char code;
 
     Openiconic(String description, char code) {
         this.description = description;
         this.code = code;
-    }
-
-    @Override
-    public String getFontFamily() {
-        return FONT.getFamily();
     }
 
     @Override

@@ -50,7 +50,6 @@
  */
 package org.kordamp.ikonli.maki;
 
-import javafx.scene.text.Font;
 import org.kordamp.ikonli.Ikon;
 
 /**
@@ -121,13 +120,6 @@ public enum Maki implements Ikon {
     TREE_2("maki-tree-2", '\ue83f'),
     WAREHOUSE("maki-warehouse", '\ue840');
 
-    private static final String FONT_RESOURCE = "META-INF/resources/maki/0.5.0/fonts/maki.ttf";
-    private static final Font FONT;
-
-    static {
-        FONT = Font.loadFont(Maki.class.getClassLoader().getResource(FONT_RESOURCE).toExternalForm(), 16);
-    }
-
     public static Maki findByDescription(String description) {
         for (Maki font : values()) {
             if (font.getDescription().equals(description)) {
@@ -137,21 +129,12 @@ public enum Maki implements Ikon {
         throw new IllegalArgumentException("Icon description '" + description + "' is invalid!");
     }
 
-    public static Font getFont() {
-        return FONT;
-    }
-
     private String description;
     private char code;
 
     Maki(String description, char code) {
         this.description = description;
         this.code = code;
-    }
-
-    @Override
-    public String getFontFamily() {
-        return FONT.getFamily();
     }
 
     @Override

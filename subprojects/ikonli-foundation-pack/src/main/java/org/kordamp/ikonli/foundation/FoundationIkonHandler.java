@@ -50,6 +50,7 @@
  */
 package org.kordamp.ikonli.foundation;
 
+import org.kordamp.ikonli.AbstractIkonHandler;
 import org.kordamp.ikonli.Ikon;
 import org.kordamp.ikonli.IkonHandler;
 import org.kordamp.jipsy.ServiceProviderFor;
@@ -58,7 +59,7 @@ import org.kordamp.jipsy.ServiceProviderFor;
  * @author Andres Almiray
  */
 @ServiceProviderFor(IkonHandler.class)
-public class FoundationIkonHandler implements IkonHandler {
+public class FoundationIkonHandler extends AbstractIkonHandler {
     @Override
     public boolean supports(String description) {
         return description != null && description.startsWith("fi-");
@@ -67,5 +68,15 @@ public class FoundationIkonHandler implements IkonHandler {
     @Override
     public Ikon resolve(String description) {
         return Foundation.findByDescription(description);
+    }
+
+    @Override
+    public String getFontResourcePath() {
+        return "META-INF/resources/foundation/3.0/fonts/foundation-icons.ttf";
+    }
+
+    @Override
+    public String getFontFamily() {
+        return "fontcustom";
     }
 }

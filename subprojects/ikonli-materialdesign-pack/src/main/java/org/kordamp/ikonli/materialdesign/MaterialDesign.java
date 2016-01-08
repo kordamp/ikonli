@@ -50,7 +50,6 @@
  */
 package org.kordamp.ikonli.materialdesign;
 
-import javafx.scene.text.Font;
 import org.kordamp.ikonli.Ikon;
 
 /**
@@ -1229,13 +1228,6 @@ public enum MaterialDesign implements Ikon {
     YOUTUBE_PLAY("mdi-youtube-play", '\uf591'),
     ZIP_BOX("mdi-zip-box", '\uf592');
 
-    private static final String FONT_RESOURCE = "META-INF/resources/materialdesignicons/1.1.70/fonts/materialdesignicons-webfont.ttf";
-    private static final Font FONT;
-
-    static {
-        FONT = Font.loadFont(MaterialDesign.class.getClassLoader().getResource(FONT_RESOURCE).toExternalForm(), 16);
-    }
-
     public static MaterialDesign findByDescription(String description) {
         for (MaterialDesign font : values()) {
             if (font.getDescription().equals(description)) {
@@ -1245,21 +1237,12 @@ public enum MaterialDesign implements Ikon {
         throw new IllegalArgumentException("Icon description '" + description + "' is invalid!");
     }
 
-    public static Font getFont() {
-        return FONT;
-    }
-
     private String description;
     private char code;
 
     MaterialDesign(String description, char code) {
         this.description = description;
         this.code = code;
-    }
-
-    @Override
-    public String getFontFamily() {
-        return FONT.getFamily();
     }
 
     @Override

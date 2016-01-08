@@ -57,4 +57,12 @@ public interface IkonHandler {
     boolean supports(String description);
 
     Ikon resolve(String description);
+
+    String getFontResourcePath();
+
+    String getFontFamily();
+
+    Object getFont();
+
+    void setFont(Object font);
 }

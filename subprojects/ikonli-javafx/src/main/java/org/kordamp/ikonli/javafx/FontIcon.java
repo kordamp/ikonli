@@ -65,7 +65,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
 import javafx.scene.text.Text;
 import org.kordamp.ikonli.Ikon;
-import org.kordamp.ikonli.IkonResolver;
+import org.kordamp.ikonli.IkonHandler;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -108,7 +108,7 @@ public class FontIcon extends Text implements Icon {
 
     public FontIcon(String iconCode) {
         this();
-        setIconCode(IkonResolver.getInstance().resolve(iconCode));
+        setIconLiteral(iconCode);
     }
 
     public FontIcon(Ikon iconCode) {
@@ -225,12 +225,13 @@ public class FontIcon extends Text implements Icon {
 
     public void setIconCode(Ikon iconCode) {
         iconCodeProperty().set(requireNonNull(iconCode, "Argument 'code' must not be null"));
-        setStyle(getStyle() + "-fx-font-family: '" + iconCode.getFontFamily() + "';");
+        IkonHandler ikonHandler = IkonResolver.getInstance().resolveIkonHandler(iconCode.getDescription());
+        setStyle(getStyle() + "-fx-font-family: '" + ikonHandler.getFontFamily() + "';");
         setText(String.valueOf(iconCode.getCode()));
     }
 
     public void setIconLiteral(String iconCode) {
-        setIconCode(IkonResolver.getInstance().resolve(iconCode));
+        setIconCode(IkonResolver.getInstance().resolveIkonHandler(iconCode).resolve(iconCode));
     }
 
     public String getIconLiteral() {

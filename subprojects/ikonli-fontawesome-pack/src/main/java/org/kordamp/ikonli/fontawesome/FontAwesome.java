@@ -50,7 +50,6 @@
  */
 package org.kordamp.ikonli.fontawesome;
 
-import javafx.scene.text.Font;
 import org.kordamp.ikonli.Ikon;
 
 /**
@@ -749,13 +748,6 @@ public enum FontAwesome implements Ikon {
     YOUTUBE_SQUARE("fa-youtube-square", '\uf166'),
     Y_COMBINATOR("fa-y-combinator", '\uf23b');
 
-    private static final String FONT_RESOURCE = "META-INF/resources/fontawesome/4.5.0/fonts/fontawesome-webfont.ttf";
-    private static final Font _FONT;
-
-    static {
-        _FONT = Font.loadFont(FontAwesome.class.getClassLoader().getResource(FONT_RESOURCE).toExternalForm(), 16);
-    }
-
     public static FontAwesome findByDescription(String description) {
         for (FontAwesome font : values()) {
             if (font.getDescription().equals(description)) {
@@ -765,21 +757,12 @@ public enum FontAwesome implements Ikon {
         throw new IllegalArgumentException("Icon description '" + description + "' is invalid!");
     }
 
-    public static Font getFont() {
-        return _FONT;
-    }
-
     private String description;
     private char code;
 
     FontAwesome(String description, char code) {
         this.description = description;
         this.code = code;
-    }
-
-    @Override
-    public String getFontFamily() {
-        return _FONT.getFamily();
     }
 
     @Override

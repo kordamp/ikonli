@@ -50,29 +50,27 @@
  */
 package org.kordamp.ikonli;
 
-import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.geometry.Insets;
-import javafx.scene.Scene;
-import javafx.scene.control.ScrollPane;
-import javafx.scene.control.Tab;
-import javafx.scene.control.TabPane;
-import javafx.scene.layout.GridPane;
-import javafx.stage.Stage;
 import org.kordamp.ikonli.devicons.Devicons;
 import org.kordamp.ikonli.elusive.Elusive;
 import org.kordamp.ikonli.fontawesome.FontAwesome;
 import org.kordamp.ikonli.fontelico.Fontelico;
 import org.kordamp.ikonli.foundation.Foundation;
-import org.kordamp.ikonli.javafx.FontIcon;
 import org.kordamp.ikonli.maki.Maki;
 import org.kordamp.ikonli.materialdesign.MaterialDesign;
 import org.kordamp.ikonli.octicons.Octicons;
 import org.kordamp.ikonli.openiconic.Openiconic;
+import org.kordamp.ikonli.swing.FontIcon;
 import org.kordamp.ikonli.typicons.Typicons;
 import org.kordamp.ikonli.weathericons.WeatherIcons;
 
-import java.net.URL;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTabbedPane;
+import javax.swing.SwingUtilities;
+import java.awt.Dimension;
+import java.awt.GridLayout;
 import java.util.EnumSet;
 
 import static java.util.EnumSet.allOf;
@@ -80,59 +78,51 @@ import static java.util.EnumSet.allOf;
 /**
  * @author Andres Almiray
  */
-public class Sampler extends Application {
+public class Sampler {
     public static void main(String[] args) {
-        launch(Sampler.class);
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                launch();
+            }
+        });
     }
 
-    @Override
-    public void start(Stage primaryStage) throws Exception {
-        URL location = getClass().getResource("sampler.fxml");
-        FXMLLoader fxmlLoader = new FXMLLoader(location);
-        TabPane tabPane = fxmlLoader.load();
+    private static void launch() {
+        JTabbedPane tabPane = new JTabbedPane();
 
-        tabPane.getTabs().add(new DemoTab(Devicons.class, allOf(Devicons.class)));
-        tabPane.getTabs().add(new DemoTab(Elusive.class, allOf(Elusive.class)));
-        tabPane.getTabs().add(new DemoTab(FontAwesome.class, allOf(FontAwesome.class)));
-        tabPane.getTabs().add(new DemoTab(Fontelico.class, allOf(Fontelico.class)));
-        tabPane.getTabs().add(new DemoTab(Foundation.class, allOf(Foundation.class)));
-        tabPane.getTabs().add(new DemoTab(Maki.class, allOf(Maki.class)));
-        tabPane.getTabs().add(new DemoTab(MaterialDesign.class, allOf(MaterialDesign.class)));
-        tabPane.getTabs().add(new DemoTab(Octicons.class, allOf(Octicons.class)));
-        tabPane.getTabs().add(new DemoTab(Openiconic.class, allOf(Openiconic.class)));
-        tabPane.getTabs().add(new DemoTab(Typicons.class, allOf(Typicons.class)));
-        tabPane.getTabs().add(new DemoTab(WeatherIcons.class, allOf(WeatherIcons.class)));
+        createTab(tabPane, Devicons.class, new DemoTab(allOf(Devicons.class)));
+        createTab(tabPane, Elusive.class, new DemoTab(allOf(Elusive.class)));
+        createTab(tabPane, FontAwesome.class, new DemoTab(allOf(FontAwesome.class)));
+        createTab(tabPane, Fontelico.class, new DemoTab(allOf(Fontelico.class)));
+        createTab(tabPane, Foundation.class, new DemoTab(allOf(Foundation.class)));
+        createTab(tabPane, Maki.class, new DemoTab(allOf(Maki.class)));
+        createTab(tabPane, MaterialDesign.class, new DemoTab(allOf(MaterialDesign.class)));
+        createTab(tabPane, Octicons.class, new DemoTab(allOf(Octicons.class)));
+        createTab(tabPane, Openiconic.class, new DemoTab(allOf(Openiconic.class)));
+        createTab(tabPane, Typicons.class, new DemoTab(allOf(Typicons.class)));
+        createTab(tabPane, WeatherIcons.class, new DemoTab(allOf(WeatherIcons.class)));
 
-        Scene scene = new Scene(tabPane);
-        scene.getStylesheets().add("org/kordamp/ikonli/sampler.css");
-
-        primaryStage.setTitle("Ikonli Sampler");
-        primaryStage.setScene(scene);
-        primaryStage.setWidth(1024);
-        primaryStage.setHeight(1024);
-        primaryStage.show();
+        JFrame frame = new JFrame("Ikonli Sampler");
+        frame.add(tabPane);
+        frame.setSize(new Dimension(1024, 1024));
+        frame.setVisible(true);
     }
 
-    private static class DemoTab extends Tab {
-        private DemoTab(Class<? extends Ikon> iconFontClass, EnumSet<? extends Ikon> enumSet) throws Exception {
-            super(iconFontClass.getSimpleName());
-            setClosable(false);
+    private static void createTab(JTabbedPane tabPane, Class<? extends Ikon> iconFontClass, DemoTab tab) {
+        tabPane.add(iconFontClass.getSimpleName(), tab);
+    }
 
-            GridPane pane = new GridPane();
-            ScrollPane scrollPane = new ScrollPane(pane);
-            setContent(scrollPane);
+    private static class DemoTab extends JScrollPane {
+        private DemoTab(EnumSet<? extends Ikon> enumSet) {
+            JPanel pane = new JPanel(new GridLayout(0, 10, 10, 10));
+            setViewportView(pane);
 
-            int column = 0;
-            int row = 0;
-            int index = 0;
             for (Ikon value : enumSet) {
-                FontIcon icon = new FontIcon(value);
-                pane.add(icon, column++, row);
-                GridPane.setMargin(icon, new Insets(10, 10, 10, 10));
-                if (++index % 10 == 0) {
-                    column = 0;
-                    row++;
-                }
+                FontIcon icon = new FontIcon();
+                icon.setIkon(value);
+                icon.setIconSize(48);
+                pane.add(new JLabel(icon));
             }
         }
     }

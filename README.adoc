@@ -60,10 +60,18 @@ to use the gradle wrapper if available or your global gradle command. This is an
 
 === Next Steps
 
- . Make a full build issuing `gradle build`.
- . Run the sampler application by invoking the following commands
+Make a full build issuing `gradle build`.
+
+Run the sampler JavaFX application by invoking the following commands
 [source]
 ----
-$ cd subprojects/sampler
+$ cd subprojects/sampler-javafx
+$ gradle run
+----
+
+Run the sampler Swing application by invoking the following commands
+[source]
+----
+$ cd subprojects/sampler-swing
 $ gradle run
 ----

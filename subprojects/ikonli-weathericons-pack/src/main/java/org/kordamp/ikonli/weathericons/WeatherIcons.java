@@ -50,7 +50,6 @@
  */
 package org.kordamp.ikonli.weathericons;
 
-import javafx.scene.text.Font;
 import org.kordamp.ikonli.Ikon;
 
 /**
@@ -248,13 +247,6 @@ public enum WeatherIcons implements Ikon {
     WIND_BEAUFORT_9("wi-wind-beaufort-9", '\uf0c0'),
     WIND_DIRECTION("wi-wind-direction", '\uf0b1');
 
-    private static final String FONT_RESOURCE = "META-INF/resources/weathericons/2.0.1/fonts/weathericons-regular-webfont.ttf";
-    private static final Font FONT;
-
-    static {
-        FONT = Font.loadFont(WeatherIcons.class.getClassLoader().getResource(FONT_RESOURCE).toExternalForm(), 16);
-    }
-
     public static WeatherIcons findByDescription(String description) {
         for (WeatherIcons font : values()) {
             if (font.getDescription().equals(description)) {
@@ -264,21 +256,12 @@ public enum WeatherIcons implements Ikon {
         throw new IllegalArgumentException("Icon description '" + description + "' is invalid!");
     }
 
-    public static Font getFont() {
-        return FONT;
-    }
-
     private String description;
     private char code;
 
     WeatherIcons(String description, char code) {
         this.description = description;
         this.code = code;
-    }
-
-    @Override
-    public String getFontFamily() {
-        return FONT.getFamily();
     }
 
     @Override

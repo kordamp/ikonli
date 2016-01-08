@@ -54,8 +54,6 @@ package org.kordamp.ikonli;
  * @author Andres Almiray
  */
 public interface Ikon {
-    String getFontFamily();
-
     String getDescription();
 
     char getCode();

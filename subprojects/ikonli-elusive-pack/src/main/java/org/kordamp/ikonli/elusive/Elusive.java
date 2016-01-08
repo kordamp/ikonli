@@ -50,7 +50,6 @@
  */
 package org.kordamp.ikonli.elusive;
 
-import javafx.scene.text.Font;
 import org.kordamp.ikonli.Ikon;
 
 /**
@@ -358,13 +357,6 @@ public enum Elusive implements Ikon {
     ZOOM_IN("eli-zoom-in", '\ue601'),
     ZOOM_OUT("eli-zoom-out", '\ue600');
 
-    private static final String FONT_RESOURCE = "META-INF/resources/elusive/2.0/fonts/Elusive-Icons.ttf";
-    private static final Font _FONT;
-
-    static {
-        _FONT = Font.loadFont(Elusive.class.getClassLoader().getResource(FONT_RESOURCE).toExternalForm(), 16);
-    }
-
     public static Elusive findByDescription(String description) {
         for (Elusive font : values()) {
             if (font.getDescription().equals(description)) {
@@ -374,21 +366,12 @@ public enum Elusive implements Ikon {
         throw new IllegalArgumentException("Icon description '" + description + "' is invalid!");
     }
 
-    public static Font getFont() {
-        return _FONT;
-    }
-
     private String description;
     private char code;
 
     Elusive(String description, char code) {
         this.description = description;
         this.code = code;
-    }
-
-    @Override
-    public String getFontFamily() {
-        return _FONT.getFamily();
     }
 
     @Override

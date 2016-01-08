@@ -51,6 +51,7 @@
 package org.kordamp.ikonli.swing;
 
 import org.kordamp.ikonli.Ikon;
+import org.kordamp.ikonli.IkonHandler;
 
 import javax.swing.Icon;
 import java.awt.Color;
@@ -110,7 +111,8 @@ public class FontIcon implements Icon {
         requireNonNull(iconColor, "Argument 'iconFont' must not be null");
         this.ikon = ikon;
         synchronized (LOCK) {
-            font = Font.getFont(ikon.getFontFamily()).deriveFont(Font.PLAIN, iconSize);
+            IkonHandler ikonHandler = IkonResolver.getInstance().resolve(ikon.getDescription());
+            font = ((Font) ikonHandler.getFont()).deriveFont(Font.PLAIN, iconSize);
             buffer = null;
         }
     }

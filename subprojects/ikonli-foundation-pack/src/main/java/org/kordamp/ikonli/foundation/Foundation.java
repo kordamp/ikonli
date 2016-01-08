@@ -50,7 +50,6 @@
  */
 package org.kordamp.ikonli.foundation;
 
-import javafx.scene.text.Font;
 import org.kordamp.ikonli.Ikon;
 
 /**
@@ -341,13 +340,6 @@ public enum Foundation implements Ikon {
     ZOOM_IN("fi-zoom-in", '\uf219'),
     ZOOM_OUT("fi-zoom-out", '\uf21a');
 
-    private static final String FONT_RESOURCE = "META-INF/resources/foundation/3.0/fonts/foundation-icons.ttf";
-    private static final Font FONT;
-
-    static {
-        FONT = Font.loadFont(Foundation.class.getClassLoader().getResource(FONT_RESOURCE).toExternalForm(), 16);
-    }
-
     public static Foundation findByDescription(String description) {
         for (Foundation font : values()) {
             if (font.getDescription().equals(description)) {
@@ -357,21 +349,12 @@ public enum Foundation implements Ikon {
         throw new IllegalArgumentException("Icon description '" + description + "' is invalid!");
     }
 
-    public static Font getFont() {
-        return FONT;
-    }
-
     private String description;
     private char code;
 
     Foundation(String description, char code) {
         this.description = description;
         this.code = code;
-    }
-
-    @Override
-    public String getFontFamily() {
-        return FONT.getFamily();
     }
 
     @Override

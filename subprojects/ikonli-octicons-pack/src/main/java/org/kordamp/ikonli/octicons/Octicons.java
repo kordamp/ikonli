@@ -50,7 +50,6 @@
  */
 package org.kordamp.ikonli.octicons;
 
-import javafx.scene.text.Font;
 import org.kordamp.ikonli.Ikon;
 
 /**
@@ -252,13 +251,6 @@ public enum Octicons implements Ikon {
     X("oct-x", '\uf081'),
     ZAP("oct-zap", '\u26A1');
 
-    private static final String FONT_RESOURCE = "META-INF/resources/octicons/3.3.0/fonts/octicons.ttf";
-    private static final Font FONT;
-
-    static {
-        FONT = Font.loadFont(Octicons.class.getClassLoader().getResource(FONT_RESOURCE).toExternalForm(), 16);
-    }
-
     public static Octicons findByDescription(String description) {
         for (Octicons font : values()) {
             if (font.getDescription().equals(description)) {
@@ -268,21 +260,12 @@ public enum Octicons implements Ikon {
         throw new IllegalArgumentException("Icon description '" + description + "' is invalid!");
     }
 
-    public static Font getFont() {
-        return FONT;
-    }
-
     private String description;
     private char code;
 
     Octicons(String description, char code) {
         this.description = description;
         this.code = code;
-    }
-
-    @Override
-    public String getFontFamily() {
-        return FONT.getFamily();
     }
 
     @Override
