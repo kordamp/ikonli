@@ -81,25 +81,36 @@ ElusiveIkonHandler.java
 <a name="50"><font color="#808080">50</font>&nbsp;</a><font color="#ffffff">&nbsp;</font><font color="#008000">*/</font><br />
 <a name="51"><font color="#808080">51</font>&nbsp;</a><font color="#0000c0"><b>package&nbsp;</b></font><font color="#000000">org.kordamp.ikonli.elusive;</font><br />
 <a name="52"><font color="#808080">52</font>&nbsp;</a><font color="#ffffff"></font><br />
-<a name="53"><font color="#808080">53</font>&nbsp;</a><font color="#0000c0"><b>import&nbsp;</b></font><font color="#000000">org.kordamp.ikonli.Ikon;</font><br />
-<a name="54"><font color="#808080">54</font>&nbsp;</a><font color="#0000c0"><b>import&nbsp;</b></font><font color="#000000">org.kordamp.ikonli.IkonHandler;</font><br />
-<a name="55"><font color="#808080">55</font>&nbsp;</a><font color="#0000c0"><b>import&nbsp;</b></font><font color="#000000">org.kordamp.jipsy.ServiceProviderFor;</font><br />
-<a name="56"><font color="#808080">56</font>&nbsp;</a><font color="#ffffff"></font><br />
-<a name="57"><font color="#808080">57</font>&nbsp;</a><font color="#008000">/**</font><br />
-<a name="58"><font color="#808080">58</font>&nbsp;</a><font color="#ffffff">&nbsp;</font><font color="#008000">*&nbsp;</font><font color="#005500">@author&nbsp;</font><font color="#008000">Andres&nbsp;Almiray</font><br />
-<a name="59"><font color="#808080">59</font>&nbsp;</a><font color="#ffffff">&nbsp;</font><font color="#008000">*/</font><br />
-<a name="60"><font color="#808080">60</font>&nbsp;</a><font color="#646464">@ServiceProviderFor</font><font color="#000000">(</font><font color="#000000">IkonHandler.</font><font color="#0000c0"><b>class</b></font><font color="#000000">)</font><br />
-<a name="61"><font color="#808080">61</font>&nbsp;</a><font color="#0000c0"><b>public&nbsp;class&nbsp;</b></font><font color="#000000">ElusiveIkonHandler&nbsp;</font><font color="#0000c0"><b>implements&nbsp;</b></font><font color="#000000">IkonHandler&nbsp;</font><font color="#000000">{</font><br />
-<a name="62"><font color="#808080">62</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#646464">@Override</font><br />
-<a name="63"><font color="#808080">63</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000c0"><b>public&nbsp;</b></font><font color="#c00000"><b>boolean&nbsp;</b></font><font color="#000000">supports</font><font color="#000000">(</font><font color="#000000">String&nbsp;description</font><font color="#000000">)&nbsp;{</font><br />
-<a name="64"><font color="#808080">64</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000c0"><b>return&nbsp;</b></font><font color="#000000">description&nbsp;!=&nbsp;</font><font color="#0000c0"><b>null&nbsp;</b></font><font color="#000000">&amp;&amp;&nbsp;description.startsWith</font><font color="#000000">(</font><font color="#990000">&#34;eli-&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
-<a name="65"><font color="#808080">65</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
-<a name="66"><font color="#808080">66</font>&nbsp;</a><font color="#ffffff"></font><br />
-<a name="67"><font color="#808080">67</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#646464">@Override</font><br />
-<a name="68"><font color="#808080">68</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000c0"><b>public&nbsp;</b></font><font color="#000000">Ikon&nbsp;resolve</font><font color="#000000">(</font><font color="#000000">String&nbsp;description</font><font color="#000000">)&nbsp;{</font><br />
-<a name="69"><font color="#808080">69</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000c0"><b>return&nbsp;</b></font><font color="#000000">Elusive.findByDescription</font><font color="#000000">(</font><font color="#000000">description</font><font color="#000000">)</font><font color="#000000">;</font><br />
-<a name="70"><font color="#808080">70</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
-<a name="71"><font color="#808080">71</font>&nbsp;</a><font color="#000000">}</font></code>
+<a name="53"><font color="#808080">53</font>&nbsp;</a><font color="#0000c0"><b>import&nbsp;</b></font><font color="#000000">org.kordamp.ikonli.AbstractIkonHandler;</font><br />
+<a name="54"><font color="#808080">54</font>&nbsp;</a><font color="#0000c0"><b>import&nbsp;</b></font><font color="#000000">org.kordamp.ikonli.Ikon;</font><br />
+<a name="55"><font color="#808080">55</font>&nbsp;</a><font color="#0000c0"><b>import&nbsp;</b></font><font color="#000000">org.kordamp.ikonli.IkonHandler;</font><br />
+<a name="56"><font color="#808080">56</font>&nbsp;</a><font color="#0000c0"><b>import&nbsp;</b></font><font color="#000000">org.kordamp.jipsy.ServiceProviderFor;</font><br />
+<a name="57"><font color="#808080">57</font>&nbsp;</a><font color="#ffffff"></font><br />
+<a name="58"><font color="#808080">58</font>&nbsp;</a><font color="#008000">/**</font><br />
+<a name="59"><font color="#808080">59</font>&nbsp;</a><font color="#ffffff">&nbsp;</font><font color="#008000">*&nbsp;</font><font color="#005500">@author&nbsp;</font><font color="#008000">Andres&nbsp;Almiray</font><br />
+<a name="60"><font color="#808080">60</font>&nbsp;</a><font color="#ffffff">&nbsp;</font><font color="#008000">*/</font><br />
+<a name="61"><font color="#808080">61</font>&nbsp;</a><font color="#646464">@ServiceProviderFor</font><font color="#000000">(</font><font color="#000000">IkonHandler.</font><font color="#0000c0"><b>class</b></font><font color="#000000">)</font><br />
+<a name="62"><font color="#808080">62</font>&nbsp;</a><font color="#0000c0"><b>public&nbsp;class&nbsp;</b></font><font color="#000000">ElusiveIkonHandler&nbsp;</font><font color="#0000c0"><b>extends&nbsp;</b></font><font color="#000000">AbstractIkonHandler&nbsp;</font><font color="#000000">{</font><br />
+<a name="63"><font color="#808080">63</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#646464">@Override</font><br />
+<a name="64"><font color="#808080">64</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000c0"><b>public&nbsp;</b></font><font color="#c00000"><b>boolean&nbsp;</b></font><font color="#000000">supports</font><font color="#000000">(</font><font color="#000000">String&nbsp;description</font><font color="#000000">)&nbsp;{</font><br />
+<a name="65"><font color="#808080">65</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000c0"><b>return&nbsp;</b></font><font color="#000000">description&nbsp;!=&nbsp;</font><font color="#0000c0"><b>null&nbsp;</b></font><font color="#000000">&amp;&amp;&nbsp;description.startsWith</font><font color="#000000">(</font><font color="#990000">&#34;eli-&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<a name="66"><font color="#808080">66</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<a name="67"><font color="#808080">67</font>&nbsp;</a><font color="#ffffff"></font><br />
+<a name="68"><font color="#808080">68</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#646464">@Override</font><br />
+<a name="69"><font color="#808080">69</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000c0"><b>public&nbsp;</b></font><font color="#000000">Ikon&nbsp;resolve</font><font color="#000000">(</font><font color="#000000">String&nbsp;description</font><font color="#000000">)&nbsp;{</font><br />
+<a name="70"><font color="#808080">70</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000c0"><b>return&nbsp;</b></font><font color="#000000">Elusive.findByDescription</font><font color="#000000">(</font><font color="#000000">description</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<a name="71"><font color="#808080">71</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<a name="72"><font color="#808080">72</font>&nbsp;</a><font color="#ffffff"></font><br />
+<a name="73"><font color="#808080">73</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#646464">@Override</font><br />
+<a name="74"><font color="#808080">74</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000c0"><b>public&nbsp;</b></font><font color="#000000">String&nbsp;getFontResourcePath</font><font color="#000000">()&nbsp;{</font><br />
+<a name="75"><font color="#808080">75</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000c0"><b>return&nbsp;</b></font><font color="#990000">&#34;META-INF/resources/elusive/2.0/fonts/Elusive-Icons.ttf&#34;</font><font color="#000000">;</font><br />
+<a name="76"><font color="#808080">76</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<a name="77"><font color="#808080">77</font>&nbsp;</a><font color="#ffffff"></font><br />
+<a name="78"><font color="#808080">78</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#646464">@Override</font><br />
+<a name="79"><font color="#808080">79</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000c0"><b>public&nbsp;</b></font><font color="#000000">String&nbsp;getFontFamily</font><font color="#000000">()&nbsp;{</font><br />
+<a name="80"><font color="#808080">80</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000c0"><b>return&nbsp;</b></font><font color="#990000">&#34;Elusive-Icons&#34;</font><font color="#000000">;</font><br />
+<a name="81"><font color="#808080">81</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<a name="82"><font color="#808080">82</font>&nbsp;</a><font color="#000000">}</font></code>
     
    </td>
   <!-- end source code -->

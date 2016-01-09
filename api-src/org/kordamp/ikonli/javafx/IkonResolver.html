@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html><head>
-<title>org/kordamp/ikonli/IkonResolver.java</title>
+<title>org/kordamp/ikonli/javafx/IkonResolver.java</title>
   <style type="text/css">
     <!--code { font-family: Courier New, Courier; font-size: 10pt; margin: 0px; }-->
   </style>
@@ -79,45 +79,52 @@ IkonResolver.java
 <a name="48"><font color="#808080">48</font>&nbsp;</a><font color="#ffffff">&nbsp;</font><font color="#008000">*&nbsp;See&nbsp;the&nbsp;License&nbsp;for&nbsp;the&nbsp;specific&nbsp;language&nbsp;governing&nbsp;permissions&nbsp;and</font><br />
 <a name="49"><font color="#808080">49</font>&nbsp;</a><font color="#ffffff">&nbsp;</font><font color="#008000">*&nbsp;limitations&nbsp;under&nbsp;the&nbsp;License.</font><br />
 <a name="50"><font color="#808080">50</font>&nbsp;</a><font color="#ffffff">&nbsp;</font><font color="#008000">*/</font><br />
-<a name="51"><font color="#808080">51</font>&nbsp;</a><font color="#0000c0"><b>package&nbsp;</b></font><font color="#000000">org.kordamp.ikonli;</font><br />
+<a name="51"><font color="#808080">51</font>&nbsp;</a><font color="#0000c0"><b>package&nbsp;</b></font><font color="#000000">org.kordamp.ikonli.javafx;</font><br />
 <a name="52"><font color="#808080">52</font>&nbsp;</a><font color="#ffffff"></font><br />
-<a name="53"><font color="#808080">53</font>&nbsp;</a><font color="#0000c0"><b>import&nbsp;</b></font><font color="#000000">java.util.LinkedHashSet;</font><br />
-<a name="54"><font color="#808080">54</font>&nbsp;</a><font color="#0000c0"><b>import&nbsp;</b></font><font color="#000000">java.util.ServiceLoader;</font><br />
-<a name="55"><font color="#808080">55</font>&nbsp;</a><font color="#0000c0"><b>import&nbsp;</b></font><font color="#000000">java.util.Set;</font><br />
-<a name="56"><font color="#808080">56</font>&nbsp;</a><font color="#ffffff"></font><br />
-<a name="57"><font color="#808080">57</font>&nbsp;</a><font color="#008000">/**</font><br />
-<a name="58"><font color="#808080">58</font>&nbsp;</a><font color="#ffffff">&nbsp;</font><font color="#008000">*&nbsp;</font><font color="#005500">@author&nbsp;</font><font color="#008000">Andres&nbsp;Almiray</font><br />
-<a name="59"><font color="#808080">59</font>&nbsp;</a><font color="#ffffff">&nbsp;</font><font color="#008000">*/</font><br />
-<a name="60"><font color="#808080">60</font>&nbsp;</a><font color="#0000c0"><b>public&nbsp;class&nbsp;</b></font><font color="#000000">IkonResolver&nbsp;</font><font color="#000000">{</font><br />
-<a name="61"><font color="#808080">61</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000c0"><b>private&nbsp;static&nbsp;final&nbsp;</b></font><font color="#000000">IkonResolver&nbsp;INSTANCE;</font><br />
-<a name="62"><font color="#808080">62</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000c0"><b>private&nbsp;static&nbsp;final&nbsp;</b></font><font color="#000000">Set&lt;IkonHandler&gt;&nbsp;HANDLERS&nbsp;=&nbsp;</font><font color="#0000c0"><b>new&nbsp;</b></font><font color="#000000">LinkedHashSet&lt;&gt;</font><font color="#000000">()</font><font color="#000000">;</font><br />
-<a name="63"><font color="#808080">63</font>&nbsp;</a><font color="#ffffff"></font><br />
-<a name="64"><font color="#808080">64</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000c0"><b>static&nbsp;</b></font><font color="#000000">{</font><br />
-<a name="65"><font color="#808080">65</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">INSTANCE&nbsp;=&nbsp;</font><font color="#0000c0"><b>new&nbsp;</b></font><font color="#000000">IkonResolver</font><font color="#000000">()</font><font color="#000000">;</font><br />
-<a name="66"><font color="#808080">66</font>&nbsp;</a><font color="#ffffff"></font><br />
-<a name="67"><font color="#808080">67</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">ServiceLoader&lt;IkonHandler&gt;&nbsp;loader&nbsp;=&nbsp;ServiceLoader.load</font><font color="#000000">(</font><font color="#000000">IkonHandler.</font><font color="#0000c0"><b>class</b></font><font color="#000000">)</font><font color="#000000">;</font><br />
-<a name="68"><font color="#808080">68</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000c0"><b>for&nbsp;</b></font><font color="#000000">(</font><font color="#000000">IkonHandler&nbsp;handler&nbsp;:&nbsp;loader</font><font color="#000000">)&nbsp;{</font><br />
-<a name="69"><font color="#808080">69</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">HANDLERS.add</font><font color="#000000">(</font><font color="#000000">handler</font><font color="#000000">)</font><font color="#000000">;</font><br />
-<a name="70"><font color="#808080">70</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
-<a name="71"><font color="#808080">71</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
-<a name="72"><font color="#808080">72</font>&nbsp;</a><font color="#ffffff"></font><br />
-<a name="73"><font color="#808080">73</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000c0"><b>private&nbsp;</b></font><font color="#000000">IkonResolver</font><font color="#000000">()&nbsp;{</font><br />
-<a name="74"><font color="#808080">74</font>&nbsp;</a><font color="#ffffff"></font><br />
-<a name="75"><font color="#808080">75</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
-<a name="76"><font color="#808080">76</font>&nbsp;</a><font color="#ffffff"></font><br />
-<a name="77"><font color="#808080">77</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000c0"><b>public&nbsp;static&nbsp;</b></font><font color="#000000">IkonResolver&nbsp;getInstance</font><font color="#000000">()&nbsp;{</font><br />
-<a name="78"><font color="#808080">78</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000c0"><b>return&nbsp;</b></font><font color="#000000">INSTANCE;</font><br />
-<a name="79"><font color="#808080">79</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<a name="53"><font color="#808080">53</font>&nbsp;</a><font color="#0000c0"><b>import&nbsp;</b></font><font color="#000000">javafx.scene.text.Font;</font><br />
+<a name="54"><font color="#808080">54</font>&nbsp;</a><font color="#0000c0"><b>import&nbsp;</b></font><font color="#000000">org.kordamp.ikonli.IkonHandler;</font><br />
+<a name="55"><font color="#808080">55</font>&nbsp;</a><font color="#ffffff"></font><br />
+<a name="56"><font color="#808080">56</font>&nbsp;</a><font color="#0000c0"><b>import&nbsp;</b></font><font color="#000000">java.util.LinkedHashSet;</font><br />
+<a name="57"><font color="#808080">57</font>&nbsp;</a><font color="#0000c0"><b>import&nbsp;</b></font><font color="#000000">java.util.ServiceLoader;</font><br />
+<a name="58"><font color="#808080">58</font>&nbsp;</a><font color="#0000c0"><b>import&nbsp;</b></font><font color="#000000">java.util.Set;</font><br />
+<a name="59"><font color="#808080">59</font>&nbsp;</a><font color="#ffffff"></font><br />
+<a name="60"><font color="#808080">60</font>&nbsp;</a><font color="#0000c0"><b>import&nbsp;static&nbsp;</b></font><font color="#000000">java.util.Objects.requireNonNull;</font><br />
+<a name="61"><font color="#808080">61</font>&nbsp;</a><font color="#ffffff"></font><br />
+<a name="62"><font color="#808080">62</font>&nbsp;</a><font color="#008000">/**</font><br />
+<a name="63"><font color="#808080">63</font>&nbsp;</a><font color="#ffffff">&nbsp;</font><font color="#008000">*&nbsp;</font><font color="#005500">@author&nbsp;</font><font color="#008000">Andres&nbsp;Almiray</font><br />
+<a name="64"><font color="#808080">64</font>&nbsp;</a><font color="#ffffff">&nbsp;</font><font color="#008000">*/</font><br />
+<a name="65"><font color="#808080">65</font>&nbsp;</a><font color="#0000c0"><b>public&nbsp;class&nbsp;</b></font><font color="#000000">IkonResolver&nbsp;</font><font color="#000000">{</font><br />
+<a name="66"><font color="#808080">66</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000c0"><b>private&nbsp;static&nbsp;final&nbsp;</b></font><font color="#000000">IkonResolver&nbsp;INSTANCE;</font><br />
+<a name="67"><font color="#808080">67</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000c0"><b>private&nbsp;static&nbsp;final&nbsp;</b></font><font color="#000000">Set&lt;IkonHandler&gt;&nbsp;HANDLERS&nbsp;=&nbsp;</font><font color="#0000c0"><b>new&nbsp;</b></font><font color="#000000">LinkedHashSet&lt;&gt;</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<a name="68"><font color="#808080">68</font>&nbsp;</a><font color="#ffffff"></font><br />
+<a name="69"><font color="#808080">69</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000c0"><b>static&nbsp;</b></font><font color="#000000">{</font><br />
+<a name="70"><font color="#808080">70</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">INSTANCE&nbsp;=&nbsp;</font><font color="#0000c0"><b>new&nbsp;</b></font><font color="#000000">IkonResolver</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<a name="71"><font color="#808080">71</font>&nbsp;</a><font color="#ffffff"></font><br />
+<a name="72"><font color="#808080">72</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">ServiceLoader&lt;IkonHandler&gt;&nbsp;loader&nbsp;=&nbsp;ServiceLoader.load</font><font color="#000000">(</font><font color="#000000">IkonHandler.</font><font color="#0000c0"><b>class</b></font><font color="#000000">)</font><font color="#000000">;</font><br />
+<a name="73"><font color="#808080">73</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000c0"><b>for&nbsp;</b></font><font color="#000000">(</font><font color="#000000">IkonHandler&nbsp;handler&nbsp;:&nbsp;loader</font><font color="#000000">)&nbsp;{</font><br />
+<a name="74"><font color="#808080">74</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">HANDLERS.add</font><font color="#000000">(</font><font color="#000000">handler</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<a name="75"><font color="#808080">75</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">handler.setFont</font><font color="#000000">(</font><font color="#000000">Font.loadFont</font><font color="#000000">(</font><font color="#000000">IkonResolver.</font><font color="#0000c0"><b>class</b></font><font color="#000000">.getClassLoader</font><font color="#000000">()</font><font color="#000000">.getResource</font><font color="#000000">(</font><font color="#000000">handler.getFontResourcePath</font><font color="#000000">())</font><font color="#000000">.toExternalForm</font><font color="#000000">()</font><font color="#000000">,&nbsp;</font><font color="#990000">16</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<a name="76"><font color="#808080">76</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<a name="77"><font color="#808080">77</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<a name="78"><font color="#808080">78</font>&nbsp;</a><font color="#ffffff"></font><br />
+<a name="79"><font color="#808080">79</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000c0"><b>private&nbsp;</b></font><font color="#000000">IkonResolver</font><font color="#000000">()&nbsp;{</font><br />
 <a name="80"><font color="#808080">80</font>&nbsp;</a><font color="#ffffff"></font><br />
-<a name="81"><font color="#808080">81</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000c0"><b>public&nbsp;</b></font><font color="#000000">Ikon&nbsp;resolve</font><font color="#000000">(</font><font color="#000000">String&nbsp;value</font><font color="#000000">)&nbsp;{</font><br />
-<a name="82"><font color="#808080">82</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000c0"><b>for&nbsp;</b></font><font color="#000000">(</font><font color="#000000">IkonHandler&nbsp;handler&nbsp;:&nbsp;HANDLERS</font><font color="#000000">)&nbsp;{</font><br />
-<a name="83"><font color="#808080">83</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000c0"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">handler.supports</font><font color="#000000">(</font><font color="#000000">value</font><font color="#000000">))&nbsp;{</font><br />
-<a name="84"><font color="#808080">84</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000c0"><b>return&nbsp;</b></font><font color="#000000">handler.resolve</font><font color="#000000">(</font><font color="#000000">value</font><font color="#000000">)</font><font color="#000000">;</font><br />
-<a name="85"><font color="#808080">85</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
-<a name="86"><font color="#808080">86</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
-<a name="87"><font color="#808080">87</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000c0"><b>return&nbsp;null</b></font><font color="#000000">;</font><br />
-<a name="88"><font color="#808080">88</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
-<a name="89"><font color="#808080">89</font>&nbsp;</a><font color="#000000">}</font></code>
+<a name="81"><font color="#808080">81</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<a name="82"><font color="#808080">82</font>&nbsp;</a><font color="#ffffff"></font><br />
+<a name="83"><font color="#808080">83</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000c0"><b>public&nbsp;static&nbsp;</b></font><font color="#000000">IkonResolver&nbsp;getInstance</font><font color="#000000">()&nbsp;{</font><br />
+<a name="84"><font color="#808080">84</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000c0"><b>return&nbsp;</b></font><font color="#000000">INSTANCE;</font><br />
+<a name="85"><font color="#808080">85</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<a name="86"><font color="#808080">86</font>&nbsp;</a><font color="#ffffff"></font><br />
+<a name="87"><font color="#808080">87</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000c0"><b>public&nbsp;</b></font><font color="#000000">IkonHandler&nbsp;resolveIkonHandler</font><font color="#000000">(</font><font color="#000000">String&nbsp;value</font><font color="#000000">)&nbsp;{</font><br />
+<a name="88"><font color="#808080">88</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">requireNonNull</font><font color="#000000">(</font><font color="#000000">value,&nbsp;</font><font color="#990000">&#34;Ikon&nbsp;description&nbsp;must&nbsp;not&nbsp;be&nbsp;null&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<a name="89"><font color="#808080">89</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000c0"><b>for&nbsp;</b></font><font color="#000000">(</font><font color="#000000">IkonHandler&nbsp;handler&nbsp;:&nbsp;HANDLERS</font><font color="#000000">)&nbsp;{</font><br />
+<a name="90"><font color="#808080">90</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000c0"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">handler.supports</font><font color="#000000">(</font><font color="#000000">value</font><font color="#000000">))&nbsp;{</font><br />
+<a name="91"><font color="#808080">91</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000c0"><b>return&nbsp;</b></font><font color="#000000">handler;</font><br />
+<a name="92"><font color="#808080">92</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<a name="93"><font color="#808080">93</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<a name="94"><font color="#808080">94</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000c0"><b>throw&nbsp;new&nbsp;</b></font><font color="#000000">UnsupportedOperationException</font><font color="#000000">(</font><font color="#990000">&#34;Cannot&nbsp;resolve&nbsp;'&#34;&nbsp;</font><font color="#000000">+&nbsp;value&nbsp;+&nbsp;</font><font color="#990000">&#34;'&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<a name="95"><font color="#808080">95</font>&nbsp;</a><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<a name="96"><font color="#808080">96</font>&nbsp;</a><font color="#000000">}</font></code>
     
    </td>
   <!-- end source code -->

@@ -6,17 +6,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.3">
 <meta name="author" content="Andres Almiray">
-<title>Font based icons for desktop applications</title>
+<title>Icon packs for Java applications</title>
 <link rel="stylesheet" href="./css/style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="./coderay-asciidoctor.css">
 </head>
 <body class="book toc2 toc-left">
 <div id="header">
-<h1>Font based icons for desktop applications</h1>
+<h1>Icon packs for Java applications</h1>
 <div class="details">
 <span id="author" class="author">Andres Almiray</span><br>
-<span id="revnumber">version 1.0.0-SNAPSHOT</span>
+<span id="revnumber">version 1.0.0</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
@@ -24,6 +24,7 @@
 <li><a href="#_introduction">1. Introduction</a>
 <ul class="sectlevel2">
 <li><a href="#_licensing">1.1. Licensing</a></li>
+<li><a href="#_download">1.2. Download</a></li>
 </ul>
 </li>
 <li><a href="#_usage">2. Usage</a>
@@ -66,6 +67,39 @@ source code. If you make use of Ikonli with either the <a href="https://github.c
 the <a href="https://github.com/basilisk-fw/basilisk">Basilisk Framework</a> then the GPLv3 is suspended and ASLv2 applies.</p>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_download"><a class="anchor" href="#_download"></a>1.2. Download</h3>
+<div class="paragraph">
+<p>Ikonli and all of its icon packs can be downloaded from Bintray
+<span class="image"><a class="image" href="https://bintray.com/aalmiray/kordamp/ikonli/_latestVersion"><img src="https://api.bintray.com/packages/aalmiray/kordamp/ikonli/images/download.svg" alt="download"></a></span>.</p>
+</div>
+<div class="paragraph">
+<p>You must select a binary that matches your target UI toolkit, such as</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Swing
+</td>
+<td class="hdlist2">
+<p>ikonli-swing-1.0.0</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+JavaFX
+</td>
+<td class="hdlist2">
+<p>ikonli-javafx-1.0.0</p>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Next, select any of the icon packs you want to use. You may select more than one for the same application.</p>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -74,14 +108,14 @@ the <a href="https://github.com/basilisk-fw/basilisk">Basilisk Framework</a> the
 <div class="sect2">
 <h3 id="_swing"><a class="anchor" href="#_swing"></a>2.1. Swing</h3>
 <div class="paragraph">
-<p>The <code>ikonli-swing:1.0.0-SNAPSHOT</code> JAR provides a new Icon class: <code><a href="api/org/kordamp/ikonli/swing/FontIcon.html" target="_blank">org.kordamp.ikonli.swing.FontIcon</a></code>.
+<p>The <code>ikonli-swing:1.0.0</code> JAR provides a new Icon class: <code><a href="api/org/kordamp/ikonli/swing/FontIcon.html" target="_blank">org.kordamp.ikonli.swing.FontIcon</a></code>.
 You may use this class with any Swing component that supports an Icon property.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_javafx"><a class="anchor" href="#_javafx"></a>2.2. JavaFX</h3>
 <div class="paragraph">
-<p>The <code>ikonli-javafx:1.0.0-SNAPSHOT</code> JAR provides a new Node class: <code><a href="api/org/kordamp/ikonli/javafx/FontIcon.html" target="_blank">org.kordamp.ikonli.javafx.FontIcon</a></code>.
+<p>The <code>ikonli-javafx:1.0.0</code> JAR provides a new Node class: <code><a href="api/org/kordamp/ikonli/javafx/FontIcon.html" target="_blank">org.kordamp.ikonli.javafx.FontIcon</a></code>.
 You may use this class with any JavaFX control that accepts a graphic property. You may also use the icon directly as
 it is a subclass of <code>javafx.scene.control.Label</code>. The icon class can be used inside an FXML file too.</p>
 </div>
@@ -110,7 +144,7 @@ it is a subclass of <code>javafx.scene.control.Label</code>. The icon class can 
 </div>
 <div class="paragraph">
 <div class="title">Stylable Properties</div>
-<p><code><a href="api/org/kordamp/ikonli/javafx/FontIcon.html" target="_blank">org.kordamp.ikonli.javafx.FontIcon</a></code> Exposes the following properties that can be styled using CSS:</p>
+<p><code><a href="api/org/kordamp/ikonli/javafx/FontIcon.html" target="_blank">org.kordamp.ikonli.javafx.FontIcon</a></code> exposes properties that can be styled using CSS. It defines a node class named <code>ikonli-font-icon</code>.</p>
 </div>
 <div class="hdlist">
 <table>
@@ -135,7 +169,7 @@ it is a subclass of <code>javafx.scene.control.Label</code>. The icon class can 
 -fx-icon-color
 </td>
 <td class="hdlist2">
-<p>A JavaFx <code>Paint</code> definition, such as a plain color or gradient.</p>
+<p>A JavaFX <code>Paint</code> definition, such as a plain color or gradient.</p>
 </td>
 </tr>
 </table>
@@ -305,7 +339,7 @@ it is a subclass of <code>javafx.scene.control.Label</code>. The icon class can 
 </div>
 <div id="footer">
 <div id="footer-text">
-Version 1.0.0-SNAPSHOT<br>
+Version 1.0.0<br>
 Last updated 2016-01-08 13:29:54 +01:00
 </div>
 </div>
