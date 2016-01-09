@@ -9,3 +9,17 @@ Ikonli provides icon packs that can be used in Java applications. Currently Swin
 Ikonli is open source software with dual licensing, under GPLv3 and ASLv2. GPLv3 is the base license that governs all
 source code. If you make use of Ikonli with either the link:https://github.com/griffon/griffon[Griffon Framework] or
 the link:https://github.com/basilisk-fw/basilisk[Basilisk Framework] then the GPLv3 is suspended and ASLv2 applies.
+
+== Download
+
+Ikonli and all of its icon packs can be downloaded from Bintray
+image:https://api.bintray.com/packages/{project-owner}/{project-repo}/ikonli/images/download.svg[link="https://bintray.com/{project-owner}/{project-repo}/ikonli/_latestVersion"].
+
+You must select a binary that matches your target UI toolkit, such as
+
+[horizontal]
+Swing:: ikonli-swing-{project-version}
+JavaFX:: ikonli-javafx-{project-version}
+
+Next, select any of the icon packs you want to use. You may select more than one for the same application.
+

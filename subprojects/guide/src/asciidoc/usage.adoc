@@ -38,10 +38,10 @@ it is a subclass of `javafx.scene.control.Label`. The icon class can be used ins
 
 .Stylable Properties
 
-`{api_link_fonticon_javafx}` Exposes the following properties that can be styled using CSS:
+`{api_link_fonticon_javafx}` exposes properties that can be styled using CSS. It defines a node class named `ikonli-font-icon`.
 
 [horizontal]
 -fx-icon-code:: An icon literal such as `di-java` or `fa-github`.
 -fx-icon-size:: The size of the icon, in pixels.
--fx-icon-color:: A JavaFx `Paint` definition, such as a plain color or gradient.
+-fx-icon-color:: A JavaFX `Paint` definition, such as a plain color or gradient.
 

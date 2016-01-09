@@ -51,12 +51,13 @@
 package org.kordamp.ikonli.javafx;
 
 import javafx.scene.text.Font;
-import org.kordamp.ikonli.Ikon;
 import org.kordamp.ikonli.IkonHandler;
 
 import java.util.LinkedHashSet;
 import java.util.ServiceLoader;
 import java.util.Set;
+
+import static java.util.Objects.requireNonNull;
 
 /**
  * @author Andres Almiray
@@ -84,11 +85,12 @@ public class IkonResolver {
     }
 
     public IkonHandler resolveIkonHandler(String value) {
+        requireNonNull(value, "Ikon description must not be null");
         for (IkonHandler handler : HANDLERS) {
             if (handler.supports(value)) {
                 return handler;
             }
         }
-        return null;
+        throw new UnsupportedOperationException("Cannot resolve '" + value + "'");
     }
 }

@@ -101,7 +101,7 @@ public class FontIcon extends Text implements Icon {
     };
 
     public FontIcon() {
-        getStyleClass().setAll("font-icon");
+        getStyleClass().setAll("ikonli-font-icon");
         setIconSize(16);
         setIconColor(Color.BLACK);
     }
