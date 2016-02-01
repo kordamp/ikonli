@@ -26,7 +26,7 @@
 <h2 id="_swing"><a class="anchor" href="#_swing"></a>1. Swing</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The <code>ikonli-swing:1.0.0</code> JAR provides a new Icon class: <code>{api_link_fonticon_swing}</code>.
+<p>The <code>ikonli-swing:1.1.0</code> JAR provides a new Icon class: <code>{api_link_fonticon_swing}</code>.
 You may use this class with any Swing component that supports an Icon property.</p>
 </div>
 </div>
@@ -35,7 +35,7 @@ You may use this class with any Swing component that supports an Icon property.<
 <h2 id="_javafx"><a class="anchor" href="#_javafx"></a>2. JavaFX</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The <code>ikonli-javafx:1.0.0</code> JAR provides a new Node class: <code>{api_link_fonticon_javafx}</code>.
+<p>The <code>ikonli-javafx:1.1.0</code> JAR provides a new Node class: <code>{api_link_fonticon_javafx}</code>.
 You may use this class with any JavaFX control that accepts a graphic property. You may also use the icon directly as
 it is a subclass of <code>javafx.scene.control.Label</code>. The icon class can be used inside an FXML file too.</p>
 </div>
@@ -60,6 +60,63 @@ it is a subclass of <code>javafx.scene.control.Label</code>. The icon class can 
         <span class="tag">&lt;/Button&gt;</span>
     <span class="tag">&lt;/children&gt;</span>
 <span class="tag">&lt;/GridPane&gt;</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<div class="title">Icon Literal Syntax</div>
+<p>The <code>iconLiteral</code> property accepts any of these formats</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>icon-code</p>
+</li>
+<li>
+<p>icon-code:icon-size</p>
+</li>
+<li>
+<p>icon-code:icon-size:icon-color</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>where the following rules apply</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+icon-code
+</td>
+<td class="hdlist2">
+<p>An icon code literal such as <code>di-java</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+icon-size
+</td>
+<td class="hdlist2">
+<p>A number (in pixels) specifying the width of the icon.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+icon-color
+</td>
+<td class="hdlist2">
+<p>A  <code>javafx.scene.paint.Color</code>, <code>javafx.scene.paint.LinearGradient</code>, or <code>javafx.scene.paint.RadialGradient</code>
+literal.</p>
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="title">Examples</div>
+<div class="content">
+<pre class="CodeRay highlight"><code>di-java
+di-java:32
+di-java:64:BLUE</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -99,7 +156,7 @@ it is a subclass of <code>javafx.scene.control.Label</code>. The icon class can 
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-01-09 17:47:48 +01:00
+Last updated 2016-02-01 15:15:53 +01:00
 </div>
 </div>
 </body>
