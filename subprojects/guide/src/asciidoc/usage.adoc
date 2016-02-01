@@ -36,6 +36,30 @@ it is a subclass of `javafx.scene.control.Label`. The icon class can be used ins
 </GridPane>
 ----
 
+.Icon Literal Syntax
+
+The `iconLiteral` property accepts any of these formats
+
+ * icon-code
+ * icon-code:icon-size
+ * icon-code:icon-size:icon-color
+
+where the following rules apply
+
+[horizontal]
+icon-code:: An icon code literal such as `di-java`.
+icon-size:: A number (in pixels) specifying the width of the icon.
+icon-color:: A  `javafx.scene.paint.Color`, `javafx.scene.paint.LinearGradient`, or `javafx.scene.paint.RadialGradient`
+literal.
+
+.Examples
+[source]
+----
+di-java
+di-java:32
+di-java:64:BLUE
+----
+
 .Stylable Properties
 
 `{api_link_fonticon_javafx}` exposes properties that can be styled using CSS. It defines a node class named `ikonli-font-icon`.

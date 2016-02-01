@@ -62,7 +62,9 @@ import javafx.css.StyleableIntegerProperty;
 import javafx.css.StyleableObjectProperty;
 import javafx.css.StyleableProperty;
 import javafx.scene.paint.Color;
+import javafx.scene.paint.LinearGradient;
 import javafx.scene.paint.Paint;
+import javafx.scene.paint.RadialGradient;
 import javafx.scene.text.Text;
 import org.kordamp.ikonli.Ikon;
 import org.kordamp.ikonli.IkonHandler;
@@ -231,7 +233,10 @@ public class FontIcon extends Text implements Icon {
     }
 
     public void setIconLiteral(String iconCode) {
-        setIconCode(IkonResolver.getInstance().resolveIkonHandler(iconCode).resolve(iconCode));
+        String[] parts = iconCode.split(":");
+        setIconCode(IkonResolver.getInstance().resolveIkonHandler(parts[0]).resolve(parts[0]));
+        resolveSize(iconCode, parts);
+        resolvePaint(iconCode, parts);
     }
 
     public String getIconLiteral() {
@@ -303,5 +308,40 @@ public class FontIcon extends Text implements Icon {
 
     public List<CssMetaData<? extends Styleable, ?>> getCssMetaData() {
         return FontIcon.getClassCssMetaData();
+    }
+
+    private void resolveSize(String iconCode, String[] parts) {
+        if (parts.length > 1) {
+            try {
+                setIconSize(Integer.parseInt(parts[1]));
+            } catch (NumberFormatException e) {
+                throw invalidDescription(iconCode, e);
+            }
+        } else {
+            setIconSize(16);
+        }
+    }
+
+    private void resolvePaint(String iconCode, String[] parts) {
+        if (parts.length > 2) {
+            Paint paint = resolvePaintValue(iconCode, parts[2]);
+            if (paint != null) {
+                setIconColor(paint);
+            }
+        }
+    }
+
+    private static Paint resolvePaintValue(String iconCode, String value) {
+        try { return Color.valueOf(value); } catch (IllegalArgumentException e1) {
+            try { return LinearGradient.valueOf(value); } catch (IllegalArgumentException e2) {
+                try { return RadialGradient.valueOf(value); } catch (IllegalArgumentException e3) {
+                    throw invalidDescription(iconCode, e3);
+                }
+            }
+        }
+    }
+
+    public static IllegalArgumentException invalidDescription(String description, Exception e) {
+        throw new IllegalArgumentException("Description " + description + " is not a valid icon description", e);
     }
 }
