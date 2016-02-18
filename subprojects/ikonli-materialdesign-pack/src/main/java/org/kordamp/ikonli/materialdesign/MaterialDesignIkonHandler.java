@@ -72,11 +72,11 @@ public class MaterialDesignIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/materialdesignicons/1.1.70/fonts/materialdesignicons-webfont.ttf";
+        return "META-INF/resources/materialdesignicons/1.4.57/fonts/materialdesignicons-webfont.ttf";
     }
 
     @Override
     public String getFontFamily() {
-        return "MaterialDesignIcons";
+        return "Material Design Icons";
     }
 }
