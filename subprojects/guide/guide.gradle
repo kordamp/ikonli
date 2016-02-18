@@ -214,7 +214,18 @@ asciidoctor {
         'project-author'       : 'Andres Almiray',
         'project-url'          : project.project_url,
         'project-vcs'          : project.project_scm,
-        'project-issue-tracker': project.project_issues
+        'project-issue-tracker': project.project_issues,
+        deviconsVersion        : project.deviconsVersion,
+        elusiveVersion         : project.elusiveVersion,
+        fontawesomeVersion     : project.fontawesomeVersion,
+        fontelicoVerison       : project.fontelicoVerison,
+        foundationVersion      : project.foundationVersion,
+        makiVersion            : project.makiVersion,
+        materialdesignVersion  : project.materialdesignVersion,
+        octiconsVersion        : project.octiconsVersion,
+        openiconicVersion      : project.openiconicVersion,
+        typiconsVersion        : project.typiconsVersion,
+        weathericonsVersion    : project.weathericonsVersion
     ]
     /*sources {
         include '*.adoc'
