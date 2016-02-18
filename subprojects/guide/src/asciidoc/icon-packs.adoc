@@ -3,57 +3,62 @@
 = Icon Packs
 
 == DevIcons
- * Font version: {deviconsFont version}
+ * Font version: {deviconsVersion}
  * link:http://vorillaz.github.io/devicons/[]
  * link:cheat-sheet-devicons.html[Cheat-Sheet]
 
 == Elusive
- * Font version: {elusiveFont version}
+ * Font version: {elusiveVersion}
  * link:https://github.com/fontello/elusive.font[]
  * link:cheat-sheet-elusive.html[Cheat-Sheet]
 
 == FontAwesome
- * Font version: {fontawesomeFont version}
+ * Font version: {fontawesomeVersion}
  * link:http://fortawesome.github.io/Font-Awesome/[]
  * link:cheat-sheet-fontawesome.html[Cheat-Sheet]
 
 == Fontelico
- * Font version: {fontelicoVerison}
+ * Font version: {fontelicoVersion}
  * link:https://github.com/fontello/fontelico.font[]
  * link:cheat-sheet-fontelico.html[Cheat-Sheet]
 
 == Foundation
- * Font version: {foundationFont version}
+ * Font version: {foundationVersion}
  * link:http://zurb.com/playground/foundation-icon-fonts-3[]
  * link:cheat-sheet-foundation.html[Cheat-Sheet]
 
 == Maki
- * Font version: {makiFont version}
+ * Font version: {makiVersion}
  * link:https://github.com/mapbox/maki[]
  * link:cheat-sheet-maki.html[Cheat-Sheet]
 
+== Material Icons
+ * Font version: {materialVersion}
+ * link:https://design.google.com/icons/[]
+ * link:cheat-sheet-material.html[Cheat-Sheet]
+
 == MaterialDesign
- * Font version: {materialdesignFont version}
+ * Font version: {materialdesignVersion}
  * link:https://github.com/Templarian/MaterialDesign[]
  * link:cheat-sheet-materialdesign.html[Cheat-Sheet]
 
 == Octicons
- * Font version: {octiconsFont version}
+ * Font version: {octiconsVersion}
  * link:https://github.com/github/octicons[]
  * link:cheat-sheet-octicons.html[Cheat-Sheet]
 
 == OpenIconic
- * Font version: {openiconicFont version}
+ * Font version: {openiconicVersion}
  * link:https://useiconic.com/open/[]
  * link:cheat-sheet-openiconic.html[Cheat-Sheet]
 
 == Typicons
- * Font version: {typiconsFont version}
+ * Font version: {typiconsVersion}
  * link:https://github.com/stephenhutchings/typicons.font[]
  * link:cheat-sheet-typicons.html[Cheat-Sheet]
 
 == Weathericons
- * Font version: {weathericonsFont version}
+ * Font version: {weathericonsVersion}
  * link:http://erikflowers.github.io/weather-icons/[]
  * link:cheat-sheet-weathericons.html[Cheat-Sheet]
 

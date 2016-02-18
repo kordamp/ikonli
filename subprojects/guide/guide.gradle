@@ -24,6 +24,7 @@ ext.childProjects = [
     ':ikonli-fontelico-pack',
     ':ikonli-foundation-pack',
     ':ikonli-maki-pack',
+    ':ikonli-material-pack',
     ':ikonli-materialdesign-pack',
     ':ikonli-octicons-pack',
     ':ikonli-openiconic-pack',
@@ -190,6 +191,7 @@ asciidoctor {
               createIconGenerationTask(packName: 'fontelico',      iconClassName: 'org.kordamp.ikonli.fontelico.Fontelico',           shortNameSize: 4),
               createIconGenerationTask(packName: 'foundation',     iconClassName: 'org.kordamp.ikonli.foundation.Foundation'),
               createIconGenerationTask(packName: 'maki',           iconClassName: 'org.kordamp.ikonli.maki.Maki',                     shortNameSize: 5),
+              createIconGenerationTask(packName: 'material',       iconClassName: 'org.kordamp.ikonli.material.Material',             iconName: 'gmi',     shortNameSize: 4),
               createIconGenerationTask(packName: 'materialdesign', iconClassName: 'org.kordamp.ikonli.materialdesign.MaterialDesign', iconName: 'mdi',     shortNameSize: 4),
               createIconGenerationTask(packName: 'octicons',       iconClassName: 'org.kordamp.ikonli.octicons.Octicons',             iconName: 'octicon', shortNameSize: 4),
               createIconGenerationTask(packName: 'openiconic',     iconClassName: 'org.kordamp.ikonli.openiconic.Openiconic',         iconName: 'oi',      dataGlyph: true),
@@ -218,9 +220,10 @@ asciidoctor {
         deviconsVersion        : project.deviconsVersion,
         elusiveVersion         : project.elusiveVersion,
         fontawesomeVersion     : project.fontawesomeVersion,
-        fontelicoVerison       : project.fontelicoVerison,
+        fontelicoVersion       : project.fontelicoVersion,
         foundationVersion      : project.foundationVersion,
         makiVersion            : project.makiVersion,
+        materialVersion        : project.materialVersion,
         materialdesignVersion  : project.materialdesignVersion,
         octiconsVersion        : project.octiconsVersion,
         openiconicVersion      : project.openiconicVersion,
@@ -235,9 +238,10 @@ asciidoctor {
         from project(':ikonli-devicons-pack').file("src/main/resources/META-INF/resources/devicons/${deviconsVersion}")
         from project(':ikonli-elusive-pack').file("src/main/resources/META-INF/resources/elusive/${elusiveVersion}")
         from project(':ikonli-fontawesome-pack').file("src/main/resources/META-INF/resources/fontawesome/${fontawesomeVersion}")
-        from project(':ikonli-fontelico-pack').file("src/main/resources/META-INF/resources/fontelico/${fontelicoVerison}")
+        from project(':ikonli-fontelico-pack').file("src/main/resources/META-INF/resources/fontelico/${fontelicoVersion}")
         from project(':ikonli-foundation-pack').file("src/main/resources/META-INF/resources/foundation/${foundationVersion}")
         from project(':ikonli-maki-pack').file("src/main/resources/META-INF/resources/maki/${makiVersion}")
+        from project(':ikonli-material-pack').file("src/main/resources/META-INF/resources/material/${materialVersion}")
         from project(':ikonli-materialdesign-pack').file("src/main/resources/META-INF/resources/materialdesignicons/${materialdesignVersion}")
         from project(':ikonli-octicons-pack').file("src/main/resources/META-INF/resources/octicons/${octiconsVersion}")
         from project(':ikonli-openiconic-pack').file("src/main/resources/META-INF/resources/openiconic/${openiconicVersion}")

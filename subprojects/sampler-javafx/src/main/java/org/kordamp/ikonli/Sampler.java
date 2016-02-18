@@ -66,6 +66,7 @@ import org.kordamp.ikonli.fontelico.Fontelico;
 import org.kordamp.ikonli.foundation.Foundation;
 import org.kordamp.ikonli.javafx.FontIcon;
 import org.kordamp.ikonli.maki.Maki;
+import org.kordamp.ikonli.material.Material;
 import org.kordamp.ikonli.materialdesign.MaterialDesign;
 import org.kordamp.ikonli.octicons.Octicons;
 import org.kordamp.ikonli.openiconic.Openiconic;
@@ -97,6 +98,7 @@ public class Sampler extends Application {
         tabPane.getTabs().add(new DemoTab(Fontelico.class, allOf(Fontelico.class)));
         tabPane.getTabs().add(new DemoTab(Foundation.class, allOf(Foundation.class)));
         tabPane.getTabs().add(new DemoTab(Maki.class, allOf(Maki.class)));
+        tabPane.getTabs().add(new DemoTab(Material.class, allOf(Material.class)));
         tabPane.getTabs().add(new DemoTab(MaterialDesign.class, allOf(MaterialDesign.class)));
         tabPane.getTabs().add(new DemoTab(Octicons.class, allOf(Octicons.class)));
         tabPane.getTabs().add(new DemoTab(Openiconic.class, allOf(Openiconic.class)));
