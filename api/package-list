@@ -6,6 +6,7 @@ org.kordamp.ikonli.fontelico
 org.kordamp.ikonli.foundation
 org.kordamp.ikonli.javafx
 org.kordamp.ikonli.maki
+org.kordamp.ikonli.material
 org.kordamp.ikonli.materialdesign
 org.kordamp.ikonli.octicons
 org.kordamp.ikonli.openiconic
