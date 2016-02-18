@@ -217,6 +217,7 @@ asciidoctor {
         'project-url'          : project.project_url,
         'project-vcs'          : project.project_scm,
         'project-issue-tracker': project.project_issues,
+        'project-group'        : project.group,
         deviconsVersion        : project.deviconsVersion,
         elusiveVersion         : project.elusiveVersion,
         fontawesomeVersion     : project.fontawesomeVersion,

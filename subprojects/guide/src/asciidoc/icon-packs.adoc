@@ -7,58 +7,298 @@
  * link:http://vorillaz.github.io/devicons/[]
  * link:cheat-sheet-devicons.html[Cheat-Sheet]
 
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-devicons-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-devicons-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
 == Elusive
  * Font version: {elusiveVersion}
  * link:https://github.com/fontello/elusive.font[]
  * link:cheat-sheet-elusive.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-elusive-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-elusive-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
 
 == FontAwesome
  * Font version: {fontawesomeVersion}
  * link:http://fortawesome.github.io/Font-Awesome/[]
  * link:cheat-sheet-fontawesome.html[Cheat-Sheet]
 
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-fontawesome-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-fontawesome-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
 == Fontelico
  * Font version: {fontelicoVersion}
  * link:https://github.com/fontello/fontelico.font[]
  * link:cheat-sheet-fontelico.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-fontelico-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-fontelico-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
 
 == Foundation
  * Font version: {foundationVersion}
  * link:http://zurb.com/playground/foundation-icon-fonts-3[]
  * link:cheat-sheet-foundation.html[Cheat-Sheet]
 
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-foundation-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-foundation-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
 == Maki
  * Font version: {makiVersion}
  * link:https://github.com/mapbox/maki[]
  * link:cheat-sheet-maki.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-maki-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-maki-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
 
 == Material Icons
  * Font version: {materialVersion}
  * link:https://design.google.com/icons/[]
  * link:cheat-sheet-material.html[Cheat-Sheet]
 
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-material-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-material-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
 == MaterialDesign
  * Font version: {materialdesignVersion}
  * link:https://github.com/Templarian/MaterialDesign[]
  * link:cheat-sheet-materialdesign.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-materialdesign-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-materialdesign-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
 
 == Octicons
  * Font version: {octiconsVersion}
  * link:https://github.com/github/octicons[]
  * link:cheat-sheet-octicons.html[Cheat-Sheet]
 
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-octicons-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-octicons-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
 == OpenIconic
  * Font version: {openiconicVersion}
  * link:https://useiconic.com/open/[]
  * link:cheat-sheet-openiconic.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-openiconic-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-openiconic-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
 
 == Typicons
  * Font version: {typiconsVersion}
  * link:https://github.com/stephenhutchings/typicons.font[]
  * link:cheat-sheet-typicons.html[Cheat-Sheet]
 
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-typicons-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-typicons-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
 == Weathericons
  * Font version: {weathericonsVersion}
  * link:http://erikflowers.github.io/weather-icons/[]
  * link:cheat-sheet-weathericons.html[Cheat-Sheet]
 
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-weathericons-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-weathericons-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----

@@ -1,7 +1,7 @@
 = {project-title}
 :author: {project-author}
 :revnumber: {project-version}
-:toclevels: 10
+:toclevels: 2
 :docinfo1:
 
 include::_links.adoc[]

@@ -7,6 +7,26 @@
 The `ikonli-swing:{project-version}` JAR provides a new Icon class: `{api_link_fonticon_swing}`.
 You may use this class with any Swing component that supports an Icon property.
 
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-swing:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-swing</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
 == JavaFX
 
 The `ikonli-javafx:{project-version}` JAR provides a new Node class: `{api_link_fonticon_javafx}`.
@@ -49,8 +69,8 @@ where the following rules apply
 [horizontal]
 icon-code:: An icon code literal such as `di-java`.
 icon-size:: A number (in pixels) specifying the width of the icon.
-icon-color:: A  `javafx.scene.paint.Color`, `javafx.scene.paint.LinearGradient`, or `javafx.scene.paint.RadialGradient`
-literal.
+icon-color:: A `javafx.scene.paint.Color`, `javafx.scene.paint.LinearGradient`,
+or `javafx.scene.paint.RadialGradient` literal.
 
 .Examples
 [source]
@@ -69,3 +89,22 @@ di-java:64:BLUE
 -fx-icon-size:: The size of the icon, in pixels.
 -fx-icon-color:: A JavaFX `Paint` definition, such as a plain color or gradient.
 
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-javafx:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-javafx</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
