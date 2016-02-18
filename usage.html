@@ -16,8 +16,16 @@
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_swing">1. Swing</a></li>
-<li><a href="#_javafx">2. JavaFX</a></li>
+<li><a href="#_swing">1. Swing</a>
+<ul class="sectlevel2">
+<li><a href="#_installing">1.1. Installing</a></li>
+</ul>
+</li>
+<li><a href="#_javafx">2. JavaFX</a>
+<ul class="sectlevel2">
+<li><a href="#_installing_2">2.1. Installing</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -28,6 +36,25 @@
 <div class="paragraph">
 <p>The <code>ikonli-swing:1.2.0</code> JAR provides a new Icon class: <code>{api_link_fonticon_swing}</code>.
 You may use this class with any Swing component that supports an Icon property.</p>
+</div>
+<div class="sect2">
+<h3 id="_installing"><a class="anchor" href="#_installing"></a>1.1. Installing</h3>
+<div class="listingblock">
+<div class="title">gradle</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-swing:1.2.0'</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">maven</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
+    <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
+    <span class="tag">&lt;artifactId&gt;</span>ikonli-swing<span class="tag">&lt;/artifactId&gt;</span>
+    <span class="tag">&lt;version&gt;</span>1.2.0<span class="tag">&lt;/version&gt;</span>
+<span class="tag">&lt;/dependency&gt;</span></code></pre>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -105,8 +132,8 @@ icon-size
 icon-color
 </td>
 <td class="hdlist2">
-<p>A  <code>javafx.scene.paint.Color</code>, <code>javafx.scene.paint.LinearGradient</code>, or <code>javafx.scene.paint.RadialGradient</code>
-literal.</p>
+<p>A <code>javafx.scene.paint.Color</code>, <code>javafx.scene.paint.LinearGradient</code>,
+or <code>javafx.scene.paint.RadialGradient</code> literal.</p>
 </td>
 </tr>
 </table>
@@ -151,12 +178,31 @@ di-java:64:BLUE</code></pre>
 </tr>
 </table>
 </div>
+<div class="sect2">
+<h3 id="_installing_2"><a class="anchor" href="#_installing_2"></a>2.1. Installing</h3>
+<div class="listingblock">
+<div class="title">gradle</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-javafx:1.2.0'</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">maven</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
+    <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
+    <span class="tag">&lt;artifactId&gt;</span>ikonli-javafx<span class="tag">&lt;/artifactId&gt;</span>
+    <span class="tag">&lt;version&gt;</span>1.2.0<span class="tag">&lt;/version&gt;</span>
+<span class="tag">&lt;/dependency&gt;</span></code></pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-02-01 15:15:53 +01:00
+Last updated 2016-02-18 20:01:32 +01:00
 </div>
 </div>
 </body>
