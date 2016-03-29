@@ -11,6 +11,8 @@ dependencies {
     compile project(':ikonli-fontawesome-pack')
     compile project(':ikonli-fontelico-pack')
     compile project(':ikonli-foundation-pack')
+    compile project(':ikonli-hawconsfilled-pack')
+    compile project(':ikonli-hawconsstroke-pack')
     compile project(':ikonli-icomoon-pack')
     compile project(':ikonli-ionicons-pack')
     compile project(':ikonli-maki-pack')

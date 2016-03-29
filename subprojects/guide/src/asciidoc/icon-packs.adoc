@@ -152,6 +152,56 @@ compile '{project-group}:ikonli-foundation-pack:{project-version}'
 </dependency>
 ----
 
+== HawconsFilled
+ * Font version: {hawconsVersion}
+ * link:http://hawcons.com/[]
+ * link:cheat-sheet-hawconsfilled.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-hawconsfilled-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-hawconsfilled-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
+== HawconsStroke
+ * Font version: {hawconsVersion}
+ * link:http://hawcons.com/[]
+ * link:cheat-sheet-hawconsstroke.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-hawconsstroke-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-hawconsstroke-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
 == Icomoon
  * Font version: {icomoonVersion}
  * link:https://icomoon.io/#icons-icomoon[]

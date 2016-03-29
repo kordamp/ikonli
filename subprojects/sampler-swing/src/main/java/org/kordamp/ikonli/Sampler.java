@@ -56,6 +56,8 @@ import org.kordamp.ikonli.feather.Feather;
 import org.kordamp.ikonli.fontawesome.FontAwesome;
 import org.kordamp.ikonli.fontelico.Fontelico;
 import org.kordamp.ikonli.foundation.Foundation;
+import org.kordamp.ikonli.hawcons.HawconsFilled;
+import org.kordamp.ikonli.hawcons.HawconsStroke;
 import org.kordamp.ikonli.icomoon.Icomoon;
 import org.kordamp.ikonli.ionicons.Ionicons;
 import org.kordamp.ikonli.maki.Maki;
@@ -102,6 +104,8 @@ public class Sampler {
         createTab(tabPane, FontAwesome.class, new DemoTab(allOf(FontAwesome.class)));
         createTab(tabPane, Fontelico.class, new DemoTab(allOf(Fontelico.class)));
         createTab(tabPane, Foundation.class, new DemoTab(allOf(Foundation.class)));
+        createTab(tabPane, HawconsFilled.class, new DemoTab(allOf(HawconsFilled.class)));
+        createTab(tabPane, HawconsStroke.class, new DemoTab(allOf(HawconsStroke.class)));
         createTab(tabPane, Icomoon.class, new DemoTab(allOf(Icomoon.class)));
         createTab(tabPane, Ionicons.class, new DemoTab(allOf(Ionicons.class)));
         createTab(tabPane, Maki.class, new DemoTab(allOf(Maki.class)));
