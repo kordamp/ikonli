@@ -55,6 +55,7 @@ import org.kordamp.ikonli.elusive.Elusive;
 import org.kordamp.ikonli.fontawesome.FontAwesome;
 import org.kordamp.ikonli.fontelico.Fontelico;
 import org.kordamp.ikonli.foundation.Foundation;
+import org.kordamp.ikonli.ionicons.Ionicons;
 import org.kordamp.ikonli.maki.Maki;
 import org.kordamp.ikonli.material.Material;
 import org.kordamp.ikonli.materialdesign.MaterialDesign;
@@ -97,6 +98,7 @@ public class Sampler {
         createTab(tabPane, FontAwesome.class, new DemoTab(allOf(FontAwesome.class)));
         createTab(tabPane, Fontelico.class, new DemoTab(allOf(Fontelico.class)));
         createTab(tabPane, Foundation.class, new DemoTab(allOf(Foundation.class)));
+        createTab(tabPane, Ionicons.class, new DemoTab(allOf(Ionicons.class)));
         createTab(tabPane, Maki.class, new DemoTab(allOf(Maki.class)));
         createTab(tabPane, Material.class, new DemoTab(allOf(Material.class)));
         createTab(tabPane, MaterialDesign.class, new DemoTab(allOf(MaterialDesign.class)));

@@ -9,6 +9,7 @@ dependencies {
     compile project(':ikonli-fontawesome-pack')
     compile project(':ikonli-fontelico-pack')
     compile project(':ikonli-foundation-pack')
+    compile project(':ikonli-ionicons-pack')
     compile project(':ikonli-maki-pack')
     compile project(':ikonli-material-pack')
     compile project(':ikonli-materialdesign-pack')
