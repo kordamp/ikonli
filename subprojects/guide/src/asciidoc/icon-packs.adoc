@@ -102,7 +102,6 @@ compile '{project-group}:ikonli-fontelico-pack:{project-version}'
 </dependency>
 ----
 
-
 == Foundation
  * Font version: {foundationVersion}
  * link:http://zurb.com/playground/foundation-icon-fonts-3[]
@@ -124,6 +123,31 @@ compile '{project-group}:ikonli-foundation-pack:{project-version}'
 <dependency>
     <groupId>{project-group}</groupId>
     <artifactId>ikonli-foundation-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
+== Ionicons
+ * Font version: {ioniconsVersion}
+ * link:http://ionicons.com/[]
+ * link:cheat-sheet-ionicons.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-ionicons-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-ionicons-pack</artifactId>
     <version>{project-version}</version>
 </dependency>
 ----

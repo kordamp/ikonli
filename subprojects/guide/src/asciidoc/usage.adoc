@@ -66,7 +66,7 @@ The `iconLiteral` property accepts any of these formats
 
 where the following rules apply
 
-[horizontal]
+
 icon-code:: An icon code literal such as `di-java`.
 icon-size:: A number (in pixels) specifying the width of the icon.
 icon-color:: A `javafx.scene.paint.Color`, `javafx.scene.paint.LinearGradient`,
