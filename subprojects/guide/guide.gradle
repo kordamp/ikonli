@@ -241,7 +241,7 @@ asciidoctor {
         makiVersion            : project.makiVersion,
         materialVersion        : project.materialVersion,
         materialdesignVersion  : project.materialdesignVersion,
-        metrizeVersion         : project.metrizeiconsVersion,
+        metrizeiconsVersion    : project.metrizeiconsVersion,
         octiconsVersion        : project.octiconsVersion,
         openiconicVersion      : project.openiconicVersion,
         typiconsVersion        : project.typiconsVersion,
