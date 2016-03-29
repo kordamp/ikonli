@@ -59,6 +59,7 @@ import org.kordamp.ikonli.ionicons.Ionicons;
 import org.kordamp.ikonli.maki.Maki;
 import org.kordamp.ikonli.material.Material;
 import org.kordamp.ikonli.materialdesign.MaterialDesign;
+import org.kordamp.ikonli.metrizeicons.MetrizeIcons;
 import org.kordamp.ikonli.octicons.Octicons;
 import org.kordamp.ikonli.openiconic.Openiconic;
 import org.kordamp.ikonli.swing.FontIcon;
@@ -102,6 +103,7 @@ public class Sampler {
         createTab(tabPane, Maki.class, new DemoTab(allOf(Maki.class)));
         createTab(tabPane, Material.class, new DemoTab(allOf(Material.class)));
         createTab(tabPane, MaterialDesign.class, new DemoTab(allOf(MaterialDesign.class)));
+        createTab(tabPane, MetrizeIcons.class, new DemoTab(allOf(MetrizeIcons.class)));
         createTab(tabPane, Octicons.class, new DemoTab(allOf(Octicons.class)));
         createTab(tabPane, Openiconic.class, new DemoTab(allOf(Openiconic.class)));
         createTab(tabPane, Typicons.class, new DemoTab(allOf(Typicons.class)));

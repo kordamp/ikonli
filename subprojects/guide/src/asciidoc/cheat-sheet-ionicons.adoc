@@ -1,4 +1,4 @@
-= Typicons
+= Ionicons
 
 ++++
 <link href='./css/ionicons.css' rel='stylesheet'>

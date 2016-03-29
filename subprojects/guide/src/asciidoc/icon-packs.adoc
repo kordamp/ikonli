@@ -227,6 +227,31 @@ compile '{project-group}:ikonli-materialdesign-pack:{project-version}'
 </dependency>
 ----
 
+== Metrizeicons
+ * Font version: {metrizeiconsVersion}
+ * link:http://www.alessioatzeni.com/metrize-icons/[]
+ * link:cheat-sheet-metrizeicons.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-metrizeicons-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-metrizeicons-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
 == Octicons
  * Font version: {octiconsVersion}
  * link:https://github.com/github/octicons[]

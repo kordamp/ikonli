@@ -69,6 +69,7 @@ import org.kordamp.ikonli.javafx.FontIcon;
 import org.kordamp.ikonli.maki.Maki;
 import org.kordamp.ikonli.material.Material;
 import org.kordamp.ikonli.materialdesign.MaterialDesign;
+import org.kordamp.ikonli.metrizeicons.MetrizeIcons;
 import org.kordamp.ikonli.octicons.Octicons;
 import org.kordamp.ikonli.openiconic.Openiconic;
 import org.kordamp.ikonli.typicons.Typicons;
@@ -102,6 +103,7 @@ public class Sampler extends Application {
         tabPane.getTabs().add(new DemoTab(Maki.class, allOf(Maki.class)));
         tabPane.getTabs().add(new DemoTab(Material.class, allOf(Material.class)));
         tabPane.getTabs().add(new DemoTab(MaterialDesign.class, allOf(MaterialDesign.class)));
+        tabPane.getTabs().add(new DemoTab(MetrizeIcons.class, allOf(MetrizeIcons.class)));
         tabPane.getTabs().add(new DemoTab(Octicons.class, allOf(Octicons.class)));
         tabPane.getTabs().add(new DemoTab(Openiconic.class, allOf(Openiconic.class)));
         tabPane.getTabs().add(new DemoTab(Typicons.class, allOf(Typicons.class)));

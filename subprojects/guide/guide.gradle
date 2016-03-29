@@ -27,6 +27,7 @@ ext.childProjects = [
     ':ikonli-maki-pack',
     ':ikonli-material-pack',
     ':ikonli-materialdesign-pack',
+    ':ikonli-metrizeicons-pack',
     ':ikonli-octicons-pack',
     ':ikonli-openiconic-pack',
     ':ikonli-typicons-pack',
@@ -195,6 +196,7 @@ asciidoctor {
               createIconGenerationTask(packName: 'maki',           iconClassName: 'org.kordamp.ikonli.maki.Maki',                     shortNameSize: 5),
               createIconGenerationTask(packName: 'material',       iconClassName: 'org.kordamp.ikonli.material.Material',             iconName: 'gmi',     shortNameSize: 4),
               createIconGenerationTask(packName: 'materialdesign', iconClassName: 'org.kordamp.ikonli.materialdesign.MaterialDesign', iconName: 'mdi',     shortNameSize: 4),
+              createIconGenerationTask(packName: 'metrizeicons',   iconClassName: 'org.kordamp.ikonli.metrizeicons.MetrizeIcons',     iconName: 'met',     shortNameSize: 4),
               createIconGenerationTask(packName: 'octicons',       iconClassName: 'org.kordamp.ikonli.octicons.Octicons',             iconName: 'octicon', shortNameSize: 4),
               createIconGenerationTask(packName: 'openiconic',     iconClassName: 'org.kordamp.ikonli.openiconic.Openiconic',         iconName: 'oi',      dataGlyph: true),
               createIconGenerationTask(packName: 'typicons',       iconClassName: 'org.kordamp.ikonli.typicons.Typicons',             iconName: 'typcn',   shortNameSize: 4),
@@ -229,6 +231,7 @@ asciidoctor {
         makiVersion            : project.makiVersion,
         materialVersion        : project.materialVersion,
         materialdesignVersion  : project.materialdesignVersion,
+        metrizeVersion         : project.metrizeiconsVersion,
         octiconsVersion        : project.octiconsVersion,
         openiconicVersion      : project.openiconicVersion,
         typiconsVersion        : project.typiconsVersion,
@@ -248,6 +251,7 @@ asciidoctor {
         from project(':ikonli-maki-pack').file("src/main/resources/META-INF/resources/maki/${makiVersion}")
         from project(':ikonli-material-pack').file("src/main/resources/META-INF/resources/material/${materialVersion}")
         from project(':ikonli-materialdesign-pack').file("src/main/resources/META-INF/resources/materialdesignicons/${materialdesignVersion}")
+        from project(':ikonli-metrizeicons-pack').file("src/main/resources/META-INF/resources/metrizeicons/${metrizeiconsVersion}")
         from project(':ikonli-octicons-pack').file("src/main/resources/META-INF/resources/octicons/${octiconsVersion}")
         from project(':ikonli-openiconic-pack').file("src/main/resources/META-INF/resources/openiconic/${openiconicVersion}")
         from project(':ikonli-typicons-pack').file("src/main/resources/META-INF/resources/typicons/${typiconsVersion}")
