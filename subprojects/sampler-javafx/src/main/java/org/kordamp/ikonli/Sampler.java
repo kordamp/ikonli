@@ -65,6 +65,7 @@ import org.kordamp.ikonli.feather.Feather;
 import org.kordamp.ikonli.fontawesome.FontAwesome;
 import org.kordamp.ikonli.fontelico.Fontelico;
 import org.kordamp.ikonli.foundation.Foundation;
+import org.kordamp.ikonli.icomoon.Icomoon;
 import org.kordamp.ikonli.ionicons.Ionicons;
 import org.kordamp.ikonli.javafx.FontIcon;
 import org.kordamp.ikonli.maki.Maki;
@@ -101,6 +102,7 @@ public class Sampler extends Application {
         tabPane.getTabs().add(new DemoTab(FontAwesome.class, allOf(FontAwesome.class)));
         tabPane.getTabs().add(new DemoTab(Fontelico.class, allOf(Fontelico.class)));
         tabPane.getTabs().add(new DemoTab(Foundation.class, allOf(Foundation.class)));
+        tabPane.getTabs().add(new DemoTab(Icomoon.class, allOf(Icomoon.class)));
         tabPane.getTabs().add(new DemoTab(Ionicons.class, allOf(Ionicons.class)));
         tabPane.getTabs().add(new DemoTab(Maki.class, allOf(Maki.class)));
         tabPane.getTabs().add(new DemoTab(Material.class, allOf(Material.class)));

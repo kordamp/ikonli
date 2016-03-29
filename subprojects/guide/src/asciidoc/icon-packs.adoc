@@ -152,6 +152,31 @@ compile '{project-group}:ikonli-foundation-pack:{project-version}'
 </dependency>
 ----
 
+== Icomoon
+ * Font version: {icomoonVersion}
+ * link:https://icomoon.io/#icons-icomoon[]
+ * link:cheat-sheet-icomoon.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-icomoon-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-icomoon-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
 == Ionicons
  * Font version: {ioniconsVersion}
  * link:http://ionicons.com/[]

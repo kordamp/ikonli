@@ -24,6 +24,7 @@ ext.childProjects = [
     ':ikonli-fontawesome-pack',
     ':ikonli-fontelico-pack',
     ':ikonli-foundation-pack',
+    ':ikonli-icomoon-pack',
     ':ikonli-ionicons-pack',
     ':ikonli-maki-pack',
     ':ikonli-material-pack',
@@ -194,7 +195,8 @@ asciidoctor {
               createIconGenerationTask(packName: 'fontawesome',    iconClassName: 'org.kordamp.ikonli.fontawesome.FontAwesome',       iconName: 'fa'),
               createIconGenerationTask(packName: 'fontelico',      iconClassName: 'org.kordamp.ikonli.fontelico.Fontelico',           shortNameSize: 4),
               createIconGenerationTask(packName: 'foundation',     iconClassName: 'org.kordamp.ikonli.foundation.Foundation'),
-              createIconGenerationTask(packName: 'ionicons',       iconClassName: 'org.kordamp.ikonli.ionicons.Ionicons',             iconName: 'ion',   shortNameSize: 4),
+              createIconGenerationTask(packName: 'icomoon',        iconClassName: 'org.kordamp.ikonli.icomoon.Icomoon',               iconName: 'icm',     shortNameSize: 4),
+              createIconGenerationTask(packName: 'ionicons',       iconClassName: 'org.kordamp.ikonli.ionicons.Ionicons',             iconName: 'ion',     shortNameSize: 4),
               createIconGenerationTask(packName: 'maki',           iconClassName: 'org.kordamp.ikonli.maki.Maki',                     shortNameSize: 5),
               createIconGenerationTask(packName: 'material',       iconClassName: 'org.kordamp.ikonli.material.Material',             iconName: 'gmi',     shortNameSize: 4),
               createIconGenerationTask(packName: 'materialdesign', iconClassName: 'org.kordamp.ikonli.materialdesign.MaterialDesign', iconName: 'mdi',     shortNameSize: 4),
@@ -229,6 +231,7 @@ asciidoctor {
         fontawesomeVersion     : project.fontawesomeVersion,
         fontelicoVersion       : project.fontelicoVersion,
         foundationVersion      : project.foundationVersion,
+        icomoonVersion         : project.icomoonVersion,
         ioniconsVersion        : project.ioniconsVersion,
         makiVersion            : project.makiVersion,
         materialVersion        : project.materialVersion,
@@ -250,6 +253,7 @@ asciidoctor {
         from project(':ikonli-fontawesome-pack').file("src/main/resources/META-INF/resources/fontawesome/${fontawesomeVersion}")
         from project(':ikonli-fontelico-pack').file("src/main/resources/META-INF/resources/fontelico/${fontelicoVersion}")
         from project(':ikonli-foundation-pack').file("src/main/resources/META-INF/resources/foundation/${foundationVersion}")
+        from project(':ikonli-icomoon-pack').file("src/main/resources/META-INF/resources/icomoon/${icomoonVersion}")
         from project(':ikonli-ionicons-pack').file("src/main/resources/META-INF/resources/ionicons/${ioniconsVersion}")
         from project(':ikonli-maki-pack').file("src/main/resources/META-INF/resources/maki/${makiVersion}")
         from project(':ikonli-material-pack').file("src/main/resources/META-INF/resources/material/${materialVersion}")
