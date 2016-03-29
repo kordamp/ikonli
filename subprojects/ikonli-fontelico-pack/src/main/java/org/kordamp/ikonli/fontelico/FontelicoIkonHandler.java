@@ -77,6 +77,6 @@ public class FontelicoIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontFamily() {
-        return "Font Awesome";
+        return "Fontelico";
     }
 }
