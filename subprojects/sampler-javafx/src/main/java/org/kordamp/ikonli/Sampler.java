@@ -61,6 +61,7 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import org.kordamp.ikonli.devicons.Devicons;
 import org.kordamp.ikonli.elusive.Elusive;
+import org.kordamp.ikonli.feather.Feather;
 import org.kordamp.ikonli.fontawesome.FontAwesome;
 import org.kordamp.ikonli.fontelico.Fontelico;
 import org.kordamp.ikonli.foundation.Foundation;
@@ -96,6 +97,7 @@ public class Sampler extends Application {
 
         tabPane.getTabs().add(new DemoTab(Devicons.class, allOf(Devicons.class)));
         tabPane.getTabs().add(new DemoTab(Elusive.class, allOf(Elusive.class)));
+        tabPane.getTabs().add(new DemoTab(Feather.class, allOf(Feather.class)));
         tabPane.getTabs().add(new DemoTab(FontAwesome.class, allOf(FontAwesome.class)));
         tabPane.getTabs().add(new DemoTab(Fontelico.class, allOf(Fontelico.class)));
         tabPane.getTabs().add(new DemoTab(Foundation.class, allOf(Foundation.class)));

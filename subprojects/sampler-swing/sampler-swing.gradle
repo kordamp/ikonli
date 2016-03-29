@@ -6,6 +6,7 @@ dependencies {
     compile project(':ikonli-swing')
     compile project(':ikonli-devicons-pack')
     compile project(':ikonli-elusive-pack')
+    compile project(':ikonli-feather-pack')
     compile project(':ikonli-fontawesome-pack')
     compile project(':ikonli-fontelico-pack')
     compile project(':ikonli-foundation-pack')

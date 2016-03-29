@@ -52,6 +52,7 @@ package org.kordamp.ikonli;
 
 import org.kordamp.ikonli.devicons.Devicons;
 import org.kordamp.ikonli.elusive.Elusive;
+import org.kordamp.ikonli.feather.Feather;
 import org.kordamp.ikonli.fontawesome.FontAwesome;
 import org.kordamp.ikonli.fontelico.Fontelico;
 import org.kordamp.ikonli.foundation.Foundation;
@@ -96,6 +97,7 @@ public class Sampler {
 
         createTab(tabPane, Devicons.class, new DemoTab(allOf(Devicons.class)));
         createTab(tabPane, Elusive.class, new DemoTab(allOf(Elusive.class)));
+        createTab(tabPane, Feather.class, new DemoTab(allOf(Feather.class)));
         createTab(tabPane, FontAwesome.class, new DemoTab(allOf(FontAwesome.class)));
         createTab(tabPane, Fontelico.class, new DemoTab(allOf(Fontelico.class)));
         createTab(tabPane, Foundation.class, new DemoTab(allOf(Foundation.class)));

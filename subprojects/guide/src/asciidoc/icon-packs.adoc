@@ -52,6 +52,31 @@ compile '{project-group}:ikonli-elusive-pack:{project-version}'
 </dependency>
 ----
 
+== Feather
+ * Font version: {featherVersion}
+ * link:http://colebemis.com/feather/[]
+ * link:cheat-sheet-feather.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-feather-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-feather-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
 == FontAwesome
  * Font version: {fontawesomeVersion}
  * link:http://fortawesome.github.io/Font-Awesome/[]
