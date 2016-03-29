@@ -77,6 +77,6 @@ public class DeviconsIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontFamily() {
-        return "icomoon";
+        return "Devicons";
     }
 }
