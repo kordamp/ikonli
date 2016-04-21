@@ -54,14 +54,13 @@ import javafx.css.ParsedValue;
 import javafx.css.StyleConverter;
 import javafx.scene.text.Font;
 import org.kordamp.ikonli.Ikon;
-import org.kordamp.ikonli.javafx.IkonResolver;
 
 /**
  * @author Andres Almiray
  */
-public class IconFontConverter extends StyleConverter<String, Ikon> {
+public class FontIconConverter extends StyleConverter<String, Ikon> {
     private static class Holder {
-        static final IconFontConverter INSTANCE = new IconFontConverter();
+        static final FontIconConverter INSTANCE = new FontIconConverter();
         static final SequenceConverter SEQUENCE_INSTANCE = new SequenceConverter();
     }
 
@@ -69,13 +68,13 @@ public class IconFontConverter extends StyleConverter<String, Ikon> {
         return Holder.INSTANCE;
     }
 
-    private IconFontConverter() {
+    private FontIconConverter() {
 
     }
 
     @Override
     public String toString() {
-        return "IconFontConverter";
+        return "FontIconConverter";
     }
 
     @Override
@@ -106,7 +105,7 @@ public class IconFontConverter extends StyleConverter<String, Ikon> {
 
         @Override
         public String toString() {
-            return "IconFont.SequenceConverter";
+            return "FontIcon.SequenceConverter";
         }
     }
 }

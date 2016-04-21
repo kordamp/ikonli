@@ -31,7 +31,7 @@ compile '{project-group}:ikonli-swing:{project-version}'
 
 The `ikonli-javafx:{project-version}` JAR provides a new Node class: `{api_link_fonticon_javafx}`.
 You may use this class with any JavaFX control that accepts a graphic property. You may also use the icon directly as
-it is a subclass of `javafx.scene.control.Label`. The icon class can be used inside an FXML file too.
+it is a subclass of `javafx.scene.text.Text`. The icon class can be used inside an FXML file too.
 
 [source,xml]
 ----
@@ -44,15 +44,13 @@ it is a subclass of `javafx.scene.control.Label`. The icon class can be used ins
 <GridPane prefHeight="60.0" prefWidth="200.0"
           xmlns:fx="http://javafx.com/fxml"
           fx:controller="org.example.AppController">
-    <children>
-        <Button GridPane.columnIndex="0" GridPane.rowIndex="0"
-                mnemonicParsing="false"
-                prefWidth="200.0">
-            <graphic>
-                <FontIcon iconLiteral="di-java" iconSize="64"/>
-            </graphic>
-        </Button>
-    </children>
+    <Button GridPane.columnIndex="0" GridPane.rowIndex="0"
+            mnemonicParsing="false"
+            prefWidth="200.0">
+        <graphic>
+            <FontIcon iconLiteral="di-java" iconSize="64"/>
+        </graphic>
+    </Button>
 </GridPane>
 ----
 
@@ -65,7 +63,6 @@ The `iconLiteral` property accepts any of these formats
  * icon-code:icon-size:icon-color
 
 where the following rules apply
-
 
 icon-code:: An icon code literal such as `di-java`.
 icon-size:: A number (in pixels) specifying the width of the icon.
@@ -86,6 +83,36 @@ di-java:64:BLUE
 
 [horizontal]
 -fx-icon-code:: An icon literal such as `di-java` or `fa-github`.
+-fx-icon-size:: The size of the icon, in pixels.
+-fx-icon-color:: A JavaFX `Paint` definition, such as a plain color or gradient.
+
+A stackable version is also available, `{api_link_stackedfonticon_javafx}`. This is an specialized version of `javafx.scene.layout.StackPane`
+that accepts instances of `{api_link_fonticon_javafx}` as child content. You may use this class with FXML, like it's shown
+in the following example
+
+[source,xml]
+----
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.GridPane?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+<?import org.kordamp.ikonli.javafx.StackedFontIcon?>
+
+<GridPane prefHeight="60.0" prefWidth="200.0"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="org.example.AppController">
+    <StackedFontIcon GridPane.columnIndex="0" GridPane.rowIndex="0" iconSize="48">
+        <FontIcon iconLiteral="fa-circle-thin" iconColor="red"/>
+        <FontIcon iconLiteral="fa-camera" StackedFontIcon.iconSize="0.5"/>
+    </StackedFontIcon>
+</GridPane>
+----
+
+.Stylable Properties
+
+`{api_link_stackedfonticon_javafx}` exposes properties that can be styled using CSS. It defines a node class named `stacked-ikonli-font-icon`.
+
+[horizontal]
 -fx-icon-size:: The size of the icon, in pixels.
 -fx-icon-color:: A JavaFX `Paint` definition, such as a plain color or gradient.
 

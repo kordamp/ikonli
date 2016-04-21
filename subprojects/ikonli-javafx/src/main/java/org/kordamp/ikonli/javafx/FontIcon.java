@@ -277,7 +277,7 @@ public class FontIcon extends Text implements Icon {
 
         private static final CssMetaData<FontIcon, Ikon> ICON_CODE =
             new CssMetaData<FontIcon, Ikon>("-fx-icon-code",
-                IconFontConverter.getInstance(), null) {
+                FontIconConverter.getInstance(), null) {
 
                 @Override
                 public boolean isSettable(FontIcon node) {

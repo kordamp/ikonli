@@ -1,6 +1,7 @@
 
 :link_devicons: link:http://vorillaz.github.io/devicons/[DevIcons, window="_blank"]
 :api_link_fonticon_javafx: link:api/org/kordamp/ikonli/javafx/FontIcon.html[org.kordamp.ikonli.javafx.FontIcon, window="_blank"]
+:api_link_stackedfonticon_javafx: link:api/org/kordamp/ikonli/javafx/StackedFontIcon.html[org.kordamp.ikonli.javafx.StackedFontIcon, window="_blank"]
 :api_link_fonticon_swing: link:api/org/kordamp/ikonli/swing/FontIcon.html[org.kordamp.ikonli.swing.FontIcon, window="_blank"]
 
 :project-owner: aalmiray
