@@ -16,7 +16,7 @@
 <h1>Icon packs for Java applications</h1>
 <div class="details">
 <span id="author" class="author">Andres Almiray</span><br>
-<span id="revnumber">version 1.3.0</span>
+<span id="revnumber">version 1.4.0</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
@@ -90,7 +90,7 @@ the <a href="https://github.com/basilisk-fw/basilisk">Basilisk Framework</a> the
 Swing
 </td>
 <td class="hdlist2">
-<p>ikonli-swing-1.3.0</p>
+<p>ikonli-swing-1.4.0</p>
 </td>
 </tr>
 <tr>
@@ -98,7 +98,7 @@ Swing
 JavaFX
 </td>
 <td class="hdlist2">
-<p>ikonli-javafx-1.3.0</p>
+<p>ikonli-javafx-1.4.0</p>
 </td>
 </tr>
 </table>
@@ -115,7 +115,7 @@ JavaFX
 <div class="sect2">
 <h3 id="_swing"><a class="anchor" href="#_swing"></a>2.1. Swing</h3>
 <div class="paragraph">
-<p>The <code>ikonli-swing:1.3.0</code> JAR provides a new Icon class: <code><a href="api/org/kordamp/ikonli/swing/FontIcon.html" target="_blank">org.kordamp.ikonli.swing.FontIcon</a></code>.
+<p>The <code>ikonli-swing:1.4.0</code> JAR provides a new Icon class: <code><a href="api/org/kordamp/ikonli/swing/FontIcon.html" target="_blank">org.kordamp.ikonli.swing.FontIcon</a></code>.
 You may use this class with any Swing component that supports an Icon property.</p>
 </div>
 <div class="sect3">
@@ -123,7 +123,7 @@ You may use this class with any Swing component that supports an Icon property.<
 <div class="listingblock">
 <div class="title">gradle</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-swing:1.3.0'</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-swing:1.4.0'</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -132,7 +132,7 @@ You may use this class with any Swing component that supports an Icon property.<
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
     <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
     <span class="tag">&lt;artifactId&gt;</span>ikonli-swing<span class="tag">&lt;/artifactId&gt;</span>
-    <span class="tag">&lt;version&gt;</span>1.3.0<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;version&gt;</span>1.4.0<span class="tag">&lt;/version&gt;</span>
 <span class="tag">&lt;/dependency&gt;</span></code></pre>
 </div>
 </div>
@@ -141,9 +141,9 @@ You may use this class with any Swing component that supports an Icon property.<
 <div class="sect2">
 <h3 id="_javafx"><a class="anchor" href="#_javafx"></a>2.2. JavaFX</h3>
 <div class="paragraph">
-<p>The <code>ikonli-javafx:1.3.0</code> JAR provides a new Node class: <code><a href="api/org/kordamp/ikonli/javafx/FontIcon.html" target="_blank">org.kordamp.ikonli.javafx.FontIcon</a></code>.
+<p>The <code>ikonli-javafx:1.4.0</code> JAR provides a new Node class: <code><a href="api/org/kordamp/ikonli/javafx/FontIcon.html" target="_blank">org.kordamp.ikonli.javafx.FontIcon</a></code>.
 You may use this class with any JavaFX control that accepts a graphic property. You may also use the icon directly as
-it is a subclass of <code>javafx.scene.control.Label</code>. The icon class can be used inside an FXML file too.</p>
+it is a subclass of <code>javafx.scene.text.Text</code>. The icon class can be used inside an FXML file too.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -156,15 +156,13 @@ it is a subclass of <code>javafx.scene.control.Label</code>. The icon class can 
 <span class="tag">&lt;GridPane</span> <span class="attribute-name">prefHeight</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">60.0</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">prefWidth</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">200.0</span><span class="delimiter">&quot;</span></span>
           <span class="attribute-name">xmlns:fx</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://javafx.com/fxml</span><span class="delimiter">&quot;</span></span>
           <span class="attribute-name">fx:controller</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">org.example.AppController</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
-    <span class="tag">&lt;children&gt;</span>
-        <span class="tag">&lt;Button</span> <span class="attribute-name">GridPane.columnIndex</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">0</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">GridPane.rowIndex</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">0</span><span class="delimiter">&quot;</span></span>
-                <span class="attribute-name">mnemonicParsing</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">false</span><span class="delimiter">&quot;</span></span>
-                <span class="attribute-name">prefWidth</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">200.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
-            <span class="tag">&lt;graphic&gt;</span>
-                <span class="tag">&lt;FontIcon</span> <span class="attribute-name">iconLiteral</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">di-java</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">iconSize</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">64</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
-            <span class="tag">&lt;/graphic&gt;</span>
-        <span class="tag">&lt;/Button&gt;</span>
-    <span class="tag">&lt;/children&gt;</span>
+    <span class="tag">&lt;Button</span> <span class="attribute-name">GridPane.columnIndex</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">0</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">GridPane.rowIndex</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">0</span><span class="delimiter">&quot;</span></span>
+            <span class="attribute-name">mnemonicParsing</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">false</span><span class="delimiter">&quot;</span></span>
+            <span class="attribute-name">prefWidth</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">200.0</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+        <span class="tag">&lt;graphic&gt;</span>
+            <span class="tag">&lt;FontIcon</span> <span class="attribute-name">iconLiteral</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">di-java</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">iconSize</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">64</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
+        <span class="tag">&lt;/graphic&gt;</span>
+    <span class="tag">&lt;/Button&gt;</span>
 <span class="tag">&lt;/GridPane&gt;</span></code></pre>
 </div>
 </div>
@@ -245,12 +243,59 @@ di-java:64:BLUE</code></pre>
 </tr>
 </table>
 </div>
+<div class="paragraph">
+<p>A stackable version is also available, <code><a href="api/org/kordamp/ikonli/javafx/StackedFontIcon.html" target="_blank">org.kordamp.ikonli.javafx.StackedFontIcon</a></code>. This is an specialized version of <code>javafx.scene.layout.StackPane</code>
+that accepts instances of <code><a href="api/org/kordamp/ikonli/javafx/FontIcon.html" target="_blank">org.kordamp.ikonli.javafx.FontIcon</a></code> as child content. You may use this class with FXML, like it&#8217;s shown
+in the following example</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="preprocessor">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+
+<span class="comment">&lt;?import javafx.scene.layout.GridPane?&gt;</span>
+<span class="comment">&lt;?import org.kordamp.ikonli.javafx.FontIcon?&gt;</span>
+<span class="comment">&lt;?import org.kordamp.ikonli.javafx.StackedFontIcon?&gt;</span>
+
+<span class="tag">&lt;GridPane</span> <span class="attribute-name">prefHeight</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">60.0</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">prefWidth</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">200.0</span><span class="delimiter">&quot;</span></span>
+          <span class="attribute-name">xmlns:fx</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://javafx.com/fxml</span><span class="delimiter">&quot;</span></span>
+          <span class="attribute-name">fx:controller</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">org.example.AppController</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+    <span class="tag">&lt;StackedFontIcon</span> <span class="attribute-name">GridPane.columnIndex</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">0</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">GridPane.rowIndex</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">0</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">iconSize</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">48</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+        <span class="tag">&lt;FontIcon</span> <span class="attribute-name">iconLiteral</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">fa-circle-thin</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">iconColor</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">red</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
+        <span class="tag">&lt;FontIcon</span> <span class="attribute-name">iconLiteral</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">fa-camera</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">StackedFontIcon.iconSize</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">0.5</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
+    <span class="tag">&lt;/StackedFontIcon&gt;</span>
+<span class="tag">&lt;/GridPane&gt;</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<div class="title">Stylable Properties</div>
+<p><code><a href="api/org/kordamp/ikonli/javafx/StackedFontIcon.html" target="_blank">org.kordamp.ikonli.javafx.StackedFontIcon</a></code> exposes properties that can be styled using CSS. It defines a node class named <code>stacked-ikonli-font-icon</code>.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+-fx-icon-size
+</td>
+<td class="hdlist2">
+<p>The size of the icon, in pixels.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+-fx-icon-color
+</td>
+<td class="hdlist2">
+<p>A JavaFX <code>Paint</code> definition, such as a plain color or gradient.</p>
+</td>
+</tr>
+</table>
+</div>
 <div class="sect3">
 <h4 id="_installing_2"><a class="anchor" href="#_installing_2"></a>2.2.1. Installing</h4>
 <div class="listingblock">
 <div class="title">gradle</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-javafx:1.3.0'</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-javafx:1.4.0'</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -259,7 +304,7 @@ di-java:64:BLUE</code></pre>
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
     <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
     <span class="tag">&lt;artifactId&gt;</span>ikonli-javafx<span class="tag">&lt;/artifactId&gt;</span>
-    <span class="tag">&lt;version&gt;</span>1.3.0<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;version&gt;</span>1.4.0<span class="tag">&lt;/version&gt;</span>
 <span class="tag">&lt;/dependency&gt;</span></code></pre>
 </div>
 </div>
@@ -290,7 +335,7 @@ di-java:64:BLUE</code></pre>
 <div class="listingblock">
 <div class="title">gradle</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-devicons-pack:1.3.0'</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-devicons-pack:1.4.0'</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -299,7 +344,7 @@ di-java:64:BLUE</code></pre>
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
     <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
     <span class="tag">&lt;artifactId&gt;</span>ikonli-devicons-pack<span class="tag">&lt;/artifactId&gt;</span>
-    <span class="tag">&lt;version&gt;</span>1.3.0<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;version&gt;</span>1.4.0<span class="tag">&lt;/version&gt;</span>
 <span class="tag">&lt;/dependency&gt;</span></code></pre>
 </div>
 </div>
@@ -325,7 +370,7 @@ di-java:64:BLUE</code></pre>
 <div class="listingblock">
 <div class="title">gradle</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-elusive-pack:1.3.0'</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-elusive-pack:1.4.0'</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -334,7 +379,7 @@ di-java:64:BLUE</code></pre>
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
     <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
     <span class="tag">&lt;artifactId&gt;</span>ikonli-elusive-pack<span class="tag">&lt;/artifactId&gt;</span>
-    <span class="tag">&lt;version&gt;</span>1.3.0<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;version&gt;</span>1.4.0<span class="tag">&lt;/version&gt;</span>
 <span class="tag">&lt;/dependency&gt;</span></code></pre>
 </div>
 </div>
@@ -360,7 +405,7 @@ di-java:64:BLUE</code></pre>
 <div class="listingblock">
 <div class="title">gradle</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-feather-pack:1.3.0'</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-feather-pack:1.4.0'</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -369,7 +414,7 @@ di-java:64:BLUE</code></pre>
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
     <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
     <span class="tag">&lt;artifactId&gt;</span>ikonli-feather-pack<span class="tag">&lt;/artifactId&gt;</span>
-    <span class="tag">&lt;version&gt;</span>1.3.0<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;version&gt;</span>1.4.0<span class="tag">&lt;/version&gt;</span>
 <span class="tag">&lt;/dependency&gt;</span></code></pre>
 </div>
 </div>
@@ -395,7 +440,7 @@ di-java:64:BLUE</code></pre>
 <div class="listingblock">
 <div class="title">gradle</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-fontawesome-pack:1.3.0'</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-fontawesome-pack:1.4.0'</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -404,7 +449,7 @@ di-java:64:BLUE</code></pre>
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
     <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
     <span class="tag">&lt;artifactId&gt;</span>ikonli-fontawesome-pack<span class="tag">&lt;/artifactId&gt;</span>
-    <span class="tag">&lt;version&gt;</span>1.3.0<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;version&gt;</span>1.4.0<span class="tag">&lt;/version&gt;</span>
 <span class="tag">&lt;/dependency&gt;</span></code></pre>
 </div>
 </div>
@@ -430,7 +475,7 @@ di-java:64:BLUE</code></pre>
 <div class="listingblock">
 <div class="title">gradle</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-fontelico-pack:1.3.0'</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-fontelico-pack:1.4.0'</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -439,7 +484,7 @@ di-java:64:BLUE</code></pre>
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
     <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
     <span class="tag">&lt;artifactId&gt;</span>ikonli-fontelico-pack<span class="tag">&lt;/artifactId&gt;</span>
-    <span class="tag">&lt;version&gt;</span>1.3.0<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;version&gt;</span>1.4.0<span class="tag">&lt;/version&gt;</span>
 <span class="tag">&lt;/dependency&gt;</span></code></pre>
 </div>
 </div>
@@ -465,7 +510,7 @@ di-java:64:BLUE</code></pre>
 <div class="listingblock">
 <div class="title">gradle</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-foundation-pack:1.3.0'</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-foundation-pack:1.4.0'</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -474,7 +519,7 @@ di-java:64:BLUE</code></pre>
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
     <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
     <span class="tag">&lt;artifactId&gt;</span>ikonli-foundation-pack<span class="tag">&lt;/artifactId&gt;</span>
-    <span class="tag">&lt;version&gt;</span>1.3.0<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;version&gt;</span>1.4.0<span class="tag">&lt;/version&gt;</span>
 <span class="tag">&lt;/dependency&gt;</span></code></pre>
 </div>
 </div>
@@ -500,7 +545,7 @@ di-java:64:BLUE</code></pre>
 <div class="listingblock">
 <div class="title">gradle</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-hawconsfilled-pack:1.3.0'</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-hawconsfilled-pack:1.4.0'</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -509,7 +554,7 @@ di-java:64:BLUE</code></pre>
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
     <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
     <span class="tag">&lt;artifactId&gt;</span>ikonli-hawconsfilled-pack<span class="tag">&lt;/artifactId&gt;</span>
-    <span class="tag">&lt;version&gt;</span>1.3.0<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;version&gt;</span>1.4.0<span class="tag">&lt;/version&gt;</span>
 <span class="tag">&lt;/dependency&gt;</span></code></pre>
 </div>
 </div>
@@ -535,7 +580,7 @@ di-java:64:BLUE</code></pre>
 <div class="listingblock">
 <div class="title">gradle</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-hawconsstroke-pack:1.3.0'</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-hawconsstroke-pack:1.4.0'</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -544,7 +589,7 @@ di-java:64:BLUE</code></pre>
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
     <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
     <span class="tag">&lt;artifactId&gt;</span>ikonli-hawconsstroke-pack<span class="tag">&lt;/artifactId&gt;</span>
-    <span class="tag">&lt;version&gt;</span>1.3.0<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;version&gt;</span>1.4.0<span class="tag">&lt;/version&gt;</span>
 <span class="tag">&lt;/dependency&gt;</span></code></pre>
 </div>
 </div>
@@ -570,7 +615,7 @@ di-java:64:BLUE</code></pre>
 <div class="listingblock">
 <div class="title">gradle</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-icomoon-pack:1.3.0'</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-icomoon-pack:1.4.0'</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -579,7 +624,7 @@ di-java:64:BLUE</code></pre>
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
     <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
     <span class="tag">&lt;artifactId&gt;</span>ikonli-icomoon-pack<span class="tag">&lt;/artifactId&gt;</span>
-    <span class="tag">&lt;version&gt;</span>1.3.0<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;version&gt;</span>1.4.0<span class="tag">&lt;/version&gt;</span>
 <span class="tag">&lt;/dependency&gt;</span></code></pre>
 </div>
 </div>
@@ -605,7 +650,7 @@ di-java:64:BLUE</code></pre>
 <div class="listingblock">
 <div class="title">gradle</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-ionicons-pack:1.3.0'</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-ionicons-pack:1.4.0'</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -614,7 +659,7 @@ di-java:64:BLUE</code></pre>
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
     <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
     <span class="tag">&lt;artifactId&gt;</span>ikonli-ionicons-pack<span class="tag">&lt;/artifactId&gt;</span>
-    <span class="tag">&lt;version&gt;</span>1.3.0<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;version&gt;</span>1.4.0<span class="tag">&lt;/version&gt;</span>
 <span class="tag">&lt;/dependency&gt;</span></code></pre>
 </div>
 </div>
@@ -640,7 +685,7 @@ di-java:64:BLUE</code></pre>
 <div class="listingblock">
 <div class="title">gradle</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-maki-pack:1.3.0'</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-maki-pack:1.4.0'</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -649,7 +694,7 @@ di-java:64:BLUE</code></pre>
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
     <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
     <span class="tag">&lt;artifactId&gt;</span>ikonli-maki-pack<span class="tag">&lt;/artifactId&gt;</span>
-    <span class="tag">&lt;version&gt;</span>1.3.0<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;version&gt;</span>1.4.0<span class="tag">&lt;/version&gt;</span>
 <span class="tag">&lt;/dependency&gt;</span></code></pre>
 </div>
 </div>
@@ -675,7 +720,7 @@ di-java:64:BLUE</code></pre>
 <div class="listingblock">
 <div class="title">gradle</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-material-pack:1.3.0'</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-material-pack:1.4.0'</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -684,7 +729,7 @@ di-java:64:BLUE</code></pre>
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
     <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
     <span class="tag">&lt;artifactId&gt;</span>ikonli-material-pack<span class="tag">&lt;/artifactId&gt;</span>
-    <span class="tag">&lt;version&gt;</span>1.3.0<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;version&gt;</span>1.4.0<span class="tag">&lt;/version&gt;</span>
 <span class="tag">&lt;/dependency&gt;</span></code></pre>
 </div>
 </div>
@@ -710,7 +755,7 @@ di-java:64:BLUE</code></pre>
 <div class="listingblock">
 <div class="title">gradle</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-materialdesign-pack:1.3.0'</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-materialdesign-pack:1.4.0'</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -719,7 +764,7 @@ di-java:64:BLUE</code></pre>
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
     <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
     <span class="tag">&lt;artifactId&gt;</span>ikonli-materialdesign-pack<span class="tag">&lt;/artifactId&gt;</span>
-    <span class="tag">&lt;version&gt;</span>1.3.0<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;version&gt;</span>1.4.0<span class="tag">&lt;/version&gt;</span>
 <span class="tag">&lt;/dependency&gt;</span></code></pre>
 </div>
 </div>
@@ -745,7 +790,7 @@ di-java:64:BLUE</code></pre>
 <div class="listingblock">
 <div class="title">gradle</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-metrizeicons-pack:1.3.0'</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-metrizeicons-pack:1.4.0'</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -754,7 +799,7 @@ di-java:64:BLUE</code></pre>
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
     <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
     <span class="tag">&lt;artifactId&gt;</span>ikonli-metrizeicons-pack<span class="tag">&lt;/artifactId&gt;</span>
-    <span class="tag">&lt;version&gt;</span>1.3.0<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;version&gt;</span>1.4.0<span class="tag">&lt;/version&gt;</span>
 <span class="tag">&lt;/dependency&gt;</span></code></pre>
 </div>
 </div>
@@ -780,7 +825,7 @@ di-java:64:BLUE</code></pre>
 <div class="listingblock">
 <div class="title">gradle</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-octicons-pack:1.3.0'</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-octicons-pack:1.4.0'</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -789,7 +834,7 @@ di-java:64:BLUE</code></pre>
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
     <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
     <span class="tag">&lt;artifactId&gt;</span>ikonli-octicons-pack<span class="tag">&lt;/artifactId&gt;</span>
-    <span class="tag">&lt;version&gt;</span>1.3.0<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;version&gt;</span>1.4.0<span class="tag">&lt;/version&gt;</span>
 <span class="tag">&lt;/dependency&gt;</span></code></pre>
 </div>
 </div>
@@ -815,7 +860,7 @@ di-java:64:BLUE</code></pre>
 <div class="listingblock">
 <div class="title">gradle</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-openiconic-pack:1.3.0'</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-openiconic-pack:1.4.0'</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -824,7 +869,7 @@ di-java:64:BLUE</code></pre>
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
     <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
     <span class="tag">&lt;artifactId&gt;</span>ikonli-openiconic-pack<span class="tag">&lt;/artifactId&gt;</span>
-    <span class="tag">&lt;version&gt;</span>1.3.0<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;version&gt;</span>1.4.0<span class="tag">&lt;/version&gt;</span>
 <span class="tag">&lt;/dependency&gt;</span></code></pre>
 </div>
 </div>
@@ -850,7 +895,7 @@ di-java:64:BLUE</code></pre>
 <div class="listingblock">
 <div class="title">gradle</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-typicons-pack:1.3.0'</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-typicons-pack:1.4.0'</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -859,7 +904,7 @@ di-java:64:BLUE</code></pre>
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
     <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
     <span class="tag">&lt;artifactId&gt;</span>ikonli-typicons-pack<span class="tag">&lt;/artifactId&gt;</span>
-    <span class="tag">&lt;version&gt;</span>1.3.0<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;version&gt;</span>1.4.0<span class="tag">&lt;/version&gt;</span>
 <span class="tag">&lt;/dependency&gt;</span></code></pre>
 </div>
 </div>
@@ -885,7 +930,7 @@ di-java:64:BLUE</code></pre>
 <div class="listingblock">
 <div class="title">gradle</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-weathericons-pack:1.3.0'</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-weathericons-pack:1.4.0'</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -894,7 +939,7 @@ di-java:64:BLUE</code></pre>
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
     <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
     <span class="tag">&lt;artifactId&gt;</span>ikonli-weathericons-pack<span class="tag">&lt;/artifactId&gt;</span>
-    <span class="tag">&lt;version&gt;</span>1.3.0<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;version&gt;</span>1.4.0<span class="tag">&lt;/version&gt;</span>
 <span class="tag">&lt;/dependency&gt;</span></code></pre>
 </div>
 </div>
@@ -916,7 +961,7 @@ di-java:64:BLUE</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Version 1.3.0<br>
+Version 1.4.0<br>
 Last updated 2016-02-18 20:00:46 +01:00
 </div>
 </div>
