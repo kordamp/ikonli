@@ -123,17 +123,33 @@ You may use this class with any Swing component that supports an Icon property.<
 <div class="listingblock">
 <div class="title">gradle</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-swing:1.4.0'</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">repositories {
+    jcenter()
+}
+
+dependencies {
+    compile 'org.kordamp.ikonli:ikonli-swing:1.4.0'
+}</code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="title">maven</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
-    <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
-    <span class="tag">&lt;artifactId&gt;</span>ikonli-swing<span class="tag">&lt;/artifactId&gt;</span>
-    <span class="tag">&lt;version&gt;</span>1.4.0<span class="tag">&lt;/version&gt;</span>
-<span class="tag">&lt;/dependency&gt;</span></code></pre>
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependencies&gt;</span>
+    <span class="tag">&lt;dependency&gt;</span>
+        <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
+        <span class="tag">&lt;artifactId&gt;</span>ikonli-swing<span class="tag">&lt;/artifactId&gt;</span>
+        <span class="tag">&lt;version&gt;</span>1.4.0<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;/dependency&gt;</span>
+<span class="tag">&lt;/dependencies&gt;</span>
+
+<span class="tag">&lt;repositories&gt;</span>
+    <span class="tag">&lt;repository&gt;</span>
+        <span class="tag">&lt;id&gt;</span>central<span class="tag">&lt;/id&gt;</span>
+        <span class="tag">&lt;name&gt;</span>jcenter<span class="tag">&lt;/name&gt;</span>
+        <span class="tag">&lt;url&gt;</span>http://jcenter.bintray.com<span class="tag">&lt;/url&gt;</span>
+    <span class="tag">&lt;/repository&gt;</span>
+<span class="tag">&lt;/repositories&gt;</span></code></pre>
 </div>
 </div>
 </div>
@@ -295,17 +311,33 @@ in the following example</p>
 <div class="listingblock">
 <div class="title">gradle</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-javafx:1.4.0'</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">repositories {
+    jcenter()
+}
+
+dependencies {
+    compile 'org.kordamp.ikonli:ikonli-javafx:1.4.0'
+}</code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="title">maven</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
-    <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
-    <span class="tag">&lt;artifactId&gt;</span>ikonli-javafx<span class="tag">&lt;/artifactId&gt;</span>
-    <span class="tag">&lt;version&gt;</span>1.4.0<span class="tag">&lt;/version&gt;</span>
-<span class="tag">&lt;/dependency&gt;</span></code></pre>
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependencies&gt;</span>
+    <span class="tag">&lt;dependency&gt;</span>
+        <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
+        <span class="tag">&lt;artifactId&gt;</span>ikonli-javafx<span class="tag">&lt;/artifactId&gt;</span>
+        <span class="tag">&lt;version&gt;</span>1.4.0<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;/dependency&gt;</span>
+<span class="tag">&lt;/dependencies&gt;</span>
+
+<span class="tag">&lt;repositories&gt;</span>
+    <span class="tag">&lt;repository&gt;</span>
+        <span class="tag">&lt;id&gt;</span>central<span class="tag">&lt;/id&gt;</span>
+        <span class="tag">&lt;name&gt;</span>jcenter<span class="tag">&lt;/name&gt;</span>
+        <span class="tag">&lt;url&gt;</span>http://jcenter.bintray.com<span class="tag">&lt;/url&gt;</span>
+    <span class="tag">&lt;/repository&gt;</span>
+<span class="tag">&lt;/repositories&gt;</span></code></pre>
 </div>
 </div>
 </div>
@@ -962,7 +994,7 @@ in the following example</p>
 <div id="footer">
 <div id="footer-text">
 Version 1.4.0<br>
-Last updated 2016-02-18 20:00:46 +01:00
+Last updated 2016-05-01 16:34:57 +02:00
 </div>
 </div>
 </body>
