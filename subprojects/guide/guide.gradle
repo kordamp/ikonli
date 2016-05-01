@@ -35,7 +35,8 @@ ext.childProjects = [
     ':ikonli-octicons-pack',
     ':ikonli-openiconic-pack',
     ':ikonli-typicons-pack',
-    ':ikonli-weathericons-pack'
+    ':ikonli-weathericons-pack',
+    ':ikonli-websymbols-pack'
 ]
 
 ext.childProjects.each { evaluationDependsOn it }
@@ -208,7 +209,8 @@ asciidoctor {
               createIconGenerationTask(packName: 'octicons',       iconClassName: 'org.kordamp.ikonli.octicons.Octicons',             iconName: 'octicon', shortNameSize: 4),
               createIconGenerationTask(packName: 'openiconic',     iconClassName: 'org.kordamp.ikonli.openiconic.Openiconic',         iconName: 'oi',      dataGlyph: true),
               createIconGenerationTask(packName: 'typicons',       iconClassName: 'org.kordamp.ikonli.typicons.Typicons',             iconName: 'typcn',   shortNameSize: 4),
-              createIconGenerationTask(packName: 'weathericons',   iconClassName: 'org.kordamp.ikonli.weathericons.WeatherIcons',     iconName: 'wi')
+              createIconGenerationTask(packName: 'weathericons',   iconClassName: 'org.kordamp.ikonli.weathericons.WeatherIcons',     iconName: 'wi'),
+              createIconGenerationTask(packName: 'websymbols',     iconClassName: 'org.kordamp.ikonli.websymbols.Websymbols',         iconName: 'websymbols'     )
     sourceDir = file('src/asciidoc')
     attributes = [
         toc                    : 'left',
@@ -245,7 +247,8 @@ asciidoctor {
         octiconsVersion        : project.octiconsVersion,
         openiconicVersion      : project.openiconicVersion,
         typiconsVersion        : project.typiconsVersion,
-        weathericonsVersion    : project.weathericonsVersion
+        weathericonsVersion    : project.weathericonsVersion,
+        websymbolsVersion      : project.websymbolsVersion
     ]
     /*sources {
         include '*.adoc'
@@ -270,6 +273,7 @@ asciidoctor {
         from project(':ikonli-openiconic-pack').file("src/main/resources/META-INF/resources/openiconic/${openiconicVersion}")
         from project(':ikonli-typicons-pack').file("src/main/resources/META-INF/resources/typicons/${typiconsVersion}")
         from project(':ikonli-weathericons-pack').file("src/main/resources/META-INF/resources/weathericons/${weathericonsVersion}")
+        from project(':ikonli-websymbols-pack').file("src/main/resources/META-INF/resources/websymbols/${websymbolsVersion}")
     }
 }
 

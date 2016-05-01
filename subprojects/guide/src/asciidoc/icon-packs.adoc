@@ -451,3 +451,28 @@ compile '{project-group}:ikonli-weathericons-pack:{project-version}'
     <version>{project-version}</version>
 </dependency>
 ----
+
+== Websymbols
+ * Font version: {websymbolsVersion}
+ * link:http://www.justbenice.ru[]
+ * link:cheat-sheet-websymbols.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-websymbols-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-websymbols-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----

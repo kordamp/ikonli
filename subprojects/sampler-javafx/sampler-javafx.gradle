@@ -23,4 +23,5 @@ dependencies {
     compile project(':ikonli-openiconic-pack')
     compile project(':ikonli-typicons-pack')
     compile project(':ikonli-weathericons-pack')
+    compile project(':ikonli-websymbols-pack')
 }

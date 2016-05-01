@@ -69,6 +69,7 @@ import org.kordamp.ikonli.openiconic.Openiconic;
 import org.kordamp.ikonli.swing.FontIcon;
 import org.kordamp.ikonli.typicons.Typicons;
 import org.kordamp.ikonli.weathericons.WeatherIcons;
+import org.kordamp.ikonli.websymbols.Websymbols;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -116,6 +117,7 @@ public class Sampler {
         createTab(tabPane, Openiconic.class, new DemoTab(allOf(Openiconic.class)));
         createTab(tabPane, Typicons.class, new DemoTab(allOf(Typicons.class)));
         createTab(tabPane, WeatherIcons.class, new DemoTab(allOf(WeatherIcons.class)));
+        createTab(tabPane, Websymbols.class, new DemoTab(allOf(Websymbols.class)));
 
         JFrame frame = new JFrame("Ikonli Sampler");
         frame.add(tabPane);
