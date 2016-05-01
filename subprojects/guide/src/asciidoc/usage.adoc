@@ -13,18 +13,34 @@ You may use this class with any Swing component that supports an Icon property.
 [subs="attributes"]
 .gradle
 ----
-compile '{project-group}:ikonli-swing:{project-version}'
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile '{project-group}:ikonli-swing:{project-version}'
+}
 ----
 
 [source,xml]
 [subs="attributes,verbatim"]
 .maven
 ----
-<dependency>
-    <groupId>{project-group}</groupId>
-    <artifactId>ikonli-swing</artifactId>
-    <version>{project-version}</version>
-</dependency>
+<dependencies>
+    <dependency>
+        <groupId>{project-group}</groupId>
+        <artifactId>ikonli-swing</artifactId>
+        <version>{project-version}</version>
+    </dependency>
+</dependencies>
+
+<repositories>
+    <repository>
+        <id>central</id>
+        <name>jcenter</name>
+        <url>http://jcenter.bintray.com</url>
+    </repository>
+</repositories>
 ----
 
 == JavaFX
@@ -122,16 +138,32 @@ in the following example
 [subs="attributes"]
 .gradle
 ----
-compile '{project-group}:ikonli-javafx:{project-version}'
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile '{project-group}:ikonli-javafx:{project-version}'
+}
 ----
 
 [source,xml]
 [subs="attributes,verbatim"]
 .maven
 ----
-<dependency>
-    <groupId>{project-group}</groupId>
-    <artifactId>ikonli-javafx</artifactId>
-    <version>{project-version}</version>
-</dependency>
+<dependencies>
+    <dependency>
+        <groupId>{project-group}</groupId>
+        <artifactId>ikonli-javafx</artifactId>
+        <version>{project-version}</version>
+    </dependency>
+</dependencies>
+
+<repositories>
+    <repository>
+        <id>central</id>
+        <name>jcenter</name>
+        <url>http://jcenter.bintray.com</url>
+    </repository>
+</repositories>
 ----
