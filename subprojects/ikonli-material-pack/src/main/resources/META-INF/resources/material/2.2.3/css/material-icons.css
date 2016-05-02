@@ -140,6 +140,7 @@
 .gmi-border-style:before { content: "\e231"; }
 .gmi-border-top:before { content: "\e232"; }
 .gmi-border-vertical:before { content: "\e233"; }
+.gmi-branding_watermark:before { content: "\e06b"; }
 .gmi-brightness-1:before { content: "\e3A6"; }
 .gmi-brightness-2:before { content: "\e3A7"; }
 .gmi-brightness-3:before { content: "\e3A8"; }
@@ -153,8 +154,10 @@
 .gmi-brightness-medium:before { content: "\e1AE"; }
 .gmi-broken-image:before { content: "\e3AD"; }
 .gmi-brush:before { content: "\e3AE"; }
+.gmi-bubble-chart:before { content: "\e6dd"; }
 .gmi-bug-report:before { content: "\e868"; }
 .gmi-build:before { content: "\e869"; }
+.gmi-burst-mode:before { content: "\e43c"; }
 .gmi-business-center:before { content: "\eB3F"; }
 .gmi-business:before { content: "\e0AF"; }
 .gmi-cached:before { content: "\e86A"; }
@@ -166,6 +169,7 @@
 .gmi-call-missed:before { content: "\e0B4"; }
 .gmi-call-received:before { content: "\e0B5"; }
 .gmi-call-split:before { content: "\e0B6"; }
+.gmi-call-to-action:before { content: "\e06c"; }
 .gmi-call:before { content: "\e0B0"; }
 .gmi-camera-alt:before { content: "\e3B0"; }
 .gmi-camera-enhance:before { content: "\e8FC"; }
@@ -245,6 +249,8 @@
 .gmi-data-usage:before { content: "\e1AF"; }
 .gmi-date-range:before { content: "\e916"; }
 .gmi-dehaze:before { content: "\e3C7"; }
+.gmi-delete-forever:before { content: "\e92b"; }
+.gmi-delete-sweep:before { content: "\e16c"; }
 .gmi-delete:before { content: "\e872"; }
 .gmi-description:before { content: "\e873"; }
 .gmi-desktop-mac:before { content: "\e30B"; }
@@ -270,6 +276,8 @@
 .gmi-disc-full:before { content: "\e610"; }
 .gmi-dns:before { content: "\e875"; }
 .gmi-do-not-disturb-alt:before { content: "\e611"; }
+.gmi-do-not-disturb-off:before { content: "\e643"; }
+.gmi-do-not-disturb-on:before { content: "\e644"; }
 .gmi-do-not-disturb:before { content: "\e612"; }
 .gmi-dock:before { content: "\e30E"; }
 .gmi-domain:before { content: "\e7EE"; }
@@ -289,6 +297,8 @@
 .gmi-equalizer:before { content: "\e01D"; }
 .gmi-error-outline:before { content: "\e001"; }
 .gmi-error:before { content: "\e000"; }
+.gmi-euro-symbol:before { content: "\e926"; }
+.gmi-ev-station:before { content: "\e56d"; }
 .gmi-event-available:before { content: "\e614"; }
 .gmi-event-busy:before { content: "\e615"; }
 .gmi-event-note:before { content: "\e616"; }
@@ -311,6 +321,9 @@
 .gmi-fast-rewind:before { content: "\e020"; }
 .gmi-favorite-border:before { content: "\e87E"; }
 .gmi-favorite:before { content: "\e87D"; }
+.gmi-featured-note:before { content: "\e06f"; }
+.gmi-featured-play-list:before { content: "\e06d"; }
+.gmi-featured-video:before { content: "\e06e"; }
 .gmi-feedback:before { content: "\e87F"; }
 .gmi-fiber-dvr:before { content: "\e05D"; }
 .gmi-fiber-manual-record:before { content: "\e061"; }
@@ -342,6 +355,7 @@
 .gmi-find-in-page:before { content: "\e880"; }
 .gmi-find-replace:before { content: "\e881"; }
 .gmi-fingerprint:before { content: "\e90D"; }
+.gmi-first-page:before { content: "\e5dc"; }
 .gmi-fitness-center:before { content: "\eB43"; }
 .gmi-flag:before { content: "\e153"; }
 .gmi-flare:before { content: "\e3E4"; }
@@ -391,6 +405,7 @@
 .gmi-fullscreen-exit:before { content: "\e5D1"; }
 .gmi-fullscreen:before { content: "\e5D0"; }
 .gmi-functions:before { content: "\e24A"; }
+.gmi-g-translate:before { content: "\e927"; }
 .gmi-gamepad:before { content: "\e30F"; }
 .gmi-games:before { content: "\e021"; }
 .gmi-gavel:before { content: "\e90E"; }
@@ -472,6 +487,7 @@
 .gmi-laptop-mac:before { content: "\e320"; }
 .gmi-laptop-windows:before { content: "\e321"; }
 .gmi-laptop:before { content: "\e31E"; }
+.gmi-last-page:before { content: "\e5dd"; }
 .gmi-launch:before { content: "\e895"; }
 .gmi-layers-clear:before { content: "\e53C"; }
 .gmi-layers:before { content: "\e53B"; }
@@ -536,6 +552,7 @@
 .gmi-looks:before { content: "\e3FC"; }
 .gmi-loop:before { content: "\e028"; }
 .gmi-loupe:before { content: "\e402"; }
+.gmi-low-priority:before { content: "\e16d"; }
 .gmi-loyalty:before { content: "\e89A"; }
 .gmi-mail-outline:before { content: "\e0E1"; }
 .gmi-mail:before { content: "\e158"; }
@@ -552,6 +569,7 @@
 .gmi-mms:before { content: "\e618"; }
 .gmi-mode-comment:before { content: "\e253"; }
 .gmi-mode-edit:before { content: "\e254"; }
+.gmi-monetization-on:before { content: "\e263"; }
 .gmi-money-off:before { content: "\e25C"; }
 .gmi-monochrome-photos:before { content: "\e403"; }
 .gmi-mood-bad:before { content: "\e7F3"; }
@@ -565,6 +583,7 @@
 .gmi-movie-creation:before { content: "\e404"; }
 .gmi-movie-filter:before { content: "\e43A"; }
 .gmi-movie:before { content: "\e02C"; }
+.gmi-multiline-chart:before { content: "\e6df"; }
 .gmi-music-note:before { content: "\e405"; }
 .gmi-music-video:before { content: "\e063"; }
 .gmi-my-location:before { content: "\e55C"; }
@@ -653,6 +672,8 @@
 .gmi-picture-as-pdf:before { content: "\e415"; }
 .gmi-picture-in-picture-alt:before { content: "\e911"; }
 .gmi-picture-in-picture:before { content: "\e8AA"; }
+.gmi-pie-chart-outlined:before { content: "\e6c5"; }
+.gmi-pie-chart:before { content: "\e6c4"; }
 .gmi-pin-drop:before { content: "\e55E"; }
 .gmi-place:before { content: "\e55F"; }
 .gmi-play-arrow:before { content: "\e037"; }
@@ -674,6 +695,7 @@
 .gmi-pregnant-woman:before { content: "\e91E"; }
 .gmi-present-to-all:before { content: "\e0DF"; }
 .gmi-print:before { content: "\e8AD"; }
+.gmi-priority-high:before { content: "\e645"; }
 .gmi-public:before { content: "\e80B"; }
 .gmi-publish:before { content: "\e255"; }
 .gmi-query-builder:before { content: "\e8AE"; }
@@ -695,6 +717,7 @@
 .gmi-remove-circle:before { content: "\e15C"; }
 .gmi-remove-from-queue:before { content: "\e067"; }
 .gmi-remove-red-eye:before { content: "\e417"; }
+.gmi-remove-shopping:before { content: "\e928"; }
 .gmi-remove:before { content: "\e15B"; }
 .gmi-reorder:before { content: "\e8FE"; }
 .gmi-repeat-one:before { content: "\e041"; }
@@ -708,6 +731,8 @@
 .gmi-report-problem:before { content: "\e8B2"; }
 .gmi-report:before { content: "\e160"; }
 .gmi-restaurant-menu:before { content: "\e561"; }
+.gmi-restaurant:before { content: "\e56c"; }
+.gmi-restore-page:before { content: "\e929"; }
 .gmi-restore:before { content: "\e8B3"; }
 .gmi-ring-volume:before { content: "\e0D1"; }
 .gmi-room-service:before { content: "\eB49"; }
@@ -719,6 +744,7 @@
 .gmi-rounded-corner:before { content: "\e920"; }
 .gmi-router:before { content: "\e328"; }
 .gmi-rowing:before { content: "\e921"; }
+.gmi-rss-feed:before { content: "\e0e5"; }
 .gmi-rv-hookup:before { content: "\e642"; }
 .gmi-satellite:before { content: "\e562"; }
 .gmi-save:before { content: "\e161"; }
@@ -736,6 +762,11 @@
 .gmi-security:before { content: "\e32A"; }
 .gmi-select-all:before { content: "\e162"; }
 .gmi-send:before { content: "\e163"; }
+.gmi-sentiment-dissatiSfied:before { content: "\e811"; }
+.gmi-sentiment-neutral:before { content: "\e812"; }
+.gmi-sentiment-satisfied:before { content: "\e813"; }
+.gmi-sentiment-very-dissatisfied:before { content: "\e814"; }
+.gmi-sentiment-very-satisfied:before { content: "\e815"; }
 .gmi-settings-applications:before { content: "\e8B9"; }
 .gmi-settings-backup-restore:before { content: "\e8BA"; }
 .gmi-settings-bluetooth:before { content: "\e8BB"; }
@@ -760,6 +791,7 @@
 .gmi-shopping-basket:before { content: "\e8CB"; }
 .gmi-shopping-cart:before { content: "\e8CC"; }
 .gmi-short-text:before { content: "\e261"; }
+.gmi-show-chart:before { content: "\e6e1"; }
 .gmi-shuffle:before { content: "\e043"; }
 .gmi-signal-cellular-4-bar:before { content: "\e1C8"; }
 .gmi-signal-cellular-connected-no-internet-4-bar:before { content: "\e1CD"; }
@@ -786,6 +818,7 @@
 .gmi-spa:before { content: "\eB4C"; }
 .gmi-space-bar:before { content: "\e256"; }
 .gmi-speaker-group:before { content: "\e32E"; }
+.gmi-speaker-notes-off:before { content: "\e92A"; }
 .gmi-speaker-notes:before { content: "\e8CD"; }
 .gmi-speaker-phone:before { content: "\e0D2"; }
 .gmi-speaker:before { content: "\e32D"; }
@@ -804,6 +837,7 @@
 .gmi-store-mall-directory:before { content: "\e563"; }
 .gmi-store:before { content: "\e8D1"; }
 .gmi-straighten:before { content: "\e41C"; }
+.gmi-street-view:before { content: "\e56e"; }
 .gmi-strikethrough-s:before { content: "\e257"; }
 .gmi-style:before { content: "\e41D"; }
 .gmi-subdirectory-arrow-left:before { content: "\e5D9"; }
@@ -811,6 +845,7 @@
 .gmi-subject:before { content: "\e8D2"; }
 .gmi-subscriptions:before { content: "\e064"; }
 .gmi-subtitles:before { content: "\e048"; }
+.gmi-subway:before { content: "\e56f"; }
 .gmi-supervisor-account:before { content: "\e8D3"; }
 .gmi-surround-sound:before { content: "\e049"; }
 .gmi-swap-calls:before { content: "\e0D7"; }
@@ -847,6 +882,7 @@
 .gmi-timer-3:before { content: "\e424"; }
 .gmi-timer-off:before { content: "\e426"; }
 .gmi-timer:before { content: "\e425"; }
+.gmi-title:before { content: "\e264"; }
 .gmi-toc:before { content: "\e8DE"; }
 .gmi-today:before { content: "\e8DF"; }
 .gmi-toll:before { content: "\e8E0"; }
@@ -855,6 +891,9 @@
 .gmi-toys:before { content: "\e332"; }
 .gmi-track-changes:before { content: "\e8E1"; }
 .gmi-traffic:before { content: "\e565"; }
+.gmi-train:before { content: "\e570"; }
+.gmi-tram:before { content: "\e571"; }
+.gmi-transfer-within-a-station:before { content: "\e572"; }
 .gmi-transform:before { content: "\e428"; }
 .gmi-translate:before { content: "\e8E2"; }
 .gmi-trending-down:before { content: "\e8E3"; }
@@ -875,6 +914,8 @@
 .gmi-vertical-align-center:before { content: "\e259"; }
 .gmi-vertical-align-top:before { content: "\e25A"; }
 .gmi-vibration:before { content: "\e62D"; }
+.gmi-video-call:before { content: "\e070"; }
+.gmi-video-label:before { content: "\e071"; }
 .gmi-video-library:before { content: "\e04A"; }
 .gmi-videocam-off:before { content: "\e04C"; }
 .gmi-videocam:before { content: "\e04B"; }

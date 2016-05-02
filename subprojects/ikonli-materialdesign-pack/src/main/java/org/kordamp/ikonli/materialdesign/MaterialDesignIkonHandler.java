@@ -37,7 +37,7 @@ public class MaterialDesignIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/materialdesignicons/1.4.57/fonts/materialdesignicons-webfont.ttf";
+        return "META-INF/resources/materialdesignicons/1.5.54/fonts/materialdesignicons-webfont.ttf";
     }
 
     @Override
