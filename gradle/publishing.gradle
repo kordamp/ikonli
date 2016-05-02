@@ -48,7 +48,7 @@ def pomConfig = {
     }
     developers {
         [
-            aalmiray : 'Andres Almiray'
+            aalmiray: 'Andres Almiray'
         ].each { devId, devName ->
             developer {
                 id devId
@@ -88,7 +88,7 @@ bintray {
         name = rootProject.name
         desc = rootProject.project_description
         licenses = ['Apache-2.0']
-        labels = []
+        labels = ['icons', 'javafx', 'swing']
         websiteUrl = project.project_url
         issueTrackerUrl = project.project_issues
         vcsUrl = project.project_scm
