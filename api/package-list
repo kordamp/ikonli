@@ -10,11 +10,13 @@ org.kordamp.ikonli.icomoon
 org.kordamp.ikonli.ionicons
 org.kordamp.ikonli.javafx
 org.kordamp.ikonli.maki
+org.kordamp.ikonli.maki2
 org.kordamp.ikonli.material
 org.kordamp.ikonli.materialdesign
 org.kordamp.ikonli.metrizeicons
 org.kordamp.ikonli.octicons
 org.kordamp.ikonli.openiconic
+org.kordamp.ikonli.runestroicons
 org.kordamp.ikonli.swing
 org.kordamp.ikonli.typicons
 org.kordamp.ikonli.weathericons
