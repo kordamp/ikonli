@@ -234,6 +234,7 @@ asciidoctor {
         'project-group'        : project.group,
         deviconsVersion        : project.deviconsVersion,
         elusiveVersion         : project.elusiveVersion,
+        featherVersion         : project.featherVersion,
         fontawesomeVersion     : project.fontawesomeVersion,
         fontelicoVersion       : project.fontelicoVersion,
         foundationVersion      : project.foundationVersion,
