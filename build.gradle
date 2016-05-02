@@ -62,11 +62,6 @@ subprojects { subproj ->
     apply from: rootProject.file('gradle/code-coverage.gradle')
     apply from: rootProject.file('gradle/code-quality.gradle')
 
-    configurations {
-        compileOnly
-        testCompileOnly
-    }
-
     subproj.tasks.withType(JavaCompile) {
         sourceCompatibility = subproj.sourceCompatibility
         targetCompatibility = subproj.targetCompatibility
@@ -74,26 +69,6 @@ subprojects { subproj ->
 
     repositories {
         jcenter()
-    }
-
-    sourceSets {
-        main {
-            compileClasspath += [configurations.compileOnly]
-        }
-        test {
-            compileClasspath += [configurations.testCompileOnly]
-        }
-    }
-
-    javadoc {
-        classpath += [configurations.compileOnly]
-    }
-
-    idea {
-        module {
-            scopes.PROVIDED.plus += [configurations.compileOnly]
-            scopes.PROVIDED.plus += [configurations.testCompileOnly]
-        }
     }
 
     if (subproj.name.contains('ikonli')) {

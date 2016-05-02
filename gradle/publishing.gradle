@@ -27,7 +27,6 @@ jar {
     metaInf {
         from(rootProject.files('.')) {
             include 'LICENSE*'
-            include 'NOTICE'
         }
     }
 }
@@ -38,11 +37,6 @@ def pomConfig = {
     url project.project_url
     inceptionYear '2015'
     licenses {
-        license([:]) {
-            name 'LGPL3'
-            url 'http://www.gnu.org/licenses/lgpl-3.0.en.html'
-            distribution 'repo'
-        }
         license([:]) {
             name 'The Apache Software License, Version 2.0'
             url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
@@ -93,7 +87,7 @@ bintray {
         userOrg = project.project_bintray_org
         name = rootProject.name
         desc = rootProject.project_description
-        licenses = ['LGPL-3.0', 'Apache-2.0']
+        licenses = ['Apache-2.0']
         labels = []
         websiteUrl = project.project_url
         issueTrackerUrl = project.project_issues

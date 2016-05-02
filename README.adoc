@@ -4,19 +4,13 @@
 :project-repo: kordamp
 :project-name: ikonli
 
-image:http://img.shields.io/badge/license-GPL3-blue.svg["GPL3 Licensed", link="http://opensource.org/licenses/GPL3"]
+image:http://img.shields.io/travis/aalmiray/ikonli/master.svg["Build Status (travis)", link="https://travis-ci.org/aalmiray/ikonli"]
 image:http://img.shields.io/badge/license-ASL2-blue.svg["ASL3 Licensed", link="http://opensource.org/licenses/ASL2"]
 image:https://api.bintray.com/packages/{project-owner}/{project-repo}/{project-name}/images/download.svg[link="https://bintray.com/{project-owner}/{project-repo}/{project-name}/_latestVersion"]
 
 ---
 
 Ikonli provides icon packs that can be used in Java applications. Currently Swing and JavaFX UI toolkits are supported.
-
-== Licensing
-
-Ikonli is open source software with dual licensing, under GPLv3 and ASLv2. GPLv3 is the base license that governs all
-source code. If you make use of Ikonli with either the link:https://github.com/griffon/griffon[Griffon Framework] or
-the link:https://github.com/basilisk-fw/basilisk[Basilisk Framework] then the GPLv3 is suspended and ASLv2 applies.
 
 == Installing
 
