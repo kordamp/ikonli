@@ -26,6 +26,7 @@ import org.kordamp.ikonli.hawcons.HawconsStroke;
 import org.kordamp.ikonli.icomoon.Icomoon;
 import org.kordamp.ikonli.ionicons.Ionicons;
 import org.kordamp.ikonli.maki.Maki;
+import org.kordamp.ikonli.maki2.Maki2;
 import org.kordamp.ikonli.material.Material;
 import org.kordamp.ikonli.materialdesign.MaterialDesign;
 import org.kordamp.ikonli.metrizeicons.MetrizeIcons;
@@ -75,6 +76,7 @@ public class Sampler {
         createTab(tabPane, Icomoon.class, new DemoTab(allOf(Icomoon.class)));
         createTab(tabPane, Ionicons.class, new DemoTab(allOf(Ionicons.class)));
         createTab(tabPane, Maki.class, new DemoTab(allOf(Maki.class)));
+        createTab(tabPane, Maki2.class, new DemoTab(allOf(Maki2.class)));
         createTab(tabPane, Material.class, new DemoTab(allOf(Material.class)));
         createTab(tabPane, MaterialDesign.class, new DemoTab(allOf(MaterialDesign.class)));
         createTab(tabPane, MetrizeIcons.class, new DemoTab(allOf(MetrizeIcons.class)));

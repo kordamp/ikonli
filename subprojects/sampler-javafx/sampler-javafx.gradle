@@ -16,6 +16,7 @@ dependencies {
     compile project(':ikonli-icomoon-pack')
     compile project(':ikonli-ionicons-pack')
     compile project(':ikonli-maki-pack')
+    compile project(':ikonli-maki2-pack')
     compile project(':ikonli-material-pack')
     compile project(':ikonli-materialdesign-pack')
     compile project(':ikonli-metrizeicons-pack')

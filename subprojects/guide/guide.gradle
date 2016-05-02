@@ -29,6 +29,7 @@ ext.childProjects = [
     ':ikonli-icomoon-pack',
     ':ikonli-ionicons-pack',
     ':ikonli-maki-pack',
+    ':ikonli-maki2-pack',
     ':ikonli-material-pack',
     ':ikonli-materialdesign-pack',
     ':ikonli-metrizeicons-pack',
@@ -203,6 +204,7 @@ asciidoctor {
               createIconGenerationTask(packName: 'icomoon',        iconClassName: 'org.kordamp.ikonli.icomoon.Icomoon',               iconName: 'icm',     shortNameSize: 4),
               createIconGenerationTask(packName: 'ionicons',       iconClassName: 'org.kordamp.ikonli.ionicons.Ionicons',             iconName: 'ion',     shortNameSize: 4),
               createIconGenerationTask(packName: 'maki',           iconClassName: 'org.kordamp.ikonli.maki.Maki',                     shortNameSize: 5),
+              createIconGenerationTask(packName: 'maki2',          iconClassName: 'org.kordamp.ikonli.maki2.Maki2',                   shortNameSize: 6),
               createIconGenerationTask(packName: 'material',       iconClassName: 'org.kordamp.ikonli.material.Material',             iconName: 'gmi',     shortNameSize: 4),
               createIconGenerationTask(packName: 'materialdesign', iconClassName: 'org.kordamp.ikonli.materialdesign.MaterialDesign', iconName: 'mdi',     shortNameSize: 4),
               createIconGenerationTask(packName: 'metrizeicons',   iconClassName: 'org.kordamp.ikonli.metrizeicons.MetrizeIcons',     iconName: 'met',     shortNameSize: 4),
@@ -242,6 +244,7 @@ asciidoctor {
         hawconsVersion         : project.hawconsVersion,
         ioniconsVersion        : project.ioniconsVersion,
         makiVersion            : project.makiVersion,
+        maki2Version           : project.maki2Version,
         materialVersion        : project.materialVersion,
         materialdesignVersion  : project.materialdesignVersion,
         metrizeiconsVersion    : project.metrizeiconsVersion,
@@ -267,6 +270,7 @@ asciidoctor {
         from project(':ikonli-icomoon-pack').file("src/main/resources/META-INF/resources/icomoon/${icomoonVersion}")
         from project(':ikonli-ionicons-pack').file("src/main/resources/META-INF/resources/ionicons/${ioniconsVersion}")
         from project(':ikonli-maki-pack').file("src/main/resources/META-INF/resources/maki/${makiVersion}")
+        from project(':ikonli-maki2-pack').file("src/main/resources/META-INF/resources/maki2/${maki2Version}")
         from project(':ikonli-material-pack').file("src/main/resources/META-INF/resources/material/${materialVersion}")
         from project(':ikonli-materialdesign-pack').file("src/main/resources/META-INF/resources/materialdesignicons/${materialdesignVersion}")
         from project(':ikonli-metrizeicons-pack').file("src/main/resources/META-INF/resources/metrizeicons/${metrizeiconsVersion}")

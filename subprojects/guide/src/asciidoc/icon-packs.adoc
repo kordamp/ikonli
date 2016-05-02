@@ -277,6 +277,31 @@ compile '{project-group}:ikonli-maki-pack:{project-version}'
 </dependency>
 ----
 
+== Maki2
+ * Font version: {maki2Version}
+ * link:https://github.com/mapbox/maki[]
+ * link:cheat-sheet-maki2.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-maki2-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-maki2-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
 == Material Icons
  * Font version: {materialVersion}
  * link:https://design.google.com/icons/[]

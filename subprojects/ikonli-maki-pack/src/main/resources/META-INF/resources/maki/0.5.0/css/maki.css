@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'maki';
+    font-family: 'Maki';
     src: url('../fonts/maki.eot?56675205');
     src: url('../fonts/maki.eot?56675205#iefix') format('embedded-opentype'),
     url('../fonts/maki.woff?56675205') format('woff'),
@@ -10,7 +10,7 @@
 }
 
 .maki {
-    font-family: "maki";
+    font-family: "Maki";
     font-style: normal;
     font-weight: normal;
     speak: none;
