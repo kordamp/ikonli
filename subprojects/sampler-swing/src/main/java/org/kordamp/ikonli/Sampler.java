@@ -32,6 +32,7 @@ import org.kordamp.ikonli.materialdesign.MaterialDesign;
 import org.kordamp.ikonli.metrizeicons.MetrizeIcons;
 import org.kordamp.ikonli.octicons.Octicons;
 import org.kordamp.ikonli.openiconic.Openiconic;
+import org.kordamp.ikonli.runestroicons.Runestroicons;
 import org.kordamp.ikonli.swing.FontIcon;
 import org.kordamp.ikonli.typicons.Typicons;
 import org.kordamp.ikonli.weathericons.WeatherIcons;
@@ -82,6 +83,7 @@ public class Sampler {
         createTab(tabPane, MetrizeIcons.class, new DemoTab(allOf(MetrizeIcons.class)));
         createTab(tabPane, Octicons.class, new DemoTab(allOf(Octicons.class)));
         createTab(tabPane, Openiconic.class, new DemoTab(allOf(Openiconic.class)));
+        createTab(tabPane, Runestroicons.class, new DemoTab(allOf(Runestroicons.class)));
         createTab(tabPane, Typicons.class, new DemoTab(allOf(Typicons.class)));
         createTab(tabPane, WeatherIcons.class, new DemoTab(allOf(WeatherIcons.class)));
         createTab(tabPane, Websymbols.class, new DemoTab(allOf(Websymbols.class)));

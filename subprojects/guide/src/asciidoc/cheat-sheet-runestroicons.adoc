@@ -1,0 +1,13 @@
+= Runestroicons
+
+++++
+<link href='./css/runestroicons.css' rel='stylesheet'>
+<style>
+    .ri {
+        font-size: 32px;
+    }
+</style>
+++++
+
+include::{projectDir}/build/tmp/_runestroicons_cheat_sheet.adoc[]
+

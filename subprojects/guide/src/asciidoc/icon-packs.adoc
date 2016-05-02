@@ -427,6 +427,31 @@ compile '{project-group}:ikonli-openiconic-pack:{project-version}'
 </dependency>
 ----
 
+== RunestroIcons
+ * Font version: {runestroiconsVersion}
+ * link:http://525icons.com/[]
+ * link:cheat-sheet-runestroicons.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-runestroicons-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-runestroicons-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
 == Typicons
  * Font version: {typiconsVersion}
  * link:https://github.com/stephenhutchings/typicons.font[]
