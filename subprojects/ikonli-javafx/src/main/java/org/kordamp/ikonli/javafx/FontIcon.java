@@ -51,7 +51,7 @@ public class FontIcon extends Text implements Icon {
     private ChangeListener<Number> iconSizeChangeListener = new ChangeListener<Number>() {
         @Override
         public void changed(ObservableValue<? extends Number> v, Number o, Number n) {
-            FontIcon.this.setStyle(getStyle() + "-fx-font-size: " + n + "px;");
+            FontIcon.this.setStyle(normalizeStyle(getStyle(), "-fx-font-size", n + "px"));
         }
     };
     private ChangeListener<Paint> iconColorChangeListener = new ChangeListener<Paint>() {
@@ -193,8 +193,18 @@ public class FontIcon extends Text implements Icon {
     public void setIconCode(Ikon iconCode) {
         iconCodeProperty().set(requireNonNull(iconCode, "Argument 'code' must not be null"));
         IkonHandler ikonHandler = IkonResolver.getInstance().resolveIkonHandler(iconCode.getDescription());
-        setStyle(getStyle() + "-fx-font-family: '" + ikonHandler.getFontFamily() + "';");
+        setStyle(normalizeStyle(getStyle(), "-fx-font-family", "'" + ikonHandler.getFontFamily() + "'"));
         setText(String.valueOf(iconCode.getCode()));
+    }
+
+    private String normalizeStyle(String style, String key, String value) {
+        int start = style.indexOf(key);
+        if (start != -1) {
+            int end = style.indexOf(";", start);
+            end = end >= start ? end : style.length() - 1;
+            style = style.substring(0, start) + style.substring(end + 1);
+        }
+        return style + key + ": " + value + ";";
     }
 
     public void setIconLiteral(String iconCode) {
