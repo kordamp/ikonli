@@ -265,444 +265,450 @@
 .maki2-entrance-15:before {
     content: "\e94f";
 }
-.maki2-fast-food-11:before {
-    content: "\e950";
-}
-.maki2-fast-food-15:before {
-    content: "\e951";
-}
-.maki2-ferry-11:before {
+.maki2-farm-15:before {
     content: "\e952";
 }
-.maki2-ferry-15:before {
+.maki2-fast-food-11:before {
     content: "\e953";
 }
-.maki2-fire-station-11:before {
+.maki2-fast-food-15:before {
     content: "\e954";
 }
-.maki2-fire-station-15:before {
+.maki2-ferry-11:before {
     content: "\e955";
 }
-.maki2-fuel-11:before {
+.maki2-ferry-15:before {
     content: "\e956";
 }
-.maki2-fuel-15:before {
+.maki2-fire-station-11:before {
     content: "\e957";
 }
-.maki2-garden-11:before {
+.maki2-fire-station-15:before {
     content: "\e958";
 }
-.maki2-garden-15:before {
+.maki2-fuel-11:before {
     content: "\e959";
 }
-.maki2-gift-11:before {
+.maki2-fuel-15:before {
     content: "\e95a";
 }
-.maki2-gift-15:before {
+.maki2-garden-11:before {
     content: "\e95b";
 }
-.maki2-golf-11:before {
+.maki2-garden-15:before {
     content: "\e95c";
 }
-.maki2-golf-15:before {
+.maki2-gift-11:before {
     content: "\e95d";
 }
-.maki2-grocery-11:before {
+.maki2-gift-15:before {
     content: "\e95e";
 }
-.maki2-grocery-15:before {
+.maki2-golf-11:before {
     content: "\e95f";
 }
-.maki2-hairdresser-11:before {
+.maki2-golf-15:before {
     content: "\e960";
 }
-.maki2-hairdresser-15:before {
+.maki2-grocery-11:before {
     content: "\e961";
 }
-.maki2-harbor-11:before {
+.maki2-grocery-15:before {
     content: "\e962";
 }
-.maki2-harbor-15:before {
+.maki2-hairdresser-11:before {
     content: "\e963";
 }
-.maki2-heart-11:before {
+.maki2-hairdresser-15:before {
     content: "\e964";
 }
-.maki2-heart-15:before {
+.maki2-harbor-11:before {
     content: "\e965";
 }
-.maki2-heliport-11:before {
+.maki2-harbor-15:before {
     content: "\e966";
 }
-.maki2-heliport-15:before {
+.maki2-heart-11:before {
     content: "\e967";
 }
-.maki2-hospital-11:before {
+.maki2-heart-15:before {
     content: "\e968";
 }
-.maki2-hospital-15:before {
+.maki2-heliport-11:before {
     content: "\e969";
 }
-.maki2-ice-cream-11:before {
+.maki2-heliport-15:before {
     content: "\e96a";
 }
-.maki2-ice-cream-15:before {
+.maki2-hospital-11:before {
     content: "\e96b";
 }
-.maki2-industry-11:before {
+.maki2-hospital-15:before {
     content: "\e96c";
 }
-.maki2-industry-15:before {
+.maki2-ice-cream-11:before {
     content: "\e96d";
 }
-.maki2-information-11:before {
+.maki2-ice-cream-15:before {
     content: "\e96e";
 }
-.maki2-information-15:before {
+.maki2-industry-11:before {
     content: "\e96f";
 }
-.maki2-laundry-11:before {
+.maki2-industry-15:before {
     content: "\e970";
 }
-.maki2-laundry-15:before {
+.maki2-information-11:before {
     content: "\e971";
 }
-.maki2-library-11:before {
+.maki2-information-15:before {
     content: "\e972";
 }
-.maki2-library-15:before {
+.maki2-laundry-11:before {
     content: "\e973";
 }
-.maki2-lighthouse-11:before {
+.maki2-laundry-15:before {
     content: "\e974";
 }
-.maki2-lighthouse-15:before {
+.maki2-library-11:before {
     content: "\e975";
 }
-.maki2-lodging-11:before {
+.maki2-library-15:before {
     content: "\e976";
 }
-.maki2-lodging-15:before {
+.maki2-lighthouse-11:before {
     content: "\e977";
 }
-.maki2-marker-11:before {
+.maki2-lighthouse-15:before {
     content: "\e978";
 }
-.maki2-marker-15:before {
+.maki2-lodging-11:before {
     content: "\e979";
 }
-.maki2-monument-11:before {
+.maki2-lodging-15:before {
     content: "\e97a";
 }
-.maki2-monument-15:before {
+.maki2-marker-11:before {
     content: "\e97b";
 }
-.maki2-mountain-11:before {
+.maki2-marker-15:before {
     content: "\e97c";
 }
-.maki2-mountain-15:before {
+.maki2-monument-11:before {
     content: "\e97d";
 }
-.maki2-museum-11:before {
+.maki2-monument-15:before {
     content: "\e97e";
 }
-.maki2-museum-15:before {
+.maki2-mountain-11:before {
     content: "\e97f";
 }
-.maki2-music-11:before {
+.maki2-mountain-15:before {
     content: "\e980";
 }
-.maki2-music-15:before {
+.maki2-museum-11:before {
     content: "\e981";
 }
-.maki2-park-11:before {
+.maki2-museum-15:before {
     content: "\e982";
 }
-.maki2-park-15:before {
+.maki2-music-11:before {
     content: "\e983";
 }
-.maki2-parking-11:before {
+.maki2-music-15:before {
     content: "\e984";
 }
-.maki2-parking-15:before {
+.maki2-park-11:before {
     content: "\e985";
 }
-.maki2-parking-garage-11:before {
+.maki2-park-15:before {
     content: "\e986";
 }
-.maki2-parking-garage-15:before {
+.maki2-parking-11:before {
     content: "\e987";
 }
-.maki2-pharmacy-11:before {
+.maki2-parking-15:before {
     content: "\e988";
 }
-.maki2-pharmacy-15:before {
+.maki2-parking-garage-11:before {
     content: "\e989";
 }
-.maki2-picnic-site-11:before {
+.maki2-parking-garage-15:before {
     content: "\e98a";
 }
-.maki2-picnic-site-15:before {
+.maki2-pharmacy-11:before {
     content: "\e98b";
 }
-.maki2-pitch-11:before {
+.maki2-pharmacy-15:before {
     content: "\e98c";
 }
-.maki2-pitch-15:before {
+.maki2-picnic-site-11:before {
     content: "\e98d";
 }
-.maki2-place-of-worship-11:before {
+.maki2-picnic-site-15:before {
     content: "\e98e";
 }
-.maki2-place-of-worship-15:before {
+.maki2-pitch-11:before {
     content: "\e98f";
 }
-.maki2-playground-11:before {
+.maki2-pitch-15:before {
     content: "\e990";
 }
-.maki2-playground-15:before {
+.maki2-place-of-worship-11:before {
     content: "\e991";
 }
-.maki2-police-11:before {
+.maki2-place-of-worship-15:before {
     content: "\e992";
 }
-.maki2-police-15:before {
+.maki2-playground-11:before {
     content: "\e993";
 }
-.maki2-post-11:before {
+.maki2-playground-15:before {
     content: "\e994";
 }
-.maki2-post-15:before {
+.maki2-police-11:before {
     content: "\e995";
 }
-.maki2-prison-11:before {
+.maki2-police-15:before {
     content: "\e996";
 }
-.maki2-prison-15:before {
+.maki2-post-11:before {
     content: "\e997";
 }
-.maki2-rail-11:before {
+.maki2-post-15:before {
     content: "\e998";
 }
-.maki2-rail-15:before {
+.maki2-prison-11:before {
     content: "\e999";
 }
-.maki2-rail-light-11:before {
+.maki2-prison-15:before {
     content: "\e99a";
 }
-.maki2-rail-light-15:before {
+.maki2-rail-11:before {
     content: "\e99b";
 }
-.maki2-rail-metro-11:before {
+.maki2-rail-15:before {
     content: "\e99c";
 }
-.maki2-rail-metro-15:before {
+.maki2-rail-light-11:before {
     content: "\e99d";
 }
-.maki2-ranger-station-11:before {
+.maki2-rail-light-15:before {
     content: "\e99e";
 }
-.maki2-ranger-station-15:before {
+.maki2-rail-metro-11:before {
     content: "\e99f";
 }
-.maki2-religious-christian-11:before {
+.maki2-rail-metro-15:before {
     content: "\e9a0";
 }
-.maki2-religious-christian-15:before {
+.maki2-ranger-station-11:before {
     content: "\e9a1";
 }
-.maki2-religious-jewish-11:before {
+.maki2-ranger-station-15:before {
     content: "\e9a2";
 }
-.maki2-religious-jewish-15:before {
+.maki2-religious-christian-11:before {
     content: "\e9a3";
 }
-.maki2-religious-muslim-11:before {
+.maki2-religious-christian-15:before {
     content: "\e9a4";
 }
-.maki2-religious-muslim-15:before {
+.maki2-religious-jewish-11:before {
     content: "\e9a5";
 }
-.maki2-restaurant-11:before {
+.maki2-religious-jewish-15:before {
     content: "\e9a6";
 }
-.maki2-restaurant-15:before {
+.maki2-religious-muslim-11:before {
     content: "\e9a7";
 }
-.maki2-roadblock-11:before {
+.maki2-religious-muslim-15:before {
     content: "\e9a8";
 }
-.maki2-roadblock-15:before {
+.maki2-restaurant-11:before {
     content: "\e9a9";
 }
-.maki2-rocket-11:before {
+.maki2-restaurant-15:before {
     content: "\e9aa";
 }
-.maki2-rocket-15:before {
+.maki2-roadblock-11:before {
     content: "\e9ab";
 }
-.maki2-school-11:before {
+.maki2-roadblock-15:before {
     content: "\e9ac";
 }
-.maki2-school-15:before {
+.maki2-rocket-11:before {
     content: "\e9ad";
 }
-.maki2-shelter-11:before {
+.maki2-rocket-15:before {
     content: "\e9ae";
 }
-.maki2-shelter-15:before {
+.maki2-school-11:before {
     content: "\e9af";
 }
-.maki2-shop-11:before {
+.maki2-school-15:before {
     content: "\e9b0";
 }
-.maki2-shop-15:before {
+.maki2-shelter-11:before {
     content: "\e9b1";
 }
-.maki2-skiing-11:before {
+.maki2-shelter-15:before {
     content: "\e9b2";
 }
-.maki2-skiing-15:before {
+.maki2-shop-11:before {
     content: "\e9b3";
 }
-.maki2-soccer-11:before {
+.maki2-shop-15:before {
     content: "\e9b4";
 }
-.maki2-soccer-15:before {
+.maki2-skiing-11:before {
     content: "\e9b5";
 }
-.maki2-square-11:before {
+.maki2-skiing-15:before {
     content: "\e9b6";
 }
-.maki2-square-15:before {
+.maki2-soccer-11:before {
     content: "\e9b7";
 }
-.maki2-square-stroke-11:before {
+.maki2-soccer-15:before {
     content: "\e9b8";
 }
-.maki2-square-stroke-15:before {
+.maki2-square-11:before {
     content: "\e9b9";
 }
-.maki2-stadium-11:before {
+.maki2-square-15:before {
     content: "\e9ba";
 }
-.maki2-stadium-15:before {
+.maki2-square-stroke-11:before {
     content: "\e9bb";
 }
-.maki2-star-11:before {
+.maki2-square-stroke-15:before {
     content: "\e9bc";
 }
-.maki2-star-15:before {
+.maki2-stadium-11:before {
     content: "\e9bd";
 }
-.maki2-star-stroke-11:before {
+.maki2-stadium-15:before {
     content: "\e9be";
 }
-.maki2-star-stroke-15:before {
+.maki2-star-11:before {
     content: "\e9bf";
 }
-.maki2-suitcase-11:before {
+.maki2-star-15:before {
     content: "\e9c0";
 }
-.maki2-suitcase-15:before {
+.maki2-star-stroke-11:before {
     content: "\e9c1";
 }
-.maki2-sushi-11:before {
+.maki2-star-stroke-15:before {
     content: "\e9c2";
 }
-.maki2-sushi-15:before {
+.maki2-suitcase-11:before {
     content: "\e9c3";
 }
-.maki2-swimming-11:before {
+.maki2-suitcase-15:before {
     content: "\e9c4";
 }
-.maki2-swimming-15:before {
+.maki2-sushi-11:before {
     content: "\e9c5";
 }
-.maki2-telephone-11:before {
+.maki2-sushi-15:before {
     content: "\e9c6";
 }
-.maki2-telephone-15:before {
+.maki2-swimming-11:before {
     content: "\e9c7";
 }
-.maki2-tennis-11:before {
+.maki2-swimming-15:before {
     content: "\e9c8";
 }
-.maki2-tennis-15:before {
+.maki2-telephone-11:before {
     content: "\e9c9";
 }
-.maki2-theatre-11:before {
+.maki2-telephone-15:before {
     content: "\e9ca";
 }
-.maki2-theatre-15:before {
+.maki2-tennis-11:before {
     content: "\e9cb";
 }
-.maki2-toilet-11:before {
+.maki2-tennis-15:before {
     content: "\e9cc";
 }
-.maki2-toilet-15:before {
+.maki2-theatre-11:before {
     content: "\e9cd";
 }
-.maki2-town-hall-11:before {
+.maki2-theatre-15:before {
     content: "\e9ce";
 }
-.maki2-town-hall-15:before {
+.maki2-toilet-11:before {
     content: "\e9cf";
 }
-.maki2-triangle-11:before {
+.maki2-toilet-15:before {
     content: "\e9d0";
 }
-.maki2-triangle-15:before {
+.maki2-town-hall-11:before {
     content: "\e9d1";
 }
-.maki2-triangle-stroked-11:before {
+.maki2-town-hall-15:before {
     content: "\e9d2";
 }
-.maki2-triangle-stroked-15:before {
+.maki2-triangle-11:before {
     content: "\e9d3";
 }
-.maki2-veterinary-11:before {
+.maki2-triangle-15:before {
     content: "\e9d4";
 }
-.maki2-veterinary-15:before {
+.maki2-triangle-stroked-11:before {
     content: "\e9d5";
 }
-.maki2-volcano-11:before {
+.maki2-triangle-stroked-15:before {
     content: "\e9d6";
 }
-.maki2-volcano-15:before {
+.maki2-veterinary-11:before {
     content: "\e9d7";
 }
-.maki2-warehouse-11:before {
+.maki2-veterinary-15:before {
     content: "\e9d8";
 }
-.maki2-warehouse-15:before {
+.maki2-volcano-11:before {
     content: "\e9d9";
 }
-.maki2-waste-basket-11:before {
+.maki2-volcano-15:before {
     content: "\e9da";
 }
-.maki2-waste-basket-15:before {
+.maki2-warehouse-11:before {
     content: "\e9db";
 }
-.maki2-water-11:before {
+.maki2-warehouse-15:before {
     content: "\e9dc";
 }
-.maki2-water-15:before {
+.maki2-waste-basket-11:before {
     content: "\e9dd";
 }
-.maki2-wetland-11:before {
+.maki2-waste-basket-15:before {
     content: "\e9de";
 }
-.maki2-wetland-15:before {
+.maki2-water-11:before {
     content: "\e9df";
 }
-.maki2-wheelchair-11:before {
+.maki2-water-15:before {
     content: "\e9e0";
 }
-.maki2-wheelchair-15:before {
+.maki2-wetland-11:before {
     content: "\e9e1";
 }
-.maki2-zoo-15:before {
+.maki2-wetland-15:before {
     content: "\e9e2";
+}
+.maki2-wheelchair-11:before {
+    content: "\e9e3";
+}
+.maki2-wheelchair-15:before {
+    content: "\e9e4";
+}
+.maki2-zoo-11:before {
+    content: "\e9e5";
+}
+.maki2-zoo-15:before {
+    content: "\e9e6";
 }
