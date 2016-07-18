@@ -37,7 +37,7 @@ public class Maki2IkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/maki2/2.0.2/fonts/maki2.ttf";
+        return "META-INF/resources/maki2/2.0.5/fonts/maki2.ttf";
     }
 
     @Override
