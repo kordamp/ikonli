@@ -1,30 +1,10 @@
-include 'subprojects/ikonli-core'
-include 'subprojects/ikonli-javafx'
-include 'subprojects/ikonli-swing'
-include 'subprojects/ikonli-devicons-pack'
-include 'subprojects/ikonli-elusive-pack'
-include 'subprojects/ikonli-feather-pack'
-include 'subprojects/ikonli-fontawesome-pack'
-include 'subprojects/ikonli-fontelico-pack'
-include 'subprojects/ikonli-foundation-pack'
-include 'subprojects/ikonli-hawconsfilled-pack'
-include 'subprojects/ikonli-hawconsstroke-pack'
-include 'subprojects/ikonli-icomoon-pack'
-include 'subprojects/ikonli-ionicons-pack'
-include 'subprojects/ikonli-maki-pack'
-include 'subprojects/ikonli-maki2-pack'
-include 'subprojects/ikonli-material-pack'
-include 'subprojects/ikonli-materialdesign-pack'
-include 'subprojects/ikonli-metrizeicons-pack'
-include 'subprojects/ikonli-octicons-pack'
-include 'subprojects/ikonli-openiconic-pack'
-include 'subprojects/ikonli-runestroicons-pack'
-include 'subprojects/ikonli-typicons-pack'
-include 'subprojects/ikonli-weathericons-pack'
-include 'subprojects/ikonli-websymbols-pack'
-include 'subprojects/guide'
-include 'subprojects/sampler-javafx'
-include 'subprojects/sampler-swing'
+File subdir = new File(rootDir, "subprojects")
+subdir.eachDir { dir ->
+    File buildFile = new File(dir, "${dir.name}.gradle")
+    if (buildFile.exists()) {
+        include "subprojects/${dir.name}"
+    }
+}
 
 rootProject.name = 'ikonli'
 rootProject.children.each { project ->
