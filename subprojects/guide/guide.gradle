@@ -43,6 +43,10 @@ ext.childProjects = [
 
 ext.childProjects.each { evaluationDependsOn it }
 
+asciidoctorj {
+    version = '1.5.4.1'
+}
+
 dependencies {
     java2html 'de.java2html:java2html:5.0'
 }
@@ -148,15 +152,17 @@ class GenerateIconCheatSheetTask extends DefaultTask {
         gcl.addClasspath(project.project(":ikonli-${packName}-pack").file('build/resources/main').absolutePath)
         def iconFontClass = gcl.loadClass(iconClassName, true)
 
+        int index = 1
         String document = '''
-        The following tables show all available icons.
+        The following table shows all available icons.
 
-        [columns="3*", options="header"]
+        [columns="1,3,2,^", options="header"]
         |===
-        | Enum | Name | Icon
+        | Index | Enum | Name | Icon
         '''.stripIndent(8)
 
         iconFontClass.values().each { font ->
+            document += "| ${index++} "
             document += "| ${font} "
             document += "| ${font.description} "
             if (dataGlyph) {
