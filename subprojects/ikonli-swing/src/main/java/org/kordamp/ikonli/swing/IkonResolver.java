@@ -38,12 +38,13 @@ public class IkonResolver {
     static {
         INSTANCE = new IkonResolver();
 
-        ServiceLoader<IkonHandler> loader = ServiceLoader.load(IkonHandler.class);
+        ClassLoader classLoader = IkonResolver.class.getClassLoader();
+        ServiceLoader<IkonHandler> loader = ServiceLoader.load(IkonHandler.class, classLoader);
         for (IkonHandler handler : loader) {
             HANDLERS.add(handler);
 
             try {
-                InputStream stream = Thread.currentThread().getContextClassLoader().getResourceAsStream(handler.getFontResourcePath());
+                InputStream stream = classLoader.getResourceAsStream(handler.getFontResourcePath());
                 Font font = Font.createFont(Font.TRUETYPE_FONT, stream);
                 GraphicsEnvironment.getLocalGraphicsEnvironment().registerFont(font);
                 stream.close();
