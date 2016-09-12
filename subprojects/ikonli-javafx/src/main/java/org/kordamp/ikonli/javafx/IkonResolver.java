@@ -34,7 +34,9 @@ public class IkonResolver {
     static {
         INSTANCE = new IkonResolver();
 
-        ServiceLoader<IkonHandler> loader = ServiceLoader.load(IkonHandler.class);
+        ServiceLoader<IkonHandler> loader = 
+ServiceLoader.load(IkonHandler.class, 
+IkonResolver.class.getClassLoader());
         for (IkonHandler handler : loader) {
             HANDLERS.add(handler);
             handler.setFont(Font.loadFont(IkonResolver.class.getClassLoader().getResource(handler.getFontResourcePath()).toExternalForm(), 16));
