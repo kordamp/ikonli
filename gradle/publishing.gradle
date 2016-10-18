@@ -68,6 +68,7 @@ publishing {
                     }
                 }
                 asNode().children().last() + pomConfig
+                asNode().appendNode('description', project.project_description)
             }
         }
     }
