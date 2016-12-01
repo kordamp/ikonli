@@ -30,12 +30,14 @@ import javafx.scene.paint.Color;
 import javafx.scene.paint.LinearGradient;
 import javafx.scene.paint.Paint;
 import javafx.scene.paint.RadialGradient;
+import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import org.kordamp.ikonli.Ikon;
 import org.kordamp.ikonli.IkonHandler;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import static java.util.Collections.unmodifiableList;
 import static java.util.Objects.requireNonNull;
@@ -48,29 +50,30 @@ public class FontIcon extends Text implements Icon {
     protected StyleableObjectProperty<Paint> iconColor;
     private StyleableObjectProperty<Ikon> iconCode;
 
-    private ChangeListener<Number> iconSizeChangeListener = new ChangeListener<Number>() {
-        @Override
-        public void changed(ObservableValue<? extends Number> v, Number o, Number n) {
-            FontIcon.this.setStyle(normalizeStyle(getStyle(), "-fx-font-size", n + "px"));
-        }
-    };
-    private ChangeListener<Paint> iconColorChangeListener = new ChangeListener<Paint>() {
-        @Override
-        public void changed(ObservableValue<? extends Paint> v, Paint o, Paint n) {
-            FontIcon.this.setFill(n);
-        }
-    };
-    private ChangeListener<Ikon> iconFontChangeListener = new ChangeListener<Ikon>() {
-        @Override
-        public void changed(ObservableValue<? extends Ikon> v, Ikon o, Ikon n) {
-            FontIcon.this.setIconCode(n);
-        }
-    };
-
     public FontIcon() {
         getStyleClass().setAll("ikonli-font-icon");
         setIconSize(16);
         setIconColor(Color.BLACK);
+
+        fontProperty().addListener(new ChangeListener<Font>() {
+            @Override
+            public void changed(ObservableValue<? extends Font> observable, Font oldValue, Font newValue) {
+                int size = (int) newValue.getSize();
+                if (size != getIconSize()) {
+                    setIconSize(size);
+                }
+            }
+        });
+
+        fillProperty().addListener(new ChangeListener<Paint>() {
+            @Override
+            public void changed(ObservableValue<? extends Paint> observable, Paint oldValue, Paint newValue) {
+                Paint fill = getIconColor();
+                if (!Objects.equals(fill, newValue)) {
+                    setIconColor(newValue);
+                }
+            }
+        });
     }
 
     public FontIcon(String iconCode) {
@@ -106,7 +109,14 @@ public class FontIcon extends Text implements Icon {
                     return "iconSize";
                 }
             };
-            iconSize.addListener(iconSizeChangeListener);
+            iconSize.addListener(new ChangeListener<Number>() {
+                @Override
+                public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
+                    Font font = FontIcon.this.getFont();
+                    FontIcon.this.setFont(Font.font(font.getFamily(), newValue.doubleValue()));
+                    FontIcon.this.setStyle(normalizeStyle(getStyle(), "-fx-font-size", newValue.intValue() + "px"));
+                }
+            });
         }
         return iconSize;
     }
@@ -130,7 +140,12 @@ public class FontIcon extends Text implements Icon {
                     return "iconColor";
                 }
             };
-            iconColor.addListener(iconColorChangeListener);
+            iconColor.addListener(new ChangeListener<Paint>() {
+                @Override
+                public void changed(ObservableValue<? extends Paint> observable, Paint oldValue, Paint newValue) {
+                    FontIcon.this.setFill(newValue);
+                }
+            });
         }
         return iconColor;
     }
@@ -153,7 +168,12 @@ public class FontIcon extends Text implements Icon {
                     return "iconCode";
                 }
             };
-            iconCode.addListener(iconFontChangeListener);
+            iconCode.addListener(new ChangeListener<Ikon>() {
+                @Override
+                public void changed(ObservableValue<? extends Ikon> observable, Ikon oldValue, Ikon newValue) {
+                    FontIcon.this.setIconCode(newValue);
+                }
+            });
         }
         return iconCode;
     }
