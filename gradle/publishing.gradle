@@ -23,6 +23,7 @@ jar {
 }
 
 def pomConfig = {
+    packaging 'jar'
     name project.name
     description project.project_description
     url project.project_url
