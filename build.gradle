@@ -6,13 +6,13 @@ buildscript {
     }
 
     dependencies {
-        classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.7.1'
+        classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.8.1'
         classpath 'nl.javadude.gradle.plugins:license-gradle-plugin:0.11.0'
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
-        classpath 'org.ajoberstar:gradle-git:1.3.2'
+        classpath 'org.ajoberstar:gradle-git:1.7.1'
         classpath 'org.kordamp.gradle:stats-gradle-plugin:0.2.0'
-        classpath 'com.github.ben-manes:gradle-versions-plugin:0.13.0'
-        classpath 'net.nemerosa:versioning:2.5.1'
+        classpath 'com.github.ben-manes:gradle-versions-plugin:0.15.0'
+        classpath 'net.nemerosa:versioning:2.6.0'
     }
 }
 
@@ -46,8 +46,8 @@ allprojects {
 
 idea {
     project {
-        jdkName "1.8"
-        languageLevel "1.8"
+        jdkName '1.8'
+        languageLevel '1.8'
 
         ipr {
             withXml { provider ->
@@ -56,12 +56,12 @@ idea {
 
                 def compilerConfiguration = node.component.find { it.'@name' == 'CompilerConfiguration' }
                 compilerConfiguration.remove(compilerConfiguration.annotationProcessing)
-                compilerConfiguration.append(new XmlParser().parseText("""
+                compilerConfiguration.append(new XmlParser().parseText('''
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true">
         <processorPath useClasspath="true" />
       </profile>
-    </annotationProcessing>"""))
+    </annotationProcessing>'''))
             }
         }
     }
