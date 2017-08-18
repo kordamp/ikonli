@@ -3,20 +3,21 @@ import java.text.SimpleDateFormat
 buildscript {
     repositories {
         jcenter()
+        maven { url 'https://plugins.gradle.org/m2/' }
     }
 
     dependencies {
         classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.8.1'
         classpath 'nl.javadude.gradle.plugins:license-gradle-plugin:0.11.0'
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
-        classpath 'org.ajoberstar:gradle-git:1.7.1'
+        classpath 'org.ajoberstar:gradle-git-publish:0.3.0'
         classpath 'org.kordamp.gradle:stats-gradle-plugin:0.2.0'
         classpath 'com.github.ben-manes:gradle-versions-plugin:0.15.0'
-        classpath 'net.nemerosa:versioning:2.6.0'
+        classpath 'net.nemerosa:versioning:2.6.1'
     }
 }
 
-apply plugin: 'org.ajoberstar.github-pages'
+apply plugin: 'org.ajoberstar.git-publish'
 apply plugin: 'net.nemerosa.versioning'
 
 Date buildTimeAndDate = new Date()
@@ -133,16 +134,18 @@ evaluationDependsOnChildren()
 if (!project.hasProperty('githubUsername')) ext.githubUsername = ''
 if (!project.hasProperty('githubPassword')) ext.githubPassword = ''
 
-githubPages {
+gitPublish {
     repoUri = project.project_scm
-    pages {
+    contents {
         from project(':guide').guide.outputs.files
     }
 
+/*
     credentials {
         username = githubUsername
         password = githubPassword
     }
+*/
 }
 
-publishGhPages.dependsOn(project(':guide').guide)
+gitPublishCommit.dependsOn(project(':guide').guide)
