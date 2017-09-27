@@ -27,9 +27,17 @@ and usage.
 You must meet the following requirements:
 
  * JDK8u40 as a minimum
- * Gradle 2.10
+ * JDK9
+ * Gradle 4.2
 
 You may used the included gradle wrapper script if you don't have `gradle` installed.
+
+Define the following environment variables:
+
+    export JAVA_8=/path/to/jdk8
+    export JAVA_9=/path/tojdk9
+
+Adapt these instructions to Windows settings if running on Windows.
 
 === Installing Gradle
 
@@ -45,7 +53,7 @@ You may used the included gradle wrapper script if you don't have `gradle` insta
 
  . Follow the instructions found at http://sdkman.io/ to install SDKMAN.
  . You need a POSIX environment if running Windows. We recommend using Babun Shell (http://babun.github.io/)
- . Once SDKMAN is installed invoke `sdk install gradle 2.10`.
+ . Once SDKMAN is installed invoke `sdk install gradle 4.2`.
  . Test your setup by invoking `gradle --version`.
 
 .Gdub
@@ -60,9 +68,18 @@ to use the gradle wrapper if available or your global gradle command. This is an
 Make a full build issuing `gradle build`.
 
 Run the sampler JavaFX application by invoking the following commands
+
 [source]
+.With JDK8 selected
 ----
-$ cd subprojects/sampler-javafx
+$ cd subprojects/sampler-javafx8
+$ gradle run
+----
+
+[source]
+.With JDK9 selected
+----
+$ cd subprojects/sampler-javafx9
 $ gradle run
 ----
 
