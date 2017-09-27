@@ -1,0 +1,58 @@
+<!--
+
+    Copyright 2015-2017 Andres Almiray
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+<?import org.kordamp.ikonli.javafx.StackedFontIcon?>
+<TabPane xmlns:fx="http://javafx.com/fxml">
+    <padding>
+        <Insets top="10" left="10" bottom="10" right="10"/>
+    </padding>
+    <tabs>
+        <Tab text="Stacked" closable="false">
+            <GridPane hgap="20" vgap="20">
+                <StackedFontIcon GridPane.columnIndex="0" GridPane.rowIndex="0" iconSize="48">
+                    <FontIcon iconLiteral="fa-circle-thin" iconColor="red"/>
+                    <FontIcon iconLiteral="fa-camera" StackedFontIcon.iconSize="0.5"/>
+                </StackedFontIcon>
+                <StackedFontIcon GridPane.columnIndex="1" GridPane.rowIndex="0" iconSize="64">
+                    <FontIcon iconLiteral="fa-circle-thin" iconColor="forestgreen"/>
+                    <FontIcon iconLiteral="oct-heart" StackedFontIcon.iconSize="0.5"/>
+                </StackedFontIcon>
+                <StackedFontIcon GridPane.columnIndex="2" GridPane.rowIndex="0" iconSize="80">
+                    <FontIcon iconLiteral="fa-circle-thin" iconColor="blue"/>
+                    <FontIcon iconLiteral="ion-alert" StackedFontIcon.iconSize="0.5"/>
+                </StackedFontIcon>
+                <StackedFontIcon GridPane.columnIndex="3" GridPane.rowIndex="0" iconSize="96">
+                    <FontIcon iconLiteral="fa-circle-thin" iconColor="red"/>
+                    <FontIcon iconLiteral="fi-first-aid" StackedFontIcon.iconSize="0.5"/>
+                </StackedFontIcon>
+                <StackedFontIcon GridPane.columnIndex="4" GridPane.rowIndex="0" iconSize="112">
+                    <FontIcon iconLiteral="fa-circle-thin" iconColor="forestgreen"/>
+                    <FontIcon iconLiteral="di-java" StackedFontIcon.iconSize="0.5"/>
+                </StackedFontIcon>
+                <StackedFontIcon GridPane.columnIndex="5" GridPane.rowIndex="0" iconSize="124">
+                    <FontIcon iconLiteral="fa-circle-thin" iconColor="blue"/>
+                    <FontIcon iconLiteral="eli-hand-right" StackedFontIcon.iconSize="0.5"/>
+                </StackedFontIcon>
+            </GridPane>
+        </Tab>
+    </tabs>
+</TabPane>

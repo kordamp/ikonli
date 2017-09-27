@@ -1,10 +1,11 @@
-apply from: rootProject.file('gradle/javafx.gradle')
 apply plugin: 'application'
+apply from: rootProject.file('gradle/jdks.gradle')
 
 mainClassName = 'org.kordamp.ikonli.Sampler'
 
 dependencies {
     compile project(':ikonli-javafx')
+    compile files(project(':ikonli-javafx').sourceSets.java9.output.classesDirs)
     compile project(':ikonli-devicons-pack')
     compile project(':ikonli-elusive-pack')
     compile project(':ikonli-feather-pack')

@@ -1,7 +1,102 @@
-apply from: rootProject.file('gradle/javafx.gradle')
+apply plugin: 'java-library'
+apply from: rootProject.file('gradle/jdks.gradle')
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/main/java']
+        }
+    }
+    java8 {
+        java {
+            srcDirs = ['src/main/java8']
+        }
+    }
+    java9 {
+        java {
+            srcDirs = ['src/main/java9']
+        }
+    }
+    java8Test {
+        java {
+            srcDirs = ['src/test/java8']
+        }
+    }
+    java9Test {
+        java {
+            srcDirs = ['src/test/java9']
+        }
+    }
+}
 
 dependencies {
-    compileOnly project.files(project.jfxrtLocation)
-    testCompileOnly project.files(project.jfxrtLocation)
     compile project(':ikonli-core')
+    java8Implementation project(':ikonli-core')
+    java9Implementation project(':ikonli-core')
+    java8Implementation files(sourceSets.main.output.classesDirs) { builtBy compileJava }
+    java9Implementation files(sourceSets.main.output.classesDirs) { builtBy compileJava }
+
+    java8TestImplementation 'junit:junit:4.12',
+        project(':ikonli-core'),
+        files(sourceSets.main.output.classesDirs),
+        files(sourceSets.java8.output.classesDirs)
+    java9TestImplementation 'junit:junit:4.12',
+        project(':ikonli-core'),
+        files(sourceSets.main.output.classesDirs),
+        files(sourceSets.java9.output.classesDirs)
 }
+
+compileJava {
+    sourceCompatibility = 8
+    targetCompatibility = 8
+}
+
+compileJava8Java {
+    sourceCompatibility = 8
+    targetCompatibility = 8
+}
+
+compileJava9Java {
+    sourceCompatibility = 9
+    targetCompatibility = 9
+}
+
+jar {
+    into('META-INF/versions/9') {
+        from sourceSets.java9.output
+    }
+    into('/') {
+        from sourceSets.java8.output
+    }
+    manifest {
+        attributes(
+            'Multi-Release': 'true'
+        )
+    }
+}
+
+task testJava8(type: Test, dependsOn: java8Classes) {
+    testClassesDirs = sourceSets.java8.output.classesDirs
+    classpath = sourceSets.java8Test.runtimeClasspath
+}
+
+task testJava8Report(type: TestReport, dependsOn: testJava8) {
+    destinationDir = file("${buildDir}/reports/tests/testJava8")
+    reportOn testJava8.binResultsDir
+}
+
+testJava8.finalizedBy testJava8Report
+check.dependsOn testJava8
+
+task testJava9(type: Test, dependsOn: java9Classes) {
+    testClassesDirs = sourceSets.java9Test.output.classesDirs
+    classpath = sourceSets.java9Test.runtimeClasspath
+}
+
+task testJava9Report(type: TestReport, dependsOn: testJava9) {
+    destinationDir = file("${buildDir}/reports/tests/testJava9")
+    reportOn testJava9.binResultsDir
+}
+
+testJava9.finalizedBy testJava9Report
+check.dependsOn testJava9

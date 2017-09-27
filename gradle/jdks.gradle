@@ -1,0 +1,28 @@
+// taken from https://github.com/melix/mrjar-gradle/blob/master/jdks.gradle
+// (c) Cedric Champeau
+
+String compat(String src) {
+    if (src.contains('.')) {
+        src.substring(src.lastIndexOf('.') + 1)
+    } else {
+        src
+    }
+}
+
+// this will configure the java compile tasks with the appropriate JDK
+project.afterEvaluate {
+    tasks.withType(JavaCompile) {
+        def version = compat(sourceCompatibility)
+        def jdkHome = System.getenv("JAVA_${version}")
+        if (!jdkHome) {
+            println "Warning: Please set path to JDK ${version} using environment variable JAVA_${version}"
+            println 'Falling back to current JDK'
+        } else {
+            options.fork = true
+            options.forkOptions.javaHome = file(jdkHome)
+            doFirst {
+                println "$name compiles using JDK $version"
+            }
+        }
+    }
+}
