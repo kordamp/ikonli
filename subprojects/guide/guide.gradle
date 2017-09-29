@@ -44,7 +44,7 @@ ext.childProjects = [
 ext.childProjects.each { evaluationDependsOn it }
 
 asciidoctorj {
-    version = '1.5.4.1'
+    version = '1.5.6'
 }
 
 dependencies {
@@ -147,9 +147,9 @@ class GenerateIconCheatSheetTask extends DefaultTask {
     @TaskAction
     def generate() {
         GroovyClassLoader gcl = new GroovyClassLoader()
-        gcl.addClasspath(project.project(':ikonli-core').file('build/classes/main').absolutePath)
-        gcl.addClasspath(project.project(":ikonli-${packName}-pack").file('build/classes/main').absolutePath)
-        gcl.addClasspath(project.project(":ikonli-${packName}-pack").file('build/resources/main').absolutePath)
+        gcl.addClasspath(project.project(':ikonli-core').file('build/classes/java/main').absolutePath)
+        gcl.addClasspath(project.project(":ikonli-${packName}-pack").file('build/classes/java/main').absolutePath)
+        gcl.addClasspath(project.project(":ikonli-${packName}-pack").file('build/resources/java/main').absolutePath)
         def iconFontClass = gcl.loadClass(iconClassName, true)
 
         int index = 1

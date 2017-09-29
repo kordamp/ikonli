@@ -136,6 +136,7 @@ if (!project.hasProperty('githubPassword')) ext.githubPassword = ''
 
 gitPublish {
     repoUri = project.project_scm
+    branch = 'gh-pages'
     contents {
         from project(':guide').guide.outputs.files
     }
