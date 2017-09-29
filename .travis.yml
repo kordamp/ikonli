@@ -7,5 +7,5 @@ before_install:
 before_script:
   - ./gradlew --version
 script: ./gradlew clean build 
-jdk: oraclejdk8
+jdk: oraclejdk9
 env: TERM=dumb

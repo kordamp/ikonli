@@ -140,6 +140,7 @@ gitPublish {
     contents {
         from project(':guide').guide.outputs.files
     }
+    commitMessage = "Publish guide for $version"
 
 /*
     credentials {
