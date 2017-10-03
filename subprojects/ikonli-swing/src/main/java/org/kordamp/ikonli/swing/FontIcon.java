@@ -58,7 +58,7 @@ public class FontIcon implements Icon {
                 g2.setFont(font);
                 g2.setColor(iconColor);
 
-                int sy = iconSize - (iconSize / 4) + (iconSize / 16);
+                int sy = g2.getFontMetrics().getAscent();
                 g2.drawString(String.valueOf(ikon.getCode()), 0, sy);
 
                 g2.dispose();
