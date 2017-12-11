@@ -5,7 +5,7 @@
 :project-name:  ikonli
 :project-group: org.kordamp.ikonli
 
-image:http://img.shields.io/travis/aalmiray/ikonli/master.svg["Build Status (travis)", link="https://travis-ci.org/aalmiray/ikonli"]
+image:http://img.shields.io/travis/aalmiray/{project-name}/master.svg["Build Status (travis)", link="https://travis-ci.org/aalmiray/{project-name}"]
 image:http://img.shields.io/badge/license-ASL2-blue.svg["ASL3 Licensed", link="http://opensource.org/licenses/ASL2"]
 image:https://api.bintray.com/packages/{project-owner}/{project-repo}/{project-name}/images/download.svg[link="https://bintray.com/{project-owner}/{project-repo}/{project-name}/_latestVersion"]
 image:https://img.shields.io/maven-central/v/{project-group}/{project-name}-core.svg?label=maven[link="https://search.maven.org/#search|ga|1|{project-group}"]
@@ -28,7 +28,7 @@ You must meet the following requirements:
 
  * JDK8u40 as a minimum
  * JDK9
- * Gradle 4.2
+ * Gradle 4.4
 
 You may used the included gradle wrapper script if you don't have `gradle` installed.
 
