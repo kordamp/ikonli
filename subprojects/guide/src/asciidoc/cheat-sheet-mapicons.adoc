@@ -1,0 +1,13 @@
+= Mapicons
+
+++++
+<link href='./css/map-icons.css' rel='stylesheet'>
+<style>
+    .map-icon {
+        font-size: 32px;
+    }
+</style>
+++++
+
+include::{projectDir}/build/tmp/_mapicons_cheat_sheet.adoc[]
+

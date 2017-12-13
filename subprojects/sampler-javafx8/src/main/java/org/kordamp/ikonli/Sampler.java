@@ -42,6 +42,7 @@ import org.kordamp.ikonli.javafx.FontIcon;
 import org.kordamp.ikonli.ligaturesymbols.LigatureSymbols;
 import org.kordamp.ikonli.maki.Maki;
 import org.kordamp.ikonli.maki2.Maki2;
+import org.kordamp.ikonli.mapicons.Mapicons;
 import org.kordamp.ikonli.material.Material;
 import org.kordamp.ikonli.materialdesign.MaterialDesign;
 import org.kordamp.ikonli.metrizeicons.MetrizeIcons;
@@ -88,6 +89,7 @@ public class Sampler extends Application {
         tabPane.getTabs().add(new DemoTab(LigatureSymbols.class, allOf(LigatureSymbols.class)));
         tabPane.getTabs().add(new DemoTab(Maki.class, allOf(Maki.class)));
         tabPane.getTabs().add(new DemoTab(Maki2.class, allOf(Maki2.class)));
+        tabPane.getTabs().add(new DemoTab(Mapicons.class, allOf(Mapicons.class)));
         tabPane.getTabs().add(new DemoTab(Material.class, allOf(Material.class)));
         tabPane.getTabs().add(new DemoTab(MaterialDesign.class, allOf(MaterialDesign.class)));
         tabPane.getTabs().add(new DemoTab(MetrizeIcons.class, allOf(MetrizeIcons.class)));

@@ -32,6 +32,7 @@ import org.kordamp.ikonli.ionicons.Ionicons;
 import org.kordamp.ikonli.ligaturesymbols.LigatureSymbols;
 import org.kordamp.ikonli.maki.Maki;
 import org.kordamp.ikonli.maki2.Maki2;
+import org.kordamp.ikonli.mapicons.Mapicons;
 import org.kordamp.ikonli.material.Material;
 import org.kordamp.ikonli.materialdesign.MaterialDesign;
 import org.kordamp.ikonli.metrizeicons.MetrizeIcons;
@@ -88,6 +89,7 @@ public class Sampler {
         createTab(tabPane, LigatureSymbols.class, new DemoTab(allOf(LigatureSymbols.class)));
         createTab(tabPane, Maki.class, new DemoTab(allOf(Maki.class)));
         createTab(tabPane, Maki2.class, new DemoTab(allOf(Maki2.class)));
+        createTab(tabPane, Mapicons.class, new DemoTab(allOf(Mapicons.class)));
         createTab(tabPane, Material.class, new DemoTab(allOf(Material.class)));
         createTab(tabPane, MaterialDesign.class, new DemoTab(allOf(MaterialDesign.class)));
         createTab(tabPane, MetrizeIcons.class, new DemoTab(allOf(MetrizeIcons.class)));

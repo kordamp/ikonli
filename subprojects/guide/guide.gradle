@@ -33,6 +33,7 @@ ext.childProjects = [
     ':ikonli-ligaturesymbols-pack',
     ':ikonli-maki-pack',
     ':ikonli-maki2-pack',
+    ':ikonli-mapicons-pack',
     ':ikonli-material-pack',
     ':ikonli-materialdesign-pack',
     ':ikonli-metrizeicons-pack',
@@ -221,6 +222,7 @@ asciidoctor {
               createIconGenerationTask(packName: 'ligaturesymbols', iconClassName: 'org.kordamp.ikonli.ligaturesymbols.LigatureSymbols', iconName: 'lsf',     shortNameSize: 4),
               createIconGenerationTask(packName: 'maki',            iconClassName: 'org.kordamp.ikonli.maki.Maki',                       shortNameSize: 5),
               createIconGenerationTask(packName: 'maki2',           iconClassName: 'org.kordamp.ikonli.maki2.Maki2',                     shortNameSize: 6),
+              createIconGenerationTask(packName: 'mapicons',        iconClassName: 'org.kordamp.ikonli.mapicons.Mapicons',               iconName: 'map-icon', shortNameSize: 9),
               createIconGenerationTask(packName: 'material',        iconClassName: 'org.kordamp.ikonli.material.Material',               iconName: 'gmi',     shortNameSize: 4),
               createIconGenerationTask(packName: 'materialdesign',  iconClassName: 'org.kordamp.ikonli.materialdesign.MaterialDesign',   iconName: 'mdi',     shortNameSize: 4),
               createIconGenerationTask(packName: 'metrizeicons',    iconClassName: 'org.kordamp.ikonli.metrizeicons.MetrizeIcons',       iconName: 'met',     shortNameSize: 4),
@@ -268,6 +270,7 @@ asciidoctor {
         ligaturesymbolsVersion : project.ligaturesymbolsVersion,
         makiVersion            : project.makiVersion,
         maki2Version           : project.maki2Version,
+        mapiconsVersion        : project.mapiconsVersion,
         materialVersion        : project.materialVersion,
         materialdesignVersion  : project.materialdesignVersion,
         metrizeiconsVersion    : project.metrizeiconsVersion,
@@ -298,6 +301,7 @@ asciidoctor {
         from project(':ikonli-ligaturesymbols-pack').file("src/main/resources/META-INF/resources/ligaturesymbols/${ligaturesymbolsVersion}")
         from project(':ikonli-maki-pack').file("src/main/resources/META-INF/resources/maki/${makiVersion}")
         from project(':ikonli-maki2-pack').file("src/main/resources/META-INF/resources/maki2/${maki2Version}")
+        from project(':ikonli-mapicons-pack').file("src/main/resources/META-INF/resources/mapicons/${mapiconsVersion}")
         from project(':ikonli-material-pack').file("src/main/resources/META-INF/resources/material/${materialVersion}")
         from project(':ikonli-materialdesign-pack').file("src/main/resources/META-INF/resources/materialdesignicons/${materialdesignVersion}")
         from project(':ikonli-metrizeicons-pack').file("src/main/resources/META-INF/resources/metrizeicons/${metrizeiconsVersion}")

@@ -377,6 +377,31 @@ compile '{project-group}:ikonli-maki2-pack:{project-version}'
 </dependency>
 ----
 
+== Mapicons
+ * Font version: {mapiconsVersion}
+ * link:https://github.com/scottdejonge/map-icons[]
+ * link:cheat-sheet-mapicons.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-mapicons-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-mapicons-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
 == Material Icons
  * Font version: {materialVersion}
  * link:https://design.google.com/icons/[]
