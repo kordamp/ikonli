@@ -39,6 +39,7 @@ import org.kordamp.ikonli.hawcons.HawconsStroke;
 import org.kordamp.ikonli.icomoon.Icomoon;
 import org.kordamp.ikonli.ionicons.Ionicons;
 import org.kordamp.ikonli.javafx.FontIcon;
+import org.kordamp.ikonli.ligaturesymbols.LigatureSymbols;
 import org.kordamp.ikonli.maki.Maki;
 import org.kordamp.ikonli.maki2.Maki2;
 import org.kordamp.ikonli.material.Material;
@@ -84,6 +85,7 @@ public class Sampler extends Application {
         tabPane.getTabs().add(new DemoTab(HawconsStroke.class, allOf(HawconsStroke.class)));
         tabPane.getTabs().add(new DemoTab(Icomoon.class, allOf(Icomoon.class)));
         tabPane.getTabs().add(new DemoTab(Ionicons.class, allOf(Ionicons.class)));
+        tabPane.getTabs().add(new DemoTab(LigatureSymbols.class, allOf(LigatureSymbols.class)));
         tabPane.getTabs().add(new DemoTab(Maki.class, allOf(Maki.class)));
         tabPane.getTabs().add(new DemoTab(Maki2.class, allOf(Maki2.class)));
         tabPane.getTabs().add(new DemoTab(Material.class, allOf(Material.class)));

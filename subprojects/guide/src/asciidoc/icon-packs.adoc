@@ -302,6 +302,31 @@ compile '{project-group}:ikonli-ionicons-pack:{project-version}'
 </dependency>
 ----
 
+== Ligature Symbols
+ * Font version: {ligaturesymbolsVersion}
+ * link:http://kudakurage.com/ligature_symbols/[]
+ * link:cheat-sheet-ligaturesymbols.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-ligaturesymbols-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-ligaturesymbols-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
 == Maki
  * Font version: {makiVersion}
  * link:https://github.com/mapbox/maki[]

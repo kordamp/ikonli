@@ -29,6 +29,7 @@ import org.kordamp.ikonli.hawcons.HawconsFilled;
 import org.kordamp.ikonli.hawcons.HawconsStroke;
 import org.kordamp.ikonli.icomoon.Icomoon;
 import org.kordamp.ikonli.ionicons.Ionicons;
+import org.kordamp.ikonli.ligaturesymbols.LigatureSymbols;
 import org.kordamp.ikonli.maki.Maki;
 import org.kordamp.ikonli.maki2.Maki2;
 import org.kordamp.ikonli.material.Material;
@@ -84,6 +85,7 @@ public class Sampler {
         createTab(tabPane, HawconsStroke.class, new DemoTab(allOf(HawconsStroke.class)));
         createTab(tabPane, Icomoon.class, new DemoTab(allOf(Icomoon.class)));
         createTab(tabPane, Ionicons.class, new DemoTab(allOf(Ionicons.class)));
+        createTab(tabPane, LigatureSymbols.class, new DemoTab(allOf(LigatureSymbols.class)));
         createTab(tabPane, Maki.class, new DemoTab(allOf(Maki.class)));
         createTab(tabPane, Maki2.class, new DemoTab(allOf(Maki2.class)));
         createTab(tabPane, Material.class, new DemoTab(allOf(Material.class)));
