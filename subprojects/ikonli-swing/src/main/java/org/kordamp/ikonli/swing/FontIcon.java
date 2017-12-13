@@ -37,8 +37,8 @@ public class FontIcon implements Icon {
     private static final Object LOCK = new Object[0];
 
     private Font font;
-    private int width;
-    private int height;
+    private int width = 16;
+    private int height = 16;
     private BufferedImage buffer;
 
     private int iconSize = 16;
