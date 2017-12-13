@@ -102,6 +102,31 @@ compile '{project-group}:ikonli-fontawesome-pack:{project-version}'
 </dependency>
 ----
 
+== FontAwesome5
+ * Font version: {fontawesome5Version}
+ * link:https://fontawesome.com[]
+ * link:cheat-sheet-fontawesome5.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-fontawesome5-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-fontawesome5-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
 == Fontelico
  * Font version: {fontelicoVersion}
  * link:https://github.com/fontello/fontelico.font[]

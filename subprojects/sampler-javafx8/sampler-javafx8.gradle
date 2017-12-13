@@ -9,6 +9,7 @@ dependencies {
     compile project(':ikonli-elusive-pack')
     compile project(':ikonli-feather-pack')
     compile project(':ikonli-fontawesome-pack')
+    compile project(':ikonli-fontawesome5-pack')
     compile project(':ikonli-fontelico-pack')
     compile project(':ikonli-foundation-pack')
     compile project(':ikonli-hawconsfilled-pack')
