@@ -2,6 +2,31 @@
 [[_cheat_sheets]]
 = Icon Packs
 
+== DashIcons
+ * Font version: {dashiconsVersion}
+ * https://github.com/WordPress/dashicons[]
+ * link:cheat-sheet-dashicons.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-dashicons-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-dashicons-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
 == DevIcons
  * Font version: {deviconsVersion}
  * link:http://vorillaz.github.io/devicons/[]

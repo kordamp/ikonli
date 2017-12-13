@@ -1,0 +1,13 @@
+= Dashicons
+
+++++
+<link href='./css/dashicons.css' rel='stylesheet'>
+<style>
+    .dashicons {
+        font-size: 32px;
+    }
+</style>
+++++
+
+include::{projectDir}/build/tmp/_dashicons_cheat_sheet.adoc[]
+

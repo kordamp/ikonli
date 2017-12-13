@@ -15,6 +15,7 @@
  */
 package org.kordamp.ikonli;
 
+import org.kordamp.ikonli.dashicons.Dashicons;
 import org.kordamp.ikonli.devicons.Devicons;
 import org.kordamp.ikonli.elusive.Elusive;
 import org.kordamp.ikonli.feather.Feather;
@@ -69,6 +70,7 @@ public class Sampler {
     private static void launch() {
         JTabbedPane tabPane = new JTabbedPane();
 
+        createTab(tabPane, Dashicons.class, new DemoTab(allOf(Dashicons.class)));
         createTab(tabPane, Devicons.class, new DemoTab(allOf(Devicons.class)));
         createTab(tabPane, Elusive.class, new DemoTab(allOf(Elusive.class)));
         createTab(tabPane, Feather.class, new DemoTab(allOf(Feather.class)));

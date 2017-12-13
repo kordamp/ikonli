@@ -18,6 +18,7 @@ ext.childProjects = [
     ':ikonli-core',
     ':ikonli-javafx',
     ':ikonli-swing',
+    ':ikonli-dashicons-pack',
     ':ikonli-devicons-pack',
     ':ikonli-elusive-pack',
     ':ikonli-feather-pack',
@@ -155,13 +156,13 @@ class GenerateIconCheatSheetTask extends DefaultTask {
         def iconFontClass = gcl.loadClass(iconClassName, true)
 
         int index = 1
-        String document = """
-        The following table shows all available icons. ${packName}
+        String document = '''
+        The following table shows all available icons.
 
         [columns="1,3,2,^", options="header"]
         |===
         | Index | Enum | Name | Icon
-        """.stripIndent(8)
+        '''.stripIndent(8)
 
         iconFontClass.values().each { font ->
             document += "| ${index++} "
@@ -206,6 +207,7 @@ def createIconGenerationTask(Map args) {
 
 asciidoctor {
     dependsOn createIconGenerationTask(packName: 'devicons',       iconClassName: 'org.kordamp.ikonli.devicons.Devicons'),
+              createIconGenerationTask(packName: 'dashicons',      iconClassName: 'org.kordamp.ikonli.dashicons.Dashicons',           iconName: 'dashicons', shortNameSize: 10),
               createIconGenerationTask(packName: 'elusive',        iconClassName: 'org.kordamp.ikonli.elusive.Elusive',               iconName: 'el-icon', shortNameSize: 4),
               createIconGenerationTask(packName: 'feather',        iconClassName: 'org.kordamp.ikonli.feather.Feather',               iconName: 'fth',     shortNameSize: 4),
               createIconGenerationTask(packName: 'fontawesome',    iconClassName: 'org.kordamp.ikonli.fontawesome.FontAwesome',       iconName: 'fa'),
@@ -250,6 +252,7 @@ asciidoctor {
         'project-vcs'          : project.project_scm,
         'project-issue-tracker': project.project_issues,
         'project-group'        : project.group,
+        dashiconsVersion       : project.dashiconsVersion,
         deviconsVersion        : project.deviconsVersion,
         elusiveVersion         : project.elusiveVersion,
         featherVersion         : project.featherVersion,
@@ -277,6 +280,7 @@ asciidoctor {
     }*/
     resources {
         from file('src/resources')
+        from project(':ikonli-dashicons-pack').file("src/main/resources/META-INF/resources/dashicons/${dashiconsVersion}")
         from project(':ikonli-devicons-pack').file("src/main/resources/META-INF/resources/devicons/${deviconsVersion}")
         from project(':ikonli-elusive-pack').file("src/main/resources/META-INF/resources/elusive/${elusiveVersion}")
         from project(':ikonli-feather-pack').file("src/main/resources/META-INF/resources/feather/${featherVersion}")
