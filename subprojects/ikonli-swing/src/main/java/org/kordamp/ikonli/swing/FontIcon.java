@@ -78,7 +78,7 @@ public class FontIcon implements Icon {
         synchronized (LOCK) {
             IkonHandler ikonHandler = IkonResolver.getInstance().resolve(ikon.getDescription());
             font = ((Font) ikonHandler.getFont()).deriveFont(Font.PLAIN, iconSize);
-            buffer = null;
+            setProperties();
         }
     }
 
@@ -89,20 +89,25 @@ public class FontIcon implements Icon {
     public void setIconSize(int iconSize) {
         if (iconSize > 0) {
             this.iconSize = iconSize;
-            font = font.deriveFont(Font.PLAIN, iconSize);
-
-            BufferedImage tmp = new BufferedImage(iconSize, iconSize,
-                BufferedImage.TYPE_INT_ARGB);
-            Graphics2D g2 = getLocalGraphicsEnvironment().createGraphics(tmp);
-            g2.setFont(font);
-            this.width = g2.getFontMetrics().charWidth(ikon.getCode());
-            this.height = g2.getFontMetrics().getHeight();
-
-            g2.dispose();
-
-            synchronized (LOCK) {
-                buffer = null;
+            if (null != font) {
+                font = font.deriveFont(Font.PLAIN, iconSize);
+                setProperties();
             }
+        }
+    }
+
+    protected void setProperties() {
+        BufferedImage tmp = new BufferedImage(iconSize, iconSize,
+            BufferedImage.TYPE_INT_ARGB);
+        Graphics2D g2 = getLocalGraphicsEnvironment().createGraphics(tmp);
+        g2.setFont(font);
+        this.width = g2.getFontMetrics().charWidth(ikon.getCode());
+        this.height = g2.getFontMetrics().getHeight();
+
+        g2.dispose();
+
+        synchronized (LOCK) {
+            buffer = null;
         }
     }
 
