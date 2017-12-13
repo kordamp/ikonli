@@ -104,10 +104,7 @@ public class Sampler {
             setViewportView(pane);
 
             for (Ikon value : enumSet) {
-                FontIcon icon = new FontIcon();
-                icon.setIkon(value);
-                icon.setIconSize(48);
-                pane.add(new JLabel(icon));
+                pane.add(new JLabel(FontIcon.of(value, 48)));
             }
         }
     }

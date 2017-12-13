@@ -50,6 +50,26 @@ public class FontIcon extends Text implements Icon {
     protected StyleableObjectProperty<Paint> iconColor;
     private StyleableObjectProperty<Ikon> iconCode;
 
+    public static FontIcon of(Ikon ikon) {
+        return of(ikon, 16, Color.BLACK);
+    }
+
+    public static FontIcon of(Ikon ikon, int iconSize) {
+        return of(ikon, iconSize, Color.BLACK);
+    }
+
+    public static FontIcon of(Ikon ikon, Color iconColor) {
+        return of(ikon, 16, iconColor);
+    }
+
+    public static FontIcon of(Ikon iconCode, int iconSize, Color iconColor) {
+        FontIcon icon = new FontIcon();
+        icon.setIconCode(iconCode);
+        icon.setIconSize(iconSize);
+        icon.setIconColor(iconColor);
+        return icon;
+    }
+
     public FontIcon() {
         getStyleClass().setAll("ikonli-font-icon");
         setIconSize(16);

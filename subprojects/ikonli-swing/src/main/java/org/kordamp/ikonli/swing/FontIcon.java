@@ -45,6 +45,26 @@ public class FontIcon implements Icon {
     private Color iconColor = Color.BLACK;
     private Ikon ikon;
 
+    public static FontIcon of(Ikon ikon) {
+        return of(ikon, 16, Color.BLACK);
+    }
+
+    public static FontIcon of(Ikon ikon, int iconSize) {
+        return of(ikon, iconSize, Color.BLACK);
+    }
+
+    public static FontIcon of(Ikon ikon, Color iconColor) {
+        return of(ikon, 16, iconColor);
+    }
+
+    public static FontIcon of(Ikon ikon, int iconSize, Color iconColor) {
+        FontIcon icon = new FontIcon();
+        icon.setIkon(ikon);
+        icon.setIconSize(iconSize);
+        icon.setIconColor(iconColor);
+        return icon;
+    }
+
     public void paintIcon(Component c, Graphics g, int x, int y) {
         synchronized (LOCK) {
             if (buffer == null) {

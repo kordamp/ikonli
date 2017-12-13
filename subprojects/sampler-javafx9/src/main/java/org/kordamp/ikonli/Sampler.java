@@ -111,7 +111,7 @@ public class Sampler extends Application {
             int row = 0;
             int index = 0;
             for (Ikon value : enumSet) {
-                FontIcon icon = new FontIcon(value);
+                FontIcon icon = FontIcon.of(value);
                 icon.getStyleClass().setAll("font-icon");
                 pane.add(icon, column++, row);
                 GridPane.setMargin(icon, new Insets(10, 10, 10, 10));
