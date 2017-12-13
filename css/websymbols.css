@@ -1,0 +1,190 @@
+﻿/*!
+ *  Websymbols 1.8.0 made by Theodore Vorillas / http://vorillaz.com 
+ */
+@font-face {
+    font-family: 'WebSymbols';
+    src: url("../fonts/websymbols.eot?xqxft6");
+    src: url("../fonts/websymbols.eot?#iefixxqxft6") format("embedded-opentype"), url("../fonts/websymbols.woff?xqxft6") format("woff"), url("../fonts/websymbols.ttf?xqxft6") format("truetype"), url("../fonts/websymbols.svg?xqxft6#websymbols") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.websymbols {
+    font-family: 'WebSymbols';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.websymbols-adduser:before { content: "«"; }
+.websymbols-album:before { content: "n"; }
+.websymbols-alert:before { content: '\\'; }
+.websymbols-aligncenter:before { content: "E"; }
+.websymbols-alignleft:before { content: "F"; }
+.websymbols-alignright:before { content: "D"; }
+.websymbols-archive:before { content: "Y"; }
+.websymbols-attachment:before { content: "="; }
+.websymbols-behance:before { content: "O"; }
+.websymbols-blogger:before { content: "P"; }
+.websymbols-bottom:before { content: "Ë"; }
+.websymbols-bottomfill:before { content: "Ê"; }
+.websymbols-bottomoutline:before { content: "É"; }
+.websymbols-boxed:before { content: "A"; }
+.websymbols-boxedlist:before { content: "B"; }
+.websymbols-bullets:before { content: "I"; }
+.websymbols-calendar:before { content: ";"; }
+.websymbols-chat:before { content: "K"; }
+.websymbols-chatactive:before { content: "L"; }
+.websymbols-clock:before { content: ":"; }
+.websymbols-close:before { content: "Î"; }
+.websymbols-closefill:before { content: "Í"; }
+.websymbols-closemenu:before { content: "}"; }
+.websymbols-closeoutline:before { content: "Ì"; }
+.websymbols-cloud:before { content: "k"; }
+.websymbols-cloudup:before { content: "l"; }
+.websymbols-code:before { content: "_"; }
+.websymbols-comment:before { content: "s"; }
+.websymbols-commentempty:before { content: "Q"; }
+.websymbols-diagonal:before { content: "p"; }
+.websymbols-done:before { content: "õ"; }
+.websymbols-donefill:before { content: "ó"; }
+.websymbols-doneoutline:before { content: "ô"; }
+.websymbols-download:before { content: "*"; }
+.websymbols-downloadfill:before { content: "&"; }
+.websymbols-downloadoutline:before { content: "("; }
+.websymbols-dribble:before { content: "¤"; }
+.websymbols-dropbox:before { content: "¨"; }
+.websymbols-edit:before { content: "?"; }
+.websymbols-evernote:before { content: "¢"; }
+.websymbols-facebook:before { content: "ä"; }
+.websymbols-flickr:before { content: "N"; }
+.websymbols-fold:before { content: "["; }
+.websymbols-folder:before { content: "j"; }
+.websymbols-forward:before { content: "-"; }
+.websymbols-fullscreen:before { content: ">"; }
+.websymbols-gallery:before { content: "d"; }
+.websymbols-github:before { content: "R"; }
+.websymbols-google:before { content: "ò"; }
+.websymbols-googleplus:before { content: "è"; }
+.websymbols-group:before { content: "¡"; }
+.websymbols-halfloud:before { content: "y"; }
+.websymbols-heart:before { content: "S"; }
+.websymbols-heartempty:before { content: "T"; }
+.websymbols-horisontal:before { content: "g"; }
+.websymbols-indent:before { content: "G"; }
+.websymbols-instagram:before { content: "ë"; }
+.websymbols-kickstarter:before { content: "¯"; }
+.websymbols-lastfm:before { content: "¦"; }
+.websymbols-left:before { content: "Ô"; }
+.websymbols-leftfill:before { content: "Ó"; }
+.websymbols-leftoutline:before { content: "Ò"; }
+.websymbols-link:before { content: "o"; }
+.websymbols-linkedin:before { content: "ç"; }
+.websymbols-list:before { content: "C"; }
+.websymbols-livejournal:before { content: "ì"; }
+.websymbols-lock:before { content: "w"; }
+.websymbols-logout:before { content: "`"; }
+.websymbols-loud:before { content: "z"; }
+.websymbols-mail:before { content: "8"; }
+.websymbols-movie:before { content: "b"; }
+.websymbols-movieclip:before { content: "c"; }
+.websymbols-mute:before { content: "x"; }
+.websymbols-next:before { content: "û"; }
+.websymbols-nextfill:before { content: "ù"; }
+.websymbols-nextoutline:before { content: "ú"; }
+.websymbols-normal:before { content: "m"; }
+.websymbols-normalscreen:before { content: "<"; }
+.websymbols-odnoklassniki:before { content: "é"; }
+.websymbols-openmenu:before { content: "{"; }
+.websymbols-ordered:before { content: "J"; }
+.websymbols-outdent:before { content: "H"; }
+.websymbols-pause:before { content: "Ý"; }
+.websymbols-pausefill:before { content: "Ü"; }
+.websymbols-pauseoutline:before { content: "Û"; }
+.websymbols-phone:before { content: "|"; }
+.websymbols-picassa:before { content: "£"; }
+.websymbols-picture:before { content: "a"; }
+.websymbols-pin:before { content: "u"; }
+.websymbols-pinterest:before { content: "í"; }
+.websymbols-play:before { content: "Ú"; }
+.websymbols-playfill:before { content: "Ù"; }
+.websymbols-playoutline:before { content: "Ø"; }
+.websymbols-previous:before { content: "ø"; }
+.websymbols-previousfill:before { content: "ö"; }
+.websymbols-previousoutline:before { content: "÷"; }
+.websymbols-rating:before { content: "q"; }
+.websymbols-repeat:before { content: "¬"; }
+.websymbols-reply:before { content: ","; }
+.websymbols-replyall:before { content: "+"; }
+.websymbols-resize:before { content: "Ñ"; }
+.websymbols-resizefill:before { content: "Ð"; }
+.websymbols-resizeoutline:before { content: "Ï"; }
+.websymbols-retweet:before { content: "\""; }
+.websymbols-revision:before { content: "®"; }
+.websymbols-right:before { content: "×"; }
+.websymbols-rightfill:before { content: "Ö"; }
+.websymbols-rightoutline:before { content: "Õ"; }
+.websymbols-rotate:before { content: "U"; }
+.websymbols-rotatefill:before { content: "V"; }
+.websymbols-rotateleft:before { content: "ª"; }
+.websymbols-rotateoutline:before { content: "W"; }
+.websymbols-rotateright:before { content: "©"; }
+.websymbols-rss:before { content: "$"; }
+.websymbols-rssbox:before { content: "ñ"; }
+.websymbols-search:before { content: "#"; }
+.websymbols-settings:before { content: "^"; }
+.websymbols-share:before { content: "@"; }
+.websymbols-shuffle:before { content: "~"; }
+.websymbols-skype:before { content: "ï"; }
+.websymbols-slideshow:before { content: "f"; }
+.websymbols-sort:before { content: "ã"; }
+.websymbols-sortfill:before { content: "â"; }
+.websymbols-sortoutline:before { content: "á"; }
+.websymbols-soundcloud:before { content: "§"; }
+.websymbols-spinner-1:before { content: "0"; }
+.websymbols-spinner-2:before { content: "1"; }
+.websymbols-spinner-3:before { content: "2"; }
+.websymbols-spinner-4:before { content: "3"; }
+.websymbols-spinner-5:before { content: "4"; }
+.websymbols-spinner-6:before { content: "5"; }
+.websymbols-spinner-7:before { content: "6"; }
+.websymbols-spinner-8:before { content: "7"; }
+.websymbols-star:before { content: "t"; }
+.websymbols-stop:before { content: "à"; }
+.websymbols-stopfill:before { content: "ß"; }
+.websymbols-stopoutline:before { content: "Þ"; }
+.websymbols-synchronise:before { content: "!"; }
+.websymbols-table:before { content: "i"; }
+.websymbols-tag:before { content: "r"; }
+.websymbols-terminal:before { content: "e"; }
+.websymbols-text:before { content: "Z"; }
+.websymbols-top:before { content: "È"; }
+.websymbols-topfill:before { content: "Ç"; }
+.websymbols-topoutline:before { content: "Æ"; }
+.websymbols-tumblr:before { content: "ê"; }
+.websymbols-twitter:before { content: "å"; }
+.websymbols-unfold:before { content: "]"; }
+.websymbols-unlock:before { content: "v"; }
+.websymbols-upload:before { content: ")"; }
+.websymbols-uploadfill:before { content: "%"; }
+.websymbols-uploadoutline:before { content: "'"; }
+.websymbols-user:before { content: "."; }
+.websymbols-vertical:before { content: "h"; }
+.websymbols-views:before { content: "X"; }
+.websymbols-vimeo:before { content: "î"; }
+.websymbols-vkontakte:before { content: "æ"; }
+.websymbols-weibo:before { content: "¥"; }
+.websymbols-window:before { content: "/"; }
+.websymbols-youtube:before { content: "ð"; }
+.websymbols-zoomin:before { content: "Â"; }
+.websymbols-zoominfill:before { content: "Á"; }
+.websymbols-zoominoutline:before { content: "À"; }
+.websymbols-zoomout:before { content: "Å"; }
+.websymbols-zoomoutfill:before { content: "Ä"; }
+.websymbols-zoomoutoutline:before { content: "Ã"; }
