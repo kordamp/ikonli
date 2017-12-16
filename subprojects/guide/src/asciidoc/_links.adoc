@@ -5,5 +5,7 @@
 :api_link_fonticon_swing: link:api/org/kordamp/ikonli/swing/FontIcon.html[org.kordamp.ikonli.swing.FontIcon, window="_blank"]
 
 :project-owner: aalmiray
-:project-repo: kordamp
+:project-repo:  kordamp
+:project-name:  ikonli
+:project-group: org.kordamp.ikonli
 
