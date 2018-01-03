@@ -35,7 +35,7 @@ You may used the included gradle wrapper script if you don't have `gradle` insta
 Define the following environment variables:
 
     export JAVA_8=/path/to/jdk8
-    export JAVA_9=/path/tojdk9
+    export JAVA_9=/path/to/jdk9
 
 Adapt these instructions to Windows settings if running on Windows.
 
