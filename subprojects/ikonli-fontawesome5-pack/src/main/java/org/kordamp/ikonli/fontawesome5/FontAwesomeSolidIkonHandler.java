@@ -32,7 +32,7 @@ public class FontAwesomeSolidIkonHandler extends AbstractIkonHandler {
 
     @Override
     public Ikon resolve(String description) {
-        return FontAwesomeRegular.findByDescription(description);
+        return FontAwesomeSolid.findByDescription(description);
     }
 
     @Override
