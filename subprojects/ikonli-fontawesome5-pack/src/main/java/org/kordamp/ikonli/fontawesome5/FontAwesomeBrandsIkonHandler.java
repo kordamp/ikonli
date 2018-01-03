@@ -32,7 +32,7 @@ public class FontAwesomeBrandsIkonHandler extends AbstractIkonHandler {
 
     @Override
     public Ikon resolve(String description) {
-        return FontAwesomeRegular.findByDescription(description);
+        return FontAwesomeBrands.findByDescription(description);
     }
 
     @Override
