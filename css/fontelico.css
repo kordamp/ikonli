@@ -1,0 +1,76 @@
+@font-face {
+  font-family: 'fontelico';
+  src: url('../fonts/fontelico.eot?7803838');
+  src: url('../fonts/fontelico.eot?7803838#iefix') format('embedded-opentype'),
+       url('../fonts/fontelico.woff?7803838') format('woff'),
+       url('../fonts/fontelico.ttf?7803838') format('truetype'),
+       url('../fonts/fontelico.svg?7803838#fontelico') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.fontelico {
+    font-family: "fontelico";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    /* opacity: .8; */
+
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 1em;
+
+    /* Animation center compensation - magrins should be symmetric */
+    /* remove if not needed */
+    margin-left: .2em;
+
+    /* you can be more comfortable with increased icons size */
+    /* font-size: 120%; */
+
+    /* Uncomment for 3D effect */
+    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.fontelico-emo-happy:before { content: '\e800'; }
+.fontelico-emo-wink:before { content: '\e801'; } 
+.fontelico-emo-wink2:before { content: '\e813'; }
+.fontelico-emo-unhappy:before { content: '\e802'; }
+.fontelico-emo-sleep:before { content: '\e803'; }
+.fontelico-emo-thumbsup:before { content: '\e804'; }
+.fontelico-emo-devil:before { content: '\e805'; }
+.fontelico-emo-surprised:before { content: '\e806'; } 
+.fontelico-emo-tongue:before { content: '\e807'; }
+.fontelico-emo-coffee:before { content: '\e808'; }
+.fontelico-emo-sunglasses:before { content: '\e809'; }
+.fontelico-emo-displeased:before { content: '\e80a'; }
+.fontelico-emo-beer:before { content: '\e80b'; }
+.fontelico-emo-grin:before { content: '\e80c'; }
+.fontelico-emo-angry:before { content: '\e80d'; }
+.fontelico-emo-saint:before { content: '\e80e'; }
+.fontelico-emo-cry:before { content: '\e80f'; }
+.fontelico-emo-shoot:before { content: '\e810'; }
+.fontelico-emo-squint:before { content: '\e811'; }
+.fontelico-emo-laugh:before { content: '\e812'; }
+.fontelico-spin1:before { content: '\e830'; }
+.fontelico-spin2:before { content: '\e831'; }
+.fontelico-spin3:before { content: '\e832'; }
+.fontelico-spin4:before { content: '\e834'; }
+.fontelico-spin5:before { content: '\e838'; }
+.fontelico-spin6:before { content: '\e839'; }
+.fontelico-firefox:before { content: '\e840'; }
+.fontelico-chrome:before { content: '\e841'; }
+.fontelico-opera:before { content: '\e842'; }
+.fontelico-ie:before { content: '\e843'; }
+.fontelico-crown:before { content: '\e844'; }
+.fontelico-crown-plus:before { content: '\e845'; }
+.fontelico-crown-minus:before { content: '\e846'; }
+.fontelico-marquee:before { content: '\e847'; }
