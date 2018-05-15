@@ -18,6 +18,7 @@ dependencies {
     compile project(':ikonli-hawconsstroke-pack')
     compile project(':ikonli-icomoon-pack')
     compile project(':ikonli-ionicons-pack')
+    compile project(':ikonli-ionicons4-pack')
     compile project(':ikonli-ligaturesymbols-pack')
     compile project(':ikonli-maki-pack')
     compile project(':ikonli-maki2-pack')
