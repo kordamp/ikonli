@@ -332,8 +332,6 @@ public class FontIcon extends Text implements Icon {
             } catch (NumberFormatException e) {
                 throw invalidDescription(iconCode, e);
             }
-        } else {
-            setIconSize(16);
         }
     }
 
