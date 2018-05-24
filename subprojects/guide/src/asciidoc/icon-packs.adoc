@@ -279,7 +279,7 @@ compile '{project-group}:ikonli-icomoon-pack:{project-version}'
 
 == Ionicons
  * Font version: {ioniconsVersion}
- * link:http://ionicons.com/[]
+ * link:https://ionicons.com/v2/[]
  * link:cheat-sheet-ionicons.html[Cheat-Sheet]
 
 === Installing
@@ -298,6 +298,31 @@ compile '{project-group}:ikonli-ionicons-pack:{project-version}'
 <dependency>
     <groupId>{project-group}</groupId>
     <artifactId>ikonli-ionicons-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
+== Ionicons 4
+ * Font version: {ionicons4Version}
+ * link:https://ionicons.com/[]
+ * link:cheat-sheet-ionicons4.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-ionicons4-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-ionicons4-pack</artifactId>
     <version>{project-version}</version>
 </dependency>
 ----
