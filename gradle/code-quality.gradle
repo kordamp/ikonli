@@ -53,7 +53,7 @@ license {
         java = 'SLASHSTAR_STYLE'
         fxml = 'XML_STYLE'
     }
-    ext.year = '2015-2017'
+    ext.year = '2015-2018'
     exclude '**/*.ttf'
     exclude '**/*.eot'
     exclude '**/*.svg'
