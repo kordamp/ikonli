@@ -87,6 +87,7 @@ public enum Ionicons4Logo implements Ikon {
 
 
 
+
     public static Ionicons4Logo findByDescription(String description) {
         for (Ionicons4Logo font : values()) {
             if (font.getDescription().equals(description)) {

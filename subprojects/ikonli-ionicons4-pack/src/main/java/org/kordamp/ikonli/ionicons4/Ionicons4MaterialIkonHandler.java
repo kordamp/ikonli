@@ -1,7 +1,7 @@
 /*
  * Copyright 2015-2017 Andres Almiray
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.4.1.2 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -37,7 +37,7 @@ public class Ionicons4MaterialIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/ionicons/4.0.0/fonts/ionicons.ttf";
+        return "META-INF/resources/ionicons/4.1.2/fonts/ionicons.ttf";
     }
 
     @Override

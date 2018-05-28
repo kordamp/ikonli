@@ -22,6 +22,7 @@ import org.kordamp.ikonli.Ikon;
  */
 public enum Ionicons4Material implements Ikon {
 
+
     ADD("ion4-md-add",'\uf273'),
     ADD_CIRCLE("ion4-md-add-circle",'\uf272'),
     ADD_CIRCLE_OUTLINE("ion4-md-add-circle-outline",'\uf158'),
@@ -186,9 +187,9 @@ public enum Ionicons4Material implements Ikon {
     IMAGE("ion4-md-image",'\uf30e'),
     IMAGES("ion4-md-images",'\uf30f'),
     INFINITE("ion4-md-infinite",'\uf310'),
-    INFORMATION("ion4-md-information",'\uf312'),
-    INFORMATION_CIRCLE("ion4-md-information4-circle",'\uf311'),
-    INFORMATION_CIRCLE_OUTLINE("ion4-md-information4-circle-outline",'\uf16f'),
+    INFORMATION("ion4-md-information4",'\uf312'),
+    INFORMATION_CIRCLE("ion4-md-information-circle",'\uf311'),
+    INFORMATION_CIRCLE_OUTLINE("ion4-md-information-circle-outline",'\uf16f'),
     JET("ion4-md-jet",'\uf315'),
     JOURNAL("ion4-md-journal",'\uf18d'),
     KEY("ion4-md-key",'\uf316'),
@@ -246,7 +247,6 @@ public enum Ionicons4Material implements Ikon {
     PIN("ion4-md-pin",'\uf34a'),
     PINT("ion4-md-pint",'\uf34b'),
     PIZZA("ion4-md-pizza",'\uf354'),
-    PLANE("ion4-md-plane",'\uf355'),
     PLANET("ion4-md-planet",'\uf356'),
     PLAY("ion4-md-play",'\uf357'),
     PLAY_CIRCLE("ion4-md-play-circle",'\uf174'),
@@ -340,6 +340,7 @@ public enum Ionicons4Material implements Ikon {
     WIFI("ion4-md-wifi",'\uf3a8'),
     WINE("ion4-md-wine",'\uf3a9'),
     WOMAN("ion4-md-woman",'\uf3aa');
+    
     public static Ionicons4Material findByDescription(String description) {
         for (Ionicons4Material font : values()) {
             if (font.getDescription().equals(description)) {
