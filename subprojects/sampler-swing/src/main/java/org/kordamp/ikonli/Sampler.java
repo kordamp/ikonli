@@ -88,6 +88,9 @@ public class Sampler {
         createTab(tabPane, HawconsFilled.class, new DemoTab(allOf(HawconsFilled.class)));
         createTab(tabPane, HawconsStroke.class, new DemoTab(allOf(HawconsStroke.class)));
         createTab(tabPane, Icomoon.class, new DemoTab(allOf(Icomoon.class)));
+        createTab(tabPane, Ionicons4IOS.class, new DemoTab(allOf(Ionicons4IOS.class)));
+        createTab(tabPane, Ionicons4Material.class, new DemoTab(allOf(Ionicons4Material.class)));
+        createTab(tabPane, Ionicons4Logo.class, new DemoTab(allOf(Ionicons4Logo.class)));
         createTab(tabPane, Ionicons.class, new DemoTab(allOf(Ionicons.class)));
         createTab(tabPane, Ionicons4Material.class, new DemoTab(allOf(Ionicons4Material.class)));
         createTab(tabPane, Ionicons4IOS.class, new DemoTab(allOf(Ionicons4IOS.class)));
