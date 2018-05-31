@@ -21,7 +21,7 @@ import org.kordamp.ikonli.IkonHandler;
 import org.kordamp.jipsy.ServiceProviderFor;
 
 /**
- * @author Loïc Sculier
+ * @author Loïc Sculier aka typhon0
  */
 @ServiceProviderFor(IkonHandler.class)
 public class Ionicons4LogoIkonHandler extends AbstractIkonHandler {

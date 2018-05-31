@@ -31,6 +31,7 @@ ext.childProjects = [
         ':ikonli-icomoon-pack',
         ':ikonli-ionicons-pack',
         ':ikonli-ionicons4-pack',
+        ':ikonli-themify-pack',
         ':ikonli-ligaturesymbols-pack',
         ':ikonli-maki-pack',
         ':ikonli-maki2-pack',
@@ -243,9 +244,11 @@ asciidoctor {
             createIconGenerationTask(packName: 'fontawesome5', iconClassName: 'org.kordamp.ikonli.fontawesome5.FontAwesomeSolid', iconName: 'fas', shortNameSize: 4, classifier: 'solid'),
             createIconGenerationTask(packName: 'ionicons4', iconClassName: 'org.kordamp.ikonli.ionicons4.Ionicons4IOS', iconName: 'ion', shortNameSize: 5,classifier: 'ios'),
             createIconGenerationTask(packName: 'ionicons4', iconClassName: 'org.kordamp.ikonli.ionicons4.Ionicons4Logo', iconName: 'ion', shortNameSize: 5,classifier: 'logo'),
-            createIconGenerationTask(packName: 'ionicons4', iconClassName: 'org.kordamp.ikonli.ionicons4.Ionicons4Material', iconName: 'ion', shortNameSize: 5,classifier: 'material')
+            createIconGenerationTask(packName: 'ionicons4', iconClassName: 'org.kordamp.ikonli.ionicons4.Ionicons4Material', iconName: 'ion', shortNameSize: 5,classifier: 'material'),
+            createIconGenerationTask(packName: 'themify', iconClassName: 'org.kordamp.ikonli.themify.Themify', iconName: 'ti', shortNameSize: 3)
 
-            sourceDir = file('src/asciidoc')
+
+    sourceDir = file('src/asciidoc')
     attributes = [
             toc                    : 'left',
             doctype                : 'book',
@@ -289,6 +292,7 @@ asciidoctor {
             openiconicVersion      : project.openiconicVersion,
             runestroiconsVersion   : project.runestroiconsVersion,
             typiconsVersion        : project.typiconsVersion,
+            themifyVersion         : project.themifyVersion,
             weathericonsVersion    : project.weathericonsVersion,
             websymbolsVersion      : project.websymbolsVersion
     ]
@@ -321,6 +325,7 @@ asciidoctor {
         from project(':ikonli-openiconic-pack').file("src/main/resources/META-INF/resources/openiconic/${openiconicVersion}")
         from project(':ikonli-runestroicons-pack').file("src/main/resources/META-INF/resources/runestroicons/${runestroiconsVersion}")
         from project(':ikonli-typicons-pack').file("src/main/resources/META-INF/resources/typicons/${typiconsVersion}")
+        from project(':ikonli-themify-pack').file("src/main/resources/META-INF/resources/themify/${themifyVersion}")
         from project(':ikonli-weathericons-pack').file("src/main/resources/META-INF/resources/weathericons/${weathericonsVersion}")
         from project(':ikonli-websymbols-pack').file("src/main/resources/META-INF/resources/websymbols/${websymbolsVersion}")
     }

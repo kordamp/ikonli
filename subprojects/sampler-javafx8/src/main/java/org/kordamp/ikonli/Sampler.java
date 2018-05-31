@@ -52,6 +52,7 @@ import org.kordamp.ikonli.metrizeicons.MetrizeIcons;
 import org.kordamp.ikonli.octicons.Octicons;
 import org.kordamp.ikonli.openiconic.Openiconic;
 import org.kordamp.ikonli.runestroicons.Runestroicons;
+import org.kordamp.ikonli.themify.Themify;
 import org.kordamp.ikonli.typicons.Typicons;
 import org.kordamp.ikonli.weathericons.WeatherIcons;
 import org.kordamp.ikonli.websymbols.Websymbols;
@@ -101,6 +102,7 @@ public class Sampler extends Application {
         tabPane.getTabs().add(new DemoTab(Octicons.class, allOf(Octicons.class)));
         tabPane.getTabs().add(new DemoTab(Openiconic.class, allOf(Openiconic.class)));
         tabPane.getTabs().add(new DemoTab(Runestroicons.class, allOf(Runestroicons.class)));
+        tabPane.getTabs().add(new DemoTab(Themify.class, allOf(Themify.class)));
         tabPane.getTabs().add(new DemoTab(Typicons.class, allOf(Typicons.class)));
         tabPane.getTabs().add(new DemoTab(WeatherIcons.class, allOf(WeatherIcons.class)));
         tabPane.getTabs().add(new DemoTab(Websymbols.class, allOf(Websymbols.class)));
