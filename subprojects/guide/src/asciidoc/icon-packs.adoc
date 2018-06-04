@@ -576,6 +576,30 @@ compile '{project-group}:ikonli-runestroicons-pack:{project-version}'
     <version>{project-version}</version>
 </dependency>
 ----
+== Themify
+ * Font version: {themifyVersion}
+ * link:https://themify.me/themify-icons[]
+ * link:cheat-sheet-themify.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-themify-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-themify-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
 
 == Typicons
  * Font version: {typiconsVersion}

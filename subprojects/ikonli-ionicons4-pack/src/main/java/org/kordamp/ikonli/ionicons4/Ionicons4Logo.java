@@ -18,7 +18,7 @@ package org.kordamp.ikonli.ionicons4;
 import org.kordamp.ikonli.Ikon;
 
 /**
- * @author Loïc Sculier
+ * @author Loïc Sculier aka typhon0
  */
 public enum Ionicons4Logo implements Ikon {
 
