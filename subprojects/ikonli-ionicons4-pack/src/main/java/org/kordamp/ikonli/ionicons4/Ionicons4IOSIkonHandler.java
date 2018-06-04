@@ -32,7 +32,7 @@ public class Ionicons4IOSIkonHandler extends AbstractIkonHandler {
 
     @Override
     public Ikon resolve(String description) {
-        return Ionicons4Material.findByDescription(description);
+        return Ionicons4IOS.findByDescription(description);
     }
 
     @Override

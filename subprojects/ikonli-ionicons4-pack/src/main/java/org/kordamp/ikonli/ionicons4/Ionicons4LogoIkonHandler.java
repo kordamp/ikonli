@@ -33,8 +33,7 @@ public class Ionicons4LogoIkonHandler extends AbstractIkonHandler {
     @Override
     public Ikon resolve(String description) {
 
-        System.out.println("RESOLVE" + Ionicons4Material.findByDescription(description));
-        return Ionicons4Material.findByDescription(description);
+        return Ionicons4Logo.findByDescription(description);
     }
 
     @Override
