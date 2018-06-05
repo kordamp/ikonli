@@ -27,6 +27,7 @@ import javafx.stage.Stage;
 import org.kordamp.ikonli.dashicons.Dashicons;
 import org.kordamp.ikonli.devicons.Devicons;
 import org.kordamp.ikonli.elusive.Elusive;
+import org.kordamp.ikonli.entypo.Entypo;
 import org.kordamp.ikonli.feather.Feather;
 import org.kordamp.ikonli.fontawesome.FontAwesome;
 import org.kordamp.ikonli.fontawesome5.FontAwesomeBrands;
@@ -79,6 +80,7 @@ public class Sampler extends Application {
         tabPane.getTabs().add(new DemoTab(Dashicons.class, allOf(Dashicons.class)));
         tabPane.getTabs().add(new DemoTab(Devicons.class, allOf(Devicons.class)));
         tabPane.getTabs().add(new DemoTab(Elusive.class, allOf(Elusive.class)));
+        tabPane.getTabs().add(new DemoTab(Entypo.class, allOf(Entypo.class)));
         tabPane.getTabs().add(new DemoTab(Feather.class, allOf(Feather.class)));
         tabPane.getTabs().add(new DemoTab(FontAwesome.class, allOf(FontAwesome.class)));
         tabPane.getTabs().add(new DemoTab(FontAwesomeBrands.class, allOf(FontAwesomeBrands.class)));

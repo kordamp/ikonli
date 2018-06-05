@@ -1,0 +1,13 @@
+= Entypo
+
+++++
+<link href='./css/entypo.css' rel='stylesheet'>
+<style>
+    .entypo {
+        font-size: 32px;
+    }
+</style>
+++++
+
+include::{projectDir}/build/tmp/_entypo_cheat_sheet.adoc[]
+

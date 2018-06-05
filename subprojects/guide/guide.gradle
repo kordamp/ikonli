@@ -20,6 +20,7 @@ ext.childProjects = [
         ':ikonli-swing',
         ':ikonli-dashicons-pack',
         ':ikonli-devicons-pack',
+        ':ikonli-entypo-pack',
         ':ikonli-elusive-pack',
         ':ikonli-feather-pack',
         ':ikonli-fontawesome-pack',
@@ -218,6 +219,7 @@ asciidoctor {
     dependsOn createIconGenerationTask(packName: 'devicons', iconClassName: 'org.kordamp.ikonli.devicons.Devicons'),
             createIconGenerationTask(packName: 'dashicons', iconClassName: 'org.kordamp.ikonli.dashicons.Dashicons', iconName: 'dashicons', shortNameSize: 10),
             createIconGenerationTask(packName: 'elusive', iconClassName: 'org.kordamp.ikonli.elusive.Elusive', iconName: 'el-icon', shortNameSize: 4),
+            createIconGenerationTask(packName: 'entypo', iconClassName: 'org.kordamp.ikonli.entypo.Entypo', iconName: 'entypo', shortNameSize: 7),
             createIconGenerationTask(packName: 'feather', iconClassName: 'org.kordamp.ikonli.feather.Feather', iconName: 'fth', shortNameSize: 4),
             createIconGenerationTask(packName: 'fontawesome', iconClassName: 'org.kordamp.ikonli.fontawesome.FontAwesome', iconName: 'fa'),
             createIconGenerationTask(packName: 'fontelico', iconClassName: 'org.kordamp.ikonli.fontelico.Fontelico', shortNameSize: 4),
@@ -272,6 +274,7 @@ asciidoctor {
             dashiconsVersion       : project.dashiconsVersion,
             deviconsVersion        : project.deviconsVersion,
             elusiveVersion         : project.elusiveVersion,
+            entypoVersion          : project.entypoVersion,
             featherVersion         : project.featherVersion,
             fontawesomeVersion     : project.fontawesomeVersion,
             fontawesome5Version    : project.fontawesome5Version,
@@ -303,6 +306,7 @@ asciidoctor {
         from file('src/resources')
         from project(':ikonli-dashicons-pack').file("src/main/resources/META-INF/resources/dashicons/${dashiconsVersion}")
         from project(':ikonli-devicons-pack').file("src/main/resources/META-INF/resources/devicons/${deviconsVersion}")
+        from project(':ikonli-entypo-pack').file("src/main/resources/META-INF/resources/entypo/${entypoVersion}")
         from project(':ikonli-elusive-pack').file("src/main/resources/META-INF/resources/elusive/${elusiveVersion}")
         from project(':ikonli-feather-pack').file("src/main/resources/META-INF/resources/feather/${featherVersion}")
         from project(':ikonli-fontawesome-pack').file("src/main/resources/META-INF/resources/fontawesome/${fontawesomeVersion}")
