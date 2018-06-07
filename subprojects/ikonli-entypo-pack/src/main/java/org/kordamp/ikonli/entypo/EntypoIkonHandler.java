@@ -21,13 +21,13 @@ import org.kordamp.ikonli.IkonHandler;
 import org.kordamp.jipsy.ServiceProviderFor;
 
 /**
- * @author Andres Almiray
+ * @author Loïc Sculier aka typhon0
  */
 @ServiceProviderFor(IkonHandler.class)
 public class EntypoIkonHandler extends AbstractIkonHandler {
     @Override
     public boolean supports(String description) {
-        return description != null && description.startsWith("entypo-");
+        return description != null && description.startsWith("enty-");
     }
 
     @Override
@@ -37,7 +37,7 @@ public class EntypoIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/entypo/1.0/fonts/entypo.ttf";
+        return "META-INF/resources/entypo/1.0/fonts/Entypo.ttf";
     }
 
     @Override

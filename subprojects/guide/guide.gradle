@@ -219,7 +219,7 @@ asciidoctor {
     dependsOn createIconGenerationTask(packName: 'devicons', iconClassName: 'org.kordamp.ikonli.devicons.Devicons'),
             createIconGenerationTask(packName: 'dashicons', iconClassName: 'org.kordamp.ikonli.dashicons.Dashicons', iconName: 'dashicons', shortNameSize: 10),
             createIconGenerationTask(packName: 'elusive', iconClassName: 'org.kordamp.ikonli.elusive.Elusive', iconName: 'el-icon', shortNameSize: 4),
-            createIconGenerationTask(packName: 'entypo', iconClassName: 'org.kordamp.ikonli.entypo.Entypo', iconName: 'entypo', shortNameSize: 7),
+            createIconGenerationTask(packName: 'entypo', iconClassName: 'org.kordamp.ikonli.entypo.Entypo', iconName: 'enty', shortNameSize: 5),
             createIconGenerationTask(packName: 'feather', iconClassName: 'org.kordamp.ikonli.feather.Feather', iconName: 'fth', shortNameSize: 4),
             createIconGenerationTask(packName: 'fontawesome', iconClassName: 'org.kordamp.ikonli.fontawesome.FontAwesome', iconName: 'fa'),
             createIconGenerationTask(packName: 'fontelico', iconClassName: 'org.kordamp.ikonli.fontelico.Fontelico', shortNameSize: 4),

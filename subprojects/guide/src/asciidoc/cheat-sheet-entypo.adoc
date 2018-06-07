@@ -3,7 +3,7 @@
 ++++
 <link href='./css/entypo.css' rel='stylesheet'>
 <style>
-    .entypo {
+    .enty {
         font-size: 32px;
     }
 </style>
