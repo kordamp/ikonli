@@ -47,6 +47,7 @@ import org.kordamp.ikonli.themify.Themify;
 import org.kordamp.ikonli.typicons.Typicons;
 import org.kordamp.ikonli.weathericons.WeatherIcons;
 import org.kordamp.ikonli.websymbols.Websymbols;
+import org.kordamp.ikonli.zondicons.Zondicons;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -110,6 +111,7 @@ public class Sampler {
         createTab(tabPane, Themify.class, new DemoTab(allOf(Themify.class)));
         createTab(tabPane, WeatherIcons.class, new DemoTab(allOf(WeatherIcons.class)));
         createTab(tabPane, Websymbols.class, new DemoTab(allOf(Websymbols.class)));
+        createTab(tabPane, Zondicons.class, new DemoTab(allOf(Zondicons.class)));
 
         JFrame frame = new JFrame("Ikonli Sampler");
         frame.add(tabPane);

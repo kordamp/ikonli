@@ -56,6 +56,7 @@ import org.kordamp.ikonli.themify.Themify;
 import org.kordamp.ikonli.typicons.Typicons;
 import org.kordamp.ikonli.weathericons.WeatherIcons;
 import org.kordamp.ikonli.websymbols.Websymbols;
+import org.kordamp.ikonli.zondicons.Zondicons;
 
 import java.net.URL;
 import java.util.EnumSet;
@@ -106,6 +107,7 @@ public class Sampler extends Application {
         tabPane.getTabs().add(new DemoTab(Typicons.class, allOf(Typicons.class)));
         tabPane.getTabs().add(new DemoTab(WeatherIcons.class, allOf(WeatherIcons.class)));
         tabPane.getTabs().add(new DemoTab(Websymbols.class, allOf(Websymbols.class)));
+        tabPane.getTabs().add(new DemoTab(Zondicons.class, allOf(Zondicons.class)));
 
         Scene scene = new Scene(tabPane);
         scene.getStylesheets().add("org/kordamp/ikonli/sampler.css");

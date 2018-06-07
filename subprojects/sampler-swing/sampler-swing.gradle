@@ -31,4 +31,6 @@ dependencies {
     compile project(':ikonli-themify-pack')
     compile project(':ikonli-weathericons-pack')
     compile project(':ikonli-websymbols-pack')
+    compile project(':ikonli-zondicons-pack')
+
 }

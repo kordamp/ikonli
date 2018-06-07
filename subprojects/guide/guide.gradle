@@ -44,7 +44,9 @@ ext.childProjects = [
         ':ikonli-runestroicons-pack',
         ':ikonli-typicons-pack',
         ':ikonli-weathericons-pack',
-        ':ikonli-websymbols-pack'
+        ':ikonli-websymbols-pack',
+        ':ikonli-zondicons-pack'
+
 ]
 
 ext.childProjects.each { evaluationDependsOn it }
@@ -242,10 +244,12 @@ asciidoctor {
             createIconGenerationTask(packName: 'fontawesome5', iconClassName: 'org.kordamp.ikonli.fontawesome5.FontAwesomeBrands', iconName: 'fab', shortNameSize: 4, classifier: 'brands'),
             createIconGenerationTask(packName: 'fontawesome5', iconClassName: 'org.kordamp.ikonli.fontawesome5.FontAwesomeRegular', iconName: 'far', shortNameSize: 4, classifier: 'regular'),
             createIconGenerationTask(packName: 'fontawesome5', iconClassName: 'org.kordamp.ikonli.fontawesome5.FontAwesomeSolid', iconName: 'fas', shortNameSize: 4, classifier: 'solid'),
-            createIconGenerationTask(packName: 'ionicons4', iconClassName: 'org.kordamp.ikonli.ionicons4.Ionicons4IOS', iconName: 'ion', shortNameSize: 5,classifier: 'ios'),
-            createIconGenerationTask(packName: 'ionicons4', iconClassName: 'org.kordamp.ikonli.ionicons4.Ionicons4Logo', iconName: 'ion', shortNameSize: 5,classifier: 'logo'),
-            createIconGenerationTask(packName: 'ionicons4', iconClassName: 'org.kordamp.ikonli.ionicons4.Ionicons4Material', iconName: 'ion', shortNameSize: 5,classifier: 'material'),
-            createIconGenerationTask(packName: 'themify', iconClassName: 'org.kordamp.ikonli.themify.Themify', iconName: 'ti', shortNameSize: 3)
+            createIconGenerationTask(packName: 'ionicons4', iconClassName: 'org.kordamp.ikonli.ionicons4.Ionicons4IOS', iconName: 'ion', shortNameSize: 5, classifier: 'ios'),
+            createIconGenerationTask(packName: 'ionicons4', iconClassName: 'org.kordamp.ikonli.ionicons4.Ionicons4Logo', iconName: 'ion', shortNameSize: 5, classifier: 'logo'),
+            createIconGenerationTask(packName: 'ionicons4', iconClassName: 'org.kordamp.ikonli.ionicons4.Ionicons4Material', iconName: 'ion', shortNameSize: 5, classifier: 'material'),
+            createIconGenerationTask(packName: 'themify', iconClassName: 'org.kordamp.ikonli.themify.Themify', iconName: 'ti', shortNameSize: 3),
+            createIconGenerationTask(packName: 'zondicons', iconClassName: 'org.kordamp.ikonli.zondicons.Zondicons', iconName: 'zondi', shortNameSize: 6)
+
 
 
     sourceDir = file('src/asciidoc')
@@ -294,7 +298,8 @@ asciidoctor {
             typiconsVersion        : project.typiconsVersion,
             themifyVersion         : project.themifyVersion,
             weathericonsVersion    : project.weathericonsVersion,
-            websymbolsVersion      : project.websymbolsVersion
+            websymbolsVersion      : project.websymbolsVersion,
+            zondiconsVersion       : project.zondiconsVersion
     ]
     /*sources {
         include '*.adoc'
@@ -328,6 +333,8 @@ asciidoctor {
         from project(':ikonli-themify-pack').file("src/main/resources/META-INF/resources/themify/${themifyVersion}")
         from project(':ikonli-weathericons-pack').file("src/main/resources/META-INF/resources/weathericons/${weathericonsVersion}")
         from project(':ikonli-websymbols-pack').file("src/main/resources/META-INF/resources/websymbols/${websymbolsVersion}")
+        from project(':ikonli-zondicons-pack').file("src/main/resources/META-INF/resources/zondicons/${zondiconsVersion}")
+
     }
 }
 
