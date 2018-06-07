@@ -23,6 +23,7 @@ org.kordamp.ikonli.octicons
 org.kordamp.ikonli.openiconic
 org.kordamp.ikonli.runestroicons
 org.kordamp.ikonli.swing
+org.kordamp.ikonli.themify
 org.kordamp.ikonli.typicons
 org.kordamp.ikonli.weathericons
 org.kordamp.ikonli.websymbols
