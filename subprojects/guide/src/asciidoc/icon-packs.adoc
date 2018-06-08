@@ -77,6 +77,31 @@ compile '{project-group}:ikonli-elusive-pack:{project-version}'
 </dependency>
 ----
 
+== Entypo
+ * Font version: {entypoVersion}
+ * link:http://www.entypo.com[]
+ * link:cheat-sheet-entypo.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-entypo-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-entypo-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
 == Feather
  * Font version: {featherVersion}
  * link:http://colebemis.com/feather/[]
