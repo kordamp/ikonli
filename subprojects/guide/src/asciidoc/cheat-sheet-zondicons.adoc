@@ -1,0 +1,13 @@
+= Zondicons
+
+++++
+<link href='./css/zondicons.min.css' rel='stylesheet'>
+<style>
+    .zondi {
+        font-size: 32px;
+    }
+</style>
+++++
+
+include::{projectDir}/build/tmp/_zondicons_cheat_sheet.adoc[]
+
