@@ -577,6 +577,31 @@ compile '{project-group}:ikonli-openiconic-pack:{project-version}'
 </dependency>
 ----
 
+== Payment Font
+ * Font version: {paymentfontVersion}
+ * link:https://paymentfont.com[]
+ * link:cheat-sheet-paymentfont.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-paymentfont-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-paymentfont-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
 == RunestroIcons
  * Font version: {runestroiconsVersion}
  * link:http://525icons.com/[]

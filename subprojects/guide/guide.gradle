@@ -42,6 +42,7 @@ ext.childProjects = [
         ':ikonli-metrizeicons-pack',
         ':ikonli-octicons-pack',
         ':ikonli-openiconic-pack',
+        ':ikonli-paymentfont-pack',
         ':ikonli-runestroicons-pack',
         ':ikonli-typicons-pack',
         ':ikonli-weathericons-pack',
@@ -239,6 +240,7 @@ asciidoctor {
             createIconGenerationTask(packName: 'metrizeicons', iconClassName: 'org.kordamp.ikonli.metrizeicons.MetrizeIcons', iconName: 'met', shortNameSize: 4),
             createIconGenerationTask(packName: 'octicons', iconClassName: 'org.kordamp.ikonli.octicons.Octicons', iconName: 'octicon', shortNameSize: 4),
             createIconGenerationTask(packName: 'openiconic', iconClassName: 'org.kordamp.ikonli.openiconic.Openiconic', iconName: 'oi', dataGlyph: true),
+            createIconGenerationTask(packName: 'paymentfont', iconClassName: 'org.kordamp.ikonli.paymentfont.PaymentFont', iconName: 'pf', shortNameSize: 3),
             createIconGenerationTask(packName: 'runestroicons', iconClassName: 'org.kordamp.ikonli.runestroicons.Runestroicons', iconName: 'ri'),
             createIconGenerationTask(packName: 'typicons', iconClassName: 'org.kordamp.ikonli.typicons.Typicons', iconName: 'typcn', shortNameSize: 4),
             createIconGenerationTask(packName: 'weathericons', iconClassName: 'org.kordamp.ikonli.weathericons.WeatherIcons', iconName: 'wi'),
@@ -297,6 +299,7 @@ asciidoctor {
             metrizeiconsVersion    : project.metrizeiconsVersion,
             octiconsVersion        : project.octiconsVersion,
             openiconicVersion      : project.openiconicVersion,
+            paymentfontVersion     : project.paymentfontVersion,
             runestroiconsVersion   : project.runestroiconsVersion,
             typiconsVersion        : project.typiconsVersion,
             themifyVersion         : project.themifyVersion,
@@ -332,6 +335,7 @@ asciidoctor {
         from project(':ikonli-metrizeicons-pack').file("src/main/resources/META-INF/resources/metrizeicons/${metrizeiconsVersion}")
         from project(':ikonli-octicons-pack').file("src/main/resources/META-INF/resources/octicons/${octiconsVersion}")
         from project(':ikonli-openiconic-pack').file("src/main/resources/META-INF/resources/openiconic/${openiconicVersion}")
+        from project(':ikonli-paymentfont-pack').file("src/main/resources/META-INF/resources/paymentfont/${paymentfontVersion}")
         from project(':ikonli-runestroicons-pack').file("src/main/resources/META-INF/resources/runestroicons/${runestroiconsVersion}")
         from project(':ikonli-typicons-pack').file("src/main/resources/META-INF/resources/typicons/${typiconsVersion}")
         from project(':ikonli-themify-pack').file("src/main/resources/META-INF/resources/themify/${themifyVersion}")
