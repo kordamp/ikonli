@@ -4,11 +4,11 @@ apply plugin: 'com.jfrog.bintray'
 jar {
     manifest {
         attributes(
-            'Built-By': buildBy,
+            'x-Built-By': buildBy,
             'Created-By': buildCreatedBy,
-            'Build-Date': buildDate,
-            'Build-Time': buildTime,
-            'Build-Revision': buildRevision,
+            'x-Build-Date': buildDate,
+            'x-Build-Time': buildTime,
+            'x-Build-Revision': buildRevision,
             'Specification-Title': project.name,
             'Specification-Version': project.version,
             'Implementation-Title': project.name,
@@ -23,37 +23,6 @@ jar {
     }
 }
 
-def pomConfig = {
-    packaging 'jar'
-    name project.name
-    description project.project_description
-    url project.project_url
-    inceptionYear '2015'
-    licenses {
-        license([:]) {
-            name 'The Apache Software License, Version 2.0'
-            url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-            distribution 'repo'
-        }
-    }
-    scm {
-        url project.project_scm
-    }
-    developers {
-        [
-            aalmiray: 'Andres Almiray'
-        ].each { devId, devName ->
-            developer {
-                id devId
-                name devName
-                roles {
-                    role 'Developer'
-                }
-            }
-        }
-    }
-}
-
 publishing {
     publications {
         mavenCustom(MavenPublication) {
@@ -61,16 +30,33 @@ publishing {
             artifact sourcesJar
             artifact javadocJar
 
-            pom.withXml {
-                // all dependencies should use the default scope (compile) but
-                // Gradle insists in using runtime as default
-                asNode().dependencies.dependency.each { dep ->
-                    if (dep.scope.text() == 'runtime') {
-                        dep.remove(dep.scope)
+            pom {
+                packaging = 'jar'
+                name = project.name
+                description = project.project_description
+                url = project.project_url
+                inceptionYear = '2015'
+                licenses {
+                    license {
+                        name = 'The Apache Software License, Version 2.0'
+                        url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                        distribution = 'repo'
                     }
                 }
-                asNode().children().last() + pomConfig
-                asNode().appendNode('description', project.project_description)
+                scm {
+                    url = project.project_scm
+                }
+                developers {
+                    [
+                        aalmiray: 'Andres Almiray'
+                    ].each { devId, devName ->
+                        developer {
+                            id = devId
+                            name = devName
+                            roles = ['Developer']
+                        }
+                    }
+                }
             }
         }
     }
