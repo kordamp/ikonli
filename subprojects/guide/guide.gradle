@@ -6,7 +6,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'org.asciidoctor:asciidoctor-gradle-plugin:1.5.7'
+        classpath 'org.asciidoctor:asciidoctor-gradle-plugin:1.5.8.1'
         classpath 'com.bmuschko:gradle-java2html-plugin:2.0'
     }
 }

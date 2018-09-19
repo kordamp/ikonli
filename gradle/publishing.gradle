@@ -31,7 +31,6 @@ publishing {
             artifact javadocJar
 
             pom {
-                packaging = 'jar'
                 name = project.name
                 description = project.project_description
                 url = project.project_url
