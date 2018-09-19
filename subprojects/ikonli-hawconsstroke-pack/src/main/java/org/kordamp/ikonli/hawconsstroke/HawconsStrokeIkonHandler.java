@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.kordamp.ikonli.hawcons;
+package org.kordamp.ikonli.hawconsstroke;
 
 import org.kordamp.ikonli.AbstractIkonHandler;
 import org.kordamp.ikonli.Ikon;
@@ -37,7 +37,7 @@ public class HawconsStrokeIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/hawcons/1.0/fonts/hawconsstroke.ttf";
+        return "META-INF/resources/hawconsstroke/1.0/fonts/hawconsstroke.ttf";
     }
 
     @Override

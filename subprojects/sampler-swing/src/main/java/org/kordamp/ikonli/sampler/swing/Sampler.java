@@ -13,8 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.kordamp.ikonli;
+package org.kordamp.ikonli.sampler.swing;
 
+import org.kordamp.ikonli.Ikon;
 import org.kordamp.ikonli.dashicons.Dashicons;
 import org.kordamp.ikonli.devicons.Devicons;
 import org.kordamp.ikonli.elusive.Elusive;
@@ -26,8 +27,8 @@ import org.kordamp.ikonli.fontawesome5.FontAwesomeRegular;
 import org.kordamp.ikonli.fontawesome5.FontAwesomeSolid;
 import org.kordamp.ikonli.fontelico.Fontelico;
 import org.kordamp.ikonli.foundation.Foundation;
-import org.kordamp.ikonli.hawcons.HawconsFilled;
-import org.kordamp.ikonli.hawcons.HawconsStroke;
+import org.kordamp.ikonli.hawconsfilled.HawconsFilled;
+import org.kordamp.ikonli.hawconsstroke.HawconsStroke;
 import org.kordamp.ikonli.icomoon.Icomoon;
 import org.kordamp.ikonli.ionicons.Ionicons;
 import org.kordamp.ikonli.ionicons4.Ionicons4IOS;
@@ -68,12 +69,7 @@ import static java.util.EnumSet.allOf;
  */
 public class Sampler {
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                launch();
-            }
-        });
+        SwingUtilities.invokeLater(Sampler::launch);
     }
 
     private static void launch() {

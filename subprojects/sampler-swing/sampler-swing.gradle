@@ -1,6 +1,7 @@
 apply plugin: 'application'
 
-mainClassName = 'org.kordamp.ikonli.Sampler'
+ext.moduleName = 'org.kordamp.ikonli.sampler.swing'
+mainClassName = "$moduleName/org.kordamp.ikonli.sampler.swing.Sampler"
 
 dependencies {
     compile project(':ikonli-swing')
@@ -34,5 +35,16 @@ dependencies {
     compile project(':ikonli-weathericons-pack')
     compile project(':ikonli-websymbols-pack')
     compile project(':ikonli-zondicons-pack')
+    compile "org.kordamp.jipsy:jipsy:${jipsyVersion}"
+}
 
+run {
+    inputs.property("moduleName", moduleName)
+    doFirst {
+        jvmArgs = [
+            '--module-path', classpath.asPath,
+            '--module', mainClassName
+        ]
+        classpath = files()
+    }
 }

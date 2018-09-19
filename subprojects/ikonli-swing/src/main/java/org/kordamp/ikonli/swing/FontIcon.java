@@ -96,7 +96,7 @@ public class FontIcon implements Icon {
         requireNonNull(iconColor, "Argument 'iconFont' must not be null");
         this.ikon = ikon;
         synchronized (LOCK) {
-            IkonHandler ikonHandler = IkonResolver.getInstance().resolve(ikon.getDescription());
+            IkonHandler ikonHandler = org.kordamp.ikonli.swing.IkonResolver.getInstance().resolve(ikon.getDescription());
             font = ((Font) ikonHandler.getFont()).deriveFont(Font.PLAIN, iconSize);
             setProperties();
         }

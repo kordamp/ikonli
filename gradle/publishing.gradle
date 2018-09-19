@@ -12,8 +12,7 @@ jar {
             'Specification-Title': project.name,
             'Specification-Version': project.version,
             'Implementation-Title': project.name,
-            'Implementation-Version': project.version,
-            'Automatic-Module-Name': 'org.kordamp.' + project.name.replaceAll('-', '.') - '.pack'
+            'Implementation-Version': project.version
         )
     }
     metaInf {

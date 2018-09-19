@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.kordamp.ikonli;
+package org.kordamp.ikonli.sampler.javafx;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -24,6 +24,7 @@ import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
+import org.kordamp.ikonli.Ikon;
 import org.kordamp.ikonli.dashicons.Dashicons;
 import org.kordamp.ikonli.devicons.Devicons;
 import org.kordamp.ikonli.elusive.Elusive;
@@ -35,8 +36,8 @@ import org.kordamp.ikonli.fontawesome5.FontAwesomeRegular;
 import org.kordamp.ikonli.fontawesome5.FontAwesomeSolid;
 import org.kordamp.ikonli.fontelico.Fontelico;
 import org.kordamp.ikonli.foundation.Foundation;
-import org.kordamp.ikonli.hawcons.HawconsFilled;
-import org.kordamp.ikonli.hawcons.HawconsStroke;
+import org.kordamp.ikonli.hawconsfilled.HawconsFilled;
+import org.kordamp.ikonli.hawconsstroke.HawconsStroke;
 import org.kordamp.ikonli.icomoon.Icomoon;
 import org.kordamp.ikonli.ionicons.Ionicons;
 import org.kordamp.ikonli.ionicons4.Ionicons4IOS;
@@ -114,7 +115,7 @@ public class Sampler extends Application {
         tabPane.getTabs().add(new DemoTab(Zondicons.class, allOf(Zondicons.class)));
 
         Scene scene = new Scene(tabPane);
-        scene.getStylesheets().add("org/kordamp/ikonli/sampler.css");
+        scene.getStylesheets().add("org/kordamp/ikonli/sampler/javafx/sampler.css");
 
         primaryStage.setTitle("Ikonli Sampler");
         primaryStage.setScene(scene);

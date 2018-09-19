@@ -48,7 +48,6 @@ ext.childProjects = [
         ':ikonli-weathericons-pack',
         ':ikonli-websymbols-pack',
         ':ikonli-zondicons-pack'
-
 ]
 
 ext.childProjects.each { evaluationDependsOn it }
@@ -63,6 +62,7 @@ task copyDocs(type: Copy) {
         from(project(projectName).sourceSets.main.allSource) {
             include '**/*.java'
             include '**/*.html'
+            exclude 'module-info.java'
         }
     }
 }
@@ -223,8 +223,8 @@ asciidoctor {
             createIconGenerationTask(packName: 'fontawesome', iconClassName: 'org.kordamp.ikonli.fontawesome.FontAwesome', iconName: 'fa'),
             createIconGenerationTask(packName: 'fontelico', iconClassName: 'org.kordamp.ikonli.fontelico.Fontelico', shortNameSize: 4),
             createIconGenerationTask(packName: 'foundation', iconClassName: 'org.kordamp.ikonli.foundation.Foundation'),
-            createIconGenerationTask(packName: 'hawconsfilled', iconClassName: 'org.kordamp.ikonli.hawcons.HawconsFilled', iconName: 'hwf', shortNameSize: 4),
-            createIconGenerationTask(packName: 'hawconsstroke', iconClassName: 'org.kordamp.ikonli.hawcons.HawconsStroke', iconName: 'hws', shortNameSize: 4),
+            createIconGenerationTask(packName: 'hawconsfilled', iconClassName: 'org.kordamp.ikonli.hawconsfilled.HawconsFilled', iconName: 'hwf', shortNameSize: 4),
+            createIconGenerationTask(packName: 'hawconsstroke', iconClassName: 'org.kordamp.ikonli.hawconsstroke.HawconsStroke', iconName: 'hws', shortNameSize: 4),
             createIconGenerationTask(packName: 'icomoon', iconClassName: 'org.kordamp.ikonli.icomoon.Icomoon', iconName: 'icm', shortNameSize: 4),
             createIconGenerationTask(packName: 'ionicons', iconClassName: 'org.kordamp.ikonli.ionicons.Ionicons', iconName: 'ion', shortNameSize: 4),
             createIconGenerationTask(packName: 'ligaturesymbols', iconClassName: 'org.kordamp.ikonli.ligaturesymbols.LigatureSymbols', iconName: 'lsf', shortNameSize: 4),
@@ -317,11 +317,11 @@ asciidoctor {
         from project(':ikonli-fontawesome5-pack').file("src/main/resources/META-INF/resources/fontawesome5/${fontawesome5Version}")
         from project(':ikonli-fontelico-pack').file("src/main/resources/META-INF/resources/fontelico/${fontelicoVersion}")
         from project(':ikonli-foundation-pack').file("src/main/resources/META-INF/resources/foundation/${foundationVersion}")
-        from project(':ikonli-hawconsfilled-pack').file("src/main/resources/META-INF/resources/hawcons/${hawconsVersion}")
-        from project(':ikonli-hawconsstroke-pack').file("src/main/resources/META-INF/resources/hawcons/${hawconsVersion}")
+        from project(':ikonli-hawconsfilled-pack').file("src/main/resources/META-INF/resources/hawconsfilled/${hawconsVersion}")
+        from project(':ikonli-hawconsstroke-pack').file("src/main/resources/META-INF/resources/hawconsstroke/${hawconsVersion}")
         from project(':ikonli-icomoon-pack').file("src/main/resources/META-INF/resources/icomoon/${icomoonVersion}")
         from project(':ikonli-ionicons-pack').file("src/main/resources/META-INF/resources/ionicons/${ioniconsVersion}")
-        from project(':ikonli-ionicons4-pack').file("src/main/resources/META-INF/resources/ionicons/${ionicons4Version}")
+        from project(':ikonli-ionicons4-pack').file("src/main/resources/META-INF/resources/ionicons4/${ionicons4Version}")
         from project(':ikonli-ligaturesymbols-pack').file("src/main/resources/META-INF/resources/ligaturesymbols/${ligaturesymbolsVersion}")
         from project(':ikonli-maki-pack').file("src/main/resources/META-INF/resources/maki/${makiVersion}")
         from project(':ikonli-maki2-pack').file("src/main/resources/META-INF/resources/maki2/${maki2Version}")

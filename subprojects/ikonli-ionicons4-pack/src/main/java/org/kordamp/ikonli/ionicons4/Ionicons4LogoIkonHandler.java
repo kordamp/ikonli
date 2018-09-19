@@ -38,7 +38,7 @@ public class Ionicons4LogoIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/ionicons/4.1.2/fonts/ionicons.ttf";
+        return "META-INF/resources/ionicons4/4.1.2/fonts/ionicons.ttf";
     }
 
     @Override
