@@ -1,18 +1,3 @@
-/*
- * Copyright 2015-2018 Andres Almiray
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 package org.kordamp.ikonli.javafx;
 
 import com.sun.javafx.css.converters.PaintConverter;
@@ -20,8 +5,6 @@ import com.sun.javafx.css.converters.SizeConverter;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.value.ChangeListener;
-import javafx.collections.ListChangeListener;
-import javafx.collections.MapChangeListener;
 import javafx.css.CssMetaData;
 import javafx.css.Styleable;
 import javafx.css.StyleableIntegerProperty;
@@ -44,106 +27,41 @@ import static java.util.Objects.requireNonNull;
  * @author Andres Almiray
  */
 public class StackedFontIcon extends StackPane implements Icon {
-    private static final String KEY_STACKED_FONT_ICON_SIZE = StackedFontIcon.class.getName() + ".iconSize";
-
     private StyleableIntegerProperty iconSize;
     private StyleableObjectProperty<Paint> iconColor;
-    private double[] iconSizes = new double[0];
+    private ObjectProperty<Ikon[]> iconCodes;
+    private ObjectProperty<Number[]> iconSizes;
 
     private ChangeListener<Number> iconSizeChangeListener = (v, o, n) -> setIconSizeOnChildren(n.intValue());
     private ChangeListener<Paint> iconColorChangeListener = (v, o, n) -> setIconColorOnChildren(n);
-
-    public static void setIconSize(Node icon, double size) {
-        if (icon != null && size >= 0d && size <= 1.0d) {
-            icon.getProperties().put(KEY_STACKED_FONT_ICON_SIZE, size);
-        }
-    }
-
-    public static double getIconSize(Node icon) {
-        if (icon != null) {
-            Object value = icon.getProperties().get(KEY_STACKED_FONT_ICON_SIZE);
-            if (value instanceof Number) {
-                return ((Number) value).doubleValue();
-            }
-        }
-        return 1.0d;
-    }
-
-    private class NodeSizeListener implements MapChangeListener<Object, Object> {
-        private Node node;
-
-        private NodeSizeListener(Node node) {
-            this.node = node;
-        }
-
-        @Override
-        public void onChanged(Change<?, ?> change) {
-            if (KEY_STACKED_FONT_ICON_SIZE.equals(String.valueOf(change.getKey()))) {
-                int size = getChildren().size();
-                for (int i = 0; i < size; i++) {
-                    if (node == getChildren().get(i)) {
-                        double value = 0;
-                        Object valueAdded = change.getValueAdded();
-                        if (valueAdded instanceof Number) {
-                            value = ((Number) valueAdded).doubleValue();
-                        } else {
-                            value = Double.parseDouble(String.valueOf(valueAdded));
-                        }
-                        iconSizes[i] = value;
-                        return;
-                    }
-                }
-            }
-        }
-    }
+    private ChangeListener<Ikon[]> iconCodesChangeListener = (v, o, n) -> updateIconCodes(n);
+    private ChangeListener<Number[]> iconSizesChangeListener = (v, o, n) -> updateIconSizes(n);
 
     public StackedFontIcon() {
         getStyleClass().setAll("stacked-ikonli-font-icon");
+    }
 
-        final String propertiesListenerKey = StackedFontIcon.class.getName() + "-" + System.identityHashCode(this);
-
-        getChildren().addListener(new ListChangeListener<Node>() {
-            @Override
-            public void onChanged(Change<? extends Node> c) {
-                while (c.next()) {
-                    if (c.wasAdded()) {
-                        int size = c.getTo() - c.getFrom();
-                        // grow iconSizes by size
-                        iconSizes = Arrays.copyOf(iconSizes, iconSizes.length + size);
-                        // apply 1.0 [from..to]
-                        for (int i = c.getFrom(); i < c.getTo(); i++) {
-                            iconSizes[i] = getIconSize(c.getList().get(i));
-                        }
-                        for (Node node : c.getAddedSubList()) {
-                            node.getProperties().put(propertiesListenerKey, new NodeSizeListener(node));
-                        }
-                    } else if (c.wasRemoved()) {
-                        int size = c.getTo() - c.getFrom();
-                        // shrink iconSizes by size
-                        double[] newIconSizes = new double[iconSizes.length - size];
-                        // copy [0..from]
-                        int index = 0;
-                        for (int i = 0; i < c.getFrom(); i++) {
-                            newIconSizes[index++] = iconSizes[i];
-                        }
-                        // copy [to..-1]
-                        for (int i = c.getTo(); i < iconSizes.length; i++) {
-                            newIconSizes[index++] = iconSizes[i];
-                        }
-                        iconSizes = newIconSizes;
-                        for (Node node : c.getRemoved()) {
-                            node.getProperties().remove(propertiesListenerKey);
-                        }
-                    } else if (c.wasPermutated()) {
-                        double[] newIconSizes = Arrays.copyOf(iconSizes, iconSizes.length);
-                        for (int i = c.getFrom(); i <= c.getTo(); i++) {
-                            newIconSizes[i] = c.getPermutation(i);
-                        }
-                        iconSizes = newIconSizes;
-                    }
+    public ObjectProperty<Ikon[]> iconCodesProperty() {
+        if (iconCodes == null) {
+            iconCodes = new StyleableObjectProperty<Ikon[]>() {
+                @Override
+                public Object getBean() {
+                    return StackedFontIcon.this;
                 }
-            }
-        });
+
+                @Override
+                public String getName() {
+                    return "iconCodes";
+                }
+
+                @Override
+                public CssMetaData<? extends Styleable, Ikon[]> getCssMetaData() {
+                    return StyleableProperties.ICON_CODES;
+                }
+            };
+            iconCodes.addListener(iconCodesChangeListener);
+        }
+        return iconCodes;
     }
 
     public IntegerProperty iconSizeProperty() {
@@ -167,6 +85,29 @@ public class StackedFontIcon extends StackPane implements Icon {
             iconSize.addListener(iconSizeChangeListener);
         }
         return iconSize;
+    }
+
+    public ObjectProperty<Number[]> iconSizesProperty() {
+        if (iconSizes == null) {
+            iconSizes = new StyleableObjectProperty<Number[]>() {
+                @Override
+                public Object getBean() {
+                    return StackedFontIcon.this;
+                }
+
+                @Override
+                public String getName() {
+                    return "iconSizes";
+                }
+
+                @Override
+                public CssMetaData<? extends Styleable, Number[]> getCssMetaData() {
+                    return StyleableProperties.ICON_SIZES;
+                }
+            };
+            iconSizes.addListener(iconSizesChangeListener);
+        }
+        return iconSizes;
     }
 
     public ObjectProperty<Paint> iconColorProperty() {
@@ -212,10 +153,21 @@ public class StackedFontIcon extends StackPane implements Icon {
         return iconColorProperty().get();
     }
 
-    public void setIconCodes(Ikon... iconCodes) {
+    public Ikon[] getIconCodes() {
+        Ikon[] iconFonts = iconCodesProperty().get();
+        return Arrays.copyOf(iconFonts, iconFonts.length);
+    }
+
+    public void setIkons(Ikon... iconCodes) {
         getChildren().clear();
         initializeSizesIfNeeded(iconCodes);
-        updateIconCodes(iconCodes);
+        iconCodesProperty().set(iconCodes);
+    }
+
+    public void setIconCodes(Ikon[] iconCodes) {
+        getChildren().clear();
+        initializeSizesIfNeeded(iconCodes);
+        iconCodesProperty().set(iconCodes);
     }
 
     public void setIconCodeLiterals(String... iconCodes) {
@@ -225,32 +177,14 @@ public class StackedFontIcon extends StackPane implements Icon {
             codes[i] = IkonResolver.getInstance().resolveIkonHandler(iconCodes[i]).resolve(iconCodes[i]);
         }
         initializeSizesIfNeeded(iconCodes);
-        updateIconCodes(codes);
+        iconCodesProperty().set(codes);
     }
 
-    /**
-     * Sets the size for each child icon relative to this icon's size.
-     *
-     * @param iconSizes values must be within the range [0..1]
-     */
-    public void setIconSizes(double... iconSizes) {
-        this.iconSizes = iconSizes;
-        setIconSizeOnChildren(getIconSize());
-    }
-
-    public void setColors(Paint... iconColors) {
-        int i = 0;
-        for (Node node : getChildren()) {
-            if (node instanceof Icon) {
-                ((Icon) node).setIconColor(iconColors[i++]);
-            }
-        }
-    }
-
-    private void initializeSizesIfNeeded(Object[] array) {
-        if (iconSizes.length == 0 || iconSizes.length != array.length) {
-            iconSizes = new double[array.length];
-            Arrays.fill(iconSizes, 1d);
+    private void initializeSizesIfNeeded(Object[] iconCodes) {
+        if (iconSizesProperty().get() == null) {
+            Double[] sizes = new Double[iconCodes.length];
+            Arrays.fill(sizes, 1d);
+            iconSizesProperty().set(sizes);
         }
     }
 
@@ -267,6 +201,37 @@ public class StackedFontIcon extends StackPane implements Icon {
         int size = icon.getIconSize();
         applySizeToIcon(size, icon, index);
         return icon;
+    }
+
+    public Number[] getIconSizes() {
+        Number[] iconSizes = iconSizesProperty().get();
+        return Arrays.copyOf(iconSizes, iconSizes.length);
+    }
+
+    public void setSizes(double... iconSizes) {
+        Number[] array = new Number[iconSizes.length];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = iconSizes[i];
+        }
+        iconSizesProperty().set(array);
+    }
+
+    public void setIconSizes(Number[] iconSizes) {
+        iconSizesProperty().set(iconSizes);
+    }
+
+    private void updateIconSizes(Number[] iconSizes) {
+        iconSizesProperty().set(iconSizes);
+        setIconSizeOnChildren(getIconSize());
+    }
+
+    public void setColors(Paint... iconColors) {
+        int i = 0;
+        for (Node node : getChildren()) {
+            if (node instanceof Icon) {
+                ((Icon) node).setIconColor(iconColors[i++]);
+            }
+        }
     }
 
     private static class StyleableProperties {
@@ -300,6 +265,36 @@ public class StackedFontIcon extends StackPane implements Icon {
                 }
             };
 
+        private static final CssMetaData<StackedFontIcon, Ikon[]> ICON_CODES =
+            new CssMetaData<StackedFontIcon, Ikon[]>("-fx-icon-codes",
+                FontIconConverter.SequenceConverter.getInstance(), null) {
+
+                @Override
+                public boolean isSettable(StackedFontIcon node) {
+                    return true;
+                }
+
+                @Override
+                public StyleableProperty<Ikon[]> getStyleableProperty(StackedFontIcon icon) {
+                    return (StyleableProperty<Ikon[]>) icon.iconCodesProperty();
+                }
+            };
+
+        private static final CssMetaData<StackedFontIcon, Number[]> ICON_SIZES =
+            new CssMetaData<StackedFontIcon, Number[]>("-fx-icon-sizes",
+                SizeConverter.SequenceConverter.getInstance(), null) {
+
+                @Override
+                public boolean isSettable(StackedFontIcon node) {
+                    return true;
+                }
+
+                @Override
+                public StyleableProperty<Number[]> getStyleableProperty(StackedFontIcon icon) {
+                    return (StyleableProperty<Number[]>) icon.iconSizesProperty();
+                }
+            };
+
         private static final List<CssMetaData<? extends Styleable, ?>> STYLEABLES;
 
         static {
@@ -307,6 +302,8 @@ public class StackedFontIcon extends StackPane implements Icon {
                 new ArrayList<CssMetaData<? extends Styleable, ?>>(StackPane.getClassCssMetaData());
             styleables.add(ICON_SIZE);
             styleables.add(ICON_COLOR);
+            styleables.add(ICON_CODES);
+            styleables.add(ICON_SIZES);
             STYLEABLES = unmodifiableList(styleables);
         }
     }
@@ -329,7 +326,7 @@ public class StackedFontIcon extends StackPane implements Icon {
     }
 
     private void applySizeToIcon(int size, Icon icon, int index) {
-        double childPercentageSize = iconSizes[index];
+        double childPercentageSize = iconSizesProperty().get()[index].doubleValue();
         double newSize = size * childPercentageSize;
         icon.setIconSize((int) newSize);
     }

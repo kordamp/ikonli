@@ -4,7 +4,7 @@ mainClassName = 'org.kordamp.ikonli.Sampler'
 
 dependencies {
     compile project(':ikonli-javafx')
-    compile files(project(':ikonli-javafx').sourceSets.java8.output.classesDirs)
+    compile project(':ikonli-javafx')
     compile project(':ikonli-dashicons-pack')
     compile project(':ikonli-devicons-pack')
     compile project(':ikonli-entypo-pack')
@@ -36,4 +36,9 @@ dependencies {
     compile project(':ikonli-websymbols-pack')
     compile project(':ikonli-zondicons-pack')
 
+    compile "org.openjfx:javafx-base:${javafxVersion}:${platform}"
+    compile "org.openjfx:javafx-graphics:${javafxVersion}:${platform}"
+    compile "org.openjfx:javafx-controls:${javafxVersion}:${platform}"
+    compile "org.openjfx:javafx-fxml:${javafxVersion}:${platform}"
+    compile "org.openjfx:javafx-swing:${javafxVersion}:${platform}"
 }

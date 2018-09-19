@@ -14,11 +14,15 @@ buildscript {
         classpath 'org.kordamp.gradle:stats-gradle-plugin:0.2.2'
         classpath 'com.github.ben-manes:gradle-versions-plugin:0.20.0'
         classpath 'net.nemerosa:versioning:2.7.1'
+        classpath 'com.google.gradle:osdetector-gradle-plugin:1.6.0'
+        classpath 'gradle.plugin.gradle-java9-collision:plugin:0.2.3'
+
     }
 }
 
 apply plugin: 'org.ajoberstar.git-publish'
 apply plugin: 'net.nemerosa.versioning'
+apply plugin: 'com.google.osdetector'
 
 Date buildTimeAndDate = new Date()
 ext {
@@ -27,6 +31,7 @@ ext {
     buildTime = new SimpleDateFormat('HH:mm:ss.SSSZ').format(buildTimeAndDate)
     buildRevision = versioning.info.commit
     buildCreatedBy = "${System.properties['java.version']} (${System.properties['java.vendor']} ${System.properties['java.vm.version']})".toString()
+    platform = osdetector.os != 'osx' ? osdetector.os : 'mac'
 }
 
 allprojects {
@@ -47,8 +52,8 @@ allprojects {
 
 idea {
     project {
-        jdkName '1.8'
-        languageLevel '1.8'
+        jdkName '11'
+        languageLevel '11'
 
         ipr {
             withXml { provider ->
@@ -72,6 +77,7 @@ subprojects { subproj ->
     apply plugin: 'java'
     apply plugin: 'com.github.kt3k.coveralls'
     apply plugin: 'org.kordamp.gradle.stats'
+    apply plugin: 'org.jonnyzzz.java9c'
     apply from: rootProject.file('gradle/code-coverage.gradle')
     apply from: rootProject.file('gradle/code-quality.gradle')
 
@@ -85,8 +91,6 @@ subprojects { subproj ->
     }
 
     if (subproj.name.contains('ikonli')) {
-        apply from: rootProject.file('gradle/publishing.gradle')
-
         javadoc {
             excludes = ['**/*.html', 'META-INF/**']
 
@@ -126,6 +130,8 @@ subprojects { subproj ->
         dependencies {
             testCompile 'junit:junit:4.12'
         }
+
+        apply from: rootProject.file('gradle/publishing.gradle')
     }
 }
 
@@ -141,13 +147,6 @@ gitPublish {
         from project(':guide').guide.outputs.files
     }
     commitMessage = "Publish guide for $version"
-
-/*
-    credentials {
-        username = githubUsername
-        password = githubPassword
-    }
-*/
 }
 
 gitPublishCommit.dependsOn(project(':guide').guide)

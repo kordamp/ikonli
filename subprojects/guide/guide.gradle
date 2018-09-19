@@ -53,10 +53,6 @@ ext.childProjects = [
 
 ext.childProjects.each { evaluationDependsOn it }
 
-asciidoctorj {
-    version = '1.5.6'
-}
-
 dependencies {
     java2html 'de.java2html:java2html:5.0'
 }

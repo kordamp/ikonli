@@ -1,18 +1,3 @@
-/*
- * Copyright 2015-2018 Andres Almiray
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 package org.kordamp.ikonli.javafx;
 
 import com.sun.javafx.css.converters.PaintConverter;
@@ -26,18 +11,18 @@ import javafx.css.Styleable;
 import javafx.css.StyleableIntegerProperty;
 import javafx.css.StyleableObjectProperty;
 import javafx.css.StyleableProperty;
+import javafx.scene.control.ContentDisplay;
+import javafx.scene.control.Label;
+import javafx.scene.layout.Region;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.LinearGradient;
 import javafx.scene.paint.Paint;
 import javafx.scene.paint.RadialGradient;
-import javafx.scene.text.Font;
-import javafx.scene.text.Text;
+import javafx.scene.shape.SVGPath;
 import org.kordamp.ikonli.Ikon;
-import org.kordamp.ikonli.IkonHandler;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 import static java.util.Collections.unmodifiableList;
 import static java.util.Objects.requireNonNull;
@@ -45,63 +30,46 @@ import static java.util.Objects.requireNonNull;
 /**
  * @author Andres Almiray
  */
-public class FontIcon extends Text implements Icon {
+public class SVGIcon extends Region implements Icon {
     protected StyleableIntegerProperty iconSize;
     protected StyleableObjectProperty<Paint> iconColor;
     private StyleableObjectProperty<Ikon> iconCode;
+    private final SVGPath path = new SVGPath();
 
-    public static FontIcon of(Ikon ikon) {
-        return of(ikon, 16, Color.BLACK);
-    }
+    private ChangeListener<Number> iconSizeChangeListener = new ChangeListener<Number>() {
+        @Override
+        public void changed(ObservableValue<? extends Number> v, Number o, Number n) {
+            //SVGIcon.this.setStyle(getStyle() + "-fx-font-size: " + n + "px;");
+        }
+    };
+    private ChangeListener<Paint> iconColorChangeListener = new ChangeListener<Paint>() {
+        @Override
+        public void changed(ObservableValue<? extends Paint> v, Paint o, Paint n) {
+            path.setFill(n);
+        }
+    };
+    private ChangeListener<Ikon> iconFontChangeListener = new ChangeListener<Ikon>() {
+        @Override
+        public void changed(ObservableValue<? extends Ikon> v, Ikon o, Ikon n) {
+            SVGIcon.this.setIconCode(n);
+        }
+    };
 
-    public static FontIcon of(Ikon ikon, int iconSize) {
-        return of(ikon, iconSize, Color.BLACK);
-    }
-
-    public static FontIcon of(Ikon ikon, Color iconColor) {
-        return of(ikon, 16, iconColor);
-    }
-
-    public static FontIcon of(Ikon iconCode, int iconSize, Color iconColor) {
-        FontIcon icon = new FontIcon();
-        icon.setIconCode(iconCode);
-        icon.setIconSize(iconSize);
-        icon.setIconColor(iconColor);
-        return icon;
-    }
-
-    public FontIcon() {
-        getStyleClass().setAll("ikonli-font-icon");
+    public SVGIcon() {
+        getChildren().add(path);
+        path.setScaleX(0.1);
+        path.setScaleY(0.1);
+        getStyleClass().setAll("ikonli-svg-icon");
         setIconSize(16);
         setIconColor(Color.BLACK);
-
-        fontProperty().addListener(new ChangeListener<Font>() {
-            @Override
-            public void changed(ObservableValue<? extends Font> observable, Font oldValue, Font newValue) {
-                int size = (int) newValue.getSize();
-                if (size != getIconSize()) {
-                    setIconSize(size);
-                }
-            }
-        });
-
-        fillProperty().addListener(new ChangeListener<Paint>() {
-            @Override
-            public void changed(ObservableValue<? extends Paint> observable, Paint oldValue, Paint newValue) {
-                Paint fill = getIconColor();
-                if (!Objects.equals(fill, newValue)) {
-                    setIconColor(newValue);
-                }
-            }
-        });
     }
 
-    public FontIcon(String iconCode) {
+    public SVGIcon(String iconCode) {
         this();
         setIconLiteral(iconCode);
     }
 
-    public FontIcon(Ikon iconCode) {
+    public SVGIcon(Ikon iconCode) {
         this();
         setIconCode(iconCode);
     }
@@ -121,7 +89,7 @@ public class FontIcon extends Text implements Icon {
 
                 @Override
                 public Object getBean() {
-                    return FontIcon.this;
+                    return SVGIcon.this;
                 }
 
                 @Override
@@ -129,14 +97,7 @@ public class FontIcon extends Text implements Icon {
                     return "iconSize";
                 }
             };
-            iconSize.addListener(new ChangeListener<Number>() {
-                @Override
-                public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
-                    Font font = FontIcon.this.getFont();
-                    FontIcon.this.setFont(Font.font(font.getFamily(), newValue.doubleValue()));
-                    FontIcon.this.setStyle(normalizeStyle(getStyle(), "-fx-font-size", newValue.intValue() + "px"));
-                }
-            });
+            iconSize.addListener(iconSizeChangeListener);
         }
         return iconSize;
     }
@@ -152,7 +113,7 @@ public class FontIcon extends Text implements Icon {
 
                 @Override
                 public Object getBean() {
-                    return FontIcon.this;
+                    return SVGIcon.this;
                 }
 
                 @Override
@@ -160,12 +121,7 @@ public class FontIcon extends Text implements Icon {
                     return "iconColor";
                 }
             };
-            iconColor.addListener(new ChangeListener<Paint>() {
-                @Override
-                public void changed(ObservableValue<? extends Paint> observable, Paint oldValue, Paint newValue) {
-                    FontIcon.this.setFill(newValue);
-                }
-            });
+            iconColor.addListener(iconColorChangeListener);
         }
         return iconColor;
     }
@@ -180,7 +136,7 @@ public class FontIcon extends Text implements Icon {
 
                 @Override
                 public Object getBean() {
-                    return FontIcon.this;
+                    return SVGIcon.this;
                 }
 
                 @Override
@@ -188,12 +144,7 @@ public class FontIcon extends Text implements Icon {
                     return "iconCode";
                 }
             };
-            iconCode.addListener(new ChangeListener<Ikon>() {
-                @Override
-                public void changed(ObservableValue<? extends Ikon> observable, Ikon oldValue, Ikon newValue) {
-                    FontIcon.this.setIconCode(newValue);
-                }
-            });
+            iconCode.addListener(iconFontChangeListener);
         }
         return iconCode;
     }
@@ -232,19 +183,7 @@ public class FontIcon extends Text implements Icon {
 
     public void setIconCode(Ikon iconCode) {
         iconCodeProperty().set(requireNonNull(iconCode, "Argument 'code' must not be null"));
-        IkonHandler ikonHandler = IkonResolver.getInstance().resolveIkonHandler(iconCode.getDescription());
-        setStyle(normalizeStyle(getStyle(), "-fx-font-family", "'" + ikonHandler.getFontFamily() + "'"));
-        setText(String.valueOf(iconCode.getCode()));
-    }
-
-    private String normalizeStyle(String style, String key, String value) {
-        int start = style.indexOf(key);
-        if (start != -1) {
-            int end = style.indexOf(";", start);
-            end = end >= start ? end : style.length() - 1;
-            style = style.substring(0, start) + style.substring(end + 1);
-        }
-        return style + key + ": " + value + ";";
+        path.setContent(SVGGlyphRegistry.getInstance().getSVGContent(iconCode));
     }
 
     public void setIconLiteral(String iconCode) {
@@ -260,47 +199,47 @@ public class FontIcon extends Text implements Icon {
     }
 
     private static class StyleableProperties {
-        private static final CssMetaData<FontIcon, Number> ICON_SIZE =
-            new CssMetaData<FontIcon, Number>("-fx-icon-size",
+        private static final CssMetaData<SVGIcon, Number> ICON_SIZE =
+            new CssMetaData<SVGIcon, Number>("-fx-icon-size",
                 SizeConverter.getInstance(), 16.0) {
 
                 @Override
-                public boolean isSettable(FontIcon icon) {
+                public boolean isSettable(SVGIcon icon) {
                     return true;
                 }
 
                 @Override
-                public StyleableProperty<Number> getStyleableProperty(FontIcon icon) {
+                public StyleableProperty<Number> getStyleableProperty(SVGIcon icon) {
                     return (StyleableProperty<Number>) icon.iconSizeProperty();
                 }
             };
 
-        private static final CssMetaData<FontIcon, Paint> ICON_COLOR =
-            new CssMetaData<FontIcon, Paint>("-fx-icon-color",
+        private static final CssMetaData<SVGIcon, Paint> ICON_COLOR =
+            new CssMetaData<SVGIcon, Paint>("-fx-icon-color",
                 PaintConverter.getInstance(), Color.BLACK) {
 
                 @Override
-                public boolean isSettable(FontIcon node) {
+                public boolean isSettable(SVGIcon node) {
                     return true;
                 }
 
                 @Override
-                public StyleableProperty<Paint> getStyleableProperty(FontIcon icon) {
+                public StyleableProperty<Paint> getStyleableProperty(SVGIcon icon) {
                     return (StyleableProperty<Paint>) icon.iconColorProperty();
                 }
             };
 
-        private static final CssMetaData<FontIcon, Ikon> ICON_CODE =
-            new CssMetaData<FontIcon, Ikon>("-fx-icon-code",
-                FontIconConverter.getInstance(), null) {
+        private static final CssMetaData<SVGIcon, Ikon> ICON_CODE =
+            new CssMetaData<SVGIcon, Ikon>("-fx-icon-code",
+                SVGIconConverter.getInstance(), null) {
 
                 @Override
-                public boolean isSettable(FontIcon node) {
+                public boolean isSettable(SVGIcon node) {
                     return true;
                 }
 
                 @Override
-                public StyleableProperty<Ikon> getStyleableProperty(FontIcon icon) {
+                public StyleableProperty<Ikon> getStyleableProperty(SVGIcon icon) {
                     return (StyleableProperty<Ikon>) icon.iconCodeProperty();
                 }
             };
@@ -309,7 +248,7 @@ public class FontIcon extends Text implements Icon {
 
         static {
             final List<CssMetaData<? extends Styleable, ?>> styleables =
-                new ArrayList<CssMetaData<? extends Styleable, ?>>(Text.getClassCssMetaData());
+                new ArrayList<CssMetaData<? extends Styleable, ?>>(Region.getClassCssMetaData());
             styleables.add(ICON_SIZE);
             styleables.add(ICON_COLOR);
             styleables.add(ICON_CODE);
@@ -322,7 +261,7 @@ public class FontIcon extends Text implements Icon {
     }
 
     public List<CssMetaData<? extends Styleable, ?>> getCssMetaData() {
-        return FontIcon.getClassCssMetaData();
+        return SVGIcon.getClassCssMetaData();
     }
 
     private void resolveSize(String iconCode, String[] parts) {
@@ -332,6 +271,8 @@ public class FontIcon extends Text implements Icon {
             } catch (NumberFormatException e) {
                 throw invalidDescription(iconCode, e);
             }
+        } else {
+            setIconSize(16);
         }
     }
 

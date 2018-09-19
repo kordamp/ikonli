@@ -1,4 +1,3 @@
-apply plugin: 'jdepend'
 apply plugin: 'checkstyle'
 apply plugin: 'com.github.hierynomus.license'
 
@@ -9,40 +8,6 @@ checkstyle {
     toolVersion = '6.0'
     configFile = new File(checkstyleConfigDir, 'checkstyle.xml')
     configProperties.checkstyleConfigDir = checkstyleConfigDir
-}
-
-if (project.hasProperty('findBugsEnabled') && project.findBugsEnabled.toBoolean()) {
-    apply plugin: 'findbugs'
-    findbugs {
-        toolVersion = '3.0.0'
-        sourceSets = [sourceSets.main]
-        ignoreFailures = true
-        reportsDir = file("$project.buildDir/reports/findbugs")
-        effort = 'max'
-        reportLevel = 'high'
-    }
-
-    findbugsMain {
-        reports {
-            xml.enabled = false
-            html.enabled = true
-        }
-    }
-
-    findbugsTest {
-        reports {
-            xml.enabled = false
-            html.enabled = true
-        }
-    }
-}
-
-
-jdepend {
-    toolVersion = '2.9.1'
-    sourceSets = [sourceSets.main]
-    ignoreFailures = true
-    reportsDir = file("$project.buildDir/reports/jdepend")
 }
 
 license {
