@@ -15,7 +15,7 @@
  */
 module org.kordamp.ikonli.paymentfont {
     requires org.kordamp.iconli.core;
-    requires org.kordamp.jipsy;
+    requires static org.kordamp.jipsy;
     exports org.kordamp.ikonli.paymentfont;
 
     provides org.kordamp.ikonli.IkonHandler

@@ -1,4 +1,4 @@
-module org.kordamp.ikonli.sampler.swing {
+open module org.kordamp.ikonli.sampler.swing {
     requires java.desktop;
     requires org.kordamp.iconli.core;
     requires org.kordamp.ikonli.swing;
@@ -33,5 +33,4 @@ module org.kordamp.ikonli.sampler.swing {
     requires org.kordamp.ikonli.websymbols;
     requires org.kordamp.ikonli.zondicons;
     uses org.kordamp.ikonli.IkonHandler;
-    exports org.kordamp.ikonli.sampler.swing to java.desktop;
 }

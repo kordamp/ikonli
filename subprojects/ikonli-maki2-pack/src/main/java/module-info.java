@@ -15,7 +15,7 @@
  */
 module org.kordamp.ikonli.maki2 {
     requires org.kordamp.iconli.core;
-    requires org.kordamp.jipsy;
+    requires static org.kordamp.jipsy;
     exports org.kordamp.ikonli.maki2;
 
     provides org.kordamp.ikonli.IkonHandler

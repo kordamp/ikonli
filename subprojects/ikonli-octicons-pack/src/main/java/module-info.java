@@ -15,7 +15,7 @@
  */
 module org.kordamp.ikonli.octicons {
     requires org.kordamp.iconli.core;
-    requires org.kordamp.jipsy;
+    requires static org.kordamp.jipsy;
     exports org.kordamp.ikonli.octicons;
 
     provides org.kordamp.ikonli.IkonHandler

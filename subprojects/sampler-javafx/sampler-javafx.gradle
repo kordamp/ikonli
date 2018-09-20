@@ -45,19 +45,12 @@ dependencies {
     compile "org.kordamp.jipsy:jipsy:${jipsyVersion}"
 }
 
-ext.computedModules = project.configurations.compile.allDependencies.name.collect { n ->
-    n = n.replaceAll('-', '.')
-    n.contains('ikonli') ? 'org.kordamp.' + n - '.pack' : n
-}.join(',')
-
 run {
-    inputs.property("moduleName", moduleName)
+    inputs.property('moduleName', moduleName)
     doFirst {
         jvmArgs = [
             '--module-path', classpath.asPath,
-            '--module', mainClassName,
-            '--add-modules', computedModules,
-            '--patch-module', "$moduleName=" + files(sourceSets.main.output).asPath
+            '--module', mainClassName
         ]
         classpath = files()
     }

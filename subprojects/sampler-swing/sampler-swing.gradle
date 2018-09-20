@@ -39,7 +39,7 @@ dependencies {
 }
 
 run {
-    inputs.property("moduleName", moduleName)
+    inputs.property('moduleName', moduleName)
     doFirst {
         jvmArgs = [
             '--module-path', classpath.asPath,

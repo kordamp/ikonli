@@ -15,7 +15,7 @@
  */
 module org.kordamp.ikonli.runestroicons {
     requires org.kordamp.iconli.core;
-    requires org.kordamp.jipsy;
+    requires static org.kordamp.jipsy;
     exports org.kordamp.ikonli.runestroicons;
 
     provides org.kordamp.ikonli.IkonHandler

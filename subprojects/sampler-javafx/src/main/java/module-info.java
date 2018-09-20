@@ -36,6 +36,4 @@ open module org.kordamp.ikonli.sampler.javafx {
     requires org.kordamp.ikonli.websymbols;
     requires org.kordamp.ikonli.zondicons;
     uses org.kordamp.ikonli.IkonHandler;
-    //opens org.kordamp.ikonli.sampler.javafx;
-    //exports org.kordamp.ikonli.sampler.javafx to javafx.graphics;
 }

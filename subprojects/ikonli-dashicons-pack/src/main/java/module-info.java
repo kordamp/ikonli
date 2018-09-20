@@ -15,7 +15,7 @@
  */
 module org.kordamp.ikonli.dashicons {
     requires org.kordamp.iconli.core;
-    requires org.kordamp.jipsy;
+    requires static org.kordamp.jipsy;
     exports org.kordamp.ikonli.dashicons;
 
     provides org.kordamp.ikonli.IkonHandler
