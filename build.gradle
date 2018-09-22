@@ -30,7 +30,8 @@ ext {
     buildDate = new SimpleDateFormat('yyyy-MM-dd').format(buildTimeAndDate)
     buildTime = new SimpleDateFormat('HH:mm:ss.SSSZ').format(buildTimeAndDate)
     buildRevision = versioning.info.commit
-    buildCreatedBy = "${System.properties['java.version']} (${System.properties['java.vendor']} ${System.properties['java.vm.version']})".toString()
+    buildJdk = "${System.properties['java.version']} (${System.properties['java.vendor']} ${System.properties['java.vm.version']})".toString()
+    buildCreatedBy = "Gradle ${gradle.gradleVersion}"
     platform = osdetector.os != 'osx' ? osdetector.os : 'mac'
 }
 
