@@ -111,6 +111,7 @@ subprojects { subproj ->
         }
 
         task javadocJar(type: Jar) {
+            dependsOn 'javadoc'
             group 'Build'
             description 'An archive of the javadoc'
             classifier 'javadoc'
@@ -136,8 +137,16 @@ subprojects { subproj ->
         compileJava {
             doFirst {
                 options.compilerArgs = [
-                    '--module-path', classpath.asPath,
+                    '--module-path', classpath.asPath
                 ]
+                classpath = files()
+            }
+        }
+
+        javadoc {
+            inputs.property('moduleName', subproj.moduleName)
+            doFirst {
+                options.addStringOption('-module-path', classpath.asPath)
                 classpath = files()
             }
         }
