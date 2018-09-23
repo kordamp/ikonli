@@ -89,11 +89,8 @@ task apiDocs(type: Javadoc, dependsOn: copyDocs) {
     options.windowTitle = "Ikonli ${project.version}"
     options.docTitle = "Ikonli ${project.version}"
     options.footer = project.javadocFooter
-    options.links = ['http://www.slf4j.org/apidocs/',
-                     'http://junit.org/javadoc/latest/',
-                     'http://docs.oracle.com/javase/7/docs/api/',
-                     'http://jsr-305.googlecode.com/svn/trunk/javadoc/',
-                     'http://atinject.googlecode.com/svn/trunk/javadoc/']
+    options.links = ['http://docs.oracle.com/javase/8/docs/api/',
+                     'http://docs.oracle.com/javase/8/javafx/api/']
 
     doLast { task ->
         copy {
@@ -350,6 +347,6 @@ task guide(type: Copy, dependsOn: [apiDocs, generateJava2html, asciidoctor]) {
 }
 
 task guideZip(type: Zip, dependsOn: guide) {
-    baseName = "ikonli-guide"
+    baseName = 'ikonli-guide'
     from guide.destinationDir
 }

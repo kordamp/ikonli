@@ -4,7 +4,7 @@ ext.moduleName = 'org.kordamp.ikonli.sampler.javafx'
 mainClassName = "$moduleName/org.kordamp.ikonli.sampler.javafx.Sampler"
 
 dependencies {
-    compile project(':ikonli-javafx')
+    compile project(':ikonli-core')
     compile project(':ikonli-javafx')
     compile project(':ikonli-dashicons-pack')
     compile project(':ikonli-devicons-pack')
