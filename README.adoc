@@ -31,11 +31,6 @@ You must meet the following requirements:
 
 You may used the included gradle wrapper script if you don't have `gradle` installed.
 
-Define the following environment variables:
-
-    export JAVA_8=/path/to/jdk8
-    export JAVA_9=/path/to/jdk9
-
 Adapt these instructions to Windows settings if running on Windows.
 
 === Installing Gradle
@@ -52,7 +47,7 @@ Adapt these instructions to Windows settings if running on Windows.
 
  . Follow the instructions found at http://sdkman.io/ to install SDKMAN.
  . You need a POSIX environment if running Windows. We recommend using Babun Shell (http://babun.github.io/)
- . Once SDKMAN is installed invoke `sdk install gradle 4.7`.
+ . Once SDKMAN is installed invoke `sdk install gradle 4.10`.
  . Test your setup by invoking `gradle --version`.
 
 .Gdub
