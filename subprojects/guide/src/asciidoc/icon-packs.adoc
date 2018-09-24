@@ -3,6 +3,7 @@
 = Icon Packs
 
 == DashIcons
+ * Module: `org.kordamp.ikonli.dashicons`
  * Font version: {dashiconsVersion}
  * https://github.com/WordPress/dashicons[]
  * link:cheat-sheet-dashicons.html[Cheat-Sheet]
@@ -28,6 +29,7 @@ compile '{project-group}:ikonli-dashicons-pack:{project-version}'
 ----
 
 == DevIcons
+ * Module: `org.kordamp.ikonli.devicons`
  * Font version: {deviconsVersion}
  * link:http://vorillaz.github.io/devicons/[]
  * link:cheat-sheet-devicons.html[Cheat-Sheet]
@@ -53,6 +55,7 @@ compile '{project-group}:ikonli-devicons-pack:{project-version}'
 ----
 
 == Elusive
+ * Module: `org.kordamp.ikonli.elusive`
  * Font version: {elusiveVersion}
  * link:https://github.com/fontello/elusive.font[]
  * link:cheat-sheet-elusive.html[Cheat-Sheet]
@@ -78,6 +81,7 @@ compile '{project-group}:ikonli-elusive-pack:{project-version}'
 ----
 
 == Entypo
+ * Module: `org.kordamp.ikonli.entypo`
  * Font version: {entypoVersion}
  * link:http://www.entypo.com[]
  * link:cheat-sheet-entypo.html[Cheat-Sheet]
@@ -103,6 +107,7 @@ compile '{project-group}:ikonli-entypo-pack:{project-version}'
 ----
 
 == Feather
+ * Module: `org.kordamp.ikonli.feather`
  * Font version: {featherVersion}
  * link:http://colebemis.com/feather/[]
  * link:cheat-sheet-feather.html[Cheat-Sheet]
@@ -128,6 +133,7 @@ compile '{project-group}:ikonli-feather-pack:{project-version}'
 ----
 
 == FontAwesome
+ * Module: `org.kordamp.ikonli.fontawesome`
  * Font version: {fontawesomeVersion}
  * link:http://fortawesome.github.io/Font-Awesome/[]
  * link:cheat-sheet-fontawesome.html[Cheat-Sheet]
@@ -153,6 +159,7 @@ compile '{project-group}:ikonli-fontawesome-pack:{project-version}'
 ----
 
 == FontAwesome5
+ * Module: `org.kordamp.ikonli.fontawesome5`
  * Font version: {fontawesome5Version}
  * link:https://fontawesome.com[]
  * link:cheat-sheet-fontawesome5.html[Cheat-Sheet]
@@ -178,6 +185,7 @@ compile '{project-group}:ikonli-fontawesome5-pack:{project-version}'
 ----
 
 == Fontelico
+ * Module: `org.kordamp.ikonli.fontelico`
  * Font version: {fontelicoVersion}
  * link:https://github.com/fontello/fontelico.font[]
  * link:cheat-sheet-fontelico.html[Cheat-Sheet]
@@ -203,6 +211,7 @@ compile '{project-group}:ikonli-fontelico-pack:{project-version}'
 ----
 
 == Foundation
+ * Module: `org.kordamp.ikonli.foundation`
  * Font version: {foundationVersion}
  * link:http://zurb.com/playground/foundation-icon-fonts-3[]
  * link:cheat-sheet-foundation.html[Cheat-Sheet]
@@ -228,6 +237,7 @@ compile '{project-group}:ikonli-foundation-pack:{project-version}'
 ----
 
 == HawconsFilled
+ * Module: `org.kordamp.ikonli.hawconsfilled`
  * Font version: {hawconsVersion}
  * link:http://hawcons.com/[]
  * link:cheat-sheet-hawconsfilled.html[Cheat-Sheet]
@@ -253,6 +263,7 @@ compile '{project-group}:ikonli-hawconsfilled-pack:{project-version}'
 ----
 
 == HawconsStroke
+ * Module: `org.kordamp.ikonli.hawconsstroke`
  * Font version: {hawconsVersion}
  * link:http://hawcons.com/[]
  * link:cheat-sheet-hawconsstroke.html[Cheat-Sheet]
@@ -278,6 +289,7 @@ compile '{project-group}:ikonli-hawconsstroke-pack:{project-version}'
 ----
 
 == Icomoon
+ * Module: `org.kordamp.ikonli.icomoon`
  * Font version: {icomoonVersion}
  * link:https://icomoon.io/#icons-icomoon[]
  * link:cheat-sheet-icomoon.html[Cheat-Sheet]
@@ -303,6 +315,7 @@ compile '{project-group}:ikonli-icomoon-pack:{project-version}'
 ----
 
 == Ionicons
+ * Module: `org.kordamp.ikonli.ionicons`
  * Font version: {ioniconsVersion}
  * link:https://ionicons.com/v2/[]
  * link:cheat-sheet-ionicons.html[Cheat-Sheet]
@@ -328,6 +341,7 @@ compile '{project-group}:ikonli-ionicons-pack:{project-version}'
 ----
 
 == Ionicons 4
+ * Module: `org.kordamp.ikonli.ionicons4`
  * Font version: {ionicons4Version}
  * link:https://ionicons.com/[]
  * link:cheat-sheet-ionicons4.html[Cheat-Sheet]
@@ -353,6 +367,7 @@ compile '{project-group}:ikonli-ionicons4-pack:{project-version}'
 ----
 
 == Ligature Symbols
+ * Module: `org.kordamp.ikonli.ligaturesymbols`
  * Font version: {ligaturesymbolsVersion}
  * link:http://kudakurage.com/ligature_symbols/[]
  * link:cheat-sheet-ligaturesymbols.html[Cheat-Sheet]
@@ -378,6 +393,7 @@ compile '{project-group}:ikonli-ligaturesymbols-pack:{project-version}'
 ----
 
 == Maki
+ * Module: `org.kordamp.ikonli.maki`
  * Font version: {makiVersion}
  * link:https://github.com/mapbox/maki[]
  * link:cheat-sheet-maki.html[Cheat-Sheet]
@@ -403,6 +419,7 @@ compile '{project-group}:ikonli-maki-pack:{project-version}'
 ----
 
 == Maki2
+ * Module: `org.kordamp.ikonli.maki2`
  * Font version: {maki2Version}
  * link:https://github.com/mapbox/maki[]
  * link:cheat-sheet-maki2.html[Cheat-Sheet]
@@ -428,6 +445,7 @@ compile '{project-group}:ikonli-maki2-pack:{project-version}'
 ----
 
 == Mapicons
+ * Module: `org.kordamp.ikonli.mapicons`
  * Font version: {mapiconsVersion}
  * link:https://github.com/scottdejonge/map-icons[]
  * link:cheat-sheet-mapicons.html[Cheat-Sheet]
@@ -453,6 +471,7 @@ compile '{project-group}:ikonli-mapicons-pack:{project-version}'
 ----
 
 == Material Icons
+ * Module: `org.kordamp.ikonli.material`
  * Font version: {materialVersion}
  * link:https://design.google.com/icons/[]
  * link:cheat-sheet-material.html[Cheat-Sheet]
@@ -478,6 +497,7 @@ compile '{project-group}:ikonli-material-pack:{project-version}'
 ----
 
 == MaterialDesign
+ * Module: `org.kordamp.ikonli.materialdesign`
  * Font version: {materialdesignVersion}
  * link:https://github.com/Templarian/MaterialDesign[]
  * link:cheat-sheet-materialdesign.html[Cheat-Sheet]
@@ -503,6 +523,7 @@ compile '{project-group}:ikonli-materialdesign-pack:{project-version}'
 ----
 
 == Metrizeicons
+ * Module: `org.kordamp.ikonli.metrizeicons`
  * Font version: {metrizeiconsVersion}
  * link:http://www.alessioatzeni.com/metrize-icons/[]
  * link:cheat-sheet-metrizeicons.html[Cheat-Sheet]
@@ -528,6 +549,7 @@ compile '{project-group}:ikonli-metrizeicons-pack:{project-version}'
 ----
 
 == Octicons
+ * Module: `org.kordamp.ikonli.octicons`
  * Font version: {octiconsVersion}
  * link:https://github.com/github/octicons[]
  * link:cheat-sheet-octicons.html[Cheat-Sheet]
@@ -553,6 +575,7 @@ compile '{project-group}:ikonli-octicons-pack:{project-version}'
 ----
 
 == OpenIconic
+ * Module: `org.kordamp.ikonli.openiconic`
  * Font version: {openiconicVersion}
  * link:https://useiconic.com/open/[]
  * link:cheat-sheet-openiconic.html[Cheat-Sheet]
@@ -578,6 +601,7 @@ compile '{project-group}:ikonli-openiconic-pack:{project-version}'
 ----
 
 == Payment Font
+ * Module: `org.kordamp.ikonli.paymentfont`
  * Font version: {paymentfontVersion}
  * link:https://paymentfont.com[]
  * link:cheat-sheet-paymentfont.html[Cheat-Sheet]
@@ -603,6 +627,7 @@ compile '{project-group}:ikonli-paymentfont-pack:{project-version}'
 ----
 
 == RunestroIcons
+ * Module: `org.kordamp.ikonli.runestroicons`
  * Font version: {runestroiconsVersion}
  * link:http://525icons.com/[]
  * link:cheat-sheet-runestroicons.html[Cheat-Sheet]
@@ -627,6 +652,7 @@ compile '{project-group}:ikonli-runestroicons-pack:{project-version}'
 </dependency>
 ----
 == Themify
+ * Module: `org.kordamp.ikonli.themify`
  * Font version: {themifyVersion}
  * link:https://themify.me/themify-icons[]
  * link:cheat-sheet-themify.html[Cheat-Sheet]
@@ -652,6 +678,7 @@ compile '{project-group}:ikonli-themify-pack:{project-version}'
 ----
 
 == Typicons
+ * Module: `org.kordamp.ikonli.typicons`
  * Font version: {typiconsVersion}
  * link:https://github.com/stephenhutchings/typicons.font[]
  * link:cheat-sheet-typicons.html[Cheat-Sheet]
@@ -677,6 +704,7 @@ compile '{project-group}:ikonli-typicons-pack:{project-version}'
 ----
 
 == Weathericons
+ * Module: `org.kordamp.ikonli.weathericons`
  * Font version: {weathericonsVersion}
  * link:http://erikflowers.github.io/weather-icons/[]
  * link:cheat-sheet-weathericons.html[Cheat-Sheet]
@@ -702,6 +730,7 @@ compile '{project-group}:ikonli-weathericons-pack:{project-version}'
 ----
 
 == Websymbols
+ * Module: `org.kordamp.ikonli.websymbols`
  * Font version: {websymbolsVersion}
  * link:http://www.justbenice.ru[]
  * link:cheat-sheet-websymbols.html[Cheat-Sheet]
@@ -727,6 +756,7 @@ compile '{project-group}:ikonli-websymbols-pack:{project-version}'
 ----
 
 == Zondicons
+ * Module: `org.kordamp.ikonli.zondicons`
  * Font version: {zondiconsVersion}
  * link:https://www.zondicons.com/[]
  * link:cheat-sheet-zondicons.html[Cheat-Sheet]
