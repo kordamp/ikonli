@@ -35,7 +35,6 @@ dependencies {
     compile project(':ikonli-weathericons-pack')
     compile project(':ikonli-websymbols-pack')
     compile project(':ikonli-zondicons-pack')
-    compile "org.kordamp.jipsy:jipsy:${jipsyVersion}"
 }
 
 run {

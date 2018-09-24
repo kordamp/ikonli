@@ -42,7 +42,6 @@ dependencies {
     compile "org.openjfx:javafx-controls:${javafxVersion}:${platform}"
     compile "org.openjfx:javafx-fxml:${javafxVersion}:${platform}"
     compile "org.openjfx:javafx-swing:${javafxVersion}:${platform}"
-    compile "org.kordamp.jipsy:jipsy:${jipsyVersion}"
 }
 
 run {
