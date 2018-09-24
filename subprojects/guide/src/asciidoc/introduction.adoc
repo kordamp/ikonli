@@ -9,7 +9,7 @@ Ikonli provides icon packs that can be used in Java applications. Currently Swin
 Ikonli and all of its icon packs can be downloaded from Bintray
 image:https://api.bintray.com/packages/{project-owner}/{project-repo}/ikonli/images/download.svg[link="https://bintray.com/{project-owner}/{project-repo}/ikonli/_latestVersion"]
 and Maven Central
-image:https://img.shields.io/maven-central/v/{project-group}/{project-name}-core.svg?label=maven[link="https://search.maven.org/#search|ga|1|{project-group}"].
+image:https://img.shields.io/maven-central/v/{project-group}/ikonli-core.svg?label=maven[link="https://search.maven.org/#search|ga|1|{project-group}"].
 
 You must select a binary that matches your target UI toolkit, such as
 
