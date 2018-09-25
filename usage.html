@@ -34,7 +34,7 @@
 <h2 id="_swing"><a class="anchor" href="#_swing"></a>1. Swing</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The <code>ikonli-swing:2.4.0</code> JAR provides a new Icon class: <code>{api_link_fonticon_swing}</code>.
+<p>The <code>ikonli-swing:11.0.0-SNAPSHOT</code> JAR provides a new Icon class: <code>{api_link_fonticon_swing}</code>.
 You may use this class with any Swing component that supports an Icon property.</p>
 </div>
 <div class="sect2">
@@ -47,7 +47,7 @@ You may use this class with any Swing component that supports an Icon property.<
 }
 
 dependencies {
-    compile 'org.kordamp.ikonli:ikonli-swing:2.4.0'
+    compile 'org.kordamp.ikonli:ikonli-swing:11.0.0-SNAPSHOT'
 }</code></pre>
 </div>
 </div>
@@ -58,7 +58,7 @@ dependencies {
     <span class="tag">&lt;dependency&gt;</span>
         <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
         <span class="tag">&lt;artifactId&gt;</span>ikonli-swing<span class="tag">&lt;/artifactId&gt;</span>
-        <span class="tag">&lt;version&gt;</span>2.4.0<span class="tag">&lt;/version&gt;</span>
+        <span class="tag">&lt;version&gt;</span>11.0.0-SNAPSHOT<span class="tag">&lt;/version&gt;</span>
     <span class="tag">&lt;/dependency&gt;</span>
 <span class="tag">&lt;/dependencies&gt;</span>
 
@@ -78,7 +78,7 @@ dependencies {
 <h2 id="_javafx"><a class="anchor" href="#_javafx"></a>2. JavaFX</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The <code>ikonli-javafx:2.4.0</code> JAR provides a new Node class: <code>{api_link_fonticon_javafx}</code>.
+<p>The <code>ikonli-javafx:11.0.0-SNAPSHOT</code> JAR provides a new Node class: <code>{api_link_fonticon_javafx}</code>.
 You may use this class with any JavaFX control that accepts a graphic property. You may also use the icon directly as
 it is a subclass of <code>javafx.scene.text.Text</code>. The icon class can be used inside an FXML file too.</p>
 </div>
@@ -237,7 +237,7 @@ in the following example</p>
 }
 
 dependencies {
-    compile 'org.kordamp.ikonli:ikonli-javafx:2.4.0'
+    compile 'org.kordamp.ikonli:ikonli-javafx:11.0.0-SNAPSHOT'
 }</code></pre>
 </div>
 </div>
@@ -248,7 +248,7 @@ dependencies {
     <span class="tag">&lt;dependency&gt;</span>
         <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
         <span class="tag">&lt;artifactId&gt;</span>ikonli-javafx<span class="tag">&lt;/artifactId&gt;</span>
-        <span class="tag">&lt;version&gt;</span>2.4.0<span class="tag">&lt;/version&gt;</span>
+        <span class="tag">&lt;version&gt;</span>11.0.0-SNAPSHOT<span class="tag">&lt;/version&gt;</span>
     <span class="tag">&lt;/dependency&gt;</span>
 <span class="tag">&lt;/dependencies&gt;</span>
 
@@ -261,13 +261,31 @@ dependencies {
 <span class="tag">&lt;/repositories&gt;</span></code></pre>
 </div>
 </div>
+<div class="paragraph">
+<p>Next, don&#8217;t forget to add entries to your module descriptor (<code>module-info.java</code>). Here&#8217;s for example the
+minimum settings required for a JavaFX application</p>
+</div>
+<div class="listingblock">
+<div class="title">module-info.java</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java">module com.acme.demo {
+    requires javafx.base;
+    requires javafx.graphics;
+    requires javafx.controls;
+    requires org.kordamp.iconli.core;
+    requires org.kordamp.ikonli.javafx;
+    <span class="comment">// add icon pack modules</span>
+    requires org.kordamp.ikonli.fontawesome;
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-06-07 19:22:20 CEST
+Last updated 2018-09-24 18:29:27 ∅∅∅
 </div>
 </div>
 </body>
