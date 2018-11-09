@@ -1,5 +1,3 @@
-import java.text.SimpleDateFormat
-
 buildscript {
     repositories {
         jcenter()
@@ -7,47 +5,111 @@ buildscript {
     }
 
     dependencies {
-        classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.8.2'
-        classpath 'nl.javadude.gradle.plugins:license-gradle-plugin:0.11.0'
-        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.4'
+        classpath 'org.kordamp.gradle:project-gradle-plugin:0.7.0'
+        classpath 'org.kordamp.gradle:guide-gradle-plugin:0.7.0'
+        classpath 'org.kordamp.gradle:sourcexref-gradle-plugin:0.7.0'
         classpath 'org.ajoberstar:gradle-git-publish:0.3.2'
-        classpath 'org.kordamp.gradle:stats-gradle-plugin:0.2.2'
-        classpath 'com.github.ben-manes:gradle-versions-plugin:0.20.0'
-        classpath 'net.nemerosa:versioning:2.7.1'
         classpath 'com.google.gradle:osdetector-gradle-plugin:1.6.0'
         classpath 'gradle.plugin.gradle-java9-collision:plugin:0.2.3'
-
+        classpath 'org.javamodularity:moduleplugin:1.1.1'
+        classpath 'biz.aQute.bnd:biz.aQute.bnd.gradle:4.1.0'
     }
 }
 
-apply plugin: 'org.ajoberstar.git-publish'
-apply plugin: 'net.nemerosa.versioning'
+apply plugin: 'org.kordamp.gradle.project'
+apply plugin: 'org.kordamp.gradle.source-xref'
 apply plugin: 'com.google.osdetector'
 
-Date buildTimeAndDate = new Date()
-ext {
-    buildBy = System.properties['user.name']
-    buildDate = new SimpleDateFormat('yyyy-MM-dd').format(buildTimeAndDate)
-    buildTime = new SimpleDateFormat('HH:mm:ss.SSSZ').format(buildTimeAndDate)
-    buildRevision = versioning.info.commit
-    buildJdk = "${System.properties['java.version']} (${System.properties['java.vendor']} ${System.properties['java.vm.version']})".toString()
-    buildCreatedBy = "Gradle ${gradle.gradleVersion}"
-    platform = osdetector.os != 'osx' ? osdetector.os : 'mac'
+if (!project.hasProperty('bintrayUsername')) ext.bintrayUsername = ''
+if (!project.hasProperty('bintrayApiKey')) ext.bintrayApiKey = ''
+if (!project.hasProperty('sonatypeUsername')) ext.sonatypeUsername = ''
+if (!project.hasProperty('sonatypePassword')) ext.sonatypePassword = ''
+
+ext.platform = osdetector.os != 'osx' ? osdetector.os : 'mac'
+
+config {
+    release = (rootProject.findProperty('release') ?: false).toBoolean()
+
+    info {
+        name          = 'Ikonli'
+        vendor        = 'Kordamp'
+        description   = 'Icon packs for Java applications'
+        inceptionYear = '2015'
+        tags          = ['icons', 'javafx', 'swing']
+
+        links {
+            website      = 'https://github.com/aalmiray/ikonli'
+            issueTracker = 'https://github.com/aalmiray/ikonli/issues'
+            scm          = 'https://github.com/aalmiray/ikonli.git'
+        }
+
+        people {
+            person {
+                id    = 'aalmiray'
+                name  = 'Andres Almiray'
+                roles = ['developer']
+            }
+        }
+
+        implementation { enabled = false }
+
+        credentials {
+            sonatype {
+                username = project.sonatypeUsername
+                password = project.sonatypePassword
+            }
+        }
+    }
+
+    license {
+        licenses {
+            license {
+                id = 'Apache-2.0'
+            }
+        }
+    }
+
+    bintray {
+        credentials {
+            username = project.bintrayUsername
+            password = project.bintrayApiKey
+        }
+        userOrg = 'aalmiray'
+        name    = rootProject.name
+    }
+
+    stats {
+        formats = ['xml', 'txt']
+    }
+
+    apidoc {
+        enabled = false
+    }
+
+    sourceHtml {
+        overview {
+            stylesheet = project(':guide').file('src/javadoc/resources/css/stylesheet.css')
+        }
+    }
+
+    sourceXref {
+        inputEncoding = 'UTF-8'
+    }
+
+    javadoc {
+        excludes = ['**/*.html', 'META-INF/**']
+        options {
+            links('http://docs.oracle.com/javase/8/docs/api/',
+                  'http://docs.oracle.com/javase/8/javafx/api/')
+        }
+    }
 }
 
 allprojects {
-    apply plugin: 'base'
     apply plugin: 'idea'
-    apply plugin: 'com.github.ben-manes.versions'
 
     repositories {
         jcenter()
-    }
-
-    if (JavaVersion.current().isJava8Compatible()) {
-        tasks.withType(Javadoc) {
-            options.addStringOption('Xdoclint:none', '-quiet')
-        }
     }
 }
 
@@ -75,122 +137,41 @@ idea {
 }
 
 subprojects { subproj ->
-    apply plugin: 'java'
-    apply plugin: 'com.github.kt3k.coveralls'
-    apply plugin: 'org.kordamp.gradle.stats'
-    apply plugin: 'org.jonnyzzz.java9c'
-    apply from: rootProject.file('gradle/code-coverage.gradle')
-    apply from: rootProject.file('gradle/code-quality.gradle')
-
-    repositories {
-        jcenter()
-    }
-
-    subproj.ext.moduleName = 'org.kordamp.' + subproj.name.replaceAll('-', '.') - '.pack'
-
-    if (subproj.name.contains('ikonli')) {
-        javadoc {
-            excludes = ['**/*.html', 'META-INF/**']
-
-            options.use         = true
-            options.splitIndex  = true
-            options.encoding    = 'UTF-8'
-            options.author      = true
-            options.version     = true
-            options.windowTitle = "$project.name $project.version API"
-            options.docTitle    = "$project.name $project.version API"
-            options.links       = ['http://docs.oracle.com/javase/8/docs/api/',
-                                   'http://docs.oracle.com/javase/8/javafx/api/']
-        }
-
-        task sourcesJar(type: Jar) {
-            group 'Build'
-            description 'An archive of the source code'
-            classifier 'sources'
-            from sourceSets.main.allSource
-        }
-
-        task javadocJar(type: Jar) {
-            dependsOn 'javadoc'
-            group 'Build'
-            description 'An archive of the javadoc'
-            classifier 'javadoc'
-            from javadoc.destinationDir
-        }
-
-        jar.finalizedBy sourcesJar
-        jar.finalizedBy javadocJar
-
-        artifacts {
-            sourcesJar
-            javadocJar
-        }
+    if (!subproj.name.contains('guide')) {
+        apply plugin: 'java'
+        apply plugin: 'org.jonnyzzz.java9c'
+        apply plugin: 'org.javamodularity.moduleplugin'
 
         dependencies {
             testCompile 'junit:junit:4.12'
         }
 
-        apply from: rootProject.file('gradle/publishing.gradle')
+        license {
+            mapping {
+                java = 'SLASHSTAR_STYLE'
+                fxml = 'XML_STYLE'
+            }
+            exclude '**/*.ttf'
+            exclude '**/*.eot'
+            exclude '**/*.svg'
+            exclude '**/*.otf'
+            exclude '**/*.woff'
+            exclude '**/*.woff2'
+            exclude '**/*.css'
+            exclude '**/*.md'
+            exclude '**/*.txt'
+        }
     }
-
+/*
     afterEvaluate {
-        compileJava {
-            doFirst {
-                options.compilerArgs = [
-                    '--module-path', classpath.asPath
-                ]
-                classpath = files()
-            }
-        }
-
-        javadoc {
-            inputs.property('moduleName', subproj.moduleName)
-            doFirst {
-                options.addStringOption('-module-path', classpath.asPath)
-                classpath = files()
-            }
-        }
-
-        compileTestJava {
-            inputs.property('moduleName', subproj.moduleName)
-            doFirst {
-                options.compilerArgs = [
-                    '--module-path', classpath.asPath,
-                    '--add-modules', 'junit',
-                    '--add-reads', "$subproj.moduleName=junit",
-                    '--patch-module', "$subproj.moduleName=" + files(sourceSets.test.java.srcDirs).asPath,
-                ]
-                classpath = files()
-            }
-        }
-
-        test {
-            inputs.property('moduleName', subproj.moduleName)
-            doFirst {
-                jvmArgs = [
-                    '--module-path', classpath.asPath,
-                    '--add-modules', 'ALL-MODULE-PATH',
-                    '--add-reads', "$subproj.moduleName=junit",
-                    '--patch-module', "$subproj.moduleName=" + files(sourceSets.test.java.outputDir).asPath,
-                ]
-                classpath = files()
+        if (!subproj.name.contains('guide')) {
+            javadoc {
+                doFirst {
+                    options.addStringOption('-module-path', classpath.asPath)
+                    classpath = files()
+                }
             }
         }
     }
+*/
 }
-
-evaluationDependsOnChildren()
-
-if (!project.hasProperty('githubUsername')) ext.githubUsername = ''
-if (!project.hasProperty('githubPassword')) ext.githubPassword = ''
-
-gitPublish {
-    repoUri = project.project_scm
-    branch = 'gh-pages'
-    contents {
-        from project(':guide').guide.outputs.files
-    }
-    commitMessage = "Publish guide for $version"
-}
-
-gitPublishCommit.dependsOn(project(':guide').guide)

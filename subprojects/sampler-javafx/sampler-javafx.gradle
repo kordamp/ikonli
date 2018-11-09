@@ -44,13 +44,8 @@ dependencies {
     compile "org.openjfx:javafx-swing:${javafxVersion}:${platform}"
 }
 
-run {
-    inputs.property('moduleName', moduleName)
-    doFirst {
-        jvmArgs = [
-            '--module-path', classpath.asPath,
-            '--module', mainClassName
-        ]
-        classpath = files()
+config {
+    sourceXref {
+        enabled = false
     }
 }

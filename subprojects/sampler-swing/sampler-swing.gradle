@@ -37,13 +37,8 @@ dependencies {
     compile project(':ikonli-zondicons-pack')
 }
 
-run {
-    inputs.property('moduleName', moduleName)
-    doFirst {
-        jvmArgs = [
-            '--module-path', classpath.asPath,
-            '--module', mainClassName
-        ]
-        classpath = files()
+config {
+    sourceXref {
+        enabled = false
     }
 }

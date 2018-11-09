@@ -1,4 +1,6 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
  * Copyright 2015-2018 Andres Almiray
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -21,8 +23,6 @@ import org.kordamp.ikonli.Ikon;
  * @author Loïc Sculier aka typhon0
  */
 public enum Ionicons4Material implements Ikon {
-
-
     ADD("ion4-md-add",'\uf273'),
     ADD_CIRCLE("ion4-md-add-circle",'\uf272'),
     ADD_CIRCLE_OUTLINE("ion4-md-add-circle-outline",'\uf158'),
@@ -340,7 +340,7 @@ public enum Ionicons4Material implements Ikon {
     WIFI("ion4-md-wifi",'\uf3a8'),
     WINE("ion4-md-wine",'\uf3a9'),
     WOMAN("ion4-md-woman",'\uf3aa');
-    
+
     public static Ionicons4Material findByDescription(String description) {
         for (Ionicons4Material font : values()) {
             if (font.getDescription().equals(description)) {
