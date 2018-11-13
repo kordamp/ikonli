@@ -41,4 +41,12 @@ config {
     sourceXref {
         enabled = false
     }
+
+    publishing {
+        enabled = false
+    }
+
+    bintray {
+        enabled = false
+    }
 }
