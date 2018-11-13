@@ -109,7 +109,8 @@ public class FontIcon extends Text implements Icon {
     }
 
     public String toString() {
-        return getIconCode().getDescription() + ":" + getIconSize() + ":" + getIconColor();
+        Ikon iconCode = getIconCode();
+        return (iconCode != null ? iconCode.getDescription() : "<undef>") + ":" + getIconSize() + ":" + getIconColor();
     }
 
     @Override
