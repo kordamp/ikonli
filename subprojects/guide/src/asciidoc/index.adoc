@@ -20,7 +20,9 @@ include::icon-packs.adoc[]
 
 = Links
 
+////
 link:api/index.html[Javadoc, window="_blank"]
+////
 
 link:api-html/index.html[API Sources, window="_blank"]
 
