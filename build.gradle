@@ -75,6 +75,7 @@ config {
         }
         userOrg = 'aalmiray'
         name    = rootProject.name
+        repo    = 'kordamp'
     }
 
     stats {
