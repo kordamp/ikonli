@@ -20,7 +20,7 @@ Ikonli provides icon packs that can be used in Java applications. Currently Swin
 
 You can get the latest version of **Ikonli** directly from link:https://bintray.com[Bintray's JCenter] repository or Maven Central.
 
-Refer to the link:http://aalmiray.github.io/ikonli/guide/{project-version}[guide, window="_blank"] for further information on configuration
+Refer to the link:http://aalmiray.github.io/ikonli/[guide, window="_blank"] for further information on configuration
 and usage.
 
 == Building
