@@ -17,8 +17,8 @@
  */
 
 plugins {
-    id 'org.kordamp.gradle.guide'   version '0.9.0'
-    id 'org.ajoberstar.git-publish' version '2.0.0'
+    id 'org.kordamp.gradle.guide'   version '0.12.0'
+    id 'org.ajoberstar.git-publish' version '0.3.2'
 }
 
 class GenerateIconCheatSheetTask extends DefaultTask {

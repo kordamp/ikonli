@@ -23,8 +23,8 @@ buildscript {
 }
 
 plugins {
-    id 'org.kordamp.gradle.kordamp-parentpom' version '1.1.2'
-    id 'org.kordamp.gradle.source-xref'       version '0.9.0'
+    id 'org.kordamp.gradle.kordamp-parentpom' version '1.2.1'
+    id 'org.kordamp.gradle.source-xref'       version '0.12.0'
     id 'org.jonnyzzz.java9c'                  version '0.2.3' apply false
     id 'org.javamodularity.moduleplugin'      version '1.4.0' apply false
 }
