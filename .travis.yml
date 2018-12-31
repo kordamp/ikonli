@@ -11,7 +11,7 @@ cache:
   - $HOME/.gradle/wrapper/
   - $HOME/.sonar/cache/
 before_script:
-  - ./gradlew --version -PbintrayUsername=undefined -PbintrayApiKey=undefined
-script: ./gradlew clean build -PbintrayUsername=undefined -PbintrayApiKey=undefined
+  - ./gradlew --version
+script: ./gradlew clean build
 jdk: openjdk11
 env: TERM=dumb

@@ -1,56 +1,46 @@
-buildscript {
-    repositories {
-        jcenter()
-        maven { url 'https://plugins.gradle.org/m2/' }
-    }
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * Copyright 2015-2018 Andres Almiray
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 
+buildscript {
     dependencies {
-        classpath 'org.kordamp.gradle:project-gradle-plugin:0.7.0'
-        classpath 'org.kordamp.gradle:guide-gradle-plugin:0.7.0'
-        classpath 'org.kordamp.gradle:sourcexref-gradle-plugin:0.7.0'
-        classpath 'org.ajoberstar:gradle-git-publish:0.3.2'
-        classpath 'com.google.gradle:osdetector-gradle-plugin:1.6.0'
-        classpath 'gradle.plugin.gradle-java9-collision:plugin:0.2.3'
-        classpath 'org.javamodularity:moduleplugin:1.4.0'
+        classpath 'com.google.gradle:osdetector-gradle-plugin:1.6.1'
     }
 }
 
-apply plugin: 'org.kordamp.gradle.project'
-apply plugin: 'org.kordamp.gradle.source-xref'
+plugins {
+    id 'org.kordamp.gradle.kordamp-parentpom' version '1.1.2'
+    id 'org.kordamp.gradle.source-xref'       version '0.9.0'
+    id 'org.jonnyzzz.java9c'                  version '0.2.3' apply false
+    id 'org.javamodularity.moduleplugin'      version '1.4.0' apply false
+}
+
 apply plugin: 'com.google.osdetector'
 
-if (!project.hasProperty('bintrayUsername'))  ext.bintrayUsername  = ''
-if (!project.hasProperty('bintrayApiKey'))    ext.bintrayApiKey    = ''
-if (!project.hasProperty('sonatypeUsername')) ext.sonatypeUsername = ''
-if (!project.hasProperty('sonatypePassword')) ext.sonatypePassword = ''
-
-ext.platform = osdetector.os != 'osx' ? osdetector.os : 'mac'
+ext.platform = osdetector.os == 'osx' ? 'mac' : osdetector.os == 'windows' ? 'win' : osdetector.os
 
 config {
-    release = (rootProject.findProperty('release') ?: false).toBoolean()
-
     info {
         name          = 'Ikonli'
-        vendor        = 'Kordamp'
         description   = 'Icon packs for Java applications'
         inceptionYear = '2015'
         tags          = ['icons', 'javafx', 'swing']
 
-        links {
-            website      = 'https://github.com/aalmiray/ikonli'
-            issueTracker = 'https://github.com/aalmiray/ikonli/issues'
-            scm          = 'https://github.com/aalmiray/ikonli.git'
-        }
-
-        people {
-            person {
-                id    = 'aalmiray'
-                name  = 'Andres Almiray'
-                roles = ['developer']
-            }
-        }
-
-        implementation { enabled = false }
+        specification { enabled = false }
 
         credentials {
             sonatype {
@@ -58,28 +48,6 @@ config {
                 password = project.sonatypePassword
             }
         }
-    }
-
-    license {
-        licenses {
-            license {
-                id = 'Apache-2.0'
-            }
-        }
-    }
-
-    bintray {
-        credentials {
-            username = project.bintrayUsername
-            password = project.bintrayApiKey
-        }
-        userOrg = 'aalmiray'
-        name    = rootProject.name
-        repo    = 'kordamp'
-    }
-
-    stats {
-        formats = ['xml', 'txt']
     }
 
     apidoc {
@@ -107,10 +75,6 @@ config {
 
 allprojects {
     apply plugin: 'idea'
-
-    repositories {
-        jcenter()
-    }
 }
 
 idea {
@@ -141,6 +105,10 @@ subprojects { subproj ->
         apply plugin: 'java'
         apply plugin: 'org.jonnyzzz.java9c'
         apply plugin: 'org.javamodularity.moduleplugin'
+
+        config {
+            bintray { enabled = true }
+        }
 
         dependencies {
             testCompile 'junit:junit:4.12'
