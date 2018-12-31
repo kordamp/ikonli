@@ -1,0 +1,50 @@
+= Fontawesome5
+
+NOTE:: Be ware that you can't use both `Regular` and `Solid` packs within the same application.
+This is due to a limitation in the Font resource as both packs consume the same Font Family
+(`Font Awesome 5 Free`). This limitation is inherent to the binary distribution of the FontAwesome5
+font resources.
+
+== Brands
+
+++++
+<link href='./css/fa-brands.css' rel='stylesheet'>
+<style>
+    .fa,
+    .fab {
+        font-size: 32px;
+    }
+</style>
+++++
+
+include::{projectDir}/build/tmp/_fontawesome5_brands_cheat_sheet.adoc[]
+
+== Regular
+
+++++
+<link href='./css/fontawesome-all.css' rel='stylesheet'>
+<link href='./css/fa-regular.css' rel='stylesheet'>
+<style>
+    .fa,
+    .far {
+        font-size: 32px;
+    }
+</style>
+++++
+
+include::{projectDir}/build/tmp/_fontawesome5_regular_cheat_sheet.adoc[]
+
+== Solid
+
+++++
+<link href='./css/fontawesome-all.css' rel='stylesheet'>
+<link href='./css/fa-solid.css' rel='stylesheet'>
+<style>
+    .fa,
+    .fas {
+        font-size: 32px;
+    }
+</style>
+++++
+
+include::{projectDir}/build/tmp/_fontawesome5_solid_cheat_sheet.adoc[]

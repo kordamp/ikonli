@@ -1,0 +1,13 @@
+= Octicons
+
+++++
+<link href='./css/octicons.css' rel='stylesheet'>
+<style>
+    .octicon {
+        font-size: 32px;
+    }
+</style>
+++++
+
+include::{projectDir}/build/tmp/_octicons_cheat_sheet.adoc[]
+

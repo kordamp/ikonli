@@ -1,0 +1,52 @@
+apply plugin: 'application'
+
+ext.moduleName = 'org.kordamp.ikonli.sampler.swing'
+mainClassName = "$moduleName/org.kordamp.ikonli.sampler.swing.Sampler"
+
+dependencies {
+    compile project(':ikonli-swing')
+    compile project(':ikonli-dashicons-pack')
+    compile project(':ikonli-devicons-pack')
+    compile project(':ikonli-elusive-pack')
+    compile project(':ikonli-entypo-pack')
+    compile project(':ikonli-feather-pack')
+    compile project(':ikonli-fontawesome-pack')
+    compile project(':ikonli-fontawesome5-pack')
+    compile project(':ikonli-fontelico-pack')
+    compile project(':ikonli-foundation-pack')
+    compile project(':ikonli-hawconsfilled-pack')
+    compile project(':ikonli-hawconsstroke-pack')
+    compile project(':ikonli-icomoon-pack')
+    compile project(':ikonli-ionicons-pack')
+    compile project(':ikonli-ionicons4-pack')
+    compile project(':ikonli-ligaturesymbols-pack')
+    compile project(':ikonli-maki-pack')
+    compile project(':ikonli-maki2-pack')
+    compile project(':ikonli-mapicons-pack')
+    compile project(':ikonli-material-pack')
+    compile project(':ikonli-materialdesign-pack')
+    compile project(':ikonli-metrizeicons-pack')
+    compile project(':ikonli-octicons-pack')
+    compile project(':ikonli-openiconic-pack')
+    compile project(':ikonli-paymentfont-pack')
+    compile project(':ikonli-runestroicons-pack')
+    compile project(':ikonli-typicons-pack')
+    compile project(':ikonli-themify-pack')
+    compile project(':ikonli-weathericons-pack')
+    compile project(':ikonli-websymbols-pack')
+    compile project(':ikonli-zondicons-pack')
+}
+
+config {
+    sourceXref {
+        enabled = false
+    }
+
+    publishing {
+        enabled = false
+    }
+
+    bintray {
+        enabled = false
+    }
+}

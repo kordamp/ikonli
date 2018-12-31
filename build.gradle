@@ -11,7 +11,7 @@ buildscript {
         classpath 'org.ajoberstar:gradle-git-publish:0.3.2'
         classpath 'com.google.gradle:osdetector-gradle-plugin:1.6.0'
         classpath 'gradle.plugin.gradle-java9-collision:plugin:0.2.3'
-        classpath 'org.javamodularity:moduleplugin:1.1.1'
+        classpath 'org.javamodularity:moduleplugin:1.4.0'
     }
 }
 

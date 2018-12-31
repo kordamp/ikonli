@@ -1,0 +1,783 @@
+
+[[_cheat_sheets]]
+= Icon Packs
+
+== DashIcons
+ * Module: `org.kordamp.ikonli.dashicons`
+ * Font version: {dashiconsVersion}
+ * https://github.com/WordPress/dashicons[]
+ * link:cheat-sheet-dashicons.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-dashicons-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-dashicons-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
+== DevIcons
+ * Module: `org.kordamp.ikonli.devicons`
+ * Font version: {deviconsVersion}
+ * link:http://vorillaz.github.io/devicons/[]
+ * link:cheat-sheet-devicons.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-devicons-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-devicons-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
+== Elusive
+ * Module: `org.kordamp.ikonli.elusive`
+ * Font version: {elusiveVersion}
+ * link:https://github.com/fontello/elusive.font[]
+ * link:cheat-sheet-elusive.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-elusive-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-elusive-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
+== Entypo
+ * Module: `org.kordamp.ikonli.entypo`
+ * Font version: {entypoVersion}
+ * link:http://www.entypo.com[]
+ * link:cheat-sheet-entypo.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-entypo-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-entypo-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
+== Feather
+ * Module: `org.kordamp.ikonli.feather`
+ * Font version: {featherVersion}
+ * link:http://colebemis.com/feather/[]
+ * link:cheat-sheet-feather.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-feather-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-feather-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
+== FontAwesome
+ * Module: `org.kordamp.ikonli.fontawesome`
+ * Font version: {fontawesomeVersion}
+ * link:http://fortawesome.github.io/Font-Awesome/[]
+ * link:cheat-sheet-fontawesome.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-fontawesome-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-fontawesome-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
+== FontAwesome5
+ * Module: `org.kordamp.ikonli.fontawesome5`
+ * Font version: {fontawesome5Version}
+ * link:https://fontawesome.com[]
+ * link:cheat-sheet-fontawesome5.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-fontawesome5-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-fontawesome5-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
+== Fontelico
+ * Module: `org.kordamp.ikonli.fontelico`
+ * Font version: {fontelicoVersion}
+ * link:https://github.com/fontello/fontelico.font[]
+ * link:cheat-sheet-fontelico.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-fontelico-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-fontelico-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
+== Foundation
+ * Module: `org.kordamp.ikonli.foundation`
+ * Font version: {foundationVersion}
+ * link:http://zurb.com/playground/foundation-icon-fonts-3[]
+ * link:cheat-sheet-foundation.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-foundation-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-foundation-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
+== HawconsFilled
+ * Module: `org.kordamp.ikonli.hawconsfilled`
+ * Font version: {hawconsVersion}
+ * link:http://hawcons.com/[]
+ * link:cheat-sheet-hawconsfilled.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-hawconsfilled-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-hawconsfilled-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
+== HawconsStroke
+ * Module: `org.kordamp.ikonli.hawconsstroke`
+ * Font version: {hawconsVersion}
+ * link:http://hawcons.com/[]
+ * link:cheat-sheet-hawconsstroke.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-hawconsstroke-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-hawconsstroke-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
+== Icomoon
+ * Module: `org.kordamp.ikonli.icomoon`
+ * Font version: {icomoonVersion}
+ * link:https://icomoon.io/#icons-icomoon[]
+ * link:cheat-sheet-icomoon.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-icomoon-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-icomoon-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
+== Ionicons
+ * Module: `org.kordamp.ikonli.ionicons`
+ * Font version: {ioniconsVersion}
+ * link:https://ionicons.com/v2/[]
+ * link:cheat-sheet-ionicons.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-ionicons-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-ionicons-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
+== Ionicons 4
+ * Module: `org.kordamp.ikonli.ionicons4`
+ * Font version: {ionicons4Version}
+ * link:https://ionicons.com/[]
+ * link:cheat-sheet-ionicons4.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-ionicons4-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-ionicons4-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
+== Ligature Symbols
+ * Module: `org.kordamp.ikonli.ligaturesymbols`
+ * Font version: {ligaturesymbolsVersion}
+ * link:http://kudakurage.com/ligature_symbols/[]
+ * link:cheat-sheet-ligaturesymbols.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-ligaturesymbols-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-ligaturesymbols-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
+== Maki
+ * Module: `org.kordamp.ikonli.maki`
+ * Font version: {makiVersion}
+ * link:https://github.com/mapbox/maki[]
+ * link:cheat-sheet-maki.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-maki-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-maki-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
+== Maki2
+ * Module: `org.kordamp.ikonli.maki2`
+ * Font version: {maki2Version}
+ * link:https://github.com/mapbox/maki[]
+ * link:cheat-sheet-maki2.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-maki2-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-maki2-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
+== Mapicons
+ * Module: `org.kordamp.ikonli.mapicons`
+ * Font version: {mapiconsVersion}
+ * link:https://github.com/scottdejonge/map-icons[]
+ * link:cheat-sheet-mapicons.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-mapicons-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-mapicons-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
+== Material Icons
+ * Module: `org.kordamp.ikonli.material`
+ * Font version: {materialVersion}
+ * link:https://design.google.com/icons/[]
+ * link:cheat-sheet-material.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-material-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-material-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
+== MaterialDesign
+ * Module: `org.kordamp.ikonli.materialdesign`
+ * Font version: {materialdesignVersion}
+ * link:https://github.com/Templarian/MaterialDesign[]
+ * link:cheat-sheet-materialdesign.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-materialdesign-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-materialdesign-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
+== Metrizeicons
+ * Module: `org.kordamp.ikonli.metrizeicons`
+ * Font version: {metrizeiconsVersion}
+ * link:http://www.alessioatzeni.com/metrize-icons/[]
+ * link:cheat-sheet-metrizeicons.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-metrizeicons-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-metrizeicons-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
+== Octicons
+ * Module: `org.kordamp.ikonli.octicons`
+ * Font version: {octiconsVersion}
+ * link:https://github.com/github/octicons[]
+ * link:cheat-sheet-octicons.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-octicons-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-octicons-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
+== OpenIconic
+ * Module: `org.kordamp.ikonli.openiconic`
+ * Font version: {openiconicVersion}
+ * link:https://useiconic.com/open/[]
+ * link:cheat-sheet-openiconic.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-openiconic-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-openiconic-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
+== Payment Font
+ * Module: `org.kordamp.ikonli.paymentfont`
+ * Font version: {paymentfontVersion}
+ * link:https://paymentfont.com[]
+ * link:cheat-sheet-paymentfont.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-paymentfont-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-paymentfont-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
+== RunestroIcons
+ * Module: `org.kordamp.ikonli.runestroicons`
+ * Font version: {runestroiconsVersion}
+ * link:http://525icons.com/[]
+ * link:cheat-sheet-runestroicons.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-runestroicons-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-runestroicons-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+== Themify
+ * Module: `org.kordamp.ikonli.themify`
+ * Font version: {themifyVersion}
+ * link:https://themify.me/themify-icons[]
+ * link:cheat-sheet-themify.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-themify-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-themify-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
+== Typicons
+ * Module: `org.kordamp.ikonli.typicons`
+ * Font version: {typiconsVersion}
+ * link:https://github.com/stephenhutchings/typicons.font[]
+ * link:cheat-sheet-typicons.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-typicons-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-typicons-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
+== Weathericons
+ * Module: `org.kordamp.ikonli.weathericons`
+ * Font version: {weathericonsVersion}
+ * link:http://erikflowers.github.io/weather-icons/[]
+ * link:cheat-sheet-weathericons.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-weathericons-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-weathericons-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
+== Websymbols
+ * Module: `org.kordamp.ikonli.websymbols`
+ * Font version: {websymbolsVersion}
+ * link:http://www.justbenice.ru[]
+ * link:cheat-sheet-websymbols.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-websymbols-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-websymbols-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
+== Zondicons
+ * Module: `org.kordamp.ikonli.zondicons`
+ * Font version: {zondiconsVersion}
+ * link:https://www.zondicons.com/[]
+ * link:cheat-sheet-zondicons.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-zondicons-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-zondicons-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+

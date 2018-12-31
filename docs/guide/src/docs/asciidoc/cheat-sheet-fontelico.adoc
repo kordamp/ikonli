@@ -1,0 +1,13 @@
+= Fontelico
+
+++++
+<link href='./css/fontelico.css' rel='stylesheet'>
+<style>
+    .fontelico {
+        font-size: 32px;
+    }
+</style>
+++++
+
+include::{projectDir}/build/tmp/_fontelico_cheat_sheet.adoc[]
+

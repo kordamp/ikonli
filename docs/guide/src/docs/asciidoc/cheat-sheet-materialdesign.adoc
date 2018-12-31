@@ -1,0 +1,13 @@
+= Material Design Icons
+
+++++
+<link href='./css/materialdesignicons.css' rel='stylesheet'>
+<style>
+    .mdi {
+        font-size: 32px;
+    }
+</style>
+++++
+
+include::{projectDir}/build/tmp/_materialdesign_cheat_sheet.adoc[]
+

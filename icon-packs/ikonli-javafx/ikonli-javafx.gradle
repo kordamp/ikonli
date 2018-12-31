@@ -1,0 +1,15 @@
+dependencies {
+    compile project(':ikonli-core')
+
+    compileOnly "org.openjfx:javafx-base:${javafxVersion}:${platform}"
+    compileOnly "org.openjfx:javafx-graphics:${javafxVersion}:${platform}"
+    compileOnly "org.openjfx:javafx-controls:${javafxVersion}:${platform}"
+    compileOnly "org.openjfx:javafx-fxml:${javafxVersion}:${platform}"
+    compileOnly "org.openjfx:javafx-swing:${javafxVersion}:${platform}"
+
+    testCompile "org.openjfx:javafx-base:${javafxVersion}:${platform}"
+    testCompile "org.openjfx:javafx-graphics:${javafxVersion}:${platform}"
+    testCompile "org.openjfx:javafx-controls:${javafxVersion}:${platform}"
+    testCompile "org.openjfx:javafx-fxml:${javafxVersion}:${platform}"
+    testCompile "org.openjfx:javafx-swing:${javafxVersion}:${platform}"
+}

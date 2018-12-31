@@ -1,0 +1,13 @@
+= Openiconic
+
+++++
+<link href='./css/open-iconic.css' rel='stylesheet'>
+<style>
+    .oi {
+        font-size: 32px;
+    }
+</style>
+++++
+
+include::{projectDir}/build/tmp/_openiconic_cheat_sheet.adoc[]
+

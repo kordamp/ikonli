@@ -1,5 +1,3 @@
-enableFeaturePreview('STABLE_PUBLISHING')
-
 rootProject.name = 'ikonli'
 
 def includeProject = { String projectDirName, String projectName ->
@@ -15,10 +13,12 @@ def includeProject = { String projectDirName, String projectName ->
     project(":${projectName}").buildFileName = buildFileName
 }
 
-File subdir = new File(rootDir, 'subprojects')
-subdir.eachDir { dir ->
-    File buildFile = new File(dir, "${dir.name}.gradle")
-    if (buildFile.exists()) {
-        includeProject 'subprojects', dir.name
+['docs', 'core', 'icon-packs', 'samplers'].each { dirName ->
+    File subdir = new File(rootDir, dirName)
+    subdir.eachDir { dir ->
+        File buildFile = new File(dir, "${dir.name}.gradle")
+        if (buildFile.exists()) {
+            includeProject dirName, dir.name
+        }
     }
 }

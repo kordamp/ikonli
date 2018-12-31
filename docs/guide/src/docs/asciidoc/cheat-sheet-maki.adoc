@@ -1,0 +1,13 @@
+= Maki
+
+++++
+<link href='./css/maki.css' rel='stylesheet'>
+<style>
+    .maki {
+        font-size: 32px;
+    }
+</style>
+++++
+
+include::{projectDir}/build/tmp/_maki_cheat_sheet.adoc[]
+
