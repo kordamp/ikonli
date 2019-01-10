@@ -128,7 +128,6 @@ asciidoctor {
             createIconGenerationTask(packName: 'themify', iconClassName: 'org.kordamp.ikonli.themify.Themify', iconName: 'ti', shortNameSize: 3),
             createIconGenerationTask(packName: 'zondicons', iconClassName: 'org.kordamp.ikonli.zondicons.Zondicons', iconName: 'zondi', shortNameSize: 6)
 
-    sourceDir = file('src/asciidoc')
     attributes = [
             dashiconsVersion       : project.dashiconsVersion,
             deviconsVersion        : project.deviconsVersion,

@@ -16,20 +16,13 @@
  * limitations under the License.
  */
 
-buildscript {
-    dependencies {
-        classpath 'com.google.gradle:osdetector-gradle-plugin:1.6.1'
-    }
-}
-
 plugins {
     id 'org.kordamp.gradle.kordamp-parentpom' version '1.2.1'
     id 'org.kordamp.gradle.source-xref'       version '0.12.0'
+    id 'com.google.osdetector'                version '1.6.1'
     id 'org.jonnyzzz.java9c'                  version '0.2.3' apply false
     id 'org.javamodularity.moduleplugin'      version '1.4.0' apply false
 }
-
-apply plugin: 'com.google.osdetector'
 
 ext.platform = osdetector.os == 'osx' ? 'mac' : osdetector.os == 'windows' ? 'win' : osdetector.os
 
