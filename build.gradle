@@ -128,5 +128,20 @@ subprojects { subproj ->
             exclude '**/*.md'
             exclude '**/*.txt'
         }
+
+        subproj.gradle.addBuildListener(new BuildAdapter() {
+            @Override
+            void projectsEvaluated(Gradle gradle) {
+                subproj.tasks.withType(Jar).each { Jar jar ->
+                    jar.configure {
+                        exclude '**/*.otf'
+                        exclude '**/*.eot'
+                        exclude '**/*.svg'
+                        exclude '**/*.woff'
+                        exclude '**/*.woff2'
+                    }
+                }
+            }
+        })
     }
 }
