@@ -12,6 +12,6 @@ cache:
   - $HOME/.sonar/cache/
 before_script:
   - ./gradlew --version
-script: ./gradlew clean build
+script: ./gradlew clean build --build-cache --console=plain -S --scan
 jdk: openjdk11
 env: TERM=dumb
