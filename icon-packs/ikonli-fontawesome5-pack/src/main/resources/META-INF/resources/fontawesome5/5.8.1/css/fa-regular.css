@@ -1,0 +1,166 @@
+/*!
+ * Font Awesome Free 5.8.1 by @fontawesome - http://fontawesome.com
+ * License - http://fontawesome.com/license (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/fa-regular-400.eot");
+  src: url("../fonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../fonts/fa-regular-400.woff2") format("woff2"), url("../fonts/fa-regular-400.woff") format("woff"), url("../fonts/fa-regular-400.ttf") format("truetype"), url("../fonts/fa-regular-400.svg#fontawesome") format("svg"); }
+
+.far {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 400; }
+
+.far-address-book:before { content: "\f2b9"; }
+.far-address-card:before { content: "\f2bb"; }
+.far-angry:before { content: "\f556"; }
+.far-arrow-alt-circle-down:before { content: "\f358"; }
+.far-arrow-alt-circle-left:before { content: "\f359"; }
+.far-arrow-alt-circle-right:before { content: "\f35a"; }
+.far-arrow-alt-circle-up:before { content: "\f35b"; }
+.far-bell-slash:before { content: "\f1f6"; }
+.far-bell:before { content: "\f0f3"; }
+.far-bookmark:before { content: "\f02e"; }
+.far-building:before { content: "\f1ad"; }
+.far-calendar-alt:before { content: "\f073"; }
+.far-calendar-check:before { content: "\f274"; }
+.far-calendar-minus:before { content: "\f272"; }
+.far-calendar-plus:before { content: "\f271"; }
+.far-calendar-times:before { content: "\f273"; }
+.far-calendar:before { content: "\f133"; }
+.far-caret-square-down:before { content: "\f150"; }
+.far-caret-square-left:before { content: "\f191"; }
+.far-caret-square-right:before { content: "\f152"; }
+.far-caret-square-up:before { content: "\f151"; }
+.far-chart-bar:before { content: "\f080"; }
+.far-check-circle:before { content: "\f058"; }
+.far-check-square:before { content: "\f14a"; }
+.far-circle:before { content: "\f111"; }
+.far-clipboard:before { content: "\f328"; }
+.far-clock:before { content: "\f017"; }
+.far-clone:before { content: "\f24d"; }
+.far-closed-captioning:before { content: "\f20a"; }
+.far-comment-alt:before { content: "\f27a"; }
+.far-comment-dots:before { content: "\f4ad"; }
+.far-comment:before { content: "\f075"; }
+.far-comments:before { content: "\f086"; }
+.far-compass:before { content: "\f14e"; }
+.far-copy:before { content: "\f0c5"; }
+.far-copyright:before { content: "\f1f9"; }
+.far-credit-card:before { content: "\f09d"; }
+.far-dizzy:before { content: "\f567"; }
+.far-dot-circle:before { content: "\f192"; }
+.far-edit:before { content: "\f044"; }
+.far-envelope-open:before { content: "\f2b6"; }
+.far-envelope:before { content: "\f0e0"; }
+.far-eye-slash:before { content: "\f070"; }
+.far-eye:before { content: "\f06e"; }
+.far-file-alt:before { content: "\f15c"; }
+.far-file-archive:before { content: "\f1c6"; }
+.far-file-audio:before { content: "\f1c7"; }
+.far-file-code:before { content: "\f1c9"; }
+.far-file-excel:before { content: "\f1c3"; }
+.far-file-image:before { content: "\f1c5"; }
+.far-file-pdf:before { content: "\f1c1"; }
+.far-file-powerpoint:before { content: "\f1c4"; }
+.far-file-video:before { content: "\f1c8"; }
+.far-file-word:before { content: "\f1c2"; }
+.far-file:before { content: "\f15b"; }
+.far-flag:before { content: "\f024"; }
+.far-flushed:before { content: "\f579"; }
+.far-folder-open:before { content: "\f07c"; }
+.far-folder:before { content: "\f07b"; }
+.far-frown-open:before { content: "\f57a"; }
+.far-frown:before { content: "\f119"; }
+.far-futbol:before { content: "\f1e3"; }
+.far-gem:before { content: "\f3a5"; }
+.far-grimace:before { content: "\f57f"; }
+.far-grin-alt:before { content: "\f581"; }
+.far-grin-beam-sweat:before { content: "\f583"; }
+.far-grin-beam:before { content: "\f582"; }
+.far-grin-hearts:before { content: "\f584"; }
+.far-grin-squint-tears:before { content: "\f586"; }
+.far-grin-squint:before { content: "\f585"; }
+.far-grin-stars:before { content: "\f587"; }
+.far-grin-tears:before { content: "\f588"; }
+.far-grin-tongue-squint:before { content: "\f58a"; }
+.far-grin-tongue-wink:before { content: "\f58b"; }
+.far-grin-tongue:before { content: "\f589"; }
+.far-grin-wink:before { content: "\f58c"; }
+.far-grin:before { content: "\f580"; }
+.far-hand-lizard:before { content: "\f258"; }
+.far-hand-paper:before { content: "\f256"; }
+.far-hand-peace:before { content: "\f25b"; }
+.far-hand-point-down:before { content: "\f0a7"; }
+.far-hand-point-left:before { content: "\f0a5"; }
+.far-hand-point-right:before { content: "\f0a4"; }
+.far-hand-point-up:before { content: "\f0a6"; }
+.far-hand-pointer:before { content: "\f25a"; }
+.far-hand-rock:before { content: "\f255"; }
+.far-hand-scissors:before { content: "\f257"; }
+.far-hand-spock:before { content: "\f259"; }
+.far-handshake:before { content: "\f2b5"; }
+.far-hdd:before { content: "\f0a0"; }
+.far-heart:before { content: "\f004"; }
+.far-hospital:before { content: "\f0f8"; }
+.far-hourglass:before { content: "\f254"; }
+.far-id-badge:before { content: "\f2c1"; }
+.far-id-card:before { content: "\f2c2"; }
+.far-image:before { content: "\f03e"; }
+.far-images:before { content: "\f302"; }
+.far-keyboard:before { content: "\f11c"; }
+.far-kiss-beam:before { content: "\f597"; }
+.far-kiss-wink-heart:before { content: "\f598"; }
+.far-kiss:before { content: "\f596"; }
+.far-laugh-beam:before { content: "\f59a"; }
+.far-laugh-squint:before { content: "\f59b"; }
+.far-laugh-wink:before { content: "\f59c"; }
+.far-laugh:before { content: "\f599"; }
+.far-lemon:before { content: "\f094"; }
+.far-life-ring:before { content: "\f1cd"; }
+.far-lightbulb:before { content: "\f0eb"; }
+.far-list-alt:before { content: "\f022"; }
+.far-map:before { content: "\f279"; }
+.far-meh-blank:before { content: "\f5a4"; }
+.far-meh-rolling-eyes:before { content: "\f5a5"; }
+.far-meh:before { content: "\f11a"; }
+.far-minus-square:before { content: "\f146"; }
+.far-money-bill-alt:before { content: "\f3d1"; }
+.far-moon:before { content: "\f186"; }
+.far-newspaper:before { content: "\f1ea"; }
+.far-object-group:before { content: "\f247"; }
+.far-object-ungroup:before { content: "\f248"; }
+.far-paper-plane:before { content: "\f1d8"; }
+.far-pause-circle:before { content: "\f28b"; }
+.far-play-circle:before { content: "\f144"; }
+.far-plus-square:before { content: "\f0fe"; }
+.far-question-circle:before { content: "\f059"; }
+.far-registered:before { content: "\f25d"; }
+.far-sad-cry:before { content: "\f5b3"; }
+.far-sad-tear:before { content: "\f5b4"; }
+.far-save:before { content: "\f0c7"; }
+.far-share-square:before { content: "\f14d"; }
+.far-smile-beam:before { content: "\f5b8"; }
+.far-smile-wink:before { content: "\f4da"; }
+.far-smile:before { content: "\f118"; }
+.far-snowflake:before { content: "\f2dc"; }
+.far-square:before { content: "\f0c8"; }
+.far-star-half:before { content: "\f089"; }
+.far-star:before { content: "\f005"; }
+.far-sticky-note:before { content: "\f249"; }
+.far-stop-circle:before { content: "\f28d"; }
+.far-sun:before { content: "\f185"; }
+.far-surprise:before { content: "\f5c2"; }
+.far-thumbs-down:before { content: "\f165"; }
+.far-thumbs-up:before { content: "\f164"; }
+.far-times-circle:before { content: "\f057"; }
+.far-tired:before { content: "\f5c8"; }
+.far-trash-alt:before { content: "\f2ed"; }
+.far-user-circle:before { content: "\f2bd"; }
+.far-user:before { content: "\f007"; }
+.far-window-close:before { content: "\f410"; }
+.far-window-maximize:before { content: "\f2d0"; }
+.far-window-minimize:before { content: "\f2d1"; }
+.far-window-restore:before { content: "\f2d2"; }

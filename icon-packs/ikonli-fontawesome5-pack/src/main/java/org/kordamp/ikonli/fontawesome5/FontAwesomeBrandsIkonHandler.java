@@ -39,7 +39,7 @@ public class FontAwesomeBrandsIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/fontawesome5/5.0.1/fonts/fa-brands-400.ttf";
+        return "META-INF/resources/fontawesome5/5.8.1/fonts/fa-brands-400.ttf";
     }
 
     @Override
