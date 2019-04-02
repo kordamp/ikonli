@@ -109,7 +109,7 @@ compile '{project-group}:ikonli-entypo-pack:{project-version}'
 == Feather
  * Module: `org.kordamp.ikonli.feather`
  * Font version: {featherVersion}
- * link:http://colebemis.com/feather/[]
+ * link:https://feathericons.com/[]
  * link:cheat-sheet-feather.html[Cheat-Sheet]
 
 === Installing
