@@ -23,27 +23,18 @@ pluginManagement {
     }
 }
 
+buildscript {
+    repositories {
+        gradlePluginPortal()
+    }
+    dependencies {
+        classpath 'org.kordamp.gradle:settings-gradle-plugin:0.15.1'
+    }
+}
+apply plugin: 'org.kordamp.gradle.settings'
+
 rootProject.name = 'ikonli'
 
-def includeProject = { String projectDirName, String projectName ->
-    File baseDir = new File(settingsDir, projectDirName)
-    File projectDir = new File(baseDir, projectName)
-    String buildFileName = "${projectName}.gradle"
-
-    assert projectDir.isDirectory()
-    assert new File(projectDir, buildFileName).isFile()
-
-    include projectName
-    project(":${projectName}").projectDir    = projectDir
-    project(":${projectName}").buildFileName = buildFileName
-}
-
-['docs', 'core', 'icon-packs', 'apps'].each { dirName ->
-    File subdir = new File(rootDir, dirName)
-    subdir.eachDir { dir ->
-        File buildFile = new File(dir, "${dir.name}.gradle")
-        if (buildFile.exists()) {
-            includeProject dirName, dir.name
-        }
-    }
+projects {
+    directories = ['docs', 'core', 'icon-packs', 'apps']
 }
