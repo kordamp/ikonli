@@ -17,7 +17,7 @@
  */
 
 dependencies {
-    compile project(':ikonli-core')
+    implementation project(':ikonli-core')
 
     compileOnly "org.openjfx:javafx-base:${javafxVersion}:${platform}"
     compileOnly "org.openjfx:javafx-graphics:${javafxVersion}:${platform}"
@@ -25,9 +25,9 @@ dependencies {
     compileOnly "org.openjfx:javafx-fxml:${javafxVersion}:${platform}"
     compileOnly "org.openjfx:javafx-swing:${javafxVersion}:${platform}"
 
-    testCompile "org.openjfx:javafx-base:${javafxVersion}:${platform}"
-    testCompile "org.openjfx:javafx-graphics:${javafxVersion}:${platform}"
-    testCompile "org.openjfx:javafx-controls:${javafxVersion}:${platform}"
-    testCompile "org.openjfx:javafx-fxml:${javafxVersion}:${platform}"
-    testCompile "org.openjfx:javafx-swing:${javafxVersion}:${platform}"
+    testImplementation "org.openjfx:javafx-base:${javafxVersion}:${platform}"
+    testImplementation "org.openjfx:javafx-graphics:${javafxVersion}:${platform}"
+    testImplementation "org.openjfx:javafx-controls:${javafxVersion}:${platform}"
+    testImplementation "org.openjfx:javafx-fxml:${javafxVersion}:${platform}"
+    testImplementation "org.openjfx:javafx-swing:${javafxVersion}:${platform}"
 }
