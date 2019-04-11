@@ -4,7 +4,7 @@
 :project-repo:    kordamp
 :project-name:    ikonli
 :project-group:   org.kordamp.ikonli
-:project-version: 11.2.0
+:project-version: 11.3.0
 
 image:http://img.shields.io/travis/aalmiray/{project-name}/master.svg["Build Status (travis)", link="https://travis-ci.org/aalmiray/{project-name}"]
 image:http://img.shields.io/badge/license-ASL2-blue.svg["ASL3 Licensed", link="http://opensource.org/licenses/ASL2"]
