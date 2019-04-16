@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_CH" lang="en_CH">
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>Feather xref</title>
+<link type="text/css" rel="stylesheet" href="../../../../stylesheet.css" />
+</head>
+<body>
+<pre>
+<a class="jxr_linenumber" name="L1" href="#L1">1</a>   <em class="jxr_comment">/*</em>
+<a class="jxr_linenumber" name="L2" href="#L2">2</a>   <em class="jxr_comment"> * SPDX-License-Identifier: Apache-2.0</em>
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <em class="jxr_comment"> *</em>
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <em class="jxr_comment"> * Copyright 2015-2019 Andres Almiray</em>
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <em class="jxr_comment"> *</em>
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   <em class="jxr_comment"> * Licensed under the Apache License, Version 2.0 (the "License");</em>
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   <em class="jxr_comment"> * you may not use this file except in compliance with the License.</em>
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <em class="jxr_comment"> * You may obtain a copy of the License at</em>
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   <em class="jxr_comment"> *</em>
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <em class="jxr_comment"> *     <a href="http://www.apache.org/licenses/LICENSE-2.0" target="alexandria_uri">http://www.apache.org/licenses/LICENSE-2.0</a></em>
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  <em class="jxr_comment"> *</em>
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>  <em class="jxr_comment"> * Unless required by applicable law or agreed to in writing, software</em>
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>  <em class="jxr_comment"> * distributed under the License is distributed on an "AS IS" BASIS,</em>
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>  <em class="jxr_comment"> * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</em>
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>  <em class="jxr_comment"> * See the License for the specific language governing permissions and</em>
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>  <em class="jxr_comment"> * limitations under the License.</em>
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>  <em class="jxr_comment"> */</em>
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>  <strong class="jxr_keyword">package</strong> org.kordamp.ikonli.feather;
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>  
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>  <strong class="jxr_keyword">import</strong> org.kordamp.ikonli.Ikon;
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>  
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>  <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>  <em class="jxr_javadoccomment"> * @author Andres Almiray</em>
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>  <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>  <strong class="jxr_keyword">public</strong> enum <a name="Feather" href="../../../../org/kordamp/ikonli/feather/Feather.html#Feather">Feather</a> <strong class="jxr_keyword">implements</strong> <a name="Ikon" href="../../../../org/kordamp/ikonli/Ikon.html#Ikon">Ikon</a> {
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>      <em class="jxr_comment">// latest is e129</em>
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>      FTH_AIR_PLAY(<span class="jxr_string">"fth-air-play"</span>, '\ue016'),
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>      FTH_ALIGN_CENTER(<span class="jxr_string">"fth-align-center"</span>, '\ue028'),
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>      FTH_ALIGN_JUSTIFY(<span class="jxr_string">"fth-align-justify"</span>, '\ue026'),
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>      FTH_ALIGN_LEFT(<span class="jxr_string">"fth-align-left"</span>, '\ue027'),
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>      FTH_ALIGN_RIGHT(<span class="jxr_string">"fth-align-right"</span>, '\ue029'),
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>      FTH_ALT(<span class="jxr_string">"fth-alt"</span>, '\ue088'),
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>      FTH_ANCHOR(<span class="jxr_string">"fth-anchor"</span>, '\ue077'),
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>      FTH_ARCHIVE(<span class="jxr_string">"fth-archive"</span>, '\ue121'),
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>      FTH_ARROW_DOWN(<span class="jxr_string">"fth-arrow-down"</span>, '\ue097'),
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>      FTH_ARROW_LEFT(<span class="jxr_string">"fth-arrow-left"</span>, '\ue094'),
+<a class="jxr_linenumber" name="L37" href="#L37">37</a>      FTH_ARROW_RIGHT(<span class="jxr_string">"fth-arrow-right"</span>, '\ue095'),
+<a class="jxr_linenumber" name="L38" href="#L38">38</a>      FTH_ARROW_UP(<span class="jxr_string">"fth-arrow-up"</span>, '\ue096'),
+<a class="jxr_linenumber" name="L39" href="#L39">39</a>      FTH_BAG(<span class="jxr_string">"fth-bag"</span>, '\ue106'),
+<a class="jxr_linenumber" name="L40" href="#L40">40</a>      FTH_BAN(<span class="jxr_string">"fth-ban"</span>, '\ue107'),
+<a class="jxr_linenumber" name="L41" href="#L41">41</a>      FTH_BAR_GRAPH(<span class="jxr_string">"fth-bar-graph"</span>, '\ue090'),
+<a class="jxr_linenumber" name="L42" href="#L42">42</a>      FTH_BAR_GRAPH_2(<span class="jxr_string">"fth-bar-graph-2"</span>, '\ue091'),
+<a class="jxr_linenumber" name="L43" href="#L43">43</a>      FTH_BATTERY(<span class="jxr_string">"fth-battery"</span>, '\ue073'),
+<a class="jxr_linenumber" name="L44" href="#L44">44</a>      FTH_BELL(<span class="jxr_string">"fth-bell"</span>, '\ue006'),
+<a class="jxr_linenumber" name="L45" href="#L45">45</a>      FTH_BOOK(<span class="jxr_string">"fth-book"</span>, '\ue030'),
+<a class="jxr_linenumber" name="L46" href="#L46">46</a>      FTH_BOX(<span class="jxr_string">"fth-box"</span>, '\ue079'),
+<a class="jxr_linenumber" name="L47" href="#L47">47</a>      FTH_BRIEFCASE(<span class="jxr_string">"fth-briefcase"</span>, '\ue075'),
+<a class="jxr_linenumber" name="L48" href="#L48">48</a>      FTH_CAMERA(<span class="jxr_string">"fth-camera"</span>, '\ue017'),
+<a class="jxr_linenumber" name="L49" href="#L49">49</a>      FTH_CHECK(<span class="jxr_string">"fth-check"</span>, '\ue116'),
+<a class="jxr_linenumber" name="L50" href="#L50">50</a>      FTH_CIRCLE_CHECK(<span class="jxr_string">"fth-circle-check"</span>, '\ue042'),
+<a class="jxr_linenumber" name="L51" href="#L51">51</a>      FTH_CIRCLE_CROSS(<span class="jxr_string">"fth-circle-cross"</span>, '\ue043'),
+<a class="jxr_linenumber" name="L52" href="#L52">52</a>      FTH_CIRCLE_MINUS(<span class="jxr_string">"fth-circle-minus"</span>, '\ue041'),
+<a class="jxr_linenumber" name="L53" href="#L53">53</a>      FTH_CIRCLE_PLUS(<span class="jxr_string">"fth-circle-plus"</span>, '\ue040'),
+<a class="jxr_linenumber" name="L54" href="#L54">54</a>      FTH_CLIPBOARD(<span class="jxr_string">"fth-clipboard"</span>, '\ue013'),
+<a class="jxr_linenumber" name="L55" href="#L55">55</a>      FTH_CLOCK(<span class="jxr_string">"fth-clock"</span>, '\ue014'),
+<a class="jxr_linenumber" name="L56" href="#L56">56</a>      FTH_CLOUD(<span class="jxr_string">"fth-cloud"</span>, '\ue065'),
+<a class="jxr_linenumber" name="L57" href="#L57">57</a>      FTH_CLOUD_DOWNLOAD(<span class="jxr_string">"fth-cloud-download"</span>, '\ue067'),
+<a class="jxr_linenumber" name="L58" href="#L58">58</a>      FTH_CLOUD_UPLOAD(<span class="jxr_string">"fth-cloud-upload"</span>, '\ue066'),
+<a class="jxr_linenumber" name="L59" href="#L59">59</a>      FTH_COG(<span class="jxr_string">"fth-cog"</span>, '\ue023'),
+<a class="jxr_linenumber" name="L60" href="#L60">60</a>      FTH_COLUMNS(<span class="jxr_string">"fth-columns"</span>, '\ue104'),
+<a class="jxr_linenumber" name="L61" href="#L61">61</a>      FTH_COMMAND(<span class="jxr_string">"fth-command"</span>, '\ue087'),
+<a class="jxr_linenumber" name="L62" href="#L62">62</a>      FTH_CONTENT_LEFT(<span class="jxr_string">"fth-content-left"</span>, '\ue101'),
+<a class="jxr_linenumber" name="L63" href="#L63">63</a>      FTH_CONTENT_RIGHT(<span class="jxr_string">"fth-content-right"</span>, '\ue100'),
+<a class="jxr_linenumber" name="L64" href="#L64">64</a>      FTH_CONTRACT(<span class="jxr_string">"fth-contract"</span>, '\ue111'),
+<a class="jxr_linenumber" name="L65" href="#L65">65</a>      FTH_CROSS(<span class="jxr_string">"fth-cross"</span>, '\ue117'),
+<a class="jxr_linenumber" name="L66" href="#L66">66</a>      FTH_DELETE(<span class="jxr_string">"fth-delete"</span>, '\ue119'),
+<a class="jxr_linenumber" name="L67" href="#L67">67</a>      FTH_DISC(<span class="jxr_string">"fth-disc"</span>, '\ue019'),
+<a class="jxr_linenumber" name="L68" href="#L68">68</a>      FTH_DOWNLOAD(<span class="jxr_string">"fth-download"</span>, '\ue069'),
+<a class="jxr_linenumber" name="L69" href="#L69">69</a>      FTH_DROP(<span class="jxr_string">"fth-drop"</span>, '\ue063'),
+<a class="jxr_linenumber" name="L70" href="#L70">70</a>      FTH_ELLIPSIS(<span class="jxr_string">"fth-ellipsis"</span>, '\ue129'),
+<a class="jxr_linenumber" name="L71" href="#L71">71</a>      FTH_ESC(<span class="jxr_string">"fth-esc"</span>, '\ue089'),
+<a class="jxr_linenumber" name="L72" href="#L72">72</a>      FTH_EXPAND(<span class="jxr_string">"fth-expand"</span>, '\ue110'),
+<a class="jxr_linenumber" name="L73" href="#L73">73</a>      FTH_EYE(<span class="jxr_string">"fth-eye"</span>, '\ue000'),
+<a class="jxr_linenumber" name="L74" href="#L74">74</a>      FTH_FAST_FORWARD(<span class="jxr_string">"fth-fast-forward"</span>, '\ue055'),
+<a class="jxr_linenumber" name="L75" href="#L75">75</a>      FTH_FILE(<span class="jxr_string">"fth-file"</span>, '\ue124'),
+<a class="jxr_linenumber" name="L76" href="#L76">76</a>      FTH_FILE_ADD(<span class="jxr_string">"fth-file-add"</span>, '\ue125'),
+<a class="jxr_linenumber" name="L77" href="#L77">77</a>      FTH_FILE_SUBTRACT(<span class="jxr_string">"fth-file-subtract"</span>, '\ue126'),
+<a class="jxr_linenumber" name="L78" href="#L78">78</a>      FTH_FLAG(<span class="jxr_string">"fth-flag"</span>, '\ue108'),
+<a class="jxr_linenumber" name="L79" href="#L79">79</a>      FTH_FOLDER(<span class="jxr_string">"fth-folder"</span>, '\ue059'),
+<a class="jxr_linenumber" name="L80" href="#L80">80</a>      FTH_GLOBE(<span class="jxr_string">"fth-globe"</span>, '\ue078'),
+<a class="jxr_linenumber" name="L81" href="#L81">81</a>      FTH_GRID(<span class="jxr_string">"fth-grid"</span>, '\ue102'),
+<a class="jxr_linenumber" name="L82" href="#L82">82</a>      FTH_GRID_2(<span class="jxr_string">"fth-grid-2"</span>, '\ue103'),
+<a class="jxr_linenumber" name="L83" href="#L83">83</a>      FTH_HEAD(<span class="jxr_string">"fth-head"</span>, '\ue074'),
+<a class="jxr_linenumber" name="L84" href="#L84">84</a>      FTH_HEART(<span class="jxr_string">"fth-heart"</span>, '\ue024'),
+<a class="jxr_linenumber" name="L85" href="#L85">85</a>      FTH_HELP(<span class="jxr_string">"fth-help"</span>, '\ue127'),
+<a class="jxr_linenumber" name="L86" href="#L86">86</a>      FTH_IMAGE(<span class="jxr_string">"fth-image"</span>, '\ue010'),
+<a class="jxr_linenumber" name="L87" href="#L87">87</a>      FTH_INBOX(<span class="jxr_string">"fth-inbox"</span>, '\ue122'),
+<a class="jxr_linenumber" name="L88" href="#L88">88</a>      FTH_LAYERS(<span class="jxr_string">"fth-layers"</span>, '\ue031'),
+<a class="jxr_linenumber" name="L89" href="#L89">89</a>      FTH_LAYOUT(<span class="jxr_string">"fth-layout"</span>, '\ue004'),
+<a class="jxr_linenumber" name="L90" href="#L90">90</a>      FTH_LINK(<span class="jxr_string">"fth-link"</span>, '\ue005'),
+<a class="jxr_linenumber" name="L91" href="#L91">91</a>      FTH_LOADER(<span class="jxr_string">"fth-loader"</span>, '\ue105'),
+<a class="jxr_linenumber" name="L92" href="#L92">92</a>      FTH_LOCATION(<span class="jxr_string">"fth-location"</span>, '\ue070'),
+<a class="jxr_linenumber" name="L93" href="#L93">93</a>      FTH_LOCATION_2(<span class="jxr_string">"fth-location-2"</span>, '\ue071'),
+<a class="jxr_linenumber" name="L94" href="#L94">94</a>      FTH_LOCK(<span class="jxr_string">"fth-lock"</span>, '\ue007'),
+<a class="jxr_linenumber" name="L95" href="#L95">95</a>      FTH_MAIL(<span class="jxr_string">"fth-mail"</span>, '\ue002'),
+<a class="jxr_linenumber" name="L96" href="#L96">96</a>      FTH_MAP(<span class="jxr_string">"fth-map"</span>, '\ue072'),
+<a class="jxr_linenumber" name="L97" href="#L97">97</a>      FTH_MARQUEE(<span class="jxr_string">"fth-marquee"</span>, '\ue082'),
+<a class="jxr_linenumber" name="L98" href="#L98">98</a>      FTH_MARQUEE_MINUS(<span class="jxr_string">"fth-marquee-minus"</span>, '\ue084'),
+<a class="jxr_linenumber" name="L99" href="#L99">99</a>      FTH_MARQUEE_PLUS(<span class="jxr_string">"fth-marquee-plus"</span>, '\ue083'),
+<a class="jxr_linenumber" name="L100" href="#L100">100</a>     FTH_MAXIMIZE(<span class="jxr_string">"fth-maximize"</span>, '\ue112'),
+<a class="jxr_linenumber" name="L101" href="#L101">101</a>     FTH_MENU(<span class="jxr_string">"fth-menu"</span>, '\ue120'),
+<a class="jxr_linenumber" name="L102" href="#L102">102</a>     FTH_MICROPHONE(<span class="jxr_string">"fth-microphone"</span>, '\ue048'),
+<a class="jxr_linenumber" name="L103" href="#L103">103</a>     FTH_MINIMIZE(<span class="jxr_string">"fth-minimize"</span>, '\ue113'),
+<a class="jxr_linenumber" name="L104" href="#L104">104</a>     FTH_MINUS(<span class="jxr_string">"fth-minus"</span>, '\ue115'),
+<a class="jxr_linenumber" name="L105" href="#L105">105</a>     FTH_MONITOR(<span class="jxr_string">"fth-monitor"</span>, '\ue021'),
+<a class="jxr_linenumber" name="L106" href="#L106">106</a>     FTH_MOON(<span class="jxr_string">"fth-moon"</span>, '\ue061'),
+<a class="jxr_linenumber" name="L107" href="#L107">107</a>     FTH_MOVE(<span class="jxr_string">"fth-move"</span>, '\ue118'),
+<a class="jxr_linenumber" name="L108" href="#L108">108</a>     FTH_MUTE(<span class="jxr_string">"fth-mute"</span>, '\ue099'),
+<a class="jxr_linenumber" name="L109" href="#L109">109</a>     FTH_OPEN(<span class="jxr_string">"fth-open"</span>, '\ue128'),
+<a class="jxr_linenumber" name="L110" href="#L110">110</a>     FTH_OUTBOX(<span class="jxr_string">"fth-outbox"</span>, '\ue123'),
+<a class="jxr_linenumber" name="L111" href="#L111">111</a>     FTH_PAPER(<span class="jxr_string">"fth-paper"</span>, '\ue034'),
+<a class="jxr_linenumber" name="L112" href="#L112">112</a>     FTH_PAPER_CLIP(<span class="jxr_string">"fth-paper-clip"</span>, '\ue001'),
+<a class="jxr_linenumber" name="L113" href="#L113">113</a>     FTH_PAPER_STACK(<span class="jxr_string">"fth-paper-stack"</span>, '\ue035'),
+<a class="jxr_linenumber" name="L114" href="#L114">114</a>     FTH_PARAGRAPH(<span class="jxr_string">"fth-paragraph"</span>, '\ue025'),
+<a class="jxr_linenumber" name="L115" href="#L115">115</a>     FTH_PAUSE(<span class="jxr_string">"fth-pause"</span>, '\ue053'),
+<a class="jxr_linenumber" name="L116" href="#L116">116</a>     FTH_PIE_GRAPH(<span class="jxr_string">"fth-pie-graph"</span>, '\ue092'),
+<a class="jxr_linenumber" name="L117" href="#L117">117</a>     FTH_PLAY(<span class="jxr_string">"fth-play"</span>, '\ue052'),
+<a class="jxr_linenumber" name="L118" href="#L118">118</a>     FTH_PLUS(<span class="jxr_string">"fth-plus"</span>, '\ue114'),
+<a class="jxr_linenumber" name="L119" href="#L119">119</a>     FTH_POWER(<span class="jxr_string">"fth-power"</span>, '\ue086'),
+<a class="jxr_linenumber" name="L120" href="#L120">120</a>     FTH_PRINTER(<span class="jxr_string">"fth-printer"</span>, '\ue020'),
+<a class="jxr_linenumber" name="L121" href="#L121">121</a>     FTH_RECORD(<span class="jxr_string">"fth-record"</span>, '\ue049'),
+<a class="jxr_linenumber" name="L122" href="#L122">122</a>     FTH_RELOAD(<span class="jxr_string">"fth-reload"</span>, '\ue080'),
+<a class="jxr_linenumber" name="L123" href="#L123">123</a>     FTH_REPEAT(<span class="jxr_string">"fth-repeat"</span>, '\ue058'),
+<a class="jxr_linenumber" name="L124" href="#L124">124</a>     FTH_REPLY(<span class="jxr_string">"fth-reply"</span>, '\ue039'),
+<a class="jxr_linenumber" name="L125" href="#L125">125</a>     FTH_REWIND(<span class="jxr_string">"fth-rewind"</span>, '\ue051'),
+<a class="jxr_linenumber" name="L126" href="#L126">126</a>     FTH_RIBBON(<span class="jxr_string">"fth-ribbon"</span>, '\ue009'),
+<a class="jxr_linenumber" name="L127" href="#L127">127</a>     FTH_SEARCH(<span class="jxr_string">"fth-search"</span>, '\ue036'),
+<a class="jxr_linenumber" name="L128" href="#L128">128</a>     FTH_SERVER(<span class="jxr_string">"fth-server"</span>, '\ue022'),
+<a class="jxr_linenumber" name="L129" href="#L129">129</a>     FTH_SHARE(<span class="jxr_string">"fth-share"</span>, '\ue081'),
+<a class="jxr_linenumber" name="L130" href="#L130">130</a>     FTH_SHUFFLE(<span class="jxr_string">"fth-shuffle"</span>, '\ue057'),
+<a class="jxr_linenumber" name="L131" href="#L131">131</a>     FTH_SIGNAL(<span class="jxr_string">"fth-signal"</span>, '\ue011'),
+<a class="jxr_linenumber" name="L132" href="#L132">132</a>     FTH_SKIP_BACK(<span class="jxr_string">"fth-skip-back"</span>, '\ue050'),
+<a class="jxr_linenumber" name="L133" href="#L133">133</a>     FTH_SKIP_FORWARD(<span class="jxr_string">"fth-skip-forward"</span>, '\ue056'),
+<a class="jxr_linenumber" name="L134" href="#L134">134</a>     FTH_SPEECH_BUBBLE(<span class="jxr_string">"fth-speech-bubble"</span>, '\ue076'),
+<a class="jxr_linenumber" name="L135" href="#L135">135</a>     FTH_SQUARE_CHECK(<span class="jxr_string">"fth-square-check"</span>, '\ue046'),
+<a class="jxr_linenumber" name="L136" href="#L136">136</a>     FTH_SQUARE_CROSS(<span class="jxr_string">"fth-square-cross"</span>, '\ue047'),
+<a class="jxr_linenumber" name="L137" href="#L137">137</a>     FTH_SQUARE_MINUS(<span class="jxr_string">"fth-square-minus"</span>, '\ue045'),
+<a class="jxr_linenumber" name="L138" href="#L138">138</a>     FTH_SQUARE_PLUS(<span class="jxr_string">"fth-square-plus"</span>, '\ue044'),
+<a class="jxr_linenumber" name="L139" href="#L139">139</a>     FTH_STACK(<span class="jxr_string">"fth-stack"</span>, '\ue032'),
+<a class="jxr_linenumber" name="L140" href="#L140">140</a>     FTH_STACK_2(<span class="jxr_string">"fth-stack-2"</span>, '\ue033'),
+<a class="jxr_linenumber" name="L141" href="#L141">141</a>     FTH_STAR(<span class="jxr_string">"fth-star"</span>, '\ue093'),
+<a class="jxr_linenumber" name="L142" href="#L142">142</a>     FTH_STOP(<span class="jxr_string">"fth-stop"</span>, '\ue054'),
+<a class="jxr_linenumber" name="L143" href="#L143">143</a>     FTH_SUN(<span class="jxr_string">"fth-sun"</span>, '\ue064'),
+<a class="jxr_linenumber" name="L144" href="#L144">144</a>     FTH_TAG(<span class="jxr_string">"fth-tag"</span>, '\ue085'),
+<a class="jxr_linenumber" name="L145" href="#L145">145</a>     FTH_TARGET(<span class="jxr_string">"fth-target"</span>, '\ue012'),
+<a class="jxr_linenumber" name="L146" href="#L146">146</a>     FTH_THERMOMETER(<span class="jxr_string">"fth-thermometer"</span>, '\ue062'),
+<a class="jxr_linenumber" name="L147" href="#L147">147</a>     FTH_TOGGLE(<span class="jxr_string">"fth-toggle"</span>, '\ue003'),
+<a class="jxr_linenumber" name="L148" href="#L148">148</a>     FTH_TRASH(<span class="jxr_string">"fth-trash"</span>, '\ue109'),
+<a class="jxr_linenumber" name="L149" href="#L149">149</a>     FTH_UMBRELLA(<span class="jxr_string">"fth-umbrella"</span>, '\ue060'),
+<a class="jxr_linenumber" name="L150" href="#L150">150</a>     FTH_UNLOCK(<span class="jxr_string">"fth-unlock"</span>, '\ue008'),
+<a class="jxr_linenumber" name="L151" href="#L151">151</a>     FTH_UPLOAD(<span class="jxr_string">"fth-upload"</span>, '\ue068'),
+<a class="jxr_linenumber" name="L152" href="#L152">152</a>     FTH_VIDEO(<span class="jxr_string">"fth-video"</span>, '\ue018'),
+<a class="jxr_linenumber" name="L153" href="#L153">153</a>     FTH_VOLUME(<span class="jxr_string">"fth-volume"</span>, '\ue098'),
+<a class="jxr_linenumber" name="L154" href="#L154">154</a>     FTH_WATCH(<span class="jxr_string">"fth-watch"</span>, '\ue015'),
+<a class="jxr_linenumber" name="L155" href="#L155">155</a>     FTH_ZOOM_IN(<span class="jxr_string">"fth-zoom-in"</span>, '\ue037'),
+<a class="jxr_linenumber" name="L156" href="#L156">156</a>     FTH_ZOOM_OUT(<span class="jxr_string">"fth-zoom-out"</span>, '\ue038');
+<a class="jxr_linenumber" name="L157" href="#L157">157</a> 
+<a class="jxr_linenumber" name="L158" href="#L158">158</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a name="Feather" href="../../../../org/kordamp/ikonli/feather/Feather.html#Feather">Feather</a> findByDescription(String description) {
+<a class="jxr_linenumber" name="L159" href="#L159">159</a>         <strong class="jxr_keyword">for</strong> (<a name="Feather" href="../../../../org/kordamp/ikonli/feather/Feather.html#Feather">Feather</a> font : values()) {
+<a class="jxr_linenumber" name="L160" href="#L160">160</a>             <strong class="jxr_keyword">if</strong> (font.getDescription().equals(description)) {
+<a class="jxr_linenumber" name="L161" href="#L161">161</a>                 <strong class="jxr_keyword">return</strong> font;
+<a class="jxr_linenumber" name="L162" href="#L162">162</a>             }
+<a class="jxr_linenumber" name="L163" href="#L163">163</a>         }
+<a class="jxr_linenumber" name="L164" href="#L164">164</a>         <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> IllegalArgumentException(<span class="jxr_string">"Icon description '"</span> + description + <span class="jxr_string">"' is invalid!"</span>);
+<a class="jxr_linenumber" name="L165" href="#L165">165</a>     }
+<a class="jxr_linenumber" name="L166" href="#L166">166</a> 
+<a class="jxr_linenumber" name="L167" href="#L167">167</a>     <strong class="jxr_keyword">private</strong> String description;
+<a class="jxr_linenumber" name="L168" href="#L168">168</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">char</strong> code;
+<a class="jxr_linenumber" name="L169" href="#L169">169</a> 
+<a class="jxr_linenumber" name="L170" href="#L170">170</a>     <a name="Feather" href="../../../../org/kordamp/ikonli/feather/Feather.html#Feather">Feather</a>(String description, <strong class="jxr_keyword">char</strong> code) {
+<a class="jxr_linenumber" name="L171" href="#L171">171</a>         <strong class="jxr_keyword">this</strong>.description = description;
+<a class="jxr_linenumber" name="L172" href="#L172">172</a>         <strong class="jxr_keyword">this</strong>.code = code;
+<a class="jxr_linenumber" name="L173" href="#L173">173</a>     }
+<a class="jxr_linenumber" name="L174" href="#L174">174</a> 
+<a class="jxr_linenumber" name="L175" href="#L175">175</a>     @Override
+<a class="jxr_linenumber" name="L176" href="#L176">176</a>     <strong class="jxr_keyword">public</strong> String getDescription() {
+<a class="jxr_linenumber" name="L177" href="#L177">177</a>         <strong class="jxr_keyword">return</strong> description;
+<a class="jxr_linenumber" name="L178" href="#L178">178</a>     }
+<a class="jxr_linenumber" name="L179" href="#L179">179</a> 
+<a class="jxr_linenumber" name="L180" href="#L180">180</a>     @Override
+<a class="jxr_linenumber" name="L181" href="#L181">181</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">char</strong> getCode() {
+<a class="jxr_linenumber" name="L182" href="#L182">182</a>         <strong class="jxr_keyword">return</strong> code;
+<a class="jxr_linenumber" name="L183" href="#L183">183</a>     }
+<a class="jxr_linenumber" name="L184" href="#L184">184</a> }
+</pre>
+<hr/>
+<div id="footer"></div>
+</body>
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_CH" lang="en_CH">
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>LigatureSymbols xref</title>
+<link type="text/css" rel="stylesheet" href="../../../../stylesheet.css" />
+</head>
+<body>
+<pre>
+<a class="jxr_linenumber" name="L1" href="#L1">1</a>   <em class="jxr_comment">/*</em>
+<a class="jxr_linenumber" name="L2" href="#L2">2</a>   <em class="jxr_comment"> * SPDX-License-Identifier: Apache-2.0</em>
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <em class="jxr_comment"> *</em>
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <em class="jxr_comment"> * Copyright 2015-2019 Andres Almiray</em>
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <em class="jxr_comment"> *</em>
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   <em class="jxr_comment"> * Licensed under the Apache License, Version 2.0 (the "License");</em>
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   <em class="jxr_comment"> * you may not use this file except in compliance with the License.</em>
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <em class="jxr_comment"> * You may obtain a copy of the License at</em>
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   <em class="jxr_comment"> *</em>
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <em class="jxr_comment"> *     <a href="http://www.apache.org/licenses/LICENSE-2.0" target="alexandria_uri">http://www.apache.org/licenses/LICENSE-2.0</a></em>
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  <em class="jxr_comment"> *</em>
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>  <em class="jxr_comment"> * Unless required by applicable law or agreed to in writing, software</em>
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>  <em class="jxr_comment"> * distributed under the License is distributed on an "AS IS" BASIS,</em>
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>  <em class="jxr_comment"> * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</em>
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>  <em class="jxr_comment"> * See the License for the specific language governing permissions and</em>
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>  <em class="jxr_comment"> * limitations under the License.</em>
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>  <em class="jxr_comment"> */</em>
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>  <strong class="jxr_keyword">package</strong> org.kordamp.ikonli.ligaturesymbols;
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>  
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>  <strong class="jxr_keyword">import</strong> org.kordamp.ikonli.Ikon;
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>  
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>  <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>  <em class="jxr_javadoccomment"> * @author Andres Almiray</em>
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>  <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>  <strong class="jxr_keyword">public</strong> enum <a name="LigatureSymbols" href="../../../../org/kordamp/ikonli/ligaturesymbols/LigatureSymbols.html#LigatureSymbols">LigatureSymbols</a> <strong class="jxr_keyword">implements</strong> <a name="Ikon" href="../../../../org/kordamp/ikonli/Ikon.html#Ikon">Ikon</a> {
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>      ADDSTAR(<span class="jxr_string">"lsf-addstar"</span>, '\ue000'),
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>      AIM(<span class="jxr_string">"lsf-aim"</span>, '\ue163'),
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>      ALBUM(<span class="jxr_string">"lsf-album"</span>, '\ue002'),
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>      ALIGNADJUST(<span class="jxr_string">"lsf-alignadjust"</span>, '\ue003'),
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>      ALIGNCENTER(<span class="jxr_string">"lsf-aligncenter"</span>, '\ue004'),
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>      ALIGNLEFT(<span class="jxr_string">"lsf-alignleft"</span>, '\ue005'),
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>      ALIGNRIGHT(<span class="jxr_string">"lsf-alignright"</span>, '\ue006'),
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>      AMAZON(<span class="jxr_string">"lsf-amazon"</span>, '\ue007'),
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>      ANDROID(<span class="jxr_string">"lsf-android"</span>, '\ue008'),
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>      APP(<span class="jxr_string">"lsf-app"</span>, '\ue009'),
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>      APPLE(<span class="jxr_string">"lsf-apple"</span>, '\ue00a'),
+<a class="jxr_linenumber" name="L37" href="#L37">37</a>      ARROWDOWN(<span class="jxr_string">"lsf-arrowdown"</span>, '\ue00b'),
+<a class="jxr_linenumber" name="L38" href="#L38">38</a>      ARROWLEFT(<span class="jxr_string">"lsf-arrowleft"</span>, '\ue00c'),
+<a class="jxr_linenumber" name="L39" href="#L39">39</a>      ARROWRIGHT(<span class="jxr_string">"lsf-arrowright"</span>, '\ue00d'),
+<a class="jxr_linenumber" name="L40" href="#L40">40</a>      ARROWUP(<span class="jxr_string">"lsf-arrowup"</span>, '\ue00e'),
+<a class="jxr_linenumber" name="L41" href="#L41">41</a>      BACK(<span class="jxr_string">"lsf-back"</span>, '\ue00f'),
+<a class="jxr_linenumber" name="L42" href="#L42">42</a>      BACKSPACE(<span class="jxr_string">"lsf-backspace"</span>, '\ue010'),
+<a class="jxr_linenumber" name="L43" href="#L43">43</a>      BAD(<span class="jxr_string">"lsf-bad"</span>, '\ue011'),
+<a class="jxr_linenumber" name="L44" href="#L44">44</a>      BAG(<span class="jxr_string">"lsf-bag"</span>, '\ue173'),
+<a class="jxr_linenumber" name="L45" href="#L45">45</a>      BAN(<span class="jxr_string">"lsf-ban"</span>, '\ue012'),
+<a class="jxr_linenumber" name="L46" href="#L46">46</a>      BARCODE(<span class="jxr_string">"lsf-barcode"</span>, '\ue013'),
+<a class="jxr_linenumber" name="L47" href="#L47">47</a>      BELL(<span class="jxr_string">"lsf-bell"</span>, '\ue014'),
+<a class="jxr_linenumber" name="L48" href="#L48">48</a>      BICYCLE(<span class="jxr_string">"lsf-bicycle"</span>, '\ue015'),
+<a class="jxr_linenumber" name="L49" href="#L49">49</a>      BING(<span class="jxr_string">"lsf-bing"</span>, '\ue164'),
+<a class="jxr_linenumber" name="L50" href="#L50">50</a>      BLOGGER(<span class="jxr_string">"lsf-blogger"</span>, '\ue165'),
+<a class="jxr_linenumber" name="L51" href="#L51">51</a>      BOLD(<span class="jxr_string">"lsf-bold"</span>, '\ue01f'),
+<a class="jxr_linenumber" name="L52" href="#L52">52</a>      BOOK(<span class="jxr_string">"lsf-book"</span>, '\ue020'),
+<a class="jxr_linenumber" name="L53" href="#L53">53</a>      BOOKMARK(<span class="jxr_string">"lsf-bookmark"</span>, '\ue021'),
+<a class="jxr_linenumber" name="L54" href="#L54">54</a>      BRUSH(<span class="jxr_string">"lsf-brush"</span>, '\ue022'),
+<a class="jxr_linenumber" name="L55" href="#L55">55</a>      BUILDING(<span class="jxr_string">"lsf-building"</span>, '\ue023'),
+<a class="jxr_linenumber" name="L56" href="#L56">56</a>      BUS(<span class="jxr_string">"lsf-bus"</span>, '\ue024'),
+<a class="jxr_linenumber" name="L57" href="#L57">57</a>      CALENDAR(<span class="jxr_string">"lsf-calendar"</span>, '\ue15e'),
+<a class="jxr_linenumber" name="L58" href="#L58">58</a>      CAMERA(<span class="jxr_string">"lsf-camera"</span>, '\ue026'),
+<a class="jxr_linenumber" name="L59" href="#L59">59</a>      CAR(<span class="jxr_string">"lsf-car"</span>, '\ue027'),
+<a class="jxr_linenumber" name="L60" href="#L60">60</a>      CATEGORY(<span class="jxr_string">"lsf-category"</span>, '\ue028'),
+<a class="jxr_linenumber" name="L61" href="#L61">61</a>      CHECK(<span class="jxr_string">"lsf-check"</span>, '\ue029'),
+<a class="jxr_linenumber" name="L62" href="#L62">62</a>      CHECKBOX(<span class="jxr_string">"lsf-checkbox"</span>, '\ue02a'),
+<a class="jxr_linenumber" name="L63" href="#L63">63</a>      CHECKBOXEMPTY(<span class="jxr_string">"lsf-checkboxempty"</span>, '\ue02b'),
+<a class="jxr_linenumber" name="L64" href="#L64">64</a>      CHROME(<span class="jxr_string">"lsf-chrome"</span>, '\ue02c'),
+<a class="jxr_linenumber" name="L65" href="#L65">65</a>      CIRCLE(<span class="jxr_string">"lsf-circle"</span>, '\ue02e'),
+<a class="jxr_linenumber" name="L66" href="#L66">66</a>      CLEAR(<span class="jxr_string">"lsf-clear"</span>, '\ue02f'),
+<a class="jxr_linenumber" name="L67" href="#L67">67</a>      CLIP(<span class="jxr_string">"lsf-clip"</span>, '\ue030'),
+<a class="jxr_linenumber" name="L68" href="#L68">68</a>      CLOUD(<span class="jxr_string">"lsf-cloud"</span>, '\ue031'),
+<a class="jxr_linenumber" name="L69" href="#L69">69</a>      CODE(<span class="jxr_string">"lsf-code"</span>, '\ue032'),
+<a class="jxr_linenumber" name="L70" href="#L70">70</a>      COFFEE(<span class="jxr_string">"lsf-coffee"</span>, '\ue146'),
+<a class="jxr_linenumber" name="L71" href="#L71">71</a>      COLLEGE(<span class="jxr_string">"lsf-college"</span>, '\ue174'),
+<a class="jxr_linenumber" name="L72" href="#L72">72</a>      COLOR(<span class="jxr_string">"lsf-color"</span>, '\ue033'),
+<a class="jxr_linenumber" name="L73" href="#L73">73</a>      COMMENT(<span class="jxr_string">"lsf-comment"</span>, '\ue034'),
+<a class="jxr_linenumber" name="L74" href="#L74">74</a>      COMMENTS(<span class="jxr_string">"lsf-comments"</span>, '\ue035'),
+<a class="jxr_linenumber" name="L75" href="#L75">75</a>      COMPASS(<span class="jxr_string">"lsf-compass"</span>, '\ue036'),
+<a class="jxr_linenumber" name="L76" href="#L76">76</a>      CONTRAST(<span class="jxr_string">"lsf-contrast"</span>, '\ue001'),
+<a class="jxr_linenumber" name="L77" href="#L77">77</a>      COOKPAD(<span class="jxr_string">"lsf-cookpad"</span>, '\ue037'),
+<a class="jxr_linenumber" name="L78" href="#L78">78</a>      COPY(<span class="jxr_string">"lsf-copy"</span>, '\ue038'),
+<a class="jxr_linenumber" name="L79" href="#L79">79</a>      CROP(<span class="jxr_string">"lsf-crop"</span>, '\ue039'),
+<a class="jxr_linenumber" name="L80" href="#L80">80</a>      CROWN(<span class="jxr_string">"lsf-crown"</span>, '\ue03a'),
+<a class="jxr_linenumber" name="L81" href="#L81">81</a>      CURSOR(<span class="jxr_string">"lsf-cursor"</span>, '\ue166'),
+<a class="jxr_linenumber" name="L82" href="#L82">82</a>      CUT(<span class="jxr_string">"lsf-cut"</span>, '\ue03b'),
+<a class="jxr_linenumber" name="L83" href="#L83">83</a>      DAILYCALENDAR(<span class="jxr_string">"lsf-dailycalendar"</span>, '\ue025'),
+<a class="jxr_linenumber" name="L84" href="#L84">84</a>      DARK(<span class="jxr_string">"lsf-dark"</span>, '\ue147'),
+<a class="jxr_linenumber" name="L85" href="#L85">85</a>      DASHBOARD(<span class="jxr_string">"lsf-dashboard"</span>, '\ue03c'),
+<a class="jxr_linenumber" name="L86" href="#L86">86</a>      DELETE(<span class="jxr_string">"lsf-delete"</span>, '\ue12c'),
+<a class="jxr_linenumber" name="L87" href="#L87">87</a>      DELICIOUS(<span class="jxr_string">"lsf-delicious"</span>, '\ue03d'),
+<a class="jxr_linenumber" name="L88" href="#L88">88</a>      DIGG(<span class="jxr_string">"lsf-digg"</span>, '\ue167'),
+<a class="jxr_linenumber" name="L89" href="#L89">89</a>      DOWN(<span class="jxr_string">"lsf-down"</span>, '\ue03e'),
+<a class="jxr_linenumber" name="L90" href="#L90">90</a>      DRIBBBLE(<span class="jxr_string">"lsf-dribbble"</span>, '\ue03f'),
+<a class="jxr_linenumber" name="L91" href="#L91">91</a>      DROPBOX(<span class="jxr_string">"lsf-dropbox"</span>, '\ue168'),
+<a class="jxr_linenumber" name="L92" href="#L92">92</a>      DROPDOWN(<span class="jxr_string">"lsf-dropdown"</span>, '\ue040'),
+<a class="jxr_linenumber" name="L93" href="#L93">93</a>      EDIT(<span class="jxr_string">"lsf-edit"</span>, '\ue041'),
+<a class="jxr_linenumber" name="L94" href="#L94">94</a>      EJECT(<span class="jxr_string">"lsf-eject"</span>, '\ue042'),
+<a class="jxr_linenumber" name="L95" href="#L95">95</a>      EMPHASIS(<span class="jxr_string">"lsf-emphasis"</span>, '\ue152'),
+<a class="jxr_linenumber" name="L96" href="#L96">96</a>      ERASER(<span class="jxr_string">"lsf-eraser"</span>, '\ue148'),
+<a class="jxr_linenumber" name="L97" href="#L97">97</a>      ETC(<span class="jxr_string">"lsf-etc"</span>, '\ue043'),
+<a class="jxr_linenumber" name="L98" href="#L98">98</a>      EVERNOTE(<span class="jxr_string">"lsf-evernote"</span>, '\ue044'),
+<a class="jxr_linenumber" name="L99" href="#L99">99</a>      EXCHANGE(<span class="jxr_string">"lsf-exchange"</span>, '\ue045'),
+<a class="jxr_linenumber" name="L100" href="#L100">100</a>     EXTERNAL(<span class="jxr_string">"lsf-external"</span>, '\ue046'),
+<a class="jxr_linenumber" name="L101" href="#L101">101</a>     FACEBOOK(<span class="jxr_string">"lsf-facebook"</span>, '\ue047'),
+<a class="jxr_linenumber" name="L102" href="#L102">102</a>     FEMALE(<span class="jxr_string">"lsf-female"</span>, '\ue175'),
+<a class="jxr_linenumber" name="L103" href="#L103">103</a>     FILE(<span class="jxr_string">"lsf-file"</span>, '\ue048'),
+<a class="jxr_linenumber" name="L104" href="#L104">104</a>     FIREFOX(<span class="jxr_string">"lsf-firefox"</span>, '\ue049'),
+<a class="jxr_linenumber" name="L105" href="#L105">105</a>     FLAG(<span class="jxr_string">"lsf-flag"</span>, '\ue04a'),
+<a class="jxr_linenumber" name="L106" href="#L106">106</a>     FLICKR(<span class="jxr_string">"lsf-flickr"</span>, '\ue04b'),
+<a class="jxr_linenumber" name="L107" href="#L107">107</a>     FOLDER(<span class="jxr_string">"lsf-folder"</span>, '\ue04c'),
+<a class="jxr_linenumber" name="L108" href="#L108">108</a>     FORWARD(<span class="jxr_string">"lsf-forward"</span>, '\ue04e'),
+<a class="jxr_linenumber" name="L109" href="#L109">109</a>     FOURSQUARE(<span class="jxr_string">"lsf-foursquare"</span>, '\ue04d'),
+<a class="jxr_linenumber" name="L110" href="#L110">110</a>     FRIEND(<span class="jxr_string">"lsf-friend"</span>, '\ue051'),
+<a class="jxr_linenumber" name="L111" href="#L111">111</a>     FRUSTRATE(<span class="jxr_string">"lsf-frustrate"</span>, '\ue052'),
+<a class="jxr_linenumber" name="L112" href="#L112">112</a>     FULL(<span class="jxr_string">"lsf-full"</span>, '\ue053'),
+<a class="jxr_linenumber" name="L113" href="#L113">113</a>     GAME(<span class="jxr_string">"lsf-game"</span>, '\ue054'),
+<a class="jxr_linenumber" name="L114" href="#L114">114</a>     GEO(<span class="jxr_string">"lsf-geo"</span>, '\ue056'),
+<a class="jxr_linenumber" name="L115" href="#L115">115</a>     GITHUB(<span class="jxr_string">"lsf-github"</span>, '\ue057'),
+<a class="jxr_linenumber" name="L116" href="#L116">116</a>     GLOBE(<span class="jxr_string">"lsf-globe"</span>, '\ue058'),
+<a class="jxr_linenumber" name="L117" href="#L117">117</a>     GOOD(<span class="jxr_string">"lsf-good"</span>, '\ue059'),
+<a class="jxr_linenumber" name="L118" href="#L118">118</a>     GOOGLE(<span class="jxr_string">"lsf-google"</span>, '\ue05a'),
+<a class="jxr_linenumber" name="L119" href="#L119">119</a>     GRAB(<span class="jxr_string">"lsf-grab"</span>, '\ue169'),
+<a class="jxr_linenumber" name="L120" href="#L120">120</a>     GRADATION(<span class="jxr_string">"lsf-gradation"</span>, '\ue149'),
+<a class="jxr_linenumber" name="L121" href="#L121">121</a>     GRAPH(<span class="jxr_string">"lsf-graph"</span>, '\ue05b'),
+<a class="jxr_linenumber" name="L122" href="#L122">122</a>     GREE(<span class="jxr_string">"lsf-gree"</span>, '\ue153'),
+<a class="jxr_linenumber" name="L123" href="#L123">123</a>     GROUP(<span class="jxr_string">"lsf-group"</span>, '\ue05c'),
+<a class="jxr_linenumber" name="L124" href="#L124">124</a>     GUMROAD(<span class="jxr_string">"lsf-gumroad"</span>, '\ue154'),
+<a class="jxr_linenumber" name="L125" href="#L125">125</a>     HATENA(<span class="jxr_string">"lsf-hatena"</span>, '\ue05d'),
+<a class="jxr_linenumber" name="L126" href="#L126">126</a>     HATENABOOKMARK(<span class="jxr_string">"lsf-hatenabookmark"</span>, '\ue161'),
+<a class="jxr_linenumber" name="L127" href="#L127">127</a>     HEART(<span class="jxr_string">"lsf-heart"</span>, '\ue06e'),
+<a class="jxr_linenumber" name="L128" href="#L128">128</a>     HEARTEMPTY(<span class="jxr_string">"lsf-heartempty"</span>, '\ue06f'),
+<a class="jxr_linenumber" name="L129" href="#L129">129</a>     HELP(<span class="jxr_string">"lsf-help"</span>, '\ue070'),
+<a class="jxr_linenumber" name="L130" href="#L130">130</a>     HOME(<span class="jxr_string">"lsf-home"</span>, '\ue072'),
+<a class="jxr_linenumber" name="L131" href="#L131">131</a>     HORIZONTAL(<span class="jxr_string">"lsf-horizontal"</span>, '\ue071'),
+<a class="jxr_linenumber" name="L132" href="#L132">132</a>     IMAGE(<span class="jxr_string">"lsf-image"</span>, '\ue074'),
+<a class="jxr_linenumber" name="L133" href="#L133">133</a>     INFO(<span class="jxr_string">"lsf-info"</span>, '\ue075'),
+<a class="jxr_linenumber" name="L134" href="#L134">134</a>     INK(<span class="jxr_string">"lsf-ink"</span>, '\ue14a'),
+<a class="jxr_linenumber" name="L135" href="#L135">135</a>     INSTAGRAM(<span class="jxr_string">"lsf-instagram"</span>, '\ue155'),
+<a class="jxr_linenumber" name="L136" href="#L136">136</a>     INSTAPAPER(<span class="jxr_string">"lsf-instapaper"</span>, '\ue076'),
+<a class="jxr_linenumber" name="L137" href="#L137">137</a>     INTERNETEXPLORER(<span class="jxr_string">"lsf-internetexplorer"</span>, '\ue077'),
+<a class="jxr_linenumber" name="L138" href="#L138">138</a>     INVERT(<span class="jxr_string">"lsf-invert"</span>, '\ue14b'),
+<a class="jxr_linenumber" name="L139" href="#L139">139</a>     ITALIC(<span class="jxr_string">"lsf-italic"</span>, '\ue079'),
+<a class="jxr_linenumber" name="L140" href="#L140">140</a>     KEY(<span class="jxr_string">"lsf-key"</span>, '\ue07c'),
+<a class="jxr_linenumber" name="L141" href="#L141">141</a>     KEYBOARD(<span class="jxr_string">"lsf-keyboard"</span>, '\ue07d'),
+<a class="jxr_linenumber" name="L142" href="#L142">142</a>     LAUGH(<span class="jxr_string">"lsf-laugh"</span>, '\ue07f'),
+<a class="jxr_linenumber" name="L143" href="#L143">143</a>     LEFT(<span class="jxr_string">"lsf-left"</span>, '\ue080'),
+<a class="jxr_linenumber" name="L144" href="#L144">144</a>     LIGHT(<span class="jxr_string">"lsf-light"</span>, '\ue14c'),
+<a class="jxr_linenumber" name="L145" href="#L145">145</a>     LINE(<span class="jxr_string">"lsf-line"</span>, '\ue157'),
+<a class="jxr_linenumber" name="L146" href="#L146">146</a>     LINK(<span class="jxr_string">"lsf-link"</span>, '\ue082'),
+<a class="jxr_linenumber" name="L147" href="#L147">147</a>     LINKEDIN(<span class="jxr_string">"lsf-linkedin"</span>, '\ue083'),
+<a class="jxr_linenumber" name="L148" href="#L148">148</a>     LIST(<span class="jxr_string">"lsf-list"</span>, '\ue084'),
+<a class="jxr_linenumber" name="L149" href="#L149">149</a>     LOCATION(<span class="jxr_string">"lsf-location"</span>, '\ue085'),
+<a class="jxr_linenumber" name="L150" href="#L150">150</a>     LOCK(<span class="jxr_string">"lsf-lock"</span>, '\ue086'),
+<a class="jxr_linenumber" name="L151" href="#L151">151</a>     LOGIN(<span class="jxr_string">"lsf-login"</span>, '\ue087'),
+<a class="jxr_linenumber" name="L152" href="#L152">152</a>     LOGOUT(<span class="jxr_string">"lsf-logout"</span>, '\ue088'),
+<a class="jxr_linenumber" name="L153" href="#L153">153</a>     MAGIC(<span class="jxr_string">"lsf-magic"</span>, '\ue089'),
+<a class="jxr_linenumber" name="L154" href="#L154">154</a>     MAIL(<span class="jxr_string">"lsf-mail"</span>, '\ue08a'),
+<a class="jxr_linenumber" name="L155" href="#L155">155</a>     MALE(<span class="jxr_string">"lsf-male"</span>, '\ue176'),
+<a class="jxr_linenumber" name="L156" href="#L156">156</a>     MAP(<span class="jxr_string">"lsf-map"</span>, '\ue08b'),
+<a class="jxr_linenumber" name="L157" href="#L157">157</a>     MEAL(<span class="jxr_string">"lsf-meal"</span>, '\ue08c'),
+<a class="jxr_linenumber" name="L158" href="#L158">158</a>     MEMO(<span class="jxr_string">"lsf-memo"</span>, '\ue08d'),
+<a class="jxr_linenumber" name="L159" href="#L159">159</a>     MENU(<span class="jxr_string">"lsf-menu"</span>, '\ue08e'),
+<a class="jxr_linenumber" name="L160" href="#L160">160</a>     MINUS(<span class="jxr_string">"lsf-minus"</span>, '\ue08f'),
+<a class="jxr_linenumber" name="L161" href="#L161">161</a>     MIXI(<span class="jxr_string">"lsf-mixi"</span>, '\ue090'),
+<a class="jxr_linenumber" name="L162" href="#L162">162</a>     MOBAGE(<span class="jxr_string">"lsf-mobage"</span>, '\ue158'),
+<a class="jxr_linenumber" name="L163" href="#L163">163</a>     MOBILE(<span class="jxr_string">"lsf-mobile"</span>, '\ue078'),
+<a class="jxr_linenumber" name="L164" href="#L164">164</a>     MOVE(<span class="jxr_string">"lsf-move"</span>, '\ue093'),
+<a class="jxr_linenumber" name="L165" href="#L165">165</a>     MUSIC(<span class="jxr_string">"lsf-music"</span>, '\ue094'),
+<a class="jxr_linenumber" name="L166" href="#L166">166</a>     MYSPACE(<span class="jxr_string">"lsf-myspace"</span>, '\ue16a'),
+<a class="jxr_linenumber" name="L167" href="#L167">167</a>     NEXT(<span class="jxr_string">"lsf-next"</span>, '\ue096'),
+<a class="jxr_linenumber" name="L168" href="#L168">168</a>     NOTIFY(<span class="jxr_string">"lsf-notify"</span>, '\ue097'),
+<a class="jxr_linenumber" name="L169" href="#L169">169</a>     OFF(<span class="jxr_string">"lsf-off"</span>, '\ue098'),
+<a class="jxr_linenumber" name="L170" href="#L170">170</a>     OPERA(<span class="jxr_string">"lsf-opera"</span>, '\ue099'),
+<a class="jxr_linenumber" name="L171" href="#L171">171</a>     PAINT(<span class="jxr_string">"lsf-paint"</span>, '\ue09b'),
+<a class="jxr_linenumber" name="L172" href="#L172">172</a>     PAPERBOY(<span class="jxr_string">"lsf-paperboy"</span>, '\ue162'),
+<a class="jxr_linenumber" name="L173" href="#L173">173</a>     PARAMATER(<span class="jxr_string">"lsf-paramater"</span>, '\ue09c'),
+<a class="jxr_linenumber" name="L174" href="#L174">174</a>     PAUSE(<span class="jxr_string">"lsf-pause"</span>, '\ue09d'),
+<a class="jxr_linenumber" name="L175" href="#L175">175</a>     PC(<span class="jxr_string">"lsf-pc"</span>, '\ue09e'),
+<a class="jxr_linenumber" name="L176" href="#L176">176</a>     PEN(<span class="jxr_string">"lsf-pen"</span>, '\ue09f'),
+<a class="jxr_linenumber" name="L177" href="#L177">177</a>     PHONE(<span class="jxr_string">"lsf-phone"</span>, '\ue100'),
+<a class="jxr_linenumber" name="L178" href="#L178">178</a>     PHOTO(<span class="jxr_string">"lsf-photo"</span>, '\ue101'),
+<a class="jxr_linenumber" name="L179" href="#L179">179</a>     PICASA(<span class="jxr_string">"lsf-picasa"</span>, '\ue102'),
+<a class="jxr_linenumber" name="L180" href="#L180">180</a>     PIN(<span class="jxr_string">"lsf-pin"</span>, '\ue103'),
+<a class="jxr_linenumber" name="L181" href="#L181">181</a>     PINTEREST(<span class="jxr_string">"lsf-pinterest"</span>, '\ue104'),
+<a class="jxr_linenumber" name="L182" href="#L182">182</a>     PLANE(<span class="jxr_string">"lsf-plane"</span>, '\ue105'),
+<a class="jxr_linenumber" name="L183" href="#L183">183</a>     PLAY(<span class="jxr_string">"lsf-play"</span>, '\ue106'),
+<a class="jxr_linenumber" name="L184" href="#L184">184</a>     PLAYMEDIA(<span class="jxr_string">"lsf-playmedia"</span>, '\ue107'),
+<a class="jxr_linenumber" name="L185" href="#L185">185</a>     PLUS(<span class="jxr_string">"lsf-plus"</span>, '\ue108'),
+<a class="jxr_linenumber" name="L186" href="#L186">186</a>     POINTER(<span class="jxr_string">"lsf-pointer"</span>, '\ue16b'),
+<a class="jxr_linenumber" name="L187" href="#L187">187</a>     PRESENT(<span class="jxr_string">"lsf-present"</span>, '\ue109'),
+<a class="jxr_linenumber" name="L188" href="#L188">188</a>     PRINT(<span class="jxr_string">"lsf-print"</span>, '\ue10a'),
+<a class="jxr_linenumber" name="L189" href="#L189">189</a>     QUOTE(<span class="jxr_string">"lsf-quote"</span>, '\ue10b'),
+<a class="jxr_linenumber" name="L190" href="#L190">190</a>     READABILITY(<span class="jxr_string">"lsf-readability"</span>, '\ue10c'),
+<a class="jxr_linenumber" name="L191" href="#L191">191</a>     RECORD(<span class="jxr_string">"lsf-record"</span>, '\ue10d'),
+<a class="jxr_linenumber" name="L192" href="#L192">192</a>     REFRESH(<span class="jxr_string">"lsf-refresh"</span>, '\ue10e'),
+<a class="jxr_linenumber" name="L193" href="#L193">193</a>     REFRESHBUTTON(<span class="jxr_string">"lsf-refreshbutton"</span>, '\ue14d'),
+<a class="jxr_linenumber" name="L194" href="#L194">194</a>     REMOVE(<span class="jxr_string">"lsf-remove"</span>, '\ue10f'),
+<a class="jxr_linenumber" name="L195" href="#L195">195</a>     REPEAT(<span class="jxr_string">"lsf-repeat"</span>, '\ue110'),
+<a class="jxr_linenumber" name="L196" href="#L196">196</a>     REPLY(<span class="jxr_string">"lsf-reply"</span>, '\ue111'),
+<a class="jxr_linenumber" name="L197" href="#L197">197</a>     RIGHT(<span class="jxr_string">"lsf-right"</span>, '\ue112'),
+<a class="jxr_linenumber" name="L198" href="#L198">198</a>     RSS(<span class="jxr_string">"lsf-rss"</span>, '\ue113'),
+<a class="jxr_linenumber" name="L199" href="#L199">199</a>     SAFARI(<span class="jxr_string">"lsf-safari"</span>, '\ue114'),
+<a class="jxr_linenumber" name="L200" href="#L200">200</a>     SAVE(<span class="jxr_string">"lsf-save"</span>, '\ue115'),
+<a class="jxr_linenumber" name="L201" href="#L201">201</a>     SEARCH(<span class="jxr_string">"lsf-search"</span>, '\ue116'),
+<a class="jxr_linenumber" name="L202" href="#L202">202</a>     SEPIA(<span class="jxr_string">"lsf-sepia"</span>, '\ue14e'),
+<a class="jxr_linenumber" name="L203" href="#L203">203</a>     SERVER(<span class="jxr_string">"lsf-server"</span>, '\ue16c'),
+<a class="jxr_linenumber" name="L204" href="#L204">204</a>     SETTING(<span class="jxr_string">"lsf-setting"</span>, '\ue055'),
+<a class="jxr_linenumber" name="L205" href="#L205">205</a>     SETUP(<span class="jxr_string">"lsf-setup"</span>, '\ue117'),
+<a class="jxr_linenumber" name="L206" href="#L206">206</a>     SHARE(<span class="jxr_string">"lsf-share"</span>, '\ue118'),
+<a class="jxr_linenumber" name="L207" href="#L207">207</a>     SHOPPING(<span class="jxr_string">"lsf-shopping"</span>, '\ue119'),
+<a class="jxr_linenumber" name="L208" href="#L208">208</a>     SHUFFLE(<span class="jxr_string">"lsf-shuffle"</span>, '\ue11a'),
+<a class="jxr_linenumber" name="L209" href="#L209">209</a>     SITEMAP(<span class="jxr_string">"lsf-sitemap"</span>, '\ue16d'),
+<a class="jxr_linenumber" name="L210" href="#L210">210</a>     SKYPE(<span class="jxr_string">"lsf-skype"</span>, '\ue11b'),
+<a class="jxr_linenumber" name="L211" href="#L211">211</a>     SLEIPNIR(<span class="jxr_string">"lsf-sleipnir"</span>, '\ue11c'),
+<a class="jxr_linenumber" name="L212" href="#L212">212</a>     SLIDESHARE(<span class="jxr_string">"lsf-slideshare"</span>, '\ue179'),
+<a class="jxr_linenumber" name="L213" href="#L213">213</a>     SMALL(<span class="jxr_string">"lsf-small"</span>, '\ue11d'),
+<a class="jxr_linenumber" name="L214" href="#L214">214</a>     SMILE(<span class="jxr_string">"lsf-smile"</span>, '\ue11e'),
+<a class="jxr_linenumber" name="L215" href="#L215">215</a>     SNS(<span class="jxr_string">"lsf-sns"</span>, '\ue11f'),
+<a class="jxr_linenumber" name="L216" href="#L216">216</a>     SORT(<span class="jxr_string">"lsf-sort"</span>, '\ue120'),
+<a class="jxr_linenumber" name="L217" href="#L217">217</a>     SOUNDCLOUD(<span class="jxr_string">"lsf-soundcloud"</span>, '\ue17a'),
+<a class="jxr_linenumber" name="L218" href="#L218">218</a>     SPA(<span class="jxr_string">"lsf-spa"</span>, '\ue177'),
+<a class="jxr_linenumber" name="L219" href="#L219">219</a>     STAR(<span class="jxr_string">"lsf-star"</span>, '\ue121'),
+<a class="jxr_linenumber" name="L220" href="#L220">220</a>     STAREMPTY(<span class="jxr_string">"lsf-starempty"</span>, '\ue122'),
+<a class="jxr_linenumber" name="L221" href="#L221">221</a>     STOP(<span class="jxr_string">"lsf-stop"</span>, '\ue123'),
+<a class="jxr_linenumber" name="L222" href="#L222">222</a>     STRIKE(<span class="jxr_string">"lsf-strike"</span>, '\ue159'),
+<a class="jxr_linenumber" name="L223" href="#L223">223</a>     SURPRISE(<span class="jxr_string">"lsf-surprise"</span>, '\ue124'),
+<a class="jxr_linenumber" name="L224" href="#L224">224</a>     SYNC(<span class="jxr_string">"lsf-sync"</span>, '\ue125'),
+<a class="jxr_linenumber" name="L225" href="#L225">225</a>     TABLE(<span class="jxr_string">"lsf-table"</span>, '\ue127'),
+<a class="jxr_linenumber" name="L226" href="#L226">226</a>     TABS(<span class="jxr_string">"lsf-tabs"</span>, '\ue095'),
+<a class="jxr_linenumber" name="L227" href="#L227">227</a>     TAG(<span class="jxr_string">"lsf-tag"</span>, '\ue128'),
+<a class="jxr_linenumber" name="L228" href="#L228">228</a>     TERMINAL(<span class="jxr_string">"lsf-terminal"</span>, '\ue16e'),
+<a class="jxr_linenumber" name="L229" href="#L229">229</a>     TILE(<span class="jxr_string">"lsf-tile"</span>, '\ue129'),
+<a class="jxr_linenumber" name="L230" href="#L230">230</a>     TILEMENU(<span class="jxr_string">"lsf-tilemenu"</span>, '\ue12a'),
+<a class="jxr_linenumber" name="L231" href="#L231">231</a>     TIME(<span class="jxr_string">"lsf-time"</span>, '\ue12b'),
+<a class="jxr_linenumber" name="L232" href="#L232">232</a>     TROUBLE(<span class="jxr_string">"lsf-trouble"</span>, '\ue12d'),
+<a class="jxr_linenumber" name="L233" href="#L233">233</a>     TUMBLR(<span class="jxr_string">"lsf-tumblr"</span>, '\ue12e'),
+<a class="jxr_linenumber" name="L234" href="#L234">234</a>     TWINKLE(<span class="jxr_string">"lsf-twinkle"</span>, '\ue073'),
+<a class="jxr_linenumber" name="L235" href="#L235">235</a>     TWITTER(<span class="jxr_string">"lsf-twitter"</span>, '\ue12f'),
+<a class="jxr_linenumber" name="L236" href="#L236">236</a>     UBUNTU(<span class="jxr_string">"lsf-ubuntu"</span>, '\ue17b'),
+<a class="jxr_linenumber" name="L237" href="#L237">237</a>     UMBRELLA(<span class="jxr_string">"lsf-umbrella"</span>, '\ue178'),
+<a class="jxr_linenumber" name="L238" href="#L238">238</a>     UNDERLINE(<span class="jxr_string">"lsf-underline"</span>, '\ue132'),
+<a class="jxr_linenumber" name="L239" href="#L239">239</a>     UNDO(<span class="jxr_string">"lsf-undo"</span>, '\ue133'),
+<a class="jxr_linenumber" name="L240" href="#L240">240</a>     UNLOCK(<span class="jxr_string">"lsf-unlock"</span>, '\ue134'),
+<a class="jxr_linenumber" name="L241" href="#L241">241</a>     UP(<span class="jxr_string">"lsf-up"</span>, '\ue135'),
+<a class="jxr_linenumber" name="L242" href="#L242">242</a>     UPLOAD(<span class="jxr_string">"lsf-upload"</span>, '\ue136'),
+<a class="jxr_linenumber" name="L243" href="#L243">243</a>     USER(<span class="jxr_string">"lsf-user"</span>, '\ue137'),
+<a class="jxr_linenumber" name="L244" href="#L244">244</a>     USTREAM(<span class="jxr_string">"lsf-ustream"</span>, '\ue16f'),
+<a class="jxr_linenumber" name="L245" href="#L245">245</a>     VERTICAL(<span class="jxr_string">"lsf-vertical"</span>, '\ue138'),
+<a class="jxr_linenumber" name="L246" href="#L246">246</a>     VIDEO(<span class="jxr_string">"lsf-video"</span>, '\ue139'),
+<a class="jxr_linenumber" name="L247" href="#L247">247</a>     VIEW(<span class="jxr_string">"lsf-view"</span>, '\ue13a'),
+<a class="jxr_linenumber" name="L248" href="#L248">248</a>     VIMEO(<span class="jxr_string">"lsf-vimeo"</span>, '\ue170'),
+<a class="jxr_linenumber" name="L249" href="#L249">249</a>     VK(<span class="jxr_string">"lsf-vk"</span>, '\ue17c'),
+<a class="jxr_linenumber" name="L250" href="#L250">250</a>     VOLUME(<span class="jxr_string">"lsf-volume"</span>, '\ue13b'),
+<a class="jxr_linenumber" name="L251" href="#L251">251</a>     VOLUMEDOWN(<span class="jxr_string">"lsf-volumedown"</span>, '\ue13c'),
+<a class="jxr_linenumber" name="L252" href="#L252">252</a>     VOLUMEUP(<span class="jxr_string">"lsf-volumeup"</span>, '\ue13d'),
+<a class="jxr_linenumber" name="L253" href="#L253">253</a>     WALKING(<span class="jxr_string">"lsf-walking"</span>, '\ue13e'),
+<a class="jxr_linenumber" name="L254" href="#L254">254</a>     WEB(<span class="jxr_string">"lsf-web"</span>, '\ue13f'),
+<a class="jxr_linenumber" name="L255" href="#L255">255</a>     WIFI(<span class="jxr_string">"lsf-wifi"</span>, '\ue140'),
+<a class="jxr_linenumber" name="L256" href="#L256">256</a>     WINDOWS(<span class="jxr_string">"lsf-windows"</span>, '\ue151'),
+<a class="jxr_linenumber" name="L257" href="#L257">257</a>     WINK(<span class="jxr_string">"lsf-wink"</span>, '\ue081'),
+<a class="jxr_linenumber" name="L258" href="#L258">258</a>     WORDPRESS(<span class="jxr_string">"lsf-wordpress"</span>, '\ue171'),
+<a class="jxr_linenumber" name="L259" href="#L259">259</a>     YAHOO(<span class="jxr_string">"lsf-yahoo"</span>, '\ue172'),
+<a class="jxr_linenumber" name="L260" href="#L260">260</a>     YAPCASIALOGOMARK(<span class="jxr_string">"lsf-yapcasialogomark"</span>, '\ue15c'),
+<a class="jxr_linenumber" name="L261" href="#L261">261</a>     YELP(<span class="jxr_string">"lsf-yelp"</span>, '\ue17d'),
+<a class="jxr_linenumber" name="L262" href="#L262">262</a>     YOUTUBE(<span class="jxr_string">"lsf-youtube"</span>, '\ue141'),
+<a class="jxr_linenumber" name="L263" href="#L263">263</a>     ZOOMIN(<span class="jxr_string">"lsf-zoomin"</span>, '\ue142'),
+<a class="jxr_linenumber" name="L264" href="#L264">264</a>     ZOOMOUT(<span class="jxr_string">"lsf-zoomout"</span>, '\ue143');
+<a class="jxr_linenumber" name="L265" href="#L265">265</a> 
+<a class="jxr_linenumber" name="L266" href="#L266">266</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a name="LigatureSymbols" href="../../../../org/kordamp/ikonli/ligaturesymbols/LigatureSymbols.html#LigatureSymbols">LigatureSymbols</a> findByDescription(String description) {
+<a class="jxr_linenumber" name="L267" href="#L267">267</a>         <strong class="jxr_keyword">for</strong> (<a name="LigatureSymbols" href="../../../../org/kordamp/ikonli/ligaturesymbols/LigatureSymbols.html#LigatureSymbols">LigatureSymbols</a> font : values()) {
+<a class="jxr_linenumber" name="L268" href="#L268">268</a>             <strong class="jxr_keyword">if</strong> (font.getDescription().equals(description)) {
+<a class="jxr_linenumber" name="L269" href="#L269">269</a>                 <strong class="jxr_keyword">return</strong> font;
+<a class="jxr_linenumber" name="L270" href="#L270">270</a>             }
+<a class="jxr_linenumber" name="L271" href="#L271">271</a>         }
+<a class="jxr_linenumber" name="L272" href="#L272">272</a>         <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> IllegalArgumentException(<span class="jxr_string">"Icon description '"</span> + description + <span class="jxr_string">"' is invalid!"</span>);
+<a class="jxr_linenumber" name="L273" href="#L273">273</a>     }
+<a class="jxr_linenumber" name="L274" href="#L274">274</a> 
+<a class="jxr_linenumber" name="L275" href="#L275">275</a>     <strong class="jxr_keyword">private</strong> String description;
+<a class="jxr_linenumber" name="L276" href="#L276">276</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">char</strong> code;
+<a class="jxr_linenumber" name="L277" href="#L277">277</a> 
+<a class="jxr_linenumber" name="L278" href="#L278">278</a>     <a name="LigatureSymbols" href="../../../../org/kordamp/ikonli/ligaturesymbols/LigatureSymbols.html#LigatureSymbols">LigatureSymbols</a>(String description, <strong class="jxr_keyword">char</strong> code) {
+<a class="jxr_linenumber" name="L279" href="#L279">279</a>         <strong class="jxr_keyword">this</strong>.description = description;
+<a class="jxr_linenumber" name="L280" href="#L280">280</a>         <strong class="jxr_keyword">this</strong>.code = code;
+<a class="jxr_linenumber" name="L281" href="#L281">281</a>     }
+<a class="jxr_linenumber" name="L282" href="#L282">282</a> 
+<a class="jxr_linenumber" name="L283" href="#L283">283</a>     @Override
+<a class="jxr_linenumber" name="L284" href="#L284">284</a>     <strong class="jxr_keyword">public</strong> String getDescription() {
+<a class="jxr_linenumber" name="L285" href="#L285">285</a>         <strong class="jxr_keyword">return</strong> description;
+<a class="jxr_linenumber" name="L286" href="#L286">286</a>     }
+<a class="jxr_linenumber" name="L287" href="#L287">287</a> 
+<a class="jxr_linenumber" name="L288" href="#L288">288</a>     @Override
+<a class="jxr_linenumber" name="L289" href="#L289">289</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">char</strong> getCode() {
+<a class="jxr_linenumber" name="L290" href="#L290">290</a>         <strong class="jxr_keyword">return</strong> code;
+<a class="jxr_linenumber" name="L291" href="#L291">291</a>     }
+<a class="jxr_linenumber" name="L292" href="#L292">292</a> }
+</pre>
+<hr/>
+<div id="footer"></div>
+</body>
+</html>
