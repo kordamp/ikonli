@@ -44,6 +44,6 @@ public class FontAwesomeSolidIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontFamily() {
-        return "Font Awesome 5 Free";
+        return "Font Awesome 5 Free Solid";
     }
 }
