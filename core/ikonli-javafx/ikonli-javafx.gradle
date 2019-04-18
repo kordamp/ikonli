@@ -17,7 +17,7 @@
  */
 
 dependencies {
-    implementation project(':ikonli-core')
+    api project(':ikonli-core')
 
     compileOnly "org.openjfx:javafx-base:${javafxVersion}:${platform}"
     compileOnly "org.openjfx:javafx-graphics:${javafxVersion}:${platform}"

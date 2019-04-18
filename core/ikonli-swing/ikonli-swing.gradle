@@ -17,5 +17,5 @@
  */
 
 dependencies {
-    implementation project(':ikonli-core')
+    api project(':ikonli-core')
 }

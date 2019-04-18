@@ -18,11 +18,11 @@
 
 plugins {
     id 'org.kordamp.gradle.kordamp-parentpom' version '1.3.0'
-    id 'org.kordamp.gradle.build-scan'        version '0.16.0'
-    id 'org.kordamp.gradle.source-xref'       version '0.15.1'
+    id 'org.kordamp.gradle.build-scan'        version '0.17.0'
+    id 'org.kordamp.gradle.source-xref'       version '0.17.0'
     id 'com.google.osdetector'                version '1.6.1'
     id 'org.jonnyzzz.java9c'                  version '0.2.3' apply false
-    id 'org.javamodularity.moduleplugin'      version '1.4.1' apply false
+    id 'org.javamodularity.moduleplugin'      version '1.5.0' apply false
 }
 
 buildScan {
@@ -99,7 +99,7 @@ idea {
 
 subprojects { subproj ->
     if (!subproj.name.contains('guide')) {
-        apply plugin: 'java'
+        apply plugin: 'java-library'
         apply plugin: 'org.jonnyzzz.java9c'
         apply plugin: 'org.javamodularity.moduleplugin'
 
