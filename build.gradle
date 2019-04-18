@@ -64,6 +64,9 @@ config {
 
     javadoc {
         excludes = ['**/*.html', 'META-INF/**']
+        autoLinks {
+            enabled = false
+        }
         options {
             addBooleanOption('javafx', true)
         }
