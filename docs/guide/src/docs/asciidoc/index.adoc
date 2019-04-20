@@ -14,9 +14,9 @@
 :project-group: org.kordamp.ikonli
 
 :leveloffset: 1
-include::introduction.adoc[]
-include::usage.adoc[]
-include::icon-packs.adoc[]
+include::{includedir}/introduction.adoc[]
+include::{includedir}/usage.adoc[]
+include::{includedir}/icon-packs.adoc[]
 
 = Links
 

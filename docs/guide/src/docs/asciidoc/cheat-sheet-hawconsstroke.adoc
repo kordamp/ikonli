@@ -9,5 +9,5 @@
 </style>
 ++++
 
-include::{projectDir}/build/tmp/_hawconsstroke_cheat_sheet.adoc[]
+include::{gradle-projectdir}/build/tmp/_hawconsstroke_cheat_sheet.adoc[]
 

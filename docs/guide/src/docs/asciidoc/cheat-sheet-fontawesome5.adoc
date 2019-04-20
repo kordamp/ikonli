@@ -17,7 +17,7 @@ font resources.
 </style>
 ++++
 
-include::{projectDir}/build/tmp/_fontawesome5_brands_cheat_sheet.adoc[]
+include::{gradle-projectdir}/build/tmp/_fontawesome5_brands_cheat_sheet.adoc[]
 
 == Regular
 
@@ -32,7 +32,7 @@ include::{projectDir}/build/tmp/_fontawesome5_brands_cheat_sheet.adoc[]
 </style>
 ++++
 
-include::{projectDir}/build/tmp/_fontawesome5_regular_cheat_sheet.adoc[]
+include::{gradle-projectdir}/build/tmp/_fontawesome5_regular_cheat_sheet.adoc[]
 
 == Solid
 
@@ -47,4 +47,4 @@ include::{projectDir}/build/tmp/_fontawesome5_regular_cheat_sheet.adoc[]
 </style>
 ++++
 
-include::{projectDir}/build/tmp/_fontawesome5_solid_cheat_sheet.adoc[]
+include::{gradle-projectdir}/build/tmp/_fontawesome5_solid_cheat_sheet.adoc[]

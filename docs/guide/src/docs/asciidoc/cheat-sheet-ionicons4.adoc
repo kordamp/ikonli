@@ -11,7 +11,7 @@
 </style>
 ++++
 
-include::{projectDir}/build/tmp/_ionicons4_IOS_cheat_sheet.adoc[]
+include::{gradle-projectdir}/build/tmp/_ionicons4_IOS_cheat_sheet.adoc[]
 
 == Material
 
@@ -24,7 +24,7 @@ include::{projectDir}/build/tmp/_ionicons4_IOS_cheat_sheet.adoc[]
 </style>
 ++++
 
-include::{projectDir}/build/tmp/_ionicons4_Material_cheat_sheet.adoc[]
+include::{gradle-projectdir}/build/tmp/_ionicons4_Material_cheat_sheet.adoc[]
 
 == Logo
 
@@ -38,4 +38,4 @@ include::{projectDir}/build/tmp/_ionicons4_Material_cheat_sheet.adoc[]
 </style>
 ++++
 
-include::{projectDir}/build/tmp/_ionicons4_Logo_cheat_sheet.adoc[]
+include::{gradle-projectdir}/build/tmp/_ionicons4_Logo_cheat_sheet.adoc[]

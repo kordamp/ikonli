@@ -17,7 +17,7 @@
  */
 
 plugins {
-    id 'org.kordamp.gradle.guide'   version '0.17.0'
+    id 'org.kordamp.gradle.guide'   version '0.18.0'
     id 'org.ajoberstar.git-publish' version '0.3.2'
 }
 

@@ -9,5 +9,5 @@
 </style>
 ++++
 
-include::{projectDir}/build/tmp/_websymbols_cheat_sheet.adoc[]
+include::{gradle-projectdir}/build/tmp/_websymbols_cheat_sheet.adoc[]
 
