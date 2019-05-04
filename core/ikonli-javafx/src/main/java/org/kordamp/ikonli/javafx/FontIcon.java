@@ -19,8 +19,6 @@ package org.kordamp.ikonli.javafx;
 
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.ObjectProperty;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.css.CssMetaData;
 import javafx.css.Styleable;
 import javafx.css.StyleableIntegerProperty;
@@ -77,23 +75,25 @@ public class FontIcon extends Text implements Icon {
         setIconSize(16);
         setIconColor(Color.BLACK);
 
-        fontProperty().addListener(new ChangeListener<Font>() {
-            @Override
-            public void changed(ObservableValue<? extends Font> observable, Font oldValue, Font newValue) {
-                int size = (int) newValue.getSize();
-                if (size != getIconSize()) {
-                    setIconSize(size);
-                }
+        fontProperty().addListener((v, o, n) -> {
+            int size = (int) n.getSize();
+            if (size != getIconSize()) {
+                setIconSize(size);
             }
         });
 
-        fillProperty().addListener(new ChangeListener<Paint>() {
-            @Override
-            public void changed(ObservableValue<? extends Paint> observable, Paint oldValue, Paint newValue) {
-                Paint fill = getIconColor();
-                if (!Objects.equals(fill, newValue)) {
-                    setIconColor(newValue);
-                }
+        fillProperty().addListener((v, o, n) -> {
+            Paint fill = getIconColor();
+            if (!Objects.equals(fill, n)) {
+                setIconColor(n);
+            }
+        });
+
+        iconCodeProperty().addListener((v, o, n) -> {
+            if (n != null) {
+                IkonHandler ikonHandler = IkonResolver.getInstance().resolveIkonHandler(n.getDescription());
+                setStyle(normalizeStyle(getStyle(), "-fx-font-family", "'" + ikonHandler.getFontFamily() + "'"));
+                setText(String.valueOf(n.getCode()));
             }
         });
     }
@@ -132,13 +132,10 @@ public class FontIcon extends Text implements Icon {
                     return "iconSize";
                 }
             };
-            iconSize.addListener(new ChangeListener<Number>() {
-                @Override
-                public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
-                    Font font = FontIcon.this.getFont();
-                    FontIcon.this.setFont(Font.font(font.getFamily(), newValue.doubleValue()));
-                    FontIcon.this.setStyle(normalizeStyle(getStyle(), "-fx-font-size", newValue.intValue() + "px"));
-                }
+            iconSize.addListener((v, o, n) -> {
+                Font font = FontIcon.this.getFont();
+                FontIcon.this.setFont(Font.font(font.getFamily(), n.doubleValue()));
+                FontIcon.this.setStyle(normalizeStyle(getStyle(), "-fx-font-size", n.intValue() + "px"));
             });
         }
         return iconSize;
@@ -147,7 +144,7 @@ public class FontIcon extends Text implements Icon {
     @Override
     public ObjectProperty<Paint> iconColorProperty() {
         if (iconColor == null) {
-            iconColor = new StyleableObjectProperty<Paint>(Color.BLACK) {
+            iconColor = new StyleableObjectProperty<>(Color.BLACK) {
                 @Override
                 public CssMetaData getCssMetaData() {
                     return StyleableProperties.ICON_COLOR;
@@ -163,19 +160,14 @@ public class FontIcon extends Text implements Icon {
                     return "iconColor";
                 }
             };
-            iconColor.addListener(new ChangeListener<Paint>() {
-                @Override
-                public void changed(ObservableValue<? extends Paint> observable, Paint oldValue, Paint newValue) {
-                    FontIcon.this.setFill(newValue);
-                }
-            });
+            iconColor.addListener((v, o, n) -> FontIcon.this.setFill(n));
         }
         return iconColor;
     }
 
     public ObjectProperty<Ikon> iconCodeProperty() {
         if (iconCode == null) {
-            iconCode = new StyleableObjectProperty<Ikon>() {
+            iconCode = new StyleableObjectProperty<>() {
                 @Override
                 public CssMetaData getCssMetaData() {
                     return StyleableProperties.ICON_CODE;
@@ -191,18 +183,14 @@ public class FontIcon extends Text implements Icon {
                     return "iconCode";
                 }
             };
-            iconCode.addListener(new ChangeListener<Ikon>() {
-                @Override
-                public void changed(ObservableValue<? extends Ikon> observable, Ikon oldValue, Ikon newValue) {
-                    FontIcon.this.setIconCode(newValue);
+
+            iconCode.addListener((v, o, n) -> {
+                if (!iconCode.isBound()) {
+                    FontIcon.this.setIconCode(n);
                 }
             });
         }
         return iconCode;
-    }
-
-    public ObjectProperty<Ikon> getIconCodeProperty() {
-        return iconCodeProperty();
     }
 
     @Override
@@ -220,8 +208,7 @@ public class FontIcon extends Text implements Icon {
 
     @Override
     public void setIconColor(Paint paint) {
-        requireNonNull(paint, "Argument 'paint' must not be null");
-        iconColorProperty().set(paint);
+        iconColorProperty().set(requireNonNull(paint, "Argument 'paint' must not be null"));
     }
 
     @Override
@@ -235,9 +222,6 @@ public class FontIcon extends Text implements Icon {
 
     public void setIconCode(Ikon iconCode) {
         iconCodeProperty().set(requireNonNull(iconCode, "Argument 'code' must not be null"));
-        IkonHandler ikonHandler = org.kordamp.ikonli.javafx.IkonResolver.getInstance().resolveIkonHandler(iconCode.getDescription());
-        setStyle(normalizeStyle(getStyle(), "-fx-font-family", "'" + ikonHandler.getFontFamily() + "'"));
-        setText(String.valueOf(iconCode.getCode()));
     }
 
     private String normalizeStyle(String style, String key, String value) {
@@ -312,7 +296,7 @@ public class FontIcon extends Text implements Icon {
 
         static {
             final List<CssMetaData<? extends Styleable, ?>> styleables =
-                new ArrayList<CssMetaData<? extends Styleable, ?>>(Text.getClassCssMetaData());
+                new ArrayList<>(Text.getClassCssMetaData());
             styleables.add(ICON_SIZE);
             styleables.add(ICON_COLOR);
             styleables.add(ICON_CODE);
