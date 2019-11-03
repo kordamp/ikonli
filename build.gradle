@@ -112,6 +112,14 @@ subprojects { subproj ->
             subproj.ext.javaVersion = '11'
         } else {
             subproj.modularity.mixedJavaRelease 8
+            subproj.tasks.classes.doLast {
+                copy {
+                    into subproj.sourceSets.main.output.classesDirs.files[0]
+                    from(subproj.tasks.compileModuleInfoJava.destinationDir) {
+                        include 'module-info.class'
+                    }
+                }
+            }
         }
 
         config {
