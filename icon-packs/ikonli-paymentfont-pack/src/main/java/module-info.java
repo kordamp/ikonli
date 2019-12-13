@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 module org.kordamp.ikonli.paymentfont {
-    requires org.kordamp.iconli.core;
+    requires org.kordamp.ikonli;
     requires static org.kordamp.jipsy;
     exports org.kordamp.ikonli.paymentfont;
 

@@ -17,7 +17,7 @@
  */
 open module org.kordamp.ikonli.sampler.swing {
     requires java.desktop;
-    requires org.kordamp.iconli.core;
+    requires org.kordamp.ikonli;
     requires org.kordamp.ikonli.swing;
     requires org.kordamp.ikonli.dashicons;
     requires org.kordamp.ikonli.devicons;

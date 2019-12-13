@@ -20,7 +20,7 @@ open module org.kordamp.ikonli.sampler.javafx {
     requires javafx.graphics;
     requires javafx.controls;
     requires javafx.fxml;
-    requires org.kordamp.iconli.core;
+    requires org.kordamp.ikonli;
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.ikonli.dashicons;
     requires org.kordamp.ikonli.devicons;

@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 module org.kordamp.ikonli.swing {
-    requires org.kordamp.iconli.core;
+    requires org.kordamp.ikonli;
     requires java.desktop;
     uses org.kordamp.ikonli.IkonHandler;
     exports org.kordamp.ikonli.swing;

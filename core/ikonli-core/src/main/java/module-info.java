@@ -15,7 +15,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-module org.kordamp.iconli.core {
+module org.kordamp.ikonli {
     exports org.kordamp.ikonli;
 
     provides org.kordamp.ikonli.IkonHandler

@@ -17,8 +17,8 @@
  */
 
 plugins {
-    id 'org.kordamp.gradle.kordamp-parentpom' version '1.8.0'
-    id 'org.kordamp.gradle.source-xref'       version '0.29.0'
+    id 'org.kordamp.gradle.kordamp-parentpom' version '1.9.2'
+    id 'org.kordamp.gradle.source-xref'       version '0.30.4'
     id 'com.google.osdetector'                version '1.6.2'
     id 'org.jonnyzzz.java9c'                  version '0.2.3' apply false
     id 'org.javamodularity.moduleplugin'      version '1.6.0' apply false
@@ -127,7 +127,7 @@ subprojects { subproj ->
         }
 
         dependencies {
-            testCompile 'junit:junit:4.12'
+            testImplementation 'junit:junit:4.12'
         }
 
         license {

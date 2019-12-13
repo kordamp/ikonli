@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 module org.kordamp.ikonli.javafx {
-    requires org.kordamp.iconli.core;
+    requires org.kordamp.ikonli;
     uses org.kordamp.ikonli.IkonHandler;
     exports org.kordamp.ikonli.javafx;
 

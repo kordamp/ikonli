@@ -178,7 +178,7 @@ module com.acme.demo {
     requires javafx.base;
     requires javafx.graphics;
     requires javafx.controls;
-    requires org.kordamp.iconli.core;
+    requires org.kordamp.ikonli;
     requires org.kordamp.ikonli.javafx;
     // add icon pack modules
     requires org.kordamp.ikonli.fontawesome;
