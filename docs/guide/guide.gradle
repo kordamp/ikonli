@@ -17,7 +17,7 @@
  */
 
 plugins {
-    id 'org.kordamp.gradle.guide'   version '0.18.0'
+    id 'org.kordamp.gradle.guide'   version '0.31.0'
     id 'org.ajoberstar.git-publish' version '0.3.2'
 }
 
@@ -198,33 +198,3 @@ asciidoctor {
         from project(':ikonli-zondicons-pack').file("src/main/resources/META-INF/resources/zondicons/${zondiconsVersion}")
     }
 }
-
-afterEvaluate {
-    def createGuideTask = project.tasks.findByName('createGuide')
-
-    gitPublish {
-        repoUri = rootProject.extensions.findByName('config').info.links.scm
-        branch  = 'gh-pages'
-        contents {
-            from createGuideTask.outputs.files
-        }
-        commitMessage = "Publish guide for $version"
-    }
-
-    gitPublishCommit.dependsOn(createGuideTask)
-}
-
-gradle.addBuildListener(new BuildAdapter(){
-    @Override
-    void projectsEvaluated(Gradle gradle) {
-        def createGuideTask = project.tasks.findByName('createGuide')
-
-        def aggregateSourceXrefTask = rootProject.tasks.findByName('aggregateSourceXref')
-
-        createGuideTask.finalizedBy project.tasks.create('copyAggregateXref', Copy) {
-            dependsOn aggregateSourceXrefTask
-            destinationDir = project.file("${createGuideTask.destinationDir}/api-xref")
-            from aggregateSourceXrefTask.outputDirectory
-        }
-    }
-})

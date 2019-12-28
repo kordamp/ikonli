@@ -17,16 +17,10 @@
  */
 
 plugins {
-    id 'org.kordamp.gradle.kordamp-parentpom' version '1.5.0'
-    id 'org.kordamp.gradle.build-scan'        version '0.18.0'
-    id 'org.kordamp.gradle.source-xref'       version '0.18.0'
-    id 'com.google.osdetector'                version '1.6.1'
+    id 'org.kordamp.gradle.kordamp-parentpom' version '1.10.0'
+    id 'com.google.osdetector'                version '1.6.2'
     id 'org.jonnyzzz.java9c'                  version '0.2.3' apply false
-    id 'org.javamodularity.moduleplugin'      version '1.5.0' apply false
-}
-
-buildScan {
-    termsOfServiceAgree = 'yes'
+    id 'org.javamodularity.moduleplugin'      version '1.6.0' apply false
 }
 
 ext.platform = osdetector.os == 'osx' ? 'mac' : osdetector.os == 'windows' ? 'win' : osdetector.os
@@ -39,36 +33,25 @@ config {
         tags          = ['icons', 'javafx', 'swing']
 
         specification { enabled = false }
+    }
 
-        credentials {
-            sonatype {
-                username = project.sonatypeUsername
-                password = project.sonatypePassword
+    docs {
+        sourceHtml {
+            overview {
+                stylesheet = project(':guide').file('src/javadoc/resources/css/stylesheet.css')
             }
         }
-    }
 
-    apidoc {
-        enabled = false
-    }
-
-    sourceHtml {
-        overview {
-            stylesheet = project(':guide').file('src/javadoc/resources/css/stylesheet.css')
-        }
-    }
-
-    sourceXref {
-        inputEncoding = 'UTF-8'
-    }
-
-    javadoc {
-        excludes = ['**/*.html', 'META-INF/**']
-        autoLinks {
-            enabled = false
-        }
-        options {
-            addBooleanOption('javafx', true)
+        javadoc {
+            autoLinks {
+                enabled = false
+            }
+            options {
+                addBooleanOption('javafx', true)
+            }
+            aggregate {
+                enabled = false
+            }
         }
     }
 }

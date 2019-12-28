@@ -1,13 +1,13 @@
 = Ikonli
 :linkattrs:
-:project-owner:   aalmiray
-:project-repo:    kordamp
+:project-owner:   kordamp
+:project-repo:    maven
 :project-name:    ikonli
 :project-group:   org.kordamp.ikonli
 :project-version: 11.3.4
 
 image:https://img.shields.io/travis/aalmiray/{project-name}/master.svg?logo=travis["Build Status (travis)", link="https://travis-ci.org/aalmiray/{project-name}"]
-image:https://img.shields.io/badge/license-ASL2-blue.svg?logo=apache["ASL3 Licensed", link="http://opensource.org/licenses/ASL2"]
+image:https://img.shields.io/badge/license-ASL2-blue.svg?logo=apache["ASL2 Licensed", link="http://opensource.org/licenses/ASL2"]
 image:https://api.bintray.com/packages/{project-owner}/{project-repo}/{project-name}/images/download.svg[link="https://bintray.com/{project-owner}/{project-repo}/{project-name}/_latestVersion"]
 image:https://img.shields.io/maven-central/v/{project-group}/{project-name}-core.svg?label=maven[link="https://search.maven.org/#search|ga|1|{project-group}"]
 image:https://img.shields.io/badge/donations-Patreon-f96854.svg?logo=patreon[link="https://www.patreon.com/user?u=6609318"]
@@ -20,7 +20,7 @@ Ikonli provides icon packs that can be used in Java applications. Currently Swin
 
 You can get the latest version of **Ikonli** directly from link:https://bintray.com[Bintray's JCenter] repository or Maven Central.
 
-Refer to the link:http://aalmiray.github.io/ikonli/[guide, window="_blank"] for further information on configuration
+Refer to the link:http://{project-owner}.github.io/ikonli/[guide, window="_blank"] for further information on configuration
 and usage.
 
 == Building

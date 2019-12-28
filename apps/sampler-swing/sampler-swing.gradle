@@ -57,8 +57,13 @@ dependencies {
 }
 
 config {
-    sourceXref {
-        enabled = false
+    docs {
+        sourceHtml {
+            enabled = false
+        }
+        sourceXref {
+            enabled = false
+        }
     }
 
     publishing {

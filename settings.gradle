@@ -20,15 +20,17 @@ pluginManagement {
     repositories {
         jcenter()
         gradlePluginPortal()
+        mavenLocal()
     }
 }
 
 buildscript {
     repositories {
         gradlePluginPortal()
+        mavenLocal()
     }
     dependencies {
-        classpath 'org.kordamp.gradle:settings-gradle-plugin:0.15.1'
+        classpath 'org.kordamp.gradle:settings-gradle-plugin:0.31.0'
     }
 }
 apply plugin: 'org.kordamp.gradle.settings'

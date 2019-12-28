@@ -15,8 +15,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-apply plugin: 'application'
+plugins {
+    id 'application'
+}
 
 ext.moduleName = 'org.kordamp.ikonli.sampler.javafx'
 mainClassName = "$moduleName/org.kordamp.ikonli.sampler.javafx.Sampler"
@@ -63,8 +64,14 @@ dependencies {
 }
 
 config {
-    sourceXref {
-        enabled = false
+    docs {
+        sourceHtml {
+            enabled = false
+        }
+
+        sourceXref {
+            enabled = false
+        }
     }
 
     publishing {
