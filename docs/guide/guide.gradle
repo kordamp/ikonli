@@ -106,6 +106,7 @@ asciidoctor {
             createIconGenerationTask(packName: 'icomoon', iconClassName: 'org.kordamp.ikonli.icomoon.Icomoon', iconName: 'icm', shortNameSize: 4),
             createIconGenerationTask(packName: 'ionicons', iconClassName: 'org.kordamp.ikonli.ionicons.Ionicons', iconName: 'ion', shortNameSize: 4),
             createIconGenerationTask(packName: 'ligaturesymbols', iconClassName: 'org.kordamp.ikonli.ligaturesymbols.LigatureSymbols', iconName: 'lsf', shortNameSize: 4),
+            createIconGenerationTask(packName: 'linecons', iconClassName: 'org.kordamp.ikonli.linecons.Linecons', iconName: 'li'),
             createIconGenerationTask(packName: 'maki', iconClassName: 'org.kordamp.ikonli.maki.Maki', shortNameSize: 5),
             createIconGenerationTask(packName: 'maki2', iconClassName: 'org.kordamp.ikonli.maki2.Maki2', shortNameSize: 6),
             createIconGenerationTask(packName: 'mapicons', iconClassName: 'org.kordamp.ikonli.mapicons.Mapicons', iconName: 'map-icon', shortNameSize: 9),
@@ -143,6 +144,7 @@ asciidoctor {
             ioniconsVersion        : project.ioniconsVersion,
             ionicons4Version       : project.ionicons4Version,
             ligaturesymbolsVersion : project.ligaturesymbolsVersion,
+            lineconsVersion        : project.lineconsVersion,
             makiVersion            : project.makiVersion,
             maki2Version           : project.maki2Version,
             mapiconsVersion        : project.mapiconsVersion,
@@ -181,6 +183,7 @@ asciidoctor {
         from project(':ikonli-ionicons-pack').file("src/main/resources/META-INF/resources/ionicons/${ioniconsVersion}")
         from project(':ikonli-ionicons4-pack').file("src/main/resources/META-INF/resources/ionicons4/${ionicons4Version}")
         from project(':ikonli-ligaturesymbols-pack').file("src/main/resources/META-INF/resources/ligaturesymbols/${ligaturesymbolsVersion}")
+        from project(':ikonli-linecons-pack').file("src/main/resources/META-INF/resources/linecons/${lineconsVersion}")
         from project(':ikonli-maki-pack').file("src/main/resources/META-INF/resources/maki/${makiVersion}")
         from project(':ikonli-maki2-pack').file("src/main/resources/META-INF/resources/maki2/${maki2Version}")
         from project(':ikonli-mapicons-pack').file("src/main/resources/META-INF/resources/mapicons/${mapiconsVersion}")

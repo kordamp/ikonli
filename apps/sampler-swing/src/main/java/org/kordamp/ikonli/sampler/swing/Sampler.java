@@ -37,6 +37,7 @@ import org.kordamp.ikonli.ionicons4.Ionicons4IOS;
 import org.kordamp.ikonli.ionicons4.Ionicons4Logo;
 import org.kordamp.ikonli.ionicons4.Ionicons4Material;
 import org.kordamp.ikonli.ligaturesymbols.LigatureSymbols;
+import org.kordamp.ikonli.linecons.Linecons;
 import org.kordamp.ikonli.maki.Maki;
 import org.kordamp.ikonli.maki2.Maki2;
 import org.kordamp.ikonli.mapicons.Mapicons;
@@ -99,6 +100,7 @@ public class Sampler {
         createTab(tabPane, Ionicons4IOS.class, new DemoTab(allOf(Ionicons4IOS.class)));
         createTab(tabPane, Ionicons4Logo.class, new DemoTab(allOf(Ionicons4Logo.class)));
         createTab(tabPane, LigatureSymbols.class, new DemoTab(allOf(LigatureSymbols.class)));
+        createTab(tabPane, Linecons.class, new DemoTab(allOf(Linecons.class)));
         createTab(tabPane, Maki.class, new DemoTab(allOf(Maki.class)));
         createTab(tabPane, Maki2.class, new DemoTab(allOf(Maki2.class)));
         createTab(tabPane, Mapicons.class, new DemoTab(allOf(Mapicons.class)));

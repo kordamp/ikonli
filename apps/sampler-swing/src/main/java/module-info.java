@@ -34,6 +34,7 @@ open module org.kordamp.ikonli.sampler.swing {
     requires org.kordamp.ikonli.ionicons;
     requires org.kordamp.ikonli.ionicons4;
     requires org.kordamp.ikonli.ligaturesymbols;
+    requires org.kordamp.ikonli.linecons;
     requires org.kordamp.ikonli.maki;
     requires org.kordamp.ikonli.maki2;
     requires org.kordamp.ikonli.mapicons;

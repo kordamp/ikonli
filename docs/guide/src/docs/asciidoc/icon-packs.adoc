@@ -392,6 +392,32 @@ compile '{project-group}:ikonli-ligaturesymbols-pack:{project-version}'
 </dependency>
 ----
 
+== Linecons
+ * Module: `org.kordamp.ikonli.linecons`
+ * Font version: {lineconsVersion}
+ * https://designmodo.com/linecons-free/linecons[]
+ * link:cheat-sheet-linecons.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-linecons-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-linecons-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
 == Maki
  * Module: `org.kordamp.ikonli.maki`
  * Font version: {makiVersion}
