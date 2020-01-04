@@ -1,7 +1,7 @@
 /*
  * SPDX-License-Identifier: Apache-2.0
  *
- * Copyright 2015-2019 Andres Almiray
+ * Copyright 2015-2020 Andres Almiray
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,12 +15,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 pluginManagement {
     repositories {
         jcenter()
         gradlePluginPortal()
         mavenLocal()
+    }
+    plugins {
+        id 'org.kordamp.gradle.kordamp-parentpom' version kordampPomVersion
+        id 'org.kordamp.gradle.guide'             version kordampPluginVersion
+        id 'org.ajoberstar.git-publish'           version gitPluginVersion
+        id 'com.google.osdetector'                version osPluginVersion
     }
 }
 
@@ -30,7 +35,7 @@ buildscript {
         mavenLocal()
     }
     dependencies {
-        classpath 'org.kordamp.gradle:settings-gradle-plugin:0.31.0'
+        classpath "org.kordamp.gradle:settings-gradle-plugin:$kordampPluginVersion"
     }
 }
 apply plugin: 'org.kordamp.gradle.settings'

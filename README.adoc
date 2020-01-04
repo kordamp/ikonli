@@ -28,7 +28,7 @@ and usage.
 You must meet the following requirements:
 
  * JDK11 as a minimum
- * Gradle 5.0
+ * Gradle 6.0
 
 You may used the included gradle wrapper script if you don't have `gradle` installed.
 

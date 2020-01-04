@@ -1,17 +1,21 @@
 language: java
-install: true
+jdk: openjdk11
+services:
+  - xvfb
 before_install:
+  - sudo apt update
+  - sudo apt install openjfx
+  - chmod +x ./gradlew
   - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
+install: true
 before_cache:
   - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
 cache:
   directories:
-  - $HOME/.gradle/caches/
-  - $HOME/.gradle/wrapper/
-  - $HOME/.sonar/cache/
+    - $HOME/.m2/
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/
 before_script:
   - ./gradlew --version
-script: ./gradlew clean build --console=plain -S --scan
-jdk: openjdk11
+script: ./gradlew clean build -S
 env: TERM=dumb
