@@ -39,16 +39,16 @@ public class FontIcon implements Icon {
     private static final Object LOCK = new Object[0];
 
     private Font font;
-    private int width = 16;
-    private int height = 16;
+    private int width = 8;
+    private int height = 8;
     private BufferedImage buffer;
 
-    private int iconSize = 16;
+    private int iconSize = 8;
     private Color iconColor = Color.BLACK;
     private Ikon ikon;
 
     public static FontIcon of(Ikon ikon) {
-        return of(ikon, 16, Color.BLACK);
+        return of(ikon, 8, Color.BLACK);
     }
 
     public static FontIcon of(Ikon ikon, int iconSize) {
@@ -56,7 +56,7 @@ public class FontIcon implements Icon {
     }
 
     public static FontIcon of(Ikon ikon, Color iconColor) {
-        return of(ikon, 16, iconColor);
+        return of(ikon, 8, iconColor);
     }
 
     public static FontIcon of(Ikon ikon, int iconSize, Color iconColor) {

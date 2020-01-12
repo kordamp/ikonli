@@ -51,7 +51,7 @@ public class FontIcon extends Text implements Icon {
     private StyleableObjectProperty<Ikon> iconCode;
 
     public static FontIcon of(Ikon ikon) {
-        return of(ikon, 16, Color.BLACK);
+        return of(ikon, 8, Color.BLACK);
     }
 
     public static FontIcon of(Ikon ikon, int iconSize) {
@@ -59,7 +59,7 @@ public class FontIcon extends Text implements Icon {
     }
 
     public static FontIcon of(Ikon ikon, Color iconColor) {
-        return of(ikon, 16, iconColor);
+        return of(ikon, 8, iconColor);
     }
 
     public static FontIcon of(Ikon iconCode, int iconSize, Color iconColor) {
@@ -72,7 +72,7 @@ public class FontIcon extends Text implements Icon {
 
     public FontIcon() {
         getStyleClass().setAll("ikonli-font-icon");
-        setIconSize(16);
+        setIconSize(8);
         setIconColor(Color.BLACK);
 
         fontProperty().addListener((v, o, n) -> {
@@ -116,7 +116,7 @@ public class FontIcon extends Text implements Icon {
     @Override
     public IntegerProperty iconSizeProperty() {
         if (iconSize == null) {
-            iconSize = new StyleableIntegerProperty(16) {
+            iconSize = new StyleableIntegerProperty(8) {
                 @Override
                 public CssMetaData getCssMetaData() {
                     return StyleableProperties.ICON_SIZE;
@@ -249,7 +249,7 @@ public class FontIcon extends Text implements Icon {
     private static class StyleableProperties {
         private static final CssMetaData<FontIcon, Number> ICON_SIZE =
             new CssMetaData<FontIcon, Number>("-fx-icon-size",
-                SizeConverter.getInstance(), 16.0) {
+                SizeConverter.getInstance(), 8) {
 
                 @Override
                 public boolean isSettable(FontIcon icon) {
