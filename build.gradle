@@ -1,54 +1,63 @@
-import java.text.SimpleDateFormat
-
-buildscript {
-    repositories {
-        jcenter()
-        maven { url 'https://plugins.gradle.org/m2/' }
-    }
-
-    dependencies {
-        classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.8.2'
-        classpath 'nl.javadude.gradle.plugins:license-gradle-plugin:0.11.0'
-        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.4'
-        classpath 'org.ajoberstar:gradle-git-publish:0.3.2'
-        classpath 'org.kordamp.gradle:stats-gradle-plugin:0.2.2'
-        classpath 'com.github.ben-manes:gradle-versions-plugin:0.20.0'
-        classpath 'net.nemerosa:versioning:2.7.1'
-    }
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * Copyright 2015-2020 Andres Almiray
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+plugins {
+    id 'org.kordamp.gradle.kordamp-parentpom'
 }
 
-apply plugin: 'org.ajoberstar.git-publish'
-apply plugin: 'net.nemerosa.versioning'
+config {
+    info {
+        name          = 'Ikonli'
+        description   = 'Icon packs for Java applications'
+        inceptionYear = '2015'
+        tags          = ['icons', 'javafx', 'swing']
 
-Date buildTimeAndDate = new Date()
-ext {
-    buildBy = System.properties['user.name']
-    buildDate = new SimpleDateFormat('yyyy-MM-dd').format(buildTimeAndDate)
-    buildTime = new SimpleDateFormat('HH:mm:ss.SSSZ').format(buildTimeAndDate)
-    buildRevision = versioning.info.commit
-    buildCreatedBy = "${System.properties['java.version']} (${System.properties['java.vendor']} ${System.properties['java.vm.version']})".toString()
-}
-
-allprojects {
-    apply plugin: 'base'
-    apply plugin: 'idea'
-    apply plugin: 'com.github.ben-manes.versions'
-
-    repositories {
-        jcenter()
+        specification { enabled = false }
     }
 
-    if (JavaVersion.current().isJava8Compatible()) {
-        tasks.withType(Javadoc) {
-            options.addStringOption('Xdoclint:none', '-quiet')
+    docs {
+        sourceHtml {
+            overview {
+                stylesheet = project(':guide').file('src/javadoc/resources/css/stylesheet.css')
+            }
+        }
+
+        javadoc {
+            autoLinks {
+                enabled = false
+            }
+            options {
+                addBooleanOption('javafx', true)
+            }
+            aggregate {
+                enabled = false
+            }
         }
     }
 }
 
+allprojects {
+    apply plugin: 'idea'
+}
+
 idea {
     project {
-        jdkName '1.8'
-        languageLevel '1.8'
+        jdkName '8'
+        languageLevel '8'
 
         ipr {
             withXml { provider ->
@@ -69,85 +78,45 @@ idea {
 }
 
 subprojects { subproj ->
-    apply plugin: 'java'
-    apply plugin: 'com.github.kt3k.coveralls'
-    apply plugin: 'org.kordamp.gradle.stats'
-    apply from: rootProject.file('gradle/code-coverage.gradle')
-    apply from: rootProject.file('gradle/code-quality.gradle')
+    if (!subproj.name.contains('guide')) {
+        apply plugin: 'java-library'
 
-    subproj.tasks.withType(JavaCompile) {
-        sourceCompatibility = subproj.sourceCompatibility
-        targetCompatibility = subproj.targetCompatibility
-    }
-
-    repositories {
-        jcenter()
-    }
-
-    if (subproj.name.contains('ikonli')) {
-        apply from: rootProject.file('gradle/publishing.gradle')
-
-        javadoc {
-            excludes = ['**/*.html', 'META-INF/**']
-
-            options.use         = true
-            options.splitIndex  = true
-            options.encoding    = 'UTF-8'
-            options.author      = true
-            options.version     = true
-            options.windowTitle = "$project.name $project.version API"
-            options.docTitle    = "$project.name $project.version API"
-            options.links       = ['http://docs.oracle.com/javase/8/docs/api/',
-                                   'http://docs.oracle.com/javase/8/javafx/api/']
-        }
-
-        task sourcesJar(type: Jar) {
-            group 'Build'
-            description 'An archive of the source code'
-            classifier 'sources'
-            from sourceSets.main.allSource
-        }
-
-        task javadocJar(type: Jar) {
-            group 'Build'
-            description 'An archive of the javadoc'
-            classifier 'javadoc'
-            from javadoc.destinationDir
-        }
-
-        jar.finalizedBy sourcesJar
-        jar.finalizedBy javadocJar
-
-        artifacts {
-            sourcesJar
-            javadocJar
+        config {
+            bintray { enabled = true }
         }
 
         dependencies {
             testCompile 'junit:junit:4.12'
         }
+
+        license {
+            mapping {
+                fxml = 'XML_STYLE'
+            }
+            exclude '**/*.ttf'
+            exclude '**/*.eot'
+            exclude '**/*.svg'
+            exclude '**/*.otf'
+            exclude '**/*.woff'
+            exclude '**/*.woff2'
+            exclude '**/*.css'
+            exclude '**/*.md'
+            exclude '**/*.txt'
+        }
+
+        subproj.gradle.addBuildListener(new BuildAdapter() {
+            @Override
+            void projectsEvaluated(Gradle gradle) {
+                subproj.tasks.withType(Jar).each { Jar jar ->
+                    jar.configure {
+                        exclude '**/*.otf'
+                        exclude '**/*.eot'
+                        exclude '**/*.svg'
+                        exclude '**/*.woff'
+                        exclude '**/*.woff2'
+                    }
+                }
+            }
+        })
     }
 }
-
-evaluationDependsOnChildren()
-
-if (!project.hasProperty('githubUsername')) ext.githubUsername = ''
-if (!project.hasProperty('githubPassword')) ext.githubPassword = ''
-
-gitPublish {
-    repoUri = project.project_scm
-    branch = 'gh-pages'
-    contents {
-        from project(':guide').guide.outputs.files
-    }
-    commitMessage = "Publish guide for $version"
-
-/*
-    credentials {
-        username = githubUsername
-        password = githubPassword
-    }
-*/
-}
-
-gitPublishCommit.dependsOn(project(':guide').guide)

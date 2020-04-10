@@ -1,5 +1,7 @@
 /*
- * Copyright 2015-2018 Andres Almiray
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * Copyright 2015-2020 Andres Almiray
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -37,11 +39,11 @@ public class FontAwesomeSolidIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/fontawesome5/5.0.1/fonts/fa-solid-900.ttf";
+        return "META-INF/resources/fontawesome5/5.8.1/fonts/fa-solid-900.ttf";
     }
 
     @Override
     public String getFontFamily() {
-        return "Font Awesome 5 Free";
+        return "Font Awesome 5 Free Solid";
     }
 }

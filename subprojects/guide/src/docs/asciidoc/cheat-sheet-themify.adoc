@@ -1,0 +1,13 @@
+= Themify Icons
+
+++++
+<link href='./css/themify-icons.min.css' rel='stylesheet'>
+<style>
+    .ti {
+        font-size: 32px;
+    }
+</style>
+++++
+
+include::{gradle-projectdir}/build/tmp/_themify_cheat_sheet.adoc[]
+

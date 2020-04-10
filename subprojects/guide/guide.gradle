@@ -1,150 +1,23 @@
-buildscript {
-    repositories {
-        jcenter()
-        maven { url 'http://dl.bintray.com/content/bmuschko/maven' }
-        maven { url 'http://dl.bintray.com/content/bmuschko/gradle-plugins' }
-    }
-
-    dependencies {
-        classpath 'org.asciidoctor:asciidoctor-gradle-plugin:1.5.8.1'
-        classpath 'com.bmuschko:gradle-java2html-plugin:2.0'
-    }
-}
-
-apply plugin: 'org.asciidoctor.convert'
-apply plugin: 'com.bmuschko.java2html'
-
-ext.childProjects = [
-        ':ikonli-core',
-        ':ikonli-javafx',
-        ':ikonli-swing',
-        ':ikonli-dashicons-pack',
-        ':ikonli-devicons-pack',
-        ':ikonli-entypo-pack',
-        ':ikonli-elusive-pack',
-        ':ikonli-feather-pack',
-        ':ikonli-fontawesome-pack',
-        ':ikonli-fontawesome5-pack',
-        ':ikonli-fontelico-pack',
-        ':ikonli-foundation-pack',
-        ':ikonli-hawconsfilled-pack',
-        ':ikonli-hawconsstroke-pack',
-        ':ikonli-icomoon-pack',
-        ':ikonli-ionicons-pack',
-        ':ikonli-ionicons4-pack',
-        ':ikonli-themify-pack',
-        ':ikonli-ligaturesymbols-pack',
-        ':ikonli-maki-pack',
-        ':ikonli-maki2-pack',
-        ':ikonli-mapicons-pack',
-        ':ikonli-material-pack',
-        ':ikonli-materialdesign-pack',
-        ':ikonli-metrizeicons-pack',
-        ':ikonli-octicons-pack',
-        ':ikonli-openiconic-pack',
-        ':ikonli-paymentfont-pack',
-        ':ikonli-runestroicons-pack',
-        ':ikonli-typicons-pack',
-        ':ikonli-weathericons-pack',
-        ':ikonli-websymbols-pack',
-        ':ikonli-zondicons-pack'
-
-]
-
-ext.childProjects.each { evaluationDependsOn it }
-
-asciidoctorj {
-    version = '1.5.6'
-}
-
-dependencies {
-    java2html 'de.java2html:java2html:5.0'
-}
-
-task copyDocs(type: Copy) {
-    destinationDir = "${buildDir}/sources" as File
-    project.ext.childProjects.each { projectName ->
-        from(project(projectName).sourceSets.main.allSource) {
-            include '**/*.java'
-            include '**/*.html'
-        }
-    }
-}
-
-task apiDocs(type: Javadoc, dependsOn: copyDocs) {
-    source = copyDocs.destinationDir
-    destinationDir = file("${buildDir}/api")
-    title = "Ikonli ${project.version}"
-    classpath = project.ext.childProjects.collect { projectName ->
-        [project(projectName).sourceSets.main.output,
-         project(projectName).configurations.compile,
-         project(projectName).configurations.compileOnly]
-    }.flatten().sum() as FileCollection
-
-    excludes = ['**/*.html', 'META-INF/**']
-
-    options.use = true
-    options.splitIndex = true
-    options.encoding = 'UTF-8'
-    options.author = true
-    options.version = true
-    options.source = project.sourceCompatibility
-    options.overview = file('src/javadoc/overview.html')
-    options.windowTitle = "Ikonli ${project.version}"
-    options.docTitle = "Ikonli ${project.version}"
-    options.footer = project.javadocFooter
-    options.links = ['http://www.slf4j.org/apidocs/',
-                     'http://junit.org/javadoc/latest/',
-                     'http://docs.oracle.com/javase/7/docs/api/',
-                     'http://jsr-305.googlecode.com/svn/trunk/javadoc/',
-                     'http://atinject.googlecode.com/svn/trunk/javadoc/']
-
-    doLast { task ->
-        copy {
-            into task.destinationDir
-            from file('src/javadoc/resources/css/stylesheet.css')
-        }
-    }
-}
-
-task generateJava2html {
-    dependsOn apiDocs
-    dependsOn "java2htmlGenerateOverview"
-    dependsOn java2htmlConvertCode
-}
-
-task javadocJar(type: Jar, dependsOn: apiDocs, overwrite: true) {
-    archiveName = "ikonli-${version}-javadoc.jar"
-    destinationDir = "${buildDir}/assemble/jars" as File
-    from apiDocs.destinationDir
-}
-
-task sourceHtmlJar(type: Jar, dependsOn: java2html) {
-    archiveName = "ikonli-${version}-sources-html.jar"
-    destinationDir = "${buildDir}/assemble/jars" as File
-    from java2htmlConvertCode.destDir
-}
-
-task docsJar(dependsOn: [javadocJar, sourceHtmlJar]) {}
-
-java2html {
-    conversion {
-        srcDirs = files(copyDocs.destinationDir)
-        tabs = 4
-        style = 'kawa'
-        addLineAnchors = true
-        showFileName = true
-        useShortFileName = true
-        overwrite = true
-        showDefaultTitle = true
-    }
-
-    overview {
-        windowTitle = "Ikonli ${project.version}"
-        docTitle = "Ikonli ${project.version}"
-        docDescription = "Ikonli ${project.version}"
-        stylesheet = file('src/javadoc/resources/css/stylesheet.css')
-    }
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * Copyright 2015-2020 Andres Almiray
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+plugins {
+    id 'org.kordamp.gradle.guide'
+    id 'org.ajoberstar.git-publish'
 }
 
 class GenerateIconCheatSheetTask extends DefaultTask {
@@ -227,17 +100,19 @@ asciidoctor {
             createIconGenerationTask(packName: 'fontawesome', iconClassName: 'org.kordamp.ikonli.fontawesome.FontAwesome', iconName: 'fa'),
             createIconGenerationTask(packName: 'fontelico', iconClassName: 'org.kordamp.ikonli.fontelico.Fontelico', shortNameSize: 4),
             createIconGenerationTask(packName: 'foundation', iconClassName: 'org.kordamp.ikonli.foundation.Foundation'),
-            createIconGenerationTask(packName: 'hawconsfilled', iconClassName: 'org.kordamp.ikonli.hawcons.HawconsFilled', iconName: 'hwf', shortNameSize: 4),
-            createIconGenerationTask(packName: 'hawconsstroke', iconClassName: 'org.kordamp.ikonli.hawcons.HawconsStroke', iconName: 'hws', shortNameSize: 4),
+            createIconGenerationTask(packName: 'hawconsfilled', iconClassName: 'org.kordamp.ikonli.hawconsfilled.HawconsFilled', iconName: 'hwf', shortNameSize: 4),
+            createIconGenerationTask(packName: 'hawconsstroke', iconClassName: 'org.kordamp.ikonli.hawconsstroke.HawconsStroke', iconName: 'hws', shortNameSize: 4),
             createIconGenerationTask(packName: 'icomoon', iconClassName: 'org.kordamp.ikonli.icomoon.Icomoon', iconName: 'icm', shortNameSize: 4),
             createIconGenerationTask(packName: 'ionicons', iconClassName: 'org.kordamp.ikonli.ionicons.Ionicons', iconName: 'ion', shortNameSize: 4),
             createIconGenerationTask(packName: 'ligaturesymbols', iconClassName: 'org.kordamp.ikonli.ligaturesymbols.LigatureSymbols', iconName: 'lsf', shortNameSize: 4),
+            createIconGenerationTask(packName: 'linecons', iconClassName: 'org.kordamp.ikonli.linecons.Linecons', iconName: 'li'),
             createIconGenerationTask(packName: 'maki', iconClassName: 'org.kordamp.ikonli.maki.Maki', shortNameSize: 5),
             createIconGenerationTask(packName: 'maki2', iconClassName: 'org.kordamp.ikonli.maki2.Maki2', shortNameSize: 6),
             createIconGenerationTask(packName: 'mapicons', iconClassName: 'org.kordamp.ikonli.mapicons.Mapicons', iconName: 'map-icon', shortNameSize: 9),
             createIconGenerationTask(packName: 'material', iconClassName: 'org.kordamp.ikonli.material.Material', iconName: 'gmi', shortNameSize: 4),
             createIconGenerationTask(packName: 'materialdesign', iconClassName: 'org.kordamp.ikonli.materialdesign.MaterialDesign', iconName: 'mdi', shortNameSize: 4),
             createIconGenerationTask(packName: 'metrizeicons', iconClassName: 'org.kordamp.ikonli.metrizeicons.MetrizeIcons', iconName: 'met', shortNameSize: 4),
+            createIconGenerationTask(packName: 'ociicons', iconClassName: 'org.kordamp.ikonli.ociicons.Ociicons', iconName: 'oci', shortNameSize: 4),
             createIconGenerationTask(packName: 'octicons', iconClassName: 'org.kordamp.ikonli.octicons.Octicons', iconName: 'octicon', shortNameSize: 4),
             createIconGenerationTask(packName: 'openiconic', iconClassName: 'org.kordamp.ikonli.openiconic.Openiconic', iconName: 'oi', dataGlyph: true),
             createIconGenerationTask(packName: 'paymentfont', iconClassName: 'org.kordamp.ikonli.paymentfont.PaymentFont', iconName: 'pf', shortNameSize: 3),
@@ -254,29 +129,7 @@ asciidoctor {
             createIconGenerationTask(packName: 'themify', iconClassName: 'org.kordamp.ikonli.themify.Themify', iconName: 'ti', shortNameSize: 3),
             createIconGenerationTask(packName: 'zondicons', iconClassName: 'org.kordamp.ikonli.zondicons.Zondicons', iconName: 'zondi', shortNameSize: 6)
 
-
-
-    sourceDir = file('src/asciidoc')
     attributes = [
-            toc                    : 'left',
-            doctype                : 'book',
-            icons                  : 'font',
-            encoding               : 'utf-8',
-            sectlink               : true,
-            sectanchors            : true,
-            numbered               : true,
-            linkattrs              : true,
-            imagesdir              : 'images',
-            linkcss                : true,
-            stylesheet             : 'css/style.css',
-            'source-highlighter'   : 'coderay',
-            'coderay-linenums-mode': 'table',
-            'project-title'        : project.project_description,
-            'project-author'       : 'Andres Almiray',
-            'project-url'          : project.project_url,
-            'project-vcs'          : project.project_scm,
-            'project-issue-tracker': project.project_issues,
-            'project-group'        : project.group,
             dashiconsVersion       : project.dashiconsVersion,
             deviconsVersion        : project.deviconsVersion,
             elusiveVersion         : project.elusiveVersion,
@@ -291,12 +144,14 @@ asciidoctor {
             ioniconsVersion        : project.ioniconsVersion,
             ionicons4Version       : project.ionicons4Version,
             ligaturesymbolsVersion : project.ligaturesymbolsVersion,
+            lineconsVersion        : project.lineconsVersion,
             makiVersion            : project.makiVersion,
             maki2Version           : project.maki2Version,
             mapiconsVersion        : project.mapiconsVersion,
             materialVersion        : project.materialVersion,
             materialdesignVersion  : project.materialdesignVersion,
             metrizeiconsVersion    : project.metrizeiconsVersion,
+            ociiconsVersion        : project.ociiconsVersion,
             octiconsVersion        : project.octiconsVersion,
             openiconicVersion      : project.openiconicVersion,
             paymentfontVersion     : project.paymentfontVersion,
@@ -307,9 +162,11 @@ asciidoctor {
             websymbolsVersion      : project.websymbolsVersion,
             zondiconsVersion       : project.zondiconsVersion
     ]
-    /*sources {
+
+    sources {
         include '*.adoc'
-    }*/
+    }
+
     resources {
         from file('src/resources')
         from project(':ikonli-dashicons-pack').file("src/main/resources/META-INF/resources/dashicons/${dashiconsVersion}")
@@ -321,18 +178,20 @@ asciidoctor {
         from project(':ikonli-fontawesome5-pack').file("src/main/resources/META-INF/resources/fontawesome5/${fontawesome5Version}")
         from project(':ikonli-fontelico-pack').file("src/main/resources/META-INF/resources/fontelico/${fontelicoVersion}")
         from project(':ikonli-foundation-pack').file("src/main/resources/META-INF/resources/foundation/${foundationVersion}")
-        from project(':ikonli-hawconsfilled-pack').file("src/main/resources/META-INF/resources/hawcons/${hawconsVersion}")
-        from project(':ikonli-hawconsstroke-pack').file("src/main/resources/META-INF/resources/hawcons/${hawconsVersion}")
+        from project(':ikonli-hawconsfilled-pack').file("src/main/resources/META-INF/resources/hawconsfilled/${hawconsVersion}")
+        from project(':ikonli-hawconsstroke-pack').file("src/main/resources/META-INF/resources/hawconsstroke/${hawconsVersion}")
         from project(':ikonli-icomoon-pack').file("src/main/resources/META-INF/resources/icomoon/${icomoonVersion}")
         from project(':ikonli-ionicons-pack').file("src/main/resources/META-INF/resources/ionicons/${ioniconsVersion}")
-        from project(':ikonli-ionicons4-pack').file("src/main/resources/META-INF/resources/ionicons/${ionicons4Version}")
+        from project(':ikonli-ionicons4-pack').file("src/main/resources/META-INF/resources/ionicons4/${ionicons4Version}")
         from project(':ikonli-ligaturesymbols-pack').file("src/main/resources/META-INF/resources/ligaturesymbols/${ligaturesymbolsVersion}")
+        from project(':ikonli-linecons-pack').file("src/main/resources/META-INF/resources/linecons/${lineconsVersion}")
         from project(':ikonli-maki-pack').file("src/main/resources/META-INF/resources/maki/${makiVersion}")
         from project(':ikonli-maki2-pack').file("src/main/resources/META-INF/resources/maki2/${maki2Version}")
         from project(':ikonli-mapicons-pack').file("src/main/resources/META-INF/resources/mapicons/${mapiconsVersion}")
         from project(':ikonli-material-pack').file("src/main/resources/META-INF/resources/material/${materialVersion}")
         from project(':ikonli-materialdesign-pack').file("src/main/resources/META-INF/resources/materialdesignicons/${materialdesignVersion}")
         from project(':ikonli-metrizeicons-pack').file("src/main/resources/META-INF/resources/metrizeicons/${metrizeiconsVersion}")
+        from project(':ikonli-ociicons-pack').file("src/main/resources/META-INF/resources/ociicons/${ociiconsVersion}")
         from project(':ikonli-octicons-pack').file("src/main/resources/META-INF/resources/octicons/${octiconsVersion}")
         from project(':ikonli-openiconic-pack').file("src/main/resources/META-INF/resources/openiconic/${openiconicVersion}")
         from project(':ikonli-paymentfont-pack').file("src/main/resources/META-INF/resources/paymentfont/${paymentfontVersion}")
@@ -342,18 +201,5 @@ asciidoctor {
         from project(':ikonli-weathericons-pack').file("src/main/resources/META-INF/resources/weathericons/${weathericonsVersion}")
         from project(':ikonli-websymbols-pack').file("src/main/resources/META-INF/resources/websymbols/${websymbolsVersion}")
         from project(':ikonli-zondicons-pack').file("src/main/resources/META-INF/resources/zondicons/${zondiconsVersion}")
-
     }
-}
-
-task guide(type: Copy, dependsOn: [apiDocs, generateJava2html, asciidoctor]) {
-    destinationDir = "${buildDir}/guide" as File
-    from(apiDocs.destinationDir) { into 'api' }
-    from(java2htmlConvertCode.destDir) { into 'api-src' }
-    from("${asciidoctor.outputDir}/html5")
-}
-
-task guideZip(type: Zip, dependsOn: guide) {
-    baseName = "ikonli-guide"
-    from guide.destinationDir
 }

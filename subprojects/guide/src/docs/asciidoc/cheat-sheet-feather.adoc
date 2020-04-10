@@ -1,0 +1,13 @@
+= Feather
+
+++++
+<link href='./css/feather.css' rel='stylesheet'>
+<style>
+    .fth {
+        font-size: 32px;
+    }
+</style>
+++++
+
+include::{gradle-projectdir}/build/tmp/_feather_cheat_sheet.adoc[]
+

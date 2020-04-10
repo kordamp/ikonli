@@ -1,5 +1,7 @@
 /*
- * Copyright 2015-2018 Andres Almiray
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * Copyright 2015-2020 Andres Almiray
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +23,6 @@ import org.kordamp.ikonli.Ikon;
  * @author Loïc Sculier aka typhon0
  */
 public enum Ionicons4Logo implements Ikon {
-
     ANDROID("ion4-logo-android",'\uf225'),
     ANGULAR("ion4-logo-angular",'\uf227'),
     APPLE("ion4-logo-apple",'\uf229'),
@@ -84,9 +85,6 @@ public enum Ionicons4Logo implements Ikon {
     YAHOO("ion4-logo-yahoo",'\uf34d'),
     YEN("ion4-logo-yen",'\uf34e'),
     YOUTUBE("ion4-logo-youtube",'\uf34f');
-
-
-
 
     public static Ionicons4Logo findByDescription(String description) {
         for (Ionicons4Logo font : values()) {
