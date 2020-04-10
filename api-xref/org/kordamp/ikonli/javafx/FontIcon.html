@@ -59,7 +59,7 @@
 <a class="jxr_linenumber" name="L51" href="#L51">51</a>      <strong class="jxr_keyword">private</strong> StyleableObjectProperty&lt;Ikon&gt; iconCode;
 <a class="jxr_linenumber" name="L52" href="#L52">52</a>  
 <a class="jxr_linenumber" name="L53" href="#L53">53</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a name="FontIcon" href="../../../../org/kordamp/ikonli/javafx/FontIcon.html#FontIcon">FontIcon</a> of(<a name="Ikon" href="../../../../org/kordamp/ikonli/Ikon.html#Ikon">Ikon</a> ikon) {
-<a class="jxr_linenumber" name="L54" href="#L54">54</a>          <strong class="jxr_keyword">return</strong> of(ikon, 16, Color.BLACK);
+<a class="jxr_linenumber" name="L54" href="#L54">54</a>          <strong class="jxr_keyword">return</strong> of(ikon, 8, Color.BLACK);
 <a class="jxr_linenumber" name="L55" href="#L55">55</a>      }
 <a class="jxr_linenumber" name="L56" href="#L56">56</a>  
 <a class="jxr_linenumber" name="L57" href="#L57">57</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a name="FontIcon" href="../../../../org/kordamp/ikonli/javafx/FontIcon.html#FontIcon">FontIcon</a> of(<a name="Ikon" href="../../../../org/kordamp/ikonli/Ikon.html#Ikon">Ikon</a> ikon, <strong class="jxr_keyword">int</strong> iconSize) {
@@ -67,7 +67,7 @@
 <a class="jxr_linenumber" name="L59" href="#L59">59</a>      }
 <a class="jxr_linenumber" name="L60" href="#L60">60</a>  
 <a class="jxr_linenumber" name="L61" href="#L61">61</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a name="FontIcon" href="../../../../org/kordamp/ikonli/javafx/FontIcon.html#FontIcon">FontIcon</a> of(<a name="Ikon" href="../../../../org/kordamp/ikonli/Ikon.html#Ikon">Ikon</a> ikon, Color iconColor) {
-<a class="jxr_linenumber" name="L62" href="#L62">62</a>          <strong class="jxr_keyword">return</strong> of(ikon, 16, iconColor);
+<a class="jxr_linenumber" name="L62" href="#L62">62</a>          <strong class="jxr_keyword">return</strong> of(ikon, 8, iconColor);
 <a class="jxr_linenumber" name="L63" href="#L63">63</a>      }
 <a class="jxr_linenumber" name="L64" href="#L64">64</a>  
 <a class="jxr_linenumber" name="L65" href="#L65">65</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a name="FontIcon" href="../../../../org/kordamp/ikonli/javafx/FontIcon.html#FontIcon">FontIcon</a> of(<a name="Ikon" href="../../../../org/kordamp/ikonli/Ikon.html#Ikon">Ikon</a> iconCode, <strong class="jxr_keyword">int</strong> iconSize, Color iconColor) {
@@ -80,7 +80,7 @@
 <a class="jxr_linenumber" name="L72" href="#L72">72</a>  
 <a class="jxr_linenumber" name="L73" href="#L73">73</a>      <strong class="jxr_keyword">public</strong> <a name="FontIcon" href="../../../../org/kordamp/ikonli/javafx/FontIcon.html#FontIcon">FontIcon</a>() {
 <a class="jxr_linenumber" name="L74" href="#L74">74</a>          getStyleClass().setAll(<span class="jxr_string">"ikonli-font-icon"</span>);
-<a class="jxr_linenumber" name="L75" href="#L75">75</a>          setIconSize(16);
+<a class="jxr_linenumber" name="L75" href="#L75">75</a>          setIconSize(8);
 <a class="jxr_linenumber" name="L76" href="#L76">76</a>          setIconColor(Color.BLACK);
 <a class="jxr_linenumber" name="L77" href="#L77">77</a>  
 <a class="jxr_linenumber" name="L78" href="#L78">78</a>          fontProperty().addListener((v, o, n) -&gt; {
@@ -124,7 +124,7 @@
 <a class="jxr_linenumber" name="L116" href="#L116">116</a>     @Override
 <a class="jxr_linenumber" name="L117" href="#L117">117</a>     <strong class="jxr_keyword">public</strong> IntegerProperty iconSizeProperty() {
 <a class="jxr_linenumber" name="L118" href="#L118">118</a>         <strong class="jxr_keyword">if</strong> (iconSize == <strong class="jxr_keyword">null</strong>) {
-<a class="jxr_linenumber" name="L119" href="#L119">119</a>             iconSize = <strong class="jxr_keyword">new</strong> StyleableIntegerProperty(16) {
+<a class="jxr_linenumber" name="L119" href="#L119">119</a>             iconSize = <strong class="jxr_keyword">new</strong> StyleableIntegerProperty(8) {
 <a class="jxr_linenumber" name="L120" href="#L120">120</a>                 @Override
 <a class="jxr_linenumber" name="L121" href="#L121">121</a>                 <strong class="jxr_keyword">public</strong> CssMetaData getCssMetaData() {
 <a class="jxr_linenumber" name="L122" href="#L122">122</a>                     <strong class="jxr_keyword">return</strong> StyleableProperties.ICON_SIZE;
@@ -257,7 +257,7 @@
 <a class="jxr_linenumber" name="L249" href="#L249">249</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">class</strong> StyleableProperties {
 <a class="jxr_linenumber" name="L250" href="#L250">250</a>         <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> CssMetaData&lt;FontIcon, Number&gt; ICON_SIZE =
 <a class="jxr_linenumber" name="L251" href="#L251">251</a>             <strong class="jxr_keyword">new</strong> CssMetaData&lt;FontIcon, Number&gt;(<span class="jxr_string">"-fx-icon-size"</span>,
-<a class="jxr_linenumber" name="L252" href="#L252">252</a>                 SizeConverter.getInstance(), 16.0) {
+<a class="jxr_linenumber" name="L252" href="#L252">252</a>                 SizeConverter.getInstance(), 8) {
 <a class="jxr_linenumber" name="L253" href="#L253">253</a> 
 <a class="jxr_linenumber" name="L254" href="#L254">254</a>                 @Override
 <a class="jxr_linenumber" name="L255" href="#L255">255</a>                 <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> isSettable(<a name="FontIcon" href="../../../../org/kordamp/ikonli/javafx/FontIcon.html#FontIcon">FontIcon</a> icon) {

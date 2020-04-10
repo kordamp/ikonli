@@ -1,0 +1,239 @@
+/**
+ * Copyright 2020 the original author or authors.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+@charset 'UTF-8';
+ 
+/* @FONT-FACE loads font into browser */
+@font-face {
+  font-family: 'oci-icons';
+  src: url('../fonts/ociicons.eot?hy0xsg#iefix') format('embedded-opentype'),
+  url('../fonts/ociicons.ttf?hy0xsg') format('truetype'),
+  url('../fonts/ociicons.woff?hy0xsg') format('woff'),
+  url('../fonts/ociicons.svg?hy0xsg#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+ 
+/* :before psuedo-selector inserts and styles icon */
+.oci:before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'oci-icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.oci-2fa:before {
+  content: "\e900";
+}
+.oci-api:before {
+  content: "\e901";
+}
+.oci-authentication:before {
+  content: "\e902";
+}
+.oci-batch:before {
+  content: "\e903";
+}
+.oci-billing:before {
+  content: "\e904";
+}
+.oci-cdn:before {
+  content: "\e905";
+}
+.oci-cli:before {
+  content: "\e906";
+}
+.oci-cloud:before {
+  content: "\e907";
+}
+.oci-config:before {
+  content: "\e908";
+}
+.oci-config-service:before {
+  content: "\e909";
+}
+.oci-container:before {
+  content: "\e90a";
+}
+.oci-container-host:before {
+  content: "\e90b";
+}
+.oci-container-image:before {
+  content: "\e90c";
+}
+.oci-customer:before {
+  content: "\e90d";
+}
+.oci-database:before {
+  content: "\e90e";
+}
+.oci-debugging:before {
+  content: "\e90f";
+}
+.oci-desktop:before {
+  content: "\e910";
+}
+.oci-developer:before {
+  content: "\e911";
+}
+.oci-devices:before {
+  content: "\e912";
+}
+.oci-disk:before {
+  content: "\e913";
+}
+.oci-distribution:before {
+  content: "\e914";
+}
+.oci-docdb:before {
+  content: "\e915";
+}
+.oci-file:before {
+  content: "\e916";
+}
+.oci-firewall:before {
+  content: "\e917";
+}
+.oci-firewall-rule:before {
+  content: "\e918";
+}
+.oci-functiion:before {
+  content: "\e919";
+}
+.oci-git:before {
+  content: "\e91a";
+}
+.oci-health-monitor:before {
+  content: "\e91b";
+}
+.oci-invoice:before {
+  content: "\e91c";
+}
+.oci-iot:before {
+  content: "\e91d";
+}
+.oci-key-vault:before {
+  content: "\e91e";
+}
+.oci-key:before {
+  content: "\e91f";
+}
+.oci-laptop:before {
+  content: "\e920";
+}
+.oci-legacy-mainframe:before {
+  content: "\e921";
+}
+.oci-load-balancer:before {
+  content: "\e922";
+}
+.oci-logging:before {
+  content: "\e923";
+}
+.oci-machine-learning:before {
+  content: "\e924";
+}
+.oci-media:before {
+  content: "\e925";
+}
+.oci-media-streaming:before {
+  content: "\e926";
+}
+.oci-message:before {
+  content: "\e927";
+}
+.oci-mobile:before {
+  content: "\e928";
+}
+.oci-monitoring:before {
+  content: "\e929";
+}
+.oci-onprem:before {
+  content: "\e92a";
+}
+.oci-orchestrator:before {
+  content: "\e92b";
+}
+.oci-pipeline:before {
+  content: "\e92c";
+}
+.oci-policy-enforce:before {
+  content: "\e92d";
+}
+.oci-policy-manager:before {
+  content: "\e92e";
+}
+.oci-queue:before {
+  content: "\e92f";
+}
+.oci-sbom:before {
+  content: "\e930";
+}
+.oci-scheduled-job:before {
+  content: "\e931";
+}
+.oci-sdk:before {
+  content: "\e932";
+}
+.oci-security-scanning:before {
+  content: "\e933";
+}
+.oci-server-disk:before {
+  content: "\e934";
+}
+.oci-serverless:before {
+  content: "\e935";
+}
+.oci-server-rack:before {
+  content: "\e936";
+}
+.oci-service:before {
+  content: "\e937";
+}
+.oci-shell:before {
+  content: "\e938";
+}
+.oci-signature-job:before {
+  content: "\e939";
+}
+.oci-source-artifact:before {
+  content: "\e93a";
+}
+.oci-storage:before {
+  content: "\e93b";
+}
+.oci-support-personnel:before {
+  content: "\e93c";
+}
+.oci-testing:before {
+  content: "\e93d";
+}
+.oci-vm:before {
+  content: "\e93e";
+}
+.oci-vnet:before {
+  content: "\e93f";
+}
+.oci-web:before {
+  content: "\e940";
+}
