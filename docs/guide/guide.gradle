@@ -112,6 +112,7 @@ asciidoctor {
             createIconGenerationTask(packName: 'material', iconClassName: 'org.kordamp.ikonli.material.Material', iconName: 'gmi', shortNameSize: 4),
             createIconGenerationTask(packName: 'materialdesign', iconClassName: 'org.kordamp.ikonli.materialdesign.MaterialDesign', iconName: 'mdi', shortNameSize: 4),
             createIconGenerationTask(packName: 'metrizeicons', iconClassName: 'org.kordamp.ikonli.metrizeicons.MetrizeIcons', iconName: 'met', shortNameSize: 4),
+            createIconGenerationTask(packName: 'ociicons', iconClassName: 'org.kordamp.ikonli.ociicons.Ociicons', iconName: 'oci', shortNameSize: 4),
             createIconGenerationTask(packName: 'octicons', iconClassName: 'org.kordamp.ikonli.octicons.Octicons', iconName: 'octicon', shortNameSize: 4),
             createIconGenerationTask(packName: 'openiconic', iconClassName: 'org.kordamp.ikonli.openiconic.Openiconic', iconName: 'oi', dataGlyph: true),
             createIconGenerationTask(packName: 'paymentfont', iconClassName: 'org.kordamp.ikonli.paymentfont.PaymentFont', iconName: 'pf', shortNameSize: 3),
@@ -150,6 +151,7 @@ asciidoctor {
             materialVersion        : project.materialVersion,
             materialdesignVersion  : project.materialdesignVersion,
             metrizeiconsVersion    : project.metrizeiconsVersion,
+            ociiconsVersion        : project.ociiconsVersion,
             octiconsVersion        : project.octiconsVersion,
             openiconicVersion      : project.openiconicVersion,
             paymentfontVersion     : project.paymentfontVersion,
@@ -189,6 +191,7 @@ asciidoctor {
         from project(':ikonli-material-pack').file("src/main/resources/META-INF/resources/material/${materialVersion}")
         from project(':ikonli-materialdesign-pack').file("src/main/resources/META-INF/resources/materialdesignicons/${materialdesignVersion}")
         from project(':ikonli-metrizeicons-pack').file("src/main/resources/META-INF/resources/metrizeicons/${metrizeiconsVersion}")
+        from project(':ikonli-ociicons-pack').file("src/main/resources/META-INF/resources/ociicons/${ociiconsVersion}")
         from project(':ikonli-octicons-pack').file("src/main/resources/META-INF/resources/octicons/${octiconsVersion}")
         from project(':ikonli-openiconic-pack').file("src/main/resources/META-INF/resources/openiconic/${openiconicVersion}")
         from project(':ikonli-paymentfont-pack').file("src/main/resources/META-INF/resources/paymentfont/${paymentfontVersion}")

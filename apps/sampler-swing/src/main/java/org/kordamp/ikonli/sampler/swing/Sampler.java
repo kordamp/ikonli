@@ -44,6 +44,7 @@ import org.kordamp.ikonli.mapicons.Mapicons;
 import org.kordamp.ikonli.material.Material;
 import org.kordamp.ikonli.materialdesign.MaterialDesign;
 import org.kordamp.ikonli.metrizeicons.MetrizeIcons;
+import org.kordamp.ikonli.ociicons.Ociicons;
 import org.kordamp.ikonli.octicons.Octicons;
 import org.kordamp.ikonli.openiconic.Openiconic;
 import org.kordamp.ikonli.paymentfont.PaymentFont;
@@ -107,6 +108,7 @@ public class Sampler {
         createTab(tabPane, Material.class, new DemoTab(allOf(Material.class)));
         createTab(tabPane, MaterialDesign.class, new DemoTab(allOf(MaterialDesign.class)));
         createTab(tabPane, MetrizeIcons.class, new DemoTab(allOf(MetrizeIcons.class)));
+        createTab(tabPane, Ociicons.class, new DemoTab(allOf(Ociicons.class)));
         createTab(tabPane, Octicons.class, new DemoTab(allOf(Octicons.class)));
         createTab(tabPane, Openiconic.class, new DemoTab(allOf(Openiconic.class)));
         createTab(tabPane, PaymentFont.class, new DemoTab(allOf(PaymentFont.class)));

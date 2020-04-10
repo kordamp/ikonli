@@ -574,6 +574,32 @@ compile '{project-group}:ikonli-metrizeicons-pack:{project-version}'
 </dependency>
 ----
 
+== Ociicons
+* Module: `org.kordamp.ikonli.ociicons`
+* Font version: {ociiconsVersion}
+* link:https://github.com/opencontainers/artwork#oci-icons[]
+* link:cheat-sheet-ociicons.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-ociicons-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-ociicons-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
 == Octicons
  * Module: `org.kordamp.ikonli.octicons`
  * Font version: {octiconsVersion}
