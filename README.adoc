@@ -4,7 +4,7 @@
 :project-repo:    maven
 :project-name:    ikonli
 :project-group:   org.kordamp.ikonli
-:project-version: 11.3.5
+:project-version: 11.4.0
 
 image:https://img.shields.io/travis/{project-owner}/{project-name}/master.svg?logo=travis["Build Status (travis)", link="https://travis-ci.org/{project-owner}/{project-name}"]
 image:https://img.shields.io/badge/license-ASL2-blue.svg?logo=apache["ASL2 Licensed", link="http://opensource.org/licenses/ASL2"]
@@ -48,7 +48,7 @@ Adapt these instructions to Windows settings if running on Windows.
 
  . Follow the instructions found at http://sdkman.io/ to install SDKMAN.
  . You need a POSIX environment if running Windows. We recommend using Babun Shell (http://babun.github.io/)
- . Once SDKMAN is installed invoke `sdk install gradle 5.4`.
+ . Once SDKMAN is installed invoke `sdk install gradle 6.3`.
  . Test your setup by invoking `gradle --version`.
 
 .Gdub
