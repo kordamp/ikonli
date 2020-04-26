@@ -16,10 +16,9 @@
  * limitations under the License.
  */
 plugins {
-    id 'org.kordamp.gradle.kordamp-parentpom'
     id 'com.google.osdetector'
-    id 'org.jonnyzzz.java9c'                  version '0.2.3' apply false
-    id 'org.javamodularity.moduleplugin'      version '1.6.0' apply false
+    id 'org.jonnyzzz.java9c'             apply false
+    id 'org.javamodularity.moduleplugin' apply false
 }
 
 ext.platform = osdetector.os == 'osx' ? 'mac' : osdetector.os == 'windows' ? 'win' : osdetector.os

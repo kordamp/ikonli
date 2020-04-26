@@ -22,23 +22,25 @@ pluginManagement {
         mavenLocal()
     }
     plugins {
-        id 'org.kordamp.gradle.kordamp-parentpom' version kordampPomVersion
-        id 'org.kordamp.gradle.guide'             version kordampPluginVersion
-        id 'org.ajoberstar.git-publish'           version gitPluginVersion
-        id 'com.google.osdetector'                version osPluginVersion
+        id 'org.kordamp.gradle.guide'        version kordampPluginVersion
+        id 'org.ajoberstar.git-publish'      version gitPluginVersion
+        id 'com.google.osdetector'           version osPluginVersion
+        id 'org.jonnyzzz.java9c'             version '0.2.3'
+        id 'org.javamodularity.moduleplugin' version '1.6.0'
     }
 }
 
 buildscript {
     repositories {
         gradlePluginPortal()
+        jcenter()
         mavenLocal()
     }
     dependencies {
-        classpath "org.kordamp.gradle:settings-gradle-plugin:$kordampPluginVersion"
+        classpath "org.kordamp.gradle:kordamp-parentbuild:$kordampBuildVersion"
     }
 }
-apply plugin: 'org.kordamp.gradle.settings'
+apply plugin: 'org.kordamp.gradle.kordamp-parentbuild'
 
 rootProject.name = 'ikonli'
 
