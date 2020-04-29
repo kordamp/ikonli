@@ -80,7 +80,7 @@ The `iconLiteral` property accepts any of these formats
 
 where the following rules apply
 
-icon-code:: An icon code literal such as `di-java`.
+icon-code:: An icon code literal such as `di-java`. The prefix (`di-`) indicates the icon pack. For this example, DevIcons needs to be installed.
 icon-size:: A number (in pixels) specifying the width of the icon.
 icon-color:: A `javafx.scene.paint.Color`, `javafx.scene.paint.LinearGradient`,
 or `javafx.scene.paint.RadialGradient` literal.
