@@ -130,6 +130,7 @@ asciidoctor {
             createIconGenerationTask(packName: 'zondicons', iconClassName: 'org.kordamp.ikonli.zondicons.Zondicons', iconName: 'zondi', shortNameSize: 6)
 
     attributes = [
+            ikonliJdk8Version      : project.ikonliJdk8Version,
             dashiconsVersion       : project.dashiconsVersion,
             deviconsVersion        : project.deviconsVersion,
             elusiveVersion         : project.elusiveVersion,

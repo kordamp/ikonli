@@ -14,7 +14,7 @@ You may use this class with any Swing component that supports an Icon property.
 .gradle
 ----
 repositories {
-    jcenter()
+    mavenCentral()
 }
 
 dependencies {
@@ -33,14 +33,6 @@ dependencies {
         <version>{project-version}</version>
     </dependency>
 </dependencies>
-
-<repositories>
-    <repository>
-        <id>central</id>
-        <name>jcenter</name>
-        <url>http://jcenter.bintray.com</url>
-    </repository>
-</repositories>
 ----
 
 == JavaFX
@@ -139,7 +131,7 @@ in the following example
 .gradle
 ----
 repositories {
-    jcenter()
+    mavenCentral()
 }
 
 dependencies {
@@ -158,14 +150,6 @@ dependencies {
         <version>{project-version}</version>
     </dependency>
 </dependencies>
-
-<repositories>
-    <repository>
-        <id>central</id>
-        <name>jcenter</name>
-        <url>http://jcenter.bintray.com</url>
-    </repository>
-</repositories>
 ----
 
 Next, don't forget to add entries to your module descriptor (`module-info.java`). Here's for example the
