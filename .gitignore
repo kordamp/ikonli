@@ -8,6 +8,6 @@ out
 target
 .classpath
 .project
-
+.gen-changelog.sh
 
 \.DS_Store
