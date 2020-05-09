@@ -16,7 +16,7 @@
 <h1>Icon packs for Java applications</h1>
 <div class="details">
 <span id="author" class="author">Andres Almiray</span><br>
-<span id="revnumber">version 11.4.0</span>
+<span id="revnumber">version 11.5.0</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
@@ -30,6 +30,7 @@
 <ul class="sectlevel2">
 <li><a href="#_swing">2.1. Swing</a></li>
 <li><a href="#_javafx">2.2. JavaFX</a></li>
+<li><a href="#_creating_a_fatjar">2.3. Creating a FatJAR</a></li>
 </ul>
 </li>
 <li><a href="#_cheat_sheets">3. Icon Packs</a>
@@ -83,7 +84,7 @@
 <h3 id="_download"><a class="anchor" href="#_download"></a>1.1. Download</h3>
 <div class="paragraph">
 <p>Ikonli and all of its icon packs can be downloaded from Bintray
-<span class="image"><a class="image" href="https://bintray.com/aalmiray/kordamp/ikonli/_latestVersion"><img src="https://api.bintray.com/packages/aalmiray/kordamp/ikonli/images/download.svg" alt="download"></a></span>
+<span class="image"><a class="image" href="https://bintray.com/kordamp/maven/ikonli/_latestVersion"><img src="https://api.bintray.com/packages/kordamp/maven/ikonli/images/download.svg" alt="download"></a></span>
 and Maven Central
 <span class="image"><a class="image" href="https://search.maven.org/#search|ga|1|org.kordamp.ikonli"><img src="https://img.shields.io/maven-central/v/org.kordamp.ikonli/ikonli-core.svg?label=maven" alt="ikonli core"></a></span>.</p>
 </div>
@@ -97,7 +98,7 @@ and Maven Central
 Swing
 </td>
 <td class="hdlist2">
-<p>ikonli-swing-11.4.0</p>
+<p>ikonli-swing-11.5.0 (JDK 11+) <em>or</em> ikonli-swing-2.6.0 (JDK 8)</p>
 </td>
 </tr>
 <tr>
@@ -105,7 +106,7 @@ Swing
 JavaFX
 </td>
 <td class="hdlist2">
-<p>ikonli-javafx-11.4.0</p>
+<p>ikonli-javafx-11.5.0 (JDK 11+) <em>or</em> ikonli-javafx-2.6.0 (JDK 8)</p>
 </td>
 </tr>
 </table>
@@ -122,7 +123,7 @@ JavaFX
 <div class="sect2">
 <h3 id="_swing"><a class="anchor" href="#_swing"></a>2.1. Swing</h3>
 <div class="paragraph">
-<p>The <code>ikonli-swing:11.4.0</code> JAR provides a new Icon class: <code><a href="api/org/kordamp/ikonli/swing/FontIcon.html" target="_blank" rel="noopener">org.kordamp.ikonli.swing.FontIcon</a></code>.
+<p>The <code>ikonli-swing:11.5.0</code> JAR provides a new Icon class: <code><a href="api/org/kordamp/ikonli/swing/FontIcon.html" target="_blank" rel="noopener">org.kordamp.ikonli.swing.FontIcon</a></code>.
 You may use this class with any Swing component that supports an Icon property.</p>
 </div>
 <div class="sect3">
@@ -131,11 +132,11 @@ You may use this class with any Swing component that supports an Icon property.<
 <div class="title">gradle</div>
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="groovy">repositories {
-    jcenter()
+    mavenCentral()
 }
 
 dependencies {
-    compile 'org.kordamp.ikonli:ikonli-swing:11.4.0'
+    compile 'org.kordamp.ikonli:ikonli-swing:11.5.0'
 }</code></pre>
 </div>
 </div>
@@ -146,17 +147,9 @@ dependencies {
     <span class="tag">&lt;dependency&gt;</span>
         <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
         <span class="tag">&lt;artifactId&gt;</span>ikonli-swing<span class="tag">&lt;/artifactId&gt;</span>
-        <span class="tag">&lt;version&gt;</span>11.4.0<span class="tag">&lt;/version&gt;</span>
+        <span class="tag">&lt;version&gt;</span>11.5.0<span class="tag">&lt;/version&gt;</span>
     <span class="tag">&lt;/dependency&gt;</span>
-<span class="tag">&lt;/dependencies&gt;</span>
-
-<span class="tag">&lt;repositories&gt;</span>
-    <span class="tag">&lt;repository&gt;</span>
-        <span class="tag">&lt;id&gt;</span>central<span class="tag">&lt;/id&gt;</span>
-        <span class="tag">&lt;name&gt;</span>jcenter<span class="tag">&lt;/name&gt;</span>
-        <span class="tag">&lt;url&gt;</span>http://jcenter.bintray.com<span class="tag">&lt;/url&gt;</span>
-    <span class="tag">&lt;/repository&gt;</span>
-<span class="tag">&lt;/repositories&gt;</span></code></pre>
+<span class="tag">&lt;/dependencies&gt;</span></code></pre>
 </div>
 </div>
 </div>
@@ -164,7 +157,7 @@ dependencies {
 <div class="sect2">
 <h3 id="_javafx"><a class="anchor" href="#_javafx"></a>2.2. JavaFX</h3>
 <div class="paragraph">
-<p>The <code>ikonli-javafx:11.4.0</code> JAR provides a new Node class: <code><a href="api/org/kordamp/ikonli/javafx/FontIcon.html" target="_blank" rel="noopener">org.kordamp.ikonli.javafx.FontIcon</a></code>.
+<p>The <code>ikonli-javafx:11.5.0</code> JAR provides a new Node class: <code><a href="api/org/kordamp/ikonli/javafx/FontIcon.html" target="_blank" rel="noopener">org.kordamp.ikonli.javafx.FontIcon</a></code>.
 You may use this class with any JavaFX control that accepts a graphic property. You may also use the icon directly as
 it is a subclass of <code>javafx.scene.text.Text</code>. The icon class can be used inside an FXML file too.</p>
 </div>
@@ -213,7 +206,7 @@ it is a subclass of <code>javafx.scene.text.Text</code>. The icon class can be u
 <dl>
 <dt class="hdlist1">icon-code</dt>
 <dd>
-<p>An icon code literal such as <code>di-java</code>.</p>
+<p>An icon code literal such as <code>di-java</code>. The prefix (<code>di-</code>) indicates the icon pack. For this example, DevIcons needs to be installed.</p>
 </dd>
 <dt class="hdlist1">icon-size</dt>
 <dd>
@@ -319,11 +312,11 @@ in the following example</p>
 <div class="title">gradle</div>
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="groovy">repositories {
-    jcenter()
+    mavenCentral()
 }
 
 dependencies {
-    compile 'org.kordamp.ikonli:ikonli-javafx:11.4.0'
+    compile 'org.kordamp.ikonli:ikonli-javafx:11.5.0'
 }</code></pre>
 </div>
 </div>
@@ -334,17 +327,9 @@ dependencies {
     <span class="tag">&lt;dependency&gt;</span>
         <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
         <span class="tag">&lt;artifactId&gt;</span>ikonli-javafx<span class="tag">&lt;/artifactId&gt;</span>
-        <span class="tag">&lt;version&gt;</span>11.4.0<span class="tag">&lt;/version&gt;</span>
+        <span class="tag">&lt;version&gt;</span>11.5.0<span class="tag">&lt;/version&gt;</span>
     <span class="tag">&lt;/dependency&gt;</span>
-<span class="tag">&lt;/dependencies&gt;</span>
-
-<span class="tag">&lt;repositories&gt;</span>
-    <span class="tag">&lt;repository&gt;</span>
-        <span class="tag">&lt;id&gt;</span>central<span class="tag">&lt;/id&gt;</span>
-        <span class="tag">&lt;name&gt;</span>jcenter<span class="tag">&lt;/name&gt;</span>
-        <span class="tag">&lt;url&gt;</span>http://jcenter.bintray.com<span class="tag">&lt;/url&gt;</span>
-    <span class="tag">&lt;/repository&gt;</span>
-<span class="tag">&lt;/repositories&gt;</span></code></pre>
+<span class="tag">&lt;/dependencies&gt;</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -367,6 +352,57 @@ minimum settings required for a JavaFX application</p>
 </div>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_creating_a_fatjar"><a class="anchor" href="#_creating_a_fatjar"></a>2.3. Creating a FatJAR</h3>
+<div class="paragraph">
+<p>Ikonli&#8217;s icon packs rely on services files to provide their implementation. You mist make sure that those services files
+are properly merged when creating a FatJar or UberJAR. Fortunately there are build plugins that can help with this task.</p>
+</div>
+<div class="paragraph">
+<div class="title">Gradle</div>
+<p>Configure the <code><a href="https://imperceptiblethoughts.com/shadow/getting-started/">shadow</a></code> plugin and merge service files</p>
+</div>
+<div class="listingblock">
+<div class="title">build.gradle</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="groovy">plugins {
+    id <span class="string"><span class="delimiter">'</span><span class="content">com.github.johnrengelman.shadow</span><span class="delimiter">'</span></span> version <span class="string"><span class="delimiter">'</span><span class="content">5.2.0</span><span class="delimiter">'</span></span>
+}
+
+shadowJar {
+    mergeServiceFiles()
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<div class="title">Maven</div>
+<p>Configure the <code><a href="https://maven.apache.org/plugins/maven-shade-plugin/">maven-shade-plugin</a></code> and apply the
+<code>org.apache.maven.plugins.shade.resource.ServicesResourceTransformer</code> transformer.</p>
+</div>
+<div class="listingblock">
+<div class="title">pom.xml</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;plugin&gt;</span>
+    <span class="tag">&lt;groupId&gt;</span>org.apache.maven.plugins<span class="tag">&lt;/groupId&gt;</span>
+    <span class="tag">&lt;artifactId&gt;</span>maven-shade-plugin<span class="tag">&lt;/artifactId&gt;</span>
+    <span class="tag">&lt;version&gt;</span>3.2.3<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;configuration&gt;</span>
+        <span class="tag">&lt;transformers&gt;</span>
+            <span class="tag">&lt;transformer</span> <span class="attribute-name">implementation</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">org.apache.maven.plugins.shade.resource.ServicesResourceTransformer</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
+        <span class="tag">&lt;/transformers&gt;</span>
+    <span class="tag">&lt;/configuration&gt;</span>
+    <span class="tag">&lt;executions&gt;</span>
+        <span class="tag">&lt;execution&gt;</span>
+            <span class="tag">&lt;phase&gt;</span>package<span class="tag">&lt;/phase&gt;</span>
+            <span class="tag">&lt;goals&gt;</span>
+                <span class="tag">&lt;goal&gt;</span>shade<span class="tag">&lt;/goal&gt;</span>
+            <span class="tag">&lt;/goals&gt;</span>
+        <span class="tag">&lt;/execution&gt;</span>
+    <span class="tag">&lt;/executions&gt;</span>
+<span class="tag">&lt;/plugin&gt;</span></code></pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -380,7 +416,7 @@ minimum settings required for a JavaFX application</p>
 <p>Module: <code>org.kordamp.ikonli.dashicons</code></p>
 </li>
 <li>
-<p>Font version: 20171213</p>
+<p>Font version: 20200504</p>
 </li>
 <li>
 <p><a href="https://github.com/WordPress/dashicons" class="bare">https://github.com/WordPress/dashicons</a></p>
@@ -395,7 +431,7 @@ minimum settings required for a JavaFX application</p>
 <div class="listingblock">
 <div class="title">gradle</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-dashicons-pack:11.4.0'</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-dashicons-pack:11.5.0'</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -404,7 +440,7 @@ minimum settings required for a JavaFX application</p>
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
     <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
     <span class="tag">&lt;artifactId&gt;</span>ikonli-dashicons-pack<span class="tag">&lt;/artifactId&gt;</span>
-    <span class="tag">&lt;version&gt;</span>11.4.0<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;version&gt;</span>11.5.0<span class="tag">&lt;/version&gt;</span>
 <span class="tag">&lt;/dependency&gt;</span></code></pre>
 </div>
 </div>
@@ -433,7 +469,7 @@ minimum settings required for a JavaFX application</p>
 <div class="listingblock">
 <div class="title">gradle</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-devicons-pack:11.4.0'</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-devicons-pack:11.5.0'</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -442,7 +478,7 @@ minimum settings required for a JavaFX application</p>
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
     <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
     <span class="tag">&lt;artifactId&gt;</span>ikonli-devicons-pack<span class="tag">&lt;/artifactId&gt;</span>
-    <span class="tag">&lt;version&gt;</span>11.4.0<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;version&gt;</span>11.5.0<span class="tag">&lt;/version&gt;</span>
 <span class="tag">&lt;/dependency&gt;</span></code></pre>
 </div>
 </div>
@@ -471,7 +507,7 @@ minimum settings required for a JavaFX application</p>
 <div class="listingblock">
 <div class="title">gradle</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-elusive-pack:11.4.0'</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-elusive-pack:11.5.0'</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -480,7 +516,7 @@ minimum settings required for a JavaFX application</p>
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
     <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
     <span class="tag">&lt;artifactId&gt;</span>ikonli-elusive-pack<span class="tag">&lt;/artifactId&gt;</span>
-    <span class="tag">&lt;version&gt;</span>11.4.0<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;version&gt;</span>11.5.0<span class="tag">&lt;/version&gt;</span>
 <span class="tag">&lt;/dependency&gt;</span></code></pre>
 </div>
 </div>
@@ -509,7 +545,7 @@ minimum settings required for a JavaFX application</p>
 <div class="listingblock">
 <div class="title">gradle</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-entypo-pack:11.4.0'</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-entypo-pack:11.5.0'</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -518,7 +554,7 @@ minimum settings required for a JavaFX application</p>
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
     <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
     <span class="tag">&lt;artifactId&gt;</span>ikonli-entypo-pack<span class="tag">&lt;/artifactId&gt;</span>
-    <span class="tag">&lt;version&gt;</span>11.4.0<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;version&gt;</span>11.5.0<span class="tag">&lt;/version&gt;</span>
 <span class="tag">&lt;/dependency&gt;</span></code></pre>
 </div>
 </div>
@@ -532,7 +568,7 @@ minimum settings required for a JavaFX application</p>
 <p>Module: <code>org.kordamp.ikonli.feather</code></p>
 </li>
 <li>
-<p>Font version: 1.1</p>
+<p>Font version: 4.28</p>
 </li>
 <li>
 <p><a href="https://feathericons.com/" class="bare">https://feathericons.com/</a></p>
@@ -547,7 +583,7 @@ minimum settings required for a JavaFX application</p>
 <div class="listingblock">
 <div class="title">gradle</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-feather-pack:11.4.0'</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-feather-pack:11.5.0'</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -556,7 +592,7 @@ minimum settings required for a JavaFX application</p>
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
     <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
     <span class="tag">&lt;artifactId&gt;</span>ikonli-feather-pack<span class="tag">&lt;/artifactId&gt;</span>
-    <span class="tag">&lt;version&gt;</span>11.4.0<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;version&gt;</span>11.5.0<span class="tag">&lt;/version&gt;</span>
 <span class="tag">&lt;/dependency&gt;</span></code></pre>
 </div>
 </div>
@@ -585,7 +621,7 @@ minimum settings required for a JavaFX application</p>
 <div class="listingblock">
 <div class="title">gradle</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-fontawesome-pack:11.4.0'</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-fontawesome-pack:11.5.0'</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -594,7 +630,7 @@ minimum settings required for a JavaFX application</p>
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
     <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
     <span class="tag">&lt;artifactId&gt;</span>ikonli-fontawesome-pack<span class="tag">&lt;/artifactId&gt;</span>
-    <span class="tag">&lt;version&gt;</span>11.4.0<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;version&gt;</span>11.5.0<span class="tag">&lt;/version&gt;</span>
 <span class="tag">&lt;/dependency&gt;</span></code></pre>
 </div>
 </div>
@@ -608,7 +644,7 @@ minimum settings required for a JavaFX application</p>
 <p>Module: <code>org.kordamp.ikonli.fontawesome5</code></p>
 </li>
 <li>
-<p>Font version: 5.8.1</p>
+<p>Font version: 5.13.0</p>
 </li>
 <li>
 <p><a href="https://fontawesome.com" class="bare">https://fontawesome.com</a></p>
@@ -623,7 +659,7 @@ minimum settings required for a JavaFX application</p>
 <div class="listingblock">
 <div class="title">gradle</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-fontawesome5-pack:11.4.0'</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-fontawesome5-pack:11.5.0'</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -632,7 +668,7 @@ minimum settings required for a JavaFX application</p>
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
     <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
     <span class="tag">&lt;artifactId&gt;</span>ikonli-fontawesome5-pack<span class="tag">&lt;/artifactId&gt;</span>
-    <span class="tag">&lt;version&gt;</span>11.4.0<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;version&gt;</span>11.5.0<span class="tag">&lt;/version&gt;</span>
 <span class="tag">&lt;/dependency&gt;</span></code></pre>
 </div>
 </div>
@@ -661,7 +697,7 @@ minimum settings required for a JavaFX application</p>
 <div class="listingblock">
 <div class="title">gradle</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-fontelico-pack:11.4.0'</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-fontelico-pack:11.5.0'</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -670,7 +706,7 @@ minimum settings required for a JavaFX application</p>
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
     <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
     <span class="tag">&lt;artifactId&gt;</span>ikonli-fontelico-pack<span class="tag">&lt;/artifactId&gt;</span>
-    <span class="tag">&lt;version&gt;</span>11.4.0<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;version&gt;</span>11.5.0<span class="tag">&lt;/version&gt;</span>
 <span class="tag">&lt;/dependency&gt;</span></code></pre>
 </div>
 </div>
@@ -699,7 +735,7 @@ minimum settings required for a JavaFX application</p>
 <div class="listingblock">
 <div class="title">gradle</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-foundation-pack:11.4.0'</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-foundation-pack:11.5.0'</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -708,7 +744,7 @@ minimum settings required for a JavaFX application</p>
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
     <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
     <span class="tag">&lt;artifactId&gt;</span>ikonli-foundation-pack<span class="tag">&lt;/artifactId&gt;</span>
-    <span class="tag">&lt;version&gt;</span>11.4.0<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;version&gt;</span>11.5.0<span class="tag">&lt;/version&gt;</span>
 <span class="tag">&lt;/dependency&gt;</span></code></pre>
 </div>
 </div>
@@ -737,7 +773,7 @@ minimum settings required for a JavaFX application</p>
 <div class="listingblock">
 <div class="title">gradle</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-hawconsfilled-pack:11.4.0'</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-hawconsfilled-pack:11.5.0'</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -746,7 +782,7 @@ minimum settings required for a JavaFX application</p>
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
     <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
     <span class="tag">&lt;artifactId&gt;</span>ikonli-hawconsfilled-pack<span class="tag">&lt;/artifactId&gt;</span>
-    <span class="tag">&lt;version&gt;</span>11.4.0<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;version&gt;</span>11.5.0<span class="tag">&lt;/version&gt;</span>
 <span class="tag">&lt;/dependency&gt;</span></code></pre>
 </div>
 </div>
@@ -775,7 +811,7 @@ minimum settings required for a JavaFX application</p>
 <div class="listingblock">
 <div class="title">gradle</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-hawconsstroke-pack:11.4.0'</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-hawconsstroke-pack:11.5.0'</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -784,7 +820,7 @@ minimum settings required for a JavaFX application</p>
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
     <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
     <span class="tag">&lt;artifactId&gt;</span>ikonli-hawconsstroke-pack<span class="tag">&lt;/artifactId&gt;</span>
-    <span class="tag">&lt;version&gt;</span>11.4.0<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;version&gt;</span>11.5.0<span class="tag">&lt;/version&gt;</span>
 <span class="tag">&lt;/dependency&gt;</span></code></pre>
 </div>
 </div>
@@ -813,7 +849,7 @@ minimum settings required for a JavaFX application</p>
 <div class="listingblock">
 <div class="title">gradle</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-icomoon-pack:11.4.0'</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-icomoon-pack:11.5.0'</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -822,7 +858,7 @@ minimum settings required for a JavaFX application</p>
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
     <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
     <span class="tag">&lt;artifactId&gt;</span>ikonli-icomoon-pack<span class="tag">&lt;/artifactId&gt;</span>
-    <span class="tag">&lt;version&gt;</span>11.4.0<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;version&gt;</span>11.5.0<span class="tag">&lt;/version&gt;</span>
 <span class="tag">&lt;/dependency&gt;</span></code></pre>
 </div>
 </div>
@@ -851,7 +887,7 @@ minimum settings required for a JavaFX application</p>
 <div class="listingblock">
 <div class="title">gradle</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-ionicons-pack:11.4.0'</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-ionicons-pack:11.5.0'</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -860,7 +896,7 @@ minimum settings required for a JavaFX application</p>
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
     <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
     <span class="tag">&lt;artifactId&gt;</span>ikonli-ionicons-pack<span class="tag">&lt;/artifactId&gt;</span>
-    <span class="tag">&lt;version&gt;</span>11.4.0<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;version&gt;</span>11.5.0<span class="tag">&lt;/version&gt;</span>
 <span class="tag">&lt;/dependency&gt;</span></code></pre>
 </div>
 </div>
@@ -889,7 +925,7 @@ minimum settings required for a JavaFX application</p>
 <div class="listingblock">
 <div class="title">gradle</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-ionicons4-pack:11.4.0'</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-ionicons4-pack:11.5.0'</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -898,7 +934,7 @@ minimum settings required for a JavaFX application</p>
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
     <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
     <span class="tag">&lt;artifactId&gt;</span>ikonli-ionicons4-pack<span class="tag">&lt;/artifactId&gt;</span>
-    <span class="tag">&lt;version&gt;</span>11.4.0<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;version&gt;</span>11.5.0<span class="tag">&lt;/version&gt;</span>
 <span class="tag">&lt;/dependency&gt;</span></code></pre>
 </div>
 </div>
@@ -927,7 +963,7 @@ minimum settings required for a JavaFX application</p>
 <div class="listingblock">
 <div class="title">gradle</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-ligaturesymbols-pack:11.4.0'</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-ligaturesymbols-pack:11.5.0'</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -936,7 +972,7 @@ minimum settings required for a JavaFX application</p>
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
     <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
     <span class="tag">&lt;artifactId&gt;</span>ikonli-ligaturesymbols-pack<span class="tag">&lt;/artifactId&gt;</span>
-    <span class="tag">&lt;version&gt;</span>11.4.0<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;version&gt;</span>11.5.0<span class="tag">&lt;/version&gt;</span>
 <span class="tag">&lt;/dependency&gt;</span></code></pre>
 </div>
 </div>
@@ -965,7 +1001,7 @@ minimum settings required for a JavaFX application</p>
 <div class="listingblock">
 <div class="title">gradle</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-linecons-pack:11.4.0'</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-linecons-pack:11.5.0'</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -974,7 +1010,7 @@ minimum settings required for a JavaFX application</p>
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
     <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
     <span class="tag">&lt;artifactId&gt;</span>ikonli-linecons-pack<span class="tag">&lt;/artifactId&gt;</span>
-    <span class="tag">&lt;version&gt;</span>11.4.0<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;version&gt;</span>11.5.0<span class="tag">&lt;/version&gt;</span>
 <span class="tag">&lt;/dependency&gt;</span></code></pre>
 </div>
 </div>
@@ -1003,7 +1039,7 @@ minimum settings required for a JavaFX application</p>
 <div class="listingblock">
 <div class="title">gradle</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-maki-pack:11.4.0'</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-maki-pack:11.5.0'</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -1012,7 +1048,7 @@ minimum settings required for a JavaFX application</p>
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
     <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
     <span class="tag">&lt;artifactId&gt;</span>ikonli-maki-pack<span class="tag">&lt;/artifactId&gt;</span>
-    <span class="tag">&lt;version&gt;</span>11.4.0<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;version&gt;</span>11.5.0<span class="tag">&lt;/version&gt;</span>
 <span class="tag">&lt;/dependency&gt;</span></code></pre>
 </div>
 </div>
@@ -1041,7 +1077,7 @@ minimum settings required for a JavaFX application</p>
 <div class="listingblock">
 <div class="title">gradle</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-maki2-pack:11.4.0'</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-maki2-pack:11.5.0'</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -1050,7 +1086,7 @@ minimum settings required for a JavaFX application</p>
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
     <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
     <span class="tag">&lt;artifactId&gt;</span>ikonli-maki2-pack<span class="tag">&lt;/artifactId&gt;</span>
-    <span class="tag">&lt;version&gt;</span>11.4.0<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;version&gt;</span>11.5.0<span class="tag">&lt;/version&gt;</span>
 <span class="tag">&lt;/dependency&gt;</span></code></pre>
 </div>
 </div>
@@ -1079,7 +1115,7 @@ minimum settings required for a JavaFX application</p>
 <div class="listingblock">
 <div class="title">gradle</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-mapicons-pack:11.4.0'</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-mapicons-pack:11.5.0'</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -1088,7 +1124,7 @@ minimum settings required for a JavaFX application</p>
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
     <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
     <span class="tag">&lt;artifactId&gt;</span>ikonli-mapicons-pack<span class="tag">&lt;/artifactId&gt;</span>
-    <span class="tag">&lt;version&gt;</span>11.4.0<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;version&gt;</span>11.5.0<span class="tag">&lt;/version&gt;</span>
 <span class="tag">&lt;/dependency&gt;</span></code></pre>
 </div>
 </div>
@@ -1117,7 +1153,7 @@ minimum settings required for a JavaFX application</p>
 <div class="listingblock">
 <div class="title">gradle</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-material-pack:11.4.0'</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-material-pack:11.5.0'</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -1126,7 +1162,7 @@ minimum settings required for a JavaFX application</p>
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
     <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
     <span class="tag">&lt;artifactId&gt;</span>ikonli-material-pack<span class="tag">&lt;/artifactId&gt;</span>
-    <span class="tag">&lt;version&gt;</span>11.4.0<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;version&gt;</span>11.5.0<span class="tag">&lt;/version&gt;</span>
 <span class="tag">&lt;/dependency&gt;</span></code></pre>
 </div>
 </div>
@@ -1155,7 +1191,7 @@ minimum settings required for a JavaFX application</p>
 <div class="listingblock">
 <div class="title">gradle</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-materialdesign-pack:11.4.0'</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-materialdesign-pack:11.5.0'</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -1164,7 +1200,7 @@ minimum settings required for a JavaFX application</p>
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
     <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
     <span class="tag">&lt;artifactId&gt;</span>ikonli-materialdesign-pack<span class="tag">&lt;/artifactId&gt;</span>
-    <span class="tag">&lt;version&gt;</span>11.4.0<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;version&gt;</span>11.5.0<span class="tag">&lt;/version&gt;</span>
 <span class="tag">&lt;/dependency&gt;</span></code></pre>
 </div>
 </div>
@@ -1193,7 +1229,7 @@ minimum settings required for a JavaFX application</p>
 <div class="listingblock">
 <div class="title">gradle</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-metrizeicons-pack:11.4.0'</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-metrizeicons-pack:11.5.0'</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -1202,7 +1238,7 @@ minimum settings required for a JavaFX application</p>
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
     <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
     <span class="tag">&lt;artifactId&gt;</span>ikonli-metrizeicons-pack<span class="tag">&lt;/artifactId&gt;</span>
-    <span class="tag">&lt;version&gt;</span>11.4.0<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;version&gt;</span>11.5.0<span class="tag">&lt;/version&gt;</span>
 <span class="tag">&lt;/dependency&gt;</span></code></pre>
 </div>
 </div>
@@ -1231,7 +1267,7 @@ minimum settings required for a JavaFX application</p>
 <div class="listingblock">
 <div class="title">gradle</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-ociicons-pack:11.4.0'</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-ociicons-pack:11.5.0'</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -1240,7 +1276,7 @@ minimum settings required for a JavaFX application</p>
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
     <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
     <span class="tag">&lt;artifactId&gt;</span>ikonli-ociicons-pack<span class="tag">&lt;/artifactId&gt;</span>
-    <span class="tag">&lt;version&gt;</span>11.4.0<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;version&gt;</span>11.5.0<span class="tag">&lt;/version&gt;</span>
 <span class="tag">&lt;/dependency&gt;</span></code></pre>
 </div>
 </div>
@@ -1269,7 +1305,7 @@ minimum settings required for a JavaFX application</p>
 <div class="listingblock">
 <div class="title">gradle</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-octicons-pack:11.4.0'</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-octicons-pack:11.5.0'</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -1278,7 +1314,7 @@ minimum settings required for a JavaFX application</p>
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
     <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
     <span class="tag">&lt;artifactId&gt;</span>ikonli-octicons-pack<span class="tag">&lt;/artifactId&gt;</span>
-    <span class="tag">&lt;version&gt;</span>11.4.0<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;version&gt;</span>11.5.0<span class="tag">&lt;/version&gt;</span>
 <span class="tag">&lt;/dependency&gt;</span></code></pre>
 </div>
 </div>
@@ -1307,7 +1343,7 @@ minimum settings required for a JavaFX application</p>
 <div class="listingblock">
 <div class="title">gradle</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-openiconic-pack:11.4.0'</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-openiconic-pack:11.5.0'</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -1316,7 +1352,7 @@ minimum settings required for a JavaFX application</p>
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
     <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
     <span class="tag">&lt;artifactId&gt;</span>ikonli-openiconic-pack<span class="tag">&lt;/artifactId&gt;</span>
-    <span class="tag">&lt;version&gt;</span>11.4.0<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;version&gt;</span>11.5.0<span class="tag">&lt;/version&gt;</span>
 <span class="tag">&lt;/dependency&gt;</span></code></pre>
 </div>
 </div>
@@ -1345,7 +1381,7 @@ minimum settings required for a JavaFX application</p>
 <div class="listingblock">
 <div class="title">gradle</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-paymentfont-pack:11.4.0'</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-paymentfont-pack:11.5.0'</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -1354,7 +1390,7 @@ minimum settings required for a JavaFX application</p>
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
     <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
     <span class="tag">&lt;artifactId&gt;</span>ikonli-paymentfont-pack<span class="tag">&lt;/artifactId&gt;</span>
-    <span class="tag">&lt;version&gt;</span>11.4.0<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;version&gt;</span>11.5.0<span class="tag">&lt;/version&gt;</span>
 <span class="tag">&lt;/dependency&gt;</span></code></pre>
 </div>
 </div>
@@ -1383,7 +1419,7 @@ minimum settings required for a JavaFX application</p>
 <div class="listingblock">
 <div class="title">gradle</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-runestroicons-pack:11.4.0'</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-runestroicons-pack:11.5.0'</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -1392,7 +1428,7 @@ minimum settings required for a JavaFX application</p>
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
     <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
     <span class="tag">&lt;artifactId&gt;</span>ikonli-runestroicons-pack<span class="tag">&lt;/artifactId&gt;</span>
-    <span class="tag">&lt;version&gt;</span>11.4.0<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;version&gt;</span>11.5.0<span class="tag">&lt;/version&gt;</span>
 <span class="tag">&lt;/dependency&gt;</span></code></pre>
 </div>
 </div>
@@ -1421,7 +1457,7 @@ minimum settings required for a JavaFX application</p>
 <div class="listingblock">
 <div class="title">gradle</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-themify-pack:11.4.0'</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-themify-pack:11.5.0'</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -1430,7 +1466,7 @@ minimum settings required for a JavaFX application</p>
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
     <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
     <span class="tag">&lt;artifactId&gt;</span>ikonli-themify-pack<span class="tag">&lt;/artifactId&gt;</span>
-    <span class="tag">&lt;version&gt;</span>11.4.0<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;version&gt;</span>11.5.0<span class="tag">&lt;/version&gt;</span>
 <span class="tag">&lt;/dependency&gt;</span></code></pre>
 </div>
 </div>
@@ -1459,7 +1495,7 @@ minimum settings required for a JavaFX application</p>
 <div class="listingblock">
 <div class="title">gradle</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-typicons-pack:11.4.0'</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-typicons-pack:11.5.0'</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -1468,7 +1504,7 @@ minimum settings required for a JavaFX application</p>
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
     <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
     <span class="tag">&lt;artifactId&gt;</span>ikonli-typicons-pack<span class="tag">&lt;/artifactId&gt;</span>
-    <span class="tag">&lt;version&gt;</span>11.4.0<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;version&gt;</span>11.5.0<span class="tag">&lt;/version&gt;</span>
 <span class="tag">&lt;/dependency&gt;</span></code></pre>
 </div>
 </div>
@@ -1497,7 +1533,7 @@ minimum settings required for a JavaFX application</p>
 <div class="listingblock">
 <div class="title">gradle</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-weathericons-pack:11.4.0'</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-weathericons-pack:11.5.0'</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -1506,7 +1542,7 @@ minimum settings required for a JavaFX application</p>
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
     <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
     <span class="tag">&lt;artifactId&gt;</span>ikonli-weathericons-pack<span class="tag">&lt;/artifactId&gt;</span>
-    <span class="tag">&lt;version&gt;</span>11.4.0<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;version&gt;</span>11.5.0<span class="tag">&lt;/version&gt;</span>
 <span class="tag">&lt;/dependency&gt;</span></code></pre>
 </div>
 </div>
@@ -1535,7 +1571,7 @@ minimum settings required for a JavaFX application</p>
 <div class="listingblock">
 <div class="title">gradle</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-websymbols-pack:11.4.0'</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-websymbols-pack:11.5.0'</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -1544,7 +1580,7 @@ minimum settings required for a JavaFX application</p>
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
     <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
     <span class="tag">&lt;artifactId&gt;</span>ikonli-websymbols-pack<span class="tag">&lt;/artifactId&gt;</span>
-    <span class="tag">&lt;version&gt;</span>11.4.0<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;version&gt;</span>11.5.0<span class="tag">&lt;/version&gt;</span>
 <span class="tag">&lt;/dependency&gt;</span></code></pre>
 </div>
 </div>
@@ -1573,7 +1609,7 @@ minimum settings required for a JavaFX application</p>
 <div class="listingblock">
 <div class="title">gradle</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-zondicons-pack:11.4.0'</code></pre>
+<pre class="CodeRay highlight"><code data-lang="groovy">compile 'org.kordamp.ikonli:ikonli-zondicons-pack:11.5.0'</code></pre>
 </div>
 </div>
 <div class="listingblock">
@@ -1582,7 +1618,7 @@ minimum settings required for a JavaFX application</p>
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependency&gt;</span>
     <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
     <span class="tag">&lt;artifactId&gt;</span>ikonli-zondicons-pack<span class="tag">&lt;/artifactId&gt;</span>
-    <span class="tag">&lt;version&gt;</span>11.4.0<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;version&gt;</span>11.5.0<span class="tag">&lt;/version&gt;</span>
 <span class="tag">&lt;/dependency&gt;</span></code></pre>
 </div>
 </div>
@@ -1604,8 +1640,8 @@ minimum settings required for a JavaFX application</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Version 11.4.0<br>
-Last updated 2019-09-13 17:34:16 +0200
+Version 11.5.0<br>
+Last updated 2020-05-09 20:53:37 +0200
 </div>
 </div>
 <link rel="stylesheet" href="./coderay-asciidoctor.css">

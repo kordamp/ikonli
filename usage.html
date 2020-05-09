@@ -14,7 +14,7 @@
 <div id="header">
 <h1>Usage</h1>
 <div class="details">
-<span id="revnumber">version 11.4.0</span>
+<span id="revnumber">version 11.5.0</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
@@ -29,6 +29,7 @@
 <li><a href="#_installing_2">2.1. Installing</a></li>
 </ul>
 </li>
+<li><a href="#_creating_a_fatjar">3. Creating a FatJAR</a></li>
 </ul>
 </div>
 </div>
@@ -37,7 +38,7 @@
 <h2 id="_swing"><a class="anchor" href="#_swing"></a>1. Swing</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The <code>ikonli-swing:11.4.0</code> JAR provides a new Icon class: <code>{api_link_fonticon_swing}</code>.
+<p>The <code>ikonli-swing:11.5.0</code> JAR provides a new Icon class: <code>{api_link_fonticon_swing}</code>.
 You may use this class with any Swing component that supports an Icon property.</p>
 </div>
 <div class="sect2">
@@ -46,11 +47,11 @@ You may use this class with any Swing component that supports an Icon property.<
 <div class="title">gradle</div>
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="groovy">repositories {
-    jcenter()
+    mavenCentral()
 }
 
 dependencies {
-    compile 'org.kordamp.ikonli:ikonli-swing:11.4.0'
+    compile 'org.kordamp.ikonli:ikonli-swing:11.5.0'
 }</code></pre>
 </div>
 </div>
@@ -61,17 +62,9 @@ dependencies {
     <span class="tag">&lt;dependency&gt;</span>
         <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
         <span class="tag">&lt;artifactId&gt;</span>ikonli-swing<span class="tag">&lt;/artifactId&gt;</span>
-        <span class="tag">&lt;version&gt;</span>11.4.0<span class="tag">&lt;/version&gt;</span>
+        <span class="tag">&lt;version&gt;</span>11.5.0<span class="tag">&lt;/version&gt;</span>
     <span class="tag">&lt;/dependency&gt;</span>
-<span class="tag">&lt;/dependencies&gt;</span>
-
-<span class="tag">&lt;repositories&gt;</span>
-    <span class="tag">&lt;repository&gt;</span>
-        <span class="tag">&lt;id&gt;</span>central<span class="tag">&lt;/id&gt;</span>
-        <span class="tag">&lt;name&gt;</span>jcenter<span class="tag">&lt;/name&gt;</span>
-        <span class="tag">&lt;url&gt;</span>http://jcenter.bintray.com<span class="tag">&lt;/url&gt;</span>
-    <span class="tag">&lt;/repository&gt;</span>
-<span class="tag">&lt;/repositories&gt;</span></code></pre>
+<span class="tag">&lt;/dependencies&gt;</span></code></pre>
 </div>
 </div>
 </div>
@@ -81,7 +74,7 @@ dependencies {
 <h2 id="_javafx"><a class="anchor" href="#_javafx"></a>2. JavaFX</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The <code>ikonli-javafx:11.4.0</code> JAR provides a new Node class: <code>{api_link_fonticon_javafx}</code>.
+<p>The <code>ikonli-javafx:11.5.0</code> JAR provides a new Node class: <code>{api_link_fonticon_javafx}</code>.
 You may use this class with any JavaFX control that accepts a graphic property. You may also use the icon directly as
 it is a subclass of <code>javafx.scene.text.Text</code>. The icon class can be used inside an FXML file too.</p>
 </div>
@@ -130,7 +123,7 @@ it is a subclass of <code>javafx.scene.text.Text</code>. The icon class can be u
 <dl>
 <dt class="hdlist1">icon-code</dt>
 <dd>
-<p>An icon code literal such as <code>di-java</code>.</p>
+<p>An icon code literal such as <code>di-java</code>. The prefix (<code>di-</code>) indicates the icon pack. For this example, DevIcons needs to be installed.</p>
 </dd>
 <dt class="hdlist1">icon-size</dt>
 <dd>
@@ -236,11 +229,11 @@ in the following example</p>
 <div class="title">gradle</div>
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="groovy">repositories {
-    jcenter()
+    mavenCentral()
 }
 
 dependencies {
-    compile 'org.kordamp.ikonli:ikonli-javafx:11.4.0'
+    compile 'org.kordamp.ikonli:ikonli-javafx:11.5.0'
 }</code></pre>
 </div>
 </div>
@@ -251,17 +244,9 @@ dependencies {
     <span class="tag">&lt;dependency&gt;</span>
         <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
         <span class="tag">&lt;artifactId&gt;</span>ikonli-javafx<span class="tag">&lt;/artifactId&gt;</span>
-        <span class="tag">&lt;version&gt;</span>11.4.0<span class="tag">&lt;/version&gt;</span>
+        <span class="tag">&lt;version&gt;</span>11.5.0<span class="tag">&lt;/version&gt;</span>
     <span class="tag">&lt;/dependency&gt;</span>
-<span class="tag">&lt;/dependencies&gt;</span>
-
-<span class="tag">&lt;repositories&gt;</span>
-    <span class="tag">&lt;repository&gt;</span>
-        <span class="tag">&lt;id&gt;</span>central<span class="tag">&lt;/id&gt;</span>
-        <span class="tag">&lt;name&gt;</span>jcenter<span class="tag">&lt;/name&gt;</span>
-        <span class="tag">&lt;url&gt;</span>http://jcenter.bintray.com<span class="tag">&lt;/url&gt;</span>
-    <span class="tag">&lt;/repository&gt;</span>
-<span class="tag">&lt;/repositories&gt;</span></code></pre>
+<span class="tag">&lt;/dependencies&gt;</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -285,11 +270,64 @@ minimum settings required for a JavaFX application</p>
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_creating_a_fatjar"><a class="anchor" href="#_creating_a_fatjar"></a>3. Creating a FatJAR</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Ikonli&#8217;s icon packs rely on services files to provide their implementation. You mist make sure that those services files
+are properly merged when creating a FatJar or UberJAR. Fortunately there are build plugins that can help with this task.</p>
+</div>
+<div class="paragraph">
+<div class="title">Gradle</div>
+<p>Configure the <code><a href="https://imperceptiblethoughts.com/shadow/getting-started/">shadow</a></code> plugin and merge service files</p>
+</div>
+<div class="listingblock">
+<div class="title">build.gradle</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="groovy">plugins {
+    id <span class="string"><span class="delimiter">'</span><span class="content">com.github.johnrengelman.shadow</span><span class="delimiter">'</span></span> version <span class="string"><span class="delimiter">'</span><span class="content">5.2.0</span><span class="delimiter">'</span></span>
+}
+
+shadowJar {
+    mergeServiceFiles()
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<div class="title">Maven</div>
+<p>Configure the <code><a href="https://maven.apache.org/plugins/maven-shade-plugin/">maven-shade-plugin</a></code> and apply the
+<code>org.apache.maven.plugins.shade.resource.ServicesResourceTransformer</code> transformer.</p>
+</div>
+<div class="listingblock">
+<div class="title">pom.xml</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;plugin&gt;</span>
+    <span class="tag">&lt;groupId&gt;</span>org.apache.maven.plugins<span class="tag">&lt;/groupId&gt;</span>
+    <span class="tag">&lt;artifactId&gt;</span>maven-shade-plugin<span class="tag">&lt;/artifactId&gt;</span>
+    <span class="tag">&lt;version&gt;</span>3.2.3<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;configuration&gt;</span>
+        <span class="tag">&lt;transformers&gt;</span>
+            <span class="tag">&lt;transformer</span> <span class="attribute-name">implementation</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">org.apache.maven.plugins.shade.resource.ServicesResourceTransformer</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
+        <span class="tag">&lt;/transformers&gt;</span>
+    <span class="tag">&lt;/configuration&gt;</span>
+    <span class="tag">&lt;executions&gt;</span>
+        <span class="tag">&lt;execution&gt;</span>
+            <span class="tag">&lt;phase&gt;</span>package<span class="tag">&lt;/phase&gt;</span>
+            <span class="tag">&lt;goals&gt;</span>
+                <span class="tag">&lt;goal&gt;</span>shade<span class="tag">&lt;/goal&gt;</span>
+            <span class="tag">&lt;/goals&gt;</span>
+        <span class="tag">&lt;/execution&gt;</span>
+    <span class="tag">&lt;/executions&gt;</span>
+<span class="tag">&lt;/plugin&gt;</span></code></pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Version 11.4.0<br>
-Last updated 2019-12-21 20:49:06 +0100
+Version 11.5.0<br>
+Last updated 2020-05-09 20:53:37 +0200
 </div>
 </div>
 <link rel="stylesheet" href="./coderay-asciidoctor.css">
