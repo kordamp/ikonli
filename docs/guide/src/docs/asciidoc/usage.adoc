@@ -185,3 +185,52 @@ module com.acme.demo {
 }
 ----
 
+== Creating a FatJAR
+
+Ikonli's icon packs rely on services files to provide their implementation. You mist make sure that those services files
+are properly merged when creating a FatJar or UberJAR. Fortunately there are build plugins that can help with this task.
+
+.Gradle
+Configure the `link:https://imperceptiblethoughts.com/shadow/getting-started/[shadow]` plugin and merge service files
+
+[source,groovy]
+.build.gradle
+----
+plugins {
+    id 'com.github.johnrengelman.shadow' version '5.2.0'
+}
+
+shadowJar {
+    mergeServiceFiles()
+}
+----
+
+.Maven
+Configure the `link:https://maven.apache.org/plugins/maven-shade-plugin/[maven-shade-plugin]` and apply the
+`org.apache.maven.plugins.shade.resource.ServicesResourceTransformer` transformer.
+
+[source,xml]
+[subs="verbatim"]
+.pom.xml
+----
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-shade-plugin</artifactId>
+    <version>3.2.3</version>
+    <configuration>
+        <transformers>
+            <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
+        </transformers>
+    </configuration>
+    <executions>
+        <execution>
+            <phase>package</phase>
+            <goals>
+                <goal>shade</goal>
+            </goals>
+        </execution>
+    </executions>
+</plugin>
+----
+
+
