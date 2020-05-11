@@ -8,7 +8,7 @@
 
 image:https://img.shields.io/travis/{project-owner}/{project-name}/master.svg?logo=travis["Build Status (travis)", link="https://travis-ci.org/{project-owner}/{project-name}"]
 image:https://github.com/{project-owner}/{project-name}/workflows/Build/badge.svg["Build Status", link="https://github.com/{project-owner}/{project-name}/actions"]
-image:https://img.shields.io/badge/license-ASL2-blue.svg?logo=apache["ASL2 Licensed", link="http://opensource.org/licenses/ASL2"]
+image:https://img.shields.io/badge/license-ASL2-blue.svg?logo=apache["ASL2 Licensed", link="https://opensource.org/licenses/Apache-2.0"]
 image:https://api.bintray.com/packages/{project-owner}/{project-repo}/{project-name}/images/download.svg[link="https://bintray.com/{project-owner}/{project-repo}/{project-name}/_latestVersion"]
 image:https://img.shields.io/maven-central/v/{project-group}/{project-name}-core.svg?label=maven[link="https://search.maven.org/#search|ga|1|{project-group}"]
 image:https://img.shields.io/badge/donations-Patreon-f96854.svg?logo=patreon[link="https://www.patreon.com/user?u=6609318"]
@@ -31,7 +31,7 @@ You must meet the following requirements:
  * JDK11 as a minimum
  * Gradle 6.0
 
-You may used the included gradle wrapper script if you don't have `gradle` installed.
+You may use the included gradle wrapper script if you don't have `gradle` installed.
 
 Adapt these instructions to Windows settings if running on Windows.
 
