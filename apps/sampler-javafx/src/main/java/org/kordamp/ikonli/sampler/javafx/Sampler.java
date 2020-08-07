@@ -32,6 +32,7 @@ import org.kordamp.ikonli.devicons.Devicons;
 import org.kordamp.ikonli.elusive.Elusive;
 import org.kordamp.ikonli.entypo.Entypo;
 import org.kordamp.ikonli.feather.Feather;
+import org.kordamp.ikonli.fluentui.FluentUi;
 import org.kordamp.ikonli.fontawesome.FontAwesome;
 import org.kordamp.ikonli.fontawesome5.FontAwesomeBrands;
 import org.kordamp.ikonli.fontawesome5.FontAwesomeRegular;
@@ -88,6 +89,7 @@ public class Sampler extends Application {
         tabPane.getTabs().add(new DemoTab(Elusive.class, allOf(Elusive.class)));
         tabPane.getTabs().add(new DemoTab(Entypo.class, allOf(Entypo.class)));
         tabPane.getTabs().add(new DemoTab(Feather.class, allOf(Feather.class)));
+        tabPane.getTabs().add(new DemoTab(FluentUi.class, allOf(FluentUi.class)));
         tabPane.getTabs().add(new DemoTab(FontAwesome.class, allOf(FontAwesome.class)));
         tabPane.getTabs().add(new DemoTab(FontAwesomeBrands.class, allOf(FontAwesomeBrands.class)));
         tabPane.getTabs().add(new DemoTab(FontAwesomeSolid.class, allOf(FontAwesomeSolid.class)));
