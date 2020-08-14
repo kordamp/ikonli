@@ -17,33 +17,38 @@
  */
 package org.kordamp.ikonli.fluentui;
 
-import org.kordamp.ikonli.AbstractIkonHandler;
 import org.kordamp.ikonli.Ikon;
-import org.kordamp.ikonli.IkonHandler;
-import org.kordamp.jipsy.ServiceProviderFor;
 
 /**
  * @author Andres Almiray
  */
-@ServiceProviderFor(IkonHandler.class)
-public class FluentUiIkonHandler extends AbstractIkonHandler {
-    @Override
-    public boolean supports(String description) {
-        return description != null && description.startsWith("flt-");
+public enum FluentUiRegular implements Ikon {
+    ;
+
+    public static FluentUiRegular findByDescription(String description) {
+        for (FluentUiRegular font : values()) {
+            if (font.getDescription().equals(description)) {
+                return font;
+            }
+        }
+        throw new IllegalArgumentException("Icon description '" + description + "' is invalid!");
+    }
+
+    private String description;
+    private char code;
+
+    FluentUiRegular(String description, char code) {
+        this.description = description;
+        this.code = code;
     }
 
     @Override
-    public Ikon resolve(String description) {
-        return FluentUi.findByDescription(description);
+    public String getDescription() {
+        return description;
     }
 
     @Override
-    public String getFontResourcePath() {
-        return "META-INF/resources/fluentui/1.1.43/fonts/fluentui.ttf";
-    }
-
-    @Override
-    public String getFontFamily() {
-        return "Fluent UI System Icons";
+    public char getCode() {
+        return code;
     }
 }

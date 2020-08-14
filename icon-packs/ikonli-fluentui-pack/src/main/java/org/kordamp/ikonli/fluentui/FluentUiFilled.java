@@ -22,11 +22,11 @@ import org.kordamp.ikonli.Ikon;
 /**
  * @author Andres Almiray
  */
-public enum FluentUi implements Ikon {
+public enum FluentUiFilled implements Ikon {
     ;
 
-    public static FluentUi findByDescription(String description) {
-        for (FluentUi font : values()) {
+    public static FluentUiFilled findByDescription(String description) {
+        for (FluentUiFilled font : values()) {
             if (font.getDescription().equals(description)) {
                 return font;
             }
@@ -37,7 +37,7 @@ public enum FluentUi implements Ikon {
     private String description;
     private char code;
 
-    FluentUi(String description, char code) {
+    FluentUiFilled(String description, char code) {
         this.description = description;
         this.code = code;
     }
