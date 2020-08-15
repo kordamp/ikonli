@@ -62,6 +62,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTabbedPane;
 import javax.swing.SwingUtilities;
+import javax.swing.WindowConstants;
 import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.util.EnumSet;
@@ -122,6 +123,7 @@ public class Sampler {
         JFrame frame = new JFrame("Ikonli Sampler");
         frame.add(tabPane);
         frame.setSize(new Dimension(1024, 1024));
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setVisible(true);
     }
 
