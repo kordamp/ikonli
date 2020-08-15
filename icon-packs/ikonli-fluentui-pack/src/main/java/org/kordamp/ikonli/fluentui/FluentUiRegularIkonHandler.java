@@ -39,7 +39,7 @@ public class FluentUiRegularIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/fluentui/1.1.43/fonts/FluentUI-Regular-Monochrome.ttf";
+        return "META-INF/resources/fluentui/1.1.44/fonts/FluentUI-Regular-Monochrome.ttf";
     }
 
     @Override
