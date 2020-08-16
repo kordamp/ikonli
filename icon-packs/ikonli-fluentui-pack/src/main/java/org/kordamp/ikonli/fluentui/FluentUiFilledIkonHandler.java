@@ -29,7 +29,7 @@ import org.kordamp.jipsy.ServiceProviderFor;
 public class FluentUiFilledIkonHandler extends AbstractIkonHandler {
     @Override
     public boolean supports(String description) {
-        return description != null && description.startsWith("flt-");
+        return description != null && description.startsWith("flt-fm-");
     }
 
     @Override
