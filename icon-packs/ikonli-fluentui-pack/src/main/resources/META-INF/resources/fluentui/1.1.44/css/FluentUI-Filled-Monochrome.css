@@ -10,7 +10,7 @@
   font-display: block;
 }
 
-[class^="flt-"], [class*=" flt-"] {
+.flt:before {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'FluentUI-Filled-Monochrome' !important;
   speak: never;
@@ -24,7 +24,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+/* Icons */
 .flt-accessibility:before {
   content: "\e000";
 }

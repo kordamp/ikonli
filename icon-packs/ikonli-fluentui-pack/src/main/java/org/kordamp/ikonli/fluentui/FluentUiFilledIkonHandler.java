@@ -44,6 +44,6 @@ public class FluentUiFilledIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontFamily() {
-        return "FluentUI Filled Monochrome";
+        return "FluentUI-Filled-Monochrome";
     }
 }
