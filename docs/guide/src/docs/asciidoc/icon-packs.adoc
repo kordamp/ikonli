@@ -132,6 +132,32 @@ compile '{project-group}:ikonli-feather-pack:{project-version}'
 </dependency>
 ----
 
+== FluentUI
+ * Module: `org.kordamp.ikonli.fluentui`
+ * Font version: {fluentuiVersion}
+ * link:https://github.com/microsoft/fluentui-system-icons/[]
+ * link:cheat-sheet-fluentui.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-fluentui-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-fluentui-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
 == FontAwesome
  * Module: `org.kordamp.ikonli.fontawesome`
  * Font version: {fontawesomeVersion}
@@ -832,4 +858,3 @@ compile '{project-group}:ikonli-zondicons-pack:{project-version}'
     <version>{project-version}</version>
 </dependency>
 ----
-
