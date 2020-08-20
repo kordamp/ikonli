@@ -1,0 +1,25 @@
+= FluentUI
+
+== Filled
+
+++++
+<link href='./css/FluentUI-Filled-Monochrome.css' rel='stylesheet'>
+<style>
+    .flt {
+        font-size: 32px;
+    }
+</style>
+++++
+
+== Regular
+
+++++
+<link href='./css/FluentUI-Regular-Monochrome.css' rel='stylesheet'>
+<style>
+    .flt {
+        font-size: 32px;
+    }
+</style>
+++++
+
+include::{gradle-projectdir}/build/tmp/_fluentui_cheat_sheet.adoc[]
