@@ -97,6 +97,8 @@ asciidoctor {
             createIconGenerationTask(packName: 'elusive', iconClassName: 'org.kordamp.ikonli.elusive.Elusive', iconName: 'el-icon', shortNameSize: 4),
             createIconGenerationTask(packName: 'entypo', iconClassName: 'org.kordamp.ikonli.entypo.Entypo', iconName: 'enty', shortNameSize: 5),
             createIconGenerationTask(packName: 'feather', iconClassName: 'org.kordamp.ikonli.feather.Feather', iconName: 'fth', shortNameSize: 4),
+            createIconGenerationTask(packName: 'fluentui', iconClassName: 'org.kordamp.ikonli.fluentui.FluentUiFilled', iconName: 'flt-fm', shortNameSize: 7, classifier: 'filled'),
+            createIconGenerationTask(packName: 'fluentui', iconClassName: 'org.kordamp.ikonli.fluentui.FluentUiRegular', iconName: 'flt-rm', shortNameSize: 7, classifier: 'regular'),
             createIconGenerationTask(packName: 'fontawesome', iconClassName: 'org.kordamp.ikonli.fontawesome.FontAwesome', iconName: 'fa'),
             createIconGenerationTask(packName: 'fontelico', iconClassName: 'org.kordamp.ikonli.fontelico.Fontelico', shortNameSize: 4),
             createIconGenerationTask(packName: 'foundation', iconClassName: 'org.kordamp.ikonli.foundation.Foundation'),
@@ -135,6 +137,7 @@ asciidoctor {
             elusiveVersion         : project.elusiveVersion,
             entypoVersion          : project.entypoVersion,
             featherVersion         : project.featherVersion,
+            fluentuiVersion        : project.fluentuiVersion,
             fontawesomeVersion     : project.fontawesomeVersion,
             fontawesome5Version    : project.fontawesome5Version,
             fontelicoVersion       : project.fontelicoVersion,
@@ -174,6 +177,7 @@ asciidoctor {
         from project(':ikonli-entypo-pack').file("src/main/resources/META-INF/resources/entypo/${entypoVersion}")
         from project(':ikonli-elusive-pack').file("src/main/resources/META-INF/resources/elusive/${elusiveVersion}")
         from project(':ikonli-feather-pack').file("src/main/resources/META-INF/resources/feather/${featherVersion}")
+        from project(':ikonli-fluentui-pack').file("src/main/resources/META-INF/resources/fluentui/${fluentuiVersion}")
         from project(':ikonli-fontawesome-pack').file("src/main/resources/META-INF/resources/fontawesome/${fontawesomeVersion}")
         from project(':ikonli-fontawesome5-pack').file("src/main/resources/META-INF/resources/fontawesome5/${fontawesome5Version}")
         from project(':ikonli-fontelico-pack').file("src/main/resources/META-INF/resources/fontelico/${fontelicoVersion}")

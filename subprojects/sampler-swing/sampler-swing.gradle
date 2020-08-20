@@ -27,6 +27,7 @@ dependencies {
     implementation project(':ikonli-elusive-pack')
     implementation project(':ikonli-entypo-pack')
     implementation project(':ikonli-feather-pack')
+    implementation project(':ikonli-fluentui-pack')
     implementation project(':ikonli-fontawesome-pack')
     implementation project(':ikonli-fontawesome5-pack')
     implementation project(':ikonli-fontelico-pack')
