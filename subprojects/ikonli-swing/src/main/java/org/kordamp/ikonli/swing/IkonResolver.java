@@ -17,6 +17,7 @@
  */
 package org.kordamp.ikonli.swing;
 
+import org.kordamp.ikonli.AbstractIkonResolver;
 import org.kordamp.ikonli.IkonHandler;
 
 import java.awt.Font;
@@ -24,18 +25,13 @@ import java.awt.FontFormatException;
 import java.awt.GraphicsEnvironment;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.LinkedHashSet;
 import java.util.ServiceLoader;
-import java.util.Set;
-
-import static java.util.Objects.requireNonNull;
 
 /**
  * @author Andres Almiray
  */
-public class IkonResolver {
+public class IkonResolver extends AbstractIkonResolver {
     private static final IkonResolver INSTANCE;
-    private static final Set<IkonHandler> HANDLERS = new LinkedHashSet<>();
 
     static {
         INSTANCE = new IkonResolver();
@@ -63,15 +59,5 @@ public class IkonResolver {
 
     public static IkonResolver getInstance() {
         return INSTANCE;
-    }
-
-    public IkonHandler resolve(String value) {
-        requireNonNull(value, "Ikon description must not be null");
-        for (IkonHandler handler : HANDLERS) {
-            if (handler.supports(value)) {
-                return handler;
-            }
-        }
-        throw new UnsupportedOperationException("Cannot resolve '" + value + "'");
     }
 }

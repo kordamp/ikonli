@@ -234,7 +234,7 @@ public class FontIcon extends Text implements Icon {
 
     public void setIconCode(Ikon iconCode) {
         iconCodeProperty().set(requireNonNull(iconCode, "Argument 'code' must not be null"));
-        IkonHandler ikonHandler = IkonResolver.getInstance().resolveIkonHandler(iconCode.getDescription());
+        IkonHandler ikonHandler = IkonResolver.getInstance().resolve(iconCode.getDescription());
         setStyle(normalizeStyle(getStyle(), "-fx-font-family", "'" + ikonHandler.getFontFamily() + "'"));
         setText(String.valueOf(iconCode.getCode()));
     }
@@ -251,7 +251,7 @@ public class FontIcon extends Text implements Icon {
 
     public void setIconLiteral(String iconCode) {
         String[] parts = iconCode.split(":");
-        setIconCode(IkonResolver.getInstance().resolveIkonHandler(parts[0]).resolve(parts[0]));
+        setIconCode(IkonResolver.getInstance().resolve(parts[0]).resolve(parts[0]));
         resolveSize(iconCode, parts);
         resolvePaint(iconCode, parts);
     }
