@@ -47,7 +47,7 @@ public class FontIconConverter extends StyleConverter<String, Ikon> {
     @Override
     public Ikon convert(ParsedValue<String, Ikon> value, Font font) {
         String description = value.getValue().trim();
-        return IkonResolver.getInstance().resolveIkonHandler(description).resolve(description);
+        return IkonResolver.getInstance().resolve(description).resolve(description);
     }
 
     public static final class SequenceConverter extends StyleConverter<String, Ikon[]> {
@@ -65,7 +65,7 @@ public class FontIconConverter extends StyleConverter<String, Ikon> {
             Ikon[] ikons = new Ikon[descriptions.length];
             for (int i = 0; i < descriptions.length; i++) {
                 String description = descriptions[i].trim();
-                ikons[i] = IkonResolver.getInstance().resolveIkonHandler(description).resolve(description);
+                ikons[i] = IkonResolver.getInstance().resolve(description).resolve(description);
             }
             return ikons;
         }

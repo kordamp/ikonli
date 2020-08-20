@@ -91,7 +91,7 @@ public class FontIcon extends Text implements Icon {
 
         iconCodeProperty().addListener((v, o, n) -> {
             if (n != null) {
-                IkonHandler ikonHandler = IkonResolver.getInstance().resolveIkonHandler(n.getDescription());
+                IkonHandler ikonHandler = IkonResolver.getInstance().resolve(n.getDescription());
                 setStyle(normalizeStyle(getStyle(), "-fx-font-family", "'" + ikonHandler.getFontFamily() + "'"));
                 setText(String.valueOf(n.getCode()));
             }
@@ -236,7 +236,7 @@ public class FontIcon extends Text implements Icon {
 
     public void setIconLiteral(String iconCode) {
         String[] parts = iconCode.split(":");
-        setIconCode(org.kordamp.ikonli.javafx.IkonResolver.getInstance().resolveIkonHandler(parts[0]).resolve(parts[0]));
+        setIconCode(org.kordamp.ikonli.javafx.IkonResolver.getInstance().resolve(parts[0]).resolve(parts[0]));
         resolveSize(iconCode, parts);
         resolvePaint(iconCode, parts);
     }

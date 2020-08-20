@@ -18,21 +18,16 @@
 package org.kordamp.ikonli.javafx;
 
 import javafx.scene.text.Font;
+import org.kordamp.ikonli.AbstractIkonResolver;
 import org.kordamp.ikonli.IkonHandler;
 
-import java.util.Arrays;
-import java.util.LinkedHashSet;
 import java.util.ServiceLoader;
-import java.util.Set;
-
-import static java.util.Objects.requireNonNull;
 
 /**
  * @author Andres Almiray
  */
-public class IkonResolver {
+public class IkonResolver extends AbstractIkonResolver {
     private static final IkonResolver INSTANCE;
-    private static final Set<IkonHandler> HANDLERS = new LinkedHashSet<>();
 
     static {
         INSTANCE = new IkonResolver();
@@ -49,69 +44,7 @@ public class IkonResolver {
 
     }
 
-    private final Set<IkonHandler> customHandlers = new LinkedHashSet<>();
-
-    private boolean isLoadedViaClasspath(IkonHandler handler) {
-        String fontFamily = handler.getFontFamily();
-        for (IkonHandler classpathHandler : HANDLERS)
-            if (classpathHandler.getFontFamily().equals(fontFamily))
-                return true;
-        return false;
-    }
-
-    private static boolean strictChecksEnabled() {
-        return Boolean.parseBoolean(System.getProperty("org.kordamp.ikonli.strict", Boolean.TRUE.toString()));
-    }
-
-    private void throwOrWarn(String errMessage) {
-        if (strictChecksEnabled())
-            throw new IllegalArgumentException(errMessage);
-        else
-            System.err.println("WARNING:" + errMessage);
-    }
-
-    /**
-     * @return {@code true} if the specified handler was not already registered
-     * @throws IllegalArgumentException if the specified handler was already registered via classpath and property
-     *                                  "-Dorg.kordamp.ikonli.strict" is set to {@code true}
-     */
-    public boolean registerHandler(IkonHandler handler) {
-        // check whether handler for this font is already loaded via classpath
-        String fontFamily = handler.getFontFamily();
-        if (isLoadedViaClasspath(handler)) {
-            throwOrWarn(String.format("IkonHandler for %s is already loaded via classpath", fontFamily));
-            return false;
-        }
-        return customHandlers.add(handler);
-    }
-
-    /**
-     * @return {@code true} if the specified handler was removed from the set of handlers
-     * @throws IllegalArgumentException if the specified handler was registered via classpath and property
-     *                                  "-Dorg.kordamp.ikonli.strict" is set to {@code true}
-     */
-    public boolean unregisterHandler(IkonHandler handler) {
-        // check whether handler for this font is loaded via classpath
-        String fontFamily = handler.getFontFamily();
-        if (isLoadedViaClasspath(handler)) {
-            throwOrWarn(String.format("IkonHandler for %s was loaded via classpath and can't be unregistered", fontFamily));
-            return false;
-        }
-        return customHandlers.remove(handler);
-    }
-
     public static IkonResolver getInstance() {
         return INSTANCE;
-    }
-
-    public IkonHandler resolveIkonHandler(String value) {
-        requireNonNull(value, "Ikon description must not be null");
-        for (Set<IkonHandler> handlers : Arrays.asList(HANDLERS, customHandlers))
-            for (IkonHandler handler : handlers) {
-                if (handler.supports(value)) {
-                    return handler;
-                }
-            }
-        throw new UnsupportedOperationException("Cannot resolve '" + value + "'");
     }
 }

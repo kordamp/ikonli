@@ -224,7 +224,7 @@ public class StackedFontIcon extends StackPane implements Icon {
         getChildren().clear();
         Ikon[] codes = new Ikon[iconCodes.length];
         for (int i = 0; i < iconCodes.length; i++) {
-            codes[i] = IkonResolver.getInstance().resolveIkonHandler(iconCodes[i]).resolve(iconCodes[i]);
+            codes[i] = IkonResolver.getInstance().resolve(iconCodes[i]).resolve(iconCodes[i]);
         }
         initializeSizesIfNeeded(iconCodes);
         updateIconCodes(codes);

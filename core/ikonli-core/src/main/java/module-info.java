@@ -17,6 +17,7 @@
  */
 module org.kordamp.iconli.core {
     exports org.kordamp.ikonli;
+    requires java.logging;
 
     provides org.kordamp.ikonli.IkonHandler
         with org.kordamp.ikonli.IkonliIkonResolver;
