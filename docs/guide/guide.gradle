@@ -98,7 +98,7 @@ asciidoctor {
             createIconGenerationTask(packName: 'entypo', iconClassName: 'org.kordamp.ikonli.entypo.Entypo', iconName: 'enty', shortNameSize: 5),
             createIconGenerationTask(packName: 'feather', iconClassName: 'org.kordamp.ikonli.feather.Feather', iconName: 'fth', shortNameSize: 4),
             createIconGenerationTask(packName: 'fluentui', iconClassName: 'org.kordamp.ikonli.fluentui.FluentUiFilled', iconName: 'flt-fm', shortNameSize: 7, classifier: 'filled'),
-            createIconGenerationTask(packName: 'fluentui', iconClassName: 'org.kordamp.ikonli.fluentui.FluentUiRegular', iconName: 'flt-fr', shortNameSize: 7, classifier: 'regular'),
+            createIconGenerationTask(packName: 'fluentui', iconClassName: 'org.kordamp.ikonli.fluentui.FluentUiRegular', iconName: 'flt-rm', shortNameSize: 7, classifier: 'regular'),
             createIconGenerationTask(packName: 'fontawesome', iconClassName: 'org.kordamp.ikonli.fontawesome.FontAwesome', iconName: 'fa'),
             createIconGenerationTask(packName: 'fontelico', iconClassName: 'org.kordamp.ikonli.fontelico.Fontelico', shortNameSize: 4),
             createIconGenerationTask(packName: 'foundation', iconClassName: 'org.kordamp.ikonli.foundation.Foundation'),
