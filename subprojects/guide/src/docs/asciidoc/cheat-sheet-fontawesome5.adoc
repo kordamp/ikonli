@@ -8,6 +8,7 @@ font resources.
 == Brands
 
 ++++
+<link href='./css/fontawesome-all.css' rel='stylesheet'>
 <link href='./css/fa-brands.css' rel='stylesheet'>
 <style>
     .fa,
@@ -22,7 +23,6 @@ include::{gradle-projectdir}/build/tmp/_fontawesome5_brands_cheat_sheet.adoc[]
 == Regular
 
 ++++
-<link href='./css/fontawesome-all.css' rel='stylesheet'>
 <link href='./css/fa-regular.css' rel='stylesheet'>
 <style>
     .fa,
@@ -37,7 +37,6 @@ include::{gradle-projectdir}/build/tmp/_fontawesome5_regular_cheat_sheet.adoc[]
 == Solid
 
 ++++
-<link href='./css/fontawesome-all.css' rel='stylesheet'>
 <link href='./css/fa-solid.css' rel='stylesheet'>
 <style>
     .fa,
