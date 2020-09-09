@@ -21,6 +21,7 @@ import org.kordamp.ikonli.Ikon;
 import org.kordamp.ikonli.IkonHandler;
 
 import javax.swing.Icon;
+import javax.swing.ImageIcon;
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.Font;
@@ -88,6 +89,16 @@ public class FontIcon implements Icon {
 
             g.drawImage(buffer, x, y, null);
         }
+    }
+
+    public ImageIcon toImageIcon() {
+        return toImageIcon(this);
+    }
+
+    public ImageIcon toImageIcon(Icon icon) {
+        BufferedImage image = new BufferedImage(icon.getIconWidth(), icon.getIconHeight(), BufferedImage.TYPE_INT_ARGB);
+        icon.paintIcon(null, image.getGraphics(), 0, 0);
+        return new ImageIcon(image);
     }
 
     public Ikon getIkon() {
