@@ -52,12 +52,12 @@ Adapt these instructions to Windows settings if running on Windows.
  . Once SDKMAN is installed invoke `sdk install gradle 6.3`.
  . Test your setup by invoking `gradle --version`.
 
-.Gdub
+.Gum
 
-GDub is a wrapper script that facilitates invoking gradle tasks anywhere within a Gradle project. It's smart enough
+Gum is a wrapper script that facilitates invoking gradle tasks anywhere within a Gradle project. It's smart enough
 to use the gradle wrapper if available or your global gradle command. This is an optional download.
 
- . Follow the instructions found at https://github.com/dougborg/gdub to install gdub
+ . Follow the instructions found at https://github.com/kordamp/gm to install gum
 
 === Next Steps
 
@@ -67,13 +67,11 @@ Run the sampler JavaFX application by invoking the following commands
 
 [source]
 ----
-$ cd apps/sampler-javafx
-$ ../../gradlew run
+$ ./gradlew :sampler-javafx:run
 ----
 
 Run the sampler Swing application by invoking the following commands
 [source]
 ----
-$ cd apps/sampler-swing
-$ ../../gradlew run
+$ ./gradlew :sampler-swing:run
 ----
