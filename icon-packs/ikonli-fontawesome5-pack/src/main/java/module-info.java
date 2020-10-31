@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 module org.kordamp.ikonli.fontawesome5 {
-    requires org.kordamp.iconli.core;
+    requires org.kordamp.ikonli.core;
     requires static org.kordamp.jipsy;
     exports org.kordamp.ikonli.fontawesome5;
 

@@ -15,7 +15,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-module org.kordamp.iconli.core {
+module org.kordamp.ikonli.core {
     exports org.kordamp.ikonli;
     requires java.logging;
 

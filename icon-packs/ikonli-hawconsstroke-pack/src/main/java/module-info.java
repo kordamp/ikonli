@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 module org.kordamp.ikonli.hawconsstroke {
-    requires org.kordamp.iconli.core;
+    requires org.kordamp.ikonli.core;
     requires static org.kordamp.jipsy;
     exports org.kordamp.ikonli.hawconsstroke;
 
