@@ -10,4 +10,4 @@ target
 .project
 .gen-changelog.sh
 .tmp
-\.DS_Store
+.DS_Store
