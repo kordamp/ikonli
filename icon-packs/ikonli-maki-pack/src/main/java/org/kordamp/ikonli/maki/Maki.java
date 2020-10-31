@@ -97,9 +97,9 @@ public enum Maki implements Ikon {
     }
 
     private String description;
-    private char code;
+    private int code;
 
-    Maki(String description, char code) {
+    Maki(String description, int code) {
         this.description = description;
         this.code = code;
     }
@@ -110,7 +110,7 @@ public enum Maki implements Ikon {
     }
 
     @Override
-    public char getCode() {
+    public int getCode() {
         return code;
     }
 }

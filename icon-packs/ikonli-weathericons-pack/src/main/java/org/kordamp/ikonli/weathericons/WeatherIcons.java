@@ -282,9 +282,9 @@ public enum WeatherIcons implements Ikon {
     }
 
     private String description;
-    private char code;
+    private int code;
 
-    WeatherIcons(String description, char code) {
+    WeatherIcons(String description, int code) {
         this.description = description;
         this.code = code;
     }
@@ -295,7 +295,7 @@ public enum WeatherIcons implements Ikon {
     }
 
     @Override
-    public char getCode() {
+    public int getCode() {
         return code;
     }
 }

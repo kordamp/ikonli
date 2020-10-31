@@ -320,9 +320,9 @@ public enum Feather implements Ikon {
     }
 
     private String description;
-    private char code;
+    private int code;
 
-    Feather(String description, char code) {
+    Feather(String description, int code) {
         this.description = description;
         this.code = code;
     }
@@ -333,7 +333,7 @@ public enum Feather implements Ikon {
     }
 
     @Override
-    public char getCode() {
+    public int getCode() {
         return code;
     }
 }

@@ -21,5 +21,30 @@ module org.kordamp.ikonli.materialdesign {
     exports org.kordamp.ikonli.materialdesign;
 
     provides org.kordamp.ikonli.IkonHandler
-        with org.kordamp.ikonli.materialdesign.MaterialDesignIkonHandler;
+        with org.kordamp.ikonli.materialdesign.MaterialDesignAIkonHandler,
+            org.kordamp.ikonli.materialdesign.MaterialDesignBIkonHandler,
+            org.kordamp.ikonli.materialdesign.MaterialDesignCIkonHandler,
+            org.kordamp.ikonli.materialdesign.MaterialDesignDIkonHandler,
+            org.kordamp.ikonli.materialdesign.MaterialDesignEIkonHandler,
+            org.kordamp.ikonli.materialdesign.MaterialDesignFIkonHandler,
+            org.kordamp.ikonli.materialdesign.MaterialDesignGIkonHandler,
+            org.kordamp.ikonli.materialdesign.MaterialDesignHIkonHandler,
+            org.kordamp.ikonli.materialdesign.MaterialDesignIIkonHandler,
+            org.kordamp.ikonli.materialdesign.MaterialDesignJIkonHandler,
+            org.kordamp.ikonli.materialdesign.MaterialDesignKIkonHandler,
+            org.kordamp.ikonli.materialdesign.MaterialDesignLIkonHandler,
+            org.kordamp.ikonli.materialdesign.MaterialDesignMIkonHandler,
+            org.kordamp.ikonli.materialdesign.MaterialDesignNIkonHandler,
+            org.kordamp.ikonli.materialdesign.MaterialDesignOIkonHandler,
+            org.kordamp.ikonli.materialdesign.MaterialDesignPIkonHandler,
+            org.kordamp.ikonli.materialdesign.MaterialDesignQIkonHandler,
+            org.kordamp.ikonli.materialdesign.MaterialDesignRIkonHandler,
+            org.kordamp.ikonli.materialdesign.MaterialDesignSIkonHandler,
+            org.kordamp.ikonli.materialdesign.MaterialDesignTIkonHandler,
+            org.kordamp.ikonli.materialdesign.MaterialDesignUIkonHandler,
+            org.kordamp.ikonli.materialdesign.MaterialDesignVIkonHandler,
+            org.kordamp.ikonli.materialdesign.MaterialDesignWIkonHandler,
+            org.kordamp.ikonli.materialdesign.MaterialDesignXIkonHandler,
+            org.kordamp.ikonli.materialdesign.MaterialDesignYIkonHandler,
+            org.kordamp.ikonli.materialdesign.MaterialDesignZIkonHandler;
 }

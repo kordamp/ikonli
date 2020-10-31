@@ -332,9 +332,9 @@ public enum Zondicons implements Ikon {
     }
 
     private String description;
-    private char code;
+    private int code;
 
-    Zondicons(String description, char code) {
+    Zondicons(String description, int code) {
         this.description = description;
         this.code = code;
     }
@@ -345,7 +345,7 @@ public enum Zondicons implements Ikon {
     }
 
     @Override
-    public char getCode() {
+    public int getCode() {
         return code;
     }
 }

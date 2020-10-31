@@ -50,26 +50,6 @@ public class FontIcon extends Text implements Icon {
     protected StyleableObjectProperty<Paint> iconColor;
     private StyleableObjectProperty<Ikon> iconCode;
 
-    public static FontIcon of(Ikon ikon) {
-        return of(ikon, 8, Color.BLACK);
-    }
-
-    public static FontIcon of(Ikon ikon, int iconSize) {
-        return of(ikon, iconSize, Color.BLACK);
-    }
-
-    public static FontIcon of(Ikon ikon, Color iconColor) {
-        return of(ikon, 8, iconColor);
-    }
-
-    public static FontIcon of(Ikon iconCode, int iconSize, Color iconColor) {
-        FontIcon icon = new FontIcon();
-        icon.setIconCode(iconCode);
-        icon.setIconSize(iconSize);
-        icon.setIconColor(iconColor);
-        return icon;
-    }
-
     public FontIcon() {
         getStyleClass().setAll("ikonli-font-icon");
         setIconSize(8);
@@ -93,7 +73,14 @@ public class FontIcon extends Text implements Icon {
             if (n != null) {
                 IkonHandler ikonHandler = IkonResolver.getInstance().resolve(n.getDescription());
                 setStyle(normalizeStyle(getStyle(), "-fx-font-family", "'" + ikonHandler.getFontFamily() + "'"));
-                setText(String.valueOf(n.getCode()));
+                int code = n.getCode();
+                if (code <= '\uFFFF') {
+                    setText(String.valueOf((char) code));
+                } else {
+                    char[] charPair = Character.toChars(code);
+                    String symbol = new String(charPair);
+                    setText(symbol);
+                }
             }
         });
     }
@@ -194,6 +181,11 @@ public class FontIcon extends Text implements Icon {
     }
 
     @Override
+    public int getIconSize() {
+        return iconSizeProperty().get();
+    }
+
+    @Override
     public void setIconSize(int size) {
         if (size <= 0) {
             throw new IllegalStateException("Argument 'size' must be greater than zero.");
@@ -202,18 +194,13 @@ public class FontIcon extends Text implements Icon {
     }
 
     @Override
-    public int getIconSize() {
-        return iconSizeProperty().get();
+    public Paint getIconColor() {
+        return iconColorProperty().get();
     }
 
     @Override
     public void setIconColor(Paint paint) {
         iconColorProperty().set(requireNonNull(paint, "Argument 'paint' must not be null"));
-    }
-
-    @Override
-    public Paint getIconColor() {
-        return iconColorProperty().get();
     }
 
     public Ikon getIconCode() {
@@ -234,6 +221,11 @@ public class FontIcon extends Text implements Icon {
         return style + key + ": " + value + ";";
     }
 
+    public String getIconLiteral() {
+        Ikon ikon = iconCodeProperty().get();
+        return ikon != null ? ikon.getDescription() : null;
+    }
+
     public void setIconLiteral(String iconCode) {
         String[] parts = iconCode.split(":");
         setIconCode(org.kordamp.ikonli.javafx.IkonResolver.getInstance().resolve(parts[0]).resolve(parts[0]));
@@ -241,9 +233,71 @@ public class FontIcon extends Text implements Icon {
         resolvePaint(iconCode, parts);
     }
 
-    public String getIconLiteral() {
-        Ikon ikon = iconCodeProperty().get();
-        return ikon != null ? ikon.getDescription() : null;
+    public List<CssMetaData<? extends Styleable, ?>> getCssMetaData() {
+        return FontIcon.getClassCssMetaData();
+    }
+
+    private void resolveSize(String iconCode, String[] parts) {
+        if (parts.length > 1) {
+            try {
+                setIconSize(Integer.parseInt(parts[1]));
+            } catch (NumberFormatException e) {
+                throw invalidDescription(iconCode, e);
+            }
+        }
+    }
+
+    private void resolvePaint(String iconCode, String[] parts) {
+        if (parts.length > 2) {
+            Paint paint = resolvePaintValue(iconCode, parts[2]);
+            if (paint != null) {
+                setIconColor(paint);
+            }
+        }
+    }
+
+    public static FontIcon of(Ikon ikon) {
+        return of(ikon, 8, Color.BLACK);
+    }
+
+    public static FontIcon of(Ikon ikon, int iconSize) {
+        return of(ikon, iconSize, Color.BLACK);
+    }
+
+    public static FontIcon of(Ikon ikon, Color iconColor) {
+        return of(ikon, 8, iconColor);
+    }
+
+    public static FontIcon of(Ikon iconCode, int iconSize, Color iconColor) {
+        FontIcon icon = new FontIcon();
+        icon.setIconCode(iconCode);
+        icon.setIconSize(iconSize);
+        icon.setIconColor(iconColor);
+        return icon;
+    }
+
+    public static List<CssMetaData<? extends Styleable, ?>> getClassCssMetaData() {
+        return StyleableProperties.STYLEABLES;
+    }
+
+    private static Paint resolvePaintValue(String iconCode, String value) {
+        try {
+            return Color.valueOf(value);
+        } catch (IllegalArgumentException e1) {
+            try {
+                return LinearGradient.valueOf(value);
+            } catch (IllegalArgumentException e2) {
+                try {
+                    return RadialGradient.valueOf(value);
+                } catch (IllegalArgumentException e3) {
+                    throw invalidDescription(iconCode, e3);
+                }
+            }
+        }
+    }
+
+    public static IllegalArgumentException invalidDescription(String description, Exception e) {
+        throw new IllegalArgumentException("Description " + description + " is not a valid icon description", e);
     }
 
     private static class StyleableProperties {
@@ -302,46 +356,5 @@ public class FontIcon extends Text implements Icon {
             styleables.add(ICON_CODE);
             STYLEABLES = unmodifiableList(styleables);
         }
-    }
-
-    public static List<CssMetaData<? extends Styleable, ?>> getClassCssMetaData() {
-        return StyleableProperties.STYLEABLES;
-    }
-
-    public List<CssMetaData<? extends Styleable, ?>> getCssMetaData() {
-        return FontIcon.getClassCssMetaData();
-    }
-
-    private void resolveSize(String iconCode, String[] parts) {
-        if (parts.length > 1) {
-            try {
-                setIconSize(Integer.parseInt(parts[1]));
-            } catch (NumberFormatException e) {
-                throw invalidDescription(iconCode, e);
-            }
-        }
-    }
-
-    private void resolvePaint(String iconCode, String[] parts) {
-        if (parts.length > 2) {
-            Paint paint = resolvePaintValue(iconCode, parts[2]);
-            if (paint != null) {
-                setIconColor(paint);
-            }
-        }
-    }
-
-    private static Paint resolvePaintValue(String iconCode, String value) {
-        try { return Color.valueOf(value); } catch (IllegalArgumentException e1) {
-            try { return LinearGradient.valueOf(value); } catch (IllegalArgumentException e2) {
-                try { return RadialGradient.valueOf(value); } catch (IllegalArgumentException e3) {
-                    throw invalidDescription(iconCode, e3);
-                }
-            }
-        }
-    }
-
-    public static IllegalArgumentException invalidDescription(String description, Exception e) {
-        throw new IllegalArgumentException("Description " + description + " is not a valid icon description", e);
     }
 }

@@ -15,6 +15,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package org.kordamp.ikonli.materialdesign;
 
 import org.kordamp.ikonli.AbstractIkonHandler;
@@ -26,20 +27,20 @@ import org.kordamp.jipsy.ServiceProviderFor;
  * @author Andres Almiray
  */
 @ServiceProviderFor(IkonHandler.class)
-public class MaterialDesignIkonHandler extends AbstractIkonHandler {
+public class MaterialDesignIIkonHandler extends AbstractIkonHandler {
     @Override
     public boolean supports(String description) {
-        return description != null && description.startsWith("mdi-");
+        return description != null && description.startsWith("mdii-");
     }
 
     @Override
     public Ikon resolve(String description) {
-        return MaterialDesign.findByDescription(description);
+        return MaterialDesignI.findByDescription(description);
     }
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/materialdesignicons/1.7.22/fonts/MaterialDesignIcons.ttf";
+        return "META-INF/resources/materialdesignicons/5.8.55/fonts/materialdesignicons-webfont.ttf";
     }
 
     @Override
@@ -47,3 +48,4 @@ public class MaterialDesignIkonHandler extends AbstractIkonHandler {
         return "Material Design Icons";
     }
 }
+

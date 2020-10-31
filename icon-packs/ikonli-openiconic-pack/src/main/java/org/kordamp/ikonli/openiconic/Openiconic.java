@@ -258,9 +258,9 @@ public enum Openiconic implements Ikon {
     }
 
     private String description;
-    private char code;
+    private int code;
 
-    Openiconic(String description, char code) {
+    Openiconic(String description, int code) {
         this.description = description;
         this.code = code;
     }
@@ -271,7 +271,7 @@ public enum Openiconic implements Ikon {
     }
 
     @Override
-    public char getCode() {
+    public int getCode() {
         return code;
     }
 }

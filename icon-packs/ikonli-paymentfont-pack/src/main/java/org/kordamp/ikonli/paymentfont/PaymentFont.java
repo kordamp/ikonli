@@ -151,9 +151,9 @@ public enum PaymentFont implements Ikon {
     }
 
     private String description;
-    private char code;
+    private int code;
 
-    PaymentFont(String description, char code) {
+    PaymentFont(String description, int code) {
         this.description = description;
         this.code = code;
     }
@@ -164,7 +164,7 @@ public enum PaymentFont implements Ikon {
     }
 
     @Override
-    public char getCode() {
+    public int getCode() {
         return code;
     }
 }

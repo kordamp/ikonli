@@ -23,5 +23,5 @@ package org.kordamp.ikonli;
 public interface Ikon {
     String getDescription();
 
-    char getCode();
+    int getCode();
 }

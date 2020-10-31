@@ -73,9 +73,9 @@ public enum Linecons implements Ikon {
     WORLD("li-world", '\ue02f');
 
     private String description;
-    private char code;
+    private int code;
 
-    Linecons(String description, char code) {
+    Linecons(String description, int code) {
         this.description = description;
         this.code = code;
     }
@@ -95,7 +95,7 @@ public enum Linecons implements Ikon {
     }
 
     @Override
-    public char getCode() {
+    public int getCode() {
         return code;
     }
 }

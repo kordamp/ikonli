@@ -263,9 +263,9 @@ public enum Maki2 implements Ikon {
     }
 
     private String description;
-    private char code;
+    private int code;
 
-    Maki2(String description, char code) {
+    Maki2(String description, int code) {
         this.description = description;
         this.code = code;
     }
@@ -276,7 +276,7 @@ public enum Maki2 implements Ikon {
     }
 
     @Override
-    public char getCode() {
+    public int getCode() {
         return code;
     }
 }

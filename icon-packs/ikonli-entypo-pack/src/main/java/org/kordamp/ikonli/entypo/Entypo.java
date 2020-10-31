@@ -446,9 +446,9 @@ public enum Entypo implements Ikon {
     }
 
     private String description;
-    private char code;
+    private int code;
 
-    Entypo(String description, char code) {
+    Entypo(String description, int code) {
         this.description = description;
         this.code = code;
     }
@@ -459,7 +459,7 @@ public enum Entypo implements Ikon {
     }
 
     @Override
-    public char getCode() {
+    public int getCode() {
         return code;
     }
 }

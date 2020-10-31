@@ -209,9 +209,9 @@ public enum Mapicons implements Ikon {
     }
 
     private String description;
-    private char code;
+    private int code;
 
-    Mapicons(String description, char code) {
+    Mapicons(String description, int code) {
         this.description = description;
         this.code = code;
     }
@@ -222,7 +222,7 @@ public enum Mapicons implements Ikon {
     }
 
     @Override
-    public char getCode() {
+    public int getCode() {
         return code;
     }
     }

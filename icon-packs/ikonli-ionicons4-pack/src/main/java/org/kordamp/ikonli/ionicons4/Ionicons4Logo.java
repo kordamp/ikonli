@@ -96,9 +96,9 @@ public enum Ionicons4Logo implements Ikon {
     }
 
     private String description;
-    private char code;
+    private int code;
 
-    Ionicons4Logo(String description, char code) {
+    Ionicons4Logo(String description, int code) {
         this.description = description;
         this.code = code;
     }
@@ -109,7 +109,7 @@ public enum Ionicons4Logo implements Ikon {
     }
 
     @Override
-    public char getCode() {
+    public int getCode() {
         return code;
     }
 }

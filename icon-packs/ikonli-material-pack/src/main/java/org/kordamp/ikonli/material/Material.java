@@ -1312,9 +1312,9 @@ public enum Material implements Ikon {
     }
 
     private String description;
-    private char code;
+    private int code;
 
-    Material(String description, char code) {
+    Material(String description, int code) {
         this.description = description;
         this.code = code;
     }
@@ -1325,7 +1325,7 @@ public enum Material implements Ikon {
     }
 
     @Override
-    public char getCode() {
+    public int getCode() {
         return code;
     }
 }

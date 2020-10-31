@@ -82,7 +82,15 @@ public class FontIcon implements Icon {
                 g2.setColor(iconColor);
 
                 int sy = g2.getFontMetrics().getAscent();
-                g2.drawString(String.valueOf(ikon.getCode()), 0, sy);
+                int code = ikon.getCode();
+
+                if (code <= '\uFFFF') {
+                    g2.drawString(String.valueOf((char)code), 0, sy);
+                } else {
+                    char[] charPair = Character.toChars(code);
+                    String symbol = new String(charPair);
+                    g2.drawString(symbol, 0, sy);
+                }
 
                 g2.dispose();
             }

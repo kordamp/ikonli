@@ -225,9 +225,9 @@ public enum Devicons implements Ikon {
     }
 
     private String description;
-    private char code;
+    private int code;
 
-    Devicons(String description, char code) {
+    Devicons(String description, int code) {
         this.description = description;
         this.code = code;
     }
@@ -238,7 +238,7 @@ public enum Devicons implements Ikon {
     }
 
     @Override
-    public char getCode() {
+    public int getCode() {
         return code;
     }
 }

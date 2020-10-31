@@ -206,9 +206,9 @@ public enum Octicons implements Ikon {
     }
 
     private String description;
-    private char code;
+    private int code;
 
-    Octicons(String description, char code) {
+    Octicons(String description, int code) {
         this.description = description;
         this.code = code;
     }
@@ -219,7 +219,7 @@ public enum Octicons implements Ikon {
     }
 
     @Override
-    public char getCode() {
+    public int getCode() {
         return code;
     }
 }

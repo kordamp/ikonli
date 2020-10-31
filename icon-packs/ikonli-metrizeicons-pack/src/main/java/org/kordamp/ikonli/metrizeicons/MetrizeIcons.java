@@ -335,9 +335,9 @@ public enum MetrizeIcons implements Ikon {
     }
 
     private String description;
-    private char code;
+    private int code;
 
-    MetrizeIcons(String description, char code) {
+    MetrizeIcons(String description, int code) {
         this.description = description;
         this.code = code;
     }
@@ -348,7 +348,7 @@ public enum MetrizeIcons implements Ikon {
     }
 
     @Override
-    public char getCode() {
+    public int getCode() {
         return code;
     }
 }

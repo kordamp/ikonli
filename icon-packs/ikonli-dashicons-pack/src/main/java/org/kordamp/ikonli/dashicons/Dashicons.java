@@ -383,9 +383,9 @@ public enum Dashicons implements Ikon {
     }
 
     private String description;
-    private char code;
+    private int code;
 
-    Dashicons(String description, char code) {
+    Dashicons(String description, int code) {
         this.description = description;
         this.code = code;
     }
@@ -396,7 +396,7 @@ public enum Dashicons implements Ikon {
     }
 
     @Override
-    public char getCode() {
+    public int getCode() {
         return code;
     }
 }

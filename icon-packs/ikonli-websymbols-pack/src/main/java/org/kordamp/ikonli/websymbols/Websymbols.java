@@ -200,9 +200,9 @@ public enum Websymbols implements Ikon {
     }
 
     private String description;
-    private char code;
+    private int code;
 
-    Websymbols(String description, char code) {
+    Websymbols(String description, int code) {
         this.description = description;
         this.code = code;
     }
@@ -213,7 +213,7 @@ public enum Websymbols implements Ikon {
     }
 
     @Override
-    public char getCode() {
+    public int getCode() {
         return code;
     }
 }

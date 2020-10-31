@@ -9,5 +9,5 @@ target
 .classpath
 .project
 .gen-changelog.sh
-
+.tmp
 \.DS_Store

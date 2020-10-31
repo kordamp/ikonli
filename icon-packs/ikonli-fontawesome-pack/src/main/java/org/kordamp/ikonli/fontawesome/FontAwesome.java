@@ -816,9 +816,9 @@ public enum FontAwesome implements Ikon {
     }
 
     private String description;
-    private char code;
+    private int code;
 
-    FontAwesome(String description, char code) {
+    FontAwesome(String description, int code) {
         this.description = description;
         this.code = code;
     }
@@ -829,7 +829,7 @@ public enum FontAwesome implements Ikon {
     }
 
     @Override
-    public char getCode() {
+    public int getCode() {
         return code;
     }
 }

@@ -33,9 +33,9 @@ public enum Ikonli implements Ikon {
     }
 
     private String description;
-    private char code;
+    private int code;
 
-    Ikonli(String description, char code) {
+    Ikonli(String description, int code) {
         this.description = description;
         this.code = code;
     }
@@ -46,7 +46,7 @@ public enum Ikonli implements Ikon {
     }
 
     @Override
-    public char getCode() {
+    public int getCode() {
         return code;
     }
 }

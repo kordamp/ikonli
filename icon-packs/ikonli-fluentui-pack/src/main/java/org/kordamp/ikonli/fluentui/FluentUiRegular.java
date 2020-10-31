@@ -1040,9 +1040,9 @@ public enum FluentUiRegular implements Ikon {
     }
 
     private String description;
-    private char code;
+    private int code;
 
-    FluentUiRegular(String description, char code) {
+    FluentUiRegular(String description, int code) {
         this.description = description;
         this.code = code;
     }
@@ -1053,7 +1053,7 @@ public enum FluentUiRegular implements Ikon {
     }
 
     @Override
-    public char getCode() {
+    public int getCode() {
         return code;
     }
 }

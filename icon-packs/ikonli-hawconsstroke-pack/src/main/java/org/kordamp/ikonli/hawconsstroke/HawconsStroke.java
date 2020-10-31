@@ -544,8 +544,8 @@ public enum HawconsStroke implements Ikon {
     HWS_ZIP("hws-zip", '\ue66c');
 
     private String description;
-    private char code;
-    HawconsStroke(String description, char code) {
+    private int code;
+    HawconsStroke(String description, int code) {
         this.description = description;
         this.code = code;
     }
@@ -565,7 +565,7 @@ public enum HawconsStroke implements Ikon {
     }
 
     @Override
-    public char getCode() {
+    public int getCode() {
         return code;
     }
 }

@@ -560,9 +560,9 @@ public enum Runestroicons implements Ikon {
     }
 
     private String description;
-    private char code;
+    private int code;
 
-    Runestroicons(String description, char code) {
+    Runestroicons(String description, int code) {
         this.description = description;
         this.code = code;
     }
@@ -573,7 +573,7 @@ public enum Runestroicons implements Ikon {
     }
 
     @Override
-    public char getCode() {
+    public int getCode() {
         return code;
     }
 }

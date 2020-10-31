@@ -552,9 +552,9 @@ public enum HawconsFilled implements Ikon {
     }
 
     private String description;
-    private char code;
+    private int code;
 
-    HawconsFilled(String description, char code) {
+    HawconsFilled(String description, int code) {
         this.description = description;
         this.code = code;
     }
@@ -565,7 +565,7 @@ public enum HawconsFilled implements Ikon {
     }
 
     @Override
-    public char getCode() {
+    public int getCode() {
         return code;
     }
 }

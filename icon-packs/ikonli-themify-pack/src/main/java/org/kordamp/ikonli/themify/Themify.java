@@ -386,9 +386,9 @@ public enum Themify implements Ikon {
     }
 
     private String description;
-    private char code;
+    private int code;
 
-    Themify(String description, char code) {
+    Themify(String description, int code) {
         this.description = description;
         this.code = code;
     }
@@ -399,7 +399,7 @@ public enum Themify implements Ikon {
     }
 
     @Override
-    public char getCode() {
+    public int getCode() {
         return code;
     }
 }

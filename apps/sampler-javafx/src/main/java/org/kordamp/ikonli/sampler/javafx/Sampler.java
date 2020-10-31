@@ -54,7 +54,32 @@ import org.kordamp.ikonli.maki.Maki;
 import org.kordamp.ikonli.maki2.Maki2;
 import org.kordamp.ikonli.mapicons.Mapicons;
 import org.kordamp.ikonli.material.Material;
-import org.kordamp.ikonli.materialdesign.MaterialDesign;
+import org.kordamp.ikonli.materialdesign.MaterialDesignA;
+import org.kordamp.ikonli.materialdesign.MaterialDesignB;
+import org.kordamp.ikonli.materialdesign.MaterialDesignC;
+import org.kordamp.ikonli.materialdesign.MaterialDesignD;
+import org.kordamp.ikonli.materialdesign.MaterialDesignE;
+import org.kordamp.ikonli.materialdesign.MaterialDesignF;
+import org.kordamp.ikonli.materialdesign.MaterialDesignG;
+import org.kordamp.ikonli.materialdesign.MaterialDesignH;
+import org.kordamp.ikonli.materialdesign.MaterialDesignI;
+import org.kordamp.ikonli.materialdesign.MaterialDesignJ;
+import org.kordamp.ikonli.materialdesign.MaterialDesignK;
+import org.kordamp.ikonli.materialdesign.MaterialDesignL;
+import org.kordamp.ikonli.materialdesign.MaterialDesignM;
+import org.kordamp.ikonli.materialdesign.MaterialDesignN;
+import org.kordamp.ikonli.materialdesign.MaterialDesignO;
+import org.kordamp.ikonli.materialdesign.MaterialDesignP;
+import org.kordamp.ikonli.materialdesign.MaterialDesignQ;
+import org.kordamp.ikonli.materialdesign.MaterialDesignR;
+import org.kordamp.ikonli.materialdesign.MaterialDesignS;
+import org.kordamp.ikonli.materialdesign.MaterialDesignT;
+import org.kordamp.ikonli.materialdesign.MaterialDesignU;
+import org.kordamp.ikonli.materialdesign.MaterialDesignV;
+import org.kordamp.ikonli.materialdesign.MaterialDesignW;
+import org.kordamp.ikonli.materialdesign.MaterialDesignX;
+import org.kordamp.ikonli.materialdesign.MaterialDesignY;
+import org.kordamp.ikonli.materialdesign.MaterialDesignZ;
 import org.kordamp.ikonli.metrizeicons.MetrizeIcons;
 import org.kordamp.ikonli.ociicons.Ociicons;
 import org.kordamp.ikonli.octicons.Octicons;
@@ -76,10 +101,6 @@ import static java.util.EnumSet.allOf;
  * @author Andres Almiray
  */
 public class Sampler extends Application {
-    public static void main(String[] args) {
-        launch(Sampler.class);
-    }
-
     @Override
     public void start(Stage primaryStage) throws Exception {
         URL location = getClass().getResource("sampler.fxml");
@@ -111,7 +132,32 @@ public class Sampler extends Application {
         tabPane.getTabs().add(new DemoTab(Maki2.class, allOf(Maki2.class)));
         tabPane.getTabs().add(new DemoTab(Mapicons.class, allOf(Mapicons.class)));
         tabPane.getTabs().add(new DemoTab(Material.class, allOf(Material.class)));
-        tabPane.getTabs().add(new DemoTab(MaterialDesign.class, allOf(MaterialDesign.class)));
+        tabPane.getTabs().add(new DemoTab(MaterialDesignA.class, allOf(MaterialDesignA.class)));
+        tabPane.getTabs().add(new DemoTab(MaterialDesignB.class, allOf(MaterialDesignB.class)));
+        tabPane.getTabs().add(new DemoTab(MaterialDesignC.class, allOf(MaterialDesignC.class)));
+        tabPane.getTabs().add(new DemoTab(MaterialDesignD.class, allOf(MaterialDesignD.class)));
+        tabPane.getTabs().add(new DemoTab(MaterialDesignE.class, allOf(MaterialDesignE.class)));
+        tabPane.getTabs().add(new DemoTab(MaterialDesignF.class, allOf(MaterialDesignF.class)));
+        tabPane.getTabs().add(new DemoTab(MaterialDesignG.class, allOf(MaterialDesignG.class)));
+        tabPane.getTabs().add(new DemoTab(MaterialDesignH.class, allOf(MaterialDesignH.class)));
+        tabPane.getTabs().add(new DemoTab(MaterialDesignI.class, allOf(MaterialDesignI.class)));
+        tabPane.getTabs().add(new DemoTab(MaterialDesignJ.class, allOf(MaterialDesignJ.class)));
+        tabPane.getTabs().add(new DemoTab(MaterialDesignK.class, allOf(MaterialDesignK.class)));
+        tabPane.getTabs().add(new DemoTab(MaterialDesignL.class, allOf(MaterialDesignL.class)));
+        tabPane.getTabs().add(new DemoTab(MaterialDesignM.class, allOf(MaterialDesignM.class)));
+        tabPane.getTabs().add(new DemoTab(MaterialDesignN.class, allOf(MaterialDesignN.class)));
+        tabPane.getTabs().add(new DemoTab(MaterialDesignO.class, allOf(MaterialDesignO.class)));
+        tabPane.getTabs().add(new DemoTab(MaterialDesignP.class, allOf(MaterialDesignP.class)));
+        tabPane.getTabs().add(new DemoTab(MaterialDesignQ.class, allOf(MaterialDesignQ.class)));
+        tabPane.getTabs().add(new DemoTab(MaterialDesignR.class, allOf(MaterialDesignR.class)));
+        tabPane.getTabs().add(new DemoTab(MaterialDesignS.class, allOf(MaterialDesignS.class)));
+        tabPane.getTabs().add(new DemoTab(MaterialDesignT.class, allOf(MaterialDesignT.class)));
+        tabPane.getTabs().add(new DemoTab(MaterialDesignU.class, allOf(MaterialDesignU.class)));
+        tabPane.getTabs().add(new DemoTab(MaterialDesignV.class, allOf(MaterialDesignV.class)));
+        tabPane.getTabs().add(new DemoTab(MaterialDesignW.class, allOf(MaterialDesignW.class)));
+        tabPane.getTabs().add(new DemoTab(MaterialDesignX.class, allOf(MaterialDesignX.class)));
+        tabPane.getTabs().add(new DemoTab(MaterialDesignY.class, allOf(MaterialDesignY.class)));
+        tabPane.getTabs().add(new DemoTab(MaterialDesignZ.class, allOf(MaterialDesignZ.class)));
         tabPane.getTabs().add(new DemoTab(MetrizeIcons.class, allOf(MetrizeIcons.class)));
         tabPane.getTabs().add(new DemoTab(Ociicons.class, allOf(Ociicons.class)));
         tabPane.getTabs().add(new DemoTab(Octicons.class, allOf(Octicons.class)));
@@ -132,6 +178,10 @@ public class Sampler extends Application {
         primaryStage.setWidth(1024);
         primaryStage.setHeight(1024);
         primaryStage.show();
+    }
+
+    public static void main(String[] args) {
+        launch(Sampler.class);
     }
 
     private static class DemoTab extends Tab {

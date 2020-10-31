@@ -91,9 +91,9 @@ public enum Ociicons implements Ikon {
     WEB("oci-web", '\ue940');
 
     private String description;
-    private char code;
+    private int code;
 
-    Ociicons(String description, char code) {
+    Ociicons(String description, int code) {
         this.description = description;
         this.code = code;
     }
@@ -113,7 +113,7 @@ public enum Ociicons implements Ikon {
     }
 
     @Override
-    public char getCode() {
+    public int getCode() {
         return code;
     }
 }

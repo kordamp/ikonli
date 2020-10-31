@@ -57,7 +57,7 @@ class GenerateIconCheatSheetTask extends DefaultTask {
             if (dataGlyph) {
                 document += "| pass:[<span class=\"${iconName}\" data-glyph=\"${font.description[shortNameSize..-1]}\" aria-hidden=\"true\"></span>] "
             } else {
-                document += "| pass:[<span class=\"${iconName} ${iconName}-${font.description[shortNameSize..-1]}\"></span>] "
+                document += "| pass:[<i class=\"${iconName} ${iconName}-${font.description[shortNameSize..-1]}\"></i>] "
             }
             document += '\n'
         }
@@ -112,7 +112,32 @@ asciidoctor {
             createIconGenerationTask(packName: 'maki2', iconClassName: 'org.kordamp.ikonli.maki2.Maki2', shortNameSize: 6),
             createIconGenerationTask(packName: 'mapicons', iconClassName: 'org.kordamp.ikonli.mapicons.Mapicons', iconName: 'map-icon', shortNameSize: 9),
             createIconGenerationTask(packName: 'material', iconClassName: 'org.kordamp.ikonli.material.Material', iconName: 'gmi', shortNameSize: 4),
-            createIconGenerationTask(packName: 'materialdesign', iconClassName: 'org.kordamp.ikonli.materialdesign.MaterialDesign', iconName: 'mdi', shortNameSize: 4),
+            createIconGenerationTask(packName: 'materialdesign', iconClassName: 'org.kordamp.ikonli.materialdesign.MaterialDesignA', iconName: 'mdi', shortNameSize: 5, classifier: 'a'),
+            createIconGenerationTask(packName: 'materialdesign', iconClassName: 'org.kordamp.ikonli.materialdesign.MaterialDesignB', iconName: 'mdi', shortNameSize: 5, classifier: 'b'),
+            createIconGenerationTask(packName: 'materialdesign', iconClassName: 'org.kordamp.ikonli.materialdesign.MaterialDesignC', iconName: 'mdi', shortNameSize: 5, classifier: 'c'),
+            createIconGenerationTask(packName: 'materialdesign', iconClassName: 'org.kordamp.ikonli.materialdesign.MaterialDesignD', iconName: 'mdi', shortNameSize: 5, classifier: 'd'),
+            createIconGenerationTask(packName: 'materialdesign', iconClassName: 'org.kordamp.ikonli.materialdesign.MaterialDesignE', iconName: 'mdi', shortNameSize: 5, classifier: 'e'),
+            createIconGenerationTask(packName: 'materialdesign', iconClassName: 'org.kordamp.ikonli.materialdesign.MaterialDesignF', iconName: 'mdi', shortNameSize: 5, classifier: 'f'),
+            createIconGenerationTask(packName: 'materialdesign', iconClassName: 'org.kordamp.ikonli.materialdesign.MaterialDesignG', iconName: 'mdi', shortNameSize: 5, classifier: 'g'),
+            createIconGenerationTask(packName: 'materialdesign', iconClassName: 'org.kordamp.ikonli.materialdesign.MaterialDesignH', iconName: 'mdi', shortNameSize: 5, classifier: 'h'),
+            createIconGenerationTask(packName: 'materialdesign', iconClassName: 'org.kordamp.ikonli.materialdesign.MaterialDesignI', iconName: 'mdi', shortNameSize: 5, classifier: 'i'),
+            createIconGenerationTask(packName: 'materialdesign', iconClassName: 'org.kordamp.ikonli.materialdesign.MaterialDesignJ', iconName: 'mdi', shortNameSize: 5, classifier: 'j'),
+            createIconGenerationTask(packName: 'materialdesign', iconClassName: 'org.kordamp.ikonli.materialdesign.MaterialDesignK', iconName: 'mdi', shortNameSize: 5, classifier: 'k'),
+            createIconGenerationTask(packName: 'materialdesign', iconClassName: 'org.kordamp.ikonli.materialdesign.MaterialDesignL', iconName: 'mdi', shortNameSize: 5, classifier: 'l'),
+            createIconGenerationTask(packName: 'materialdesign', iconClassName: 'org.kordamp.ikonli.materialdesign.MaterialDesignM', iconName: 'mdi', shortNameSize: 5, classifier: 'm'),
+            createIconGenerationTask(packName: 'materialdesign', iconClassName: 'org.kordamp.ikonli.materialdesign.MaterialDesignN', iconName: 'mdi', shortNameSize: 5, classifier: 'n'),
+            createIconGenerationTask(packName: 'materialdesign', iconClassName: 'org.kordamp.ikonli.materialdesign.MaterialDesignO', iconName: 'mdi', shortNameSize: 5, classifier: 'o'),
+            createIconGenerationTask(packName: 'materialdesign', iconClassName: 'org.kordamp.ikonli.materialdesign.MaterialDesignP', iconName: 'mdi', shortNameSize: 5, classifier: 'p'),
+            createIconGenerationTask(packName: 'materialdesign', iconClassName: 'org.kordamp.ikonli.materialdesign.MaterialDesignQ', iconName: 'mdi', shortNameSize: 5, classifier: 'q'),
+            createIconGenerationTask(packName: 'materialdesign', iconClassName: 'org.kordamp.ikonli.materialdesign.MaterialDesignR', iconName: 'mdi', shortNameSize: 5, classifier: 'r'),
+            createIconGenerationTask(packName: 'materialdesign', iconClassName: 'org.kordamp.ikonli.materialdesign.MaterialDesignS', iconName: 'mdi', shortNameSize: 5, classifier: 's'),
+            createIconGenerationTask(packName: 'materialdesign', iconClassName: 'org.kordamp.ikonli.materialdesign.MaterialDesignT', iconName: 'mdi', shortNameSize: 5, classifier: 't'),
+            createIconGenerationTask(packName: 'materialdesign', iconClassName: 'org.kordamp.ikonli.materialdesign.MaterialDesignU', iconName: 'mdi', shortNameSize: 5, classifier: 'u'),
+            createIconGenerationTask(packName: 'materialdesign', iconClassName: 'org.kordamp.ikonli.materialdesign.MaterialDesignV', iconName: 'mdi', shortNameSize: 5, classifier: 'v'),
+            createIconGenerationTask(packName: 'materialdesign', iconClassName: 'org.kordamp.ikonli.materialdesign.MaterialDesignW', iconName: 'mdi', shortNameSize: 5, classifier: 'w'),
+            createIconGenerationTask(packName: 'materialdesign', iconClassName: 'org.kordamp.ikonli.materialdesign.MaterialDesignX', iconName: 'mdi', shortNameSize: 5, classifier: 'x'),
+            createIconGenerationTask(packName: 'materialdesign', iconClassName: 'org.kordamp.ikonli.materialdesign.MaterialDesignY', iconName: 'mdi', shortNameSize: 5, classifier: 'y'),
+            createIconGenerationTask(packName: 'materialdesign', iconClassName: 'org.kordamp.ikonli.materialdesign.MaterialDesignZ', iconName: 'mdi', shortNameSize: 5, classifier: 'z'),
             createIconGenerationTask(packName: 'metrizeicons', iconClassName: 'org.kordamp.ikonli.metrizeicons.MetrizeIcons', iconName: 'met', shortNameSize: 4),
             createIconGenerationTask(packName: 'ociicons', iconClassName: 'org.kordamp.ikonli.ociicons.Ociicons', iconName: 'oci', shortNameSize: 4),
             createIconGenerationTask(packName: 'octicons', iconClassName: 'org.kordamp.ikonli.octicons.Octicons', iconName: 'octicon', shortNameSize: 4),
