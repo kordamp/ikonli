@@ -39,11 +39,11 @@ public class FontAwesomeSolidIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/fontawesome5/5.14.0/fonts/fa-solid-900.ttf";
+        return "META-INF/resources/fontawesome5/5.15.1/fonts/fa-solid-900.ttf";
     }
 
     @Override
     public String getFontFamily() {
-        return "Font Awesome 5 Free Solid";
+        return "Font Awesome 5 Free";
     }
 }

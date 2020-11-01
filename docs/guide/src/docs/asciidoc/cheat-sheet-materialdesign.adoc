@@ -8,6 +8,9 @@
     }
 </style>
 ++++
+
+Use the indicated enum type for each set.
+
 == A (MaterialDesignA)
 include::{gradle-projectdir}/build/tmp/_materialdesign_a_cheat_sheet.adoc[]
 

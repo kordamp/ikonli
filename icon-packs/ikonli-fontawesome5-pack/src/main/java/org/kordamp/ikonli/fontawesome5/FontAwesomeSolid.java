@@ -984,6 +984,8 @@ public enum FontAwesomeSolid implements Ikon {
     VENUS("fas-venus", '\uf221'),
     VENUS_DOUBLE("fas-venus-double", '\uf226'),
     VENUS_MARS("fas-venus-mars", '\uf228'),
+    VEST("fas-vest", '\ue085'),
+    VEST_PATCHES("fas-vest-patches", '\ue086'),
     VIAL("fas-vial", '\uf492'),
     VIALS("fas-vials", '\uf493'),
     VIDEO("fas-video", '\uf03d'),

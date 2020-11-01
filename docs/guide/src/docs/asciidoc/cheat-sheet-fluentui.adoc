@@ -9,6 +9,8 @@
 </style>
 ++++
 
+Use the indicated enum type for each set.
+
 == Filled A-L (FluentUIFilledAL)
 
 include::{gradle-projectdir}/build/tmp/_fluentui_fal_cheat_sheet.adoc[]

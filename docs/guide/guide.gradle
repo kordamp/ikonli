@@ -26,11 +26,14 @@ class GenerateIconCheatSheetTask extends DefaultTask {
     @Input
     String iconName
     @Input
+    String prefix
+    @Input
     String iconClassName
     @Input
     Integer shortNameSize
     @Input
     Boolean dataGlyph
+    @Input
     String classifier
 
     @TaskAction
@@ -57,7 +60,7 @@ class GenerateIconCheatSheetTask extends DefaultTask {
             if (dataGlyph) {
                 document += "| pass:[<span class=\"${iconName}\" data-glyph=\"${font.description[shortNameSize..-1]}\" aria-hidden=\"true\"></span>] "
             } else {
-                document += "| pass:[<i class=\"${iconName} ${iconName}-${font.description[shortNameSize..-1]}\"></i>] "
+                document += "| pass:[<i class=\"${iconName} ${prefix}-${font.description[shortNameSize..-1]}\"></i>] "
             }
             document += '\n'
         }
@@ -82,6 +85,7 @@ def createIconGenerationTask(Map args) {
     Task task = project.tasks.create(type: GenerateIconCheatSheetTask, name: "${name}GenerateIconCheatSheet")
     task.packName = realArgs.packName
     task.iconName = realArgs.iconName
+    task.prefix = realArgs.prefix ?: realArgs.iconName
     task.iconClassName = realArgs.iconClassName
     task.shortNameSize = realArgs.shortNameSize
     task.dataGlyph = realArgs.dataGlyph
@@ -102,6 +106,9 @@ asciidoctor {
             createIconGenerationTask(packName: 'fluentui', iconClassName: 'org.kordamp.ikonli.fluentui.FluentUiRegularAL', iconName: 'fltr', shortNameSize: 7, classifier: 'ral'),
             createIconGenerationTask(packName: 'fluentui', iconClassName: 'org.kordamp.ikonli.fluentui.FluentUiRegularMZ', iconName: 'fltr', shortNameSize: 7, classifier: 'rmz'),
             createIconGenerationTask(packName: 'fontawesome', iconClassName: 'org.kordamp.ikonli.fontawesome.FontAwesome', iconName: 'fa'),
+            createIconGenerationTask(packName: 'fontawesome5', iconClassName: 'org.kordamp.ikonli.fontawesome5.FontAwesomeBrands', iconName: 'fab', prefix: 'fa', shortNameSize: 4, classifier: 'brands'),
+            createIconGenerationTask(packName: 'fontawesome5', iconClassName: 'org.kordamp.ikonli.fontawesome5.FontAwesomeRegular', iconName: 'far', prefix: 'fa', shortNameSize: 4, classifier: 'regular'),
+            createIconGenerationTask(packName: 'fontawesome5', iconClassName: 'org.kordamp.ikonli.fontawesome5.FontAwesomeSolid', iconName: 'fas', prefix: 'fa', shortNameSize: 4, classifier: 'solid'),
             createIconGenerationTask(packName: 'fontelico', iconClassName: 'org.kordamp.ikonli.fontelico.Fontelico', shortNameSize: 4),
             createIconGenerationTask(packName: 'foundation', iconClassName: 'org.kordamp.ikonli.foundation.Foundation'),
             createIconGenerationTask(packName: 'hawconsfilled', iconClassName: 'org.kordamp.ikonli.hawconsfilled.HawconsFilled', iconName: 'hwf', shortNameSize: 4),
@@ -149,9 +156,6 @@ asciidoctor {
             createIconGenerationTask(packName: 'typicons', iconClassName: 'org.kordamp.ikonli.typicons.Typicons', iconName: 'typcn', shortNameSize: 4),
             createIconGenerationTask(packName: 'weathericons', iconClassName: 'org.kordamp.ikonli.weathericons.WeatherIcons', iconName: 'wi'),
             createIconGenerationTask(packName: 'websymbols', iconClassName: 'org.kordamp.ikonli.websymbols.Websymbols', iconName: 'websymbols'),
-            createIconGenerationTask(packName: 'fontawesome5', iconClassName: 'org.kordamp.ikonli.fontawesome5.FontAwesomeBrands', iconName: 'fa', shortNameSize: 4, classifier: 'brands'),
-            createIconGenerationTask(packName: 'fontawesome5', iconClassName: 'org.kordamp.ikonli.fontawesome5.FontAwesomeRegular', iconName: 'fa', shortNameSize: 4, classifier: 'regular'),
-            createIconGenerationTask(packName: 'fontawesome5', iconClassName: 'org.kordamp.ikonli.fontawesome5.FontAwesomeSolid', iconName: 'fa', shortNameSize: 4, classifier: 'solid'),
             createIconGenerationTask(packName: 'ionicons4', iconClassName: 'org.kordamp.ikonli.ionicons4.Ionicons4IOS', iconName: 'ion', shortNameSize: 5, classifier: 'ios'),
             createIconGenerationTask(packName: 'ionicons4', iconClassName: 'org.kordamp.ikonli.ionicons4.Ionicons4Logo', iconName: 'ion', shortNameSize: 5, classifier: 'logo'),
             createIconGenerationTask(packName: 'ionicons4', iconClassName: 'org.kordamp.ikonli.ionicons4.Ionicons4Material', iconName: 'ion', shortNameSize: 5, classifier: 'material'),
