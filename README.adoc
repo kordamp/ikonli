@@ -4,9 +4,8 @@
 :project-repo:    maven
 :project-name:    ikonli
 :project-group:   org.kordamp.ikonli
-:project-version: 11.4.0
+:project-version: 11.5.0
 
-image:https://img.shields.io/travis/{project-owner}/{project-name}/master.svg?logo=travis["Build Status (travis)", link="https://travis-ci.org/{project-owner}/{project-name}"]
 image:https://github.com/{project-owner}/{project-name}/workflows/Build/badge.svg["Build Status", link="https://github.com/{project-owner}/{project-name}/actions"]
 image:https://img.shields.io/badge/license-ASL2-blue.svg?logo=apache["ASL2 Licensed", link="https://opensource.org/licenses/Apache-2.0"]
 image:https://api.bintray.com/packages/{project-owner}/{project-repo}/{project-name}/images/download.svg[link="https://bintray.com/{project-owner}/{project-repo}/{project-name}/_latestVersion"]
@@ -61,17 +60,17 @@ to use the gradle wrapper if available or your global gradle command. This is an
 
 === Next Steps
 
-Make a full build issuing `gradle build`.
+Make a full build issuing `gm build`.
 
 Run the sampler JavaFX application by invoking the following commands
 
 [source]
 ----
-$ ./gradlew :sampler-javafx:run
+$ gm :sampler-javafx:run
 ----
 
 Run the sampler Swing application by invoking the following commands
 [source]
 ----
-$ ./gradlew :sampler-swing:run
+$ gm :sampler-swing:run
 ----
