@@ -39,7 +39,7 @@ public class RunestroiconsIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/runestroicons/2.6.0/fonts/runestroicons.ttf";
+        return "META-INF/resources/runestroicons/5.6/fonts/runestroicons.ttf";
     }
 
     @Override
