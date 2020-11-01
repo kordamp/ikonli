@@ -35,7 +35,7 @@
             </StackedFontIcon>
             <StackedFontIcon GridPane.columnIndex="1" GridPane.rowIndex="0" iconSize="64">
                 <FontIcon iconLiteral="fa-circle-thin" iconColor="forestgreen"/>
-                <FontIcon iconLiteral="oct-heart" StackedFontIcon.iconSize="0.5"/>
+                <FontIcon iconLiteral="oct-heart-24" StackedFontIcon.iconSize="0.5"/>
             </StackedFontIcon>
             <StackedFontIcon GridPane.columnIndex="2" GridPane.rowIndex="0" iconSize="80">
                 <FontIcon iconLiteral="fa-circle-thin" iconColor="blue"/>
