@@ -39,11 +39,11 @@ public class HawconsFilledIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/hawconsfilled/1.0/fonts/hawconsfilled.ttf";
+        return "META-INF/resources/hawconsfilled/20140708/fonts/hawconsfilled.ttf";
     }
 
     @Override
     public String getFontFamily() {
-        return "HawconsFilled";
+        return "Hawcons-Filled";
     }
 }

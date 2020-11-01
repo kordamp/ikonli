@@ -33,7 +33,7 @@ class GenerateIconCheatSheetTask extends DefaultTask {
     Integer shortNameSize
     @Input
     Boolean dataGlyph
-    @Input
+    @Input @Optional
     String classifier
 
     @TaskAction
