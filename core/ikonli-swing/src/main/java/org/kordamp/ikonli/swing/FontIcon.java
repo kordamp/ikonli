@@ -20,14 +20,8 @@ package org.kordamp.ikonli.swing;
 import org.kordamp.ikonli.Ikon;
 import org.kordamp.ikonli.IkonHandler;
 
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
-import java.awt.Color;
-import java.awt.Component;
-import java.awt.Font;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.RenderingHints;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.image.BufferedImage;
 
 import static java.awt.GraphicsEnvironment.getLocalGraphicsEnvironment;
@@ -69,6 +63,10 @@ public class FontIcon implements Icon {
     }
 
     public void paintIcon(Component c, Graphics g, int x, int y) {
+        int w = getIconWidth();
+        int h = getIconHeight();
+        if (w <= 0 || h <= 0) return;
+
         synchronized (LOCK) {
             if (buffer == null) {
                 buffer = new BufferedImage(getIconWidth(), getIconHeight(),

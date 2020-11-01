@@ -26,24 +26,24 @@ import org.kordamp.jipsy.ServiceProviderFor;
  * @author Andres Almiray
  */
 @ServiceProviderFor(IkonHandler.class)
-public class FluentUiFilledIkonHandler extends AbstractIkonHandler {
+public class FluentUiRegularALIkonHandler extends AbstractIkonHandler {
     @Override
     public boolean supports(String description) {
-        return description != null && description.startsWith("flt-fm-");
+        return description != null && description.startsWith("fltral-");
     }
 
     @Override
     public Ikon resolve(String description) {
-        return FluentUiFilled.findByDescription(description);
+        return FluentUiRegularAL.findByDescription(description);
     }
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/fluentui/1.1.44/fonts/FluentUI-Filled-Monochrome.ttf";
+        return "META-INF/resources/fluentui/1.1.74/fonts/FluentSystemIcons-Regular.ttf";
     }
 
     @Override
     public String getFontFamily() {
-        return "FluentUI-Filled-Monochrome";
+        return "FluentSystemIcons-Regular";
     }
 }

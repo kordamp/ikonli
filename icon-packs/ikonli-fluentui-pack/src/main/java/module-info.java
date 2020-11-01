@@ -21,6 +21,8 @@ module org.kordamp.ikonli.fluentui {
     exports org.kordamp.ikonli.fluentui;
 
     provides org.kordamp.ikonli.IkonHandler
-        with org.kordamp.ikonli.fluentui.FluentUiFilledIkonHandler,
-             org.kordamp.ikonli.fluentui.FluentUiRegularIkonHandler;
+        with org.kordamp.ikonli.fluentui.FluentUiFilledALIkonHandler,
+            org.kordamp.ikonli.fluentui.FluentUiFilledMZIkonHandler,
+            org.kordamp.ikonli.fluentui.FluentUiRegularALIkonHandler,
+            org.kordamp.ikonli.fluentui.FluentUiRegularMZIkonHandler;
 }
