@@ -27,6 +27,7 @@ import javafx.scene.control.TabPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import org.kordamp.ikonli.Ikon;
+import org.kordamp.ikonli.captainicon.Captainicon;
 import org.kordamp.ikonli.dashicons.Dashicons;
 import org.kordamp.ikonli.devicons.Devicons;
 import org.kordamp.ikonli.elusive.Elusive;
@@ -108,6 +109,7 @@ public class Sampler extends Application {
         URL location = getClass().getResource("sampler.fxml");
         FXMLLoader fxmlLoader = new FXMLLoader(location);
         TabPane tabPane = fxmlLoader.load();
+        tabPane.getTabs().add(new DemoTab(Captainicon.class, allOf(Captainicon.class)));
         tabPane.getTabs().add(new DemoTab(Dashicons.class, allOf(Dashicons.class)));
         tabPane.getTabs().add(new DemoTab(Devicons.class, allOf(Devicons.class)));
         tabPane.getTabs().add(new DemoTab(Elusive.class, allOf(Elusive.class)));

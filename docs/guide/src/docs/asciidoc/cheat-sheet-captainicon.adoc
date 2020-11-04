@@ -1,0 +1,13 @@
+= Captainicon
+
+++++
+<link href='./css/captainicon.css' rel='stylesheet'>
+<style>
+    .captainicon {
+        font-size: 32px;
+    }
+</style>
+++++
+
+include::{gradle-projectdir}/build/tmp/_captainicon_cheat_sheet.adoc[]
+

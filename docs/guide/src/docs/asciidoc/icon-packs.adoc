@@ -2,6 +2,32 @@
 [[_cheat_sheets]]
 = Icon Packs
 
+== Captainicon
+* Module: `org.kordamp.ikonli.captainicon`
+* Font version: {captainiconVersion}
+* https://mariodelvalle.github.io/CaptainIconWeb/[]
+* link:cheat-sheet-captainicon.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-captainicon-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-captainicon-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
 == DashIcons
  * Module: `org.kordamp.ikonli.dashicons`
  * Font version: {dashiconsVersion}
