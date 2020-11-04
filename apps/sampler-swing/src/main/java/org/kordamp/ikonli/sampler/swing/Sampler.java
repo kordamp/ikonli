@@ -23,6 +23,7 @@ import org.kordamp.ikonli.dashicons.Dashicons;
 import org.kordamp.ikonli.devicons.Devicons;
 import org.kordamp.ikonli.elusive.Elusive;
 import org.kordamp.ikonli.entypo.Entypo;
+import org.kordamp.ikonli.evaicons.Evaicons;
 import org.kordamp.ikonli.feather.Feather;
 import org.kordamp.ikonli.fluentui.FluentUiFilledAL;
 import org.kordamp.ikonli.fluentui.FluentUiFilledMZ;
@@ -108,6 +109,7 @@ public class Sampler {
         createTab(tabPane, Devicons.class, new DemoTab(allOf(Devicons.class)));
         createTab(tabPane, Elusive.class, new DemoTab(allOf(Elusive.class)));
         createTab(tabPane, Entypo.class, new DemoTab(allOf(Entypo.class)));
+        createTab(tabPane, Evaicons.class, new DemoTab(allOf(Evaicons.class)));
         createTab(tabPane, Feather.class, new DemoTab(allOf(Feather.class)));
         createTab(tabPane, FluentUiFilledAL.class, new DemoTab(allOf(FluentUiFilledAL.class)));
         createTab(tabPane, FluentUiFilledMZ.class, new DemoTab(allOf(FluentUiFilledMZ.class)));

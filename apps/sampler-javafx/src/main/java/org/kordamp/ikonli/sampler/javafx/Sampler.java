@@ -32,6 +32,7 @@ import org.kordamp.ikonli.dashicons.Dashicons;
 import org.kordamp.ikonli.devicons.Devicons;
 import org.kordamp.ikonli.elusive.Elusive;
 import org.kordamp.ikonli.entypo.Entypo;
+import org.kordamp.ikonli.evaicons.Evaicons;
 import org.kordamp.ikonli.feather.Feather;
 import org.kordamp.ikonli.fluentui.FluentUiFilledAL;
 import org.kordamp.ikonli.fluentui.FluentUiFilledMZ;
@@ -114,6 +115,7 @@ public class Sampler extends Application {
         tabPane.getTabs().add(new DemoTab(Devicons.class, allOf(Devicons.class)));
         tabPane.getTabs().add(new DemoTab(Elusive.class, allOf(Elusive.class)));
         tabPane.getTabs().add(new DemoTab(Entypo.class, allOf(Entypo.class)));
+        tabPane.getTabs().add(new DemoTab(Evaicons.class, allOf(Evaicons.class)));
         tabPane.getTabs().add(new DemoTab(Feather.class, allOf(Feather.class)));
         tabPane.getTabs().add(new DemoTab(FluentUiFilledAL.class, allOf(FluentUiFilledAL.class)));
         tabPane.getTabs().add(new DemoTab(FluentUiFilledMZ.class, allOf(FluentUiFilledMZ.class)));

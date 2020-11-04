@@ -27,6 +27,7 @@ open module org.kordamp.ikonli.sampler.javafx {
     requires org.kordamp.ikonli.devicons;
     requires org.kordamp.ikonli.elusive;
     requires org.kordamp.ikonli.entypo;
+    requires org.kordamp.ikonli.evaicons;
     requires org.kordamp.ikonli.feather;
     requires org.kordamp.ikonli.fluentui;
     requires org.kordamp.ikonli.fontawesome;

@@ -132,6 +132,32 @@ compile '{project-group}:ikonli-entypo-pack:{project-version}'
 </dependency>
 ----
 
+== EvaIcons
+* Module: `org.kordamp.ikonli.evaicons`
+* Font version: {evaiconsVersion}
+* link:https://akveo.github.io/eva-icons/#/[]
+* link:cheat-sheet-evaicons.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-evaicons-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-evaicons-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
 == Feather
  * Module: `org.kordamp.ikonli.feather`
  * Font version: {featherVersion}

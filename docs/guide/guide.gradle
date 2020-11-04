@@ -101,6 +101,7 @@ asciidoctor {
             createIconGenerationTask(packName: 'dashicons', iconClassName: 'org.kordamp.ikonli.dashicons.Dashicons', iconName: 'dashicons', shortNameSize: 10),
             createIconGenerationTask(packName: 'elusive', iconClassName: 'org.kordamp.ikonli.elusive.Elusive', iconName: 'el-icon', shortNameSize: 4),
             createIconGenerationTask(packName: 'entypo', iconClassName: 'org.kordamp.ikonli.entypo.Entypo', iconName: 'enty', shortNameSize: 5),
+            createIconGenerationTask(packName: 'evaicons', iconClassName: 'org.kordamp.ikonli.evaicons.Evaicons', iconName: 'eva', shortNameSize: 4),
             createIconGenerationTask(packName: 'feather', iconClassName: 'org.kordamp.ikonli.feather.Feather', iconName: 'fth', shortNameSize: 4),
             createIconGenerationTask(packName: 'fluentui', iconClassName: 'org.kordamp.ikonli.fluentui.FluentUiFilledAL', iconName: 'fltf', shortNameSize: 7, classifier: 'fal'),
             createIconGenerationTask(packName: 'fluentui', iconClassName: 'org.kordamp.ikonli.fluentui.FluentUiFilledMZ', iconName: 'fltf', shortNameSize: 7, classifier: 'fmz'),
@@ -170,6 +171,7 @@ asciidoctor {
             deviconsVersion        : project.deviconsVersion,
             elusiveVersion         : project.elusiveVersion,
             entypoVersion          : project.entypoVersion,
+            evaiconsVersion        : project.evaiconsVersion,
             featherVersion         : project.featherVersion,
             fluentuiVersion        : project.fluentuiVersion,
             fontawesomeVersion     : project.fontawesomeVersion,
@@ -211,6 +213,7 @@ asciidoctor {
         from project(':ikonli-devicons-pack').file("src/main/resources/META-INF/resources/devicons/${deviconsVersion}")
         from project(':ikonli-entypo-pack').file("src/main/resources/META-INF/resources/entypo/${entypoVersion}")
         from project(':ikonli-elusive-pack').file("src/main/resources/META-INF/resources/elusive/${elusiveVersion}")
+        from project(':ikonli-evaicons-pack').file("src/main/resources/META-INF/resources/evaicons/${evaiconsVersion}")
         from project(':ikonli-feather-pack').file("src/main/resources/META-INF/resources/feather/${featherVersion}")
         from project(':ikonli-fluentui-pack').file("src/main/resources/META-INF/resources/fluentui/${fluentuiVersion}")
         from project(':ikonli-fontawesome-pack').file("src/main/resources/META-INF/resources/fontawesome/${fontawesomeVersion}")
