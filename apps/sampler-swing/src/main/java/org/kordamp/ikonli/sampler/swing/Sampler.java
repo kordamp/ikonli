@@ -78,6 +78,7 @@ import org.kordamp.ikonli.materialdesign.MaterialDesignX;
 import org.kordamp.ikonli.materialdesign.MaterialDesignY;
 import org.kordamp.ikonli.materialdesign.MaterialDesignZ;
 import org.kordamp.ikonli.metrizeicons.MetrizeIcons;
+import org.kordamp.ikonli.microns.Microns;
 import org.kordamp.ikonli.ociicons.Ociicons;
 import org.kordamp.ikonli.octicons.Octicons;
 import org.kordamp.ikonli.openiconic.Openiconic;
@@ -173,6 +174,7 @@ public class Sampler {
         createTab(tabPane, MaterialDesignY.class, new DemoTab(allOf(MaterialDesignY.class)));
         createTab(tabPane, MaterialDesignZ.class, new DemoTab(allOf(MaterialDesignZ.class)));
         createTab(tabPane, MetrizeIcons.class, new DemoTab(allOf(MetrizeIcons.class)));
+        createTab(tabPane, Microns.class, new DemoTab(allOf(Microns.class)));
         createTab(tabPane, Ociicons.class, new DemoTab(allOf(Ociicons.class)));
         createTab(tabPane, Octicons.class, new DemoTab(allOf(Octicons.class)));
         createTab(tabPane, Openiconic.class, new DemoTab(allOf(Openiconic.class)));

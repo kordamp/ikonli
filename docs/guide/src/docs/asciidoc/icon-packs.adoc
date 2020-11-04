@@ -678,6 +678,32 @@ compile '{project-group}:ikonli-metrizeicons-pack:{project-version}'
 </dependency>
 ----
 
+== Microns
+* Module: `org.kordamp.ikonli.microns`
+* Font version: {micronsVersion}
+* link:https://github.com/stephenhutchings/microns[]
+* link:cheat-sheet-microns.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-microns-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-microns-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
 == Ociicons
 * Module: `org.kordamp.ikonli.ociicons`
 * Font version: {ociiconsVersion}

@@ -153,6 +153,7 @@ asciidoctor {
             createIconGenerationTask(packName: 'materialdesign', iconClassName: 'org.kordamp.ikonli.materialdesign.MaterialDesignY', iconName: 'mdi', shortNameSize: 5, classifier: 'y'),
             createIconGenerationTask(packName: 'materialdesign', iconClassName: 'org.kordamp.ikonli.materialdesign.MaterialDesignZ', iconName: 'mdi', shortNameSize: 5, classifier: 'z'),
             createIconGenerationTask(packName: 'metrizeicons', iconClassName: 'org.kordamp.ikonli.metrizeicons.MetrizeIcons', iconName: 'met', shortNameSize: 4),
+            createIconGenerationTask(packName: 'microns', iconClassName: 'org.kordamp.ikonli.microns.Microns', iconName: 'mu'),
             createIconGenerationTask(packName: 'ociicons', iconClassName: 'org.kordamp.ikonli.ociicons.Ociicons', iconName: 'oci', shortNameSize: 4),
             createIconGenerationTask(packName: 'octicons', iconClassName: 'org.kordamp.ikonli.octicons.Octicons', iconName: 'octicon', shortNameSize: 4),
             createIconGenerationTask(packName: 'openiconic', iconClassName: 'org.kordamp.ikonli.openiconic.Openiconic', iconName: 'oi', dataGlyph: true),
@@ -197,6 +198,7 @@ asciidoctor {
             materialVersion        : project.materialVersion,
             materialdesignVersion  : project.materialdesignVersion,
             metrizeiconsVersion    : project.metrizeiconsVersion,
+            micronsVersion         : project.micronsVersion,
             ociiconsVersion        : project.ociiconsVersion,
             octiconsVersion        : project.octiconsVersion,
             openiconicVersion      : project.openiconicVersion,
@@ -243,6 +245,7 @@ asciidoctor {
         from project(':ikonli-material-pack').file("src/main/resources/META-INF/resources/material/${materialVersion}")
         from project(':ikonli-materialdesign-pack').file("src/main/resources/META-INF/resources/materialdesignicons/${materialdesignVersion}")
         from project(':ikonli-metrizeicons-pack').file("src/main/resources/META-INF/resources/metrizeicons/${metrizeiconsVersion}")
+        from project(':ikonli-microns-pack').file("src/main/resources/META-INF/resources/microns/${micronsVersion}")
         from project(':ikonli-ociicons-pack').file("src/main/resources/META-INF/resources/ociicons/${ociiconsVersion}")
         from project(':ikonli-octicons-pack').file("src/main/resources/META-INF/resources/octicons/${octiconsVersion}")
         from project(':ikonli-openiconic-pack').file("src/main/resources/META-INF/resources/openiconic/${openiconicVersion}")

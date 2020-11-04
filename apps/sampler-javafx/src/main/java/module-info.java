@@ -48,6 +48,7 @@ open module org.kordamp.ikonli.sampler.javafx {
     requires org.kordamp.ikonli.material;
     requires org.kordamp.ikonli.materialdesign;
     requires org.kordamp.ikonli.metrizeicons;
+    requires org.kordamp.ikonli.microns;
     requires org.kordamp.ikonli.ociicons;
     requires org.kordamp.ikonli.octicons;
     requires org.kordamp.ikonli.openiconic;

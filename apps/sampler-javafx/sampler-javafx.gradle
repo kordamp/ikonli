@@ -50,6 +50,7 @@ dependencies {
     implementation project(':ikonli-material-pack')
     implementation project(':ikonli-materialdesign-pack')
     implementation project(':ikonli-metrizeicons-pack')
+    implementation project(':ikonli-microns-pack')
     implementation project(':ikonli-ociicons-pack')
     implementation project(':ikonli-octicons-pack')
     implementation project(':ikonli-openiconic-pack')
