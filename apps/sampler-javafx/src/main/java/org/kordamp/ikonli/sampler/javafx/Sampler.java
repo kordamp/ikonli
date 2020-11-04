@@ -92,6 +92,8 @@ import org.kordamp.ikonli.ociicons.Ociicons;
 import org.kordamp.ikonli.octicons.Octicons;
 import org.kordamp.ikonli.openiconic.Openiconic;
 import org.kordamp.ikonli.paymentfont.PaymentFont;
+import org.kordamp.ikonli.remixicon.RemixiconAL;
+import org.kordamp.ikonli.remixicon.RemixiconMZ;
 import org.kordamp.ikonli.runestroicons.Runestroicons;
 import org.kordamp.ikonli.themify.Themify;
 import org.kordamp.ikonli.typicons.Typicons;
@@ -178,6 +180,8 @@ public class Sampler extends Application {
         tabPane.getTabs().add(new DemoTab(Octicons.class, allOf(Octicons.class)));
         tabPane.getTabs().add(new DemoTab(Openiconic.class, allOf(Openiconic.class)));
         tabPane.getTabs().add(new DemoTab(PaymentFont.class, allOf(PaymentFont.class)));
+        tabPane.getTabs().add(new DemoTab(RemixiconAL.class, allOf(RemixiconAL.class)));
+        tabPane.getTabs().add(new DemoTab(RemixiconMZ.class, allOf(RemixiconMZ.class)));
         tabPane.getTabs().add(new DemoTab(Runestroicons.class, allOf(Runestroicons.class)));
         tabPane.getTabs().add(new DemoTab(Themify.class, allOf(Themify.class)));
         tabPane.getTabs().add(new DemoTab(Typicons.class, allOf(Typicons.class)));

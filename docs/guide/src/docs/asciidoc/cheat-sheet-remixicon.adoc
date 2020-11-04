@@ -1,0 +1,21 @@
+= Remixicon
+
+++++
+<link href='./css/remixicon.css' rel='stylesheet'>
+<style>
+    .remix {
+        font-size: 32px;
+    }
+</style>
+++++
+
+Use the indicated enum type for each set.
+
+== A-L (RemixiconAL)
+
+include::{gradle-projectdir}/build/tmp/_remixicon_al_cheat_sheet.adoc[]
+
+== M-Z (RemixiconMZ)
+
+include::{gradle-projectdir}/build/tmp/_remixicon_mz_cheat_sheet.adoc[]
+

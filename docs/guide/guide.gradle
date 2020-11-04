@@ -157,6 +157,8 @@ asciidoctor {
             createIconGenerationTask(packName: 'octicons', iconClassName: 'org.kordamp.ikonli.octicons.Octicons', iconName: 'octicon', shortNameSize: 4),
             createIconGenerationTask(packName: 'openiconic', iconClassName: 'org.kordamp.ikonli.openiconic.Openiconic', iconName: 'oi', dataGlyph: true),
             createIconGenerationTask(packName: 'paymentfont', iconClassName: 'org.kordamp.ikonli.paymentfont.PaymentFont', iconName: 'pf', shortNameSize: 3),
+            createIconGenerationTask(packName: 'remixicon', iconClassName: 'org.kordamp.ikonli.remixicon.RemixiconAL', iconName: 'remix', shortNameSize: 8, classifier: 'al'),
+            createIconGenerationTask(packName: 'remixicon', iconClassName: 'org.kordamp.ikonli.remixicon.RemixiconMZ', iconName: 'remix', shortNameSize: 8, classifier: 'mz'),
             createIconGenerationTask(packName: 'runestroicons', iconClassName: 'org.kordamp.ikonli.runestroicons.Runestroicons', iconName: 'ri'),
             createIconGenerationTask(packName: 'typicons', iconClassName: 'org.kordamp.ikonli.typicons.Typicons', iconName: 'typcn', shortNameSize: 4),
             createIconGenerationTask(packName: 'weathericons', iconClassName: 'org.kordamp.ikonli.weathericons.WeatherIcons', iconName: 'wi'),
@@ -199,6 +201,7 @@ asciidoctor {
             octiconsVersion        : project.octiconsVersion,
             openiconicVersion      : project.openiconicVersion,
             paymentfontVersion     : project.paymentfontVersion,
+            remixiconVersion       : project.remixiconVersion,
             runestroiconsVersion   : project.runestroiconsVersion,
             typiconsVersion        : project.typiconsVersion,
             themifyVersion         : project.themifyVersion,
@@ -244,6 +247,7 @@ asciidoctor {
         from project(':ikonli-octicons-pack').file("src/main/resources/META-INF/resources/octicons/${octiconsVersion}")
         from project(':ikonli-openiconic-pack').file("src/main/resources/META-INF/resources/openiconic/${openiconicVersion}")
         from project(':ikonli-paymentfont-pack').file("src/main/resources/META-INF/resources/paymentfont/${paymentfontVersion}")
+        from project(':ikonli-remixicon-pack').file("src/main/resources/META-INF/resources/remixicon/${remixiconVersion}")
         from project(':ikonli-runestroicons-pack').file("src/main/resources/META-INF/resources/runestroicons/${runestroiconsVersion}")
         from project(':ikonli-typicons-pack').file("src/main/resources/META-INF/resources/typicons/${typiconsVersion}")
         from project(':ikonli-themify-pack').file("src/main/resources/META-INF/resources/themify/${themifyVersion}")

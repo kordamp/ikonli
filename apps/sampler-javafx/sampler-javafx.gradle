@@ -54,6 +54,7 @@ dependencies {
     implementation project(':ikonli-octicons-pack')
     implementation project(':ikonli-openiconic-pack')
     implementation project(':ikonli-paymentfont-pack')
+    implementation project(':ikonli-remixicon-pack')
     implementation project(':ikonli-runestroicons-pack')
     implementation project(':ikonli-themify-pack')
     implementation project(':ikonli-typicons-pack')

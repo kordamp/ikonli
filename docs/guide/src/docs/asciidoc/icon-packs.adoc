@@ -782,6 +782,32 @@ compile '{project-group}:ikonli-paymentfont-pack:{project-version}'
 </dependency>
 ----
 
+== Remixicon
+* Module: `org.kordamp.ikonli.remixicon`
+* Font version: {remixiconVersion}
+* link:https://remixicon.com/[]
+* link:cheat-sheet-remixicon.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-remixicon-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-remixicon-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
 == RunestroIcons
  * Module: `org.kordamp.ikonli.runestroicons`
  * Font version: {runestroiconsVersion}
