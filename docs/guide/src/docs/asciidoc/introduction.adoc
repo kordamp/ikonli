@@ -17,5 +17,7 @@ You must select a binary that matches your target UI toolkit, such as
 Swing:: ikonli-swing-{project-version} (JDK 11+) _or_ ikonli-swing-{ikonliJdk8Version} (JDK 8)
 JavaFX:: ikonli-javafx-{project-version} (JDK 11+) _or_ ikonli-javafx-{ikonliJdk8Version} (JDK 8)
 
+WARNING: Not all icon packs are available in the JDK8 only version (`{ikonliJdk8Version}`).
+
 Next, select any of the icon packs you want to use. You may select more than one for the same application.
 
