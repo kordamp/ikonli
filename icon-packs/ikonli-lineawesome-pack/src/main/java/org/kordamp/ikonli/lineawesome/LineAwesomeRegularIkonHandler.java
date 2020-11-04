@@ -15,7 +15,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.kordamp.ikonli.fontawesome5;
+package org.kordamp.ikonli.lineawesome;
 
 import org.kordamp.ikonli.AbstractIkonHandler;
 import org.kordamp.ikonli.Ikon;
@@ -26,24 +26,24 @@ import org.kordamp.jipsy.ServiceProviderFor;
  * @author Andres Almiray
  */
 @ServiceProviderFor(IkonHandler.class)
-public class FontAwesomeRegularIkonHandler extends AbstractIkonHandler {
+public class LineAwesomeRegularIkonHandler extends AbstractIkonHandler {
     @Override
     public boolean supports(String description) {
-        return description != null && description.startsWith("far-");
+        return description != null && description.startsWith("lar-");
     }
 
     @Override
     public Ikon resolve(String description) {
-        return FontAwesomeRegular.findByDescription(description);
+        return LineAwesomeRegular.findByDescription(description);
     }
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/fontawesome5/5.15.1/fonts/fa-regular-400.ttf";
+        return "META-INF/resources/lineawesome/1.3.0/fonts/la-regular-400.ttf";
     }
 
     @Override
     public String getFontFamily() {
-        return "Font Awesome 5 Free Regular";
+        return "la-regular-400";
     }
 }

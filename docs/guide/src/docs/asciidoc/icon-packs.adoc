@@ -470,6 +470,32 @@ compile '{project-group}:ikonli-ligaturesymbols-pack:{project-version}'
 </dependency>
 ----
 
+== LineAwesome
+* Module: `org.kordamp.ikonli.lineawesome`
+* Font version: {lineawesomeVersion}
+* link:https://icons8.com/line-awesome[]
+* link:cheat-sheet-lineawesome.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-lineawesome-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-lineawesome-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
 == Linecons
  * Module: `org.kordamp.ikonli.linecons`
  * Font version: {lineconsVersion}

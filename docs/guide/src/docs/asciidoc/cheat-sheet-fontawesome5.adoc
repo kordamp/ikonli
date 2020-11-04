@@ -2,11 +2,6 @@
 
 Use the indicated enum type for each set.
 
-NOTE:: Be aware that you can't use both `Regular` and `Solid` packs within the same application.
-This is due to a limitation in the Font resource as both packs consume the same Font Family
-(`Font Awesome 5 Free`). This limitation is inherent to the binary distribution of the FontAwesome5
-font resources.
-
 == Brands (FontAwesomeBrands)
 
 ++++
