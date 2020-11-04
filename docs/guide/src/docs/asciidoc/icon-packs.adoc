@@ -911,6 +911,32 @@ compile '{project-group}:ikonli-websymbols-pack:{project-version}'
 </dependency>
 ----
 
+== Win10
+* Module: `org.kordamp.ikonli.win10`
+* Font version: {win10Version}
+* link:https://github.com/icons8/windows-10-icons[]
+* link:cheat-sheet-win10.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-win10-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-win10-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
 == Zondicons
  * Module: `org.kordamp.ikonli.zondicons`
  * Font version: {zondiconsVersion}

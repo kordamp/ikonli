@@ -57,6 +57,7 @@ open module org.kordamp.ikonli.sampler.javafx {
     requires org.kordamp.ikonli.typicons;
     requires org.kordamp.ikonli.weathericons;
     requires org.kordamp.ikonli.websymbols;
+    requires org.kordamp.ikonli.win10;
     requires org.kordamp.ikonli.zondicons;
     uses org.kordamp.ikonli.IkonHandler;
 }
