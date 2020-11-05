@@ -166,6 +166,7 @@ asciidoctor {
             createIconGenerationTask(packName: 'remixicon', iconClassName: 'org.kordamp.ikonli.remixicon.RemixiconMZ', iconName: 'remix', shortNameSize: 8, classifier: 'mz'),
             createIconGenerationTask(packName: 'runestroicons', iconClassName: 'org.kordamp.ikonli.runestroicons.Runestroicons', iconName: 'ri'),
             createIconGenerationTask(packName: 'simpleicons', iconClassName: 'org.kordamp.ikonli.simpleicons.SimpleIcons', iconName: 'si'),
+            createIconGenerationTask(packName: 'simplelineicons', iconClassName: 'org.kordamp.ikonli.simplelineicons.SimpleLineIcons', iconName: 'sil', shortNameSize: 4),
             createIconGenerationTask(packName: 'typicons', iconClassName: 'org.kordamp.ikonli.typicons.Typicons', iconName: 'typcn', shortNameSize: 4),
             createIconGenerationTask(packName: 'weathericons', iconClassName: 'org.kordamp.ikonli.weathericons.WeatherIcons', iconName: 'wi'),
             createIconGenerationTask(packName: 'websymbols', iconClassName: 'org.kordamp.ikonli.websymbols.Websymbols', iconName: 'websymbols'),
@@ -214,6 +215,7 @@ asciidoctor {
             remixiconVersion       : project.remixiconVersion,
             runestroiconsVersion   : project.runestroiconsVersion,
             simpleiconsVersion     : project.simpleiconsVersion,
+            simplelineiconsVersion : project.simplelineiconsVersion,
             typiconsVersion        : project.typiconsVersion,
             themifyVersion         : project.themifyVersion,
             weathericonsVersion    : project.weathericonsVersion,
@@ -265,6 +267,7 @@ asciidoctor {
         from project(':ikonli-remixicon-pack').file("src/main/resources/META-INF/resources/remixicon/${remixiconVersion}")
         from project(':ikonli-runestroicons-pack').file("src/main/resources/META-INF/resources/runestroicons/${runestroiconsVersion}")
         from project(':ikonli-simpleicons-pack').file("src/main/resources/META-INF/resources/simpleicons/${simpleiconsVersion}")
+        from project(':ikonli-simplelineicons-pack').file("src/main/resources/META-INF/resources/simplelineicons/${simplelineiconsVersion}")
         from project(':ikonli-typicons-pack').file("src/main/resources/META-INF/resources/typicons/${typiconsVersion}")
         from project(':ikonli-themify-pack').file("src/main/resources/META-INF/resources/themify/${themifyVersion}")
         from project(':ikonli-weathericons-pack').file("src/main/resources/META-INF/resources/weathericons/${weathericonsVersion}")

@@ -20,7 +20,7 @@
 }
 */
 
- [class^="bpmn-"]:before, [class*=" bpmn-"]:before {
+[class^="bpmn-"]:before, [class*=" bpmn-"]:before {
   font-family: "bpmn";
   font-style: normal;
   font-weight: normal;

@@ -964,6 +964,32 @@ compile '{project-group}:ikonli-simpleicons-pack:{project-version}'
 </dependency>
 ----
 
+== SimpleLineIcons
+* Module: `org.kordamp.ikonli.simplelineicons`
+* Font version: {simplelineiconsVersion}
+* link:https://github.com/thesabbir/simple-line-icons[]
+* link:cheat-sheet-simplelineicons.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-simplelineicons-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-simplelineicons-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
 == Themify
  * Module: `org.kordamp.ikonli.themify`
  * Font version: {themifyVersion}

@@ -1,0 +1,594 @@
+/*
+* Font Face
+*/
+@font-face {
+  font-family: 'simple-line-icons';
+  src: url('../fonts/Simple-Line-Icons.eot?v=2.4.0');
+  src: url('../fonts/Simple-Line-Icons.eot?v=2.4.0#iefix') format('embedded-opentype'), url('../fonts/Simple-Line-Icons.woff2?v=2.4.0') format('woff2'), url('../fonts/Simple-Line-Icons.ttf?v=2.4.0') format('truetype'), url('../fonts/Simple-Line-Icons.woff?v=2.4.0') format('woff'), url('../fonts/Simple-Line-Icons.svg?v=2.4.0#simple-line-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/*
+ Use the following code if you want to have a class per icon.
+ Instead of a list of all class selectors, you can use the generic [class*="icon-"] selector,
+ but it's slower.
+*/
+[class^="sil-"]:before, [class*=" sil-"]:before {
+  font-family: 'simple-line-icons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.sil-user:before {
+  content: "\e005";
+}
+.sil-people:before {
+  content: "\e001";
+}
+.sil-user-female:before {
+  content: "\e000";
+}
+.sil-user-follow:before {
+  content: "\e002";
+}
+.sil-user-following:before {
+  content: "\e003";
+}
+.sil-user-unfollow:before {
+  content: "\e004";
+}
+.sil-login:before {
+  content: "\e066";
+}
+.sil-logout:before {
+  content: "\e065";
+}
+.sil-emotsmile:before {
+  content: "\e021";
+}
+.sil-phone:before {
+  content: "\e600";
+}
+.sil-call-end:before {
+  content: "\e048";
+}
+.sil-call-in:before {
+  content: "\e047";
+}
+.sil-call-out:before {
+  content: "\e046";
+}
+.sil-map:before {
+  content: "\e033";
+}
+.sil-location-pin:before {
+  content: "\e096";
+}
+.sil-direction:before {
+  content: "\e042";
+}
+.sil-directions:before {
+  content: "\e041";
+}
+.sil-compass:before {
+  content: "\e045";
+}
+.sil-layers:before {
+  content: "\e034";
+}
+.sil-menu:before {
+  content: "\e601";
+}
+.sil-list:before {
+  content: "\e067";
+}
+.sil-options-vertical:before {
+  content: "\e602";
+}
+.sil-options:before {
+  content: "\e603";
+}
+.sil-arrow-down:before {
+  content: "\e604";
+}
+.sil-arrow-left:before {
+  content: "\e605";
+}
+.sil-arrow-right:before {
+  content: "\e606";
+}
+.sil-arrow-up:before {
+  content: "\e607";
+}
+.sil-arrow-up-circle:before {
+  content: "\e078";
+}
+.sil-arrow-left-circle:before {
+  content: "\e07a";
+}
+.sil-arrow-right-circle:before {
+  content: "\e079";
+}
+.sil-arrow-down-circle:before {
+  content: "\e07b";
+}
+.sil-check:before {
+  content: "\e080";
+}
+.sil-clock:before {
+  content: "\e081";
+}
+.sil-plus:before {
+  content: "\e095";
+}
+.sil-minus:before {
+  content: "\e615";
+}
+.sil-close:before {
+  content: "\e082";
+}
+.sil-event:before {
+  content: "\e619";
+}
+.sil-exclamation:before {
+  content: "\e617";
+}
+.sil-organization:before {
+  content: "\e616";
+}
+.sil-trophy:before {
+  content: "\e006";
+}
+.sil-screen-smartphone:before {
+  content: "\e010";
+}
+.sil-screen-desktop:before {
+  content: "\e011";
+}
+.sil-plane:before {
+  content: "\e012";
+}
+.sil-notebook:before {
+  content: "\e013";
+}
+.sil-mustache:before {
+  content: "\e014";
+}
+.sil-mouse:before {
+  content: "\e015";
+}
+.sil-magnet:before {
+  content: "\e016";
+}
+.sil-energy:before {
+  content: "\e020";
+}
+.sil-disc:before {
+  content: "\e022";
+}
+.sil-cursor:before {
+  content: "\e06e";
+}
+.sil-cursor-move:before {
+  content: "\e023";
+}
+.sil-crop:before {
+  content: "\e024";
+}
+.sil-chemistry:before {
+  content: "\e026";
+}
+.sil-speedometer:before {
+  content: "\e007";
+}
+.sil-shield:before {
+  content: "\e00e";
+}
+.sil-screen-tablet:before {
+  content: "\e00f";
+}
+.sil-magic-wand:before {
+  content: "\e017";
+}
+.sil-hourglass:before {
+  content: "\e018";
+}
+.sil-graduation:before {
+  content: "\e019";
+}
+.sil-ghost:before {
+  content: "\e01a";
+}
+.sil-game-controller:before {
+  content: "\e01b";
+}
+.sil-fire:before {
+  content: "\e01c";
+}
+.sil-eyeglass:before {
+  content: "\e01d";
+}
+.sil-envelope-open:before {
+  content: "\e01e";
+}
+.sil-envelope-letter:before {
+  content: "\e01f";
+}
+.sil-bell:before {
+  content: "\e027";
+}
+.sil-badge:before {
+  content: "\e028";
+}
+.sil-anchor:before {
+  content: "\e029";
+}
+.sil-wallet:before {
+  content: "\e02a";
+}
+.sil-vector:before {
+  content: "\e02b";
+}
+.sil-speech:before {
+  content: "\e02c";
+}
+.sil-puzzle:before {
+  content: "\e02d";
+}
+.sil-printer:before {
+  content: "\e02e";
+}
+.sil-present:before {
+  content: "\e02f";
+}
+.sil-playlist:before {
+  content: "\e030";
+}
+.sil-pin:before {
+  content: "\e031";
+}
+.sil-picture:before {
+  content: "\e032";
+}
+.sil-handbag:before {
+  content: "\e035";
+}
+.sil-globe-alt:before {
+  content: "\e036";
+}
+.sil-globe:before {
+  content: "\e037";
+}
+.sil-folder-alt:before {
+  content: "\e039";
+}
+.sil-folder:before {
+  content: "\e089";
+}
+.sil-film:before {
+  content: "\e03a";
+}
+.sil-feed:before {
+  content: "\e03b";
+}
+.sil-drop:before {
+  content: "\e03e";
+}
+.sil-drawer:before {
+  content: "\e03f";
+}
+.sil-docs:before {
+  content: "\e040";
+}
+.sil-doc:before {
+  content: "\e085";
+}
+.sil-diamond:before {
+  content: "\e043";
+}
+.sil-cup:before {
+  content: "\e044";
+}
+.sil-calculator:before {
+  content: "\e049";
+}
+.sil-bubbles:before {
+  content: "\e04a";
+}
+.sil-briefcase:before {
+  content: "\e04b";
+}
+.sil-book-open:before {
+  content: "\e04c";
+}
+.sil-basket-loaded:before {
+  content: "\e04d";
+}
+.sil-basket:before {
+  content: "\e04e";
+}
+.sil-bag:before {
+  content: "\e04f";
+}
+.sil-action-undo:before {
+  content: "\e050";
+}
+.sil-action-redo:before {
+  content: "\e051";
+}
+.sil-wrench:before {
+  content: "\e052";
+}
+.sil-umbrella:before {
+  content: "\e053";
+}
+.sil-trash:before {
+  content: "\e054";
+}
+.sil-tag:before {
+  content: "\e055";
+}
+.sil-support:before {
+  content: "\e056";
+}
+.sil-frame:before {
+  content: "\e038";
+}
+.sil-size-fullscreen:before {
+  content: "\e057";
+}
+.sil-size-actual:before {
+  content: "\e058";
+}
+.sil-shuffle:before {
+  content: "\e059";
+}
+.sil-share-alt:before {
+  content: "\e05a";
+}
+.sil-share:before {
+  content: "\e05b";
+}
+.sil-rocket:before {
+  content: "\e05c";
+}
+.sil-question:before {
+  content: "\e05d";
+}
+.sil-pie-chart:before {
+  content: "\e05e";
+}
+.sil-pencil:before {
+  content: "\e05f";
+}
+.sil-note:before {
+  content: "\e060";
+}
+.sil-loop:before {
+  content: "\e064";
+}
+.sil-home:before {
+  content: "\e069";
+}
+.sil-grid:before {
+  content: "\e06a";
+}
+.sil-graph:before {
+  content: "\e06b";
+}
+.sil-microphone:before {
+  content: "\e063";
+}
+.sil-music-tone-alt:before {
+  content: "\e061";
+}
+.sil-music-tone:before {
+  content: "\e062";
+}
+.sil-earphones-alt:before {
+  content: "\e03c";
+}
+.sil-earphones:before {
+  content: "\e03d";
+}
+.sil-equalizer:before {
+  content: "\e06c";
+}
+.sil-like:before {
+  content: "\e068";
+}
+.sil-dislike:before {
+  content: "\e06d";
+}
+.sil-control-start:before {
+  content: "\e06f";
+}
+.sil-control-rewind:before {
+  content: "\e070";
+}
+.sil-control-play:before {
+  content: "\e071";
+}
+.sil-control-pause:before {
+  content: "\e072";
+}
+.sil-control-forward:before {
+  content: "\e073";
+}
+.sil-control-end:before {
+  content: "\e074";
+}
+.sil-volume-1:before {
+  content: "\e09f";
+}
+.sil-volume-2:before {
+  content: "\e0a0";
+}
+.sil-volume-off:before {
+  content: "\e0a1";
+}
+.sil-calendar:before {
+  content: "\e075";
+}
+.sil-bulb:before {
+  content: "\e076";
+}
+.sil-chart:before {
+  content: "\e077";
+}
+.sil-ban:before {
+  content: "\e07c";
+}
+.sil-bubble:before {
+  content: "\e07d";
+}
+.sil-camrecorder:before {
+  content: "\e07e";
+}
+.sil-camera:before {
+  content: "\e07f";
+}
+.sil-cloud-download:before {
+  content: "\e083";
+}
+.sil-cloud-upload:before {
+  content: "\e084";
+}
+.sil-envelope:before {
+  content: "\e086";
+}
+.sil-eye:before {
+  content: "\e087";
+}
+.sil-flag:before {
+  content: "\e088";
+}
+.sil-heart:before {
+  content: "\e08a";
+}
+.sil-info:before {
+  content: "\e08b";
+}
+.sil-key:before {
+  content: "\e08c";
+}
+.sil-link:before {
+  content: "\e08d";
+}
+.sil-lock:before {
+  content: "\e08e";
+}
+.sil-lock-open:before {
+  content: "\e08f";
+}
+.sil-magnifier:before {
+  content: "\e090";
+}
+.sil-magnifier-add:before {
+  content: "\e091";
+}
+.sil-magnifier-remove:before {
+  content: "\e092";
+}
+.sil-paper-clip:before {
+  content: "\e093";
+}
+.sil-paper-plane:before {
+  content: "\e094";
+}
+.sil-power:before {
+  content: "\e097";
+}
+.sil-refresh:before {
+  content: "\e098";
+}
+.sil-reload:before {
+  content: "\e099";
+}
+.sil-settings:before {
+  content: "\e09a";
+}
+.sil-star:before {
+  content: "\e09b";
+}
+.sil-symbol-female:before {
+  content: "\e09c";
+}
+.sil-symbol-male:before {
+  content: "\e09d";
+}
+.sil-target:before {
+  content: "\e09e";
+}
+.sil-credit-card:before {
+  content: "\e025";
+}
+.sil-paypal:before {
+  content: "\e608";
+}
+.sil-social-tumblr:before {
+  content: "\e00a";
+}
+.sil-social-twitter:before {
+  content: "\e009";
+}
+.sil-social-facebook:before {
+  content: "\e00b";
+}
+.sil-social-instagram:before {
+  content: "\e609";
+}
+.sil-social-linkedin:before {
+  content: "\e60a";
+}
+.sil-social-pinterest:before {
+  content: "\e60b";
+}
+.sil-social-github:before {
+  content: "\e60c";
+}
+.sil-social-google:before {
+  content: "\e60d";
+}
+.sil-social-reddit:before {
+  content: "\e60e";
+}
+.sil-social-skype:before {
+  content: "\e60f";
+}
+.sil-social-dribbble:before {
+  content: "\e00d";
+}
+.sil-social-behance:before {
+  content: "\e610";
+}
+.sil-social-foursqare:before {
+  content: "\e611";
+}
+.sil-social-soundcloud:before {
+  content: "\e612";
+}
+.sil-social-spotify:before {
+  content: "\e613";
+}
+.sil-social-stumbleupon:before {
+  content: "\e614";
+}
+.sil-social-youtube:before {
+  content: "\e008";
+}
+.sil-social-dropbox:before {
+  content: "\e00c";
+}
+.sil-social-vkontakte:before {
+  content: "\e618";
+}
+.sil-social-steam:before {
+  content: "\e620";
+}

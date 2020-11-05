@@ -59,6 +59,7 @@ open module org.kordamp.ikonli.sampler.javafx {
     requires org.kordamp.ikonli.remixicon;
     requires org.kordamp.ikonli.runestroicons;
     requires org.kordamp.ikonli.simpleicons;
+    requires org.kordamp.ikonli.simplelineicons;
     requires org.kordamp.ikonli.themify;
     requires org.kordamp.ikonli.typicons;
     requires org.kordamp.ikonli.weathericons;
