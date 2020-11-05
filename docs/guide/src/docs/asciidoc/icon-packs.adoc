@@ -911,6 +911,33 @@ compile '{project-group}:ikonli-runestroicons-pack:{project-version}'
     <version>{project-version}</version>
 </dependency>
 ----
+
+== SimpleIcons
+* Module: `org.kordamp.ikonli.simpleicons`
+* Font version: {simpleiconsVersion}
+* link:https://simpleicons.org/[]
+* link:cheat-sheet-simpleicons.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-simpleicons-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-simpleicons-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
 == Themify
  * Module: `org.kordamp.ikonli.themify`
  * Font version: {themifyVersion}

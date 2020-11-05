@@ -1,0 +1,13 @@
+= SimpleIcons
+
+++++
+<link href='./css/simpleicons.css' rel='stylesheet'>
+<style>
+    .si {
+        font-size: 32px;
+    }
+</style>
+++++
+
+include::{gradle-projectdir}/build/tmp/_simpleicons_cheat_sheet.adoc[]
+

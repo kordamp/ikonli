@@ -99,6 +99,7 @@ import org.kordamp.ikonli.paymentfont.PaymentFont;
 import org.kordamp.ikonli.remixicon.RemixiconAL;
 import org.kordamp.ikonli.remixicon.RemixiconMZ;
 import org.kordamp.ikonli.runestroicons.Runestroicons;
+import org.kordamp.ikonli.simpleicons.SimpleIcons;
 import org.kordamp.ikonli.themify.Themify;
 import org.kordamp.ikonli.typicons.Typicons;
 import org.kordamp.ikonli.weathericons.WeatherIcons;
@@ -191,6 +192,7 @@ public class Sampler extends Application {
         tabPane.getTabs().add(new DemoTab(RemixiconAL.class, allOf(RemixiconAL.class)));
         tabPane.getTabs().add(new DemoTab(RemixiconMZ.class, allOf(RemixiconMZ.class)));
         tabPane.getTabs().add(new DemoTab(Runestroicons.class, allOf(Runestroicons.class)));
+        tabPane.getTabs().add(new DemoTab(SimpleIcons.class, allOf(SimpleIcons.class)));
         tabPane.getTabs().add(new DemoTab(Themify.class, allOf(Themify.class)));
         tabPane.getTabs().add(new DemoTab(Typicons.class, allOf(Typicons.class)));
         tabPane.getTabs().add(new DemoTab(WeatherIcons.class, allOf(WeatherIcons.class)));
