@@ -18,6 +18,7 @@
 package org.kordamp.ikonli.sampler.swing;
 
 import org.kordamp.ikonli.Ikon;
+import org.kordamp.ikonli.bpmn.Bpmn;
 import org.kordamp.ikonli.captainicon.Captainicon;
 import org.kordamp.ikonli.coreui.CoreUiBrands;
 import org.kordamp.ikonli.coreui.CoreUiFree;
@@ -115,6 +116,7 @@ public class Sampler {
     private static void launch() {
         JTabbedPane tabPane = new JTabbedPane();
 
+        createTab(tabPane, Bpmn.class, new DemoTab(allOf(Bpmn.class)));
         createTab(tabPane, Captainicon.class, new DemoTab(allOf(Captainicon.class)));
         createTab(tabPane, CoreUiBrands.class, new DemoTab(allOf(CoreUiBrands.class)));
         createTab(tabPane, CoreUiFree.class, new DemoTab(allOf(CoreUiFree.class)));

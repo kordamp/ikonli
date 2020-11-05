@@ -2,6 +2,32 @@
 [[_cheat_sheets]]
 = Icon Packs
 
+== Bpmn
+* Module: `org.kordamp.ikonli.bpmn`
+* Font version: {bpmnVersion}
+* link:https://github.com/bpmn-io/bpmn-font[]
+* link:cheat-sheet-bpmn.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-bpmn-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-bpmn-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
 == Captainicon
 * Module: `org.kordamp.ikonli.captainicon`
 * Font version: {captainiconVersion}

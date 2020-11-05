@@ -27,6 +27,7 @@ import javafx.scene.control.TabPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import org.kordamp.ikonli.Ikon;
+import org.kordamp.ikonli.bpmn.Bpmn;
 import org.kordamp.ikonli.captainicon.Captainicon;
 import org.kordamp.ikonli.coreui.CoreUiBrands;
 import org.kordamp.ikonli.coreui.CoreUiFree;
@@ -121,6 +122,7 @@ public class Sampler extends Application {
         URL location = getClass().getResource("sampler.fxml");
         FXMLLoader fxmlLoader = new FXMLLoader(location);
         TabPane tabPane = fxmlLoader.load();
+        tabPane.getTabs().add(new DemoTab(Bpmn.class, allOf(Bpmn.class)));
         tabPane.getTabs().add(new DemoTab(Captainicon.class, allOf(Captainicon.class)));
         tabPane.getTabs().add(new DemoTab(CoreUiBrands.class, allOf(CoreUiBrands.class)));
         tabPane.getTabs().add(new DemoTab(CoreUiFree.class, allOf(CoreUiFree.class)));

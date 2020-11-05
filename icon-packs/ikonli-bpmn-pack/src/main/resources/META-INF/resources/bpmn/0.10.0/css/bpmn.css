@@ -1,0 +1,164 @@
+@font-face {
+  font-family: 'bpmn';
+  src: url('../fonts/bpmn.eot?26374340');
+  src: url('../fonts/bpmn.eot?26374340#iefix') format('embedded-opentype'),
+       url('../fonts/bpmn.woff2?26374340') format('woff2'),
+       url('../fonts/bpmn.woff?26374340') format('woff'),
+       url('../fonts/bpmn.ttf?26374340') format('truetype'),
+       url('../fonts/bpmn.svg?26374340#bpmn') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'bpmn';
+    src: url('../font/bpmn.svg?26374340#bpmn') format('svg');
+  }
+}
+*/
+
+ [class^="bpmn-"]:before, [class*=" bpmn-"]:before {
+  font-family: "bpmn";
+  font-style: normal;
+  font-weight: normal;
+  speak: never;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  /* margin-right: .2em; */
+  text-align: center;
+  /* opacity: .8; */
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  /* margin-left: .2em; */
+
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.bpmn-screw-wrench:before { content: '\e800'; } /* '' */
+.bpmn-trash:before { content: '\e801'; } /* '' */
+.bpmn-conditional-flow:before { content: '\e802'; } /* '' */
+.bpmn-default-flow:before { content: '\e803'; } /* '' */
+.bpmn-gateway-parallel:before { content: '\e804'; } /* '' */
+.bpmn-intermediate-event-catch-cancel:before { content: '\e805'; } /* '' */
+.bpmn-intermediate-event-catch-non-interrupting-message:before { content: '\e806'; } /* '' */
+.bpmn-start-event-compensation:before { content: '\e807'; } /* '' */
+.bpmn-start-event-non-interrupting-parallel-multiple:before { content: '\e808'; } /* '' */
+.bpmn-loop-marker:before { content: '\e809'; } /* '' */
+.bpmn-parallel-mi-marker:before { content: '\e80a'; } /* '' */
+.bpmn-start-event-non-interrupting-signal:before { content: '\e80b'; } /* '' */
+.bpmn-intermediate-event-catch-non-interrupting-timer:before { content: '\e80c'; } /* '' */
+.bpmn-intermediate-event-catch-parallel-multiple:before { content: '\e80d'; } /* '' */
+.bpmn-intermediate-event-catch-compensation:before { content: '\e80e'; } /* '' */
+.bpmn-gateway-xor:before { content: '\e80f'; } /* '' */
+.bpmn-connection:before { content: '\e810'; } /* '' */
+.bpmn-end-event-cancel:before { content: '\e811'; } /* '' */
+.bpmn-intermediate-event-catch-condition:before { content: '\e812'; } /* '' */
+.bpmn-intermediate-event-catch-non-interrupting-parallel-multiple:before { content: '\e813'; } /* '' */
+.bpmn-start-event-condition:before { content: '\e814'; } /* '' */
+.bpmn-start-event-non-interrupting-timer:before { content: '\e815'; } /* '' */
+.bpmn-sequential-mi-marker:before { content: '\e816'; } /* '' */
+.bpmn-user-task:before { content: '\e817'; } /* '' */
+.bpmn-business-rule:before { content: '\e818'; } /* '' */
+.bpmn-sub-process-marker:before { content: '\e819'; } /* '' */
+.bpmn-start-event-parallel-multiple:before { content: '\e81a'; } /* '' */
+.bpmn-start-event-error:before { content: '\e81b'; } /* '' */
+.bpmn-intermediate-event-catch-signal:before { content: '\e81c'; } /* '' */
+.bpmn-intermediate-event-catch-error:before { content: '\e81d'; } /* '' */
+.bpmn-end-event-compensation:before { content: '\e81e'; } /* '' */
+.bpmn-subprocess-collapsed:before { content: '\e81f'; } /* '' */
+.bpmn-subprocess-expanded:before { content: '\e820'; } /* '' */
+.bpmn-task:before { content: '\e821'; } /* '' */
+.bpmn-end-event-error:before { content: '\e822'; } /* '' */
+.bpmn-intermediate-event-catch-escalation:before { content: '\e823'; } /* '' */
+.bpmn-intermediate-event-catch-timer:before { content: '\e824'; } /* '' */
+.bpmn-start-event-escalation:before { content: '\e825'; } /* '' */
+.bpmn-start-event-signal:before { content: '\e826'; } /* '' */
+.bpmn-business-rule-task:before { content: '\e827'; } /* '' */
+.bpmn-manual:before { content: '\e828'; } /* '' */
+.bpmn-receive:before { content: '\e829'; } /* '' */
+.bpmn-call-activity:before { content: '\e82a'; } /* '' */
+.bpmn-start-event-timer:before { content: '\e82b'; } /* '' */
+.bpmn-start-event-message:before { content: '\e82c'; } /* '' */
+.bpmn-intermediate-event-none:before { content: '\e82d'; } /* '' */
+.bpmn-intermediate-event-catch-link:before { content: '\e82e'; } /* '' */
+.bpmn-end-event-escalation:before { content: '\e82f'; } /* '' */
+.bpmn-text-annotation:before { content: '\e830'; } /* '' */
+.bpmn-bpmn-io:before { content: '\e831'; } /* '' */
+.bpmn-gateway-complex:before { content: '\e832'; } /* '' */
+.bpmn-gateway-eventbased:before { content: '\e833'; } /* '' */
+.bpmn-gateway-none:before { content: '\e834'; } /* '' */
+.bpmn-gateway-or:before { content: '\e835'; } /* '' */
+.bpmn-end-event-terminate:before { content: '\e836'; } /* '' */
+.bpmn-end-event-signal:before { content: '\e837'; } /* '' */
+.bpmn-end-event-none:before { content: '\e838'; } /* '' */
+.bpmn-end-event-multiple:before { content: '\e839'; } /* '' */
+.bpmn-end-event-message:before { content: '\e83a'; } /* '' */
+.bpmn-end-event-link:before { content: '\e83b'; } /* '' */
+.bpmn-intermediate-event-catch-message:before { content: '\e83c'; } /* '' */
+.bpmn-intermediate-event-throw-compensation:before { content: '\e83d'; } /* '' */
+.bpmn-start-event-multiple:before { content: '\e83e'; } /* '' */
+.bpmn-script:before { content: '\e83f'; } /* '' */
+.bpmn-manual-task:before { content: '\e840'; } /* '' */
+.bpmn-send:before { content: '\e841'; } /* '' */
+.bpmn-service:before { content: '\e842'; } /* '' */
+.bpmn-receive-task:before { content: '\e843'; } /* '' */
+.bpmn-user:before { content: '\e844'; } /* '' */
+.bpmn-start-event-none:before { content: '\e845'; } /* '' */
+.bpmn-intermediate-event-throw-escalation:before { content: '\e846'; } /* '' */
+.bpmn-intermediate-event-catch-multiple:before { content: '\e847'; } /* '' */
+.bpmn-intermediate-event-catch-non-interrupting-escalation:before { content: '\e848'; } /* '' */
+.bpmn-intermediate-event-throw-link:before { content: '\e849'; } /* '' */
+.bpmn-start-event-non-interrupting-condition:before { content: '\e84a'; } /* '' */
+.bpmn-data-object:before { content: '\e84b'; } /* '' */
+.bpmn-script-task:before { content: '\e84c'; } /* '' */
+.bpmn-send-task:before { content: '\e84d'; } /* '' */
+.bpmn-data-store:before { content: '\e84e'; } /* '' */
+.bpmn-start-event-non-interrupting-escalation:before { content: '\e84f'; } /* '' */
+.bpmn-intermediate-event-throw-message:before { content: '\e850'; } /* '' */
+.bpmn-intermediate-event-catch-non-interrupting-multiple:before { content: '\e851'; } /* '' */
+.bpmn-intermediate-event-catch-non-interrupting-signal:before { content: '\e852'; } /* '' */
+.bpmn-intermediate-event-throw-multiple:before { content: '\e853'; } /* '' */
+.bpmn-start-event-non-interrupting-message:before { content: '\e854'; } /* '' */
+.bpmn-ad-hoc-marker:before { content: '\e855'; } /* '' */
+.bpmn-service-task:before { content: '\e856'; } /* '' */
+.bpmn-task-none:before { content: '\e857'; } /* '' */
+.bpmn-compensation-marker:before { content: '\e858'; } /* '' */
+.bpmn-start-event-non-interrupting-multiple:before { content: '\e859'; } /* '' */
+.bpmn-intermediate-event-throw-signal:before { content: '\e85a'; } /* '' */
+.bpmn-intermediate-event-catch-non-interrupting-condition:before { content: '\e85b'; } /* '' */
+.bpmn-participant:before { content: '\e85c'; } /* '' */
+.bpmn-event-subprocess-expanded:before { content: '\e85d'; } /* '' */
+.bpmn-lane-insert-below:before { content: '\e85e'; } /* '' */
+.bpmn-space-tool:before { content: '\e85f'; } /* '' */
+.bpmn-connection-multi:before { content: '\e860'; } /* '' */
+.bpmn-lane:before { content: '\e861'; } /* '' */
+.bpmn-lasso-tool:before { content: '\e862'; } /* '' */
+.bpmn-lane-insert-above:before { content: '\e863'; } /* '' */
+.bpmn-lane-divide-three:before { content: '\e864'; } /* '' */
+.bpmn-lane-divide-two:before { content: '\e865'; } /* '' */
+.bpmn-data-input:before { content: '\e866'; } /* '' */
+.bpmn-data-output:before { content: '\e867'; } /* '' */
+.bpmn-hand-tool:before { content: '\e868'; } /* '' */
+.bpmn-group:before { content: '\e869'; } /* '' */
+.bpmn-transaction:before { content: '\e8c4'; } /* '' */

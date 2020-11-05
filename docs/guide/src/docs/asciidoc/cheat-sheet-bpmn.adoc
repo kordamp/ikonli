@@ -1,0 +1,13 @@
+= Bpmn
+
+++++
+<link href='./css/bpmn.css' rel='stylesheet'>
+<style>
+    .bpmn {
+        font-size: 32px;
+    }
+</style>
+++++
+
+include::{gradle-projectdir}/build/tmp/_bpmn_cheat_sheet.adoc[]
+
