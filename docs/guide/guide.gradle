@@ -98,6 +98,8 @@ def createIconGenerationTask(Map args) {
 asciidoctor {
     dependsOn createIconGenerationTask(packName: 'devicons', iconClassName: 'org.kordamp.ikonli.devicons.Devicons'),
             createIconGenerationTask(packName: 'captainicon', iconClassName: 'org.kordamp.ikonli.captainicon.Captainicon', iconName: 'captainicon', shortNameSize: 12),
+            createIconGenerationTask(packName: 'coreui', iconClassName: 'org.kordamp.ikonli.coreui.CoreUiBrands', iconName: 'cib', shortNameSize: 4, classifier: 'brands'),
+            createIconGenerationTask(packName: 'coreui', iconClassName: 'org.kordamp.ikonli.coreui.CoreUiFree', iconName: 'cil', shortNameSize: 4, classifier: 'free'),
             createIconGenerationTask(packName: 'dashicons', iconClassName: 'org.kordamp.ikonli.dashicons.Dashicons', iconName: 'dashicons', shortNameSize: 10),
             createIconGenerationTask(packName: 'elusive', iconClassName: 'org.kordamp.ikonli.elusive.Elusive', iconName: 'el-icon', shortNameSize: 4),
             createIconGenerationTask(packName: 'entypo', iconClassName: 'org.kordamp.ikonli.entypo.Entypo', iconName: 'enty', shortNameSize: 5),
@@ -175,6 +177,7 @@ asciidoctor {
     attributes = [
             ikonliJdk8Version      : project.ikonliJdk8Version,
             captainiconVersion     : project.captainiconVersion,
+            coreuiVersion          : project.coreuiVersion,
             dashiconsVersion       : project.dashiconsVersion,
             deviconsVersion        : project.deviconsVersion,
             elusiveVersion         : project.elusiveVersion,
@@ -222,6 +225,7 @@ asciidoctor {
     resources {
         from file('src/resources')
         from project(':ikonli-captainicon-pack').file("src/main/resources/META-INF/resources/captainicon/${captainiconVersion}")
+        from project(':ikonli-coreui-pack').file("src/main/resources/META-INF/resources/coreui/${coreuiVersion}")
         from project(':ikonli-dashicons-pack').file("src/main/resources/META-INF/resources/dashicons/${dashiconsVersion}")
         from project(':ikonli-devicons-pack').file("src/main/resources/META-INF/resources/devicons/${deviconsVersion}")
         from project(':ikonli-entypo-pack').file("src/main/resources/META-INF/resources/entypo/${entypoVersion}")

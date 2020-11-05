@@ -5,7 +5,7 @@
 == Captainicon
 * Module: `org.kordamp.ikonli.captainicon`
 * Font version: {captainiconVersion}
-* https://mariodelvalle.github.io/CaptainIconWeb/[]
+* link:https://mariodelvalle.github.io/CaptainIconWeb/[]
 * link:cheat-sheet-captainicon.html[Cheat-Sheet]
 
 === Installing
@@ -28,10 +28,36 @@ compile '{project-group}:ikonli-captainicon-pack:{project-version}'
 </dependency>
 ----
 
+== CoreUI
+* Module: `org.kordamp.ikonli.coreui`
+* Font version: {coreuiVersion}
+* link:https://github.com/coreui/coreui-icons[]
+* link:cheat-sheet-coreui.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-coreui-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-coreui-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
 == DashIcons
  * Module: `org.kordamp.ikonli.dashicons`
  * Font version: {dashiconsVersion}
- * https://github.com/WordPress/dashicons[]
+ * link:https://github.com/WordPress/dashicons[]
  * link:cheat-sheet-dashicons.html[Cheat-Sheet]
 
 === Installing
@@ -499,7 +525,7 @@ compile '{project-group}:ikonli-lineawesome-pack:{project-version}'
 == Linecons
  * Module: `org.kordamp.ikonli.linecons`
  * Font version: {lineconsVersion}
- * https://designmodo.com/linecons-free/linecons[]
+ * link:https://designmodo.com/linecons-free/linecons[]
  * link:cheat-sheet-linecons.html[Cheat-Sheet]
 
 === Installing

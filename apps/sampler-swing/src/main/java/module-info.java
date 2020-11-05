@@ -20,6 +20,7 @@ open module org.kordamp.ikonli.sampler.swing {
     requires org.kordamp.ikonli.core;
     requires org.kordamp.ikonli.swing;
     requires org.kordamp.ikonli.captainicon;
+    requires org.kordamp.ikonli.coreui;
     requires org.kordamp.ikonli.dashicons;
     requires org.kordamp.ikonli.devicons;
     requires org.kordamp.ikonli.elusive;

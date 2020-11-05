@@ -25,6 +25,7 @@ dependencies {
     implementation project(':ikonli-core')
     implementation project(':ikonli-javafx')
     implementation project(':ikonli-captainicon-pack')
+    implementation project(':ikonli-coreui-pack')
     implementation project(':ikonli-dashicons-pack')
     implementation project(':ikonli-devicons-pack')
     implementation project(':ikonli-elusive-pack')
