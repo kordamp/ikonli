@@ -9,7 +9,7 @@
 	font-style: normal;
 }
 
-.captainicon:before  {
+[class^="captainicon-"], [class*=" captainicon-"] {
 	font-family: 'captainicon';
 	speak: none;
 	font-style: normal;

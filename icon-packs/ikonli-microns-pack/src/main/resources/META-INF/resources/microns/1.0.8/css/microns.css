@@ -10,7 +10,7 @@
        url("../fonts/microns.svg") format("svg");
 }
 
-.mu:before {
+[class^="mu-"], [class*=" mu-"] {
   font-family: microns;
   font-style: normal;
   font-weight: normal;

@@ -1,0 +1,166 @@
+@font-face {
+    font-family: 'webfont-medical-icons';
+    src: url("../fonts/webfont-medical-icons.eot");
+    src: url("../fonts/webfont-medical-icons.eot?#iefix") format("embedded-opentype"), url("../fonts/webfont-medical-icons.ttf") format("truetype"), url("../fonts/webfont-medical-icons.woff") format("woff"), url("../fonts/webfont-medical-icons.svg#webfont-medical-icons") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="medicon-"], [class*=" medicon-"] {
+    font-family: 'webfont-medical-icons';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.medicon-accessibility:before { content: "\e643"; }
+.medicon-accessibility-square:before { content: "\e671"; }
+.medicon-administration:before { content: "\e624"; }
+.medicon-administration-square:before { content: "\e670"; }
+.medicon-alternative-complementary:before { content: "\e623"; }
+.medicon-alternative-complementary-square:before { content: "\e66f"; }
+.medicon-ambulance:before { content: "\e622"; }
+.medicon-ambulance-square:before { content: "\e66e"; }
+.medicon-anesthesia:before { content: "\e621"; }
+.medicon-anesthesia-square:before { content: "\e66d"; }
+.medicon-billing:before { content: "\e620"; }
+.medicon-billing-square:before { content: "\e66c"; }
+.medicon-cardiology:before { content: "\e61f"; }
+.medicon-cardiology-square:before { content: "\e66b"; }
+.medicon-care-staff-area:before { content: "\e642"; }
+.medicon-care-staff-area-square:before { content: "\e68d"; }
+.medicon-cath-lab:before { content: "\e641"; }
+.medicon-cath-lab-square:before { content: "\e68c"; }
+.medicon-chapel:before { content: "\e640"; }
+.medicon-chapel-square:before { content: "\e68b"; }
+.medicon-coffee-shop:before { content: "\e63f"; }
+.medicon-coffee-shop-square:before { content: "\e68a"; }
+.medicon-dental:before { content: "\e63e"; }
+.medicon-dental-square:before { content: "\e689"; }
+.medicon-dermatology:before { content: "\e63d"; }
+.medicon-dermatology-square:before { content: "\e68f"; }
+.medicon-diabetes-education:before { content: "\e644"; }
+.medicon-diabetes-education-square:before { content: "\e66a"; }
+.medicon-drinking-fountain:before { content: "\e61e"; }
+.medicon-drinking-fountain-square:before { content: "\e669"; }
+.medicon-ear-nose-throat:before { content: "\e61d"; }
+.medicon-ear-nose-throat-square:before { content: "\e668"; }
+.medicon-elevators:before { content: "\e61c"; }
+.medicon-elevators-square:before { content: "\e667"; }
+.medicon-emergency:before { content: "\e61b"; }
+.medicon-emergency-square:before { content: "\e666"; }
+.medicon-family-practice:before { content: "\e61a"; }
+.medicon-family-practice-square:before { content: "\e665"; }
+.medicon-fire-extinguisher:before { content: "\e619"; }
+.medicon-fire-extinguisher-square:before { content: "\e664"; }
+.medicon-first-aid:before { content: "\e63c"; }
+.medicon-first-aid-square:before { content: "\e688"; }
+.medicon-genetics:before { content: "\e63b"; }
+.medicon-genetics-square:before { content: "\e687"; }
+.medicon-gift-shop:before { content: "\e63a"; }
+.medicon-gift-shop-square:before { content: "\e686"; }
+.medicon-health-education:before { content: "\e639"; }
+.medicon-health-education-square:before { content: "\e685"; }
+.medicon-health-services:before { content: "\e638"; }
+.medicon-health-services-square:before { content: "\e684"; }
+.medicon-hearing-assistance:before { content: "\e637"; }
+.medicon-hearing-assistance-square:before { content: "\e683"; }
+.medicon-hospital:before { content: "\e645"; }
+.medicon-hospital-square:before { content: "\e663"; }
+.medicon-imaging-alternative-ct:before { content: "\e618"; }
+.medicon-imaging-alternative-ct-square:before { content: "\e662"; }
+.medicon-imaging-alternative-mri:before { content: "\e616"; }
+.medicon-imaging-alternative-mri-square:before { content: "\e660"; }
+.medicon-imaging-alternative-mri-two:before { content: "\e617"; }
+.medicon-imaging-alternative-mri-two-square:before { content: "\e661"; }
+.medicon-imaging-alternative-pet:before { content: "\e615"; }
+.medicon-imaging-alternative-pet-square:before { content: "\e65f"; }
+.medicon-imaging-root-category:before { content: "\e614"; }
+.medicon-imaging-root-category-square:before { content: "\e65e"; }
+.medicon-immunizations:before { content: "\e613"; }
+.medicon-immunizations-square:before { content: "\e65d"; }
+.medicon-infectious-diseases:before { content: "\e636"; }
+.medicon-infectious-diseases-square:before { content: "\e682"; }
+.medicon-information-us:before { content: "\e635"; }
+.medicon-information-us-square:before { content: "\e681"; }
+.medicon-inpatient:before { content: "\e634"; }
+.medicon-inpatient-square:before { content: "\e680"; }
+.medicon-intensive-care:before { content: "\e633"; }
+.medicon-intensive-care-square:before { content: "\e67f"; }
+.medicon-internal-medicine:before { content: "\e632"; }
+.medicon-internal-medicine-square:before { content: "\e67e"; }
+.medicon-interpreter-services:before { content: "\e631"; }
+.medicon-interpreter-services-square:before { content: "\e67d"; }
+.medicon-kidney:before { content: "\e646"; }
+.medicon-kidney-square:before { content: "\e65c"; }
+.medicon-labor-delivery:before { content: "\e612"; }
+.medicon-labor-delivery-square:before { content: "\e65b"; }
+.medicon-laboratory:before { content: "\e611"; }
+.medicon-laboratory-square:before { content: "\e65a"; }
+.medicon-mammography:before { content: "\e610"; }
+.medicon-mammography-square:before { content: "\e659"; }
+.medicon-medical-library:before { content: "\e60f"; }
+.medicon-medical-library-square:before { content: "\e658"; }
+.medicon-medical-records:before { content: "\e60e"; }
+.medicon-medical-records-square:before { content: "\e657"; }
+.medicon-mental-health:before { content: "\e60d"; }
+.medicon-mental-health-square:before { content: "\e656"; }
+.medicon-mri-pet:before { content: "\e630"; }
+.medicon-mri-pet-square:before { content: "\e67c"; }
+.medicon-neurology:before { content: "\e62f"; }
+.medicon-neurology-square:before { content: "\e67b"; }
+.medicon-no-smoking:before { content: "\e62e"; }
+.medicon-no-smoking-square:before { content: "\e67a"; }
+.medicon-nursery:before { content: "\e62d"; }
+.medicon-nursery-square:before { content: "\e679"; }
+.medicon-nutrition:before { content: "\e62c"; }
+.medicon-nutrition-square:before { content: "\e678"; }
+.medicon-oncology:before { content: "\e62b"; }
+.medicon-oncology-square:before { content: "\e677"; }
+.medicon-ophthalmology:before { content: "\e647"; }
+.medicon-ophthalmology-square:before { content: "\e655"; }
+.medicon-outpatient:before { content: "\e60c"; }
+.medicon-outpatient-square:before { content: "\e654"; }
+.medicon-pathology:before { content: "\e60b"; }
+.medicon-pathology-square:before { content: "\e653"; }
+.medicon-pediatrics:before { content: "\e60a"; }
+.medicon-pediatrics-square:before { content: "\e652"; }
+.medicon-pharmacy:before { content: "\e609"; }
+.medicon-pharmacy-square:before { content: "\e651"; }
+.medicon-physical-therapy:before { content: "\e608"; }
+.medicon-physical-therapy-square:before { content: "\e650"; }
+.medicon-radiology:before { content: "\e607"; }
+.medicon-radiology-square:before { content: "\e64f"; }
+.medicon-registration:before { content: "\e62a"; }
+.medicon-registration-square:before { content: "\e68e"; }
+.medicon-respiratory:before { content: "\e629"; }
+.medicon-respiratory-square:before { content: "\e676"; }
+.medicon-restaurant:before { content: "\e628"; }
+.medicon-restaurant-square:before { content: "\e675"; }
+.medicon-restrooms:before { content: "\e627"; }
+.medicon-restrooms-square:before { content: "\e674"; }
+.medicon-smoking:before { content: "\e626"; }
+.medicon-smoking-square:before { content: "\e673"; }
+.medicon-social-services:before { content: "\e625"; }
+.medicon-social-services-square:before { content: "\e672"; }
+.medicon-stairs:before { content: "\e606"; }
+.medicon-stairs-square:before { content: "\e64e"; }
+.medicon-surgery:before { content: "\e605"; }
+.medicon-surgery-square:before { content: "\e64d"; }
+.medicon-text-telephone:before { content: "\e604"; }
+.medicon-text-telephone-square:before { content: "\e64c"; }
+.medicon-ultrasound:before { content: "\e603"; }
+.medicon-ultrasound-square:before { content: "\e64b"; }
+.medicon-volume-control:before { content: "\e602"; }
+.medicon-volume-control-square:before { content: "\e64a"; }
+.medicon-waiting-area:before { content: "\e601"; }
+.medicon-waiting-area-square:before { content: "\e649"; }
+.medicon-womens-health:before { content: "\e600"; }
+.medicon-womens-health-square:before { content: "\e648"; }

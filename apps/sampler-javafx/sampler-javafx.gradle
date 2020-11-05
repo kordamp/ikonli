@@ -49,6 +49,7 @@ dependencies {
     implementation project(':ikonli-mapicons-pack')
     implementation project(':ikonli-material-pack')
     implementation project(':ikonli-materialdesign-pack')
+    implementation project(':ikonli-medicons-pack')
     implementation project(':ikonli-metrizeicons-pack')
     implementation project(':ikonli-microns-pack')
     implementation project(':ikonli-ociicons-pack')

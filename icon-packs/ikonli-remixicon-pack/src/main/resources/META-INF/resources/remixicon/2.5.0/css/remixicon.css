@@ -19,7 +19,7 @@
   font-display: swap;
 }
 
-.remix {
+[class^="remix-"], [class*=" remix-"] {
   font-family: 'remixicon' !important;
   font-style: normal;
   -webkit-font-smoothing: antialiased;

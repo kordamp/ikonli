@@ -10,7 +10,7 @@
   font-display: block;
 }
 
-.eva:before  {
+[class^="eva-"], [class*=" eva-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'Evaicons' !important;
   speak: never;

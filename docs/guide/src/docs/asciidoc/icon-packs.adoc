@@ -652,6 +652,32 @@ compile '{project-group}:ikonli-materialdesign-pack:{project-version}'
 </dependency>
 ----
 
+== Medicons
+* Module: `org.kordamp.ikonli.medicons`
+* Font version: {mediconsVersion}
+* link:https://github.com/samcome/webfont-medical-icons[]
+* link:cheat-sheet-medicons.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-medicons-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-medicons-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
 == Metrizeicons
  * Module: `org.kordamp.ikonli.metrizeicons`
  * Font version: {metrizeiconsVersion}

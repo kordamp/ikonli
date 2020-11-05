@@ -87,6 +87,7 @@ import org.kordamp.ikonli.materialdesign.MaterialDesignW;
 import org.kordamp.ikonli.materialdesign.MaterialDesignX;
 import org.kordamp.ikonli.materialdesign.MaterialDesignY;
 import org.kordamp.ikonli.materialdesign.MaterialDesignZ;
+import org.kordamp.ikonli.medicons.Medicons;
 import org.kordamp.ikonli.metrizeicons.MetrizeIcons;
 import org.kordamp.ikonli.microns.Microns;
 import org.kordamp.ikonli.ociicons.Ociicons;
@@ -176,6 +177,7 @@ public class Sampler extends Application {
         tabPane.getTabs().add(new DemoTab(MaterialDesignX.class, allOf(MaterialDesignX.class)));
         tabPane.getTabs().add(new DemoTab(MaterialDesignY.class, allOf(MaterialDesignY.class)));
         tabPane.getTabs().add(new DemoTab(MaterialDesignZ.class, allOf(MaterialDesignZ.class)));
+        tabPane.getTabs().add(new DemoTab(Medicons.class, allOf(Medicons.class)));
         tabPane.getTabs().add(new DemoTab(MetrizeIcons.class, allOf(MetrizeIcons.class)));
         tabPane.getTabs().add(new DemoTab(Microns.class, allOf(Microns.class)));
         tabPane.getTabs().add(new DemoTab(Ociicons.class, allOf(Ociicons.class)));
