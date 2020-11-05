@@ -1094,6 +1094,32 @@ compile '{project-group}:ikonli-websymbols-pack:{project-version}'
 </dependency>
 ----
 
+== Whhg
+* Module: `org.kordamp.ikonli.whhg`
+* Font version: {whhgVersion}
+* link:https://www.webhostinghub.com/glyphs/[]
+* link:cheat-sheet-whhg.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+compile '{project-group}:ikonli-whhg-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-whhg-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
 == Win10
 * Module: `org.kordamp.ikonli.win10`
 * Font version: {win10Version}

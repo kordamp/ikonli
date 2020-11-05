@@ -175,6 +175,8 @@ asciidoctor {
             createIconGenerationTask(packName: 'ionicons4', iconClassName: 'org.kordamp.ikonli.ionicons4.Ionicons4Material', iconName: 'ion', shortNameSize: 5, classifier: 'material'),
             createIconGenerationTask(packName: 'themify', iconClassName: 'org.kordamp.ikonli.themify.Themify', iconName: 'ti', shortNameSize: 3),
             createIconGenerationTask(packName: 'zondicons', iconClassName: 'org.kordamp.ikonli.zondicons.Zondicons', iconName: 'zondi', shortNameSize: 6),
+            createIconGenerationTask(packName: 'whhg', iconClassName: 'org.kordamp.ikonli.whhg.WhhgAL', iconName: 'whhg', shortNameSize: 7, classifier: 'al'),
+            createIconGenerationTask(packName: 'whhg', iconClassName: 'org.kordamp.ikonli.whhg.WhhgMZ', iconName: 'whhg', shortNameSize: 7, classifier: 'mz'),
             createIconGenerationTask(packName: 'win10', iconClassName: 'org.kordamp.ikonli.win10.Win10', iconName: 'win10', shortNameSize: 6)
 
     attributes = [
@@ -220,6 +222,7 @@ asciidoctor {
             themifyVersion         : project.themifyVersion,
             weathericonsVersion    : project.weathericonsVersion,
             websymbolsVersion      : project.websymbolsVersion,
+            whhgVersion            : project.whhgVersion,
             win10Version           : project.win10Version,
             zondiconsVersion       : project.zondiconsVersion
     ]
@@ -272,6 +275,7 @@ asciidoctor {
         from project(':ikonli-themify-pack').file("src/main/resources/META-INF/resources/themify/${themifyVersion}")
         from project(':ikonli-weathericons-pack').file("src/main/resources/META-INF/resources/weathericons/${weathericonsVersion}")
         from project(':ikonli-websymbols-pack').file("src/main/resources/META-INF/resources/websymbols/${websymbolsVersion}")
+        from project(':ikonli-whhg-pack').file("src/main/resources/META-INF/resources/whhg/${whhgVersion}")
         from project(':ikonli-win10-pack').file("src/main/resources/META-INF/resources/win10/${win10Version}")
         from project(':ikonli-zondicons-pack').file("src/main/resources/META-INF/resources/zondicons/${zondiconsVersion}")
     }

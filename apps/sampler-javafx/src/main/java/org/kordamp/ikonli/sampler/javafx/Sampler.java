@@ -106,6 +106,8 @@ import org.kordamp.ikonli.themify.Themify;
 import org.kordamp.ikonli.typicons.Typicons;
 import org.kordamp.ikonli.weathericons.WeatherIcons;
 import org.kordamp.ikonli.websymbols.Websymbols;
+import org.kordamp.ikonli.whhg.WhhgAL;
+import org.kordamp.ikonli.whhg.WhhgMZ;
 import org.kordamp.ikonli.win10.Win10;
 import org.kordamp.ikonli.zondicons.Zondicons;
 
@@ -201,6 +203,8 @@ public class Sampler extends Application {
         tabPane.getTabs().add(new DemoTab(Typicons.class, allOf(Typicons.class)));
         tabPane.getTabs().add(new DemoTab(WeatherIcons.class, allOf(WeatherIcons.class)));
         tabPane.getTabs().add(new DemoTab(Websymbols.class, allOf(Websymbols.class)));
+        tabPane.getTabs().add(new DemoTab(WhhgAL.class, allOf(WhhgAL.class)));
+        tabPane.getTabs().add(new DemoTab(WhhgMZ.class, allOf(WhhgMZ.class)));
         tabPane.getTabs().add(new DemoTab(Win10.class, allOf(Win10.class)));
         tabPane.getTabs().add(new DemoTab(Zondicons.class, allOf(Zondicons.class)));
 

@@ -1,0 +1,21 @@
+= Whhg
+
+++++
+<link href='./css/whhg.css' rel='stylesheet'>
+<style>
+    .whhg {
+        font-size: 32px;
+    }
+</style>
+++++
+
+Use the indicated enum type for each set.
+
+== A-L (WhhgAL)
+
+include::{gradle-projectdir}/build/tmp/_whhg_al_cheat_sheet.adoc[]
+
+== M-Z (WhhgMZ)
+
+include::{gradle-projectdir}/build/tmp/_whhg_mz_cheat_sheet.adoc[]
+
