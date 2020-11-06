@@ -17,6 +17,7 @@
 include::{includedir}/introduction.adoc[]
 include::{includedir}/usage.adoc[]
 include::{includedir}/icon-packs.adoc[]
+include::{includedir}/authoring.adoc[]
 
 = Links
 

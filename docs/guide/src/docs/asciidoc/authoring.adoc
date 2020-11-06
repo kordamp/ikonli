@@ -1,0 +1,154 @@
+
+[[_authoring]]
+= Authoring
+
+Follow these steps to create and register custom icons.
+
+== Define an Ikon class
+
+Create an Enum that implements the `org.kordamp.ikonli.Ikon` type. Each enum entry should define
+the icon's description and code. Make sure to use a unique prefix in the description, for example
+
+[source,java]
+.MyIcon.java
+----
+package com.acme.mine;
+
+import org.kordamp.ikonli.Ikon;
+
+public enum MyIcon implements Ikon {
+    ICON_NAME("my-icon-name", '\ue600');
+
+    public static MyIcon findByDescription(String description) {
+        for (MyIcon font : values()) {
+            if (font.getDescription().equals(description)) {
+                return font;
+            }
+        }
+        throw new IllegalArgumentException("Icon description '" + description + "' is invalid!");
+    }
+
+    private String description;
+    private int code;
+
+    MyIcon(String description, int code) {
+        this.description = description;
+        this.code = code;
+    }
+
+    @Override
+    public String getDescription() {
+        return description;
+    }
+
+    @Override
+    public int getCode() {
+        return code;
+    }
+}
+----
+
+== Define an Ikon handler
+
+Implement the `org.kordamp.ikonli.IkonHandler` interface.
+
+[source,java]
+.MyIconIkonHandler.java
+----
+package com.acme.mine;
+
+import org.kordamp.ikonli.AbstractIkonHandler;
+import org.kordamp.ikonli.Ikon;
+import org.kordamp.ikonli.IkonHandler;
+import org.kordamp.jipsy.ServiceProviderFor;
+
+@ServiceProviderFor(IkonHandler.class)                                 // <1>
+public class MyIconIkonHandler extends AbstractIkonHandler {
+    @Override
+    public boolean supports(String description) {
+        return description != null && description.startsWith("my-");   // <2>
+    }
+
+    @Override
+    public Ikon resolve(String description) {
+        return MyIcon.findByDescription(description);
+    }
+
+    @Override
+    public String getFontResourcePath() {
+        return "META-INF/resources/myicon/1.2.3/fonts/myicon.ttf";     // <3>
+    }
+
+    @Override
+    public String getFontFamily() {
+        return "MyIcon-Font";                                          // <4>
+    }
+}
+----
+<1> Generates an entry at `META-INF/services/org.kordamp.ikonli.IkonHandler`.
+<2> Note the use of the icon prefix.
+<3> Location of the font resource.
+<4> Name of the font family.
+
+The use of the `@ServiceProviderFor` annotation requires having link:https://github.com/kordamp/jipsy/[jipsy] configured
+as an annotation processor. You may skip this dependency and manually create the service file yourself. You must provide
+a service entry if the icon is to be consumed in the classpath, as not everyone uses the modulepath.
+
+[source,java]
+.META-INF/services/org.kordamp.ikonli.IkonHandler
+----
+com.acme.mine.MyIconIkonHandler
+----
+
+== Define an Ikon provider
+
+Implement the `org.kordamp.ikonli.IkonProvider` interface.
+
+[source,java]
+.MyIconIkonProvider.java
+----
+package com.acme.mine;
+
+import org.kordamp.ikonli.IkonProvider;
+import org.kordamp.jipsy.ServiceProviderFor;
+
+@ServiceProviderFor(IkonProvider.class)                             // <1>
+public class MyIconIkonProvider implements IkonProvider<MyIcon> {
+    @Override
+    public Class<MyIcon> getIkon() {
+        return MyIcon.class;
+    }
+}
+----
+<1> Generates an entry at `META-INF/services/org.kordamp.ikonli.IkonProvider`.
+
+The use of the `@ServiceProviderFor` annotation requires having link:https://github.com/kordamp/jipsy/[jipsy] configured
+as an annotation processor. You may skip this dependency and manually create the service file yourself. You must provide
+a service entry if the icon is to be consumed in the classpath, as not everyone uses the modulepath.
+
+[source,java]
+.META-INF/services/org.kordamp.ikonli.IkonProvider
+----
+com.acme.mine.MyIconIkonProvider
+----
+
+== Configure the module descriptor (Optional)
+
+If you're building a Java module then you must register the previous implementations in a module descriptor
+
+[source,java]
+.module-info.java
+----
+module com.acme.mine {
+    requires org.kordamp.ikonli.core;
+    requires static org.kordamp.jipsy;                    // <1>
+    exports com.acme.mine;
+
+    provides org.kordamp.ikonli.IkonHandler
+        with com.acme.mine.MyIconIkonHandler;
+    provides org.kordamp.ikonli.IkonProvider
+        with com.acme.mine.MyIconIkonProvider;
+}
+----
+<1> Needed only if you use link:https://github.com/kordamp/jipsy/[jipsy].
+
