@@ -121,6 +121,10 @@ asciidoctor {
             createIconGenerationTask(packName: 'hawcons', iconClassName: 'org.kordamp.ikonli.hawcons.HawconsStroke', iconName: 'hws', shortNameSize: 4, classifier: 'stroke'),
             createIconGenerationTask(packName: 'icomoon', iconClassName: 'org.kordamp.ikonli.icomoon.Icomoon', iconName: 'icm', shortNameSize: 4),
             createIconGenerationTask(packName: 'ionicons', iconClassName: 'org.kordamp.ikonli.ionicons.Ionicons', iconName: 'ion', shortNameSize: 4),
+            createIconGenerationTask(packName: 'ionicons4', iconClassName: 'org.kordamp.ikonli.ionicons4.Ionicons4IOS', iconName: 'ion', shortNameSize: 5, classifier: 'ios'),
+            createIconGenerationTask(packName: 'ionicons4', iconClassName: 'org.kordamp.ikonli.ionicons4.Ionicons4Logo', iconName: 'ion', shortNameSize: 5, classifier: 'logo'),
+            createIconGenerationTask(packName: 'ionicons4', iconClassName: 'org.kordamp.ikonli.ionicons4.Ionicons4Material', iconName: 'ion', shortNameSize: 5, classifier: 'material'),
+            createIconGenerationTask(packName: 'jamicons', iconClassName: 'org.kordamp.ikonli.jam.Jam', iconName: 'jam', shortNameSize: 4),
             createIconGenerationTask(packName: 'ligaturesymbols', iconClassName: 'org.kordamp.ikonli.ligaturesymbols.LigatureSymbols', iconName: 'lsf', shortNameSize: 4),
             createIconGenerationTask(packName: 'lineawesome', iconClassName: 'org.kordamp.ikonli.lineawesome.LineAwesomeBrands', iconName: 'lab', prefix: 'la', shortNameSize: 4, classifier: 'brands'),
             createIconGenerationTask(packName: 'lineawesome', iconClassName: 'org.kordamp.ikonli.lineawesome.LineAwesomeRegular', iconName: 'lar', prefix: 'la', shortNameSize: 4, classifier: 'regular'),
@@ -168,17 +172,14 @@ asciidoctor {
             createIconGenerationTask(packName: 'runestroicons', iconClassName: 'org.kordamp.ikonli.runestroicons.Runestroicons', iconName: 'ri'),
             createIconGenerationTask(packName: 'simpleicons', iconClassName: 'org.kordamp.ikonli.simpleicons.SimpleIcons', iconName: 'si'),
             createIconGenerationTask(packName: 'simplelineicons', iconClassName: 'org.kordamp.ikonli.simplelineicons.SimpleLineIcons', iconName: 'sil', shortNameSize: 4),
+            createIconGenerationTask(packName: 'themify', iconClassName: 'org.kordamp.ikonli.themify.Themify', iconName: 'ti', shortNameSize: 3),
             createIconGenerationTask(packName: 'typicons', iconClassName: 'org.kordamp.ikonli.typicons.Typicons', iconName: 'typcn', shortNameSize: 4),
             createIconGenerationTask(packName: 'weathericons', iconClassName: 'org.kordamp.ikonli.weathericons.WeatherIcons', iconName: 'wi'),
             createIconGenerationTask(packName: 'websymbols', iconClassName: 'org.kordamp.ikonli.websymbols.Websymbols', iconName: 'websymbols'),
-            createIconGenerationTask(packName: 'ionicons4', iconClassName: 'org.kordamp.ikonli.ionicons4.Ionicons4IOS', iconName: 'ion', shortNameSize: 5, classifier: 'ios'),
-            createIconGenerationTask(packName: 'ionicons4', iconClassName: 'org.kordamp.ikonli.ionicons4.Ionicons4Logo', iconName: 'ion', shortNameSize: 5, classifier: 'logo'),
-            createIconGenerationTask(packName: 'ionicons4', iconClassName: 'org.kordamp.ikonli.ionicons4.Ionicons4Material', iconName: 'ion', shortNameSize: 5, classifier: 'material'),
-            createIconGenerationTask(packName: 'themify', iconClassName: 'org.kordamp.ikonli.themify.Themify', iconName: 'ti', shortNameSize: 3),
-            createIconGenerationTask(packName: 'zondicons', iconClassName: 'org.kordamp.ikonli.zondicons.Zondicons', iconName: 'zondi', shortNameSize: 6),
             createIconGenerationTask(packName: 'whhg', iconClassName: 'org.kordamp.ikonli.whhg.WhhgAL', iconName: 'whhg', shortNameSize: 7, classifier: 'al'),
             createIconGenerationTask(packName: 'whhg', iconClassName: 'org.kordamp.ikonli.whhg.WhhgMZ', iconName: 'whhg', shortNameSize: 7, classifier: 'mz'),
-            createIconGenerationTask(packName: 'win10', iconClassName: 'org.kordamp.ikonli.win10.Win10', iconName: 'win10', shortNameSize: 6)
+            createIconGenerationTask(packName: 'win10', iconClassName: 'org.kordamp.ikonli.win10.Win10', iconName: 'win10', shortNameSize: 6),
+            createIconGenerationTask(packName: 'zondicons', iconClassName: 'org.kordamp.ikonli.zondicons.Zondicons', iconName: 'zondi', shortNameSize: 6)
 
     attributes = [
             ikonliJdk8Version      : project.ikonliJdk8Version,
@@ -201,6 +202,7 @@ asciidoctor {
             hawconsVersion         : project.hawconsVersion,
             ioniconsVersion        : project.ioniconsVersion,
             ionicons4Version       : project.ionicons4Version,
+            jamiconsVersion        : project.jamiconsVersion,
             ligaturesymbolsVersion : project.ligaturesymbolsVersion,
             lineawesomeVersion     : project.lineawesomeVersion,
             lineconsVersion        : project.lineconsVersion,
@@ -254,6 +256,7 @@ asciidoctor {
         from project(':ikonli-icomoon-pack').file("src/main/resources/META-INF/resources/icomoon/${icomoonVersion}")
         from project(':ikonli-ionicons-pack').file("src/main/resources/META-INF/resources/ionicons/${ioniconsVersion}")
         from project(':ikonli-ionicons4-pack').file("src/main/resources/META-INF/resources/ionicons4/${ionicons4Version}")
+        from project(':ikonli-jamicons-pack').file("src/main/resources/META-INF/resources/jam/${jamiconsVersion}")
         from project(':ikonli-ligaturesymbols-pack').file("src/main/resources/META-INF/resources/ligaturesymbols/${ligaturesymbolsVersion}")
         from project(':ikonli-lineawesome-pack').file("src/main/resources/META-INF/resources/lineawesome/${lineawesomeVersion}")
         from project(':ikonli-linecons-pack').file("src/main/resources/META-INF/resources/linecons/${lineconsVersion}")

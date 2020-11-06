@@ -41,6 +41,7 @@ dependencies {
     implementation project(':ikonli-icomoon-pack')
     implementation project(':ikonli-ionicons-pack')
     implementation project(':ikonli-ionicons4-pack')
+    implementation project(':ikonli-jamicons-pack')
     implementation project(':ikonli-ligaturesymbols-pack')
     implementation project(':ikonli-lineawesome-pack')
     implementation project(':ikonli-linecons-pack')

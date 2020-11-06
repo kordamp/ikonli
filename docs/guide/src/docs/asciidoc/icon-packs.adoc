@@ -496,6 +496,32 @@ implementation '{project-group}:ikonli-ionicons4-pack:{project-version}'
 </dependency>
 ----
 
+== Jam
+* Module: `org.kordamp.ikonli.jam`
+* Font version: {jamiconsVersion}
+* link:https://github.com/michaelampr/jam[]
+* link:cheat-sheet-jamicons.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+implementation '{project-group}:ikonli-jamicons-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-jamicons-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
 == Ligature Symbols
  * Module: `org.kordamp.ikonli.ligaturesymbols`
  * Font version: {ligaturesymbolsVersion}

@@ -38,6 +38,7 @@ open module org.kordamp.ikonli.sampler.swing {
     requires org.kordamp.ikonli.icomoon;
     requires org.kordamp.ikonli.ionicons;
     requires org.kordamp.ikonli.ionicons4;
+    requires org.kordamp.ikonli.jam;
     requires org.kordamp.ikonli.ligaturesymbols;
     requires org.kordamp.ikonli.lineawesome;
     requires org.kordamp.ikonli.linecons;
