@@ -2,6 +2,32 @@
 [[_cheat_sheets]]
 = Icon Packs
 
+== Boxicons
+* Module: `org.kordamp.ikonli.boxicons`
+* Font version: {boxiconsVersion}
+* link:https://github.com/atisawd/boxicons[]
+* link:cheat-sheet-boxicons.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+implementation '{project-group}:ikonli-boxicons-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-boxicons-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
 == Bpmn
 * Module: `org.kordamp.ikonli.bpmn`
 * Font version: {bpmnVersion}

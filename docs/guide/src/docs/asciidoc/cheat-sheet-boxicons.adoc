@@ -1,0 +1,26 @@
+= Boxicons
+
+Use the indicated enum type for each set.
+
+== Logos (BoxiconsLogos)
+
+++++
+<link href='./css/boxicons.css' rel='stylesheet'>
+<style>
+    .bx,
+    .bxl,
+    .bxs {
+        font-size: 32px;
+    }
+</style>
+++++
+
+include::{gradle-projectdir}/build/tmp/_boxicons_logos_cheat_sheet.adoc[]
+
+== Regular (BoxiconsRegular)
+
+include::{gradle-projectdir}/build/tmp/_boxicons_regular_cheat_sheet.adoc[]
+
+== Solid (BoxiconsSolid)
+
+include::{gradle-projectdir}/build/tmp/_boxicons_solid_cheat_sheet.adoc[]
