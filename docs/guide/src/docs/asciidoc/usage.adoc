@@ -238,7 +238,6 @@ dependencies {
 }
 ----
 
-
 [source,xml]
 [subs="attributes,verbatim"]
 .maven

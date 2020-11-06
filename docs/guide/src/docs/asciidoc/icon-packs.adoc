@@ -54,6 +54,32 @@ implementation '{project-group}:ikonli-captainicon-pack:{project-version}'
 </dependency>
 ----
 
+== Codicons
+* Module: `org.kordamp.ikonli.codicons`
+* Font version: {codiconsVersion}
+* link:https://github.com/microsoft/vscode-codicons[]
+* link:cheat-sheet-codicons.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+implementation '{project-group}:ikonli-codicons-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-codicons-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
 == CoreUI
 * Module: `org.kordamp.ikonli.coreui`
 * Font version: {coreuiVersion}

@@ -29,6 +29,7 @@ import javafx.stage.Stage;
 import org.kordamp.ikonli.Ikon;
 import org.kordamp.ikonli.bpmn.Bpmn;
 import org.kordamp.ikonli.captainicon.Captainicon;
+import org.kordamp.ikonli.codicons.Codicons;
 import org.kordamp.ikonli.coreui.CoreUiBrands;
 import org.kordamp.ikonli.coreui.CoreUiFree;
 import org.kordamp.ikonli.dashicons.Dashicons;
@@ -127,6 +128,7 @@ public class Sampler extends Application {
         TabPane tabPane = fxmlLoader.load();
         tabPane.getTabs().add(new DemoTab(Bpmn.class, allOf(Bpmn.class)));
         tabPane.getTabs().add(new DemoTab(Captainicon.class, allOf(Captainicon.class)));
+        tabPane.getTabs().add(new DemoTab(Codicons.class, allOf(Codicons.class)));
         tabPane.getTabs().add(new DemoTab(CoreUiBrands.class, allOf(CoreUiBrands.class)));
         tabPane.getTabs().add(new DemoTab(CoreUiFree.class, allOf(CoreUiFree.class)));
         tabPane.getTabs().add(new DemoTab(Dashicons.class, allOf(Dashicons.class)));

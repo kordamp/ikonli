@@ -20,6 +20,7 @@ package org.kordamp.ikonli.sampler.swing;
 import org.kordamp.ikonli.Ikon;
 import org.kordamp.ikonli.bpmn.Bpmn;
 import org.kordamp.ikonli.captainicon.Captainicon;
+import org.kordamp.ikonli.codicons.Codicons;
 import org.kordamp.ikonli.coreui.CoreUiBrands;
 import org.kordamp.ikonli.coreui.CoreUiFree;
 import org.kordamp.ikonli.dashicons.Dashicons;
@@ -121,6 +122,7 @@ public class Sampler {
 
         createTab(tabPane, Bpmn.class, new DemoTab(allOf(Bpmn.class)));
         createTab(tabPane, Captainicon.class, new DemoTab(allOf(Captainicon.class)));
+        createTab(tabPane, Codicons.class, new DemoTab(allOf(Codicons.class)));
         createTab(tabPane, CoreUiBrands.class, new DemoTab(allOf(CoreUiBrands.class)));
         createTab(tabPane, CoreUiFree.class, new DemoTab(allOf(CoreUiFree.class)));
         createTab(tabPane, Dashicons.class, new DemoTab(allOf(Dashicons.class)));

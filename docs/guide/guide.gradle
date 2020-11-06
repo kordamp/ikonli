@@ -99,6 +99,7 @@ asciidoctor {
     dependsOn createIconGenerationTask(packName: 'devicons', iconClassName: 'org.kordamp.ikonli.devicons.Devicons'),
             createIconGenerationTask(packName: 'bpmn', iconClassName: 'org.kordamp.ikonli.bpmn.Bpmn', shortNameSize: 5),
             createIconGenerationTask(packName: 'captainicon', iconClassName: 'org.kordamp.ikonli.captainicon.Captainicon', iconName: 'captainicon', shortNameSize: 12),
+            createIconGenerationTask(packName: 'codicons', iconClassName: 'org.kordamp.ikonli.codicons.Codicons', iconName: 'codicon', shortNameSize: 8),
             createIconGenerationTask(packName: 'coreui', iconClassName: 'org.kordamp.ikonli.coreui.CoreUiBrands', iconName: 'cib', shortNameSize: 4, classifier: 'brands'),
             createIconGenerationTask(packName: 'coreui', iconClassName: 'org.kordamp.ikonli.coreui.CoreUiFree', iconName: 'cil', shortNameSize: 4, classifier: 'free'),
             createIconGenerationTask(packName: 'dashicons', iconClassName: 'org.kordamp.ikonli.dashicons.Dashicons', iconName: 'dashicons', shortNameSize: 10),
@@ -183,6 +184,7 @@ asciidoctor {
             ikonliJdk8Version      : project.ikonliJdk8Version,
             bpmnVersion            : project.bpmnVersion,
             captainiconVersion     : project.captainiconVersion,
+            codiconsVersion        : project.codiconsVersion,
             coreuiVersion          : project.coreuiVersion,
             dashiconsVersion       : project.dashiconsVersion,
             deviconsVersion        : project.deviconsVersion,
@@ -235,6 +237,7 @@ asciidoctor {
         from file('src/resources')
         from project(':ikonli-bpmn-pack').file("src/main/resources/META-INF/resources/bpmn/${bpmnVersion}")
         from project(':ikonli-captainicon-pack').file("src/main/resources/META-INF/resources/captainicon/${captainiconVersion}")
+        from project(':ikonli-codicons-pack').file("src/main/resources/META-INF/resources/codicons/${codiconsVersion}")
         from project(':ikonli-coreui-pack').file("src/main/resources/META-INF/resources/coreui/${coreuiVersion}")
         from project(':ikonli-dashicons-pack').file("src/main/resources/META-INF/resources/dashicons/${dashiconsVersion}")
         from project(':ikonli-devicons-pack').file("src/main/resources/META-INF/resources/devicons/${deviconsVersion}")
