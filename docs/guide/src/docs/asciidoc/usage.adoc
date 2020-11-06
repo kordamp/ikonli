@@ -18,7 +18,7 @@ repositories {
 }
 
 dependencies {
-    compile '{project-group}:ikonli-swing:{project-version}'
+    implementation '{project-group}:ikonli-swing:{project-version}'
 }
 ----
 
@@ -135,7 +135,7 @@ repositories {
 }
 
 dependencies {
-    compile '{project-group}:ikonli-javafx:{project-version}'
+    implementation '{project-group}:ikonli-javafx:{project-version}'
 }
 ----
 
@@ -218,4 +218,50 @@ Configure the `link:https://maven.apache.org/plugins/maven-shade-plugin/[maven-s
 </plugin>
 ----
 
+== BOM
 
+Starting with version `12.0.0` Ikonli offers a BOM for all core projects and icon packs. You may configure it with either
+Gradle or Maven.
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation platform('{project-group}:ikonli-bom:{project-version}')
+    implementation '{project-group}:ikonli-javafx'
+    implementation '{project-group}:ikonli-fontawesome5-pack'
+}
+----
+
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>{project-group}</groupId>
+            <artifactId>ikonli-bom</artifactId>
+            <version>{project-version}</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+    </dependencies>
+</dependencyManagement>
+<dependencies>
+    <dependency>
+        <groupId>{project-group}</groupId>
+        <artifactId>ikonli-javafx</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>{project-group}</groupId>
+        <artifactId>ikonli-fontawesome5-pack</artifactId>
+    </dependency>
+</dependencies>
+----

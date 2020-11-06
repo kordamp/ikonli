@@ -23,6 +23,7 @@ pluginManagement {
     }
     plugins {
         id 'org.kordamp.gradle.guide'        version kordampPluginVersion
+        id 'org.kordamp.gradle.bom'          version kordampPluginVersion
         id 'org.ajoberstar.git-publish'      version gitPluginVersion
         id 'com.google.osdetector'           version osPluginVersion
         id 'org.jonnyzzz.java9c'             version '0.2.3'

@@ -14,7 +14,7 @@
 [subs="attributes"]
 .gradle
 ----
-compile '{project-group}:ikonli-bpmn-pack:{project-version}'
+implementation '{project-group}:ikonli-bpmn-pack:{project-version}'
 ----
 
 [source,xml]
@@ -40,7 +40,7 @@ compile '{project-group}:ikonli-bpmn-pack:{project-version}'
 [subs="attributes"]
 .gradle
 ----
-compile '{project-group}:ikonli-captainicon-pack:{project-version}'
+implementation '{project-group}:ikonli-captainicon-pack:{project-version}'
 ----
 
 [source,xml]
@@ -66,7 +66,7 @@ compile '{project-group}:ikonli-captainicon-pack:{project-version}'
 [subs="attributes"]
 .gradle
 ----
-compile '{project-group}:ikonli-coreui-pack:{project-version}'
+implementation '{project-group}:ikonli-coreui-pack:{project-version}'
 ----
 
 [source,xml]
@@ -92,7 +92,7 @@ compile '{project-group}:ikonli-coreui-pack:{project-version}'
 [subs="attributes"]
 .gradle
 ----
-compile '{project-group}:ikonli-dashicons-pack:{project-version}'
+implementation '{project-group}:ikonli-dashicons-pack:{project-version}'
 ----
 
 [source,xml]
@@ -118,7 +118,7 @@ compile '{project-group}:ikonli-dashicons-pack:{project-version}'
 [subs="attributes"]
 .gradle
 ----
-compile '{project-group}:ikonli-devicons-pack:{project-version}'
+implementation '{project-group}:ikonli-devicons-pack:{project-version}'
 ----
 
 [source,xml]
@@ -144,7 +144,7 @@ compile '{project-group}:ikonli-devicons-pack:{project-version}'
 [subs="attributes"]
 .gradle
 ----
-compile '{project-group}:ikonli-elusive-pack:{project-version}'
+implementation '{project-group}:ikonli-elusive-pack:{project-version}'
 ----
 
 [source,xml]
@@ -170,7 +170,7 @@ compile '{project-group}:ikonli-elusive-pack:{project-version}'
 [subs="attributes"]
 .gradle
 ----
-compile '{project-group}:ikonli-entypo-pack:{project-version}'
+implementation '{project-group}:ikonli-entypo-pack:{project-version}'
 ----
 
 [source,xml]
@@ -196,7 +196,7 @@ compile '{project-group}:ikonli-entypo-pack:{project-version}'
 [subs="attributes"]
 .gradle
 ----
-compile '{project-group}:ikonli-evaicons-pack:{project-version}'
+implementation '{project-group}:ikonli-evaicons-pack:{project-version}'
 ----
 
 [source,xml]
@@ -222,7 +222,7 @@ compile '{project-group}:ikonli-evaicons-pack:{project-version}'
 [subs="attributes"]
 .gradle
 ----
-compile '{project-group}:ikonli-feather-pack:{project-version}'
+implementation '{project-group}:ikonli-feather-pack:{project-version}'
 ----
 
 [source,xml]
@@ -248,7 +248,7 @@ compile '{project-group}:ikonli-feather-pack:{project-version}'
 [subs="attributes"]
 .gradle
 ----
-compile '{project-group}:ikonli-fluentui-pack:{project-version}'
+implementation '{project-group}:ikonli-fluentui-pack:{project-version}'
 ----
 
 [source,xml]
@@ -274,7 +274,7 @@ compile '{project-group}:ikonli-fluentui-pack:{project-version}'
 [subs="attributes"]
 .gradle
 ----
-compile '{project-group}:ikonli-fontawesome-pack:{project-version}'
+implementation '{project-group}:ikonli-fontawesome-pack:{project-version}'
 ----
 
 [source,xml]
@@ -300,7 +300,7 @@ compile '{project-group}:ikonli-fontawesome-pack:{project-version}'
 [subs="attributes"]
 .gradle
 ----
-compile '{project-group}:ikonli-fontawesome5-pack:{project-version}'
+implementation '{project-group}:ikonli-fontawesome5-pack:{project-version}'
 ----
 
 [source,xml]
@@ -326,7 +326,7 @@ compile '{project-group}:ikonli-fontawesome5-pack:{project-version}'
 [subs="attributes"]
 .gradle
 ----
-compile '{project-group}:ikonli-fontelico-pack:{project-version}'
+implementation '{project-group}:ikonli-fontelico-pack:{project-version}'
 ----
 
 [source,xml]
@@ -352,7 +352,7 @@ compile '{project-group}:ikonli-fontelico-pack:{project-version}'
 [subs="attributes"]
 .gradle
 ----
-compile '{project-group}:ikonli-foundation-pack:{project-version}'
+implementation '{project-group}:ikonli-foundation-pack:{project-version}'
 ----
 
 [source,xml]
@@ -378,7 +378,7 @@ compile '{project-group}:ikonli-foundation-pack:{project-version}'
 [subs="attributes"]
 .gradle
 ----
-compile '{project-group}:ikonli-hawconsfilled-pack:{project-version}'
+implementation '{project-group}:ikonli-hawconsfilled-pack:{project-version}'
 ----
 
 [source,xml]
@@ -404,7 +404,7 @@ compile '{project-group}:ikonli-hawconsfilled-pack:{project-version}'
 [subs="attributes"]
 .gradle
 ----
-compile '{project-group}:ikonli-hawconsstroke-pack:{project-version}'
+implementation '{project-group}:ikonli-hawconsstroke-pack:{project-version}'
 ----
 
 [source,xml]
@@ -430,7 +430,7 @@ compile '{project-group}:ikonli-hawconsstroke-pack:{project-version}'
 [subs="attributes"]
 .gradle
 ----
-compile '{project-group}:ikonli-icomoon-pack:{project-version}'
+implementation '{project-group}:ikonli-icomoon-pack:{project-version}'
 ----
 
 [source,xml]
@@ -456,7 +456,7 @@ compile '{project-group}:ikonli-icomoon-pack:{project-version}'
 [subs="attributes"]
 .gradle
 ----
-compile '{project-group}:ikonli-ionicons-pack:{project-version}'
+implementation '{project-group}:ikonli-ionicons-pack:{project-version}'
 ----
 
 [source,xml]
@@ -482,7 +482,7 @@ compile '{project-group}:ikonli-ionicons-pack:{project-version}'
 [subs="attributes"]
 .gradle
 ----
-compile '{project-group}:ikonli-ionicons4-pack:{project-version}'
+implementation '{project-group}:ikonli-ionicons4-pack:{project-version}'
 ----
 
 [source,xml]
@@ -508,7 +508,7 @@ compile '{project-group}:ikonli-ionicons4-pack:{project-version}'
 [subs="attributes"]
 .gradle
 ----
-compile '{project-group}:ikonli-ligaturesymbols-pack:{project-version}'
+implementation '{project-group}:ikonli-ligaturesymbols-pack:{project-version}'
 ----
 
 [source,xml]
@@ -534,7 +534,7 @@ compile '{project-group}:ikonli-ligaturesymbols-pack:{project-version}'
 [subs="attributes"]
 .gradle
 ----
-compile '{project-group}:ikonli-lineawesome-pack:{project-version}'
+implementation '{project-group}:ikonli-lineawesome-pack:{project-version}'
 ----
 
 [source,xml]
@@ -560,7 +560,7 @@ compile '{project-group}:ikonli-lineawesome-pack:{project-version}'
 [subs="attributes"]
 .gradle
 ----
-compile '{project-group}:ikonli-linecons-pack:{project-version}'
+implementation '{project-group}:ikonli-linecons-pack:{project-version}'
 ----
 
 [source,xml]
@@ -586,7 +586,7 @@ compile '{project-group}:ikonli-linecons-pack:{project-version}'
 [subs="attributes"]
 .gradle
 ----
-compile '{project-group}:ikonli-maki-pack:{project-version}'
+implementation '{project-group}:ikonli-maki-pack:{project-version}'
 ----
 
 [source,xml]
@@ -612,7 +612,7 @@ compile '{project-group}:ikonli-maki-pack:{project-version}'
 [subs="attributes"]
 .gradle
 ----
-compile '{project-group}:ikonli-maki2-pack:{project-version}'
+implementation '{project-group}:ikonli-maki2-pack:{project-version}'
 ----
 
 [source,xml]
@@ -638,7 +638,7 @@ compile '{project-group}:ikonli-maki2-pack:{project-version}'
 [subs="attributes"]
 .gradle
 ----
-compile '{project-group}:ikonli-mapicons-pack:{project-version}'
+implementation '{project-group}:ikonli-mapicons-pack:{project-version}'
 ----
 
 [source,xml]
@@ -664,7 +664,7 @@ compile '{project-group}:ikonli-mapicons-pack:{project-version}'
 [subs="attributes"]
 .gradle
 ----
-compile '{project-group}:ikonli-material-pack:{project-version}'
+implementation '{project-group}:ikonli-material-pack:{project-version}'
 ----
 
 [source,xml]
@@ -690,7 +690,7 @@ compile '{project-group}:ikonli-material-pack:{project-version}'
 [subs="attributes"]
 .gradle
 ----
-compile '{project-group}:ikonli-materialdesign-pack:{project-version}'
+implementation '{project-group}:ikonli-materialdesign-pack:{project-version}'
 ----
 
 [source,xml]
@@ -716,7 +716,7 @@ compile '{project-group}:ikonli-materialdesign-pack:{project-version}'
 [subs="attributes"]
 .gradle
 ----
-compile '{project-group}:ikonli-medicons-pack:{project-version}'
+implementation '{project-group}:ikonli-medicons-pack:{project-version}'
 ----
 
 [source,xml]
@@ -742,7 +742,7 @@ compile '{project-group}:ikonli-medicons-pack:{project-version}'
 [subs="attributes"]
 .gradle
 ----
-compile '{project-group}:ikonli-metrizeicons-pack:{project-version}'
+implementation '{project-group}:ikonli-metrizeicons-pack:{project-version}'
 ----
 
 [source,xml]
@@ -768,7 +768,7 @@ compile '{project-group}:ikonli-metrizeicons-pack:{project-version}'
 [subs="attributes"]
 .gradle
 ----
-compile '{project-group}:ikonli-microns-pack:{project-version}'
+implementation '{project-group}:ikonli-microns-pack:{project-version}'
 ----
 
 [source,xml]
@@ -794,7 +794,7 @@ compile '{project-group}:ikonli-microns-pack:{project-version}'
 [subs="attributes"]
 .gradle
 ----
-compile '{project-group}:ikonli-ociicons-pack:{project-version}'
+implementation '{project-group}:ikonli-ociicons-pack:{project-version}'
 ----
 
 [source,xml]
@@ -820,7 +820,7 @@ compile '{project-group}:ikonli-ociicons-pack:{project-version}'
 [subs="attributes"]
 .gradle
 ----
-compile '{project-group}:ikonli-octicons-pack:{project-version}'
+implementation '{project-group}:ikonli-octicons-pack:{project-version}'
 ----
 
 [source,xml]
@@ -846,7 +846,7 @@ compile '{project-group}:ikonli-octicons-pack:{project-version}'
 [subs="attributes"]
 .gradle
 ----
-compile '{project-group}:ikonli-openiconic-pack:{project-version}'
+implementation '{project-group}:ikonli-openiconic-pack:{project-version}'
 ----
 
 [source,xml]
@@ -872,7 +872,7 @@ compile '{project-group}:ikonli-openiconic-pack:{project-version}'
 [subs="attributes"]
 .gradle
 ----
-compile '{project-group}:ikonli-paymentfont-pack:{project-version}'
+implementation '{project-group}:ikonli-paymentfont-pack:{project-version}'
 ----
 
 [source,xml]
@@ -898,7 +898,7 @@ compile '{project-group}:ikonli-paymentfont-pack:{project-version}'
 [subs="attributes"]
 .gradle
 ----
-compile '{project-group}:ikonli-remixicon-pack:{project-version}'
+implementation '{project-group}:ikonli-remixicon-pack:{project-version}'
 ----
 
 [source,xml]
@@ -924,7 +924,7 @@ compile '{project-group}:ikonli-remixicon-pack:{project-version}'
 [subs="attributes"]
 .gradle
 ----
-compile '{project-group}:ikonli-runestroicons-pack:{project-version}'
+implementation '{project-group}:ikonli-runestroicons-pack:{project-version}'
 ----
 
 [source,xml]
@@ -950,7 +950,7 @@ compile '{project-group}:ikonli-runestroicons-pack:{project-version}'
 [subs="attributes"]
 .gradle
 ----
-compile '{project-group}:ikonli-simpleicons-pack:{project-version}'
+implementation '{project-group}:ikonli-simpleicons-pack:{project-version}'
 ----
 
 [source,xml]
@@ -976,7 +976,7 @@ compile '{project-group}:ikonli-simpleicons-pack:{project-version}'
 [subs="attributes"]
 .gradle
 ----
-compile '{project-group}:ikonli-simplelineicons-pack:{project-version}'
+implementation '{project-group}:ikonli-simplelineicons-pack:{project-version}'
 ----
 
 [source,xml]
@@ -1002,7 +1002,7 @@ compile '{project-group}:ikonli-simplelineicons-pack:{project-version}'
 [subs="attributes"]
 .gradle
 ----
-compile '{project-group}:ikonli-themify-pack:{project-version}'
+implementation '{project-group}:ikonli-themify-pack:{project-version}'
 ----
 
 [source,xml]
@@ -1028,7 +1028,7 @@ compile '{project-group}:ikonli-themify-pack:{project-version}'
 [subs="attributes"]
 .gradle
 ----
-compile '{project-group}:ikonli-typicons-pack:{project-version}'
+implementation '{project-group}:ikonli-typicons-pack:{project-version}'
 ----
 
 [source,xml]
@@ -1054,7 +1054,7 @@ compile '{project-group}:ikonli-typicons-pack:{project-version}'
 [subs="attributes"]
 .gradle
 ----
-compile '{project-group}:ikonli-weathericons-pack:{project-version}'
+implementation '{project-group}:ikonli-weathericons-pack:{project-version}'
 ----
 
 [source,xml]
@@ -1080,7 +1080,7 @@ compile '{project-group}:ikonli-weathericons-pack:{project-version}'
 [subs="attributes"]
 .gradle
 ----
-compile '{project-group}:ikonli-websymbols-pack:{project-version}'
+implementation '{project-group}:ikonli-websymbols-pack:{project-version}'
 ----
 
 [source,xml]
@@ -1106,7 +1106,7 @@ compile '{project-group}:ikonli-websymbols-pack:{project-version}'
 [subs="attributes"]
 .gradle
 ----
-compile '{project-group}:ikonli-whhg-pack:{project-version}'
+implementation '{project-group}:ikonli-whhg-pack:{project-version}'
 ----
 
 [source,xml]
@@ -1132,7 +1132,7 @@ compile '{project-group}:ikonli-whhg-pack:{project-version}'
 [subs="attributes"]
 .gradle
 ----
-compile '{project-group}:ikonli-win10-pack:{project-version}'
+implementation '{project-group}:ikonli-win10-pack:{project-version}'
 ----
 
 [source,xml]
@@ -1158,7 +1158,7 @@ compile '{project-group}:ikonli-win10-pack:{project-version}'
 [subs="attributes"]
 .gradle
 ----
-compile '{project-group}:ikonli-zondicons-pack:{project-version}'
+implementation '{project-group}:ikonli-zondicons-pack:{project-version}'
 ----
 
 [source,xml]
