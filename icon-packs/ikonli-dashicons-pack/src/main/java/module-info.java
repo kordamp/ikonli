@@ -22,4 +22,6 @@ module org.kordamp.ikonli.dashicons {
 
     provides org.kordamp.ikonli.IkonHandler
         with org.kordamp.ikonli.dashicons.DashiconsIkonHandler;
+    provides org.kordamp.ikonli.IkonProvider
+        with org.kordamp.ikonli.dashicons.DashiconsIkonProvider;
 }

@@ -17,33 +17,16 @@
  */
 package org.kordamp.ikonli.material;
 
-import org.kordamp.ikonli.AbstractIkonHandler;
-import org.kordamp.ikonli.Ikon;
-import org.kordamp.ikonli.IkonHandler;
+import org.kordamp.ikonli.IkonProvider;
 import org.kordamp.jipsy.ServiceProviderFor;
 
 /**
  * @author Andres Almiray
  */
-@ServiceProviderFor(IkonHandler.class)
-public class MaterialkonHandler extends AbstractIkonHandler {
+@ServiceProviderFor(IkonProvider.class)
+public class MaterialIkonProvider implements IkonProvider<Material> {
     @Override
-    public boolean supports(String description) {
-        return description != null && description.startsWith("gmi-");
-    }
-
-    @Override
-    public Ikon resolve(String description) {
-        return Material.findByDescription(description);
-    }
-
-    @Override
-    public String getFontResourcePath() {
-        return "META-INF/resources/material/50/fonts/MaterialIcons-Regular.ttf";
-    }
-
-    @Override
-    public String getFontFamily() {
-        return "Material Icons";
+    public Class<Material> getIkon() {
+        return Material.class;
     }
 }

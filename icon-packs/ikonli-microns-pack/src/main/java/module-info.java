@@ -22,4 +22,6 @@ module org.kordamp.ikonli.microns {
 
     provides org.kordamp.ikonli.IkonHandler
         with org.kordamp.ikonli.microns.MicronsIkonHandler;
+    provides org.kordamp.ikonli.IkonProvider
+        with org.kordamp.ikonli.microns.MicronsIkonProvider;
 }

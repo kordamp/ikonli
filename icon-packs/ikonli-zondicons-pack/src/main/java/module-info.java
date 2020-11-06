@@ -22,4 +22,6 @@ module org.kordamp.ikonli.zondicons {
 
     provides org.kordamp.ikonli.IkonHandler
         with org.kordamp.ikonli.zondicons.ZondiconsIkonHandler;
+    provides org.kordamp.ikonli.IkonProvider
+        with org.kordamp.ikonli.zondicons.ZondiconsIkonProvider;
 }

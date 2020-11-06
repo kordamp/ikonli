@@ -17,9 +17,12 @@
  */
 package org.kordamp.ikonli;
 
+import org.kordamp.jipsy.ServiceProviderFor;
+
 /**
  * @author Andres Almiray
  */
+@ServiceProviderFor(IkonHandler.class)
 public class IkonliIkonResolver extends AbstractIkonHandler {
     @Override
     public boolean supports(String description) {

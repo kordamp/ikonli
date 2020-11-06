@@ -22,4 +22,6 @@ module org.kordamp.ikonli.entypo {
 
     provides org.kordamp.ikonli.IkonHandler
         with org.kordamp.ikonli.entypo.EntypoIkonHandler;
+    provides org.kordamp.ikonli.IkonProvider
+        with org.kordamp.ikonli.entypo.EntypoIkonProvider;
 }

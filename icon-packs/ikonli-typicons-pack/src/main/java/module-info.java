@@ -22,4 +22,6 @@ module org.kordamp.ikonli.typicons {
 
     provides org.kordamp.ikonli.IkonHandler
         with org.kordamp.ikonli.typicons.TypiconsIkonHandler;
+    provides org.kordamp.ikonli.IkonProvider
+        with org.kordamp.ikonli.typicons.TypiconsIkonProvider;
 }

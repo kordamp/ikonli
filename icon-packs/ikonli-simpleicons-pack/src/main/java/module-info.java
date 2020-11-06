@@ -22,4 +22,6 @@ module org.kordamp.ikonli.simpleicons {
 
     provides org.kordamp.ikonli.IkonHandler
         with org.kordamp.ikonli.simpleicons.SimpleIconsIkonHandler;
+    provides org.kordamp.ikonli.IkonProvider
+        with org.kordamp.ikonli.simpleicons.SimpleIconsIkonProvider;
 }

@@ -22,4 +22,6 @@ module org.kordamp.ikonli.icomoon {
 
     provides org.kordamp.ikonli.IkonHandler
         with org.kordamp.ikonli.icomoon.IcomoonIkonHandler;
+    provides org.kordamp.ikonli.IkonProvider
+        with org.kordamp.ikonli.icomoon.IcomoonIkonProvider;
 }

@@ -22,4 +22,6 @@ module org.kordamp.ikonli.ligaturesymbols {
 
     provides org.kordamp.ikonli.IkonHandler
         with org.kordamp.ikonli.ligaturesymbols.LigatureSymbolsIkonHandler;
+    provides org.kordamp.ikonli.IkonProvider
+        with org.kordamp.ikonli.ligaturesymbols.LigatureSymbolsIkonProvider;
 }

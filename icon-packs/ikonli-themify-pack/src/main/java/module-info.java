@@ -22,4 +22,6 @@ module org.kordamp.ikonli.themify {
 
     provides org.kordamp.ikonli.IkonHandler
         with org.kordamp.ikonli.themify.ThemifyIkonHandler;
+    provides org.kordamp.ikonli.IkonProvider
+        with org.kordamp.ikonli.themify.ThemifyIkonProvider;
 }

@@ -22,4 +22,6 @@ module org.kordamp.ikonli.weathericons {
 
     provides org.kordamp.ikonli.IkonHandler
         with org.kordamp.ikonli.weathericons.WeatherIconsIkonHandler;
+    provides org.kordamp.ikonli.IkonProvider
+        with org.kordamp.ikonli.weathericons.WeatherIconsIkonProvider;
 }

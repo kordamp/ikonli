@@ -22,4 +22,6 @@ module org.kordamp.ikonli.runestroicons {
 
     provides org.kordamp.ikonli.IkonHandler
         with org.kordamp.ikonli.runestroicons.RunestroiconsIkonHandler;
+    provides org.kordamp.ikonli.IkonProvider
+        with org.kordamp.ikonli.runestroicons.RunestroiconsIkonProvider;
 }

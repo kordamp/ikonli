@@ -22,4 +22,6 @@ module org.kordamp.ikonli.mapicons {
 
     provides org.kordamp.ikonli.IkonHandler
         with org.kordamp.ikonli.mapicons.MapiconsIkonHandler;
+    provides org.kordamp.ikonli.IkonProvider
+        with org.kordamp.ikonli.mapicons.MapiconsIkonProvider;
 }

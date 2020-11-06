@@ -22,4 +22,6 @@ module org.kordamp.ikonli.evaicons {
 
     provides org.kordamp.ikonli.IkonHandler
         with org.kordamp.ikonli.evaicons.EvaiconsIkonHandler;
+    provides org.kordamp.ikonli.IkonProvider
+        with org.kordamp.ikonli.evaicons.EvaiconsIkonProvider;
 }

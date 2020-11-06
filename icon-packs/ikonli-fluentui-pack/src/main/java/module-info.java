@@ -25,4 +25,9 @@ module org.kordamp.ikonli.fluentui {
             org.kordamp.ikonli.fluentui.FluentUiFilledMZIkonHandler,
             org.kordamp.ikonli.fluentui.FluentUiRegularALIkonHandler,
             org.kordamp.ikonli.fluentui.FluentUiRegularMZIkonHandler;
+    provides org.kordamp.ikonli.IkonProvider
+        with org.kordamp.ikonli.fluentui.FluentUiFilledALIkonProvider,
+            org.kordamp.ikonli.fluentui.FluentUiFilledMZIkonProvider,
+            org.kordamp.ikonli.fluentui.FluentUiRegularALIkonProvider,
+            org.kordamp.ikonli.fluentui.FluentUiRegularMZIkonProvider;
 }

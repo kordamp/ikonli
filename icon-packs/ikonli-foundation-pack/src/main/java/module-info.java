@@ -22,4 +22,6 @@ module org.kordamp.ikonli.foundation {
 
     provides org.kordamp.ikonli.IkonHandler
         with org.kordamp.ikonli.foundation.FoundationIkonHandler;
+    provides org.kordamp.ikonli.IkonProvider
+        with org.kordamp.ikonli.foundation.FoundationIkonProvider;
 }

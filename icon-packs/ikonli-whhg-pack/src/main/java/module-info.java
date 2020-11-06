@@ -23,4 +23,7 @@ module org.kordamp.ikonli.whhg {
     provides org.kordamp.ikonli.IkonHandler
         with org.kordamp.ikonli.whhg.WhhgALIkonHandler,
             org.kordamp.ikonli.whhg.WhhgMZIkonHandler;
+    provides org.kordamp.ikonli.IkonProvider
+        with org.kordamp.ikonli.whhg.WhhgALIkonProvider,
+            org.kordamp.ikonli.whhg.WhhgMZIkonProvider;
 }

@@ -22,4 +22,6 @@ module org.kordamp.ikonli.devicons {
 
     provides org.kordamp.ikonli.IkonHandler
         with org.kordamp.ikonli.devicons.DeviconsIkonHandler;
+    provides org.kordamp.ikonli.IkonProvider
+        with org.kordamp.ikonli.devicons.DeviconsIkonProvider;
 }

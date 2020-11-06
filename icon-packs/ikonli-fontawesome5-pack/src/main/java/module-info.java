@@ -24,4 +24,8 @@ module org.kordamp.ikonli.fontawesome5 {
         with org.kordamp.ikonli.fontawesome5.FontAwesomeBrandsIkonHandler,
             org.kordamp.ikonli.fontawesome5.FontAwesomeRegularIkonHandler,
             org.kordamp.ikonli.fontawesome5.FontAwesomeSolidIkonHandler;
+    provides org.kordamp.ikonli.IkonProvider
+        with org.kordamp.ikonli.fontawesome5.FontAwesomeBrandsIkonProvider,
+            org.kordamp.ikonli.fontawesome5.FontAwesomeRegularIkonProvider,
+            org.kordamp.ikonli.fontawesome5.FontAwesomeSolidIkonProvider;
 }

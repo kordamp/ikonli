@@ -22,4 +22,6 @@ module org.kordamp.ikonli.openiconic {
 
     provides org.kordamp.ikonli.IkonHandler
         with org.kordamp.ikonli.openiconic.OpeniconicIkonHandler;
+    provides org.kordamp.ikonli.IkonProvider
+        with org.kordamp.ikonli.openiconic.OpeniconicIkonProvider;
 }

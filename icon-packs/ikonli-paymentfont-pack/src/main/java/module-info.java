@@ -22,4 +22,6 @@ module org.kordamp.ikonli.paymentfont {
 
     provides org.kordamp.ikonli.IkonHandler
         with org.kordamp.ikonli.paymentfont.PaymentFontIkonHandler;
+    provides org.kordamp.ikonli.IkonProvider
+        with org.kordamp.ikonli.paymentfont.PaymentFontIkonProvider;
 }

@@ -22,4 +22,6 @@ module org.kordamp.ikonli.captainicon {
 
     provides org.kordamp.ikonli.IkonHandler
         with org.kordamp.ikonli.captainicon.CaptainiconIkonHandler;
+    provides org.kordamp.ikonli.IkonProvider
+        with org.kordamp.ikonli.captainicon.CaptainiconIkonProvider;
 }

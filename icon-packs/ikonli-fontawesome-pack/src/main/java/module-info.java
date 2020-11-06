@@ -22,4 +22,6 @@ module org.kordamp.ikonli.fontawesome {
 
     provides org.kordamp.ikonli.IkonHandler
         with org.kordamp.ikonli.fontawesome.FontAwesomeIkonHandler;
+    provides org.kordamp.ikonli.IkonProvider
+        with org.kordamp.ikonli.fontawesome.FontAwesomeIkonProvider;
 }

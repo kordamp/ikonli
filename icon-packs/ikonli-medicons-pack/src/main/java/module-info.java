@@ -22,4 +22,6 @@ module org.kordamp.ikonli.medicons {
 
     provides org.kordamp.ikonli.IkonHandler
         with org.kordamp.ikonli.medicons.MediconsIkonHandler;
+    provides org.kordamp.ikonli.IkonProvider
+        with org.kordamp.ikonli.medicons.MediconsIkonProvider;
 }

@@ -22,4 +22,6 @@ module org.kordamp.ikonli.maki2 {
 
     provides org.kordamp.ikonli.IkonHandler
         with org.kordamp.ikonli.maki2.Maki2IkonHandler;
+    provides org.kordamp.ikonli.IkonProvider
+        with org.kordamp.ikonli.maki2.Maki2IkonProvider;
 }

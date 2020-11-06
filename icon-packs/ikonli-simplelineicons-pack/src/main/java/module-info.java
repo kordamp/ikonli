@@ -1,5 +1,3 @@
-import org.kordamp.ikonli.simplelineicons.SimpleLineIconsIkonHandler;
-
 /*
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -23,5 +21,7 @@ module org.kordamp.ikonli.simplelineicons {
     exports org.kordamp.ikonli.simplelineicons;
 
     provides org.kordamp.ikonli.IkonHandler
-        with SimpleLineIconsIkonHandler;
+        with org.kordamp.ikonli.simplelineicons.SimpleLineIconsIkonHandler;
+    provides org.kordamp.ikonli.IkonProvider
+        with org.kordamp.ikonli.simplelineicons.SimpleLineIconsIkonProvider;
 }

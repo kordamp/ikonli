@@ -22,4 +22,6 @@ module org.kordamp.ikonli.octicons {
 
     provides org.kordamp.ikonli.IkonHandler
         with org.kordamp.ikonli.octicons.OcticonsIkonHandler;
+    provides org.kordamp.ikonli.IkonProvider
+        with org.kordamp.ikonli.octicons.OcticonsIkonProvider;
 }

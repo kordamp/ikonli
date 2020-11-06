@@ -22,4 +22,6 @@ module org.kordamp.ikonli.elusive {
 
     provides org.kordamp.ikonli.IkonHandler
         with org.kordamp.ikonli.elusive.ElusiveIkonHandler;
+    provides org.kordamp.ikonli.IkonProvider
+        with org.kordamp.ikonli.elusive.ElusiveIkonProvider;
 }

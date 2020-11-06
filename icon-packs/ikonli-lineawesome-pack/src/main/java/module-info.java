@@ -24,4 +24,8 @@ module org.kordamp.ikonli.lineawesome {
         with org.kordamp.ikonli.lineawesome.LineAwesomeBrandsIkonHandler,
             org.kordamp.ikonli.lineawesome.LineAwesomeRegularIkonHandler,
             org.kordamp.ikonli.lineawesome.LineAwesomeSolidIkonHandler;
+    provides org.kordamp.ikonli.IkonProvider
+        with org.kordamp.ikonli.lineawesome.LineAwesomeBrandsIkonProvider,
+            org.kordamp.ikonli.lineawesome.LineAwesomeRegularIkonProvider,
+            org.kordamp.ikonli.lineawesome.LineAwesomeSolidIkonProvider;
 }

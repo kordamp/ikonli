@@ -24,4 +24,8 @@ module org.kordamp.ikonli.ionicons4 {
         with org.kordamp.ikonli.ionicons4.Ionicons4IOSIkonHandler,
             org.kordamp.ikonli.ionicons4.Ionicons4LogoIkonHandler,
             org.kordamp.ikonli.ionicons4.Ionicons4MaterialIkonHandler;
+    provides org.kordamp.ikonli.IkonProvider
+        with org.kordamp.ikonli.ionicons4.Ionicons4IOSIkonProvider,
+            org.kordamp.ikonli.ionicons4.Ionicons4LogoIkonProvider,
+            org.kordamp.ikonli.ionicons4.Ionicons4MaterialIkonProvider;
 }

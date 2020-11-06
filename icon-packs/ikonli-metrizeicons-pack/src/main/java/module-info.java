@@ -22,4 +22,6 @@ module org.kordamp.ikonli.metrizeicons {
 
     provides org.kordamp.ikonli.IkonHandler
         with org.kordamp.ikonli.metrizeicons.MetrizeIconsIkonHandler;
+    provides org.kordamp.ikonli.IkonProvider
+        with org.kordamp.ikonli.metrizeicons.MetrizeIconsIkonProvider;
 }

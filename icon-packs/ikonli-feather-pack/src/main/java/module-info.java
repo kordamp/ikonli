@@ -22,4 +22,6 @@ module org.kordamp.ikonli.feather {
 
     provides org.kordamp.ikonli.IkonHandler
         with org.kordamp.ikonli.feather.FeatherIkonHandler;
+    provides org.kordamp.ikonli.IkonProvider
+        with org.kordamp.ikonli.feather.FeatherIkonProvider;
 }

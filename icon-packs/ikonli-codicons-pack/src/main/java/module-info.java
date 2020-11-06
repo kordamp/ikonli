@@ -1,5 +1,3 @@
-import org.kordamp.ikonli.codicons.CodiconsIkonHandler;
-
 /*
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -23,5 +21,7 @@ module org.kordamp.ikonli.codicons {
     exports org.kordamp.ikonli.codicons;
 
     provides org.kordamp.ikonli.IkonHandler
-        with CodiconsIkonHandler;
+        with org.kordamp.ikonli.codicons.CodiconsIkonHandler;
+    provides org.kordamp.ikonli.IkonProvider
+        with org.kordamp.ikonli.codicons.CodiconsIkonProvider;
 }

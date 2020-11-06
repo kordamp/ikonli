@@ -69,4 +69,5 @@ open module org.kordamp.ikonli.sampler.javafx {
     requires org.kordamp.ikonli.win10;
     requires org.kordamp.ikonli.zondicons;
     uses org.kordamp.ikonli.IkonHandler;
+    uses org.kordamp.ikonli.IkonProvider;
 }

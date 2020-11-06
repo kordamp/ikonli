@@ -22,4 +22,6 @@ module org.kordamp.ikonli.win10 {
 
     provides org.kordamp.ikonli.IkonHandler
         with org.kordamp.ikonli.win10.Win10IkonHandler;
+    provides org.kordamp.ikonli.IkonProvider
+        with org.kordamp.ikonli.win10.Win10IkonProvider;
 }

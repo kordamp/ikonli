@@ -1,5 +1,3 @@
-import org.kordamp.ikonli.bpmn.BpmnIkonHandler;
-
 /*
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -23,5 +21,7 @@ module org.kordamp.ikonli.bpmn {
     exports org.kordamp.ikonli.bpmn;
 
     provides org.kordamp.ikonli.IkonHandler
-        with BpmnIkonHandler;
+        with org.kordamp.ikonli.bpmn.BpmnIkonHandler;
+    provides org.kordamp.ikonli.IkonProvider
+        with org.kordamp.ikonli.bpmn.BpmnIkonProvider;
 }

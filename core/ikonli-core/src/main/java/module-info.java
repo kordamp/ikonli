@@ -17,8 +17,11 @@
  */
 module org.kordamp.ikonli.core {
     exports org.kordamp.ikonli;
+    requires static org.kordamp.jipsy;
     requires java.logging;
 
     provides org.kordamp.ikonli.IkonHandler
         with org.kordamp.ikonli.IkonliIkonResolver;
+    provides org.kordamp.ikonli.IkonProvider
+        with org.kordamp.ikonli.IkonliIkonProvider;
 }

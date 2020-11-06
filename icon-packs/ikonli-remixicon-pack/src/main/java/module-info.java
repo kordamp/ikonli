@@ -23,4 +23,7 @@ module org.kordamp.ikonli.remixicon {
     provides org.kordamp.ikonli.IkonHandler
         with org.kordamp.ikonli.remixicon.RemixiconALIkonHandler,
             org.kordamp.ikonli.remixicon.RemixiconMZIkonHandler;
+    provides org.kordamp.ikonli.IkonProvider
+        with org.kordamp.ikonli.remixicon.RemixiconALIkonProvider,
+            org.kordamp.ikonli.remixicon.RemixiconMZIkonProvider;
 }

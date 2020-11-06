@@ -23,4 +23,7 @@ module org.kordamp.ikonli.coreui {
     provides org.kordamp.ikonli.IkonHandler
         with org.kordamp.ikonli.coreui.CoreUiBrandsIkonHandler,
             org.kordamp.ikonli.coreui.CoreUiFreeIkonHandler;
+    provides org.kordamp.ikonli.IkonProvider
+        with org.kordamp.ikonli.coreui.CoreUiBrandsIkonProvider,
+            org.kordamp.ikonli.coreui.CoreUiFreeIkonProvider;
 }

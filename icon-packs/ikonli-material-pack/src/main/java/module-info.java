@@ -21,5 +21,7 @@ module org.kordamp.ikonli.material {
     exports org.kordamp.ikonli.material;
 
     provides org.kordamp.ikonli.IkonHandler
-        with org.kordamp.ikonli.material.MaterialkonHandler;
+        with org.kordamp.ikonli.material.MaterialIkonHandler;
+    provides org.kordamp.ikonli.IkonProvider
+        with org.kordamp.ikonli.material.MaterialIkonProvider;
 }
