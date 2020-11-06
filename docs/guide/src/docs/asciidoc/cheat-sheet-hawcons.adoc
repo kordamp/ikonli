@@ -1,0 +1,28 @@
+= Hawcons
+
+Use the indicated enum type for each set.
+
+== Filled (HawconsFilled)
+++++
+<link href='./css/hawconsfilled.css' rel='stylesheet'>
+<style>
+    .hwf {
+        font-size: 32px;
+    }
+</style>
+++++
+
+include::{gradle-projectdir}/build/tmp/_hawcons_filled_cheat_sheet.adoc[]
+
+== Stroke (HawconsStroke)
+
+++++
+<link href='./css/hawconsstroke.css' rel='stylesheet'>
+<style>
+    .hws {
+        font-size: 32px;
+    }
+</style>
+++++
+
+include::{gradle-projectdir}/build/tmp/_hawcons_stroke_cheat_sheet.adoc[]

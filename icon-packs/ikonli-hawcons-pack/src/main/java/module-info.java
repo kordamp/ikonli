@@ -15,18 +15,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.kordamp.ikonli.hawconsfilled;
+module org.kordamp.ikonli.hawcons {
+    requires org.kordamp.ikonli.core;
+    requires static org.kordamp.jipsy;
+    exports org.kordamp.ikonli.hawcons;
 
-import org.kordamp.ikonli.IkonProvider;
-import org.kordamp.jipsy.ServiceProviderFor;
-
-/**
- * @author Andres Almiray
- */
-@ServiceProviderFor(IkonProvider.class)
-public class HawconsFilledIkonProvider implements IkonProvider<HawconsFilled> {
-    @Override
-    public Class<HawconsFilled> getIkon() {
-        return HawconsFilled.class;
-    }
+    provides org.kordamp.ikonli.IkonHandler
+        with org.kordamp.ikonli.hawcons.HawconsFilledIkonHandler,
+            org.kordamp.ikonli.hawcons.HawconsStrokeIkonHandler;
+    provides org.kordamp.ikonli.IkonProvider
+        with org.kordamp.ikonli.hawcons.HawconsFilledIkonProvider,
+            org.kordamp.ikonli.hawcons.HawconsStrokeIkonProvider;
 }

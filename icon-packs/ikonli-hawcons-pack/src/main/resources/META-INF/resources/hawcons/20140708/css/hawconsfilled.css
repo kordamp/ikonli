@@ -1,7 +1,7 @@
 @font-face {
 	font-family: 'Hawcons-Filled';
-	src:url('../fonts/hawconsfilled.eot?-kxka6d');
-	src:url('../fonts/hawconsfilled.eot?#iefix-kxka6d') format('embedded-opentype'),
+    src:url('../fonts/hawconsfilled.eot?-kxka6d');
+    src:url('../fonts/hawconsfilled.eot?#iefix-kxka6d') format('embedded-opentype'),
 	url('../fonts/hawconsfilled.woff?-kxka6d') format('woff'),
 	url('../fonts/hawconsfilled.ttf?-kxka6d') format('truetype'),
 	url('../fonts/hawconsfilled.svg?-kxka6d#hawcons') format('svg');

@@ -1,5 +1,7 @@
 = FluentUI
 
+Use the indicated enum type for each set.
+
 ++++
 <link href='./css/FluentSystemIcons-Filled.css' rel='stylesheet'>
 <style>

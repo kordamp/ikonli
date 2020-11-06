@@ -15,7 +15,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.kordamp.ikonli.hawconsstroke;
+package org.kordamp.ikonli.hawcons;
 
 import org.kordamp.ikonli.AbstractIkonHandler;
 import org.kordamp.ikonli.Ikon;
@@ -26,24 +26,24 @@ import org.kordamp.jipsy.ServiceProviderFor;
  * @author Andres Almiray
  */
 @ServiceProviderFor(IkonHandler.class)
-public class HawconsStrokeIkonHandler extends AbstractIkonHandler {
+public class HawconsFilledIkonHandler extends AbstractIkonHandler {
     @Override
     public boolean supports(String description) {
-        return description != null && description.startsWith("hws-");
+        return description != null && description.startsWith("hwf-");
     }
 
     @Override
     public Ikon resolve(String description) {
-        return HawconsStroke.findByDescription(description);
+        return HawconsFilled.findByDescription(description);
     }
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/hawconsstroke/20140708/fonts/hawconsstroke.ttf";
+        return "META-INF/resources/hawcons/20140708/fonts/hawconsfilled.ttf";
     }
 
     @Override
     public String getFontFamily() {
-        return "Hawcons-Stroke";
+        return "Hawcons-Filled";
     }
 }

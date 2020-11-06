@@ -34,8 +34,7 @@ open module org.kordamp.ikonli.sampler.swing {
     requires org.kordamp.ikonli.fontawesome5;
     requires org.kordamp.ikonli.fontelico;
     requires org.kordamp.ikonli.foundation;
-    requires org.kordamp.ikonli.hawconsfilled;
-    requires org.kordamp.ikonli.hawconsstroke;
+    requires org.kordamp.ikonli.hawcons;
     requires org.kordamp.ikonli.icomoon;
     requires org.kordamp.ikonli.ionicons;
     requires org.kordamp.ikonli.ionicons4;

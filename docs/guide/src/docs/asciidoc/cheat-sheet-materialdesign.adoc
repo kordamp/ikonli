@@ -1,5 +1,7 @@
 = Material Design Icons
 
+Use the indicated enum type for each set.
+
 ++++
 <link href='./css/materialdesignicons.css' rel='stylesheet'>
 <style>

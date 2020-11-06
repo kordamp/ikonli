@@ -392,11 +392,11 @@ implementation '{project-group}:ikonli-foundation-pack:{project-version}'
 </dependency>
 ----
 
-== HawconsFilled
- * Module: `org.kordamp.ikonli.hawconsfilled`
+== Hawcons
+ * Module: `org.kordamp.ikonli.hawcons`
  * Font version: {hawconsVersion}
  * link:http://hawcons.com/[]
- * link:cheat-sheet-hawconsfilled.html[Cheat-Sheet]
+ * link:cheat-sheet-hawcons.html[Cheat-Sheet]
 
 === Installing
 
@@ -404,7 +404,7 @@ implementation '{project-group}:ikonli-foundation-pack:{project-version}'
 [subs="attributes"]
 .gradle
 ----
-implementation '{project-group}:ikonli-hawconsfilled-pack:{project-version}'
+implementation '{project-group}:ikonli-hawcons-pack:{project-version}'
 ----
 
 [source,xml]
@@ -413,33 +413,7 @@ implementation '{project-group}:ikonli-hawconsfilled-pack:{project-version}'
 ----
 <dependency>
     <groupId>{project-group}</groupId>
-    <artifactId>ikonli-hawconsfilled-pack</artifactId>
-    <version>{project-version}</version>
-</dependency>
-----
-
-== HawconsStroke
- * Module: `org.kordamp.ikonli.hawconsstroke`
- * Font version: {hawconsVersion}
- * link:http://hawcons.com/[]
- * link:cheat-sheet-hawconsstroke.html[Cheat-Sheet]
-
-=== Installing
-
-[source,groovy]
-[subs="attributes"]
-.gradle
-----
-implementation '{project-group}:ikonli-hawconsstroke-pack:{project-version}'
-----
-
-[source,xml]
-[subs="attributes,verbatim"]
-.maven
-----
-<dependency>
-    <groupId>{project-group}</groupId>
-    <artifactId>ikonli-hawconsstroke-pack</artifactId>
+    <artifactId>ikonli-hawcons-pack</artifactId>
     <version>{project-version}</version>
 </dependency>
 ----

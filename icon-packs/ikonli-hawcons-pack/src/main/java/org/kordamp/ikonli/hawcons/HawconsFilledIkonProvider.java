@@ -15,7 +15,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.kordamp.ikonli.hawconsstroke;
+package org.kordamp.ikonli.hawcons;
 
 import org.kordamp.ikonli.IkonProvider;
 import org.kordamp.jipsy.ServiceProviderFor;
@@ -24,9 +24,9 @@ import org.kordamp.jipsy.ServiceProviderFor;
  * @author Andres Almiray
  */
 @ServiceProviderFor(IkonProvider.class)
-public class HawconsStrokeIkonProvider implements IkonProvider<HawconsStroke> {
+public class HawconsFilledIkonProvider implements IkonProvider<HawconsFilled> {
     @Override
-    public Class<HawconsStroke> getIkon() {
-        return HawconsStroke.class;
+    public Class<HawconsFilled> getIkon() {
+        return HawconsFilled.class;
     }
 }

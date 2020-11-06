@@ -15,13 +15,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-module org.kordamp.ikonli.hawconsstroke {
-    requires org.kordamp.ikonli.core;
-    requires static org.kordamp.jipsy;
-    exports org.kordamp.ikonli.hawconsstroke;
+package org.kordamp.ikonli.hawcons;
 
-    provides org.kordamp.ikonli.IkonHandler
-        with org.kordamp.ikonli.hawconsstroke.HawconsStrokeIkonHandler;
-    provides org.kordamp.ikonli.IkonProvider
-        with org.kordamp.ikonli.hawconsstroke.HawconsStrokeIkonProvider;
+import org.kordamp.ikonli.IkonProvider;
+import org.kordamp.jipsy.ServiceProviderFor;
+
+/**
+ * @author Andres Almiray
+ */
+@ServiceProviderFor(IkonProvider.class)
+public class HawconsStrokeIkonProvider implements IkonProvider<HawconsStroke> {
+    @Override
+    public Class<HawconsStroke> getIkon() {
+        return HawconsStroke.class;
+    }
 }
