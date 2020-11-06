@@ -25,7 +25,7 @@ Next, select any of the icon packs you want to use. You may select more than one
 
 If you are upgrading to `12.0.0` or later be aware of the following changes:
 
-* The module names moved from `org.kordamp.ikonli` to `org.kordamp.ikonli.*`.
+* The module names moved from `org.kordamp.iconli` to `org.kordamp.ikonli.*`.
 * The `icon-hawkconsfilled-pack` and `icon-hawkconsstroke-pack` icon packs were merged into a single `icon-hawkcons-pack` icon pack.
 * The `icon-materialdesign-pack` no longer has a single enum named `org.kordamp.ikonli.materialdesign.MaterialDesign` as the
 number of icons exceed the limit that enums may have. There are now multiple enums, each one with a letter as prefix, denoting
