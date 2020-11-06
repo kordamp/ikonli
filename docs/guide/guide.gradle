@@ -137,6 +137,14 @@ asciidoctor {
             createIconGenerationTask(packName: 'maki2', iconClassName: 'org.kordamp.ikonli.maki2.Maki2', shortNameSize: 6),
             createIconGenerationTask(packName: 'mapicons', iconClassName: 'org.kordamp.ikonli.mapicons.Mapicons', iconName: 'map-icon', shortNameSize: 9),
             createIconGenerationTask(packName: 'material', iconClassName: 'org.kordamp.ikonli.material.Material', iconName: 'gmi', shortNameSize: 4),
+            createIconGenerationTask(packName: 'material2', iconClassName: 'org.kordamp.ikonli.material2.Material2AL', iconName: 'md', prefix: 'md', shortNameSize: 5, classifier: 'al'),
+            createIconGenerationTask(packName: 'material2', iconClassName: 'org.kordamp.ikonli.material2.Material2MZ', iconName: 'md', prefix: 'md', shortNameSize: 5, classifier: 'mz'),
+            createIconGenerationTask(packName: 'material2', iconClassName: 'org.kordamp.ikonli.material2.Material2OutlinedAL', iconName: 'mdo', prefix: 'mdo', shortNameSize: 6, classifier: 'oal'),
+            createIconGenerationTask(packName: 'material2', iconClassName: 'org.kordamp.ikonli.material2.Material2OutlinedMZ', iconName: 'mdo', prefix: 'mdo', shortNameSize: 6, classifier: 'omz'),
+            createIconGenerationTask(packName: 'material2', iconClassName: 'org.kordamp.ikonli.material2.Material2RoundAL', iconName: 'mdr', prefix: 'mdr', shortNameSize: 6, classifier: 'ral'),
+            createIconGenerationTask(packName: 'material2', iconClassName: 'org.kordamp.ikonli.material2.Material2RoundMZ', iconName: 'mdr', prefix: 'mdr', shortNameSize: 6, classifier: 'rmz'),
+            createIconGenerationTask(packName: 'material2', iconClassName: 'org.kordamp.ikonli.material2.Material2SharpAL', iconName: 'mds', prefix: 'mds', shortNameSize: 6, classifier: 'sal'),
+            createIconGenerationTask(packName: 'material2', iconClassName: 'org.kordamp.ikonli.material2.Material2SharpMZ', iconName: 'mds', prefix: 'mds', shortNameSize: 6, classifier: 'smz'),
             createIconGenerationTask(packName: 'materialdesign', iconClassName: 'org.kordamp.ikonli.materialdesign.MaterialDesignA', iconName: 'mdi', shortNameSize: 5, classifier: 'a'),
             createIconGenerationTask(packName: 'materialdesign', iconClassName: 'org.kordamp.ikonli.materialdesign.MaterialDesignB', iconName: 'mdi', shortNameSize: 5, classifier: 'b'),
             createIconGenerationTask(packName: 'materialdesign', iconClassName: 'org.kordamp.ikonli.materialdesign.MaterialDesignC', iconName: 'mdi', shortNameSize: 5, classifier: 'c'),
@@ -214,6 +222,7 @@ asciidoctor {
             maki2Version           : project.maki2Version,
             mapiconsVersion        : project.mapiconsVersion,
             materialVersion        : project.materialVersion,
+            material2Version       : project.material2Version,
             materialdesignVersion  : project.materialdesignVersion,
             mediconsVersion        : project.mediconsVersion,
             metrizeiconsVersion    : project.metrizeiconsVersion,
@@ -269,6 +278,7 @@ asciidoctor {
         from project(':ikonli-maki2-pack').file("src/main/resources/META-INF/resources/maki2/${maki2Version}")
         from project(':ikonli-mapicons-pack').file("src/main/resources/META-INF/resources/mapicons/${mapiconsVersion}")
         from project(':ikonli-material-pack').file("src/main/resources/META-INF/resources/material/${materialVersion}")
+        from project(':ikonli-material2-pack').file("src/main/resources/META-INF/resources/material2/${material2Version}")
         from project(':ikonli-materialdesign-pack').file("src/main/resources/META-INF/resources/materialdesignicons/${materialdesignVersion}")
         from project(':ikonli-medicons-pack').file("src/main/resources/META-INF/resources/medicons/${mediconsVersion}")
         from project(':ikonli-metrizeicons-pack').file("src/main/resources/META-INF/resources/metrizeicons/${metrizeiconsVersion}")

@@ -50,6 +50,7 @@ open module org.kordamp.ikonli.sampler.javafx {
     requires org.kordamp.ikonli.maki2;
     requires org.kordamp.ikonli.mapicons;
     requires org.kordamp.ikonli.material;
+    requires org.kordamp.ikonli.material2;
     requires org.kordamp.ikonli.materialdesign;
     requires org.kordamp.ikonli.medicons;
     requires org.kordamp.ikonli.metrizeicons;

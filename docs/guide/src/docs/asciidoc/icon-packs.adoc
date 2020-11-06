@@ -730,6 +730,33 @@ implementation '{project-group}:ikonli-material-pack:{project-version}'
 </dependency>
 ----
 
+
+== Material2 Icons
+* Module: `org.kordamp.ikonli.material2`
+* Font version: {material2Version}
+* link:https://github.com/material-icons/material-icons-font[]
+* link:cheat-sheet-material2.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+implementation '{project-group}:ikonli-material2-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-material2-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
 == MaterialDesign
  * Module: `org.kordamp.ikonli.materialdesign`
  * Font version: {materialdesignVersion}

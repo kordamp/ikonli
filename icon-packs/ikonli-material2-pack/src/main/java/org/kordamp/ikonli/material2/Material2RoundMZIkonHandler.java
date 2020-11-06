@@ -15,7 +15,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.kordamp.ikonli.material;
+package org.kordamp.ikonli.material2;
 
 import org.kordamp.ikonli.AbstractIkonHandler;
 import org.kordamp.ikonli.Ikon;
@@ -26,24 +26,24 @@ import org.kordamp.jipsy.ServiceProviderFor;
  * @author Andres Almiray
  */
 @ServiceProviderFor(IkonHandler.class)
-public class MaterialIkonHandler extends AbstractIkonHandler {
+public class Material2RoundMZIkonHandler extends AbstractIkonHandler {
     @Override
     public boolean supports(String description) {
-        return description != null && description.startsWith("gmi-");
+        return description != null && description.startsWith("mdrmz-");
     }
 
     @Override
     public Ikon resolve(String description) {
-        return Material.findByDescription(description);
+        return Material2RoundMZ.findByDescription(description);
     }
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/material/50/fonts/MaterialIcons-Regular.ttf";
+        return "META-INF/resources/material2/20200820/fonts/MaterialIcons-Round.ttf";
     }
 
     @Override
     public String getFontFamily() {
-        return "Material Icons Regular";
+        return "Material Icons Round";
     }
 }

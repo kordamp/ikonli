@@ -1,0 +1,72 @@
+= Material2
+
+Use the indicated enum type for each set.
+
+++++
+<link href='./css/md-baseline.css' rel='stylesheet'>
+<style>
+    .md, .mdal, .mdmz {
+        font-size: 32px;
+    }
+</style>
+++++
+
+== A-L (Material2AL)
+
+include::{gradle-projectdir}/build/tmp/_material2_al_cheat_sheet.adoc[]
+
+== M-Z (Material2MZ)
+
+include::{gradle-projectdir}/build/tmp/_material2_mz_cheat_sheet.adoc[]
+
+++++
+<link href='./css/md-outlined.css' rel='stylesheet'>
+<style>
+    .mdo, .mdoal, .mdomz {
+        font-size: 32px;
+    }
+</style>
+++++
+
+== Outlined A-L (MaterialOutlined2AL)
+
+include::{gradle-projectdir}/build/tmp/_material2_oal_cheat_sheet.adoc[]
+
+== Outlined M-Z (Material2OutlinedMZ)
+
+include::{gradle-projectdir}/build/tmp/_material2_omz_cheat_sheet.adoc[]
+
+++++
+<link href='./css/md-round.css' rel='stylesheet'>
+<style>
+    .mdr, .mdral, .mdrmz {
+        font-size: 32px;
+    }
+</style>
+++++
+
+== Round A-L (MaterialRound2AL)
+
+include::{gradle-projectdir}/build/tmp/_material2_ral_cheat_sheet.adoc[]
+
+== Round M-Z (Material2RoundMZ)
+
+include::{gradle-projectdir}/build/tmp/_material2_rmz_cheat_sheet.adoc[]
+
+++++
+<link href='./css/md-sharp.css' rel='stylesheet'>
+<style>
+    .mds, .mdsal, .mdsmz {
+        font-size: 32px;
+    }
+</style>
+++++
+
+== Sharp A-L (MaterialSharp2AL)
+
+include::{gradle-projectdir}/build/tmp/_material2_sal_cheat_sheet.adoc[]
+
+== Sharp M-Z (Material2SharpMZ)
+
+include::{gradle-projectdir}/build/tmp/_material2_smz_cheat_sheet.adoc[]
+
