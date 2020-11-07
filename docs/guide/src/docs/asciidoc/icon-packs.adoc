@@ -2,6 +2,32 @@
 [[_cheat_sheets]]
 = Icon Packs
 
+== AntDesignIcons
+* Module: `org.kordamp.ikonli.antdesignicons`
+* Font version: {antdesigniconsVersion}
+* link:https://github.com/ant-design/ant-design-icons[]
+* link:cheat-sheet-antdesignicons.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+implementation '{project-group}:ikonli-antdesignicons-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-antdesignicons-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
 == Boxicons
 * Module: `org.kordamp.ikonli.boxicons`
 * Font version: {boxiconsVersion}
