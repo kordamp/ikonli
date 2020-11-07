@@ -1,0 +1,93 @@
+= Material Design Icons (Latest)
+
+Use the indicated enum type for each set.
+
+++++
+<link href='./css/materialdesignicons2.css' rel='stylesheet'>
+<style>
+    .mdi2 {
+        font-size: 32px;
+    }
+</style>
+++++
+
+Use the indicated enum type for each set.
+
+== A (MaterialDesignA)
+include::{gradle-projectdir}/build/tmp/_materialdesign2_a_cheat_sheet.adoc[]
+
+== B (MaterialDesignB)
+include::{gradle-projectdir}/build/tmp/_materialdesign2_b_cheat_sheet.adoc[]
+
+== C (MaterialDesignC)
+include::{gradle-projectdir}/build/tmp/_materialdesign2_c_cheat_sheet.adoc[]
+
+== D (MaterialDesignD)
+include::{gradle-projectdir}/build/tmp/_materialdesign2_d_cheat_sheet.adoc[]
+
+== E (MaterialDesignE)
+include::{gradle-projectdir}/build/tmp/_materialdesign2_e_cheat_sheet.adoc[]
+
+== F (MaterialDesignF)
+include::{gradle-projectdir}/build/tmp/_materialdesign2_f_cheat_sheet.adoc[]
+
+== G (MaterialDesignG)
+include::{gradle-projectdir}/build/tmp/_materialdesign2_g_cheat_sheet.adoc[]
+
+== H (MaterialDesignH)
+include::{gradle-projectdir}/build/tmp/_materialdesign2_h_cheat_sheet.adoc[]
+
+== I (MaterialDesignI)
+include::{gradle-projectdir}/build/tmp/_materialdesign2_i_cheat_sheet.adoc[]
+
+== J (MaterialDesignJ)
+include::{gradle-projectdir}/build/tmp/_materialdesign2_j_cheat_sheet.adoc[]
+
+== K (MaterialDesignK)
+include::{gradle-projectdir}/build/tmp/_materialdesign2_k_cheat_sheet.adoc[]
+
+== L (MaterialDesignL)
+include::{gradle-projectdir}/build/tmp/_materialdesign2_l_cheat_sheet.adoc[]
+
+== M (MaterialDesignM)
+include::{gradle-projectdir}/build/tmp/_materialdesign2_m_cheat_sheet.adoc[]
+
+== N (MaterialDesignN)
+include::{gradle-projectdir}/build/tmp/_materialdesign2_n_cheat_sheet.adoc[]
+
+== O (MaterialDesignO)
+include::{gradle-projectdir}/build/tmp/_materialdesign2_o_cheat_sheet.adoc[]
+
+== P (MaterialDesignP)
+include::{gradle-projectdir}/build/tmp/_materialdesign2_p_cheat_sheet.adoc[]
+
+== Q (MaterialDesignQ)
+include::{gradle-projectdir}/build/tmp/_materialdesign2_q_cheat_sheet.adoc[]
+
+== R (MaterialDesignR)
+include::{gradle-projectdir}/build/tmp/_materialdesign2_r_cheat_sheet.adoc[]
+
+== S (MaterialDesignS)
+include::{gradle-projectdir}/build/tmp/_materialdesign2_s_cheat_sheet.adoc[]
+
+== T (MaterialDesignT)
+include::{gradle-projectdir}/build/tmp/_materialdesign2_t_cheat_sheet.adoc[]
+
+== U (MaterialDesignU)
+include::{gradle-projectdir}/build/tmp/_materialdesign2_u_cheat_sheet.adoc[]
+
+== V (MaterialDesignV)
+include::{gradle-projectdir}/build/tmp/_materialdesign2_v_cheat_sheet.adoc[]
+
+== W (MaterialDesignW)
+include::{gradle-projectdir}/build/tmp/_materialdesign2_w_cheat_sheet.adoc[]
+
+== X (MaterialDesignX)
+include::{gradle-projectdir}/build/tmp/_materialdesign2_x_cheat_sheet.adoc[]
+
+== Y (MaterialDesignY)
+include::{gradle-projectdir}/build/tmp/_materialdesign2_y_cheat_sheet.adoc[]
+
+== Z (MaterialDesignZ)
+include::{gradle-projectdir}/build/tmp/_materialdesign2_z_cheat_sheet.adoc[]
+

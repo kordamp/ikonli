@@ -340,7 +340,7 @@ implementation '{project-group}:ikonli-fluentui-pack:{project-version}'
 </dependency>
 ----
 
-== FontAwesome
+== FontAwesome (Legacy)
  * Module: `org.kordamp.ikonli.fontawesome`
  * Font version: {fontawesomeVersion}
  * link:http://fortawesome.github.io/Font-Awesome/[]
@@ -366,7 +366,7 @@ implementation '{project-group}:ikonli-fontawesome-pack:{project-version}'
 </dependency>
 ----
 
-== FontAwesome5
+== FontAwesome5 (Latest)
  * Module: `org.kordamp.ikonli.fontawesome5`
  * Font version: {fontawesome5Version}
  * link:https://fontawesome.com[]
@@ -496,7 +496,7 @@ implementation '{project-group}:ikonli-icomoon-pack:{project-version}'
 </dependency>
 ----
 
-== Ionicons
+== Ionicons (Legacy)
  * Module: `org.kordamp.ikonli.ionicons`
  * Font version: {ioniconsVersion}
  * link:https://ionicons.com/v2/[]
@@ -522,7 +522,7 @@ implementation '{project-group}:ikonli-ionicons-pack:{project-version}'
 </dependency>
 ----
 
-== Ionicons 4
+== Ionicons 4 (Latest)
  * Module: `org.kordamp.ikonli.ionicons4`
  * Font version: {ionicons4Version}
  * link:https://ionicons.com/[]
@@ -652,7 +652,7 @@ implementation '{project-group}:ikonli-linecons-pack:{project-version}'
 </dependency>
 ----
 
-== Maki
+== Maki (Legacy)
  * Module: `org.kordamp.ikonli.maki`
  * Font version: {makiVersion}
  * link:https://github.com/mapbox/maki[]
@@ -678,7 +678,7 @@ implementation '{project-group}:ikonli-maki-pack:{project-version}'
 </dependency>
 ----
 
-== Maki2
+== Maki2 (Latest)
  * Module: `org.kordamp.ikonli.maki2`
  * Font version: {maki2Version}
  * link:https://github.com/mapbox/maki[]
@@ -730,7 +730,7 @@ implementation '{project-group}:ikonli-mapicons-pack:{project-version}'
 </dependency>
 ----
 
-== Material Icons
+== Material Icons (Legacy)
  * Module: `org.kordamp.ikonli.material`
  * Font version: {materialVersion}
  * link:https://design.google.com/icons/[]
@@ -756,8 +756,7 @@ implementation '{project-group}:ikonli-material-pack:{project-version}'
 </dependency>
 ----
 
-
-== Material2 Icons
+== Material2 Icons (Latest)
 * Module: `org.kordamp.ikonli.material2`
 * Font version: {material2Version}
 * link:https://github.com/material-icons/material-icons-font[]
@@ -783,11 +782,11 @@ implementation '{project-group}:ikonli-material2-pack:{project-version}'
 </dependency>
 ----
 
-== MaterialDesign
- * Module: `org.kordamp.ikonli.materialdesign`
- * Font version: {materialdesignVersion}
- * link:https://github.com/Templarian/MaterialDesign[]
- * link:cheat-sheet-materialdesign.html[Cheat-Sheet]
+== MaterialDesign (Legacy)
+* Module: `org.kordamp.ikonli.materialdesign`
+* Font version: {materialdesignVersion}
+* link:https://github.com/Templarian/MaterialDesign[]
+* link:cheat-sheet-materialdesign.html[Cheat-Sheet]
 
 === Installing
 
@@ -805,6 +804,32 @@ implementation '{project-group}:ikonli-materialdesign-pack:{project-version}'
 <dependency>
     <groupId>{project-group}</groupId>
     <artifactId>ikonli-materialdesign-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
+== MaterialDesign2 (Latest)
+ * Module: `materialdesign2`
+ * Font version: {materialdesign2Version}
+ * link:https://github.com/Templarian/MaterialDesign[]
+ * link:cheat-sheet-materialdesign2.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+implementation '{project-group}:ikonli-materialdesign2-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-materialdesign2-pack</artifactId>
     <version>{project-version}</version>
 </dependency>
 ----
