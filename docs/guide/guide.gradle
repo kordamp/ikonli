@@ -185,6 +185,9 @@ asciidoctor {
             createIconGenerationTask(packName: 'simplelineicons', iconClassName: 'org.kordamp.ikonli.simplelineicons.SimpleLineIcons', iconName: 'sil', shortNameSize: 4),
             createIconGenerationTask(packName: 'themify', iconClassName: 'org.kordamp.ikonli.themify.Themify', iconName: 'ti', shortNameSize: 3),
             createIconGenerationTask(packName: 'typicons', iconClassName: 'org.kordamp.ikonli.typicons.Typicons', iconName: 'typcn', shortNameSize: 4),
+            createIconGenerationTask(packName: 'unicons', iconClassName: 'org.kordamp.ikonli.unicons.UniconsLine', iconName: 'unil', shortNameSize: 5, classifier: 'line'),
+            createIconGenerationTask(packName: 'unicons', iconClassName: 'org.kordamp.ikonli.unicons.UniconsMonochrome', iconName: 'unim', shortNameSize: 5, classifier: 'monochrome'),
+            createIconGenerationTask(packName: 'unicons', iconClassName: 'org.kordamp.ikonli.unicons.UniconsSolid', iconName: 'unis', shortNameSize: 5, classifier: 'solid'),
             createIconGenerationTask(packName: 'weathericons', iconClassName: 'org.kordamp.ikonli.weathericons.WeatherIcons', iconName: 'wi'),
             createIconGenerationTask(packName: 'websymbols', iconClassName: 'org.kordamp.ikonli.websymbols.Websymbols', iconName: 'websymbols'),
             createIconGenerationTask(packName: 'whhg', iconClassName: 'org.kordamp.ikonli.whhg.WhhgAL', iconName: 'whhg', shortNameSize: 7, classifier: 'al'),
@@ -235,8 +238,9 @@ asciidoctor {
             runestroiconsVersion   : project.runestroiconsVersion,
             simpleiconsVersion     : project.simpleiconsVersion,
             simplelineiconsVersion : project.simplelineiconsVersion,
-            typiconsVersion        : project.typiconsVersion,
             themifyVersion         : project.themifyVersion,
+            typiconsVersion        : project.typiconsVersion,
+            uniconsVersion         : project.uniconsVersion,
             weathericonsVersion    : project.weathericonsVersion,
             websymbolsVersion      : project.websymbolsVersion,
             whhgVersion            : project.whhgVersion,
@@ -291,8 +295,9 @@ asciidoctor {
         from project(':ikonli-runestroicons-pack').file("src/main/resources/META-INF/resources/runestroicons/${runestroiconsVersion}")
         from project(':ikonli-simpleicons-pack').file("src/main/resources/META-INF/resources/simpleicons/${simpleiconsVersion}")
         from project(':ikonli-simplelineicons-pack').file("src/main/resources/META-INF/resources/simplelineicons/${simplelineiconsVersion}")
-        from project(':ikonli-typicons-pack').file("src/main/resources/META-INF/resources/typicons/${typiconsVersion}")
         from project(':ikonli-themify-pack').file("src/main/resources/META-INF/resources/themify/${themifyVersion}")
+        from project(':ikonli-typicons-pack').file("src/main/resources/META-INF/resources/typicons/${typiconsVersion}")
+        from project(':ikonli-unicons-pack').file("src/main/resources/META-INF/resources/unicons/${uniconsVersion}")
         from project(':ikonli-weathericons-pack').file("src/main/resources/META-INF/resources/weathericons/${weathericonsVersion}")
         from project(':ikonli-websymbols-pack').file("src/main/resources/META-INF/resources/websymbols/${websymbolsVersion}")
         from project(':ikonli-whhg-pack').file("src/main/resources/META-INF/resources/whhg/${whhgVersion}")

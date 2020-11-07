@@ -1121,6 +1121,32 @@ implementation '{project-group}:ikonli-typicons-pack:{project-version}'
 </dependency>
 ----
 
+== Unicons
+* Module: `org.kordamp.ikonli.unicons`
+* Font version: {uniconsVersion}
+* link:https://github.com/Iconscout/unicons[]
+* link:cheat-sheet-unicons.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+implementation '{project-group}:ikonli-unicons-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-unicons-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
 == Weathericons
  * Module: `org.kordamp.ikonli.weathericons`
  * Font version: {weathericonsVersion}

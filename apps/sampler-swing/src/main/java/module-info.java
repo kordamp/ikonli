@@ -62,6 +62,7 @@ open module org.kordamp.ikonli.sampler.swing {
     requires org.kordamp.ikonli.simplelineicons;
     requires org.kordamp.ikonli.themify;
     requires org.kordamp.ikonli.typicons;
+    requires org.kordamp.ikonli.unicons;
     requires org.kordamp.ikonli.weathericons;
     requires org.kordamp.ikonli.websymbols;
     requires org.kordamp.ikonli.whhg;

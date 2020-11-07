@@ -67,6 +67,7 @@ dependencies {
     implementation project(':ikonli-simplelineicons-pack')
     implementation project(':ikonli-themify-pack')
     implementation project(':ikonli-typicons-pack')
+    implementation project(':ikonli-unicons-pack')
     implementation project(':ikonli-weathericons-pack')
     implementation project(':ikonli-websymbols-pack')
     implementation project(':ikonli-whhg-pack')
