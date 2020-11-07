@@ -25,6 +25,7 @@ open module org.kordamp.ikonli.sampler.javafx {
     requires org.kordamp.ikonli.boxicons;
     requires org.kordamp.ikonli.bpmn;
     requires org.kordamp.ikonli.captainicon;
+    requires org.kordamp.ikonli.carbonicons;
     requires org.kordamp.ikonli.codicons;
     requires org.kordamp.ikonli.coreui;
     requires org.kordamp.ikonli.dashicons;

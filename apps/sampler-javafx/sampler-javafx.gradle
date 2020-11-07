@@ -27,6 +27,7 @@ dependencies {
     implementation project(':ikonli-boxicons-pack')
     implementation project(':ikonli-bpmn-pack')
     implementation project(':ikonli-captainicon-pack')
+    implementation project(':ikonli-carbonicons-pack')
     implementation project(':ikonli-codicons-pack')
     implementation project(':ikonli-coreui-pack')
     implementation project(':ikonli-dashicons-pack')

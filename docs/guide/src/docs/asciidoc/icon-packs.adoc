@@ -80,6 +80,32 @@ implementation '{project-group}:ikonli-captainicon-pack:{project-version}'
 </dependency>
 ----
 
+== Carbonicons
+* Module: `org.kordamp.ikonli.carbonicons`
+* Font version: {carboniconsVersion}
+* link:https://github.com/carbon-design-system/carbon/[]
+* link:cheat-sheet-carbonicons.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+implementation '{project-group}:ikonli-carbonicons-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-carbonicons-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
 == Codicons
 * Module: `org.kordamp.ikonli.codicons`
 * Font version: {codiconsVersion}
