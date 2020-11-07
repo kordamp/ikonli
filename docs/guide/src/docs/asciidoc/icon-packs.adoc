@@ -340,6 +340,32 @@ implementation '{project-group}:ikonli-feather-pack:{project-version}'
 </dependency>
 ----
 
+== FileIcons
+* Module: `org.kordamp.ikonli.fileicons`
+* Font version: {fileiconsVersion}
+* link:https://github.com/file-icons/icons[]
+* link:cheat-sheet-fileicons.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+implementation '{project-group}:ikonli-fileicons-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-fileicons-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
 == FluentUI
  * Module: `org.kordamp.ikonli.fluentui`
  * Font version: {fluentuiVersion}

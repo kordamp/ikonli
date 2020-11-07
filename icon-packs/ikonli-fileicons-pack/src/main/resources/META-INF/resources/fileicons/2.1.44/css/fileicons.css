@@ -1,0 +1,2768 @@
+@font-face {
+  font-family: 'File-Icons';
+  src:  url('../fonts/File-Icons.eot?5z3ukx');
+  src:  url('../fonts/File-Icons.eot?5z3ukx#iefix') format('embedded-opentype'),
+    url('../fonts/File-Icons.ttf?5z3ukx') format('truetype'),
+    url('../fonts/File-Icons.woff?5z3ukx') format('woff'),
+    url('../fonts/File-Icons.svg?5z3ukx#File-Icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="file-"], [class*=" file-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'File-Icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.file-1c-alt:before {
+  content: "\e900";
+}
+.file-1c:before {
+  content: "\e901";
+}
+.file-3d-model:before {
+  content: "\e902";
+}
+.file-3ds-max:before {
+  content: "\e903";
+}
+.file-4d:before {
+  content: "\e904";
+}
+.file-a-plus:before {
+  content: "\e905";
+}
+.file-abap:before {
+  content: "\e906";
+}
+.file-abif:before {
+  content: "\e907";
+}
+.file-acre:before {
+  content: "\e908";
+}
+.file-actionscript:before {
+  content: "\e909";
+}
+.file-ada:before {
+  content: "\e90a";
+}
+.file-adobe-acrobat:before {
+  content: "\e90b";
+}
+.file-adobe-aftereffects:before {
+  content: "\e90c";
+}
+.file-adobe-animate:before {
+  content: "\e90d";
+}
+.file-adobe-audition:before {
+  content: "\e90e";
+}
+.file-adobe-bridge:before {
+  content: "\e90f";
+}
+.file-adobe-characteranimator:before {
+  content: "\e910";
+}
+.file-adobe-creativecloud:before {
+  content: "\e911";
+}
+.file-adobe-dimension:before {
+  content: "\e912";
+}
+.file-adobe-dreamweaver:before {
+  content: "\e913";
+}
+.file-adobe-flash:before {
+  content: "\e914";
+}
+.file-adobe-fuse:before {
+  content: "\e915";
+}
+.file-adobe-illustrator:before {
+  content: "\e916";
+}
+.file-adobe-incopy:before {
+  content: "\e917";
+}
+.file-adobe-indesign:before {
+  content: "\e918";
+}
+.file-adobe-lightroom:before {
+  content: "\e919";
+}
+.file-adobe-mediaencoder:before {
+  content: "\e91a";
+}
+.file-adobe-photoshop:before {
+  content: "\e91b";
+}
+.file-adobe-prelude:before {
+  content: "\e91c";
+}
+.file-adobe-premiere:before {
+  content: "\e91d";
+}
+.file-adobe-premiererush:before {
+  content: "\e91e";
+}
+.file-adobe-xd:before {
+  content: "\e91f";
+}
+.file-adobe:before {
+  content: "\e920";
+}
+.file-aeternity:before {
+  content: "\e921";
+}
+.file-affectscript:before {
+  content: "\e922";
+}
+.file-affinitydesigner:before {
+  content: "\e923";
+}
+.file-agc:before {
+  content: "\e924";
+}
+.file-agda:before {
+  content: "\e925";
+}
+.file-akka:before {
+  content: "\e926";
+}
+.file-alacritty-alt:before {
+  content: "\e927";
+}
+.file-alacritty:before {
+  content: "\e928";
+}
+.file-alex:before {
+  content: "\e929";
+}
+.file-alloy:before {
+  content: "\e92a";
+}
+.file-alpine-linux:before {
+  content: "\e92b";
+}
+.file-amd:before {
+  content: "\e92c";
+}
+.file-amigaos:before {
+  content: "\e92d";
+}
+.file-ampl:before {
+  content: "\e92e";
+}
+.file-amusewiki:before {
+  content: "\e92f";
+}
+.file-analytica:before {
+  content: "\e930";
+}
+.file-angelscript:before {
+  content: "\e931";
+}
+.file-animestudio:before {
+  content: "\e932";
+}
+.file-ansible-alt:before {
+  content: "\e933";
+}
+.file-ansible:before {
+  content: "\e934";
+}
+.file-antlr:before {
+  content: "\e935";
+}
+.file-antwar:before {
+  content: "\e936";
+}
+.file-anyscript:before {
+  content: "\e937";
+}
+.file-apache-ant:before {
+  content: "\e938";
+}
+.file-api-blueprint:before {
+  content: "\e939";
+}
+.file-apiextractor:before {
+  content: "\e93a";
+}
+.file-apl-old:before {
+  content: "\e93b";
+}
+.file-apl:before {
+  content: "\e93c";
+}
+.file-apollo:before {
+  content: "\e93d";
+}
+.file-apple:before {
+  content: "\e93e";
+}
+.file-appveyor:before {
+  content: "\e93f";
+}
+.file-arc:before {
+  content: "\e940";
+}
+.file-arch-linux:before {
+  content: "\e941";
+}
+.file-arduino:before {
+  content: "\e942";
+}
+.file-arm:before {
+  content: "\e943";
+}
+.file-arttext:before {
+  content: "\e944";
+}
+.file-asciidoc:before {
+  content: "\e945";
+}
+.file-asciidoctor:before {
+  content: "\e946";
+}
+.file-assembly-agc:before {
+  content: "\e947";
+}
+.file-assembly-amd:before {
+  content: "\e948";
+}
+.file-assembly-arm:before {
+  content: "\e949";
+}
+.file-assembly-att:before {
+  content: "\e94a";
+}
+.file-assembly-avr:before {
+  content: "\e94b";
+}
+.file-assembly-generic:before {
+  content: "\e94c";
+}
+.file-assembly-hitachi:before {
+  content: "\e94d";
+}
+.file-assembly-intel:before {
+  content: "\e94e";
+}
+.file-assembly-motorola:before {
+  content: "\e94f";
+}
+.file-assembly-powerpc:before {
+  content: "\e950";
+}
+.file-assembly-riscv:before {
+  content: "\e951";
+}
+.file-assembly-sparc:before {
+  content: "\e952";
+}
+.file-assembly-vax:before {
+  content: "\e953";
+}
+.file-assembly-zilog:before {
+  content: "\e954";
+}
+.file-asymptote-alt:before {
+  content: "\e955";
+}
+.file-asymptote:before {
+  content: "\e956";
+}
+.file-atoum:before {
+  content: "\e957";
+}
+.file-ats:before {
+  content: "\e958";
+}
+.file-att:before {
+  content: "\e959";
+}
+.file-audacity:before {
+  content: "\e95a";
+}
+.file-augeas:before {
+  content: "\e95b";
+}
+.file-aurelia:before {
+  content: "\e95c";
+}
+.file-autohotkey:before {
+  content: "\e95d";
+}
+.file-autoit:before {
+  content: "\e95e";
+}
+.file-avr:before {
+  content: "\e95f";
+}
+.file-avro:before {
+  content: "\e960";
+}
+.file-awk:before {
+  content: "\e961";
+}
+.file-azure-pipelines:before {
+  content: "\e962";
+}
+.file-babel:before {
+  content: "\e963";
+}
+.file-ballerina:before {
+  content: "\e964";
+}
+.file-bazaar:before {
+  content: "\e965";
+}
+.file-bazel-old:before {
+  content: "\e966";
+}
+.file-bazel:before {
+  content: "\e967";
+}
+.file-behat:before {
+  content: "\e968";
+}
+.file-bem:before {
+  content: "\e969";
+}
+.file-bibtex:before {
+  content: "\e96a";
+}
+.file-biml:before {
+  content: "\e96b";
+}
+.file-binder:before {
+  content: "\e96c";
+}
+.file-bintray:before {
+  content: "\e96d";
+}
+.file-bison:before {
+  content: "\e96e";
+}
+.file-bithound:before {
+  content: "\e96f";
+}
+.file-blender:before {
+  content: "\e970";
+}
+.file-blitzbasic:before {
+  content: "\e971";
+}
+.file-bloc:before {
+  content: "\e972";
+}
+.file-bluespec:before {
+  content: "\e973";
+}
+.file-bnf:before {
+  content: "\e974";
+}
+.file-boo:before {
+  content: "\e975";
+}
+.file-bors:before {
+  content: "\e976";
+}
+.file-bosque:before {
+  content: "\e977";
+}
+.file-brainfuck:before {
+  content: "\e978";
+}
+.file-brakeman:before {
+  content: "\e979";
+}
+.file-bro:before {
+  content: "\e97a";
+}
+.file-broccoli:before {
+  content: "\e97b";
+}
+.file-brotli-old:before {
+  content: "\e97c";
+}
+.file-brotli:before {
+  content: "\e97d";
+}
+.file-browserslist:before {
+  content: "\e97e";
+}
+.file-browsersync:before {
+  content: "\e97f";
+}
+.file-brunch:before {
+  content: "\e980";
+}
+.file-buck:before {
+  content: "\e981";
+}
+.file-build-boot:before {
+  content: "\e982";
+}
+.file-buildkite:before {
+  content: "\e983";
+}
+.file-bundler:before {
+  content: "\e984";
+}
+.file-byond:before {
+  content: "\e985";
+}
+.file-c1:before {
+  content: "\e986";
+}
+.file-script:before {
+  content: "\e986";
+}
+.file-c2:before {
+  content: "\e987";
+}
+.file-c3:before {
+  content: "\e988";
+}
+.file-cabal:before {
+  content: "\e989";
+}
+.file-caddy-old:before {
+  content: "\e98a";
+}
+.file-caddy:before {
+  content: "\e98b";
+}
+.file-caffe:before {
+  content: "\e98c";
+}
+.file-caffe2:before {
+  content: "\e98d";
+}
+.file-cairo:before {
+  content: "\e98e";
+}
+.file-cake:before {
+  content: "\e98f";
+}
+.file-cakefile:before {
+  content: "\e990";
+}
+.file-cakephp-old:before {
+  content: "\e991";
+}
+.file-cakephp:before {
+  content: "\e992";
+}
+.file-calva:before {
+  content: "\e993";
+}
+.file-carthage:before {
+  content: "\e994";
+}
+.file-cdf:before {
+  content: "\e995";
+}
+.file-ceylon:before {
+  content: "\e996";
+}
+.file-chai:before {
+  content: "\e997";
+}
+.file-chapel:before {
+  content: "\e998";
+}
+.file-chartjs:before {
+  content: "\e999";
+}
+.file-cheetah3d:before {
+  content: "\e99a";
+}
+.file-chef:before {
+  content: "\e99b";
+}
+.file-chocolatey:before {
+  content: "\e99c";
+}
+.file-chuck:before {
+  content: "\e99d";
+}
+.file-circleci:before {
+  content: "\e99e";
+}
+.file-cirru:before {
+  content: "\e99f";
+}
+.file-ckeditor:before {
+  content: "\e9a0";
+}
+.file-clarion:before {
+  content: "\e9a1";
+}
+.file-clean:before {
+  content: "\e9a2";
+}
+.file-click:before {
+  content: "\e9a3";
+}
+.file-clips:before {
+  content: "\e9a4";
+}
+.file-clojurejs:before {
+  content: "\e9a5";
+}
+.file-closuretemplate:before {
+  content: "\e9a6";
+}
+.file-cloudfoundry:before {
+  content: "\e9a7";
+}
+.file-cmake:before {
+  content: "\e9a8";
+}
+.file-cobol:before {
+  content: "\e9a9";
+}
+.file-cocoapods:before {
+  content: "\e9aa";
+}
+.file-codacy:before {
+  content: "\e9ab";
+}
+.file-code-climate:before {
+  content: "\e9ac";
+}
+.file-codecov:before {
+  content: "\e9ad";
+}
+.file-codekit:before {
+  content: "\e9ae";
+}
+.file-codemeta:before {
+  content: "\e9af";
+}
+.file-codemirror:before {
+  content: "\e9b0";
+}
+.file-codeship:before {
+  content: "\e9b1";
+}
+.file-coldfusion:before {
+  content: "\e9b2";
+}
+.file-commitlint:before {
+  content: "\e9b3";
+}
+.file-common-lisp:before {
+  content: "\e9b4";
+}
+.file-component-pascal:before {
+  content: "\e9b5";
+}
+.file-composer:before {
+  content: "\e9b6";
+}
+.file-conan:before {
+  content: "\e9b7";
+}
+.file-conda:before {
+  content: "\e9b8";
+}
+.file-config-coffeescript:before {
+  content: "\e9b9";
+}
+.file-config-go:before {
+  content: "\e9ba";
+}
+.file-config-haskell:before {
+  content: "\e9bb";
+}
+.file-config-js:before {
+  content: "\e9bc";
+}
+.file-config-perl:before {
+  content: "\e9bd";
+}
+.file-config-python:before {
+  content: "\e9be";
+}
+.file-config-react:before {
+  content: "\e9bf";
+}
+.file-config-ruby:before {
+  content: "\e9c0";
+}
+.file-config-rust:before {
+  content: "\e9c1";
+}
+.file-config-typescript:before {
+  content: "\e9c2";
+}
+.file-config:before {
+  content: "\e9c3";
+}
+.file-conll:before {
+  content: "\e9c4";
+}
+.file-coq:before {
+  content: "\e9c5";
+}
+.file-cordova:before {
+  content: "\e9c6";
+}
+.file-coreldraw-alt:before {
+  content: "\e9c7";
+}
+.file-coreldraw:before {
+  content: "\e9c8";
+}
+.file-coveralls:before {
+  content: "\e9c9";
+}
+.file-cpan:before {
+  content: "\e9ca";
+}
+.file-cpcdosc:before {
+  content: "\e9cb";
+}
+.file-crafttweaker:before {
+  content: "\e9cc";
+}
+.file-creole:before {
+  content: "\e9cd";
+}
+.file-crowdin:before {
+  content: "\e9ce";
+}
+.file-crystal:before {
+  content: "\e9cf";
+}
+.file-csound:before {
+  content: "\e9d0";
+}
+.file-cubit:before {
+  content: "\e9d1";
+}
+.file-cucumber:before {
+  content: "\e9d2";
+}
+.file-cuneiform:before {
+  content: "\e9d3";
+}
+.file-curl-lang:before {
+  content: "\e9d4";
+}
+.file-curl:before {
+  content: "\e9d5";
+}
+.file-curry:before {
+  content: "\e9d6";
+}
+.file-cvs:before {
+  content: "\e9d7";
+}
+.file-cwl:before {
+  content: "\e9d8";
+}
+.file-cython:before {
+  content: "\e9d9";
+}
+.file-d3:before {
+  content: "\e9da";
+}
+.file-dafny:before {
+  content: "\e9db";
+}
+.file-darcs-patch:before {
+  content: "\e9dc";
+}
+.file-dashboard:before {
+  content: "\e9dd";
+}
+.file-dataweave:before {
+  content: "\e9de";
+}
+.file-dbase:before {
+  content: "\e9df";
+}
+.file-default:before {
+  content: "\e9e0";
+}
+.file-delphi:before {
+  content: "\e9e1";
+}
+.file-deno:before {
+  content: "\e9e2";
+}
+.file-dependabot:before {
+  content: "\e9e3";
+}
+.file-devcontainer:before {
+  content: "\e9e4";
+}
+.file-devicetree:before {
+  content: "\e9e5";
+}
+.file-dhall:before {
+  content: "\e9e6";
+}
+.file-dia:before {
+  content: "\e9e7";
+}
+.file-diff:before {
+  content: "\e9e8";
+}
+.file-digdag:before {
+  content: "\e9e9";
+}
+.file-dna:before {
+  content: "\e9ea";
+}
+.file-docbook:before {
+  content: "\e9eb";
+}
+.file-docker:before {
+  content: "\e9ec";
+}
+.file-doclets:before {
+  content: "\e9ed";
+}
+.file-docpad:before {
+  content: "\e9ee";
+}
+.file-docz:before {
+  content: "\e9ef";
+}
+.file-dogescript:before {
+  content: "\e9f0";
+}
+.file-dom:before {
+  content: "\e9f1";
+}
+.file-donejs:before {
+  content: "\e9f2";
+}
+.file-dosbox-alt:before {
+  content: "\e9f3";
+}
+.file-dosbox:before {
+  content: "\e9f4";
+}
+.file-dotjs:before {
+  content: "\e9f5";
+}
+.file-doxygen:before {
+  content: "\e9f6";
+}
+.file-dragonflybsd:before {
+  content: "\e9f7";
+}
+.file-dragula:before {
+  content: "\e9f8";
+}
+.file-drawio:before {
+  content: "\e9f9";
+}
+.file-drone:before {
+  content: "\e9fa";
+}
+.file-dub:before {
+  content: "\e9fb";
+}
+.file-dvc:before {
+  content: "\e9fc";
+}
+.file-dyalog:before {
+  content: "\e9fd";
+}
+.file-dylib:before {
+  content: "\e9fe";
+}
+.file-e:before {
+  content: "\e9ff";
+}
+.file-eagle:before {
+  content: "\ea00";
+}
+.file-easybuild:before {
+  content: "\ea01";
+}
+.file-ec:before {
+  content: "\ea02";
+}
+.file-ecere:before {
+  content: "\ea03";
+}
+.file-eclipse-lang:before {
+  content: "\ea04";
+}
+.file-edge:before {
+  content: "\ea05";
+}
+.file-editorconfig:before {
+  content: "\ea06";
+}
+.file-eiffel:before {
+  content: "\ea07";
+}
+.file-ejs:before {
+  content: "\ea08";
+}
+.file-electron:before {
+  content: "\ea09";
+}
+.file-elementaryos:before {
+  content: "\ea0a";
+}
+.file-elm:before {
+  content: "\ea0b";
+}
+.file-emacs:before {
+  content: "\ea0c";
+}
+.file-ember:before {
+  content: "\ea0d";
+}
+.file-emberscript:before {
+  content: "\ea0e";
+}
+.file-ensime:before {
+  content: "\ea0f";
+}
+.file-eq:before {
+  content: "\ea10";
+}
+.file-esdoc:before {
+  content: "\ea11";
+}
+.file-eslint-old:before {
+  content: "\ea12";
+}
+.file-eslint:before {
+  content: "\ea13";
+}
+.file-expo:before {
+  content: "\ea14";
+}
+.file-fabfile:before {
+  content: "\ea15";
+}
+.file-fabric:before {
+  content: "\ea16";
+}
+.file-factor:before {
+  content: "\ea17";
+}
+.file-falcon:before {
+  content: "\ea18";
+}
+.file-fancy:before {
+  content: "\ea19";
+}
+.file-fantom:before {
+  content: "\ea1a";
+}
+.file-fauna:before {
+  content: "\ea1b";
+}
+.file-faust:before {
+  content: "\ea1c";
+}
+.file-fbx:before {
+  content: "\ea1d";
+}
+.file-fexl:before {
+  content: "\ea1e";
+}
+.file-ffmpeg:before {
+  content: "\ea1f";
+}
+.file-finaldraft:before {
+  content: "\ea20";
+}
+.file-finder:before {
+  content: "\ea21";
+}
+.file-firebase-bolt:before {
+  content: "\ea22";
+}
+.file-firebase:before {
+  content: "\ea23";
+}
+.file-flask:before {
+  content: "\ea24";
+}
+.file-floobits:before {
+  content: "\ea25";
+}
+.file-flow:before {
+  content: "\ea26";
+}
+.file-flutter:before {
+  content: "\ea27";
+}
+.file-flux:before {
+  content: "\ea28";
+}
+.file-font-bitmap:before {
+  content: "\ea29";
+}
+.file-font-outline:before {
+  content: "\ea2a";
+}
+.file-font:before {
+  content: "\ea2b";
+}
+.file-fontforge:before {
+  content: "\ea2c";
+}
+.file-fork:before {
+  content: "\ea2d";
+}
+.file-fortherecord:before {
+  content: "\ea2e";
+}
+.file-fortran:before {
+  content: "\ea2f";
+}
+.file-fossa:before {
+  content: "\ea30";
+}
+.file-fossil:before {
+  content: "\ea31";
+}
+.file-fountain:before {
+  content: "\ea32";
+}
+.file-franca:before {
+  content: "\ea33";
+}
+.file-freedesktop:before {
+  content: "\ea34";
+}
+.file-freedos:before {
+  content: "\ea35";
+}
+.file-freemarker:before {
+  content: "\ea36";
+}
+.file-freemat:before {
+  content: "\ea37";
+}
+.file-frege:before {
+  content: "\ea38";
+}
+.file-fthtml:before {
+  content: "\ea39";
+}
+.file-fuelux:before {
+  content: "\ea3a";
+}
+.file-fusebox:before {
+  content: "\ea3b";
+}
+.file-futhark:before {
+  content: "\ea3c";
+}
+.file-galaxy:before {
+  content: "\ea3d";
+}
+.file-galen:before {
+  content: "\ea3e";
+}
+.file-gamemaker:before {
+  content: "\ea3f";
+}
+.file-gams:before {
+  content: "\ea40";
+}
+.file-gap:before {
+  content: "\ea41";
+}
+.file-gatsby:before {
+  content: "\ea42";
+}
+.file-gauss:before {
+  content: "\ea43";
+}
+.file-gdb:before {
+  content: "\ea44";
+}
+.file-genshi:before {
+  content: "\ea45";
+}
+.file-genstat:before {
+  content: "\ea46";
+}
+.file-gentoo:before {
+  content: "\ea47";
+}
+.file-gf:before {
+  content: "\ea48";
+}
+.file-ghostscript:before {
+  content: "\ea49";
+}
+.file-gimp:before {
+  content: "\ea4a";
+}
+.file-gitlab:before {
+  content: "\ea4b";
+}
+.file-gitpod:before {
+  content: "\ea4c";
+}
+.file-glade:before {
+  content: "\ea4d";
+}
+.file-glide:before {
+  content: "\ea4e";
+}
+.file-gltf:before {
+  content: "\ea4f";
+}
+.file-glyphs:before {
+  content: "\ea50";
+}
+.file-gn:before {
+  content: "\ea51";
+}
+.file-gnu:before {
+  content: "\ea52";
+}
+.file-gnuplot:before {
+  content: "\ea53";
+}
+.file-go-old:before {
+  content: "\ea54";
+}
+.file-go:before {
+  content: "\ea55";
+}
+.file-godot:before {
+  content: "\ea56";
+}
+.file-golo:before {
+  content: "\ea57";
+}
+.file-goreleaser:before {
+  content: "\ea58";
+}
+.file-gosu:before {
+  content: "\ea59";
+}
+.file-gradle:before {
+  content: "\ea5a";
+}
+.file-graphite:before {
+  content: "\ea5b";
+}
+.file-graphql-codegenerator:before {
+  content: "\ea5c";
+}
+.file-graphql:before {
+  content: "\ea5d";
+}
+.file-graphviz:before {
+  content: "\ea5e";
+}
+.file-gravit-designer:before {
+  content: "\ea5f";
+}
+.file-greenkeeper:before {
+  content: "\ea60";
+}
+.file-gridsome:before {
+  content: "\ea61";
+}
+.file-groovy:before {
+  content: "\ea62";
+}
+.file-grunt:before {
+  content: "\ea63";
+}
+.file-gulp:before {
+  content: "\ea64";
+}
+.file-hack:before {
+  content: "\ea65";
+}
+.file-haml:before {
+  content: "\ea66";
+}
+.file-harbour:before {
+  content: "\ea67";
+}
+.file-hashicorp:before {
+  content: "\ea68";
+}
+.file-haxe:before {
+  content: "\ea69";
+}
+.file-haxedevelop:before {
+  content: "\ea6a";
+}
+.file-helix:before {
+  content: "\ea6b";
+}
+.file-hewlettpackard:before {
+  content: "\ea6c";
+}
+.file-hie:before {
+  content: "\ea6d";
+}
+.file-hitachi:before {
+  content: "\ea6e";
+}
+.file-hjson:before {
+  content: "\ea6f";
+}
+.file-homebrew:before {
+  content: "\ea70";
+}
+.file-hop:before {
+  content: "\ea71";
+}
+.file-hoplon:before {
+  content: "\ea72";
+}
+.file-houndci:before {
+  content: "\ea73";
+}
+.file-hugo:before {
+  content: "\ea74";
+}
+.file-husky:before {
+  content: "\ea75";
+}
+.file-hy:before {
+  content: "\ea76";
+}
+.file-hygen:before {
+  content: "\ea77";
+}
+.file-hyper:before {
+  content: "\ea78";
+}
+.file-icomoon:before {
+  content: "\ea79";
+}
+.file-icu:before {
+  content: "\ea7a";
+}
+.file-idl:before {
+  content: "\ea7b";
+}
+.file-idris:before {
+  content: "\ea7c";
+}
+.file-igor-pro:before {
+  content: "\ea7d";
+}
+.file-illumos:before {
+  content: "\ea7e";
+}
+.file-image:before {
+  content: "\ea7f";
+}
+.file-imba-alt:before {
+  content: "\ea80";
+}
+.file-imba-old:before {
+  content: "\ea81";
+}
+.file-imba:before {
+  content: "\ea82";
+}
+.file-influxdata:before {
+  content: "\ea83";
+}
+.file-inform7:before {
+  content: "\ea84";
+}
+.file-ink:before {
+  content: "\ea85";
+}
+.file-inkscape:before {
+  content: "\ea86";
+}
+.file-innosetup:before {
+  content: "\ea87";
+}
+.file-intel:before {
+  content: "\ea88";
+}
+.file-io:before {
+  content: "\ea89";
+}
+.file-ioke .path1:before {
+  content: "\ea8a";
+  color: rgb(24, 25, 22);
+}
+.file-ioke .path2:before {
+  content: "\ea8b";
+  margin-left: -1em;
+  color: rgb(24, 25, 22);
+}
+.file-ioke .path3:before {
+  content: "\ea8c";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.file-ioke .path4:before {
+  content: "\ea8d";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.file-ioke .path5:before {
+  content: "\ea8e";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.file-ioke .path6:before {
+  content: "\ea8f";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.file-ionic-project:before {
+  content: "\ea90";
+}
+.file-isabelle:before {
+  content: "\ea91";
+}
+.file-istanbul:before {
+  content: "\ea92";
+}
+.file-j:before {
+  content: "\ea93";
+}
+.file-jade:before {
+  content: "\ea94";
+}
+.file-jakefile:before {
+  content: "\ea95";
+}
+.file-janet:before {
+  content: "\ea96";
+}
+.file-jasmine:before {
+  content: "\ea97";
+}
+.file-jenkins:before {
+  content: "\ea98";
+}
+.file-jest:before {
+  content: "\ea99";
+}
+.file-jinja:before {
+  content: "\ea9a";
+}
+.file-jison:before {
+  content: "\ea9b";
+}
+.file-jolie:before {
+  content: "\ea9c";
+}
+.file-jscpd:before {
+  content: "\ea9d";
+}
+.file-json-1:before {
+  content: "\ea9e";
+}
+.file-json-2:before {
+  content: "\ea9f";
+}
+.file-json-ld1:before {
+  content: "\eaa0";
+}
+.file-json-ld2:before {
+  content: "\eaa1";
+}
+.file-json5:before {
+  content: "\eaa2";
+}
+.file-jsonnet:before {
+  content: "\eaa3";
+}
+.file-jsx-alt:before {
+  content: "\eaa4";
+}
+.file-jsx-atom:before {
+  content: "\eaa5";
+}
+.file-jsx:before {
+  content: "\eaa6";
+}
+.file-julia:before {
+  content: "\eaa7";
+}
+.file-junos:before {
+  content: "\eaa8";
+}
+.file-jupyter:before {
+  content: "\eaa9";
+}
+.file-kaitai:before {
+  content: "\eaaa";
+}
+.file-karma:before {
+  content: "\eaab";
+}
+.file-keybase:before {
+  content: "\eaac";
+}
+.file-keynote:before {
+  content: "\eaad";
+}
+.file-khronos:before {
+  content: "\eaae";
+}
+.file-kibo:before {
+  content: "\eaaf";
+}
+.file-kicad:before {
+  content: "\eab0";
+}
+.file-kitchenci:before {
+  content: "\eab1";
+}
+.file-kivy:before {
+  content: "\eab2";
+}
+.file-knime:before {
+  content: "\eab3";
+}
+.file-knockout:before {
+  content: "\eab4";
+}
+.file-kos:before {
+  content: "\eab5";
+}
+.file-kotlin:before {
+  content: "\eab6";
+}
+.file-krl:before {
+  content: "\eab7";
+}
+.file-kubernetes:before {
+  content: "\eab8";
+}
+.file-kusto-alt:before {
+  content: "\eab9";
+}
+.file-kusto:before {
+  content: "\eaba";
+}
+.file-kx:before {
+  content: "\eabb";
+}
+.file-labview:before {
+  content: "\eabc";
+}
+.file-lark:before {
+  content: "\eabd";
+}
+.file-lasso:before {
+  content: "\eabe";
+}
+.file-latex:before {
+  content: "\eabf";
+}
+.file-latino:before {
+  content: "\eac0";
+}
+.file-leaflet:before {
+  content: "\eac1";
+}
+.file-lean:before {
+  content: "\eac2";
+}
+.file-lefthook-alt:before {
+  content: "\eac3";
+}
+.file-lefthook:before {
+  content: "\eac4";
+}
+.file-leiningen:before {
+  content: "\eac5";
+}
+.file-lektor:before {
+  content: "\eac6";
+}
+.file-lerna:before {
+  content: "\eac7";
+}
+.file-lex-alt:before {
+  content: "\eac8";
+}
+.file-lex:before {
+  content: "\eac9";
+}
+.file-lfe:before {
+  content: "\eaca";
+}
+.file-lgtm:before {
+  content: "\eacb";
+}
+.file-libuv:before {
+  content: "\eacc";
+}
+.file-lighthouse:before {
+  content: "\eacd";
+}
+.file-lightwave:before {
+  content: "\eace";
+}
+.file-lilypond:before {
+  content: "\eacf";
+}
+.file-lime:before {
+  content: "\ead0";
+}
+.file-linqpad:before {
+  content: "\ead1";
+}
+.file-lisp:before {
+  content: "\ead2";
+}
+.file-livescript:before {
+  content: "\ead3";
+}
+.file-llvm:before {
+  content: "\ead4";
+}
+.file-logtalk:before {
+  content: "\ead5";
+}
+.file-lolcode:before {
+  content: "\ead6";
+}
+.file-lookml:before {
+  content: "\ead7";
+}
+.file-lsl:before {
+  content: "\ead8";
+}
+.file-lua:before {
+  content: "\ead9";
+}
+.file-macaulay2:before {
+  content: "\eada";
+}
+.file-macvim:before {
+  content: "\eadb";
+}
+.file-magit:before {
+  content: "\eadc";
+}
+.file-mako:before {
+  content: "\eadd";
+}
+.file-manjaro:before {
+  content: "\eade";
+}
+.file-manpage:before {
+  content: "\eadf";
+}
+.file-mapbox:before {
+  content: "\eae0";
+}
+.file-markdownlint:before {
+  content: "\eae1";
+}
+.file-marko:before {
+  content: "\eae2";
+}
+.file-mathematica:before {
+  content: "\eae3";
+}
+.file-mathjax:before {
+  content: "\eae4";
+}
+.file-matlab:before {
+  content: "\eae5";
+}
+.file-matroska:before {
+  content: "\eae6";
+}
+.file-max:before {
+  content: "\eae7";
+}
+.file-maya:before {
+  content: "\eae8";
+}
+.file-mdx:before {
+  content: "\eae9";
+}
+.file-mediawiki:before {
+  content: "\eaea";
+}
+.file-melpa:before {
+  content: "\eaeb";
+}
+.file-mercurial:before {
+  content: "\eaec";
+}
+.file-mercury:before {
+  content: "\eaed";
+}
+.file-mermaid:before {
+  content: "\eaee";
+}
+.file-meson-old:before {
+  content: "\eaef";
+}
+.file-meson:before {
+  content: "\eaf0";
+}
+.file-metal:before {
+  content: "\eaf1";
+}
+.file-meteor:before {
+  content: "\eaf2";
+}
+.file-microsoft-access:before {
+  content: "\eaf3";
+}
+.file-microsoft-excel:before {
+  content: "\eaf4";
+}
+.file-microsoft-infopath:before {
+  content: "\eaf5";
+}
+.file-microsoft-lync:before {
+  content: "\eaf6";
+}
+.file-microsoft-onenote:before {
+  content: "\eaf7";
+}
+.file-microsoft-outlook:before {
+  content: "\eaf8";
+}
+.file-microsoft-powerpoint:before {
+  content: "\eaf9";
+}
+.file-microsoft-project:before {
+  content: "\eafa";
+}
+.file-microsoft-publisher:before {
+  content: "\eafb";
+}
+.file-microsoft-visio:before {
+  content: "\eafc";
+}
+.file-microsoft-word:before {
+  content: "\eafd";
+}
+.file-minecraft:before {
+  content: "\eafe";
+}
+.file-minizinc:before {
+  content: "\eaff";
+}
+.file-mirah:before {
+  content: "\eb00";
+}
+.file-miranda:before {
+  content: "\eb01";
+}
+.file-mirc:before {
+  content: "\eb02";
+}
+.file-mjml:before {
+  content: "\eb03";
+}
+.file-mocha:before {
+  content: "\eb04";
+}
+.file-modelica:before {
+  content: "\eb05";
+}
+.file-modernweb:before {
+  content: "\eb06";
+}
+.file-modo:before {
+  content: "\eb07";
+}
+.file-modula-2:before {
+  content: "\eb08";
+}
+.file-modula-3:before {
+  content: "\eb09";
+}
+.file-moho:before {
+  content: "\eb0a";
+}
+.file-moleculer:before {
+  content: "\eb0b";
+}
+.file-moment-timezone:before {
+  content: "\eb0c";
+}
+.file-moment:before {
+  content: "\eb0d";
+}
+.file-monkey:before {
+  content: "\eb0e";
+}
+.file-mono:before {
+  content: "\eb0f";
+}
+.file-monotone:before {
+  content: "\eb10";
+}
+.file-motorola:before {
+  content: "\eb11";
+}
+.file-moustache:before {
+  content: "\eb12";
+}
+.file-mruby:before {
+  content: "\eb13";
+}
+.file-ms-dos:before {
+  content: "\eb14";
+}
+.file-mupad:before {
+  content: "\eb15";
+}
+.file-nano:before {
+  content: "\eb16";
+}
+.file-nanoc:before {
+  content: "\eb17";
+}
+.file-nant:before {
+  content: "\eb18";
+}
+.file-nasm:before {
+  content: "\eb19";
+}
+.file-ndepend:before {
+  content: "\eb1a";
+}
+.file-neko:before {
+  content: "\eb1b";
+}
+.file-nemerle:before {
+  content: "\eb1c";
+}
+.file-neo4j:before {
+  content: "\eb1d";
+}
+.file-neon:before {
+  content: "\eb1e";
+}
+.file-nessus:before {
+  content: "\eb1f";
+}
+.file-nestjs:before {
+  content: "\eb20";
+}
+.file-netlify:before {
+  content: "\eb21";
+}
+.file-netlinx:before {
+  content: "\eb22";
+}
+.file-netlogo:before {
+  content: "\eb23";
+}
+.file-new-relic:before {
+  content: "\eb24";
+}
+.file-nextflow:before {
+  content: "\eb25";
+}
+.file-nextjs:before {
+  content: "\eb26";
+}
+.file-nginx:before {
+  content: "\eb27";
+}
+.file-nib:before {
+  content: "\eb28";
+}
+.file-nickle:before {
+  content: "\eb29";
+}
+.file-nightwatch:before {
+  content: "\eb2a";
+}
+.file-nimble:before {
+  content: "\eb2b";
+}
+.file-nimrod:before {
+  content: "\eb2c";
+}
+.file-nintendo64:before {
+  content: "\eb2d";
+}
+.file-nit:before {
+  content: "\eb2e";
+}
+.file-nix:before {
+  content: "\eb2f";
+}
+.file-nmap:before {
+  content: "\eb30";
+}
+.file-nodemon:before {
+  content: "\eb31";
+}
+.file-nokogiri:before {
+  content: "\eb32";
+}
+.file-nomad:before {
+  content: "\eb33";
+}
+.file-noon:before {
+  content: "\eb34";
+}
+.file-normalise:before {
+  content: "\eb35";
+}
+.file-npm-old:before {
+  content: "\eb36";
+}
+.file-npm:before {
+  content: "\eb37";
+}
+.file-nsis-old:before {
+  content: "\eb38";
+}
+.file-nsis:before {
+  content: "\eb39";
+}
+.file-nsri-alt:before {
+  content: "\eb3a";
+}
+.file-nsri:before {
+  content: "\eb3b";
+}
+.file-nuclide:before {
+  content: "\eb3c";
+}
+.file-nuget:before {
+  content: "\eb3d";
+}
+.file-numpy-old:before {
+  content: "\eb3e";
+}
+.file-numpy:before {
+  content: "\eb3f";
+}
+.file-nunjucks:before {
+  content: "\eb40";
+}
+.file-nuxt:before {
+  content: "\eb41";
+}
+.file-nvidia:before {
+  content: "\eb42";
+}
+.file-nwscript:before {
+  content: "\eb43";
+}
+.file-nx:before {
+  content: "\eb44";
+}
+.file-nxc:before {
+  content: "\eb45";
+}
+.file-oberon:before {
+  content: "\eb46";
+}
+.file-objective-j:before {
+  content: "\eb47";
+}
+.file-ocaml:before {
+  content: "\eb48";
+}
+.file-octave:before {
+  content: "\eb49";
+}
+.file-odin:before {
+  content: "\eb4a";
+}
+.file-ogone:before {
+  content: "\eb4b";
+}
+.file-ooc:before {
+  content: "\eb4c";
+}
+.file-opa:before {
+  content: "\eb4d";
+}
+.file-openapi:before {
+  content: "\eb4e";
+}
+.file-openbsd-alt:before {
+  content: "\eb4f";
+}
+.file-openbsd:before {
+  content: "\eb50";
+}
+.file-opencl:before {
+  content: "\eb51";
+}
+.file-opencv:before {
+  content: "\eb52";
+}
+.file-openexr:before {
+  content: "\eb53";
+}
+.file-opengl:before {
+  content: "\eb54";
+}
+.file-openindiana:before {
+  content: "\eb55";
+}
+.file-openoffice:before {
+  content: "\eb56";
+}
+.file-openpolicyagent:before {
+  content: "\eb57";
+}
+.file-openscad:before {
+  content: "\eb58";
+}
+.file-opensolaris:before {
+  content: "\eb59";
+}
+.file-openstack:before {
+  content: "\eb5a";
+}
+.file-openvms:before {
+  content: "\eb5b";
+}
+.file-openvpn:before {
+  content: "\eb5c";
+}
+.file-openzfs:before {
+  content: "\eb5d";
+}
+.file-org-mode:before {
+  content: "\eb5e";
+}
+.file-os2:before {
+  content: "\eb5f";
+}
+.file-owl:before {
+  content: "\eb60";
+}
+.file-ox:before {
+  content: "\eb61";
+}
+.file-oxygene:before {
+  content: "\eb62";
+}
+.file-oz:before {
+  content: "\eb63";
+}
+.file-p4:before {
+  content: "\eb64";
+}
+.file-pan:before {
+  content: "\eb65";
+}
+.file-papyrus:before {
+  content: "\eb66";
+}
+.file-parrot:before {
+  content: "\eb67";
+}
+.file-pascal:before {
+  content: "\eb68";
+}
+.file-patch:before {
+  content: "\eb69";
+}
+.file-patreon:before {
+  content: "\eb6a";
+}
+.file-pawn:before {
+  content: "\eb6b";
+}
+.file-pcd:before {
+  content: "\eb6c";
+}
+.file-pegjs:before {
+  content: "\eb6d";
+}
+.file-perl6:before {
+  content: "\eb6e";
+}
+.file-phalcon:before {
+  content: "\eb6f";
+}
+.file-phoenix:before {
+  content: "\eb70";
+}
+.file-php:before {
+  content: "\eb71";
+}
+.file-phpunit:before {
+  content: "\eb72";
+}
+.file-phraseapp:before {
+  content: "\eb73";
+}
+.file-pickle:before {
+  content: "\eb74";
+}
+.file-pico-8:before {
+  content: "\eb75";
+}
+.file-picolisp:before {
+  content: "\eb76";
+}
+.file-pike:before {
+  content: "\eb77";
+}
+.file-pinescript:before {
+  content: "\eb78";
+}
+.file-pipenv:before {
+  content: "\eb79";
+}
+.file-pkgsrc:before {
+  content: "\eb7a";
+}
+.file-platformio:before {
+  content: "\eb7b";
+}
+.file-pm2:before {
+  content: "\eb7c";
+}
+.file-pnpm:before {
+  content: "\eb7d";
+}
+.file-pod:before {
+  content: "\eb7e";
+}
+.file-pogoscript:before {
+  content: "\eb7f";
+}
+.file-pointwise:before {
+  content: "\eb80";
+}
+.file-polymer:before {
+  content: "\eb81";
+}
+.file-pony:before {
+  content: "\eb82";
+}
+.file-postcss:before {
+  content: "\eb83";
+}
+.file-postscript:before {
+  content: "\eb84";
+}
+.file-pov-ray:before {
+  content: "\eb85";
+}
+.file-powerbuilder:before {
+  content: "\eb86";
+}
+.file-powerpc:before {
+  content: "\eb87";
+}
+.file-powershell:before {
+  content: "\eb88";
+}
+.file-precision:before {
+  content: "\eb89";
+}
+.file-precommit:before {
+  content: "\eb8a";
+}
+.file-prettier:before {
+  content: "\eb8b";
+}
+.file-prisma:before {
+  content: "\eb8c";
+}
+.file-processing:before {
+  content: "\eb8d";
+}
+.file-progress-old:before {
+  content: "\eb8e";
+}
+.file-progress:before {
+  content: "\eb8f";
+}
+.file-propeller:before {
+  content: "\eb90";
+}
+.file-pros:before {
+  content: "\eb91";
+}
+.file-proselint:before {
+  content: "\eb92";
+}
+.file-protractor:before {
+  content: "\eb93";
+}
+.file-pug-old:before {
+  content: "\eb94";
+}
+.file-pug:before {
+  content: "\eb95";
+}
+.file-pullapprove:before {
+  content: "\eb96";
+}
+.file-puppet:before {
+  content: "\eb97";
+}
+.file-pure:before {
+  content: "\eb98";
+}
+.file-purebasic:before {
+  content: "\eb99";
+}
+.file-purescript:before {
+  content: "\eb9a";
+}
+.file-pypi:before {
+  content: "\eb9b";
+}
+.file-pyret:before {
+  content: "\eb9c";
+}
+.file-pytest:before {
+  content: "\eb9d";
+}
+.file-pyup:before {
+  content: "\eb9e";
+}
+.file-q:before {
+  content: "\eb9f";
+}
+.file-qiskit:before {
+  content: "\eba0";
+}
+.file-qlikview:before {
+  content: "\eba1";
+}
+.file-qt:before {
+  content: "\eba2";
+}
+.file-quasar:before {
+  content: "\eba3";
+}
+.file-r:before {
+  content: "\eba4";
+}
+.file-racket:before {
+  content: "\eba5";
+}
+.file-raml:before {
+  content: "\eba6";
+}
+.file-rascal:before {
+  content: "\eba7";
+}
+.file-razzle:before {
+  content: "\eba8";
+}
+.file-rdata:before {
+  content: "\eba9";
+}
+.file-rdoc:before {
+  content: "\ebaa";
+}
+.file-reactos:before {
+  content: "\ebab";
+}
+.file-readthedocs:before {
+  content: "\ebac";
+}
+.file-realbasic:before {
+  content: "\ebad";
+}
+.file-reason:before {
+  content: "\ebae";
+}
+.file-reasonstudios-alt:before {
+  content: "\ebaf";
+}
+.file-reasonstudios:before {
+  content: "\ebb0";
+}
+.file-rebol:before {
+  content: "\ebb1";
+}
+.file-red-old:before {
+  content: "\ebb2";
+}
+.file-red:before {
+  content: "\ebb3";
+}
+.file-redux:before {
+  content: "\ebb4";
+}
+.file-reek:before {
+  content: "\ebb5";
+}
+.file-regex:before {
+  content: "\ebb6";
+}
+.file-remark:before {
+  content: "\ebb7";
+}
+.file-renovate:before {
+  content: "\ebb8";
+}
+.file-rescript:before {
+  content: "\ebb9";
+}
+.file-restructuredtext:before {
+  content: "\ebba";
+}
+.file-rexx:before {
+  content: "\ebbb";
+}
+.file-rhino3d:before {
+  content: "\ebbc";
+}
+.file-ring:before {
+  content: "\ebbd";
+}
+.file-riot-old:before {
+  content: "\ebbe";
+}
+.file-riot:before {
+  content: "\ebbf";
+}
+.file-risc-v:before {
+  content: "\ebc0";
+}
+.file-rmarkdown:before {
+  content: "\ebc1";
+}
+.file-robotframework-old:before {
+  content: "\ebc2";
+}
+.file-robotframework:before {
+  content: "\ebc3";
+}
+.file-robots:before {
+  content: "\ebc4";
+}
+.file-rollup-old:before {
+  content: "\ebc5";
+}
+.file-rollup:before {
+  content: "\ebc6";
+}
+.file-rspec:before {
+  content: "\ebc7";
+}
+.file-rstudio:before {
+  content: "\ebc8";
+}
+.file-rsync:before {
+  content: "\ebc9";
+}
+.file-rubocop:before {
+  content: "\ebca";
+}
+.file-rubygems:before {
+  content: "\ebcb";
+}
+.file-sac:before {
+  content: "\ebcc";
+}
+.file-sage:before {
+  content: "\ebcd";
+}
+.file-sails:before {
+  content: "\ebce";
+}
+.file-saltstack:before {
+  content: "\ebcf";
+}
+.file-san:before {
+  content: "\ebd0";
+}
+.file-sas:before {
+  content: "\ebd1";
+}
+.file-sbt:before {
+  content: "\ebd2";
+}
+.file-scheme:before {
+  content: "\ebd3";
+}
+.file-scilab:before {
+  content: "\ebd4";
+}
+.file-scilla:before {
+  content: "\ebd5";
+}
+.file-scratch:before {
+  content: "\ebd6";
+}
+.file-scrutinizer:before {
+  content: "\ebd7";
+}
+.file-self:before {
+  content: "\ebd8";
+}
+.file-semanticrelease:before {
+  content: "\ebd9";
+}
+.file-sentry:before {
+  content: "\ebda";
+}
+.file-sequelize:before {
+  content: "\ebdb";
+}
+.file-serverless:before {
+  content: "\ebdc";
+}
+.file-service-fabric:before {
+  content: "\ebdd";
+}
+.file-shadowcljs:before {
+  content: "\ebde";
+}
+.file-shen:before {
+  content: "\ebdf";
+}
+.file-shipit:before {
+  content: "\ebe0";
+}
+.file-shippable:before {
+  content: "\ebe1";
+}
+.file-shopify:before {
+  content: "\ebe2";
+}
+.file-shuriken:before {
+  content: "\ebe3";
+}
+.file-sigils:before {
+  content: "\ebe4";
+}
+.file-silicongraphics:before {
+  content: "\ebe5";
+}
+.file-silverstripe:before {
+  content: "\ebe6";
+}
+.file-sinatra:before {
+  content: "\ebe7";
+}
+.file-sketch:before {
+  content: "\ebe8";
+}
+.file-sketchup-layout:before {
+  content: "\ebe9";
+}
+.file-sketchup-make:before {
+  content: "\ebea";
+}
+.file-sketchup-stylebuilder:before {
+  content: "\ebeb";
+}
+.file-slash:before {
+  content: "\ebec";
+}
+.file-smartos-alt:before {
+  content: "\ebed";
+}
+.file-smartos:before {
+  content: "\ebee";
+}
+.file-snapcraft:before {
+  content: "\ebef";
+}
+.file-snort:before {
+  content: "\ebf0";
+}
+.file-snowpack:before {
+  content: "\ebf1";
+}
+.file-snyk:before {
+  content: "\ebf2";
+}
+.file-solidarity:before {
+  content: "\ebf3";
+}
+.file-solidity:before {
+  content: "\ebf4";
+}
+.file-sophia:before {
+  content: "\ebf5";
+}
+.file-sorbet:before {
+  content: "\ebf6";
+}
+.file-source:before {
+  content: "\ebf7";
+}
+.file-spacemacs:before {
+  content: "\ebf8";
+}
+.file-spacengine:before {
+  content: "\ebf9";
+}
+.file-sparc:before {
+  content: "\ebfa";
+}
+.file-spray:before {
+  content: "\ebfb";
+}
+.file-sqf:before {
+  content: "\ebfc";
+}
+.file-sqlite:before {
+  content: "\ebfd";
+}
+.file-squarespace:before {
+  content: "\ebfe";
+}
+.file-stan:before {
+  content: "\ebff";
+}
+.file-stata:before {
+  content: "\ec00";
+}
+.file-stdlibjs:before {
+  content: "\ec01";
+}
+.file-stencil:before {
+  content: "\ec02";
+}
+.file-stitches:before {
+  content: "\ec03";
+}
+.file-storybook:before {
+  content: "\ec04";
+}
+.file-storyist:before {
+  content: "\ec05";
+}
+.file-strings:before {
+  content: "\ec06";
+}
+.file-stylable:before {
+  content: "\ec07";
+}
+.file-styledcomponents:before {
+  content: "\ec08";
+}
+.file-stylelint:before {
+  content: "\ec09";
+}
+.file-stylishhaskell:before {
+  content: "\ec0a";
+}
+.file-stylus-orb:before {
+  content: "\ec0b";
+}
+.file-stylus-s:before {
+  content: "\ec0c";
+}
+.file-stylus:before {
+  content: "\ec0d";
+}
+.file-sublime:before {
+  content: "\ec0e";
+}
+.file-supercollider:before {
+  content: "\ec0f";
+}
+.file-svelte:before {
+  content: "\ec10";
+}
+.file-svn:before {
+  content: "\ec11";
+}
+.file-swagger:before {
+  content: "\ec12";
+}
+.file-systemverilog:before {
+  content: "\ec13";
+}
+.file-tag:before {
+  content: "\ec14";
+}
+.file-tailwind:before {
+  content: "\ec15";
+}
+.file-tcl:before {
+  content: "\ec16";
+}
+.file-telegram:before {
+  content: "\ec17";
+}
+.file-templatetoolkit:before {
+  content: "\ec18";
+}
+.file-templeos:before {
+  content: "\ec19";
+}
+.file-terminal:before {
+  content: "\ec1a";
+}
+.file-tern:before {
+  content: "\ec1b";
+}
+.file-terraform:before {
+  content: "\ec1c";
+}
+.file-terser:before {
+  content: "\ec1d";
+}
+.file-test-coffeescript:before {
+  content: "\ec1e";
+}
+.file-test-directory:before {
+  content: "\ec1f";
+}
+.file-test-generic:before {
+  content: "\ec20";
+}
+.file-test-go:before {
+  content: "\ec21";
+}
+.file-test-haskell:before {
+  content: "\ec22";
+}
+.file-test-js:before {
+  content: "\ec23";
+}
+.file-test-perl:before {
+  content: "\ec24";
+}
+.file-test-python:before {
+  content: "\ec25";
+}
+.file-test-react:before {
+  content: "\ec26";
+}
+.file-test-ruby:before {
+  content: "\ec27";
+}
+.file-test-rust:before {
+  content: "\ec28";
+}
+.file-test-typescript:before {
+  content: "\ec29";
+}
+.file-testcafe:before {
+  content: "\ec2a";
+}
+.file-textile:before {
+  content: "\ec2b";
+}
+.file-textmate:before {
+  content: "\ec2c";
+}
+.file-tfs:before {
+  content: "\ec2d";
+}
+.file-thor:before {
+  content: "\ec2e";
+}
+.file-tilt:before {
+  content: "\ec2f";
+}
+.file-tinymce:before {
+  content: "\ec30";
+}
+.file-tipe:before {
+  content: "\ec31";
+}
+.file-tla:before {
+  content: "\ec32";
+}
+.file-tmux:before {
+  content: "\ec33";
+}
+.file-toml:before {
+  content: "\ec34";
+}
+.file-tortoisesvn:before {
+  content: "\ec35";
+}
+.file-totvs:before {
+  content: "\ec36";
+}
+.file-truffle:before {
+  content: "\ec37";
+}
+.file-tsx-alt:before {
+  content: "\ec38";
+}
+.file-tsx:before {
+  content: "\ec39";
+}
+.file-ttcn-3:before {
+  content: "\ec3a";
+}
+.file-turing:before {
+  content: "\ec3b";
+}
+.file-twig:before {
+  content: "\ec3c";
+}
+.file-twine:before {
+  content: "\ec3d";
+}
+.file-txl:before {
+  content: "\ec3e";
+}
+.file-typedoc:before {
+  content: "\ec3f";
+}
+.file-typescript-alt:before {
+  content: "\ec40";
+}
+.file-typescript:before {
+  content: "\ec41";
+}
+.file-typings:before {
+  content: "\ec42";
+}
+.file-ufo:before {
+  content: "\ec43";
+}
+.file-unibeautify:before {
+  content: "\ec44";
+}
+.file-unicode:before {
+  content: "\ec45";
+}
+.file-uno:before {
+  content: "\ec46";
+}
+.file-unrealscript:before {
+  content: "\ec47";
+}
+.file-urweb:before {
+  content: "\ec48";
+}
+.file-v-ray:before {
+  content: "\ec49";
+}
+.file-v:before {
+  content: "\ec4a";
+}
+.file-v8-turbofan:before {
+  content: "\ec4b";
+}
+.file-v8:before {
+  content: "\ec4c";
+}
+.file-vagrant:before {
+  content: "\ec4d";
+}
+.file-vala:before {
+  content: "\ec4e";
+}
+.file-vax:before {
+  content: "\ec4f";
+}
+.file-vcl:before {
+  content: "\ec50";
+}
+.file-velocity:before {
+  content: "\ec51";
+}
+.file-verilog:before {
+  content: "\ec52";
+}
+.file-vertexshader:before {
+  content: "\ec53";
+}
+.file-vhdl:before {
+  content: "\ec54";
+}
+.file-video:before {
+  content: "\ec55";
+}
+.file-virtualbox-alt:before {
+  content: "\ec56";
+}
+.file-virtualbox:before {
+  content: "\ec57";
+}
+.file-vmware:before {
+  content: "\ec58";
+}
+.file-vscode:before {
+  content: "\ec59";
+}
+.file-vsts:before {
+  content: "\ec5a";
+}
+.file-vue:before {
+  content: "\ec5b";
+}
+.file-vyper:before {
+  content: "\ec5c";
+}
+.file-w3c:before {
+  content: "\ec5d";
+}
+.file-wallaby:before {
+  content: "\ec5e";
+}
+.file-walt:before {
+  content: "\ec5f";
+}
+.file-warcraft-iii:before {
+  content: "\ec60";
+}
+.file-wasi:before {
+  content: "\ec61";
+}
+.file-watchman:before {
+  content: "\ec62";
+}
+.file-wdl:before {
+  content: "\ec63";
+}
+.file-webassembly:before {
+  content: "\ec64";
+}
+.file-webgl:before {
+  content: "\ec65";
+}
+.file-webhint:before {
+  content: "\ec66";
+}
+.file-webpack-old:before {
+  content: "\ec67";
+}
+.file-webpack:before {
+  content: "\ec68";
+}
+.file-webvtt:before {
+  content: "\ec69";
+}
+.file-wenyan:before {
+  content: "\ec6a";
+}
+.file-wercker:before {
+  content: "\ec6b";
+}
+.file-wget:before {
+  content: "\ec6c";
+}
+.file-wine:before {
+  content: "\ec6d";
+}
+.file-wix:before {
+  content: "\ec6e";
+}
+.file-workbox:before {
+  content: "\ec6f";
+}
+.file-wurst:before {
+  content: "\ec70";
+}
+.file-x10:before {
+  content: "\ec71";
+}
+.file-xamarin:before {
+  content: "\ec72";
+}
+.file-xmake:before {
+  content: "\ec73";
+}
+.file-xmos:before {
+  content: "\ec74";
+}
+.file-xpages:before {
+  content: "\ec75";
+}
+.file-xtend:before {
+  content: "\ec76";
+}
+.file-xubuntu:before {
+  content: "\ec77";
+}
+.file-yaml-alt1:before {
+  content: "\ec78";
+}
+.file-yaml-alt2:before {
+  content: "\ec79";
+}
+.file-yaml-alt3:before {
+  content: "\ec7a";
+}
+.file-yaml-alt4:before {
+  content: "\ec7b";
+}
+.file-yaml:before {
+  content: "\ec7c";
+}
+.file-yamllint:before {
+  content: "\ec7d";
+}
+.file-yandex:before {
+  content: "\ec7e";
+}
+.file-yang:before {
+  content: "\ec7f";
+}
+.file-yara:before {
+  content: "\ec80";
+}
+.file-yarn:before {
+  content: "\ec81";
+}
+.file-yasm:before {
+  content: "\ec82";
+}
+.file-yorick:before {
+  content: "\ec83";
+}
+.file-yui:before {
+  content: "\ec84";
+}
+.file-zbrush:before {
+  content: "\ec85";
+}
+.file-zeit:before {
+  content: "\ec86";
+}
+.file-zephir:before {
+  content: "\ec87";
+}
+.file-zig:before {
+  content: "\ec88";
+}
+.file-zilog:before {
+  content: "\ec89";
+}
+.file-zimpl:before {
+  content: "\ec8a";
+}
+.file-zorinos:before {
+  content: "\ec8b";
+}
+.file-zork:before {
+  content: "\ec8c";
+}

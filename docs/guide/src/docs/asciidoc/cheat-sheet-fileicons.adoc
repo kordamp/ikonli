@@ -1,0 +1,13 @@
+= Fileicons
+
+++++
+<link href='./css/fileicons.css' rel='stylesheet'>
+<style>
+    .file {
+        font-size: 32px;
+    }
+</style>
+++++
+
+include::{gradle-projectdir}/build/tmp/_fileicons_cheat_sheet.adoc[]
+
