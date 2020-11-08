@@ -1,4 +1,4 @@
-= Payment Font
+= PaymentFont
 
 ++++
 <link href='./css/paymentfont.min.css' rel='stylesheet'>

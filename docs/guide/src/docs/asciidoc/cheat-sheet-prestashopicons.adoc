@@ -1,0 +1,13 @@
+= PrestaShopIcons
+
+++++
+<link href='./css/prestashopicons.css' rel='stylesheet'>
+<style>
+    .ps {
+        font-size: 32px;
+    }
+</style>
+++++
+
+include::{gradle-projectdir}/build/tmp/_prestashopicons_cheat_sheet.adoc[]
+

@@ -63,6 +63,7 @@ open module org.kordamp.ikonli.sampler.javafx {
     requires org.kordamp.ikonli.octicons;
     requires org.kordamp.ikonli.openiconic;
     requires org.kordamp.ikonli.paymentfont;
+    requires org.kordamp.ikonli.prestashopicons;
     requires org.kordamp.ikonli.remixicon;
     requires org.kordamp.ikonli.runestroicons;
     requires org.kordamp.ikonli.simpleicons;

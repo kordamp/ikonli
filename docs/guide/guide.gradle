@@ -183,6 +183,7 @@ asciidoctor {
             createIconGenerationTask(packName: 'octicons', iconClassName: 'org.kordamp.ikonli.octicons.Octicons', iconName: 'octicon', shortNameSize: 4),
             createIconGenerationTask(packName: 'openiconic', iconClassName: 'org.kordamp.ikonli.openiconic.Openiconic', iconName: 'oi', dataGlyph: true),
             createIconGenerationTask(packName: 'paymentfont', iconClassName: 'org.kordamp.ikonli.paymentfont.PaymentFont', iconName: 'pf', shortNameSize: 3),
+            createIconGenerationTask(packName: 'prestashopicons', iconClassName: 'org.kordamp.ikonli.prestashopicons.PrestaShopIcons', iconName: 'ps', shortNameSize: 3),
             createIconGenerationTask(packName: 'remixicon', iconClassName: 'org.kordamp.ikonli.remixicon.RemixiconAL', iconName: 'remix', shortNameSize: 8, classifier: 'al'),
             createIconGenerationTask(packName: 'remixicon', iconClassName: 'org.kordamp.ikonli.remixicon.RemixiconMZ', iconName: 'remix', shortNameSize: 8, classifier: 'mz'),
             createIconGenerationTask(packName: 'runestroicons', iconClassName: 'org.kordamp.ikonli.runestroicons.Runestroicons', iconName: 'ri'),
@@ -243,6 +244,7 @@ asciidoctor {
             octiconsVersion        : project.octiconsVersion,
             openiconicVersion      : project.openiconicVersion,
             paymentfontVersion     : project.paymentfontVersion,
+            prestashopiconsVersion : project.prestashopiconsVersion,
             remixiconVersion       : project.remixiconVersion,
             runestroiconsVersion   : project.runestroiconsVersion,
             simpleiconsVersion     : project.simpleiconsVersion,
@@ -304,6 +306,7 @@ asciidoctor {
         from project(':ikonli-octicons-pack').file("src/main/resources/META-INF/resources/octicons/${octiconsVersion}")
         from project(':ikonli-openiconic-pack').file("src/main/resources/META-INF/resources/openiconic/${openiconicVersion}")
         from project(':ikonli-paymentfont-pack').file("src/main/resources/META-INF/resources/paymentfont/${paymentfontVersion}")
+        from project(':ikonli-prestashopicons-pack').file("src/main/resources/META-INF/resources/prestashopicons/${prestashopiconsVersion}")
         from project(':ikonli-remixicon-pack').file("src/main/resources/META-INF/resources/remixicon/${remixiconVersion}")
         from project(':ikonli-runestroicons-pack').file("src/main/resources/META-INF/resources/runestroicons/${runestroiconsVersion}")
         from project(':ikonli-simpleicons-pack').file("src/main/resources/META-INF/resources/simpleicons/${simpleiconsVersion}")
