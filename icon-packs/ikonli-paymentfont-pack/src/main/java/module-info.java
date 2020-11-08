@@ -18,6 +18,7 @@
 module org.kordamp.ikonli.paymentfont {
     requires org.kordamp.ikonli.core;
     requires static org.kordamp.jipsy;
+    requires static org.kordamp.jipsy.annotations;
     exports org.kordamp.ikonli.paymentfont;
 
     provides org.kordamp.ikonli.IkonHandler

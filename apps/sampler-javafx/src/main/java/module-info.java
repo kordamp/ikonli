@@ -15,7 +15,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-open module org.kordamp.ikonli.sampler.javafx {
+module org.kordamp.ikonli.sampler.javafx {
+    opens org.kordamp.ikonli.sampler.javafx;
     requires javafx.base;
     requires javafx.graphics;
     requires javafx.controls;

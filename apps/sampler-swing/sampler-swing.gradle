@@ -17,7 +17,7 @@
  */
 apply plugin: 'application'
 
-mainClassName = 'org.kordamp.ikonli.sampler.swing.Sampler'
+mainClassName = 'org.kordamp.ikonli.sampler.swing/org.kordamp.ikonli.sampler.swing.Sampler'
 
 dependencies {
     implementation project(':ikonli-core')

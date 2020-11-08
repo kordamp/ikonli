@@ -18,6 +18,7 @@
 module org.kordamp.ikonli.boxicons {
     requires org.kordamp.ikonli.core;
     requires static org.kordamp.jipsy;
+    requires static org.kordamp.jipsy.annotations;
     exports org.kordamp.ikonli.boxicons;
 
     provides org.kordamp.ikonli.IkonHandler

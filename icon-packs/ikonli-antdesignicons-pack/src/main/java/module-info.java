@@ -18,6 +18,7 @@
 module org.kordamp.ikonli.antdesignicons {
     requires org.kordamp.ikonli.core;
     requires static org.kordamp.jipsy;
+    requires static org.kordamp.jipsy.annotations;
     exports org.kordamp.ikonli.antdesignicons;
 
     provides org.kordamp.ikonli.IkonHandler

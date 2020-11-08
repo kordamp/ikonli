@@ -18,6 +18,7 @@
 module org.kordamp.ikonli.icomoon {
     requires org.kordamp.ikonli.core;
     requires static org.kordamp.jipsy;
+    requires static org.kordamp.jipsy.annotations;
     exports org.kordamp.ikonli.icomoon;
 
     provides org.kordamp.ikonli.IkonHandler

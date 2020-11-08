@@ -18,6 +18,7 @@
 module org.kordamp.ikonli.entypo {
     requires org.kordamp.ikonli.core;
     requires static org.kordamp.jipsy;
+    requires static org.kordamp.jipsy.annotations;
     exports org.kordamp.ikonli.entypo;
 
     provides org.kordamp.ikonli.IkonHandler

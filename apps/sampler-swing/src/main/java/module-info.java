@@ -15,7 +15,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-open module org.kordamp.ikonli.sampler.swing {
+module org.kordamp.ikonli.sampler.swing {
+    opens org.kordamp.ikonli.sampler.swing;
     requires java.desktop;
     requires org.kordamp.ikonli.core;
     requires org.kordamp.ikonli.swing;

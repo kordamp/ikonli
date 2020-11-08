@@ -18,6 +18,7 @@
 module org.kordamp.ikonli.elusive {
     requires org.kordamp.ikonli.core;
     requires static org.kordamp.jipsy;
+    requires static org.kordamp.jipsy.annotations;
     exports org.kordamp.ikonli.elusive;
 
     provides org.kordamp.ikonli.IkonHandler

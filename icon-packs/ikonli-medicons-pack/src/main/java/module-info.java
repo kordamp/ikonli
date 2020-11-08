@@ -18,6 +18,7 @@
 module org.kordamp.ikonli.medicons {
     requires org.kordamp.ikonli.core;
     requires static org.kordamp.jipsy;
+    requires static org.kordamp.jipsy.annotations;
     exports org.kordamp.ikonli.medicons;
 
     provides org.kordamp.ikonli.IkonHandler

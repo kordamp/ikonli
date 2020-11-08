@@ -18,6 +18,7 @@
 module org.kordamp.ikonli.ionicons {
     requires org.kordamp.ikonli.core;
     requires static org.kordamp.jipsy;
+    requires static org.kordamp.jipsy.annotations;
     exports org.kordamp.ikonli.ionicons;
 
     provides org.kordamp.ikonli.IkonHandler

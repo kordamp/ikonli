@@ -18,6 +18,7 @@
 module org.kordamp.ikonli.unicons {
     requires org.kordamp.ikonli.core;
     requires static org.kordamp.jipsy;
+    requires static org.kordamp.jipsy.annotations;
     exports org.kordamp.ikonli.unicons;
 
     provides org.kordamp.ikonli.IkonHandler

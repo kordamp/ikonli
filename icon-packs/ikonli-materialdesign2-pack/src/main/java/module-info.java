@@ -18,6 +18,7 @@
 module org.kordamp.ikonli.materialdesign2 {
     requires org.kordamp.ikonli.core;
     requires static org.kordamp.jipsy;
+    requires static org.kordamp.jipsy.annotations;
     exports org.kordamp.ikonli.materialdesign2;
 
     provides org.kordamp.ikonli.IkonHandler

@@ -18,6 +18,7 @@
 module org.kordamp.ikonli.simpleicons {
     requires org.kordamp.ikonli.core;
     requires static org.kordamp.jipsy;
+    requires static org.kordamp.jipsy.annotations;
     exports org.kordamp.ikonli.simpleicons;
 
     provides org.kordamp.ikonli.IkonHandler

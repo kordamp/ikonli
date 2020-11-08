@@ -18,6 +18,7 @@
 module org.kordamp.ikonli.fileicons {
     requires org.kordamp.ikonli.core;
     requires static org.kordamp.jipsy;
+    requires static org.kordamp.jipsy.annotations;
     exports org.kordamp.ikonli.fileicons;
 
     provides org.kordamp.ikonli.IkonHandler

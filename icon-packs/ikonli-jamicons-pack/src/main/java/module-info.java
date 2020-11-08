@@ -18,6 +18,7 @@
 module org.kordamp.ikonli.jam {
     requires org.kordamp.ikonli.core;
     requires static org.kordamp.jipsy;
+    requires static org.kordamp.jipsy.annotations;
     exports org.kordamp.ikonli.jam;
 
     provides org.kordamp.ikonli.IkonHandler
