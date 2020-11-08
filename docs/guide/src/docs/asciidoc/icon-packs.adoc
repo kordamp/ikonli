@@ -1198,6 +1198,32 @@ implementation '{project-group}:ikonli-simplelineicons-pack:{project-version}'
 </dependency>
 ----
 
+== Subway
+* Module: `org.kordamp.ikonli.subway`
+* Font version: {subwayVersion}
+* link:https://github.com/mariuszostrowski/subway[]
+* link:cheat-sheet-subway.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+implementation '{project-group}:ikonli-subway-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-subway-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
 == Themify
  * Module: `org.kordamp.ikonli.themify`
  * Font version: {themifyVersion}

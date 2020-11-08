@@ -1,4 +1,4 @@
-= Themify Icons
+= Themify
 
 ++++
 <link href='./css/themify-icons.min.css' rel='stylesheet'>

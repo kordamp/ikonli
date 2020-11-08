@@ -189,6 +189,7 @@ asciidoctor {
             createIconGenerationTask(packName: 'runestroicons', iconClassName: 'org.kordamp.ikonli.runestroicons.Runestroicons', iconName: 'ri'),
             createIconGenerationTask(packName: 'simpleicons', iconClassName: 'org.kordamp.ikonli.simpleicons.SimpleIcons', iconName: 'si'),
             createIconGenerationTask(packName: 'simplelineicons', iconClassName: 'org.kordamp.ikonli.simplelineicons.SimpleLineIcons', iconName: 'sil', shortNameSize: 4),
+            createIconGenerationTask(packName: 'subway', iconClassName: 'org.kordamp.ikonli.subway.Subway', iconName: 'subway', shortNameSize: 7),
             createIconGenerationTask(packName: 'themify', iconClassName: 'org.kordamp.ikonli.themify.Themify', iconName: 'ti', shortNameSize: 3),
             createIconGenerationTask(packName: 'typicons', iconClassName: 'org.kordamp.ikonli.typicons.Typicons', iconName: 'typcn', shortNameSize: 4),
             createIconGenerationTask(packName: 'unicons', iconClassName: 'org.kordamp.ikonli.unicons.UniconsLine', iconName: 'unil', shortNameSize: 5, classifier: 'line'),
@@ -249,6 +250,7 @@ asciidoctor {
             runestroiconsVersion   : project.runestroiconsVersion,
             simpleiconsVersion     : project.simpleiconsVersion,
             simplelineiconsVersion : project.simplelineiconsVersion,
+            subwayVersion          : project.subwayVersion,
             themifyVersion         : project.themifyVersion,
             typiconsVersion        : project.typiconsVersion,
             uniconsVersion         : project.uniconsVersion,
@@ -311,6 +313,7 @@ asciidoctor {
         from project(':ikonli-runestroicons-pack').file("src/main/resources/META-INF/resources/runestroicons/${runestroiconsVersion}")
         from project(':ikonli-simpleicons-pack').file("src/main/resources/META-INF/resources/simpleicons/${simpleiconsVersion}")
         from project(':ikonli-simplelineicons-pack').file("src/main/resources/META-INF/resources/simplelineicons/${simplelineiconsVersion}")
+        from project(':ikonli-subway-pack').file("src/main/resources/META-INF/resources/subway/${subwayVersion}")
         from project(':ikonli-themify-pack').file("src/main/resources/META-INF/resources/themify/${themifyVersion}")
         from project(':ikonli-typicons-pack').file("src/main/resources/META-INF/resources/typicons/${typiconsVersion}")
         from project(':ikonli-unicons-pack').file("src/main/resources/META-INF/resources/unicons/${uniconsVersion}")
