@@ -39,7 +39,8 @@ public class OcticonsIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/octicons/11.0.0/fonts/octicons.ttf";
+        return getClass().getResource("/META-INF/resources/octicons/11.0.0/fonts/octicons.ttf")
+            .toExternalForm();
     }
 
     @Override

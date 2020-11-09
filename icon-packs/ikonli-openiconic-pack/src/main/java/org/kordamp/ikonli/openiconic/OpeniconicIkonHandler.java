@@ -39,7 +39,8 @@ public class OpeniconicIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/openiconic/1.1.0/fonts/open-iconic.ttf";
+        return getClass().getResource("/META-INF/resources/openiconic/1.1.0/fonts/open-iconic.ttf")
+            .toExternalForm();
     }
 
     @Override

@@ -39,7 +39,8 @@ public class EvaiconsIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/evaicons/1.1.3/fonts/Evaicons.ttf";
+        return getClass().getResource("/META-INF/resources/evaicons/1.1.3/fonts/Evaicons.ttf")
+            .toExternalForm();
     }
 
     @Override

@@ -40,7 +40,8 @@ public class MaterialDesignHIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/materialdesignicons2/5.8.55/fonts/materialdesignicons-webfont.ttf";
+        return getClass().getResource("/META-INF/resources/materialdesignicons2/5.8.55/fonts/materialdesignicons-webfont.ttf")
+            .toExternalForm();
     }
 
     @Override

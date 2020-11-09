@@ -39,7 +39,8 @@ public class BoxiconsLogosIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/boxicons/2.0.7/fonts/boxicons.ttf";
+        return getClass().getResource("/META-INF/resources/boxicons/2.0.7/fonts/boxicons.ttf")
+            .toExternalForm();
     }
 
     @Override

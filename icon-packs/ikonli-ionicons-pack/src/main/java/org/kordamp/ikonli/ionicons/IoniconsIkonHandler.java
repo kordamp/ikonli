@@ -39,7 +39,8 @@ public class IoniconsIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/ionicons/2.0.1/fonts/ionicons.ttf";
+        return getClass().getResource("/META-INF/resources/ionicons/2.0.1/fonts/ionicons.ttf")
+            .toExternalForm();
     }
 
     @Override

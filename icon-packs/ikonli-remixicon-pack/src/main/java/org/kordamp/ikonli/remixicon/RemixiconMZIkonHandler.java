@@ -39,7 +39,8 @@ public class RemixiconMZIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/remixicon/2.5.0/fonts/remixicon.ttf";
+        return getClass().getResource("/META-INF/resources/remixicon/2.5.0/fonts/remixicon.ttf")
+            .toExternalForm();
     }
 
     @Override

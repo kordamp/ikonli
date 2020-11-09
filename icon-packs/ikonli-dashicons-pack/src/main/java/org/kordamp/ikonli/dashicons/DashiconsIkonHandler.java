@@ -39,7 +39,8 @@ public class DashiconsIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/dashicons/20200504/fonts/dashicons.ttf";
+        return getClass().getResource("/META-INF/resources/dashicons/20200504/fonts/dashicons.ttf")
+            .toExternalForm();
     }
 
     @Override

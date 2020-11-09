@@ -39,7 +39,8 @@ public class FileIconsIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/fileicons/2.1.44/fonts/File-Icons.ttf";
+        return getClass().getResource("/META-INF/resources/fileicons/2.1.44/fonts/File-Icons.ttf")
+            .toExternalForm();
     }
 
     @Override

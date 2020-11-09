@@ -39,7 +39,8 @@ public class FontelicoIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/fontelico/0.0/fonts/fontelico.ttf";
+        return getClass().getResource("/META-INF/resources/fontelico/0.0/fonts/fontelico.ttf")
+            .toExternalForm();
     }
 
     @Override

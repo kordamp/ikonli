@@ -39,7 +39,8 @@ public class WebsymbolsIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/websymbols/0.0/fonts/websymbols.ttf";
+        return getClass().getResource("/META-INF/resources/websymbols/0.0/fonts/websymbols.ttf")
+            .toExternalForm();
     }
 
     @Override

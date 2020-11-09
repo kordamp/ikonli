@@ -39,7 +39,8 @@ public class FluentUiRegularALIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/fluentui/1.1.74/fonts/FluentSystemIcons-Regular.ttf";
+        return getClass().getResource("/META-INF/resources/fluentui/1.1.74/fonts/FluentSystemIcons-Regular.ttf")
+            .toExternalForm();
     }
 
     @Override

@@ -39,7 +39,8 @@ public class JamIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/jam/3.0.0/fonts/Jam-Icons.ttf";
+        return getClass().getResource("/META-INF/resources/jam/3.0.0/fonts/Jam-Icons.ttf")
+            .toExternalForm();
     }
 
     @Override

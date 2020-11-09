@@ -39,7 +39,8 @@ public class FoundationIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/foundation/3.0/fonts/foundation-icons.ttf";
+        return getClass().getResource("/META-INF/resources/foundation/3.0/fonts/foundation-icons.ttf")
+            .toExternalForm();
     }
 
     @Override

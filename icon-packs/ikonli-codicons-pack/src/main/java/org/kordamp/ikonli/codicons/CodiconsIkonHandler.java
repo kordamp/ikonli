@@ -39,7 +39,8 @@ public class CodiconsIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/codicons/0.0.12/fonts/codicon.ttf";
+        return getClass().getResource("/META-INF/resources/codicons/0.0.12/fonts/codicon.ttf")
+            .toExternalForm();
     }
 
     @Override

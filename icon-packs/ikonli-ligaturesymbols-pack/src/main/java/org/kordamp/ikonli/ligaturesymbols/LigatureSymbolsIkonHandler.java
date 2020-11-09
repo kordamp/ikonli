@@ -39,7 +39,8 @@ public class LigatureSymbolsIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/ligaturesymbols/2.11/fonts/LigatureSymbols-2.11.ttf";
+        return getClass().getResource("/META-INF/resources/ligaturesymbols/2.11/fonts/LigatureSymbols-2.11.ttf")
+            .toExternalForm();
     }
 
     @Override

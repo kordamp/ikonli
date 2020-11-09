@@ -39,7 +39,8 @@ public class MakiIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/maki/0.5.0/fonts/maki.ttf";
+        return getClass().getResource("/META-INF/resources/maki/0.5.0/fonts/maki.ttf")
+            .toExternalForm();
     }
 
     @Override

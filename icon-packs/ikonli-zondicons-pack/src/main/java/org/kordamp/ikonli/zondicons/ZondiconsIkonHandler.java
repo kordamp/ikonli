@@ -39,7 +39,8 @@ public class ZondiconsIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/zondicons/20170712/fonts/Zondicons.ttf";
+        return getClass().getResource("/META-INF/resources/zondicons/20170712/fonts/Zondicons.ttf")
+            .toExternalForm();
     }
 
     @Override

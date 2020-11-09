@@ -39,7 +39,8 @@ public class FluentUiFilledALIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/fluentui/1.1.74/fonts/FluentSystemIcons-Filled.ttf";
+        return getClass().getResource("/META-INF/resources/fluentui/1.1.74/fonts/FluentSystemIcons-Filled.ttf")
+            .toExternalForm();
     }
 
     @Override

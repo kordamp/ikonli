@@ -34,7 +34,8 @@ public class CarboniconsIkonHandler extends org.kordamp.ikonli.AbstractIkonHandl
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/carbonicons/10.23.2/fonts/Carbon-Icons.ttf";
+        return getClass().getResource("/META-INF/resources/carbonicons/10.23.2/fonts/Carbon-Icons.ttf")
+            .toExternalForm();
     }
 
     @Override

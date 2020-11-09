@@ -39,7 +39,8 @@ public class AntDesignIconsOutlinedIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/antdesignicons/4.0.0/fonts/AntDesign-Icons-Outlined.ttf";
+        return getClass().getResource("/META-INF/resources/antdesignicons/4.0.0/fonts/AntDesign-Icons-Outlined.ttf")
+            .toExternalForm();
     }
 
     @Override

@@ -39,7 +39,8 @@ public class EntypoIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/entypo/1.0/fonts/Entypo.ttf";
+        return getClass().getResource("/META-INF/resources/entypo/1.0/fonts/Entypo.ttf")
+            .toExternalForm();
     }
 
     @Override

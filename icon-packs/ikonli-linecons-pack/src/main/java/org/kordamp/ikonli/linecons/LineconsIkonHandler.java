@@ -39,7 +39,8 @@ public class LineconsIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/linecons/0.0/fonts/linecons.ttf";
+        return getClass().getResource("/META-INF/resources/linecons/0.0/fonts/linecons.ttf")
+            .toExternalForm();
     }
 
     @Override

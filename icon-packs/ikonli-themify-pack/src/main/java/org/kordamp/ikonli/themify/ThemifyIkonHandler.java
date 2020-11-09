@@ -53,7 +53,8 @@ public class ThemifyIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/themify/1.0.1/fonts/themify.ttf";
+        return getClass().getResource("/META-INF/resources/themify/1.0.1/fonts/themify.ttf")
+            .toExternalForm();
     }
 
     @Override

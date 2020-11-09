@@ -39,7 +39,8 @@ public class BpmnIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/bpmn/0.10.0/fonts/bpmn.ttf";
+        return getClass().getResource("/META-INF/resources/bpmn/0.10.0/fonts/bpmn.ttf")
+            .toExternalForm();
     }
 
     @Override

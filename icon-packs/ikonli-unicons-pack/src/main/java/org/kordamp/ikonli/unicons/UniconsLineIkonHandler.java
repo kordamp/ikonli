@@ -39,7 +39,8 @@ public class UniconsLineIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/unicons/20201106/fonts/Unicons-Line.ttf";
+        return getClass().getResource("/META-INF/resources/unicons/20201106/fonts/Unicons-Line.ttf")
+            .toExternalForm();
     }
 
     @Override

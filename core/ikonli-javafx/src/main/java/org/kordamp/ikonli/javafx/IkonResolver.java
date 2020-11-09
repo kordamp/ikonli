@@ -32,11 +32,10 @@ public class IkonResolver extends AbstractIkonResolver {
     static {
         INSTANCE = new IkonResolver();
 
-        ClassLoader classLoader = IkonResolver.class.getClassLoader();
-        ServiceLoader<IkonHandler> loader = ServiceLoader.load(IkonHandler.class, classLoader);
+        ServiceLoader<IkonHandler> loader = ServiceLoader.load(IkonHandler.class.getModule().getLayer(), IkonHandler.class);
         for (IkonHandler handler : loader) {
             HANDLERS.add(handler);
-            handler.setFont(Font.loadFont(classLoader.getResource(handler.getFontResourcePath()).toExternalForm(), 16));
+            handler.setFont(Font.loadFont(handler.getFontResourcePath(), 16));
         }
     }
 

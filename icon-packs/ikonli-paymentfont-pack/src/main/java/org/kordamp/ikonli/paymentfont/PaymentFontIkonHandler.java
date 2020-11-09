@@ -39,7 +39,8 @@ public class PaymentFontIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/paymentfont/1.2.5/fonts/paymentfont-webfont.ttf";
+        return getClass().getResource("/META-INF/resources/paymentfont/1.2.5/fonts/paymentfont-webfont.ttf")
+            .toExternalForm();
     }
 
     @Override

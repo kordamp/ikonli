@@ -39,7 +39,8 @@ public class CaptainiconIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/captainicon/20140501/fonts/captainicon.ttf";
+        return getClass().getResource("/META-INF/resources/captainicon/20140501/fonts/captainicon.ttf")
+            .toExternalForm();
     }
 
     @Override

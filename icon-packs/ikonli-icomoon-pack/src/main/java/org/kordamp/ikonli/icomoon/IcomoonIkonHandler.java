@@ -39,7 +39,8 @@ public class IcomoonIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/icomoon/0.0/fonts/icomoon.ttf";
+        return getClass().getResource("/META-INF/resources/icomoon/0.0/fonts/icomoon.ttf")
+            .toExternalForm();
     }
 
     @Override

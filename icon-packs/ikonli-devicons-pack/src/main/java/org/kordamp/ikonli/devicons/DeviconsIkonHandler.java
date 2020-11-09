@@ -39,7 +39,8 @@ public class DeviconsIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/devicons/1.8.0/fonts/devicons.ttf";
+        return getClass().getResource("/META-INF/resources/devicons/1.8.0/fonts/devicons.ttf")
+            .toExternalForm();
     }
 
     @Override

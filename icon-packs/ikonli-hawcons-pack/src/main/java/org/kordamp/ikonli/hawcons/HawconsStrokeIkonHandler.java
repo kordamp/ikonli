@@ -39,7 +39,8 @@ public class HawconsStrokeIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/hawcons/20140708/fonts/hawconsstroke.ttf";
+        return getClass().getResource("/META-INF/resources/hawcons/20140708/fonts/hawconsstroke.ttf")
+            .toExternalForm();
     }
 
     @Override

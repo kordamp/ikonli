@@ -76,7 +76,8 @@ public class MyIconIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/myicon/1.2.3/fonts/myicon.ttf";     // <3>
+        return getClass().getResource("/META-INF/resources/myicon/1.2.3/fonts/myicon.ttf")
+                   .toExternalFrom();                                  // <3>
     }
 
     @Override

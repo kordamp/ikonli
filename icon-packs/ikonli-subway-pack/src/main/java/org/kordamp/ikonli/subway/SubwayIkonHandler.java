@@ -39,7 +39,8 @@ public class SubwayIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/subway/20201108/fonts/Subway-Icons.ttf";
+        return getClass().getResource("/META-INF/resources/subway/20201108/fonts/Subway-Icons.ttf")
+            .toExternalForm();
     }
 
     @Override

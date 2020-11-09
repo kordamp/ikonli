@@ -39,7 +39,8 @@ public class ElusiveIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/elusive/2.0/fonts/Elusive-Icons.ttf";
+        return getClass().getResource("/META-INF/resources/elusive/2.0/fonts/Elusive-Icons.ttf")
+            .toExternalForm();
     }
 
     @Override

@@ -39,7 +39,8 @@ public class Win10IkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/win10/1.0.1/fonts/icons8-win10.ttf";
+        return getClass().getResource("/META-INF/resources/win10/1.0.1/fonts/icons8-win10.ttf")
+            .toExternalForm();
     }
 
     @Override

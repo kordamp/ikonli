@@ -39,7 +39,8 @@ public class WeatherIconsIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/weathericons/2.0.10/fonts/weathericons-regular-webfont.ttf";
+        return getClass().getResource("/META-INF/resources/weathericons/2.0.10/fonts/weathericons-regular-webfont.ttf")
+            .toExternalForm();
     }
 
     @Override

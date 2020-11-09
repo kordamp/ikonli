@@ -39,7 +39,8 @@ public class TypiconsIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/typicons/2.0.7/fonts/typicons.ttf";
+        return getClass().getResource("/META-INF/resources/typicons/2.0.7/fonts/typicons.ttf")
+            .toExternalForm();
     }
 
     @Override

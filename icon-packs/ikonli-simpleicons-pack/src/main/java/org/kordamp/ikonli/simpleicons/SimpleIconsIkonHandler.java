@@ -39,7 +39,8 @@ public class SimpleIconsIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/simpleicons/3.12.2/fonts/Simple-Icons.ttf";
+        return getClass().getResource("/META-INF/resources/simpleicons/3.12.2/fonts/Simple-Icons.ttf")
+            .toExternalForm();
     }
 
     @Override

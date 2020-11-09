@@ -39,7 +39,8 @@ public class WhhgALIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/whhg/20201105/fonts/webhostinghub-glyphs.ttf";
+        return getClass().getResource("/META-INF/resources/whhg/20201105/fonts/webhostinghub-glyphs.ttf")
+            .toExternalForm();
     }
 
     @Override

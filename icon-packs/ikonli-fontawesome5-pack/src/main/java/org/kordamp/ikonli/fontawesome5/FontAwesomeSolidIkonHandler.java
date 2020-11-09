@@ -39,7 +39,8 @@ public class FontAwesomeSolidIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/fontawesome5/5.15.1/fonts/fa-solid-900.ttf";
+        return getClass().getResource("/META-INF/resources/fontawesome5/5.15.1/fonts/fa-solid-900.ttf")
+            .toExternalForm();
     }
 
     @Override

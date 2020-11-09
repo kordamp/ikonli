@@ -39,7 +39,8 @@ public class OciiconsIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/ociicons/1.0/fonts/ociicons.ttf";
+        return getClass().getResource("/META-INF/resources/ociicons/1.0/fonts/ociicons.ttf")
+            .toExternalForm();
     }
 
     @Override

@@ -39,7 +39,8 @@ public class MediconsIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/medicons/20170612/fonts/webfont-medical-icons.ttf";
+        return getClass().getResource("/META-INF/resources/medicons/20170612/fonts/webfont-medical-icons.ttf")
+            .toExternalForm();
     }
 
     @Override

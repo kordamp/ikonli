@@ -39,7 +39,8 @@ public class LineAwesomeBrandsIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/lineawesome/1.3.0/fonts/la-brands-400.ttf";
+        return getClass().getResource("/META-INF/resources/lineawesome/1.3.0/fonts/la-brands-400.ttf")
+            .toExternalForm();
     }
 
     @Override

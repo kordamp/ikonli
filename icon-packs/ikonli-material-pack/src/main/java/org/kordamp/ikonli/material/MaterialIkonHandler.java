@@ -39,7 +39,8 @@ public class MaterialIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/material/50/fonts/MaterialIcons-Regular.ttf";
+        return getClass().getResource("/META-INF/resources/material/50/fonts/MaterialIcons-Regular.ttf")
+            .toExternalForm();
     }
 
     @Override

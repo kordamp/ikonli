@@ -39,7 +39,8 @@ public class UniconsMonochromeIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/unicons/20201106/fonts/Unicons-Monochrome.ttf";
+        return getClass().getResource("/META-INF/resources/unicons/20201106/fonts/Unicons-Monochrome.ttf")
+            .toExternalForm();
     }
 
     @Override

@@ -39,7 +39,8 @@ public class MapiconsIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/mapicons/3.0.0/fonts/map-icons.ttf";
+        return getClass().getResource("/META-INF/resources/mapicons/3.0.0/fonts/map-icons.ttf")
+            .toExternalForm();
     }
 
     @Override

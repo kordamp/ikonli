@@ -40,7 +40,8 @@ public class CoreUiBrandsIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/coreui/2.0.0-beta.5/fonts/CoreUI-Icons-Brand.ttf";
+        return getClass().getResource("/META-INF/resources/coreui/2.0.0-beta.5/fonts/CoreUI-Icons-Brand.ttf")
+            .toExternalForm();
     }
 
     @Override

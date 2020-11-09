@@ -39,7 +39,8 @@ public class FeatherIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/feather/4.28/fonts/feather.ttf";
+        return getClass().getResource("/META-INF/resources/feather/4.28/fonts/feather.ttf")
+            .toExternalForm();
     }
 
     @Override

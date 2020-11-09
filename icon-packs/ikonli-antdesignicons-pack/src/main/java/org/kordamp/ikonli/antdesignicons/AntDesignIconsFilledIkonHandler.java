@@ -39,7 +39,8 @@ public class AntDesignIconsFilledIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/antdesignicons/4.0.0/fonts/AntDesign-Icons-Filled.ttf";
+        return getClass().getResource("/META-INF/resources/antdesignicons/4.0.0/fonts/AntDesign-Icons-Filled.ttf")
+            .toExternalForm();
     }
 
     @Override

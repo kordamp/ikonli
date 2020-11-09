@@ -39,7 +39,8 @@ public class FontAwesomeIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/fontawesome/4.7.0/fonts/fontawesome-webfont.ttf";
+        return getClass().getResource("/META-INF/resources/fontawesome/4.7.0/fonts/fontawesome-webfont.ttf")
+            .toExternalForm();
     }
 
     @Override

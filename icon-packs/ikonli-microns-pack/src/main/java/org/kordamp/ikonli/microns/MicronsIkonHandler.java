@@ -39,7 +39,8 @@ public class MicronsIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/microns/1.0.8/fonts/microns.ttf";
+        return getClass().getResource("/META-INF/resources/microns/1.0.8/fonts/microns.ttf")
+            .toExternalForm();
     }
 
     @Override

@@ -39,7 +39,8 @@ public class PrestaShopIconsIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/prestashopicons/0.8.0/fonts/prestashop-icon-font.ttf";
+        return getClass().getResource("/META-INF/resources/prestashopicons/0.8.0/fonts/prestashop-icon-font.ttf")
+            .toExternalForm();
     }
 
     @Override

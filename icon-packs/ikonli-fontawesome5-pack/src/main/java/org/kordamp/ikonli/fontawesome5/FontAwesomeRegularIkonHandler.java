@@ -39,7 +39,8 @@ public class FontAwesomeRegularIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontResourcePath() {
-        return "META-INF/resources/fontawesome5/5.15.1/fonts/fa-regular-400.ttf";
+        return getClass().getResource("/META-INF/resources/fontawesome5/5.15.1/fonts/fa-regular-400.ttf")
+            .toExternalForm();
     }
 
     @Override
