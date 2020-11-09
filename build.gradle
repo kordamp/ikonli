@@ -109,12 +109,18 @@ subprojects { subproj ->
             exclude '**/*.md'
             exclude '**/*.txt'
         }
+    }
+}
 
-        subproj.gradle.addBuildListener(new BuildAdapter() {
-            @Override
-            void projectsEvaluated(Gradle gradle) {
-                subproj.tasks.withType(Jar).each { Jar jar ->
+project.rootProject.gradle.addBuildListener(new BuildAdapter() {
+    @Override
+    void projectsEvaluated(Gradle gradle) {
+        gradle.rootProject.childProjects.values()
+            .grep({ p -> p.name.endsWith('-pack') })
+            .each { p ->
+                p.tasks.withType(Jar).each { Jar jar ->
                     jar.configure {
+                        exclude '**/*.css'
                         exclude '**/*.otf'
                         exclude '**/*.eot'
                         exclude '**/*.svg'
@@ -123,6 +129,5 @@ subprojects { subproj ->
                     }
                 }
             }
-        })
     }
-}
+})
