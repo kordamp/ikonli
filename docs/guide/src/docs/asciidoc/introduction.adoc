@@ -29,3 +29,5 @@ If you are upgrading to `12.0.0` or later be aware of the following changes:
 * The `icon-hawkconsfilled-pack` and `icon-hawkconsstroke-pack` icon packs were merged into a single `icon-hawkcons-pack` icon pack.
 * The method `getCode()` of `org.kordamp.ikonli.Ikon` now returns `int` instead of `char`. This change is needed to accomodate
 icon packs whose icon codes are larger than a single char, such as MaterialDesign.
+* The interface `org.kordamp.ikonli.IkonHandler` no longer has a method `String getFontResourcePath()`; it has two new
+methods instead: `URL getFontResource()` and `InputStream getFontResourceAsStream()`.

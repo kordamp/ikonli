@@ -20,9 +20,7 @@ package org.kordamp.ikonli.swing;
 import org.kordamp.ikonli.AbstractIkonResolver;
 import org.kordamp.ikonli.IkonHandler;
 
-import java.awt.Font;
-import java.awt.FontFormatException;
-import java.awt.GraphicsEnvironment;
+import java.awt.*;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ServiceLoader;
@@ -36,13 +34,12 @@ public class IkonResolver extends AbstractIkonResolver {
     static {
         INSTANCE = new IkonResolver();
 
-        ClassLoader classLoader = IkonResolver.class.getClassLoader();
-        ServiceLoader<IkonHandler> loader = ServiceLoader.load(IkonHandler.class, classLoader);
+        ServiceLoader<IkonHandler> loader = ServiceLoader.load(IkonHandler.class.getModule().getLayer(), IkonHandler.class);
         for (IkonHandler handler : loader) {
             HANDLERS.add(handler);
 
             try {
-                InputStream stream = classLoader.getResourceAsStream(handler.getFontResourcePath());
+                InputStream stream = handler.getFontResourceAsStream();
                 Font font = Font.createFont(Font.TRUETYPE_FONT, stream);
                 GraphicsEnvironment.getLocalGraphicsEnvironment().registerFont(font);
                 stream.close();

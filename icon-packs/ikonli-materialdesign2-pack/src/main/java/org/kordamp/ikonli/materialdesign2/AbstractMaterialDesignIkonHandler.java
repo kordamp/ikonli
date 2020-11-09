@@ -15,12 +15,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.kordamp.ikonli.mapicons;
+package org.kordamp.ikonli.materialdesign2;
 
 import org.kordamp.ikonli.AbstractIkonHandler;
-import org.kordamp.ikonli.Ikon;
-import org.kordamp.ikonli.IkonHandler;
-import org.kordamp.jipsy.ServiceProviderFor;
 
 import java.io.InputStream;
 import java.net.URL;
@@ -28,19 +25,8 @@ import java.net.URL;
 /**
  * @author Andres Almiray
  */
-@ServiceProviderFor(IkonHandler.class)
-public class MapiconsIkonHandler extends AbstractIkonHandler {
-    private static final String FONT_RESOURCE = "/META-INF/resources/mapicons/3.0.0/fonts/map-icons.ttf";
-
-    @Override
-    public boolean supports(String description) {
-        return description != null && description.startsWith("map-icon-");
-    }
-
-    @Override
-    public Ikon resolve(String description) {
-        return Mapicons.findByDescription(description);
-    }
+public abstract class AbstractMaterialDesignIkonHandler extends AbstractIkonHandler {
+    private static final String FONT_RESOURCE = "/META-INF/resources/materialdesignicons2/5.8.55/fonts/materialdesignicons-webfont.ttf";
 
     @Override
     public URL getFontResource() {
@@ -54,6 +40,7 @@ public class MapiconsIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontFamily() {
-        return "map-icons";
+        return "Material Design Icons";
     }
 }
+

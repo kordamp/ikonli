@@ -17,6 +17,9 @@
  */
 package org.kordamp.ikonli;
 
+import java.io.InputStream;
+import java.net.URL;
+
 /**
  * @author Andres Almiray
  */
@@ -25,7 +28,9 @@ public interface IkonHandler {
 
     Ikon resolve(String description);
 
-    String getFontResourcePath();
+    URL getFontResource();
+
+    InputStream getFontResourceAsStream();
 
     String getFontFamily();
 

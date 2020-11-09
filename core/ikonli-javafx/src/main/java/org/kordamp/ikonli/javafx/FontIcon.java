@@ -95,6 +95,7 @@ public class FontIcon extends Text implements Icon {
         setIconCode(iconCode);
     }
 
+    @Override
     public String toString() {
         Ikon iconCode = getIconCode();
         return (iconCode != null ? iconCode.getDescription() : "<undef>") + ":" + getIconSize() + ":" + getIconColor();
@@ -233,6 +234,7 @@ public class FontIcon extends Text implements Icon {
         resolvePaint(iconCode, parts);
     }
 
+    @Override
     public List<CssMetaData<? extends Styleable, ?>> getCssMetaData() {
         return FontIcon.getClassCssMetaData();
     }

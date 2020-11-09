@@ -61,9 +61,13 @@ import org.kordamp.ikonli.AbstractIkonHandler;
 import org.kordamp.ikonli.Ikon;
 import org.kordamp.ikonli.IkonHandler;
 import org.kordamp.jipsy.ServiceProviderFor;
+import java.io.InputStream;
+import java.net.URL;
 
 @ServiceProviderFor(IkonHandler.class)                                 // <1>
 public class MyIconIkonHandler extends AbstractIkonHandler {
+    private static final String FONT_RESOURCE = "/META-INF/resources/myicon/1.2.3/fonts/myicon.ttf";
+
     @Override
     public boolean supports(String description) {
         return description != null && description.startsWith("my-");   // <2>
@@ -75,9 +79,13 @@ public class MyIconIkonHandler extends AbstractIkonHandler {
     }
 
     @Override
-    public String getFontResourcePath() {
-        return getClass().getResource("/META-INF/resources/myicon/1.2.3/fonts/myicon.ttf")
-                   .toExternalFrom();                                  // <3>
+    public URL getFontResource() {
+        return getClass().getResource(FONT_RESOURCE);                  // <3>
+    }
+
+    @Override
+    public InputStream getFontResourceAsStream() {
+        return getClass().getResourceAsStream(FONT_RESOURCE);          // <3>
     }
 
     @Override
@@ -88,7 +96,7 @@ public class MyIconIkonHandler extends AbstractIkonHandler {
 ----
 <1> Generates an entry at `META-INF/services/org.kordamp.ikonli.IkonHandler`.
 <2> Note the use of the icon prefix.
-<3> Location of the font resource.
+<3> Locate the font resource.
 <4> Name of the font family.
 
 The use of the `@ServiceProviderFor` annotation requires having link:https://github.com/kordamp/jipsy/[jipsy] configured

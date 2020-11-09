@@ -19,11 +19,16 @@ package org.kordamp.ikonli;
 
 import org.kordamp.jipsy.ServiceProviderFor;
 
+import java.io.InputStream;
+import java.net.URL;
+
 /**
  * @author Andres Almiray
  */
 @ServiceProviderFor(IkonHandler.class)
 public class IkonliIkonResolver extends AbstractIkonHandler {
+    private static final String FONT_RESOURCE = "/META-INF/resources/ikonli/0.0.0/fonts/ikonli.ttf";
+
     @Override
     public boolean supports(String description) {
         return description != null && description.startsWith("ikn-");
@@ -35,8 +40,13 @@ public class IkonliIkonResolver extends AbstractIkonHandler {
     }
 
     @Override
-    public String getFontResourcePath() {
-        return "META-INF/resources/ikonli/0.0.0/fonts/ikonli.ttf";
+    public URL getFontResource() {
+        return getClass().getResource(FONT_RESOURCE);
+    }
+
+    @Override
+    public InputStream getFontResourceAsStream() {
+        return getClass().getResourceAsStream(FONT_RESOURCE);
     }
 
     @Override

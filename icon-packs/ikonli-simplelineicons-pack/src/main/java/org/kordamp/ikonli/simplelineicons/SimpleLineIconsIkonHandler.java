@@ -22,11 +22,16 @@ import org.kordamp.ikonli.Ikon;
 import org.kordamp.ikonli.IkonHandler;
 import org.kordamp.jipsy.ServiceProviderFor;
 
+import java.io.InputStream;
+import java.net.URL;
+
 /**
  * @author Andres Almiray
  */
 @ServiceProviderFor(IkonHandler.class)
 public class SimpleLineIconsIkonHandler extends AbstractIkonHandler {
+    private static final String FONT_RESOURCE = "/META-INF/resources/simplelineicons/2.5.4/fonts/Simple-Line-Icons.ttf";
+
     @Override
     public boolean supports(String description) {
         return description != null && description.startsWith("sil-");
@@ -38,9 +43,13 @@ public class SimpleLineIconsIkonHandler extends AbstractIkonHandler {
     }
 
     @Override
-    public String getFontResourcePath() {
-        return getClass().getResource("/META-INF/resources/simplelineicons/2.5.4/fonts/Simple-Line-Icons.ttf")
-            .toExternalForm();
+    public URL getFontResource() {
+        return getClass().getResource(FONT_RESOURCE);
+    }
+
+    @Override
+    public InputStream getFontResourceAsStream() {
+        return getClass().getResourceAsStream(FONT_RESOURCE);
     }
 
     @Override

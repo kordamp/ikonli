@@ -22,11 +22,16 @@ import org.kordamp.ikonli.Ikon;
 import org.kordamp.ikonli.IkonHandler;
 import org.kordamp.jipsy.ServiceProviderFor;
 
+import java.io.InputStream;
+import java.net.URL;
+
 /**
  * @author Andres Almiray
  */
 @ServiceProviderFor(IkonHandler.class)
 public class MicronsIkonHandler extends AbstractIkonHandler {
+    private static final String FONT_RESOURCE = "/META-INF/resources/microns/1.0.8/fonts/microns.ttf";
+
     @Override
     public boolean supports(String description) {
         return description != null && description.startsWith("mu-");
@@ -38,9 +43,13 @@ public class MicronsIkonHandler extends AbstractIkonHandler {
     }
 
     @Override
-    public String getFontResourcePath() {
-        return getClass().getResource("/META-INF/resources/microns/1.0.8/fonts/microns.ttf")
-            .toExternalForm();
+    public URL getFontResource() {
+        return getClass().getResource(FONT_RESOURCE);
+    }
+
+    @Override
+    public InputStream getFontResourceAsStream() {
+        return getClass().getResourceAsStream(FONT_RESOURCE);
     }
 
     @Override

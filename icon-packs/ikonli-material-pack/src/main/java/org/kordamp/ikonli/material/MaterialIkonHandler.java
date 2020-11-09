@@ -22,11 +22,16 @@ import org.kordamp.ikonli.Ikon;
 import org.kordamp.ikonli.IkonHandler;
 import org.kordamp.jipsy.ServiceProviderFor;
 
+import java.io.InputStream;
+import java.net.URL;
+
 /**
  * @author Andres Almiray
  */
 @ServiceProviderFor(IkonHandler.class)
 public class MaterialIkonHandler extends AbstractIkonHandler {
+    private static final String FONT_RESOURCE = "/META-INF/resources/material/50/fonts/MaterialIcons-Regular.ttf";
+
     @Override
     public boolean supports(String description) {
         return description != null && description.startsWith("gmi-");
@@ -38,9 +43,13 @@ public class MaterialIkonHandler extends AbstractIkonHandler {
     }
 
     @Override
-    public String getFontResourcePath() {
-        return getClass().getResource("/META-INF/resources/material/50/fonts/MaterialIcons-Regular.ttf")
-            .toExternalForm();
+    public URL getFontResource() {
+        return getClass().getResource(FONT_RESOURCE);
+    }
+
+    @Override
+    public InputStream getFontResourceAsStream() {
+        return getClass().getResourceAsStream(FONT_RESOURCE);
     }
 
     @Override

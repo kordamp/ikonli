@@ -22,11 +22,16 @@ import org.kordamp.ikonli.Ikon;
 import org.kordamp.ikonli.IkonHandler;
 import org.kordamp.jipsy.ServiceProviderFor;
 
+import java.io.InputStream;
+import java.net.URL;
+
 /**
  * @author Loïc Sculier aka typhon0
  */
 @ServiceProviderFor(IkonHandler.class)
 public class PaymentFontIkonHandler extends AbstractIkonHandler {
+    private static final String FONT_RESOURCE = "/META-INF/resources/paymentfont/1.2.5/fonts/paymentfont-webfont.ttf";
+
     @Override
     public boolean supports(String description) {
         return description != null && description.startsWith("pf-");
@@ -38,9 +43,13 @@ public class PaymentFontIkonHandler extends AbstractIkonHandler {
     }
 
     @Override
-    public String getFontResourcePath() {
-        return getClass().getResource("/META-INF/resources/paymentfont/1.2.5/fonts/paymentfont-webfont.ttf")
-            .toExternalForm();
+    public URL getFontResource() {
+        return getClass().getResource(FONT_RESOURCE);
+    }
+
+    @Override
+    public InputStream getFontResourceAsStream() {
+        return getClass().getResourceAsStream(FONT_RESOURCE);
     }
 
     @Override

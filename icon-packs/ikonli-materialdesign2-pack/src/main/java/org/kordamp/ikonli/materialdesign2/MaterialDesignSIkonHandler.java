@@ -15,10 +15,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package org.kordamp.ikonli.materialdesign2;
 
-import org.kordamp.ikonli.AbstractIkonHandler;
 import org.kordamp.ikonli.Ikon;
 import org.kordamp.ikonli.IkonHandler;
 import org.kordamp.jipsy.ServiceProviderFor;
@@ -27,7 +25,7 @@ import org.kordamp.jipsy.ServiceProviderFor;
  * @author Andres Almiray
  */
 @ServiceProviderFor(IkonHandler.class)
-public class MaterialDesignSIkonHandler extends AbstractIkonHandler {
+public class MaterialDesignSIkonHandler extends AbstractMaterialDesignIkonHandler {
     @Override
     public boolean supports(String description) {
         return description != null && description.startsWith("mdi2s-");
@@ -36,17 +34,6 @@ public class MaterialDesignSIkonHandler extends AbstractIkonHandler {
     @Override
     public Ikon resolve(String description) {
         return MaterialDesignS.findByDescription(description);
-    }
-
-    @Override
-    public String getFontResourcePath() {
-        return getClass().getResource("/META-INF/resources/materialdesignicons2/5.8.55/fonts/materialdesignicons-webfont.ttf")
-            .toExternalForm();
-    }
-
-    @Override
-    public String getFontFamily() {
-        return "Material Design Icons";
     }
 }
 
