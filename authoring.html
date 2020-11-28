@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.10">
+<title>Authoring</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body id="_authoring" class="book toc2 toc-left">
+<div id="header">
+<h1>Authoring</h1>
+<div class="details">
+<span id="revnumber">version 12.0.0</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_define_an_ikon_class">1. Define an Ikon class</a></li>
+<li><a href="#_define_an_ikon_handler">2. Define an Ikon handler</a></li>
+<li><a href="#_define_an_ikon_provider">3. Define an Ikon provider</a></li>
+<li><a href="#_configure_the_module_descriptor_optional">4. Configure the module descriptor (Optional)</a></li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Follow these steps to create and register custom icons.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_define_an_ikon_class"><a class="anchor" href="#_define_an_ikon_class"></a>1. Define an Ikon class</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Create an Enum that implements the <code>org.kordamp.ikonli.Ikon</code> type. Each enum entry should define
+the icon&#8217;s description and code. Make sure to use a unique prefix in the description, for example</p>
+</div>
+<div class="listingblock">
+<div class="title">MyIcon.java</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="keyword">package</span> <span class="namespace">com.acme.mine</span>;
+
+<span class="keyword">import</span> <span class="include">org.kordamp.ikonli.Ikon</span>;
+
+<span class="directive">public</span> <span class="type">enum</span> MyIcon <span class="directive">implements</span> Ikon {
+    ICON_NAME(<span class="string"><span class="delimiter">&quot;</span><span class="content">my-icon-name</span><span class="delimiter">&quot;</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">\ue600</span><span class="delimiter">'</span></span>);
+
+    <span class="directive">public</span> <span class="directive">static</span> MyIcon findByDescription(<span class="predefined-type">String</span> description) {
+        <span class="keyword">for</span> (MyIcon font : values()) {
+            <span class="keyword">if</span> (font.getDescription().equals(description)) {
+                <span class="keyword">return</span> font;
+            }
+        }
+        <span class="keyword">throw</span> <span class="keyword">new</span> <span class="exception">IllegalArgumentException</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">Icon description '</span><span class="delimiter">&quot;</span></span> + description + <span class="string"><span class="delimiter">&quot;</span><span class="content">' is invalid!</span><span class="delimiter">&quot;</span></span>);
+    }
+
+    <span class="directive">private</span> <span class="predefined-type">String</span> description;
+    <span class="directive">private</span> <span class="type">int</span> code;
+
+    MyIcon(<span class="predefined-type">String</span> description, <span class="type">int</span> code) {
+        <span class="local-variable">this</span>.description = description;
+        <span class="local-variable">this</span>.code = code;
+    }
+
+    <span class="annotation">@Override</span>
+    <span class="directive">public</span> <span class="predefined-type">String</span> getDescription() {
+        <span class="keyword">return</span> description;
+    }
+
+    <span class="annotation">@Override</span>
+    <span class="directive">public</span> <span class="type">int</span> getCode() {
+        <span class="keyword">return</span> code;
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_define_an_ikon_handler"><a class="anchor" href="#_define_an_ikon_handler"></a>2. Define an Ikon handler</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Implement the <code>org.kordamp.ikonli.IkonHandler</code> interface.</p>
+</div>
+<div class="listingblock">
+<div class="title">MyIconIkonHandler.java</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="keyword">package</span> <span class="namespace">com.acme.mine</span>;
+
+<span class="keyword">import</span> <span class="include">org.kordamp.ikonli.AbstractIkonHandler</span>;
+<span class="keyword">import</span> <span class="include">org.kordamp.ikonli.Ikon</span>;
+<span class="keyword">import</span> <span class="include">org.kordamp.ikonli.IkonHandler</span>;
+<span class="keyword">import</span> <span class="include">org.kordamp.jipsy.ServiceProviderFor</span>;
+<span class="keyword">import</span> <span class="include">java.io.InputStream</span>;
+<span class="keyword">import</span> <span class="include">java.net.URL</span>;
+
+<span class="annotation">@ServiceProviderFor</span>(IkonHandler.class)                                 <i class="conum" data-value="1"></i><b>(1)</b>
+<span class="directive">public</span> <span class="type">class</span> <span class="class">MyIconIkonHandler</span> <span class="directive">extends</span> AbstractIkonHandler {
+    <span class="directive">private</span> <span class="directive">static</span> <span class="directive">final</span> <span class="predefined-type">String</span> FONT_RESOURCE = <span class="string"><span class="delimiter">&quot;</span><span class="content">/META-INF/resources/myicon/1.2.3/fonts/myicon.ttf</span><span class="delimiter">&quot;</span></span>;
+
+    <span class="annotation">@Override</span>
+    <span class="directive">public</span> <span class="type">boolean</span> supports(<span class="predefined-type">String</span> description) {
+        <span class="keyword">return</span> description != <span class="predefined-constant">null</span> &amp;&amp; description.startsWith(<span class="string"><span class="delimiter">&quot;</span><span class="content">my-</span><span class="delimiter">&quot;</span></span>);   <i class="conum" data-value="2"></i><b>(2)</b>
+    }
+
+    <span class="annotation">@Override</span>
+    <span class="directive">public</span> Ikon resolve(<span class="predefined-type">String</span> description) {
+        <span class="keyword">return</span> MyIcon.findByDescription(description);
+    }
+
+    <span class="annotation">@Override</span>
+    <span class="directive">public</span> <span class="predefined-type">URL</span> getFontResource() {
+        <span class="keyword">return</span> getClass().getResource(FONT_RESOURCE);                  <i class="conum" data-value="3"></i><b>(3)</b>
+    }
+
+    <span class="annotation">@Override</span>
+    <span class="directive">public</span> <span class="predefined-type">InputStream</span> getFontResourceAsStream() {
+        <span class="keyword">return</span> getClass().getResourceAsStream(FONT_RESOURCE);          <i class="conum" data-value="3"></i><b>(3)</b>
+    }
+
+    <span class="annotation">@Override</span>
+    <span class="directive">public</span> <span class="predefined-type">String</span> getFontFamily() {
+        <span class="keyword">return</span> <span class="string"><span class="delimiter">&quot;</span><span class="content">MyIcon-Font</span><span class="delimiter">&quot;</span></span>;                                          <i class="conum" data-value="4"></i><b>(4)</b>
+    }
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Generates an entry at <code>META-INF/services/org.kordamp.ikonli.IkonHandler</code>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Note the use of the icon prefix.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Locate the font resource.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Name of the font family.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The use of the <code>@ServiceProviderFor</code> annotation requires having <a href="https://github.com/kordamp/jipsy/">jipsy</a> configured
+as an annotation processor. You may skip this dependency and manually create the service file yourself. You must provide
+a service entry if the icon is to be consumed in the classpath, as not everyone uses the modulepath.</p>
+</div>
+<div class="listingblock">
+<div class="title">META-INF/services/org.kordamp.ikonli.IkonHandler</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java">com.acme.mine.MyIconIkonHandler</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_define_an_ikon_provider"><a class="anchor" href="#_define_an_ikon_provider"></a>3. Define an Ikon provider</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Implement the <code>org.kordamp.ikonli.IkonProvider</code> interface.</p>
+</div>
+<div class="listingblock">
+<div class="title">MyIconIkonProvider.java</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="keyword">package</span> <span class="namespace">com.acme.mine</span>;
+
+<span class="keyword">import</span> <span class="include">org.kordamp.ikonli.IkonProvider</span>;
+<span class="keyword">import</span> <span class="include">org.kordamp.jipsy.ServiceProviderFor</span>;
+
+<span class="annotation">@ServiceProviderFor</span>(IkonProvider.class)                             <i class="conum" data-value="1"></i><b>(1)</b>
+<span class="directive">public</span> <span class="type">class</span> <span class="class">MyIconIkonProvider</span> <span class="directive">implements</span> IkonProvider&lt;MyIcon&gt; {
+    <span class="annotation">@Override</span>
+    <span class="directive">public</span> <span class="predefined-type">Class</span>&lt;MyIcon&gt; getIkon() {
+        <span class="keyword">return</span> MyIcon.class;
+    }
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Generates an entry at <code>META-INF/services/org.kordamp.ikonli.IkonProvider</code>.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The use of the <code>@ServiceProviderFor</code> annotation requires having <a href="https://github.com/kordamp/jipsy/">jipsy</a> configured
+as an annotation processor. You may skip this dependency and manually create the service file yourself. You must provide
+a service entry if the icon is to be consumed in the classpath, as not everyone uses the modulepath.</p>
+</div>
+<div class="listingblock">
+<div class="title">META-INF/services/org.kordamp.ikonli.IkonProvider</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java">com.acme.mine.MyIconIkonProvider</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_configure_the_module_descriptor_optional"><a class="anchor" href="#_configure_the_module_descriptor_optional"></a>4. Configure the module descriptor (Optional)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you&#8217;re building a Java module then you must register the previous implementations in a module descriptor</p>
+</div>
+<div class="listingblock">
+<div class="title">module-info.java</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java">module com.acme.mine {
+    requires org.kordamp.ikonli.core;
+    requires <span class="directive">static</span> org.kordamp.jipsy;                    <i class="conum" data-value="1"></i><b>(1)</b>
+    exports com.acme.mine;
+
+    provides org.kordamp.ikonli.IkonHandler
+        with com.acme.mine.MyIconIkonHandler;
+    provides org.kordamp.ikonli.IkonProvider
+        with com.acme.mine.MyIconIkonProvider;
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Needed only if you use <a href="https://github.com/kordamp/jipsy/">jipsy</a>.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Version 12.0.0<br>
+Last updated 2020-11-09 16:07:22 +0100
+</div>
+</div>
+<link rel="stylesheet" href="./coderay-asciidoctor.css">
+</body>
+</html>

@@ -14,7 +14,7 @@
 <div id="header">
 <h1>Usage</h1>
 <div class="details">
-<span id="revnumber">version 11.5.0</span>
+<span id="revnumber">version 12.0.0</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
@@ -29,7 +29,8 @@
 <li><a href="#_installing_2">2.1. Installing</a></li>
 </ul>
 </li>
-<li><a href="#_creating_a_fatjar">3. Creating a FatJAR</a></li>
+<li><a href="#_creating_a_fat_jar">3. Creating a Fat JAR</a></li>
+<li><a href="#_bom">4. BOM</a></li>
 </ul>
 </div>
 </div>
@@ -38,7 +39,7 @@
 <h2 id="_swing"><a class="anchor" href="#_swing"></a>1. Swing</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The <code>ikonli-swing:11.5.0</code> JAR provides a new Icon class: <code>{api_link_fonticon_swing}</code>.
+<p>The <code>ikonli-swing:12.0.0</code> JAR provides a new Icon class: <code>{api_link_fonticon_swing}</code>.
 You may use this class with any Swing component that supports an Icon property.</p>
 </div>
 <div class="sect2">
@@ -51,7 +52,7 @@ You may use this class with any Swing component that supports an Icon property.<
 }
 
 dependencies {
-    compile 'org.kordamp.ikonli:ikonli-swing:11.5.0'
+    implementation 'org.kordamp.ikonli:ikonli-swing:12.0.0'
 }</code></pre>
 </div>
 </div>
@@ -62,7 +63,7 @@ dependencies {
     <span class="tag">&lt;dependency&gt;</span>
         <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
         <span class="tag">&lt;artifactId&gt;</span>ikonli-swing<span class="tag">&lt;/artifactId&gt;</span>
-        <span class="tag">&lt;version&gt;</span>11.5.0<span class="tag">&lt;/version&gt;</span>
+        <span class="tag">&lt;version&gt;</span>12.0.0<span class="tag">&lt;/version&gt;</span>
     <span class="tag">&lt;/dependency&gt;</span>
 <span class="tag">&lt;/dependencies&gt;</span></code></pre>
 </div>
@@ -74,7 +75,7 @@ dependencies {
 <h2 id="_javafx"><a class="anchor" href="#_javafx"></a>2. JavaFX</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The <code>ikonli-javafx:11.5.0</code> JAR provides a new Node class: <code>{api_link_fonticon_javafx}</code>.
+<p>The <code>ikonli-javafx:12.0.0</code> JAR provides a new Node class: <code>{api_link_fonticon_javafx}</code>.
 You may use this class with any JavaFX control that accepts a graphic property. You may also use the icon directly as
 it is a subclass of <code>javafx.scene.text.Text</code>. The icon class can be used inside an FXML file too.</p>
 </div>
@@ -233,7 +234,7 @@ in the following example</p>
 }
 
 dependencies {
-    compile 'org.kordamp.ikonli:ikonli-javafx:11.5.0'
+    implementation 'org.kordamp.ikonli:ikonli-javafx:12.0.0'
 }</code></pre>
 </div>
 </div>
@@ -244,7 +245,7 @@ dependencies {
     <span class="tag">&lt;dependency&gt;</span>
         <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
         <span class="tag">&lt;artifactId&gt;</span>ikonli-javafx<span class="tag">&lt;/artifactId&gt;</span>
-        <span class="tag">&lt;version&gt;</span>11.5.0<span class="tag">&lt;/version&gt;</span>
+        <span class="tag">&lt;version&gt;</span>12.0.0<span class="tag">&lt;/version&gt;</span>
     <span class="tag">&lt;/dependency&gt;</span>
 <span class="tag">&lt;/dependencies&gt;</span></code></pre>
 </div>
@@ -260,7 +261,7 @@ minimum settings required for a JavaFX application</p>
     requires javafx.base;
     requires javafx.graphics;
     requires javafx.controls;
-    requires org.kordamp.iconli.core;
+    requires org.kordamp.ikonli.core;
     requires org.kordamp.ikonli.javafx;
     <span class="comment">// add icon pack modules</span>
     requires org.kordamp.ikonli.fontawesome;
@@ -271,11 +272,12 @@ minimum settings required for a JavaFX application</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_creating_a_fatjar"><a class="anchor" href="#_creating_a_fatjar"></a>3. Creating a FatJAR</h2>
+<h2 id="_creating_a_fat_jar"><a class="anchor" href="#_creating_a_fat_jar"></a>3. Creating a Fat JAR</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Ikonli&#8217;s icon packs rely on services files to provide their implementation. You mist make sure that those services files
-are properly merged when creating a FatJar or UberJAR. Fortunately there are build plugins that can help with this task.</p>
+<p>Ikonli&#8217;s icon packs rely on services files to provide their implementation. You must make sure that those services files
+are properly merged when creating a Fat JAR or Uber JAR and your application does not use the modulepath. Fortunately
+there are build plugins that can help with this task.</p>
 </div>
 <div class="paragraph">
 <div class="title">Gradle</div>
@@ -285,7 +287,7 @@ are properly merged when creating a FatJar or UberJAR. Fortunately there are bui
 <div class="title">build.gradle</div>
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="groovy">plugins {
-    id <span class="string"><span class="delimiter">'</span><span class="content">com.github.johnrengelman.shadow</span><span class="delimiter">'</span></span> version <span class="string"><span class="delimiter">'</span><span class="content">5.2.0</span><span class="delimiter">'</span></span>
+    id <span class="string"><span class="delimiter">'</span><span class="content">com.github.johnrengelman.shadow</span><span class="delimiter">'</span></span> version <span class="string"><span class="delimiter">'</span><span class="content">6.1.0</span><span class="delimiter">'</span></span>
 }
 
 shadowJar {
@@ -304,7 +306,7 @@ shadowJar {
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;plugin&gt;</span>
     <span class="tag">&lt;groupId&gt;</span>org.apache.maven.plugins<span class="tag">&lt;/groupId&gt;</span>
     <span class="tag">&lt;artifactId&gt;</span>maven-shade-plugin<span class="tag">&lt;/artifactId&gt;</span>
-    <span class="tag">&lt;version&gt;</span>3.2.3<span class="tag">&lt;/version&gt;</span>
+    <span class="tag">&lt;version&gt;</span>3.2.4<span class="tag">&lt;/version&gt;</span>
     <span class="tag">&lt;configuration&gt;</span>
         <span class="tag">&lt;transformers&gt;</span>
             <span class="tag">&lt;transformer</span> <span class="attribute-name">implementation</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">org.apache.maven.plugins.shade.resource.ServicesResourceTransformer</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
@@ -323,11 +325,60 @@ shadowJar {
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_bom"><a class="anchor" href="#_bom"></a>4. BOM</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Starting with version <code>12.0.0</code> Ikonli offers a BOM for all core projects and icon packs. You may configure it with either
+Gradle or Maven.</p>
+</div>
+<div class="listingblock">
+<div class="title">gradle</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="groovy">repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation platform('org.kordamp.ikonli:ikonli-bom:12.0.0')
+    implementation 'org.kordamp.ikonli:ikonli-javafx'
+    implementation 'org.kordamp.ikonli:ikonli-fontawesome5-pack'
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">maven</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;dependencyManagement&gt;</span>
+    <span class="tag">&lt;dependencies&gt;</span>
+        <span class="tag">&lt;dependency&gt;</span>
+            <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
+            <span class="tag">&lt;artifactId&gt;</span>ikonli-bom<span class="tag">&lt;/artifactId&gt;</span>
+            <span class="tag">&lt;version&gt;</span>12.0.0<span class="tag">&lt;/version&gt;</span>
+            <span class="tag">&lt;type&gt;</span>pom<span class="tag">&lt;/type&gt;</span>
+            <span class="tag">&lt;scope&gt;</span>import<span class="tag">&lt;/scope&gt;</span>
+        <span class="tag">&lt;/dependency&gt;</span>
+    <span class="tag">&lt;/dependencies&gt;</span>
+<span class="tag">&lt;/dependencyManagement&gt;</span>
+<span class="tag">&lt;dependencies&gt;</span>
+    <span class="tag">&lt;dependency&gt;</span>
+        <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
+        <span class="tag">&lt;artifactId&gt;</span>ikonli-javafx<span class="tag">&lt;/artifactId&gt;</span>
+    <span class="tag">&lt;/dependency&gt;</span>
+    <span class="tag">&lt;dependency&gt;</span>
+        <span class="tag">&lt;groupId&gt;</span>org.kordamp.ikonli<span class="tag">&lt;/groupId&gt;</span>
+        <span class="tag">&lt;artifactId&gt;</span>ikonli-fontawesome5-pack<span class="tag">&lt;/artifactId&gt;</span>
+    <span class="tag">&lt;/dependency&gt;</span>
+<span class="tag">&lt;/dependencies&gt;</span></code></pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Version 11.5.0<br>
-Last updated 2020-05-19 13:24:06 +0200
+Version 12.0.0<br>
+Last updated 2020-11-08 15:02:48 +0100
 </div>
 </div>
 <link rel="stylesheet" href="./coderay-asciidoctor.css">

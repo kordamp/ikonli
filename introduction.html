@@ -14,12 +14,13 @@
 <div id="header">
 <h1>Introduction</h1>
 <div class="details">
-<span id="revnumber">version 11.5.0</span>
+<span id="revnumber">version 12.0.0</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
 <li><a href="#_download">1. Download</a></li>
+<li><a href="#_breaking_changes">2. Breaking Changes</a></li>
 </ul>
 </div>
 </div>
@@ -50,7 +51,7 @@ and Maven Central
 Swing
 </td>
 <td class="hdlist2">
-<p>ikonli-swing-11.5.0 (JDK 11+) <em>or</em> ikonli-swing-2.6.0 (JDK 8)</p>
+<p>ikonli-swing-12.0.0 (JDK 11+) <em>or</em> ikonli-swing-2.6.0 (JDK 8)</p>
 </td>
 </tr>
 <tr>
@@ -58,7 +59,19 @@ Swing
 JavaFX
 </td>
 <td class="hdlist2">
-<p>ikonli-javafx-11.5.0 (JDK 11+) <em>or</em> ikonli-javafx-2.6.0 (JDK 8)</p>
+<p>ikonli-javafx-12.0.0 (JDK 11+) <em>or</em> ikonli-javafx-2.6.0 (JDK 8)</p>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Not all icon packs are available in the JDK8 only version (<code>2.6.0</code>).
 </td>
 </tr>
 </table>
@@ -68,11 +81,37 @@ JavaFX
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_breaking_changes"><a class="anchor" href="#_breaking_changes"></a>2. Breaking Changes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you are upgrading to <code>12.0.0</code> or later be aware of the following changes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The module names moved from <code>org.kordamp.iconli</code> to <code>org.kordamp.ikonli.*</code>.</p>
+</li>
+<li>
+<p>The <code>icon-hawkconsfilled-pack</code> and <code>icon-hawkconsstroke-pack</code> icon packs were merged into a single <code>icon-hawkcons-pack</code> icon pack.</p>
+</li>
+<li>
+<p>The method <code>getCode()</code> of <code>org.kordamp.ikonli.Ikon</code> now returns <code>int</code> instead of <code>char</code>. This change is needed to accomodate
+icon packs whose icon codes are larger than a single char, such as MaterialDesign.</p>
+</li>
+<li>
+<p>The interface <code>org.kordamp.ikonli.IkonHandler</code> no longer has a method <code>String getFontResourcePath()</code>; it has two new
+methods instead: <code>URL getFontResource()</code> and <code>InputStream getFontResourceAsStream()</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Version 11.5.0<br>
-Last updated 2020-05-19 13:24:06 +0200
+Version 12.0.0<br>
+Last updated 2020-11-09 16:09:20 +0100
 </div>
 </div>
 </body>

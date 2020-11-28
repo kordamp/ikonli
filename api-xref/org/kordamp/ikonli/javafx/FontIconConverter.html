@@ -55,7 +55,7 @@
 <a class="jxr_linenumber" name="L47" href="#L47">47</a>      @Override
 <a class="jxr_linenumber" name="L48" href="#L48">48</a>      <strong class="jxr_keyword">public</strong> <a name="Ikon" href="../../../../org/kordamp/ikonli/Ikon.html#Ikon">Ikon</a> convert(ParsedValue&lt;String, Ikon&gt; value, Font font) {
 <a class="jxr_linenumber" name="L49" href="#L49">49</a>          String description = value.getValue().trim();
-<a class="jxr_linenumber" name="L50" href="#L50">50</a>          <strong class="jxr_keyword">return</strong> IkonResolver.getInstance().resolveIkonHandler(description).resolve(description);
+<a class="jxr_linenumber" name="L50" href="#L50">50</a>          <strong class="jxr_keyword">return</strong> IkonResolver.getInstance().resolve(description).resolve(description);
 <a class="jxr_linenumber" name="L51" href="#L51">51</a>      }
 <a class="jxr_linenumber" name="L52" href="#L52">52</a>  
 <a class="jxr_linenumber" name="L53" href="#L53">53</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">class</strong> SequenceConverter <strong class="jxr_keyword">extends</strong> StyleConverter&lt;String, <a name="Ikon" href="../../../../org/kordamp/ikonli/Ikon.html#Ikon">Ikon</a>[]&gt; {
@@ -73,7 +73,7 @@
 <a class="jxr_linenumber" name="L65" href="#L65">65</a>              <a name="Ikon" href="../../../../org/kordamp/ikonli/Ikon<a name="Ikon" href="../../../../org/kordamp/ikonli/Ikon.html#Ikon">Ikon</a>l#Ikon">Ikon</a>[] ikons = <strong class="jxr_keyword">new</strong> <a name="Ikon" href="../../../../org/kordamp/ikonli/Ikon.html#Ikon">Ikon</a>[descriptions.length];
 <a class="jxr_linenumber" name="L66" href="#L66">66</a>              <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; descriptions.length; i++) {
 <a class="jxr_linenumber" name="L67" href="#L67">67</a>                  String description = descriptions[i].trim();
-<a class="jxr_linenumber" name="L68" href="#L68">68</a>                  ikons[i] = IkonResolver.getInstance().resolveIkonHandler(description).resolve(description);
+<a class="jxr_linenumber" name="L68" href="#L68">68</a>                  ikons[i] = IkonResolver.getInstance().resolve(description).resolve(description);
 <a class="jxr_linenumber" name="L69" href="#L69">69</a>              }
 <a class="jxr_linenumber" name="L70" href="#L70">70</a>              <strong class="jxr_keyword">return</strong> ikons;
 <a class="jxr_linenumber" name="L71" href="#L71">71</a>          }

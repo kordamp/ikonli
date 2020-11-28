@@ -1,16 +1,16 @@
 @font-face {
-    font-family: 'Material Icons';
+    font-family: 'Material Icons Regular';
     font-style: normal;
     font-weight: 400;
     src: url(../fonts/MaterialIcons-Regular.eot); /* For IE6-8 */
-    src: local('Material Icons'),
+    src: local('Material Icons Regular'),
     local('MaterialIcons-Regular'),
     url(../fonts/MaterialIcons-Regular.woff) format('woff'),
     url(../fonts/MaterialIcons-Regular.ttf) format('truetype');
 }
 
 .gmi {
-    font-family: 'Material Icons';
+    font-family: 'Material Icons Regular';
     font-weight: normal;
     font-style: normal;
     font-size: 24px; /* Preferred icon size */

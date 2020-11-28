@@ -232,7 +232,7 @@
 <a class="jxr_linenumber" name="L224" href="#L224">224</a>         getChildren().clear();
 <a class="jxr_linenumber" name="L225" href="#L225">225</a>         <a name="Ikon" href="../../../../org/kordamp/ikonli/Ikon<a name="Ikon" href="../../../../org/kordamp/ikonli/Ikon.html#Ikon">Ikon</a>l#Ikon">Ikon</a>[] codes = <strong class="jxr_keyword">new</strong> <a name="Ikon" href="../../../../org/kordamp/ikonli/Ikon.html#Ikon">Ikon</a>[iconCodes.length];
 <a class="jxr_linenumber" name="L226" href="#L226">226</a>         <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; iconCodes.length; i++) {
-<a class="jxr_linenumber" name="L227" href="#L227">227</a>             codes[i] = IkonResolver.getInstance().resolveIkonHandler(iconCodes[i]).resolve(iconCodes[i]);
+<a class="jxr_linenumber" name="L227" href="#L227">227</a>             codes[i] = IkonResolver.getInstance().resolve(iconCodes[i]).resolve(iconCodes[i]);
 <a class="jxr_linenumber" name="L228" href="#L228">228</a>         }
 <a class="jxr_linenumber" name="L229" href="#L229">229</a>         initializeSizesIfNeeded(iconCodes);
 <a class="jxr_linenumber" name="L230" href="#L230">230</a>         updateIconCodes(codes);

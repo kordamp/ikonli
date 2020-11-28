@@ -1,13 +1,13 @@
 /* MaterialDesignIcons.com */
 @font-face {
-  font-family: 'Material Design Icons';
+  font-family: 'Material Design Icons Legacy';
   src: url(../fonts/MaterialDesignIcons.eot);
   font-weight: 400;
   font-style: normal
 }
 
 @font-face {
-  font-family: 'Material Design Icons';
+  font-family: 'Material Design Icons Legacy';
   src: url(../fonts/MaterialDesignIcons.eot);
   src: url(../fonts/MaterialDesignIcons.eot?#iefix) format("embedded-opentype"),
   url(../fonts/MaterialDesignIcons.woff) format("woff"),
@@ -17,7 +17,7 @@
 }
 
 .mdi {
-  font-family: 'Material Design Icons';
+  font-family: 'Material Design Icons Legacy';
   display: inline-block;
   vertical-align: middle;
   line-height: 1;
