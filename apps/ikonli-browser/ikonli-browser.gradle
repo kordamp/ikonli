@@ -1,0 +1,187 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * Copyright 2015-2020 Andres Almiray
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+plugins {
+    id 'application'
+    //id 'org.beryx.jlink' version '2.22.2'
+    //id 'com.github.johnrengelman.shadow' version '6.1.0'
+    //id 'org.kordamp.jreleaser'
+}
+
+ext.moduleName = 'org.kordamp.ikonli.browser'
+ext.moduleMainClass = 'org.kordamp.ikonli.browser.Launcher'
+
+mainClassName = "${moduleName}/${moduleMainClass}"
+
+repositories {
+    mavenLocal()
+}
+
+dependencies {
+    implementation('org.kordamp.bootstrapfx:bootstrapfx-core:0.4.0') { transitive = false }
+    implementation('org.kordamp.desktoppanefx:desktoppanefx-core:0.15.0') { transitive = false }
+
+    implementation project(':ikonli-core')
+    implementation project(':ikonli-javafx')
+    implementation project(':ikonli-antdesignicons-pack')
+    implementation project(':ikonli-boxicons-pack')
+    implementation project(':ikonli-bpmn-pack')
+    implementation project(':ikonli-captainicon-pack')
+    implementation project(':ikonli-carbonicons-pack')
+    implementation project(':ikonli-codicons-pack')
+    implementation project(':ikonli-coreui-pack')
+    implementation project(':ikonli-dashicons-pack')
+    implementation project(':ikonli-devicons-pack')
+    implementation project(':ikonli-elusive-pack')
+    implementation project(':ikonli-entypo-pack')
+    implementation project(':ikonli-evaicons-pack')
+    implementation project(':ikonli-feather-pack')
+    implementation project(':ikonli-fileicons-pack')
+    implementation project(':ikonli-fluentui-pack')
+    implementation project(':ikonli-fontawesome-pack')
+    implementation project(':ikonli-fontawesome5-pack')
+    implementation project(':ikonli-fontelico-pack')
+    implementation project(':ikonli-foundation-pack')
+    implementation project(':ikonli-hawcons-pack')
+    implementation project(':ikonli-icomoon-pack')
+    implementation project(':ikonli-ionicons-pack')
+    implementation project(':ikonli-ionicons4-pack')
+    implementation project(':ikonli-jamicons-pack')
+    implementation project(':ikonli-ligaturesymbols-pack')
+    implementation project(':ikonli-lineawesome-pack')
+    implementation project(':ikonli-linecons-pack')
+    implementation project(':ikonli-maki-pack')
+    implementation project(':ikonli-maki2-pack')
+    implementation project(':ikonli-mapicons-pack')
+    implementation project(':ikonli-material-pack')
+    implementation project(':ikonli-material2-pack')
+    implementation project(':ikonli-materialdesign-pack')
+    implementation project(':ikonli-materialdesign2-pack')
+    implementation project(':ikonli-medicons-pack')
+    implementation project(':ikonli-metrizeicons-pack')
+    implementation project(':ikonli-microns-pack')
+    implementation project(':ikonli-ociicons-pack')
+    implementation project(':ikonli-octicons-pack')
+    implementation project(':ikonli-openiconic-pack')
+    implementation project(':ikonli-paymentfont-pack')
+    implementation project(':ikonli-prestashopicons-pack')
+    implementation project(':ikonli-remixicon-pack')
+    implementation project(':ikonli-runestroicons-pack')
+    implementation project(':ikonli-simpleicons-pack')
+    implementation project(':ikonli-simplelineicons-pack')
+    implementation project(':ikonli-subway-pack')
+    implementation project(':ikonli-themify-pack')
+    implementation project(':ikonli-typicons-pack')
+    implementation project(':ikonli-unicons-pack')
+    implementation project(':ikonli-weathericons-pack')
+    implementation project(':ikonli-websymbols-pack')
+    implementation project(':ikonli-whhg-pack')
+    implementation project(':ikonli-win10-pack')
+    implementation project(':ikonli-zondicons-pack')
+
+    implementation "org.openjfx:javafx-base:${javafxVersion}:${platform}"
+    implementation "org.openjfx:javafx-graphics:${javafxVersion}:${platform}"
+    implementation "org.openjfx:javafx-controls:${javafxVersion}:${platform}"
+    implementation "org.openjfx:javafx-fxml:${javafxVersion}:${platform}"
+    implementation "org.openjfx:javafx-media:${javafxVersion}:${platform}"
+    implementation "org.openjfx:javafx-swing:${javafxVersion}:${platform}"
+}
+
+config {
+    info {
+        description = 'Ikonli icon browser'
+    }
+
+    docs {
+        sourceHtml {
+            enabled = false
+        }
+
+        sourceXref {
+            enabled = false
+        }
+    }
+
+    publishing {
+        enabled = false
+    }
+
+    bintray {
+        enabled = false
+    }
+}
+
+license {
+    exclude 'eu/hansolo/**/*'
+}
+
+processResources {
+    expand(
+        'ikonli_version': version
+    )
+}
+
+distZip {
+    archiveClassifier = platform
+}
+
+distTar {
+    archiveClassifier = platform
+}
+
+/*
+jlink {
+    imageDir = project.layout.buildDirectory.dir("ikonli-browser-${version}-${platform}".toString())
+    imageZip = project.layout.buildDirectory.file("ikonli-browser-${version}-${platform}.zip".toString())
+    options = ['--strip-debug', '--compress', '2', '--no-header-files', '--no-man-pages']
+    launcher {
+        name = 'ikonli-browser'
+        noConsole = true
+    }
+}
+
+shadowJar {
+    archiveClassifier = platform
+    mergeServiceFiles()
+    exclude 'module-info.class'
+    exclude 'META-INF/maven/**'
+
+    manifest {
+        attributes('Main-Class': moduleMainClass)
+    }
+}
+
+task assembleDistributionArchives {
+    dependsOn(assembleDist, jlinkZip, shadowJar)
+    group = 'Distribution'
+    description = 'Assembles all distribution archives'
+}
+
+jreleaser {
+    release {
+        repoOwner = 'kordamp'
+        repoName = 'ikonli'
+    }
+
+    packagers {
+        brew {
+            enabled = true
+        }
+    }
+}
+*/

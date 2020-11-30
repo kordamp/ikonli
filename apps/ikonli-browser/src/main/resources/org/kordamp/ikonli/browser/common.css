@@ -1,0 +1,6 @@
+.dialog-content {
+    -fx-background-color: white;
+    -fx-border-color: darkgrey;
+    -fx-border-width: 1px;
+    -fx-border-style: solid;
+}

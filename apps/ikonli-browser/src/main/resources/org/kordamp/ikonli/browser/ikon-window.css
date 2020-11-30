@@ -1,0 +1,8 @@
+.font-icon {
+    -fx-icon-size: 48px;
+    -fx-icon-color: black;
+}
+
+.active-icon {
+    -fx-icon-color: red;
+}
