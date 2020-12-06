@@ -21,6 +21,8 @@ module org.kordamp.ikonli.core {
     requires static org.kordamp.jipsy.annotations;
     requires java.logging;
 
+    uses org.kordamp.ikonli.IkonHandler;
+
     provides org.kordamp.ikonli.IkonHandler
         with org.kordamp.ikonli.IkonliIkonResolver;
     provides org.kordamp.ikonli.IkonProvider

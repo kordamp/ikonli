@@ -19,6 +19,7 @@ package org.kordamp.ikonli;
 
 import java.util.Arrays;
 import java.util.LinkedHashSet;
+import java.util.ServiceLoader;
 import java.util.Set;
 import java.util.logging.Logger;
 
@@ -93,5 +94,24 @@ public class AbstractIkonResolver {
 
     private boolean strictChecksEnabled() {
         return System.getProperty(ORG_KORDAMP_IKONLI_STRICT) == null || Boolean.getBoolean(ORG_KORDAMP_IKONLI_STRICT);
+    }
+
+    public static ServiceLoader<IkonHandler> resolveServiceLoader() {
+        // Check if handlers must be loaded from a ModuleLayer
+        if (null != IkonHandler.class.getModule().getLayer()) {
+            ServiceLoader<IkonHandler> handlers = ServiceLoader.load(IkonHandler.class.getModule().getLayer(), IkonHandler.class);
+            if (handlers.stream().count() > 0) {
+                return handlers;
+            }
+        }
+
+        // Check if the IkonHandler.class.classLoader works
+        ServiceLoader<IkonHandler> handlers = ServiceLoader.load(IkonHandler.class, IkonHandler.class.getClassLoader());
+        if (handlers.stream().count() > 0) {
+            return handlers;
+        }
+
+        // If *nothing* else works
+        return ServiceLoader.load(IkonHandler.class);
     }
 }

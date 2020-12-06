@@ -54,13 +54,6 @@ public class IkonResolver extends AbstractIkonResolver {
 
     }
 
-    private static ServiceLoader<IkonHandler> resolveServiceLoader() {
-        if (null != IkonHandler.class.getModule().getLayer()) {
-            return ServiceLoader.load(IkonHandler.class.getModule().getLayer(), IkonHandler.class);
-        }
-        return ServiceLoader.load(IkonHandler.class);
-    }
-
     public static IkonResolver getInstance() {
         return INSTANCE;
     }

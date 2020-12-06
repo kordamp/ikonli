@@ -23,6 +23,4 @@ module org.kordamp.ikonli.javafx {
     requires javafx.base;
     requires javafx.graphics;
     requires javafx.controls;
-
-    uses org.kordamp.ikonli.IkonHandler;
 }
