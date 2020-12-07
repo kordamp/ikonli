@@ -54,6 +54,6 @@ public class MicronsIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontFamily() {
-        return "microns";
+        return "Microns";
     }
 }

@@ -68,6 +68,6 @@ public class ThemifyIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontFamily() {
-        return "Themify";
+        return "themify";
     }
 }

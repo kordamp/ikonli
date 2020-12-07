@@ -54,6 +54,6 @@ public class FontAwesomeBrandsIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontFamily() {
-        return "Font Awesome 5 Brands";
+        return "Font Awesome 5 Brands Regular";
     }
 }
