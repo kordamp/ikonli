@@ -11,7 +11,7 @@
 */
 
 @font-face {
-    font-family: "Ionicons";
+    font-family: "Ionicons4";
     src: url("../fonts/ionicons.eot?v=4.1.2");
     src: url("../fonts/ionicons.eot?v=4.1.2#iefix") format("embedded-opentype"), url("../fonts/ionicons.woff2?v=4.1.2") format("woff2"), url("../fonts/ionicons.woff?v=4.1.2") format("woff"), url("../fonts/ionicons.ttf?v=4.1.2") format("truetype"), url("../fonts/ionicons.svg?v=4.1.2#Ionicons") format("svg");
     font-weight: normal;
@@ -717,7 +717,7 @@
 .ion-md-wine:before,
 .ion-md-woman:before {
     display: inline-block;
-    font-family: "Ionicons";
+    font-family: "Ionicons4";
     speak: none;
     font-style: normal;
     font-weight: normal;

@@ -55,6 +55,6 @@ public class Ionicons4LogoIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontFamily() {
-        return "Ionicons";
+        return "Ionicons4";
     }
 }
