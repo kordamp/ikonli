@@ -62,15 +62,37 @@ to use the gradle wrapper if available or your global gradle command. This is an
 
 Make a full build issuing `gm build`.
 
-Run the sampler JavaFX application by invoking the following commands
-
+Run the sampler JavaFX application by invoking the following command
 [source]
 ----
 $ gm :sampler-javafx:run
 ----
 
-Run the sampler Swing application by invoking the following commands
+Run the sampler Swing application by invoking the following command
 [source]
 ----
 $ gm :sampler-swing:run
 ----
+
+Run the Ikonli Browser application  by invoking the following command
+[source]
+----
+$ gm :ikonli-browser:run
+----
+
+=== Publishing your own SNAPSHOT
+
+You can publish a local snapshot release by issuing this command
+
+[source]
+----
+$ gm install
+----
+
+If you don't Gum installed then issue this command
+
+[source]
+----
+$ ./gradlew publishToMavenLocal
+----
+
