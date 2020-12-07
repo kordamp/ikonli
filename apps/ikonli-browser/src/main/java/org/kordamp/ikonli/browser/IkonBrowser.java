@@ -89,6 +89,7 @@ public class IkonBrowser extends Application {
         browse.setOnAction(e -> IkonPickerDialog.show(desktopPane));
         MenuItem search = new MenuItem("Search");
         search.setGraphic(FontIcon.of(BoxiconsRegular.SEARCH));
+        search.setOnAction(e -> SearchInternalWindow.show(desktopPane));
         actionsMenu.getItems().addAll(browse, search);
 
         return actionsMenu;
