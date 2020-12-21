@@ -18,7 +18,6 @@
 package org.kordamp.ikonli;
 
 import java.util.Arrays;
-import java.util.LinkedHashSet;
 import java.util.ServiceLoader;
 import java.util.Set;
 import java.util.logging.Logger;
@@ -29,43 +28,31 @@ import static java.util.Objects.requireNonNull;
  * @author Andres Almiray
  */
 public class AbstractIkonResolver {
-    protected static final Set<IkonHandler> HANDLERS = new LinkedHashSet<>();
-    protected static final Set<IkonHandler> CUSTOM_HANDLERS = new LinkedHashSet<>();
     private static final String ORG_KORDAMP_IKONLI_STRICT = "org.kordamp.ikonli.strict";
     private final static Logger LOGGER = Logger.getLogger(AbstractIkonResolver.class.getName());
 
-    /**
-     * @return {@code true} if the specified handler was not already registered
-     * @throws IllegalArgumentException if the specified handler was already registered via classpath and property
-     *                                  "-Dorg.kordamp.ikonli.strict" is set to {@code true} or {@code null}.
-     */
-    public boolean registerHandler(IkonHandler handler) {
+    protected boolean registerHandler(IkonHandler handler, Set<IkonHandler> handlers, Set<IkonHandler> customHandlers) {
         // check whether handler for this font is already loaded via classpath
-        if (isLoadedViaClasspath(handler)) {
+        if (isLoadedViaClasspath(handler, handlers)) {
             throwOrWarn(String.format("IkonHandler for %s is already loaded via classpath", handler.getFontFamily()));
             return false;
         }
-        return CUSTOM_HANDLERS.add(handler);
+        return customHandlers.add(handler);
     }
 
-    /**
-     * @return {@code true} if the specified handler was removed from the set of handlers
-     * @throws IllegalArgumentException if the specified handler was registered via classpath and property
-     *                                  "-Dorg.kordamp.ikonli.strict" is set to {@code true} or {@code null}.
-     */
-    public boolean unregisterHandler(IkonHandler handler) {
+    protected boolean unregisterHandler(IkonHandler handler, Set<IkonHandler> handlers, Set<IkonHandler> customHandlers) {
         // check whether handler for this font is loaded via classpath
-        if (isLoadedViaClasspath(handler)) {
+        if (isLoadedViaClasspath(handler, handlers)) {
             throwOrWarn(String.format("IkonHandler for %s was loaded via classpath and can't be unregistered", handler.getFontFamily()));
             return false;
         }
-        return CUSTOM_HANDLERS.remove(handler);
+        return customHandlers.remove(handler);
     }
 
-    public IkonHandler resolve(String value) {
+    protected IkonHandler resolve(String value, Set<IkonHandler> handlers, Set<IkonHandler> customHandlers) {
         requireNonNull(value, "Ikon description must not be null");
-        for (Set<IkonHandler> handlers : Arrays.asList(HANDLERS, CUSTOM_HANDLERS)) {
-            for (IkonHandler handler : handlers) {
+        for (Set<IkonHandler> hs : Arrays.asList(handlers, customHandlers)) {
+            for (IkonHandler handler : hs) {
                 if (handler.supports(value)) {
                     return handler;
                 }
@@ -74,9 +61,9 @@ public class AbstractIkonResolver {
         throw new UnsupportedOperationException("Cannot resolve '" + value + "'");
     }
 
-    private boolean isLoadedViaClasspath(IkonHandler handler) {
+    private boolean isLoadedViaClasspath(IkonHandler handler, Set<IkonHandler> handlers) {
         String fontFamily = handler.getFontFamily();
-        for (IkonHandler classpathHandler : HANDLERS) {
+        for (IkonHandler classpathHandler : handlers) {
             if (classpathHandler.getFontFamily().equals(fontFamily)) {
                 return true;
             }

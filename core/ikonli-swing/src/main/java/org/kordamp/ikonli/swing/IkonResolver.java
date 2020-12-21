@@ -23,13 +23,17 @@ import org.kordamp.ikonli.IkonHandler;
 import java.awt.*;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.LinkedHashSet;
 import java.util.ServiceLoader;
+import java.util.Set;
 
 /**
  * @author Andres Almiray
  */
 public class IkonResolver extends AbstractIkonResolver {
     private static final IkonResolver INSTANCE;
+    private static final Set<IkonHandler> HANDLERS = new LinkedHashSet<>();
+    private static final Set<IkonHandler> CUSTOM_HANDLERS = new LinkedHashSet<>();
 
     static {
         INSTANCE = new IkonResolver();
@@ -52,6 +56,28 @@ public class IkonResolver extends AbstractIkonResolver {
 
     private IkonResolver() {
 
+    }
+
+    /**
+     * @return {@code true} if the specified handler was not already registered
+     * @throws IllegalArgumentException if the specified handler was already registered via classpath and property
+     *                                  "-Dorg.kordamp.ikonli.strict" is set to {@code true} or {@code null}.
+     */
+    public boolean registerHandler(IkonHandler handler) {
+        return registerHandler(handler, HANDLERS, CUSTOM_HANDLERS);
+    }
+
+    /**
+     * @return {@code true} if the specified handler was removed from the set of handlers
+     * @throws IllegalArgumentException if the specified handler was registered via classpath and property
+     *                                  "-Dorg.kordamp.ikonli.strict" is set to {@code true} or {@code null}.
+     */
+    public boolean unregisterHandler(IkonHandler handler) {
+        return unregisterHandler(handler, HANDLERS, CUSTOM_HANDLERS);
+    }
+
+    public IkonHandler resolve(String value) {
+        return resolve(value, HANDLERS, CUSTOM_HANDLERS);
     }
 
     public static IkonResolver getInstance() {
