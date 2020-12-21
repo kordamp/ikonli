@@ -18,7 +18,7 @@
 
 plugins {
     id 'application'
-    //id 'org.beryx.jlink' version '2.22.2'
+    id 'org.beryx.jlink' version '2.22.3'
     //id 'com.github.johnrengelman.shadow' version '6.1.0'
     //id 'org.kordamp.jreleaser'
 }
@@ -146,7 +146,6 @@ distTar {
     archiveClassifier = platform
 }
 
-/*
 jlink {
     imageDir = project.layout.buildDirectory.dir("ikonli-browser-${version}-${platform}".toString())
     imageZip = project.layout.buildDirectory.file("ikonli-browser-${version}-${platform}.zip".toString())
@@ -155,7 +154,9 @@ jlink {
         name = 'ikonli-browser'
         noConsole = true
     }
+    addExtraDependencies('javafx')
 }
+/*
 
 shadowJar {
     archiveClassifier = platform
