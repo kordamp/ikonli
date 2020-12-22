@@ -99,6 +99,7 @@ asciidoctor {
     dependsOn createIconGenerationTask(packName: 'devicons', iconClassName: 'org.kordamp.ikonli.devicons.Devicons'),
             createIconGenerationTask(packName: 'antdesignicons', iconClassName: 'org.kordamp.ikonli.antdesignicons.AntDesignIconsFilled', iconName: 'antf', shortNameSize: 5, classifier: 'filled'),
             createIconGenerationTask(packName: 'antdesignicons', iconClassName: 'org.kordamp.ikonli.antdesignicons.AntDesignIconsOutlined', iconName: 'anto', shortNameSize: 5, classifier: 'outlined'),
+            createIconGenerationTask(packName: 'bootstrapicons', iconClassName: 'org.kordamp.ikonli.bootstrapicons.BootstrapIcons', iconName: 'bi'),
             createIconGenerationTask(packName: 'boxicons', iconClassName: 'org.kordamp.ikonli.boxicons.BoxiconsLogos', iconName: 'bxl', shortNameSize: 4, classifier: 'logos'),
             createIconGenerationTask(packName: 'boxicons', iconClassName: 'org.kordamp.ikonli.boxicons.BoxiconsRegular', iconName: 'bx', shortNameSize: 3, classifier: 'regular'),
             createIconGenerationTask(packName: 'boxicons', iconClassName: 'org.kordamp.ikonli.boxicons.BoxiconsSolid', iconName: 'bxs', shortNameSize: 4, classifier: 'solid'),
@@ -205,6 +206,7 @@ asciidoctor {
     attributes = [
             ikonliJdk8Version      : project.ikonliJdk8Version,
             antdesigniconsVersion  : project.antdesigniconsVersion,
+            bootstrapiconsVersion  : project.bootstrapiconsVersion,
             boxiconsVersion        : project.boxiconsVersion,
             bpmnVersion            : project.bpmnVersion,
             captainiconVersion     : project.captainiconVersion,
@@ -268,6 +270,7 @@ asciidoctor {
     resources {
         from file('src/resources')
         from project(':ikonli-antdesignicons-pack').file("src/main/resources/META-INF/resources/antdesignicons/${antdesigniconsVersion}")
+        from project(':ikonli-bootstrapicons-pack').file("src/main/resources/META-INF/resources/bootstrapicons/${bootstrapiconsVersion}")
         from project(':ikonli-boxicons-pack').file("src/main/resources/META-INF/resources/boxicons/${boxiconsVersion}")
         from project(':ikonli-bpmn-pack').file("src/main/resources/META-INF/resources/bpmn/${bpmnVersion}")
         from project(':ikonli-captainicon-pack').file("src/main/resources/META-INF/resources/captainicon/${captainiconVersion}")

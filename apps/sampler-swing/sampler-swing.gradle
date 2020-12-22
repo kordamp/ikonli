@@ -23,6 +23,7 @@ dependencies {
     implementation project(':ikonli-core')
     implementation project(':ikonli-swing')
     implementation project(':ikonli-antdesignicons-pack')
+    implementation project(':ikonli-bootstrapicons-pack')
     implementation project(':ikonli-boxicons-pack')
     implementation project(':ikonli-bpmn-pack')
     implementation project(':ikonli-captainicon-pack')

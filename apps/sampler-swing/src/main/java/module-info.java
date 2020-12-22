@@ -21,6 +21,7 @@ module org.kordamp.ikonli.sampler.swing {
     requires org.kordamp.ikonli.core;
     requires org.kordamp.ikonli.swing;
     requires org.kordamp.ikonli.antdesignicons;
+    requires org.kordamp.ikonli.bootstrapicons;
     requires org.kordamp.ikonli.boxicons;
     requires org.kordamp.ikonli.bpmn;
     requires org.kordamp.ikonli.captainicon;
