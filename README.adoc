@@ -4,7 +4,7 @@
 :project-repo:    maven
 :project-name:    ikonli
 :project-group:   org.kordamp.ikonli
-:project-version: 12.0.0
+:project-version: 12.1.0
 
 image:https://github.com/{project-owner}/{project-name}/workflows/Build/badge.svg["Build Status", link="https://github.com/{project-owner}/{project-name}/actions"]
 image:https://img.shields.io/badge/license-ASL2-blue.svg?logo=apache["ASL2 Licensed", link="https://opensource.org/licenses/Apache-2.0"]
