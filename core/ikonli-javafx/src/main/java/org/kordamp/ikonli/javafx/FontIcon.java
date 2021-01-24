@@ -123,7 +123,7 @@ public class FontIcon extends Text implements Icon {
             };
             iconSize.addListener((v, o, n) -> {
                 Font font = FontIcon.this.getFont();
-                if (Math.abs(font.getSize() - n.doubleValue()) < EPSILON) {
+                if (Math.abs(font.getSize() - n.doubleValue()) >= EPSILON) {
                     FontIcon.this.setFont(Font.font(font.getFamily(), n.doubleValue()));
                     FontIcon.this.setStyle(normalizeStyle(getStyle(), "-fx-font-size", n.intValue() + "px"));
                 }
