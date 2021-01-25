@@ -17,7 +17,7 @@
  */
 plugins {
     id 'application'
-    id 'org.beryx.jlink' version '2.22.3'
+    id 'org.beryx.jlink' version '2.23.2'
     //id 'com.github.johnrengelman.shadow' version '6.1.0'
     //id 'org.kordamp.jreleaser'
 }
