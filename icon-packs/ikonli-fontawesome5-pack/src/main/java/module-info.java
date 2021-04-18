@@ -17,7 +17,6 @@
  */
 module org.kordamp.ikonli.fontawesome5 {
     requires org.kordamp.ikonli.core;
-    requires static org.kordamp.jipsy;
     requires static org.kordamp.jipsy.annotations;
     exports org.kordamp.ikonli.fontawesome5;
 

@@ -22,7 +22,7 @@ import org.kordamp.ikonli.IkonProvider;
 /**
  * @author Andres Almiray
  */
-@org.kordamp.jipsy.ServiceProviderFor(IkonProvider.class)
+@org.kordamp.jipsy.annotations.ServiceProviderFor(IkonProvider.class)
 public class BootstrapIconsIkonProvider implements IkonProvider<BootstrapIcons> {
     @Override
     public Class<BootstrapIcons> getIkon() {

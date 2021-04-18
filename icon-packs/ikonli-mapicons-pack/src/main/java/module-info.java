@@ -17,7 +17,6 @@
  */
 module org.kordamp.ikonli.mapicons {
     requires org.kordamp.ikonli.core;
-    requires static org.kordamp.jipsy;
     requires static org.kordamp.jipsy.annotations;
     exports org.kordamp.ikonli.mapicons;
 

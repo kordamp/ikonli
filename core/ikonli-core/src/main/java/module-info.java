@@ -17,7 +17,6 @@
  */
 module org.kordamp.ikonli.core {
     exports org.kordamp.ikonli;
-    requires static org.kordamp.jipsy;
     requires static org.kordamp.jipsy.annotations;
     requires java.logging;
 

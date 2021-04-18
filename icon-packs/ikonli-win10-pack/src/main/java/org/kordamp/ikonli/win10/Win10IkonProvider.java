@@ -18,7 +18,7 @@
 package org.kordamp.ikonli.win10;
 
 import org.kordamp.ikonli.IkonProvider;
-import org.kordamp.jipsy.ServiceProviderFor;
+import org.kordamp.jipsy.annotations.ServiceProviderFor;
 
 /**
  * @author Andres Almiray

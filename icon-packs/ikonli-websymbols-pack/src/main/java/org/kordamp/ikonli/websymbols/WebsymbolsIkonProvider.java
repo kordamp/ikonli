@@ -18,7 +18,7 @@
 package org.kordamp.ikonli.websymbols;
 
 import org.kordamp.ikonli.IkonProvider;
-import org.kordamp.jipsy.ServiceProviderFor;
+import org.kordamp.jipsy.annotations.ServiceProviderFor;
 
 /**
  * @author Andres Almiray

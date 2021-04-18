@@ -24,26 +24,31 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
-    env:
-      CI: true
+
     steps:
-      - uses: actions/checkout@v1
-      - name: Set up JDK 11
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Set up Java
         uses: actions/setup-java@v1
         with:
           java-version: 11
-      - uses: actions/cache@v1
+
+      - uses: actions/cache@v2
         with:
           path: ~/.gradle/caches
           key: ${{ runner.os }}-gradle-cache-${{ hashFiles('**/*.gradle') }}-${{ hashFiles('**/gradle.properties') }}
           restore-keys: |
             ${{ runner.os }}-gradle-
-      - uses: actions/cache@v1
+
+      - uses: actions/cache@v2
         with:
           path: ~/.gradle/wrapper
           key: ${{ runner.os }}-gradle-wrapper-${{ hashFiles('**/gradlew') }}
           restore-keys: |
             ${{ runner.os }}-gradlew-
-      - uses: eskatos/gradle-command-action@v1
-        with:
-          arguments: build -S
+
+      - name: Build
+        run: ./gradlew build -S

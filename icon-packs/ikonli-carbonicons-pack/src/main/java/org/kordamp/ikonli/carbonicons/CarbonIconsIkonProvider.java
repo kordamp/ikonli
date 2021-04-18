@@ -22,7 +22,7 @@ import org.kordamp.ikonli.IkonProvider;
 /**
  * @author Andres Almiray
  */
-@org.kordamp.jipsy.ServiceProviderFor(IkonProvider.class)
+@org.kordamp.jipsy.annotations.ServiceProviderFor(IkonProvider.class)
 public class CarbonIconsIkonProvider implements IkonProvider<CarbonIcons> {
     @Override
     public Class<CarbonIcons> getIkon() {

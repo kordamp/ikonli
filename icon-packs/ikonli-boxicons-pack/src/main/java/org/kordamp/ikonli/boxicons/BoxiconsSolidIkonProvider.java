@@ -20,7 +20,7 @@ package org.kordamp.ikonli.boxicons;
 /**
  * @author Andres Almiray
  */
-@org.kordamp.jipsy.ServiceProviderFor(org.kordamp.ikonli.IkonProvider.class)
+@org.kordamp.jipsy.annotations.ServiceProviderFor(org.kordamp.ikonli.IkonProvider.class)
 public class BoxiconsSolidIkonProvider implements org.kordamp.ikonli.IkonProvider<BoxiconsSolid> {
     @Override
     public Class<BoxiconsSolid> getIkon() {

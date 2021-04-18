@@ -60,7 +60,7 @@ package com.acme.mine;
 import org.kordamp.ikonli.AbstractIkonHandler;
 import org.kordamp.ikonli.Ikon;
 import org.kordamp.ikonli.IkonHandler;
-import org.kordamp.jipsy.ServiceProviderFor;
+import org.kordamp.jipsy.annotations.ServiceProviderFor;
 import java.io.InputStream;
 import java.net.URL;
 
@@ -119,9 +119,9 @@ Implement the `org.kordamp.ikonli.IkonProvider` interface.
 package com.acme.mine;
 
 import org.kordamp.ikonli.IkonProvider;
-import org.kordamp.jipsy.ServiceProviderFor;
+import org.kordamp.jipsy.annotations.ServiceProviderFor;
 
-@ServiceProviderFor(IkonProvider.class)                             // <1>
+@ServiceProviderFor(IkonProvider.class)                                // <1>
 public class MyIconIkonProvider implements IkonProvider<MyIcon> {
     @Override
     public Class<MyIcon> getIkon() {
@@ -150,7 +150,7 @@ If you're building a Java module then you must register the previous implementat
 ----
 module com.acme.mine {
     requires org.kordamp.ikonli.core;
-    requires static org.kordamp.jipsy;                    // <1>
+    requires static org.kordamp.jipsy.annotations;                     // <1>
     exports com.acme.mine;
 
     provides org.kordamp.ikonli.IkonHandler

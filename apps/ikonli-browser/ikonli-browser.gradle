@@ -17,9 +17,7 @@
  */
 plugins {
     id 'application'
-    id 'org.beryx.jlink' version '2.23.2'
-    //id 'com.github.johnrengelman.shadow' version '6.1.0'
-    //id 'org.kordamp.jreleaser'
+    //id 'org.beryx.jlink' version '2.23.2'
 }
 
 ext.moduleName = 'org.kordamp.ikonli.browser'
@@ -146,6 +144,7 @@ distTar {
     archiveClassifier = platform
 }
 
+/*
 jlink {
     imageDir = project.layout.buildDirectory.dir("ikonli-browser-${version}-${platform}".toString())
     imageZip = project.layout.buildDirectory.file("ikonli-browser-${version}-${platform}.zip".toString())
@@ -155,36 +154,5 @@ jlink {
         noConsole = true
     }
     addExtraDependencies('javafx')
-}
-/*
-
-shadowJar {
-    archiveClassifier = platform
-    mergeServiceFiles()
-    exclude 'module-info.class'
-    exclude 'META-INF/maven/**'
-
-    manifest {
-        attributes('Main-Class': moduleMainClass)
-    }
-}
-
-task assembleDistributionArchives {
-    dependsOn(assembleDist, jlinkZip, shadowJar)
-    group = 'Distribution'
-    description = 'Assembles all distribution archives'
-}
-
-jreleaser {
-    release {
-        repoOwner = 'kordamp'
-        repoName = 'ikonli'
-    }
-
-    packagers {
-        brew {
-            enabled = true
-        }
-    }
 }
 */

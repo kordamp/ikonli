@@ -19,7 +19,7 @@ package org.kordamp.ikonli.materialdesign2;
 
 import org.kordamp.ikonli.Ikon;
 import org.kordamp.ikonli.IkonHandler;
-import org.kordamp.jipsy.ServiceProviderFor;
+import org.kordamp.jipsy.annotations.ServiceProviderFor;
 
 /**
  * @author Andres Almiray

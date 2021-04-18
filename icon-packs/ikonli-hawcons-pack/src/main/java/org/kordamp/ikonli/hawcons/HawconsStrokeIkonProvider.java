@@ -18,7 +18,7 @@
 package org.kordamp.ikonli.hawcons;
 
 import org.kordamp.ikonli.IkonProvider;
-import org.kordamp.jipsy.ServiceProviderFor;
+import org.kordamp.jipsy.annotations.ServiceProviderFor;
 
 /**
  * @author Andres Almiray
