@@ -36,64 +36,42 @@ public class FontIcon implements Icon {
     private Font font;
     private int width = 8;
     private int height = 8;
-    private BufferedImage buffer;
 
     private int iconSize = 8;
     private Color iconColor = Color.BLACK;
     private Ikon ikon;
-
-    public static FontIcon of(Ikon ikon) {
-        return of(ikon, 8, Color.BLACK);
-    }
-
-    public static FontIcon of(Ikon ikon, int iconSize) {
-        return of(ikon, iconSize, Color.BLACK);
-    }
-
-    public static FontIcon of(Ikon ikon, Color iconColor) {
-        return of(ikon, 8, iconColor);
-    }
-
-    public static FontIcon of(Ikon ikon, int iconSize, Color iconColor) {
-        FontIcon icon = new FontIcon();
-        icon.setIkon(ikon);
-        icon.setIconSize(iconSize);
-        icon.setIconColor(iconColor);
-        return icon;
-    }
 
     public void paintIcon(Component c, Graphics g, int x, int y) {
         int w = getIconWidth();
         int h = getIconHeight();
         if (w <= 0 || h <= 0) return;
 
-        synchronized (LOCK) {
-            if (buffer == null) {
-                buffer = new BufferedImage(getIconWidth(), getIconHeight(),
-                    BufferedImage.TYPE_INT_ARGB);
+        g.translate(x, y);
+        Color previousColor = g.getColor();
+        Font previousFont = g.getFont();
 
-                Graphics2D g2 = (Graphics2D) buffer.getGraphics();
-                g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
-                    RenderingHints.VALUE_ANTIALIAS_ON);
+        try {
+            Graphics2D g2 = (Graphics2D) g;
+            g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
+                RenderingHints.VALUE_ANTIALIAS_ON);
 
-                g2.setFont(font);
-                g2.setColor(iconColor);
+            g2.setFont(font);
+            g2.setColor(iconColor);
 
-                int sy = g2.getFontMetrics().getAscent();
-                int code = ikon.getCode();
+            int sy = g2.getFontMetrics().getAscent();
+            int code = ikon.getCode();
 
-                if (code <= '\uFFFF') {
-                    g2.drawString(String.valueOf((char)code), 0, sy);
-                } else {
-                    char[] charPair = Character.toChars(code);
-                    String symbol = new String(charPair);
-                    g2.drawString(symbol, 0, sy);
-                }
-
-                g2.dispose();
+            if (code <= '\uFFFF') {
+                g2.drawString(String.valueOf((char) code), 0, sy);
+            } else {
+                char[] charPair = Character.toChars(code);
+                String symbol = new String(charPair);
+                g2.drawString(symbol, 0, sy);
             }
-
-            g.drawImage(buffer, x, y, null);
+        } finally {
+            g.translate(-x, -y);
+            g.setColor(previousColor);
+            g.setFont(previousFont);
         }
     }
 
@@ -144,10 +122,6 @@ public class FontIcon implements Icon {
         this.height = g2.getFontMetrics().getHeight();
 
         g2.dispose();
-
-        synchronized (LOCK) {
-            buffer = null;
-        }
     }
 
     public Color getIconColor() {
@@ -157,9 +131,6 @@ public class FontIcon implements Icon {
     public void setIconColor(Color iconColor) {
         requireNonNull(iconColor, "Argument 'iconColor' must not be null");
         this.iconColor = iconColor;
-        synchronized (LOCK) {
-            buffer = null;
-        }
     }
 
     public int getIconHeight() {
@@ -168,5 +139,25 @@ public class FontIcon implements Icon {
 
     public int getIconWidth() {
         return width;
+    }
+
+    public static FontIcon of(Ikon ikon) {
+        return of(ikon, 8, Color.BLACK);
+    }
+
+    public static FontIcon of(Ikon ikon, int iconSize) {
+        return of(ikon, iconSize, Color.BLACK);
+    }
+
+    public static FontIcon of(Ikon ikon, Color iconColor) {
+        return of(ikon, 8, iconColor);
+    }
+
+    public static FontIcon of(Ikon ikon, int iconSize, Color iconColor) {
+        FontIcon icon = new FontIcon();
+        icon.setIkon(ikon);
+        icon.setIconSize(iconSize);
+        icon.setIconColor(iconColor);
+        return icon;
     }
 }
