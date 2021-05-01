@@ -87,12 +87,8 @@ subprojects { subproj ->
         apply plugin: 'org.jonnyzzz.java9c'
         apply plugin: 'org.javamodularity.moduleplugin'
 
-        config {
-            bintray { enabled = true }
-        }
-
         dependencies {
-            testImplementation 'junit:junit:4.13.1'
+            testImplementation 'junit:junit:4.13.2'
         }
 
         license {

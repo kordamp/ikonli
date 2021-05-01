@@ -17,8 +17,8 @@
  */
 pluginManagement {
     repositories {
-        jcenter()
         gradlePluginPortal()
+        mavenCentral()
         mavenLocal()
     }
     plugins {
@@ -34,7 +34,7 @@ pluginManagement {
 buildscript {
     repositories {
         gradlePluginPortal()
-        jcenter()
+        mavenCentral()
         mavenLocal()
     }
     dependencies {

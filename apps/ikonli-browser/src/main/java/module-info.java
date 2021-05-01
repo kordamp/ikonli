@@ -81,7 +81,7 @@ module org.kordamp.ikonli.browser {
     requires org.kordamp.ikonli.whhg;
     requires org.kordamp.ikonli.win10;
     requires org.kordamp.ikonli.zondicons;
-    requires miglayout.javafx;
+    requires com.miglayout.javafx;
     requires io.reactivex.rxjava3;
     requires org.reactivestreams;
 

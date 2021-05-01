@@ -102,8 +102,4 @@ config {
     publishing {
         enabled = false
     }
-
-    bintray {
-        enabled = false
-    }
 }

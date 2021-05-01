@@ -17,13 +17,14 @@
  */
 plugins {
     id 'application'
-    //id 'org.beryx.jlink' version '2.23.2'
+    // id 'com.github.johnrengelman.shadow' version '6.1.0'
 }
 
 ext.moduleName = 'org.kordamp.ikonli.browser'
 ext.moduleMainClass = 'org.kordamp.ikonli.browser.Launcher'
 
-mainClassName = "${moduleName}/${moduleMainClass}"
+// mainClassName = "${moduleName}/${moduleMainClass}"
+mainClassName = moduleMainClass
 
 repositories {
     mavenLocal()
@@ -120,10 +121,6 @@ config {
     publishing {
         enabled = false
     }
-
-    bintray {
-        enabled = false
-    }
 }
 
 license {
@@ -137,11 +134,11 @@ processResources {
 }
 
 distZip {
-    archiveClassifier = platform
+    archiveClassifier = osdetector.os
 }
 
 distTar {
-    archiveClassifier = platform
+    archiveClassifier = osdetector.os
 }
 
 /*
@@ -156,3 +153,16 @@ jlink {
     addExtraDependencies('javafx')
 }
 */
+
+/*
+shadowJar {
+    archiveClassifier = platform
+    mergeServiceFiles()
+    exclude 'module-info.class'
+    exclude 'META-INF/maven/**'
+
+    manifest {
+        attributes('Main-Class': moduleMainClass)
+    }
+}
+ */
