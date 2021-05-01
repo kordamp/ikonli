@@ -11,5 +11,4 @@ target
 .gen-changelog.sh
 .tmp
 .DS_Store
-VERSION
 jdks
