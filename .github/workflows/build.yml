@@ -79,7 +79,7 @@ jobs:
         uses: actions/download-artifact@v2
 
       - name: Display build artifacts
-        run: ls -R
+        run: ls -R artifact
 
       - name: Setup Java
         uses: actions/setup-java@v2

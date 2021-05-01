@@ -78,7 +78,13 @@ packagers:
 distributions:
   ikonli-browser:
     artifacts:
-      - path: apps/ikonli-browser/build/distributions/{{distributionName}}-{{projectVersion}}.zip
-        transform: '{{distributionName}}/{{distributionName}}-{{projectEffectiveVersion}}-osx.zip'
+      - path: artifact/{{distributionName}}-{{projectVersion}}-osx.zip
+        transform: '{{distributionName}}/{{distributionName}}-{{projectEffectiveVersion}}-mac.zip'
         platform: 'osx'
+      - path: artifact/{{distributionName}}-{{projectVersion}}-linux.zip
+        transform: '{{distributionName}}/{{distributionName}}-{{projectEffectiveVersion}}-linux.zip'
+        platform: 'linux'
+      - path: artifact/{{distributionName}}-{{projectVersion}}-windows.zip
+        transform: '{{distributionName}}/{{distributionName}}-{{projectEffectiveVersion}}-windows.zip'
+        platform: 'windows'
 
