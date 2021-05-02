@@ -16,6 +16,10 @@
 # limitations under the License.
 #
 
+environment:
+  properties:
+    ikonliBrowser: ikonli-browser
+
 project:
   name: ikonli
   description: Icon packs for Java applications
@@ -45,10 +49,15 @@ release:
           title: 'Relates to #'
         - label: 'task'
           title: '[chore]'
+        - label: 'ikonli-browser'
+          title: '[ikonli-browser]'
       categories:
         - title: '🚀 Features'
           labels:
             - 'feature'
+        - title: '🖥 Ikonli Browser'
+          labels:
+            - 'ikonli-browser'
         - title: '✅ Issues'
           labels:
             - 'issue'
@@ -57,6 +66,8 @@ release:
             - 'task'
       replacers:
         - search: '\[chore\] '
+          replace: ''
+        - search: '\[ikonli\-browser\] '
           replace: ''
 
 signing:
@@ -78,13 +89,25 @@ packagers:
 distributions:
   ikonli-browser:
     artifacts:
-      - path: artifact/{{distributionName}}-{{projectVersion}}-osx.zip
-        transform: '{{distributionName}}/{{distributionName}}-{{projectEffectiveVersion}}-mac.zip'
+      - path: artifact/{{ikonliBrowser}}-{{projectVersion}}-osx.zip
+        transform: '{{ikonliBrowser}}/{{ikonliBrowser}}-{{projectEffectiveVersion}}-mac.zip'
         platform: 'osx'
       - path: artifact/{{distributionName}}-{{projectVersion}}-linux.zip
-        transform: '{{distributionName}}/{{distributionName}}-{{projectEffectiveVersion}}-linux.zip'
+        transform: '{{ikonliBrowser}}/{{ikonliBrowser}}-{{projectEffectiveVersion}}-linux.zip'
         platform: 'linux'
       - path: artifact/{{distributionName}}-{{projectVersion}}-windows.zip
-        transform: '{{distributionName}}/{{distributionName}}-{{projectEffectiveVersion}}-windows.zip'
+        transform: '{{ikonliBrowser}}/{{ikonliBrowser}}-{{projectEffectiveVersion}}-windows.zip'
         platform: 'windows'
 
+  ikonli-browser-link:
+    executable: '{{ikonliBrowser}}'
+    artifacts:
+      - path: artifact/{{ikonliBrowser}}-standalone-{{projectVersion}}-mac.zip
+        transform: '{{ikonliBrowser}}/{{ikonliBrowser}}-standalone-{{projectEffectiveVersion}}-mac.zip'
+        platform: 'osx'
+      - path: artifact/{{ikonliBrowser}}-standalone-{{projectVersion}}-linux.zip
+        transform: '{{ikonliBrowser}}/{{ikonliBrowser}}-standalone-{{projectEffectiveVersion}}-linux.zip'
+        platform: 'linux'
+      - path: artifact/{{ikonliBrowser}}-standalone-{{projectVersion}}-windows.zip
+        transform: '{{ikonliBrowser}}/{{ikonliBrowser}}-standalone-{{projectEffectiveVersion}}-windows.zip'
+        platform: 'windows'
