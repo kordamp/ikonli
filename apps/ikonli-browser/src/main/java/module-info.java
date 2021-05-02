@@ -82,8 +82,6 @@ module org.kordamp.ikonli.browser {
     requires org.kordamp.ikonli.win10;
     requires org.kordamp.ikonli.zondicons;
     requires com.miglayout.javafx;
-    requires io.reactivex.rxjava3;
-    requires org.reactivestreams;
 
     uses org.kordamp.ikonli.IkonHandler;
     uses org.kordamp.ikonli.IkonProvider;

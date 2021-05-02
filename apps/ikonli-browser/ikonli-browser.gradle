@@ -33,7 +33,6 @@ repositories {
 dependencies {
     implementation('org.kordamp.bootstrapfx:bootstrapfx-core:0.4.0') { transitive = false }
     implementation('org.kordamp.desktoppanefx:desktoppanefx-core:0.15.0') { transitive = false }
-    implementation "io.reactivex.rxjava3:rxjava:$rxjavaVersion"
     implementation "com.miglayout:miglayout-javafx:$miglayoutVersion"
 
     implementation project(':ikonli-core')

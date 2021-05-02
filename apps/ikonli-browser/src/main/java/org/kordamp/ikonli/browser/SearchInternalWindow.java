@@ -18,9 +18,6 @@
 package org.kordamp.ikonli.browser;
 
 import eu.hansolo.tilesfx.tools.FlowGridPane;
-import io.reactivex.rxjava3.core.Flowable;
-import io.reactivex.rxjava3.disposables.Disposable;
-import io.reactivex.rxjava3.schedulers.Schedulers;
 import javafx.application.Platform;
 import javafx.beans.binding.Bindings;
 import javafx.beans.property.BooleanProperty;
@@ -31,6 +28,7 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
+import javafx.concurrent.Task;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
@@ -59,6 +57,8 @@ import java.util.EnumSet;
 import java.util.List;
 import java.util.Optional;
 import java.util.ServiceLoader;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 import static java.util.EnumSet.allOf;
 import static java.util.Objects.requireNonNull;
@@ -200,6 +200,12 @@ public class SearchInternalWindow extends InternalWindow {
         setOnHidden(e -> controller.cancel());
     }
 
+    @Override
+    public void closeWindow() {
+        controller.shutdown();
+        super.closeWindow();
+    }
+
     private void searchIcons() {
         controller.cancel();
         controller.search();
@@ -240,7 +246,7 @@ public class SearchInternalWindow extends InternalWindow {
         private StringProperty term;
         private StringProperty selection;
         private ObjectProperty<State> state;
-        private Disposable disposable;
+        private Task<Void> task;
 
         public Model() {
             stateProperty().addListener((observable, oldValue, newValue) -> {
@@ -254,12 +260,12 @@ public class SearchInternalWindow extends InternalWindow {
             return ikons;
         }
 
-        public Disposable getDisposable() {
-            return disposable;
+        public Task<Void> getTask() {
+            return task;
         }
 
-        public void setDisposable(Disposable disposable) {
-            this.disposable = disposable;
+        public void setTask(Task<Void> task) {
+            this.task = task;
         }
 
         public StringProperty termProperty() {
@@ -311,37 +317,52 @@ public class SearchInternalWindow extends InternalWindow {
     private static class Controller {
         private final Model model;
         private final List<Ikon> ikons = new ArrayList<>();
+        private ExecutorService executor;
 
         public Controller(Model model) {
             this.model = model;
         }
 
         public void search() {
+            if (executor == null) {
+                executor = Executors.newSingleThreadExecutor();
+            }
+
             if (ikons.isEmpty()) {
                 loadIcons();
             }
 
-            String term = model.getTerm().toLowerCase();
-            Flowable<Ikon> flowable = Flowable.fromIterable(ikons)
-                .filter(ikon -> ikon.getDescription().contains(term));
+            Task<Void> task = createTask();
+            model.setTask(task);
+            executor.execute(task);
+        }
 
-            model.setDisposable(flowable
-                .doOnSubscribe(disposable -> {
-                    model.getIkons().clear();
-                    model.setState(State.RUNNING);
-                })
-                .doOnTerminate(() -> model.setState(State.READY))
-                .doOnError(Throwable::printStackTrace)
-                .subscribeOn(Schedulers.io())
-                .subscribe(model.getIkons()::add));
+        private Task<Void> createTask() {
+            return new Task<>() {
+                @Override
+                protected Void call() throws Exception {
+                    String term = model.getTerm().toLowerCase();
+                    ikons.stream()
+                        .filter(ikon -> ikon.getDescription().contains(term))
+                        .peek(model.getIkons()::add)
+                        .forEach(Controller::noop);
+
+                    return null;
+                }
+            };
         }
 
         public void cancel() {
             model.setSelection("");
-            if (model.getDisposable() != null) {
-                model.getDisposable().dispose();
+            if (model.getTask() != null) {
+                model.getTask().cancel(true);
                 model.setState(State.READY);
             }
+        }
+
+        public void shutdown() {
+            executor.shutdownNow();
+            executor = null;
         }
 
         private void loadIcons() {
@@ -358,6 +379,9 @@ public class SearchInternalWindow extends InternalWindow {
 
         private void add(EnumSet<? extends Ikon> set, List<Ikon> ikons) {
             ikons.addAll(set);
+        }
+
+        private static void noop(Ikon ikon) {
         }
     }
 }

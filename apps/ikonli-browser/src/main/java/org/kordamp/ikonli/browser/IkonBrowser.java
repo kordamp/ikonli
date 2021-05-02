@@ -28,6 +28,7 @@ import javafx.stage.Stage;
 import org.kordamp.bootstrapfx.BootstrapFX;
 import org.kordamp.desktoppanefx.scene.layout.DesktopPane;
 import org.kordamp.desktoppanefx.scene.layout.IncubatingFeatures;
+import org.kordamp.desktoppanefx.scene.layout.InternalWindow;
 import org.kordamp.desktoppanefx.scene.layout.TaskBar;
 import org.kordamp.desktoppanefx.scene.layout.TaskBarIcon;
 import org.kordamp.ikonli.boxicons.BoxiconsRegular;
@@ -68,6 +69,12 @@ public class IkonBrowser extends Application {
         stage.setScene(scene);
         stage.setTitle("Ikonli - https://kordamp.org/ikonli");
         stage.show();
+    }
+
+    @Override
+    public void stop() throws Exception {
+        desktopPane.getInternalWindows()
+            .forEach(InternalWindow::closeWindow);
     }
 
     private MenuBar createMenuBar() {

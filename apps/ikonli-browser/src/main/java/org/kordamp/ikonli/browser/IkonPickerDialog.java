@@ -36,7 +36,6 @@ import org.kordamp.bootstrapfx.BootstrapFX;
 import org.kordamp.desktoppanefx.scene.layout.DesktopPane;
 import org.kordamp.ikonli.IkonProvider;
 
-import java.util.Collection;
 import java.util.ServiceLoader;
 import java.util.Set;
 import java.util.TreeSet;
@@ -45,11 +44,11 @@ import java.util.TreeSet;
  * @author Andres Almiray
  */
 public class IkonPickerDialog extends Dialog<IkonProvider> {
-    private final DesktopPane desktopPane;
     private final ObservableList<IkonData> data;
+    private final Set<IkonData> ikons;
 
-    private IkonPickerDialog(DesktopPane desktopPane, Collection<IkonData> ikonData) {
-        this.desktopPane = desktopPane;
+    private IkonPickerDialog() {
+        this.ikons = resolveIkonData();
         DialogPane dialogPane = getDialogPane();
 
         GridPane grid = new GridPane();
@@ -61,7 +60,7 @@ public class IkonPickerDialog extends Dialog<IkonProvider> {
         label.setPrefWidth(Region.USE_COMPUTED_SIZE);
 
         setTitle("Ikon Picker");
-        dialogPane.setHeaderText("Select an Ikon provider (" + ikonData.size() + " in total)");
+        dialogPane.setHeaderText("Select an Ikon provider (" + ikons.size() + " in total)");
         dialogPane.getStyleClass().add("ikon-picker");
         dialogPane.getButtonTypes().addAll(ButtonType.OK, ButtonType.CANCEL);
         dialogPane.getScene().getStylesheets().addAll(
@@ -75,7 +74,7 @@ public class IkonPickerDialog extends Dialog<IkonProvider> {
 
         Button okButton = (Button) dialogPane.lookupButton(ButtonType.OK);
 
-        data = FXCollections.observableArrayList(ikonData);
+        data = FXCollections.observableArrayList(ikons);
 
         ListView<IkonData> listView = new ListView<>();
         listView.setItems(data);
@@ -109,6 +108,21 @@ public class IkonPickerDialog extends Dialog<IkonProvider> {
         Platform.runLater(listView::requestFocus);
     }
 
+    private Set<IkonData> resolveIkonData() {
+        Set<IkonData> ikons = new TreeSet<>();
+        if (null != IkonProvider.class.getModule().getLayer()) {
+            for (IkonProvider provider : ServiceLoader.load(IkonProvider.class.getModule().getLayer(), IkonProvider.class)) {
+                ikons.add(IkonData.of(provider));
+            }
+        } else {
+            for (IkonProvider provider : ServiceLoader.load(IkonProvider.class)) {
+                ikons.add(IkonData.of(provider));
+            }
+        }
+
+        return ikons;
+    }
+
     private IkonProvider getSelectedItem(ListView<IkonData> listView) {
         IkonData selectedItem = listView.getSelectionModel().getSelectedItem();
         return selectedItem != null ? selectedItem.ikonProvider : null;
@@ -125,18 +139,7 @@ public class IkonPickerDialog extends Dialog<IkonProvider> {
     }
 
     public static void show(DesktopPane desktopPane) {
-        Set<IkonData> ikons = new TreeSet<>();
-        if (null != IkonProvider.class.getModule().getLayer()) {
-            for (IkonProvider provider : ServiceLoader.load(IkonProvider.class.getModule().getLayer(), IkonProvider.class)) {
-                ikons.add(IkonData.of(provider));
-            }
-        } else {
-            for (IkonProvider provider : ServiceLoader.load(IkonProvider.class)) {
-                ikons.add(IkonData.of(provider));
-            }
-        }
-
-        new IkonPickerDialog(desktopPane, ikons)
+        new IkonPickerDialog()
             .showAndWait()
             .ifPresent(ikonProvider -> IkonInternalWindow.show(ikonProvider, desktopPane));
     }
