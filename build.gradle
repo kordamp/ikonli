@@ -133,5 +133,3 @@ project.rootProject.gradle.addBuildListener(new BuildAdapter() {
             }
     }
 })
-
-new File('VERSION').text = project.version

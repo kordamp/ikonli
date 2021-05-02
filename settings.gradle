@@ -28,6 +28,7 @@ pluginManagement {
         id 'com.google.osdetector'           version osPluginVersion
         id 'org.jonnyzzz.java9c'             version java9cPluginVersion
         id 'org.javamodularity.moduleplugin' version modularityPluginVersion
+        id 'org.beryx.jlink'                 version jlinkPluginVersion
     }
 }
 

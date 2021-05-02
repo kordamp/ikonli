@@ -17,13 +17,13 @@
  */
 plugins {
     id 'application'
-    // id 'com.github.johnrengelman.shadow' version '6.1.0'
+    id 'org.beryx.jlink'
 }
 
 ext.moduleName = 'org.kordamp.ikonli.browser'
 ext.moduleMainClass = 'org.kordamp.ikonli.browser.Launcher'
 
-// mainClassName = "${moduleName}/${moduleMainClass}"
+//mainClassName = "${moduleName}/${moduleMainClass}"
 mainClassName = moduleMainClass
 
 repositories {
@@ -140,10 +140,8 @@ distTar {
     archiveClassifier = osdetector.os
 }
 
-/*
 jlink {
-    imageDir = project.layout.buildDirectory.dir("ikonli-browser-${version}-${platform}".toString())
-    imageZip = project.layout.buildDirectory.file("ikonli-browser-${version}-${platform}.zip".toString())
+    imageName = "ikonli-browser-standalone-${version}-${platform}".toString()
     options = ['--strip-debug', '--compress', '2', '--no-header-files', '--no-man-pages']
     launcher {
         name = 'ikonli-browser'
@@ -151,17 +149,5 @@ jlink {
     }
     addExtraDependencies('javafx')
 }
-*/
 
-/*
-shadowJar {
-    archiveClassifier = platform
-    mergeServiceFiles()
-    exclude 'module-info.class'
-    exclude 'META-INF/maven/**'
-
-    manifest {
-        attributes('Main-Class': moduleMainClass)
-    }
-}
- */
+assemble.dependsOn(jlinkZip)
