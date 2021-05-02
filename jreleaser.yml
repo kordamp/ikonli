@@ -50,7 +50,7 @@ release:
         - label: 'task'
           title: '[chore]'
         - label: 'ikonli-browser'
-          title: '\[ikonl\-browser\]'
+          title: '\[ikonli\-browser\]'
       categories:
         - title: '🚀 Features'
           labels:
@@ -99,15 +99,15 @@ distributions:
         transform: '{{ikonliBrowser}}/{{ikonliBrowser}}-{{projectEffectiveVersion}}-windows.zip'
         platform: 'windows'
 
-  ikonli-browser-link:
+  ikonli-browser-standalone:
     executable: '{{ikonliBrowser}}'
     artifacts:
-      - path: artifact/{{ikonliBrowser}}-standalone-{{projectVersion}}-mac.zip
-        transform: '{{ikonliBrowser}}/{{ikonliBrowser}}-standalone-{{projectEffectiveVersion}}-mac.zip'
+      - path: artifact/{{distributionName}}-{{projectVersion}}-mac.zip
+        transform: '{{ikonliBrowser}}/{{distributionName}}-{{projectEffectiveVersion}}-mac.zip'
         platform: 'osx'
       - path: artifact/{{ikonliBrowser}}-standalone-{{projectVersion}}-linux.zip
-        transform: '{{ikonliBrowser}}/{{ikonliBrowser}}-standalone-{{projectEffectiveVersion}}-linux.zip'
+        transform: '{{ikonliBrowser}}/{{distributionName}}-{{projectEffectiveVersion}}-linux.zip'
         platform: 'linux'
-      - path: artifact/{{ikonliBrowser}}-standalone-{{projectVersion}}-windows.zip
-        transform: '{{ikonliBrowser}}/{{ikonliBrowser}}-standalone-{{projectEffectiveVersion}}-windows.zip'
+      - path: artifact/{{ikonliBrowser}}-standalone-{{projectVersion}}-win.zip
+        transform: '{{ikonliBrowser}}/{{distributionName}}-{{projectEffectiveVersion}}-windows.zip'
         platform: 'windows'

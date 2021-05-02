@@ -112,3 +112,4 @@ jobs:
           path: |
             out/jreleaser/trace.log
             out/jreleaser/output.properties
+            out/jreleaser/release/CHANGELOG.md
