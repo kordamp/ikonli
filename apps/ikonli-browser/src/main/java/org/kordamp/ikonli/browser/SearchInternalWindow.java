@@ -165,6 +165,13 @@ public class SearchInternalWindow extends InternalWindow {
                 while (c.next()) {
                     if (c.wasAdded()) {
                         addIcons(new ArrayList<>(c.getAddedSubList()), grid);
+                    } else if (c.wasRemoved()) {
+                        // can only happen when we clear the list
+                        if (Platform.isFxApplicationThread()) {
+                            grid.getChildren().clear();
+                        } else {
+                            Platform.runLater(() -> grid.getChildren().clear());
+                        }
                     }
                 }
             }
@@ -324,6 +331,8 @@ public class SearchInternalWindow extends InternalWindow {
         }
 
         public void search() {
+            model.getIkons().clear();
+
             if (executor == null) {
                 executor = Executors.newSingleThreadExecutor();
             }
