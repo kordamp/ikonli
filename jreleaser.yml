@@ -50,12 +50,12 @@ release:
         - label: 'task'
           title: '[chore]'
         - label: 'ikonli-browser'
-          title: '\[ikonli\-browser\]'
+          title: '[ikonli-browser]'
       categories:
         - title: '🚀 Features'
           labels:
             - 'feature'
-        - title: '🖥 Ikonli Browser'
+        - title: '🖥  Ikonli Browser'
           labels:
             - 'ikonli-browser'
         - title: '✅ Issues'
@@ -76,14 +76,6 @@ signing:
 
 announce:
   twitter:
-    active: release
-  sdkman:
-    active: release
-
-packagers:
-  brew:
-    active: release
-  scoop:
     active: release
 
 distributions:

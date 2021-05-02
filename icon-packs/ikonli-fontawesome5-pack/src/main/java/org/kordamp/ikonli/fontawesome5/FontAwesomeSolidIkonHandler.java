@@ -30,7 +30,7 @@ import java.net.URL;
  */
 @ServiceProviderFor(IkonHandler.class)
 public class FontAwesomeSolidIkonHandler extends AbstractIkonHandler {
-    private static final String FONT_RESOURCE = "/META-INF/resources/fontawesome5/5.15.1/fonts/fa-solid-900.ttf";
+    private static final String FONT_RESOURCE = "/META-INF/resources/fontawesome5/5.15.3/fonts/fa-solid-900.ttf";
 
     @Override
     public boolean supports(String description) {
