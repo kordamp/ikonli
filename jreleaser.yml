@@ -50,7 +50,7 @@ release:
         - label: 'task'
           title: '[chore]'
         - label: 'ikonli-browser'
-          title: '[ikonli-browser]'
+          title: '\[ikonl\-browser\]'
       categories:
         - title: '🚀 Features'
           labels:
@@ -67,7 +67,7 @@ release:
       replacers:
         - search: '\[chore\] '
           replace: ''
-        - search: '\[ikonli.browser\] '
+        - search: '\[ikonli\-browser\] '
           replace: ''
 
 signing:
