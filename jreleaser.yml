@@ -67,7 +67,7 @@ release:
       replacers:
         - search: '\[chore\] '
           replace: ''
-        - search: '\[ikonli\-browser\] '
+        - search: '\[ikonli.browser\] '
           replace: ''
 
 signing:
