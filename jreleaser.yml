@@ -89,13 +89,13 @@ packagers:
 distributions:
   ikonli-browser:
     artifacts:
-      - path: artifact/{{ikonliBrowser}}-{{projectVersion}}-osx.zip
+      - path: artifact/distributions/{{ikonliBrowser}}-{{projectVersion}}-osx.zip
         transform: '{{ikonliBrowser}}/{{ikonliBrowser}}-{{projectEffectiveVersion}}-mac.zip'
         platform: 'osx'
-      - path: artifact/{{distributionName}}-{{projectVersion}}-linux.zip
+      - path: artifact/distributions/{{distributionName}}-{{projectVersion}}-linux.zip
         transform: '{{ikonliBrowser}}/{{ikonliBrowser}}-{{projectEffectiveVersion}}-linux.zip'
         platform: 'linux'
-      - path: artifact/{{distributionName}}-{{projectVersion}}-windows.zip
+      - path: artifact/distributions/{{distributionName}}-{{projectVersion}}-windows.zip
         transform: '{{ikonliBrowser}}/{{ikonliBrowser}}-{{projectEffectiveVersion}}-windows.zip'
         platform: 'windows'
 
