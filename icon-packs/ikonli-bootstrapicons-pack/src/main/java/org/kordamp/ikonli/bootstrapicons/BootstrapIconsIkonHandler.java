@@ -30,7 +30,7 @@ import java.net.URL;
  */
 @ServiceProviderFor(IkonHandler.class)
 public class BootstrapIconsIkonHandler extends AbstractIkonHandler {
-    private static final String FONT_RESOURCE = "/META-INF/resources/bootstrapicons/1.3.0/fonts/bootstrap-icons.ttf";
+    private static final String FONT_RESOURCE = "/META-INF/resources/bootstrapicons/1.4.1/fonts/bootstrap-icons.ttf";
 
     @Override
     public boolean supports(String description) {
