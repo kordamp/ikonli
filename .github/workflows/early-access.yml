@@ -1,0 +1,104 @@
+name: EarlyAccess
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    name: Build
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ ubuntu-latest, macos-latest, windows-latest ]
+    runs-on: ${{ matrix.os }}
+    if: github.repository == 'kordamp/ikonli' && startsWith(github.event.head_commit.message, 'Releasing version') != true
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Java
+        uses: actions/setup-java@v2
+        with:
+          java-version: 11
+          distribution: 'zulu'
+
+      - uses: actions/cache@v2
+        with:
+          path: ~/.gradle/caches
+          key: ${{ runner.os }}-gradle-cache-${{ hashFiles('**/*.gradle') }}-${{ hashFiles('**/gradle.properties') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
+
+      - uses: actions/cache@v2
+        with:
+          path: ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-wrapper-${{ hashFiles('**/gradlew') }}
+          restore-keys: |
+            ${{ runner.os }}-gradlew-
+
+      - name: Build
+        run: ./gradlew -Prelease=true build -S
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: artifact
+          path: |
+            apps/ikonli-browser/build/distributions/ikonli-browser-*.zip
+            apps/ikonli-browser/build/ikonli-browser-standalone-*.zip
+
+  earlyaccess:
+    name: EarlyAccess
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Download build artifacts
+        uses: actions/download-artifact@v2
+
+      - name: Display build artifacts
+        run: ls -R artifact
+
+      - name: Set up Java
+        uses: actions/setup-java@v2
+        with:
+          java-version: 11
+          distribution: 'zulu'
+
+      - name: Version
+        id: vars
+        run: echo ::set-output name=version::$(cat VERSION)
+
+      - name: Assemble
+        uses: jreleaser/release-action@v1
+        with:
+          arguments: assemble
+        env:
+          JRELEASER_PROJECT_VERSION: ${{ steps.vars.outputs.version }}
+          JRELEASER_GITHUB_TOKEN: ${{ secrets.GIT_ACCESS_TOKEN }}
+
+      - name: Release
+        uses: jreleaser/release-action@v1
+        with:
+          arguments: full-release
+        env:
+          JRELEASER_PROJECT_VERSION: ${{ steps.vars.outputs.version }}
+          JRELEASER_GITHUB_TOKEN: ${{ secrets.GIT_ACCESS_TOKEN }}
+          JRELEASER_GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+          JRELEASER_GPG_PUBLIC_KEY: ${{ secrets.GPG_PUBLIC_KEY }}
+          JRELEASER_GPG_SECRET_KEY: ${{ secrets.GPG_SECRET_KEY }}
+
+      - name: JReleaser output
+        if: always()
+        uses: actions/upload-artifact@v2
+        with:
+          name: artifact
+          path: |
+            out/jreleaser/trace.log
+            out/jreleaser/output.properties
+            out/jreleaser/release/CHANGELOG.md

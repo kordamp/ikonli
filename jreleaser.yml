@@ -37,6 +37,7 @@ release:
     username: aalmiray
     overwrite: true
     sign: true
+    branch: master
     changelog:
       formatted: ALWAYS
       change: '- {{commitShortHash}} {{commitTitle}}'
@@ -66,9 +67,7 @@ release:
             - 'task'
       replacers:
         - search: '\[chore\] '
-          replace: ''
         - search: '\[ikonli\-browser\] '
-          replace: ''
 
 signing:
   active: always
