@@ -74,14 +74,6 @@ jobs:
         id: vars
         run: echo ::set-output name=version::$(cat VERSION)
 
-      - name: Assemble
-        uses: jreleaser/release-action@v1
-        with:
-          arguments: assemble
-        env:
-          JRELEASER_PROJECT_VERSION: ${{ steps.vars.outputs.version }}
-          JRELEASER_GITHUB_TOKEN: ${{ secrets.GIT_ACCESS_TOKEN }}
-
       - name: Release
         uses: jreleaser/release-action@v1
         with:
