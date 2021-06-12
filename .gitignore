@@ -12,3 +12,6 @@ target
 .tmp
 .DS_Store
 jdks
+.bach/workspace
+.bach/external-tools
+.bach/external-modules

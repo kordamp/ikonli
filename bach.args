@@ -1,0 +1,14 @@
+--external-library-version
+  sormuras-modules=2021.06.06
+--external-library-version
+  javafx=11
+--limit-tool
+  javac,jar,jlink
+--main-java-release
+  11
+--main-module-pattern
+  core/ikonli-*/src/main/java/module-info.java
+--main-module-pattern
+  icon-packs/ikonli-*-pack/src/main/java/module-info.java
+--main-module-pattern
+  apps/*/src/main/java/module-info.java
