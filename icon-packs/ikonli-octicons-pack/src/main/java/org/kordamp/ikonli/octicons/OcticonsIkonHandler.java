@@ -30,7 +30,7 @@ import java.net.URL;
  */
 @ServiceProviderFor(IkonHandler.class)
 public class OcticonsIkonHandler extends AbstractIkonHandler {
-    private static final String FONT_RESOURCE = "/META-INF/resources/octicons/11.0.0/fonts/octicons.ttf";
+    private static final String FONT_RESOURCE = "/META-INF/resources/octicons/14.2.2/fonts/octicons.ttf";
 
     @Override
     public boolean supports(String description) {
