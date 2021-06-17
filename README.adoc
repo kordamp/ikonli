@@ -7,9 +7,7 @@
 :project-version: 12.2.0
 
 image:https://github.com/{project-owner}/{project-name}/workflows/Build/badge.svg["Build Status", link="https://github.com/{project-owner}/{project-name}/actions"]
-image:https://img.shields.io/badge/license-ASL2-blue.svg?logo=apache["ASL2 Licensed", link="https://opensource.org/licenses/Apache-2.0"]
 image:https://img.shields.io/maven-central/v/{project-group}/{project-name}-core.svg?label=maven[link="https://search.maven.org/#search|ga|1|{project-group}"]
-image:https://img.shields.io/badge/donations-Patreon-f96854.svg?logo=patreon[link="https://www.patreon.com/user?u=6609318"]
 
 ---
 
@@ -17,7 +15,7 @@ Ikonli provides icon packs that can be used in Java applications. Currently Swin
 
 == Installing
 
-You can get the latest version of **Ikonli** directly from link:https://bintray.com[Bintray's JCenter] repository or Maven Central.
+You can get the latest version of **Ikonli** directly from link:https://search.maven.org/#search|ga|1|{project-group}[Maven Central].
 
 Refer to the link:http://{project-owner}.github.io/ikonli/[guide, window="_blank"] for further information on configuration
 and usage.
