@@ -20,11 +20,11 @@ plugins {
     id 'org.beryx.jlink'
 }
 
-ext.moduleName = 'org.kordamp.ikonli.browser'
-ext.moduleMainClass = 'org.kordamp.ikonli.browser.Launcher'
-
-//mainClassName = "${moduleName}/${moduleMainClass}"
-mainClassName = moduleMainClass
+application {
+    mainModule = 'org.kordamp.ikonli.browser'
+    mainClass = 'org.kordamp.ikonli.browser.Launcher'
+    applicationName = 'ikonli-browser'
+}
 
 repositories {
     mavenLocal()
@@ -94,12 +94,12 @@ dependencies {
     implementation project(':ikonli-win10-pack')
     implementation project(':ikonli-zondicons-pack')
 
-    implementation "org.openjfx:javafx-base:${javafxVersion}:${platform}"
-    implementation "org.openjfx:javafx-graphics:${javafxVersion}:${platform}"
-    implementation "org.openjfx:javafx-controls:${javafxVersion}:${platform}"
-    implementation "org.openjfx:javafx-fxml:${javafxVersion}:${platform}"
-    implementation "org.openjfx:javafx-media:${javafxVersion}:${platform}"
-    implementation "org.openjfx:javafx-swing:${javafxVersion}:${platform}"
+    implementation "org.openjfx:javafx-base:${javafxVersion}:${javafx_platform}"
+    implementation "org.openjfx:javafx-graphics:${javafxVersion}:${javafx_platform}"
+    implementation "org.openjfx:javafx-controls:${javafxVersion}:${javafx_platform}"
+    implementation "org.openjfx:javafx-fxml:${javafxVersion}:${javafx_platform}"
+    implementation "org.openjfx:javafx-media:${javafxVersion}:${javafx_platform}"
+    implementation "org.openjfx:javafx-swing:${javafxVersion}:${javafx_platform}"
 }
 
 config {
@@ -132,19 +132,11 @@ processResources {
     )
 }
 
-distZip {
-    archiveClassifier = osdetector.os
-}
-
-distTar {
-    archiveClassifier = osdetector.os
-}
-
 jlink {
-    imageName = "ikonli-browser-standalone-${version}-${platform}".toString()
+    imageDir = file("${buildDir}/jlink/ikonli-browser-${version}-${platform}")
+    imageZip = file("${buildDir}/distributions/ikonli-browser-${version}-${platform}.zip")
     options = ['--strip-debug', '--compress', '2', '--no-header-files', '--no-man-pages']
     launcher {
-        name = 'ikonli-browser'
         noConsole = true
     }
     addExtraDependencies('javafx')

@@ -18,7 +18,7 @@
 
 environment:
   properties:
-    ikonliBrowser: ikonli-browser
+    artifactsDir: apps/ikonli-browser/build/distributions
 
 project:
   name: ikonli
@@ -31,16 +31,21 @@ project:
   java:
     groupId: org.kordamp.ikonli
     version: 11
+  extraProperties:
+    inceptionYear: 2015
+  snapshot:
+    label: '{{projectVersionNumber}}.EarlyAccess'
 
 release:
   github:
-    username: aalmiray
     overwrite: true
     sign: true
     branch: master
     changelog:
       formatted: ALWAYS
-      change: '- {{commitShortHash}} {{commitTitle}}'
+      format: '- {{commitShortHash}} {{commitTitle}}'
+      contributors:
+        format: '- {{contributorName}}{{#contributorUsernameAsLink}} ({{.}}){{/contributorUsernameAsLink}}'
       labelers:
         - label: 'feature'
           title: 'Resolves #'
@@ -53,12 +58,12 @@ release:
         - label: 'ikonli-browser'
           title: '[ikonli-browser]'
       categories:
-        - title: '🚀 Features'
-          labels:
-            - 'feature'
         - title: '🖥  Ikonli Browser'
           labels:
             - 'ikonli-browser'
+        - title: '🚀 Features'
+          labels:
+            - 'feature'
         - title: '✅ Issues'
           labels:
             - 'issue'
@@ -79,26 +84,14 @@ announce:
 
 distributions:
   ikonli-browser:
+    type: JLINK
     artifacts:
-      - path: artifact/distributions/{{ikonliBrowser}}-{{projectVersion}}-osx.zip
-        transform: '{{ikonliBrowser}}/{{ikonliBrowser}}-{{projectEffectiveVersion}}-mac.zip'
-        platform: 'osx'
-      - path: artifact/distributions/{{distributionName}}-{{projectVersion}}-linux.zip
-        transform: '{{ikonliBrowser}}/{{ikonliBrowser}}-{{projectEffectiveVersion}}-linux.zip'
-        platform: 'linux'
-      - path: artifact/distributions/{{distributionName}}-{{projectVersion}}-windows.zip
-        transform: '{{ikonliBrowser}}/{{ikonliBrowser}}-{{projectEffectiveVersion}}-windows.zip'
-        platform: 'windows'
-
-  ikonli-browser-standalone:
-    executable: '{{ikonliBrowser}}'
-    artifacts:
-      - path: artifact/{{distributionName}}-{{projectVersion}}-mac.zip
-        transform: '{{ikonliBrowser}}/{{distributionName}}-{{projectEffectiveVersion}}-mac.zip'
-        platform: 'osx'
-      - path: artifact/{{ikonliBrowser}}-standalone-{{projectVersion}}-linux.zip
-        transform: '{{ikonliBrowser}}/{{distributionName}}-{{projectEffectiveVersion}}-linux.zip'
-        platform: 'linux'
-      - path: artifact/{{ikonliBrowser}}-standalone-{{projectVersion}}-win.zip
-        transform: '{{ikonliBrowser}}/{{distributionName}}-{{projectEffectiveVersion}}-windows.zip'
-        platform: 'windows'
+      - path: '{{artifactsDir}}/{{distributionName}}-{{projectVersion}}-osx-x86_64.zip'
+        transform: '{{distributionName}}/{{distributionName}}-{{projectEffectiveVersion}}-osx-x86_64.zip'
+        platform: 'osx-x86_64'
+      - path: '{{artifactsDir}}/{{distributionName}}-{{projectVersion}}-linux-x86_64.zip'
+        transform: '{{distributionName}}/{{distributionName}}-{{projectEffectiveVersion}}-linux-x86_64.zip'
+        platform: 'linux-x86_64'
+      - path: '{{artifactsDir}}/{{distributionName}}-{{projectVersion}}-windows-x86_64.zip'
+        transform: '{{distributionName}}/{{distributionName}}-{{projectEffectiveVersion}}-windows-x86_64.zip'
+        platform: 'windows-x86_64'

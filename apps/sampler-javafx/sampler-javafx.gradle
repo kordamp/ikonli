@@ -81,11 +81,11 @@ dependencies {
     implementation project(':ikonli-win10-pack')
     implementation project(':ikonli-zondicons-pack')
 
-    implementation "org.openjfx:javafx-base:${javafxVersion}:${platform}"
-    implementation "org.openjfx:javafx-graphics:${javafxVersion}:${platform}"
-    implementation "org.openjfx:javafx-controls:${javafxVersion}:${platform}"
-    implementation "org.openjfx:javafx-fxml:${javafxVersion}:${platform}"
-    implementation "org.openjfx:javafx-swing:${javafxVersion}:${platform}"
+    implementation "org.openjfx:javafx-base:${javafxVersion}:${javafx_platform}"
+    implementation "org.openjfx:javafx-graphics:${javafxVersion}:${javafx_platform}"
+    implementation "org.openjfx:javafx-controls:${javafxVersion}:${javafx_platform}"
+    implementation "org.openjfx:javafx-fxml:${javafxVersion}:${javafx_platform}"
+    implementation "org.openjfx:javafx-swing:${javafxVersion}:${javafx_platform}"
 }
 
 config {

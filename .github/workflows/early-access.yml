@@ -43,10 +43,9 @@ jobs:
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
         with:
-          name: artifact
+          name: artifacts
           path: |
             apps/ikonli-browser/build/distributions/ikonli-browser-*.zip
-            apps/ikonli-browser/build/ikonli-browser-standalone-*.zip
 
   earlyaccess:
     name: EarlyAccess
@@ -61,9 +60,6 @@ jobs:
       - name: Download build artifacts
         uses: actions/download-artifact@v2
 
-      - name: Display build artifacts
-        run: ls -R artifact
-
       - name: Set up Java
         uses: actions/setup-java@v2
         with:
@@ -77,7 +73,7 @@ jobs:
       - name: Release
         uses: jreleaser/release-action@v1
         with:
-          arguments: full-release
+          arguments: full-release -p artifactsDir=artifacts
         env:
           JRELEASER_PROJECT_VERSION: ${{ steps.vars.outputs.version }}
           JRELEASER_GITHUB_TOKEN: ${{ secrets.GIT_ACCESS_TOKEN }}
@@ -89,8 +85,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v2
         with:
-          name: artifact
+          name: jreleaser
           path: |
             out/jreleaser/trace.log
             out/jreleaser/output.properties
-            out/jreleaser/release/CHANGELOG.md

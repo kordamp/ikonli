@@ -18,15 +18,15 @@
 dependencies {
     api project(':ikonli-core')
 
-    compileOnly "org.openjfx:javafx-base:${javafxVersion}:${platform}"
-    compileOnly "org.openjfx:javafx-graphics:${javafxVersion}:${platform}"
-    compileOnly "org.openjfx:javafx-controls:${javafxVersion}:${platform}"
-    compileOnly "org.openjfx:javafx-fxml:${javafxVersion}:${platform}"
-    compileOnly "org.openjfx:javafx-swing:${javafxVersion}:${platform}"
+    compileOnly "org.openjfx:javafx-base:${javafxVersion}:${javafx_platform}"
+    compileOnly "org.openjfx:javafx-graphics:${javafxVersion}:${javafx_platform}"
+    compileOnly "org.openjfx:javafx-controls:${javafxVersion}:${javafx_platform}"
+    compileOnly "org.openjfx:javafx-fxml:${javafxVersion}:${javafx_platform}"
+    compileOnly "org.openjfx:javafx-swing:${javafxVersion}:${javafx_platform}"
 
-    testImplementation "org.openjfx:javafx-base:${javafxVersion}:${platform}"
-    testImplementation "org.openjfx:javafx-graphics:${javafxVersion}:${platform}"
-    testImplementation "org.openjfx:javafx-controls:${javafxVersion}:${platform}"
-    testImplementation "org.openjfx:javafx-fxml:${javafxVersion}:${platform}"
-    testImplementation "org.openjfx:javafx-swing:${javafxVersion}:${platform}"
+    testImplementation "org.openjfx:javafx-base:${javafxVersion}:${javafx_platform}"
+    testImplementation "org.openjfx:javafx-graphics:${javafxVersion}:${javafx_platform}"
+    testImplementation "org.openjfx:javafx-controls:${javafxVersion}:${javafx_platform}"
+    testImplementation "org.openjfx:javafx-fxml:${javafxVersion}:${javafx_platform}"
+    testImplementation "org.openjfx:javafx-swing:${javafxVersion}:${javafx_platform}"
 }
