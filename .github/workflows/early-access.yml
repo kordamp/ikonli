@@ -73,6 +73,7 @@ jobs:
       - name: Release
         uses: jreleaser/release-action@v1
         with:
+          version: early-access
           arguments: full-release -p artifactsDir=artifacts
         env:
           JRELEASER_PROJECT_VERSION: ${{ steps.vars.outputs.version }}
