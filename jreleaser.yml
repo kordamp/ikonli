@@ -18,7 +18,7 @@
 
 environment:
   properties:
-    artifactsDir: apps/ikonli-browser/build/distributions
+    artifactsDir: apps/ikonli-browser/build
 
 project:
   name: ikonli
@@ -86,12 +86,34 @@ distributions:
   ikonli-browser:
     type: JLINK
     artifacts:
-      - path: '{{artifactsDir}}/{{distributionName}}-{{projectVersion}}-osx-x86_64.zip'
-        transform: '{{distributionName}}/{{distributionName}}-{{projectEffectiveVersion}}-osx-x86_64.zip'
+      - path: '{{artifactsDir}}/distributions/ikonli-browser-{{projectVersion}}-osx-x86_64.zip'
+        transform: 'ikonli-browser/ikonli-browser-{{projectEffectiveVersion}}-osx-x86_64.zip'
         platform: 'osx-x86_64'
-      - path: '{{artifactsDir}}/{{distributionName}}-{{projectVersion}}-linux-x86_64.zip'
-        transform: '{{distributionName}}/{{distributionName}}-{{projectEffectiveVersion}}-linux-x86_64.zip'
+      - path: '{{artifactsDir}}/distributions/ikonli-browser-{{projectVersion}}-linux-x86_64.zip'
+        transform: 'ikonli-browser/ikonli-browser-{{projectEffectiveVersion}}-linux-x86_64.zip'
         platform: 'linux-x86_64'
-      - path: '{{artifactsDir}}/{{distributionName}}-{{projectVersion}}-windows-x86_64.zip'
-        transform: '{{distributionName}}/{{distributionName}}-{{projectEffectiveVersion}}-windows-x86_64.zip'
+      - path: '{{artifactsDir}}/distributions/ikonli-browser-{{projectVersion}}-windows-x86_64.zip'
+        transform: 'ikonli-browser/ikonli-browser-{{projectEffectiveVersion}}-windows-x86_64.zip'
         platform: 'windows-x86_64'
+
+  ikonli-browser-pkg:
+    type: NATIVE_PACKAGE
+    artifacts:
+      - path: '{{artifactsDir}}/packagers/ikonli-browser-{{projectVersionNumber}}.dmg'
+        transform: 'ikonli-browser/ikonli-browser-{{projectEffectiveVersion}}.dmg'
+        platform: 'osx-x86_64'
+      - path: '{{artifactsDir}}/packagers/ikonli-browser-{{projectVersionNumber}}.pkg'
+        transform: 'ikonli-browser/ikonli-browser-{{projectEffectiveVersion}}.pkg'
+        platform: 'osx-x86_64'
+      - path: '{{artifactsDir}}/packagers/ikonli-browser-{{projectVersionNumber}}.msi'
+        transform: 'ikonli-browser/ikonli-browser-{{projectEffectiveVersion}}.msi'
+        platform: 'windows-x86_64'
+      - path: '{{artifactsDir}}/packagers/ikonli-browser-{{projectVersionNumber}}.exe'
+        transform: 'ikonli-browser/ikonli-browser-{{projectEffectiveVersion}}.exe'
+        platform: 'windows-x86_64'
+      - path: '{{artifactsDir}}/packagers/ikonli-browser-{{projectVersionNumber}}-1.x86_64.rpm'
+        transform: 'ikonli-browser/ikonli-browser-{{projectEffectiveVersion}}-1.x86_64.rpm'
+        platform: 'linux-x86_64'
+      - path: '{{artifactsDir}}/packagers/ikonli-browser-{{projectVersionNumber}}-1_amd64.deb'
+        transform: 'ikonli-browser/ikonli-browser-{{projectEffectiveVersion}}-1_amd64.deb'
+        platform: 'linux-x86_64'

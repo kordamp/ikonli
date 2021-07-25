@@ -38,14 +38,24 @@ jobs:
             ${{ runner.os }}-gradlew-
 
       - name: Build
-        run: ./gradlew -Prelease=true build -S
+        run: ./gradlew -Prelease=true build
+
+      - name: Jlink & JPackage
+        run: './gradlew -Prelease=true :ikonli-browser:jlinkZip :ikonli-browser:jpackage'
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
         with:
           name: artifacts
+          if-no-files-found: ignore
           path: |
-            apps/ikonli-browser/build/distributions/ikonli-browser-*.zip
+            apps/ikonli-browser/build/distributions/ikonli-browser-*x86_64.zip
+            apps/ikonli-browser/build/packagers/ikonli-browser-*.rpm
+            apps/ikonli-browser/build/packagers/ikonli-browser-*.dmg
+            apps/ikonli-browser/build/packagers/ikonli-browser-*.exe
+            apps/ikonli-browser/build/packagers/ikonli-browser-*.msi
+            apps/ikonli-browser/build/packagers/ikonli-browser-*.pkg
+            apps/ikonli-browser/build/packagers/ikonli-browser-*.deb
 
   earlyaccess:
     name: EarlyAccess

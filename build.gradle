@@ -23,6 +23,7 @@ plugins {
 
 ext.javafx_platform = osdetector.os == 'osx' ? 'mac' : osdetector.os == 'windows' ? 'win' : osdetector.os
 ext.platform = "${osdetector.os}-${osdetector.arch}"
+ext.baseVersion = version - '-SNAPSHOT'
 
 config {
     info {
