@@ -70,6 +70,9 @@ jobs:
       - name: Download build artifacts
         uses: actions/download-artifact@v2
 
+      - name: Artifacts
+        run: ls -lR artifacts
+
       - name: Set up Java
         uses: actions/setup-java@v2
         with:

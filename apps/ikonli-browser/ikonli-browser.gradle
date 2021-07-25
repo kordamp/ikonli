@@ -181,6 +181,10 @@ jlink {
         installerOptions += ['--vendor', 'Kordamp']
         if (rootProject.javafx_platform == 'win') {
             installerOptions += ['--win-per-user-install', '--win-dir-chooser', '--win-menu', '--win-shortcut']
+        } else if (rootProject.javafx_platform == 'linux') {
+            installerOptions += ['--linux-package-name', 'ikonli-browser', '--linux-shortcut']
+        } else if (rootProject.javafx_platform == 'mac') {
+            installerOptions += ['--mac-package-name', 'ikonli-browser']
         }
     }
 }
