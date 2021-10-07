@@ -135,12 +135,14 @@ processResources {
 
 ext {
     zuluPlatform = rootProject.javafx_platform == 'mac' ? 'macosx' : rootProject.javafx_platform
-    zuluHome = project.file("${buildDir}/jdks/${zuluVersion}-${zuluPlatform}_x64")
+    zuluHome = project.file("${buildDir}/jdks/zulu16Linux/${zuluVersion}-${zuluPlatform}_x64")
 }
 if (rootProject.javafx_platform == 'mac') {
-    zuluHome = project.file("${zuluHome}/zulu-16.jdk/Contents/Home")
+    zuluHome = project.file("${buildDir}/jdks/zulu16Osx/${zuluVersion}-${zuluPlatform}_x64/zulu-16.jdk/Contents/Home")
+} else if (rootProject.javafx_platform == 'win') {
+    zuluHome = project.file("${buildDir}/jdks/zulu16Windows/${zuluVersion}-${zuluPlatform}_x64/zulu-16.jdk/Contents/Home")
 }
-System.properties['badass.jlink.java.home'] = zuluHome.absolutePath
+System.properties['badass.jlink.java.home']     = zuluHome.absolutePath
 System.properties['badass.jlink.jpackage.home'] = zuluHome.absolutePath
 
 jdks {
