@@ -91,8 +91,6 @@ subprojects { subproj ->
             testImplementation 'junit:junit:4.13.2'
         }
 
-        modularity.moduleVersion(project.version)
-
         license {
             mapping {
                 fxml = 'XML_STYLE'
