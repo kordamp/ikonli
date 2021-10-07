@@ -83,14 +83,15 @@ idea {
 }
 
 subprojects { subproj ->
-    if (!subproj.name.contains('guide')) {
+    if (!subproj.name.contains('guide') && !subproj.name.contains('bom')) {
         apply plugin: 'java-library'
-        apply plugin: 'org.jonnyzzz.java9c'
         apply plugin: 'org.javamodularity.moduleplugin'
 
         dependencies {
             testImplementation 'junit:junit:4.13.2'
         }
+
+        modularity.moduleVersion(project.version)
 
         license {
             mapping {
