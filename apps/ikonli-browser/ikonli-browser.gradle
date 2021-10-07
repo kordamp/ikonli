@@ -140,7 +140,7 @@ ext {
 if (rootProject.javafx_platform == 'mac') {
     zuluHome = project.file("${buildDir}/jdks/zulu16Osx/${zuluVersion}-${zuluPlatform}_x64/zulu-16.jdk/Contents/Home")
 } else if (rootProject.javafx_platform == 'win') {
-    zuluHome = project.file("${buildDir}/jdks/zulu16Windows/${zuluVersion}-${zuluPlatform}_x64/zulu-16.jdk/Contents/Home")
+    zuluHome = project.file("${buildDir}/jdks/zulu16Windows/${zuluVersion}-${zuluPlatform}_x64")
 }
 System.properties['badass.jlink.java.home']     = zuluHome.absolutePath
 System.properties['badass.jlink.jpackage.home'] = zuluHome.absolutePath
