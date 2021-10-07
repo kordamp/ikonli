@@ -17,7 +17,6 @@
  */
 plugins {
     id 'com.google.osdetector'
-    id 'org.jonnyzzz.java9c'             apply false
     id 'org.javamodularity.moduleplugin' apply false
 }
 
