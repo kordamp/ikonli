@@ -99,7 +99,7 @@ jobs:
       - name: Release
         uses: jreleaser/release-action@v1
         with:
-          arguments: full-release -p artifactsDir=artifacts
+          arguments: full-release -P artifactsDir=artifacts
         env:
           JRELEASER_PROJECT_VERSION: ${{ github.event.inputs.version }}
           JRELEASER_GITHUB_TOKEN: ${{ secrets.GIT_ACCESS_TOKEN }}
