@@ -14,7 +14,7 @@
 <div id="header">
 <h1>Authoring</h1>
 <div class="details">
-<span id="revnumber">version 12.2.0</span>
+<span id="revnumber">version 12.3.0</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
@@ -96,7 +96,7 @@ the icon&#8217;s description and code. Make sure to use a unique prefix in the d
 <span class="keyword">import</span> <span class="include">org.kordamp.ikonli.AbstractIkonHandler</span>;
 <span class="keyword">import</span> <span class="include">org.kordamp.ikonli.Ikon</span>;
 <span class="keyword">import</span> <span class="include">org.kordamp.ikonli.IkonHandler</span>;
-<span class="keyword">import</span> <span class="include">org.kordamp.jipsy.ServiceProviderFor</span>;
+<span class="keyword">import</span> <span class="include">org.kordamp.jipsy.annotations.ServiceProviderFor</span>;
 <span class="keyword">import</span> <span class="include">java.io.InputStream</span>;
 <span class="keyword">import</span> <span class="include">java.net.URL</span>;
 
@@ -176,9 +176,9 @@ a service entry if the icon is to be consumed in the classpath, as not everyone 
 <pre class="CodeRay highlight"><code data-lang="java"><span class="keyword">package</span> <span class="namespace">com.acme.mine</span>;
 
 <span class="keyword">import</span> <span class="include">org.kordamp.ikonli.IkonProvider</span>;
-<span class="keyword">import</span> <span class="include">org.kordamp.jipsy.ServiceProviderFor</span>;
+<span class="keyword">import</span> <span class="include">org.kordamp.jipsy.annotations.ServiceProviderFor</span>;
 
-<span class="annotation">@ServiceProviderFor</span>(IkonProvider.class)                             <i class="conum" data-value="1"></i><b>(1)</b>
+<span class="annotation">@ServiceProviderFor</span>(IkonProvider.class)                                <i class="conum" data-value="1"></i><b>(1)</b>
 <span class="directive">public</span> <span class="type">class</span> <span class="class">MyIconIkonProvider</span> <span class="directive">implements</span> IkonProvider&lt;MyIcon&gt; {
     <span class="annotation">@Override</span>
     <span class="directive">public</span> <span class="predefined-type">Class</span>&lt;MyIcon&gt; getIkon() {
@@ -219,7 +219,7 @@ a service entry if the icon is to be consumed in the classpath, as not everyone 
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="java">module com.acme.mine {
     requires org.kordamp.ikonli.core;
-    requires <span class="directive">static</span> org.kordamp.jipsy;                    <i class="conum" data-value="1"></i><b>(1)</b>
+    requires <span class="directive">static</span> org.kordamp.jipsy.annotations;                     <i class="conum" data-value="1"></i><b>(1)</b>
     exports com.acme.mine;
 
     provides org.kordamp.ikonli.IkonHandler
@@ -242,8 +242,8 @@ a service entry if the icon is to be consumed in the classpath, as not everyone 
 </div>
 <div id="footer">
 <div id="footer-text">
-Version 12.2.0<br>
-Last updated 2021-10-07 21:51:01 +0200
+Version 12.3.0<br>
+Last updated 2021-10-07 21:59:23 +0200
 </div>
 </div>
 <link rel="stylesheet" href="./coderay-asciidoctor.css">
