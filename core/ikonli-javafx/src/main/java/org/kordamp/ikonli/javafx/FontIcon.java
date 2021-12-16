@@ -20,6 +20,7 @@ package org.kordamp.ikonli.javafx;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.ObjectProperty;
 import javafx.css.CssMetaData;
+import javafx.css.StyleOrigin;
 import javafx.css.Styleable;
 import javafx.css.StyleableIntegerProperty;
 import javafx.css.StyleableObjectProperty;
@@ -120,6 +121,11 @@ public class FontIcon extends Text implements Icon {
                 public String getName() {
                     return "iconSize";
                 }
+
+                @Override
+                public StyleOrigin getStyleOrigin() {
+                    return StyleOrigin.USER_AGENT;
+                }
             };
             iconSize.addListener((v, o, n) -> {
                 Font font = FontIcon.this.getFont();
@@ -150,6 +156,11 @@ public class FontIcon extends Text implements Icon {
                 public String getName() {
                     return "iconColor";
                 }
+
+                @Override
+                public StyleOrigin getStyleOrigin() {
+                    return StyleOrigin.USER_AGENT;
+                }
             };
             iconColor.addListener((v, o, n) -> FontIcon.this.setFill(n));
         }
@@ -172,6 +183,11 @@ public class FontIcon extends Text implements Icon {
                 @Override
                 public String getName() {
                     return "iconCode";
+                }
+
+                @Override
+                public StyleOrigin getStyleOrigin() {
+                    return StyleOrigin.USER_AGENT;
                 }
             };
 

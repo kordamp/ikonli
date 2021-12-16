@@ -23,6 +23,7 @@ import javafx.beans.value.ChangeListener;
 import javafx.collections.ListChangeListener;
 import javafx.collections.MapChangeListener;
 import javafx.css.CssMetaData;
+import javafx.css.StyleOrigin;
 import javafx.css.Styleable;
 import javafx.css.StyleableIntegerProperty;
 import javafx.css.StyleableObjectProperty;
@@ -165,6 +166,11 @@ public class StackedFontIcon extends StackPane implements Icon {
                 public String getName() {
                     return "iconSize";
                 }
+
+                @Override
+                public StyleOrigin getStyleOrigin() {
+                    return StyleOrigin.USER_AGENT;
+                }
             };
             iconSize.addListener(iconSizeChangeListener);
         }
@@ -187,6 +193,11 @@ public class StackedFontIcon extends StackPane implements Icon {
                 @Override
                 public String getName() {
                     return "iconColor";
+                }
+
+                @Override
+                public StyleOrigin getStyleOrigin() {
+                    return StyleOrigin.USER_AGENT;
                 }
             };
             iconColor.addListener(iconColorChangeListener);
