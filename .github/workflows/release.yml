@@ -15,7 +15,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-        
+
       - name: Set release version
         run: |
           VERSION=${{ github.event.inputs.version }}
@@ -26,6 +26,14 @@ jobs:
           git config --global user.name "GitHub Action"
           git commit -a -m "Releasing version $VERSION"
           git push origin master
+          git rev-parse HEAD > HEAD
+
+      - name: Upload files
+        uses: actions/upload-artifact@v2
+        with:
+          name: artifacts
+          path: |
+            HEAD
 
   build:
     name: Build
@@ -37,7 +45,19 @@ jobs:
     runs-on: ${{ matrix.os }}
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Download all artifacts
+        uses: actions/download-artifact@v2
+
+      - name: Read HEAD ref
+        id: head
+        uses: juliangruber/read-file-action@v1
+        with:
+          path: artifacts/HEAD
+
+      - name: Check out repository
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ steps.head.outputs.content }}
 
       - name: Set up Java
         uses: actions/setup-java@v2
@@ -84,9 +104,20 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
+      # must read HEAD before checkout
+      - name: Download build artifacts
+        uses: actions/download-artifact@v2
+
+      - name: Read HEAD ref
+        id: head
+        uses: juliangruber/read-file-action@v1
+        with:
+          path: artifacts/HEAD
+
       - name: Checkout
         uses: actions/checkout@v2
         with:
+          ref: ${{ steps.head.outputs.content }}
           fetch-depth: 0
 
       - name: Download build artifacts
