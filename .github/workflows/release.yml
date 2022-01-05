@@ -138,7 +138,7 @@ jobs:
           ./gradlew -Prelease=true -Pfull-release=true \
           -PsonatypeUsername=${{ secrets.SONATYPE_USERNAME }} \
           -PsonatypePassword=${{ secrets.SONATYPE_PASSWORD }} \
-          build publishToSonatype -S
+          build publishToSonatype closeAndReleaseSonatypeStagingRepository -S
 
       - name: Release
         uses: jreleaser/release-action@v1
