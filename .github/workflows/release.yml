@@ -129,6 +129,17 @@ jobs:
           java-version: 11
           distribution: 'zulu'
 
+      - name: Deploy
+        env:
+          GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}
+          GPG_SECRET_KEY: ${{ secrets.GPG_SECRET_KEY }}
+          GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+        run: |
+          ./gradlew -Prelease=true -Pfull-release=true \
+          -PsonatypeUsername=${{ secrets.SONATYPE_USERNAME }} \
+          -PsonatypePassword=${{ secrets.SONATYPE_PASSWORD }} \
+          build publishToSonatype -S
+
       - name: Release
         uses: jreleaser/release-action@v1
         with:
