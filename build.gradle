@@ -91,6 +91,10 @@ subprojects { subproj ->
             testImplementation 'junit:junit:4.13.2'
         }
 
+        tasks.named('compileJava') {
+            options.javaModuleVersion = provider { project.version }
+        }
+
         license {
             mapping {
                 fxml = 'XML_STYLE'
@@ -104,6 +108,14 @@ subprojects { subproj ->
             exclude '**/*.css'
             exclude '**/*.md'
             exclude '**/*.txt'
+        }
+    }
+
+    if (subproj.name.endsWith('-pack')) {
+        dependencies {
+            api project(':ikonli-core')
+            compileOnly "org.kordamp.jipsy:jipsy-annotations:${jipsyVersion}"
+            annotationProcessor "org.kordamp.jipsy:jipsy-processor:${jipsyVersion}"
         }
     }
 }

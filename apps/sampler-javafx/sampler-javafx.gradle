@@ -19,7 +19,10 @@ plugins {
     id 'application'
 }
 
-mainClassName = 'org.kordamp.ikonli.sampler.javafx/org.kordamp.ikonli.sampler.javafx.Sampler'
+application {
+  mainModule = 'org.kordamp.ikonli.sampler.javafx'
+  mainClass  = 'org.kordamp.ikonli.sampler.javafx.Sampler'
+}
 
 dependencies {
     implementation project(':ikonli-core')
