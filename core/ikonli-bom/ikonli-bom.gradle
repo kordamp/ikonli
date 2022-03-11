@@ -24,5 +24,6 @@ config {
         exclude('guide')
         exclude('sampler-javafx')
         exclude('sampler-swing')
+        exclude('ikonli-browser')
     }
 }
