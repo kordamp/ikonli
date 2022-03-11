@@ -21,7 +21,9 @@ import javafx.scene.text.Font;
 import org.kordamp.ikonli.AbstractIkonResolver;
 import org.kordamp.ikonli.IkonHandler;
 
+import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
+import java.util.Map;
 import java.util.ServiceLoader;
 import java.util.Set;
 
@@ -32,6 +34,7 @@ public class IkonResolver extends AbstractIkonResolver {
     private static final IkonResolver INSTANCE;
     private static final Set<IkonHandler> HANDLERS = new LinkedHashSet<>();
     private static final Set<IkonHandler> CUSTOM_HANDLERS = new LinkedHashSet<>();
+    private static final Map<String, Font> FONTS = new LinkedHashMap<>();
 
     static {
         INSTANCE = new IkonResolver();
@@ -39,7 +42,8 @@ public class IkonResolver extends AbstractIkonResolver {
         ServiceLoader<IkonHandler> loader = resolveServiceLoader();
         for (IkonHandler handler : loader) {
             HANDLERS.add(handler);
-            handler.setFont(Font.loadFont(handler.getFontResource().toExternalForm(), 16));
+            String fontResource = handler.getFontResource().toExternalForm();
+            handler.setFont(FONTS.computeIfAbsent(fontResource, key -> Font.loadFont(key, 16)));
         }
     }
 
