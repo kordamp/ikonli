@@ -41,6 +41,8 @@ release:
     overwrite: true
     sign: true
     branch: master
+    milestone:
+      name: '{{projectVersion}}'
     changelog:
       formatted: ALWAYS
       format: '- {{commitShortHash}} {{commitTitle}}'
@@ -57,6 +59,8 @@ release:
           title: '[chore]'
         - label: 'ikonli-browser'
           title: '[ikonli-browser]'
+        - label: 'build'
+          title: '[build]'
       categories:
         - title: '🖥  Ikonli Browser'
           labels:
@@ -70,6 +74,14 @@ release:
         - title: '🧰 Tasks'
           labels:
             - 'task'
+        - title: '🛠  Build'
+          labels:
+            - 'build'
+      hide:
+        categories:
+          - 'Merge'
+        contributors:
+          - 'GitHub'
       replacers:
         - search: '\[chore\] '
         - search: '\[ikonli\-browser\] '
