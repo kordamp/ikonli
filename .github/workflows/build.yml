@@ -3,6 +3,10 @@ name: Build
 on:
   pull_request:
 
+env:
+  JAVA_VERSION: '11'
+  JAVA_DISTRO: 'zulu'
+
 jobs:
   build:
     name: Build
@@ -16,23 +20,23 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Set up Java
+      - name: Setup Java
         uses: actions/setup-java@v2
         with:
-          java-version: 11
-          distribution: 'zulu'
+          java-version: ${{ env.JAVA_VERSION }}
+          distribution: ${{ env.JAVA_DISTRO }}
 
       - uses: actions/cache@v2
         with:
           path: ~/.gradle/caches
-          key: ${{ runner.os }}-gradle-cache-${{ hashFiles('**/*.gradle') }}-${{ hashFiles('**/gradle.properties') }}
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}-${{ hashFiles('**/gradle.properties') }}
           restore-keys: |
             ${{ runner.os }}-gradle-
 
       - uses: actions/cache@v2
         with:
           path: ~/.gradle/wrapper
-          key: ${{ runner.os }}-gradle-wrapper-${{ hashFiles('**/gradlew') }}
+          key: ${{ runner.os }}-gradlew-${{ hashFiles('**/gradlew') }}
           restore-keys: |
             ${{ runner.os }}-gradlew-
 

@@ -4,44 +4,68 @@ on:
   push:
     branches: [ master ]
 
+env:
+  JAVA_VERSION: '11'
+  JAVA_DISTRO: 'zulu'
+
 jobs:
+  precheck:
+    name: Precheck
+    if: startsWith(github.event.head_commit.message, 'Releasing version') != true
+    runs-on: ubuntu-latest
+    outputs:
+      VERSION: ${{ steps.vars.outputs.VERSION }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - uses: n1hility/cancel-previous-runs@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Version
+        id: vars
+        shell: bash
+        run: |
+          echo ::set-output name=VERSION::$(cat VERSION)
+
   build:
     name: Build
+    needs: [precheck]
+    if: endsWith(${{ needs.precheck.outputs.VERSION }}, '-SNAPSHOT')
     strategy:
       fail-fast: false
       matrix:
         os: [ ubuntu-latest, macos-latest, windows-latest ]
     runs-on: ${{ matrix.os }}
-    if: github.repository == 'kordamp/ikonli' && startsWith(github.event.head_commit.message, 'Releasing version') != true
-
     steps:
       - uses: actions/checkout@v2
 
-      - name: Set up Java
+      - name: Setup Java
         uses: actions/setup-java@v2
         with:
-          java-version: 11
-          distribution: 'zulu'
+          java-version: ${{ env.JAVA_VERSION }}
+          distribution: ${{ env.JAVA_DISTRO }}
 
       - uses: actions/cache@v2
         with:
           path: ~/.gradle/caches
-          key: ${{ runner.os }}-gradle-cache-${{ hashFiles('**/*.gradle') }}-${{ hashFiles('**/gradle.properties') }}
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}-${{ hashFiles('**/gradle.properties') }}
           restore-keys: |
             ${{ runner.os }}-gradle-
 
       - uses: actions/cache@v2
         with:
           path: ~/.gradle/wrapper
-          key: ${{ runner.os }}-gradle-wrapper-${{ hashFiles('**/gradlew') }}
+          key: ${{ runner.os }}-gradlew-${{ hashFiles('**/gradlew') }}
           restore-keys: |
             ${{ runner.os }}-gradlew-
 
       - name: Build
         run: ./gradlew -Prelease=true build
 
-      - name: Jlink & JPackage
-        run: './gradlew -Prelease=true :ikonli-browser:jlinkZip :ikonli-browser:jpackage'
+      - name: Assemble
+        run: ./gradlew -Prelease=true :ikonli-browser:jlinkZip :ikonli-browser:jpackage
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
@@ -57,9 +81,9 @@ jobs:
             apps/ikonli-browser/build/packagers/ikonli-browser-*.pkg
             apps/ikonli-browser/build/packagers/ikonli-browser-*.deb
 
-  earlyaccess:
-    name: EarlyAccess
-    needs: build
+  release:
+    name: Release
+    needs: [precheck, build]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -70,18 +94,11 @@ jobs:
       - name: Download build artifacts
         uses: actions/download-artifact@v2
 
-      - name: Artifacts
-        run: ls -lR artifacts
-
-      - name: Set up Java
+      - name: Setup Java
         uses: actions/setup-java@v2
         with:
-          java-version: 11
-          distribution: 'zulu'
-
-      - name: Version
-        id: vars
-        run: echo ::set-output name=version::$(cat VERSION)
+          java-version: ${{ env.JAVA_VERSION }}
+          distribution: ${{ env.JAVA_DISTRO }}
 
       - name: Release
         uses: jreleaser/release-action@v1
@@ -89,7 +106,7 @@ jobs:
           version: early-access
           arguments: full-release -P artifactsDir=artifacts
         env:
-          JRELEASER_PROJECT_VERSION: ${{ steps.vars.outputs.version }}
+          JRELEASER_PROJECT_VERSION: ${{ needs.precheck.outputs.VERSION }}
           JRELEASER_GITHUB_TOKEN: ${{ secrets.GIT_ACCESS_TOKEN }}
           JRELEASER_GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
           JRELEASER_GPG_PUBLIC_KEY: ${{ secrets.GPG_PUBLIC_KEY }}
@@ -99,7 +116,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v2
         with:
-          name: jreleaser
+          name: jreleaser-release
           path: |
             out/jreleaser/trace.log
             out/jreleaser/output.properties
