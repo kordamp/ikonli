@@ -72,6 +72,7 @@ jobs:
         with:
           name: artifacts
           if-no-files-found: ignore
+          retention-days: 1
           path: |
             apps/ikonli-browser/build/distributions/ikonli-browser-*x86_64.zip
             apps/ikonli-browser/build/packagers/ikonli-browser-*.rpm
