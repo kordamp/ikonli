@@ -49,6 +49,10 @@ release:
       contributors:
         format: '- {{contributorName}}{{#contributorUsernameAsLink}} ({{.}}){{/contributorUsernameAsLink}}'
       labelers:
+        - label: 'merge_pull'
+          title: 'Merge pull'
+        - label: 'merge_branch'
+          title: 'Merge branch'
         - label: 'feature'
           title: 'Resolves #'
         - label: 'issue'
@@ -62,6 +66,10 @@ release:
         - label: 'build'
           title: '[build]'
       categories:
+        - title: 'Merge'
+          labels:
+            - 'merge_pull'
+            - 'merge_branch'
         - title: '🖥  Ikonli Browser'
           labels:
             - 'ikonli-browser'
@@ -83,6 +91,7 @@ release:
         contributors:
           - 'GitHub'
       replacers:
+        - search: '\[build\] '
         - search: '\[chore\] '
         - search: '\[ikonli\-browser\] '
 
