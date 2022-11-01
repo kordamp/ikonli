@@ -25,7 +25,7 @@ and usage.
 You must meet the following requirements:
 
  * JDK11 as a minimum
- * Gradle 6.0
+ * Gradle 6.4+
 
 You may use the included gradle wrapper script if you don't have `gradle` installed.
 
@@ -45,7 +45,7 @@ Adapt these instructions to Windows settings if running on Windows.
 
  . Follow the instructions found at http://sdkman.io/ to install SDKMAN.
  . You need a POSIX environment if running Windows. We recommend using Babun Shell (http://babun.github.io/)
- . Once SDKMAN is installed invoke `sdk install gradle 6.3`.
+ . Once SDKMAN is installed invoke `sdk install gradle 6.9.2`.
  . Test your setup by invoking `gradle --version`.
 
 .Gum
