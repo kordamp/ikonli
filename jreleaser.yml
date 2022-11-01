@@ -1,7 +1,7 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
-# Copyright 2015-2021 Andres Almiray.
+# Copyright 2015-2022 Andres Almiray.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -24,15 +24,16 @@ project:
   name: ikonli
   description: Icon packs for Java applications
   longDescription: Icon packs for Java applications
-  website: https://kordamp.org/ikonli
+  links:
+    homepage: https://kordamp.org/ikonli
   authors:
     - Andres Almiray
   license: Apache-2.0
   java:
     groupId: org.kordamp.ikonli
     version: 11
-  extraProperties:
-    inceptionYear: 2015
+  inceptionYear: 2015
+  stereotype: cli
   snapshot:
     label: '{{projectVersionNumber}}.EarlyAccess'
 
@@ -43,57 +44,40 @@ release:
     branch: master
     milestone:
       name: '{{projectVersion}}'
+    issues:
+      enabled: true
     changelog:
       formatted: ALWAYS
+      preset: conventional-commits
       format: '- {{commitShortHash}} {{commitTitle}}'
       contributors:
         format: '- {{contributorName}}{{#contributorUsernameAsLink}} ({{.}}){{/contributorUsernameAsLink}}'
       labelers:
-        - label: 'merge_pull'
-          title: 'Merge pull'
-        - label: 'merge_branch'
-          title: 'Merge branch'
-        - label: 'feature'
-          title: 'Resolves #'
-        - label: 'issue'
-          title: 'Fixes #'
-        - label: 'issue'
-          title: 'Relates to #'
-        - label: 'task'
-          title: '[chore]'
-        - label: 'ikonli-browser'
-          title: '[ikonli-browser]'
-        - label: 'build'
-          title: '[build]'
+        - label: 'browser'
+          title: 'regex:^(?:browser(?:\(.*\))?!?):\s.*'
+          order: 120
+        - label: 'dependencies'
+          title: 'regex:^(?:deps(?:\(.*\))?!?):\s.*'
+          order: 130
       categories:
-        - title: 'Merge'
-          labels:
-            - 'merge_pull'
-            - 'merge_branch'
         - title: '🖥  Ikonli Browser'
+          key: 'browser'
+          order: 70
           labels:
-            - 'ikonli-browser'
-        - title: '🚀 Features'
+            - 'i18n'
+        - title: '⚙️  Dependencies'
+          key: 'dependencies'
+          order: 80
           labels:
-            - 'feature'
-        - title: '✅ Issues'
-          labels:
-            - 'issue'
-        - title: '🧰 Tasks'
-          labels:
-            - 'task'
-        - title: '🛠  Build'
-          labels:
-            - 'build'
+            - 'dependencies'
       hide:
         categories:
-          - 'Merge'
+          - 'merge'
         contributors:
           - 'GitHub'
       replacers:
-        - search: '\[build\] '
-        - search: '\[chore\] '
-        - search: '\[ikonli\-browser\] '
+        - search: 'browser: '
+        - search: 'deps: '
 
 signing:
   active: always
