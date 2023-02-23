@@ -1,7 +1,7 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
-# Copyright 2015-2022 Andres Almiray.
+# Copyright 2015-2023 Andres Almiray.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -33,7 +33,7 @@ project:
     groupId: org.kordamp.ikonli
     version: 11
   inceptionYear: 2015
-  stereotype: cli
+  stereotype: CLI
   snapshot:
     label: '{{projectVersionNumber}}.EarlyAccess'
 
