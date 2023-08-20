@@ -106,6 +106,32 @@ implementation '{project-group}:ikonli-bpmn-pack:{project-version}'
 </dependency>
 ----
 
+== Bytedance
+* Module: `org.kordamp.ikonli.bytedance`
+* Font version: {bytedanceVersion}
+* link:https://github.com/bytedance/iconpark[]
+* link:cheat-sheet-bytedance.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+implementation '{project-group}:ikonli-bytedance-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-bytedance-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
 == Captainicon
 * Module: `org.kordamp.ikonli.captainicon`
 * Font version: {captainiconVersion}
