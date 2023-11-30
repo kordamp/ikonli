@@ -6,8 +6,9 @@
 :project-group:   org.kordamp.ikonli
 :project-version: 12.3.1
 
-image:https://github.com/{project-owner}/{project-name}/workflows/Build/badge.svg["Build Status", link="https://github.com/{project-owner}/{project-name}/actions"]
+image:https://img.shields.io/github/actions/workflow/status/{project-owner}/{project-name}/early-access.yml?branch=master&logo=github&label=Build["Build Status", link="https://github.com/{project-owner}/{project-name}/actions"]
 image:https://img.shields.io/maven-central/v/{project-group}/{project-name}-core.svg?label=maven[link="https://search.maven.org/#search|ga|1|{project-group}"]
+image:https://img.shields.io/badge/Find_me_on-JFXCentral-blue?logo=googlechrome&logoColor=white["JFXCentral", link="https://www.jfx-central.com/libraries/{project-name}"]
 
 ---
 
