@@ -42,6 +42,7 @@ dependencies {
     implementation project(':ikonli-bootstrapicons-pack')
     implementation project(':ikonli-boxicons-pack')
     implementation project(':ikonli-bpmn-pack')
+    implementation project(':ikonli-bytedance-pack')
     implementation project(':ikonli-captainicon-pack')
     implementation project(':ikonli-carbonicons-pack')
     implementation project(':ikonli-codicons-pack')

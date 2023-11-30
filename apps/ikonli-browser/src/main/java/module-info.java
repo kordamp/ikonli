@@ -30,6 +30,7 @@ module org.kordamp.ikonli.browser {
     requires org.kordamp.ikonli.bootstrapicons;
     requires org.kordamp.ikonli.boxicons;
     requires org.kordamp.ikonli.bpmn;
+    requires org.kordamp.ikonli.bytedance;
     requires org.kordamp.ikonli.captainicon;
     requires org.kordamp.ikonli.carbonicons;
     requires org.kordamp.ikonli.codicons;

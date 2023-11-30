@@ -1,0 +1,71 @@
+= BytedanceIcons
+
+Use the indicated enum type for each set.
+
+++++
+<link href='./css/bytedance-iconpack-thin.css' rel='stylesheet'>
+<style>
+    .bd1 {
+        font-size: 32px;
+    }
+</style>
+++++
+
+== Thin A-L (BytedanceIconsThinAL)
+
+include::{gradle-projectdir}/build/tmp/_bytedance_iconpack_thin_al_cheat_sheet.adoc[]
+
+== Thin M-Z (BytedanceIconsThinMZ)
+
+include::{gradle-projectdir}/build/tmp/_bytedance_iconpack_thin_mz_cheat_sheet.adoc[]
+
+++++
+<link href='./css/bytedance-iconpack-regular.css' rel='stylesheet'>
+<style>
+    .bd2 {
+        font-size: 32px;
+    }
+</style>
+++++
+
+== Regular A-L (BytedanceIconsRegularAL)
+
+include::{gradle-projectdir}/build/tmp/_bytedance_iconpack_regular_al_cheat_sheet.adoc[]
+
+== Regular M-Z (BytedanceIconsRegularMZ)
+
+include::{gradle-projectdir}/build/tmp/_bytedance_iconpack_regular_mz_cheat_sheet.adoc[]
+
+++++
+<link href='./css/bytedance-iconpack-bold.css' rel='stylesheet'>
+<style>
+    .bd3 {
+        font-size: 32px;
+    }
+</style>
+++++
+
+== Bold A-L (BytedanceIconsBoldAL)
+
+include::{gradle-projectdir}/build/tmp/_bytedance_iconpack_bold_al_cheat_sheet.adoc[]
+
+== Bold M-Z (BytedanceIconsBoldMZ)
+
+include::{gradle-projectdir}/build/tmp/_bytedance_iconpack_bold_mz_cheat_sheet.adoc[]
+
+++++
+<link href='./css/bytedance-iconpack-extrabold.css' rel='stylesheet'>
+<style>
+    .bd4 {
+        font-size: 32px;
+    }
+</style>
+++++
+
+== ExtraBold A-L (BytedanceIconsExtraBoldAL)
+
+include::{gradle-projectdir}/build/tmp/_bytedance_iconpack_extrabold_al_cheat_sheet.adoc[]
+
+== ExtraBold M-Z (BytedanceIconsExtraBoldMZ)
+
+include::{gradle-projectdir}/build/tmp/_bytedance_iconpack_extrabold_mz_cheat_sheet.adoc[]
