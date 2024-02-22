@@ -15,17 +15,18 @@ jobs:
       VERSION: ${{ steps.vars.outputs.VERSION }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - uses: n1hility/cancel-previous-runs@v2
+      - name: Cancel previous run
+        uses: styfle/cancel-workflow-action@0.12.1
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          access_token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Version
         id: vars
         shell: bash
         run: |
-          echo ::set-output name=VERSION::${{ github.event.inputs.version }}
+          echo "VERSION=${{ github.event.inputs.version }}" >> $GITHUB_OUTPUT
 
   build:
     name: Build
@@ -38,7 +39,7 @@ jobs:
 
     steps:
       - name: Check out repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Java
         uses: actions/setup-java@v4
@@ -52,15 +53,15 @@ jobs:
           echo ${{ needs.precheck.outputs.VERSION }} > VERSION
 
       - name: Build
-        run: ./gradlew -Prelease=true build
+        run: ./gradlew -PreproducibleBuild=true build
 
       - name: Assemble
-        run: ./gradlew -Prelease=true :ikonli-browser:jlinkZip :ikonli-browser:jpackage
+        run: ./gradlew -PreproducibleBuild=true :ikonli-browser:jlinkZip :ikonli-browser:jpackage
 
       - name: Upload artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
-          name: artifacts
+          name: artifacts-${{ runner.os }}-${{ runner.arch }}
           if-no-files-found: ignore
           retention-days: 1
           path: |
@@ -78,12 +79,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
       - name: Download build artifacts
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
+        with:
+          pattern: jpackage-*
+          merge-multiple: true
+          path: artifacts
 
       - name: Setup Java
         uses: actions/setup-java@v4
@@ -107,7 +112,7 @@ jobs:
           ./gradlew -Pprofile=release -PreproducibleBuild=true publish -S
 
       - name: Upload deploy artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           retention-days: 7
           name: deploy
@@ -134,7 +139,7 @@ jobs:
 
       - name: JReleaser release output
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: jreleaser-release
           path: |
