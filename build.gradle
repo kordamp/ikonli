@@ -17,7 +17,6 @@
  */
 plugins {
     id 'com.google.osdetector'
-    id 'org.javamodularity.moduleplugin' apply false
 }
 
 ext.javafx_platform = osdetector.os == 'osx' ? 'mac' : osdetector.os == 'windows' ? 'win' : osdetector.os
@@ -79,7 +78,6 @@ idea {
 subprojects { subproj ->
     if (!subproj.name.contains('guide') && !subproj.name.contains('bom')) {
         apply plugin: 'java-library'
-        apply plugin: 'org.javamodularity.moduleplugin'
 
         dependencies {
             testImplementation 'junit:junit:4.13.2'

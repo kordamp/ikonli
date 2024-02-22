@@ -21,7 +21,7 @@ plugins {
 
 application {
   mainModule = 'org.kordamp.ikonli.sampler.javafx'
-  mainClass  = 'org.kordamp.ikonli.sampler.javafx.Sample'
+  mainClass  = 'org.kordamp.ikonli.sampler.javafx.Sampler'
 }
 
 dependencies {

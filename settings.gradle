@@ -22,13 +22,12 @@ pluginManagement {
         mavenCentral()
     }
     plugins {
-        id 'org.kordamp.gradle.guide'        version kordampPluginVersion
-        id 'org.kordamp.gradle.bom'          version kordampPluginVersion
-        id 'org.ajoberstar.git-publish'      version gitPluginVersion
-        id 'com.google.osdetector'           version osPluginVersion
-        id 'org.javamodularity.moduleplugin' version modularityPluginVersion
-        id 'org.beryx.jlink'                 version jlinkPluginVersion
-        id 'org.jreleaser.jdks'              version jreleaserPluginVersion
+        id 'org.kordamp.gradle.guide'   version kordampPluginVersion
+        id 'org.kordamp.gradle.bom'     version kordampPluginVersion
+        id 'org.ajoberstar.git-publish' version gitPluginVersion
+        id 'com.google.osdetector'      version osPluginVersion
+        id 'org.beryx.jlink'            version jlinkPluginVersion
+        id 'org.jreleaser.jdks'         version jreleaserPluginVersion
     }
 }
 
