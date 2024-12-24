@@ -182,3 +182,7 @@ jlink {
         }
     }
 }
+
+afterEvaluate {
+    tasks.findByName('jpackageImage').dependsOn(tasks.findByName('jlinkZip'))
+}
