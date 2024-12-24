@@ -350,5 +350,3 @@ asciidoctor {
         }
     }
 }
-
-println asciidoctor.attributes
