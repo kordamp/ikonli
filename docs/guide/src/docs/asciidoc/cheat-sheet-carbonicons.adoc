@@ -1,7 +1,7 @@
 = CarbonIcons
 
 ++++
-<link href='./css/carbonicons.css' rel='stylesheet'>
+<link href='./carbonicons/css/carbonicons.css' rel='stylesheet'>
 <style>
     .ci {
         font-size: 32px;

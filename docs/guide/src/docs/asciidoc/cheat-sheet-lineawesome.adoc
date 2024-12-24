@@ -5,8 +5,8 @@ Use the indicated enum type for each set.
 == Brands (LineAwesomeBrands)
 
 ++++
-<link href='./css/lineawesome-all.css' rel='stylesheet'>
-<link href='./css/la-brands.css' rel='stylesheet'>
+<link href='./lineawesome/css/lineawesome-all.css' rel='stylesheet'>
+<link href='./lineawesome/css/la-brands.css' rel='stylesheet'>
 <style>
     .la,
     .lab {
@@ -20,7 +20,7 @@ include::{gradle-projectdir}/build/tmp/_lineawesome_brands_cheat_sheet.adoc[]
 == Regular (LineAwesomeRegular)
 
 ++++
-<link href='./css/la-regular.css' rel='stylesheet'>
+<link href='./lineawesome/css/la-regular.css' rel='stylesheet'>
 <style>
     .la,
     .lar {
@@ -34,8 +34,8 @@ include::{gradle-projectdir}/build/tmp/_lineawesome_regular_cheat_sheet.adoc[]
 == Solid (LineAwesomeSolid)
 
 ++++
-<link href='./css/lineawesome-all.css' rel='stylesheet'>
-<link href='./css/la-solid.css' rel='stylesheet'>
+<link href='./lineawesome/css/lineawesome-all.css' rel='stylesheet'>
+<link href='./lineawesome/css/la-solid.css' rel='stylesheet'>
 <style>
     .la,
     .las {

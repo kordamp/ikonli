@@ -3,7 +3,7 @@
 Use the indicated enum type for each set.
 
 ++++
-<link href='./css/FluentSystemIcons-Filled.css' rel='stylesheet'>
+<link href='./fluentui/css/FluentSystemIcons-Filled.css' rel='stylesheet'>
 <style>
     .fltf {
         font-size: 32px;
@@ -22,7 +22,7 @@ include::{gradle-projectdir}/build/tmp/_fluentui_fal_cheat_sheet.adoc[]
 include::{gradle-projectdir}/build/tmp/_fluentui_fmz_cheat_sheet.adoc[]
 
 ++++
-<link href='./css/FluentSystemIcons-Regular.css' rel='stylesheet'>
+<link href='./fluentui/css/FluentSystemIcons-Regular.css' rel='stylesheet'>
 <style>
     .fltr {
         font-size: 32px;

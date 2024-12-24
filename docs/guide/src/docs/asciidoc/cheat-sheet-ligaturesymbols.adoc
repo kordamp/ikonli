@@ -1,7 +1,7 @@
 = Ligature Symbols
 
 ++++
-<link href='./css/ligaturesymbols.css' rel='stylesheet'>
+<link href='./ligaturesymbols/css/ligaturesymbols.css' rel='stylesheet'>
 <style>
     .lsf {
         font-size: 32px;

@@ -1,7 +1,7 @@
 = Metrizeicons
 
 ++++
-<link href='./css/metrizeicons.css' rel='stylesheet'>
+<link href='./metrizeicons/css/metrizeicons.css' rel='stylesheet'>
 <style>
     .met {
         font-size: 32px;

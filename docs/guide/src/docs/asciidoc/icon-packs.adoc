@@ -470,7 +470,7 @@ implementation '{project-group}:ikonli-fontawesome-pack:{project-version}'
 </dependency>
 ----
 
-== FontAwesome5 (Latest)
+== FontAwesome5
  * Module: `org.kordamp.ikonli.fontawesome5`
  * Font version: {fontawesome5Version}
  * link:https://fontawesome.com[]
@@ -492,6 +492,32 @@ implementation '{project-group}:ikonli-fontawesome5-pack:{project-version}'
 <dependency>
     <groupId>{project-group}</groupId>
     <artifactId>ikonli-fontawesome5-pack</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
+== FontAwesome6 (Latest)
+ * Module: `org.kordamp.ikonli.fontawesome6`
+ * Font version: {fontawesome6Version}
+ * link:https://fontawesome.com[]
+ * link:cheat-sheet-fontawesome6.html[Cheat-Sheet]
+
+=== Installing
+
+[source,groovy]
+[subs="attributes"]
+.gradle
+----
+implementation '{project-group}:ikonli-fontawesome6-pack:{project-version}'
+----
+
+[source,xml]
+[subs="attributes,verbatim"]
+.maven
+----
+<dependency>
+    <groupId>{project-group}</groupId>
+    <artifactId>ikonli-fontawesome6-pack</artifactId>
     <version>{project-version}</version>
 </dependency>
 ----

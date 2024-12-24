@@ -1,7 +1,7 @@
 = Themify
 
 ++++
-<link href='./css/themify-icons.min.css' rel='stylesheet'>
+<link href='./themify/css/themify-icons.min.css' rel='stylesheet'>
 <style>
     .ti {
         font-size: 32px;

@@ -1,7 +1,7 @@
 = Icomoon
 
 ++++
-<link href='./css/icomoon.css' rel='stylesheet'>
+<link href='./icomoon/css/icomoon.css' rel='stylesheet'>
 <style>
     .icm {
         font-size: 32px;

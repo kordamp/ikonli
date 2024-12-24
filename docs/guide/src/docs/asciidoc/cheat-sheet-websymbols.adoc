@@ -1,7 +1,7 @@
 = Websymbols
 
 ++++
-<link href='./css/websymbols.css' rel='stylesheet'>
+<link href='./websymbols/css/websymbols.css' rel='stylesheet'>
 <style>
     .websymbols {
         font-size: 32px;

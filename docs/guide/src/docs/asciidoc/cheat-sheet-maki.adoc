@@ -1,7 +1,7 @@
 = Maki
 
 ++++
-<link href='./css/maki.css' rel='stylesheet'>
+<link href='./maki/css/maki.css' rel='stylesheet'>
 <style>
     .maki {
         font-size: 32px;

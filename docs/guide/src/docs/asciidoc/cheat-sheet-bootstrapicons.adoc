@@ -1,7 +1,7 @@
 = BootstrapIcons
 
 ++++
-<link href='./css/bootstrap-icons.css' rel='stylesheet'>
+<link href='./bootstrapicons/css/bootstrap-icons.css' rel='stylesheet'>
 <style>
     .bi {
         font-size: 32px;

@@ -5,7 +5,7 @@ Use the indicated enum type for each set.
 == Brands (CoreUIBrands)
 
 ++++
-<link href='./css/coreui-brand.css' rel='stylesheet'>
+<link href='./coreui/css/coreui-brand.css' rel='stylesheet'>
 <style>
     .cib {
         font-size: 32px;
@@ -18,7 +18,7 @@ include::{gradle-projectdir}/build/tmp/_coreui_brands_cheat_sheet.adoc[]
 == Free (CoreUIFree)
 
 ++++
-<link href='./css/coreui-free.css' rel='stylesheet'>
+<link href='./coreui/css/coreui-free.css' rel='stylesheet'>
 <style>
     .cil {
         font-size: 32px;

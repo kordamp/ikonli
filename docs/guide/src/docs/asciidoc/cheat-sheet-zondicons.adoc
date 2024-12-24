@@ -1,7 +1,7 @@
 = Zondicons
 
 ++++
-<link href='./css/zondicons.min.css' rel='stylesheet'>
+<link href='./zondicons/css/zondicons.min.css' rel='stylesheet'>
 <style>
     .zondi {
         font-size: 32px;

@@ -1,7 +1,7 @@
 = Codicons
 
 ++++
-<link href='./css/codicon.css' rel='stylesheet'>
+<link href='./codicons/css/codicon.css' rel='stylesheet'>
 <style>
     .codicon {
         font-size: 32px;

@@ -5,7 +5,7 @@ Use the indicated enum type for each set.
 == Logos (BoxiconsLogos)
 
 ++++
-<link href='./css/boxicons.css' rel='stylesheet'>
+<link href='./boxicons/css/boxicons.css' rel='stylesheet'>
 <style>
     .bx,
     .bxl,

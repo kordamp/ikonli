@@ -1,7 +1,7 @@
 = Linecons
 
 ++++
-<link href='./css/linecons.css' rel='stylesheet'>
+<link href='./linecons/css/linecons.css' rel='stylesheet'>
 <style>
     .li {
         font-size: 32px;

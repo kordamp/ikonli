@@ -1,7 +1,7 @@
 = Jam
 
 ++++
-<link href='./css/jam.css' rel='stylesheet'>
+<link href='./jamicons/css/jam.css' rel='stylesheet'>
 <style>
     .jam {
         font-size: 32px;

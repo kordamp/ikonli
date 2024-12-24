@@ -1,7 +1,7 @@
 = Elusive
 
 ++++
-<link href='./css/elusive-webfont.css' rel='stylesheet'>
+<link href='./elusive/css/elusive-webfont.css' rel='stylesheet'>
 <style>
     .el-icon {
         font-size: 32px;

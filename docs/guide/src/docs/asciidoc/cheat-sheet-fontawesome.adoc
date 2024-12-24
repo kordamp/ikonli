@@ -1,7 +1,7 @@
 = Fontawesome
 
 ++++
-<link href='./css/font-awesome.min.css' rel='stylesheet'>
+<link href='./fontawesome/css/font-awesome.min.css' rel='stylesheet'>
 <style>
     .fa {
         font-size: 32px;

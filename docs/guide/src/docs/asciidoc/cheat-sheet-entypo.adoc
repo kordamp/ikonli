@@ -1,7 +1,7 @@
 = Entypo
 
 ++++
-<link href='./css/entypo.css' rel='stylesheet'>
+<link href='./entypo/css/entypo.css' rel='stylesheet'>
 <style>
     .enty {
         font-size: 32px;

@@ -1,7 +1,7 @@
 = Subway
 
 ++++
-<link href='./css/subway.css' rel='stylesheet'>
+<link href='./subway/css/subway.css' rel='stylesheet'>
 <style>
     .subway {
         font-size: 32px;

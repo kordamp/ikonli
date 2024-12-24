@@ -5,7 +5,7 @@ Use the indicated enum type for each set.
 == Filled (AntDesignIconsFilled)
 
 ++++
-<link href='./css/antdesignicons-filled.css' rel='stylesheet'>
+<link href='./antdesignicons/css/antdesignicons-filled.css' rel='stylesheet'>
 <style>
     .antf {
         font-size: 32px;
@@ -18,7 +18,7 @@ include::{gradle-projectdir}/build/tmp/_antdesignicons_filled_cheat_sheet.adoc[]
 == Outlined (BoxiconsOutlined)
 
 ++++
-<link href='./css/antdesignicons-outlined.css' rel='stylesheet'>
+<link href='./antdesignicons/css/antdesignicons-outlined.css' rel='stylesheet'>
 <style>
     .anto {
         font-size: 32px;

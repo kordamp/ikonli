@@ -1,7 +1,7 @@
 = Material Icons
 
 ++++
-<link href='./css/material-icons.css' rel='stylesheet'>
+<link href='./_material/css/material-icons.css' rel='stylesheet'>
 <style>
     .gmi {
         font-size: 32px;

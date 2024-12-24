@@ -5,8 +5,8 @@ Use the indicated enum type for each set.
 == Brands (FontAwesomeBrands)
 
 ++++
-<link href='./css/fontawesome-all.css' rel='stylesheet'>
-<link href='./css/fa-brands.css' rel='stylesheet'>
+<link href='./fontawesome5/css/fontawesome-all.css' rel='stylesheet'>
+<link href='./fontawesome5/css/fa-brands.css' rel='stylesheet'>
 <style>
     .fa,
     .fab {
@@ -20,7 +20,7 @@ include::{gradle-projectdir}/build/tmp/_fontawesome5_brands_cheat_sheet.adoc[]
 == Regular (FontAwesomeRegular)
 
 ++++
-<link href='./css/fa-regular.css' rel='stylesheet'>
+<link href='./fontawesome5/css/fa-regular.css' rel='stylesheet'>
 <style>
     .fa,
     .far {
@@ -34,8 +34,8 @@ include::{gradle-projectdir}/build/tmp/_fontawesome5_regular_cheat_sheet.adoc[]
 == Solid (FontAwesomeSolid)
 
 ++++
-<link href='./css/fontawesome-all.css' rel='stylesheet'>
-<link href='./css/fa-solid.css' rel='stylesheet'>
+<link href='./fontawesome5/css/fontawesome-all.css' rel='stylesheet'>
+<link href='./fontawesome5/css/fa-solid.css' rel='stylesheet'>
 <style>
     .fa,
     .fas {

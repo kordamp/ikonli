@@ -1,7 +1,7 @@
 = Feather
 
 ++++
-<link href='./css/feather.css' rel='stylesheet'>
+<link href='./feather/css/feather.css' rel='stylesheet'>
 <style>
     .fth {
         font-size: 32px;

@@ -1,7 +1,7 @@
 = Fileicons
 
 ++++
-<link href='./css/fileicons.css' rel='stylesheet'>
+<link href='./fileicons/css/fileicons.css' rel='stylesheet'>
 <style>
     .file {
         font-size: 32px;

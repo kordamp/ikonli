@@ -1,7 +1,7 @@
 = PaymentFont
 
 ++++
-<link href='./css/paymentfont.min.css' rel='stylesheet'>
+<link href='./paymentfont/css/paymentfont.min.css' rel='stylesheet'>
 <style>
     .pf {
         font-size: 32px;

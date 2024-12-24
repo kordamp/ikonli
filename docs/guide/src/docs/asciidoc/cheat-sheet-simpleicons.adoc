@@ -1,7 +1,7 @@
 = SimpleIcons
 
 ++++
-<link href='./css/simpleicons.css' rel='stylesheet'>
+<link href='./simpleicons/css/simpleicons.css' rel='stylesheet'>
 <style>
     .si {
         font-size: 32px;

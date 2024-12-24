@@ -1,7 +1,7 @@
 = SimpleLineIcons
 
 ++++
-<link href='./css/simple-line-icons.css' rel='stylesheet'>
+<link href='./simplelineicons/css/simple-line-icons.css' rel='stylesheet'>
 <style>
     .sil {
         font-size: 32px;

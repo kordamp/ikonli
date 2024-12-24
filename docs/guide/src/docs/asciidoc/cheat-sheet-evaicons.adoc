@@ -1,7 +1,7 @@
 = Evaicons
 
 ++++
-<link href='./css/evaicons.css' rel='stylesheet'>
+<link href='./evaicons/css/evaicons.css' rel='stylesheet'>
 <style>
     .eva {
         font-size: 32px;

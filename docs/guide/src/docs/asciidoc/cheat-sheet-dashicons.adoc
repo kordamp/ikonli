@@ -1,7 +1,7 @@
 = Dashicons
 
 ++++
-<link href='./css/dashicons.css' rel='stylesheet'>
+<link href='./dashicons/css/dashicons.css' rel='stylesheet'>
 <style>
     .dashicons {
         font-size: 32px;

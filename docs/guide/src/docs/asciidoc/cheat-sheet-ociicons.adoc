@@ -1,7 +1,7 @@
 = Ociicons
 
 ++++
-<link href='./css/ociicons.css' rel='stylesheet'>
+<link href='./ociicons/css/ociicons.css' rel='stylesheet'>
 <style>
     .oci {
         font-size: 32px;

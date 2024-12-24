@@ -95,6 +95,67 @@ def createIconGenerationTask(Map args) {
     task
 }
 
+project.ext.versions = [
+    antdesignicons  : project.antdesigniconsVersion,
+    bootstrapicons  : project.bootstrapiconsVersion,
+    boxicons        : project.boxiconsVersion,
+    bpmn            : project.bpmnVersion,
+    bytedance       : project.bytedanceVersion,
+    captainicon     : project.captainiconVersion,
+    carbonicons     : project.carboniconsVersion,
+    codicons        : project.codiconsVersion,
+    coreui          : project.coreuiVersion,
+    dashicons       : project.dashiconsVersion,
+    devicons        : project.deviconsVersion,
+    elusive         : project.elusiveVersion,
+    entypo          : project.entypoVersion,
+    evaicons        : project.evaiconsVersion,
+    feather         : project.featherVersion,
+    fileicons       : project.fileiconsVersion,
+    fluentui        : project.fluentuiVersion,
+    fontawesome     : project.fontawesomeVersion,
+    fontawesome5    : project.fontawesome5Version,
+    fontawesome6    : project.fontawesome6Version,
+    fontelico       : project.fontelicoVersion,
+    foundation      : project.foundationVersion,
+    icomoon         : project.icomoonVersion,
+    hawcons         : project.hawconsVersion,
+    ionicons        : project.ioniconsVersion,
+    ionicons4       : project.ionicons4Version,
+    jamicons        : project.jamiconsVersion,
+    ligaturesymbols : project.ligaturesymbolsVersion,
+    lineawesome     : project.lineawesomeVersion,
+    linecons        : project.lineconsVersion,
+    maki            : project.makiVersion,
+    maki2           : project.maki2Version,
+    mapicons        : project.mapiconsVersion,
+    material        : project.materialVersion,
+    material2       : project.material2Version,
+    materialdesign  : project.materialdesignVersion,
+    materialdesign2 : project.materialdesign2Version,
+    medicons        : project.mediconsVersion,
+    metrizeicons    : project.metrizeiconsVersion,
+    microns         : project.micronsVersion,
+    ociicons        : project.ociiconsVersion,
+    octicons        : project.octiconsVersion,
+    openiconic      : project.openiconicVersion,
+    paymentfont     : project.paymentfontVersion,
+    prestashopicons : project.prestashopiconsVersion,
+    remixicon       : project.remixiconVersion,
+    runestroicons   : project.runestroiconsVersion,
+    simpleicons     : project.simpleiconsVersion,
+    simplelineicons : project.simplelineiconsVersion,
+    subway          : project.subwayVersion,
+    themify         : project.themifyVersion,
+    typicons        : project.typiconsVersion,
+    unicons         : project.uniconsVersion,
+    weathericons    : project.weathericonsVersion,
+    websymbols      : project.websymbolsVersion,
+    whhg            : project.whhgVersion,
+    win10           : project.win10Version,
+    zondicons       : project.zondiconsVersion
+]
+
 asciidoctor {
     dependsOn createIconGenerationTask(packName: 'devicons', iconClassName: 'org.kordamp.ikonli.devicons.Devicons'),
             createIconGenerationTask(packName: 'antdesignicons', iconClassName: 'org.kordamp.ikonli.antdesignicons.AntDesignIconsFilled', iconName: 'antf', shortNameSize: 5, classifier: 'filled'),
@@ -131,6 +192,9 @@ asciidoctor {
             createIconGenerationTask(packName: 'fontawesome5', iconClassName: 'org.kordamp.ikonli.fontawesome5.FontAwesomeBrands', iconName: 'fab', prefix: 'fa', shortNameSize: 4, classifier: 'brands'),
             createIconGenerationTask(packName: 'fontawesome5', iconClassName: 'org.kordamp.ikonli.fontawesome5.FontAwesomeRegular', iconName: 'far', prefix: 'fa', shortNameSize: 4, classifier: 'regular'),
             createIconGenerationTask(packName: 'fontawesome5', iconClassName: 'org.kordamp.ikonli.fontawesome5.FontAwesomeSolid', iconName: 'fas', prefix: 'fa', shortNameSize: 4, classifier: 'solid'),
+            createIconGenerationTask(packName: 'fontawesome6', iconClassName: 'org.kordamp.ikonli.fontawesome6.FontAwesomeBrands', iconName: 'fab', prefix: 'fa', shortNameSize: 4, classifier: 'brands'),
+            createIconGenerationTask(packName: 'fontawesome6', iconClassName: 'org.kordamp.ikonli.fontawesome6.FontAwesomeRegular', iconName: 'far', prefix: 'fa', shortNameSize: 4, classifier: 'regular'),
+            createIconGenerationTask(packName: 'fontawesome6', iconClassName: 'org.kordamp.ikonli.fontawesome6.FontAwesomeSolid', iconName: 'fas', prefix: 'fa', shortNameSize: 4, classifier: 'solid'),
             createIconGenerationTask(packName: 'fontelico', iconClassName: 'org.kordamp.ikonli.fontelico.Fontelico', shortNameSize: 4),
             createIconGenerationTask(packName: 'foundation', iconClassName: 'org.kordamp.ikonli.foundation.Foundation'),
             createIconGenerationTask(packName: 'hawcons', iconClassName: 'org.kordamp.ikonli.hawcons.HawconsFilled', iconName: 'hwf', shortNameSize: 4, classifier: 'filled'),
@@ -232,6 +296,7 @@ asciidoctor {
             fluentuiVersion        : project.fluentuiVersion,
             fontawesomeVersion     : project.fontawesomeVersion,
             fontawesome5Version    : project.fontawesome5Version,
+            fontawesome6Version    : project.fontawesome6Version,
             fontelicoVersion       : project.fontelicoVersion,
             foundationVersion      : project.foundationVersion,
             icomoonVersion         : project.icomoonVersion,
@@ -278,62 +343,12 @@ asciidoctor {
 
     resources {
         from file('src/resources')
-        from project(':ikonli-antdesignicons-pack').file("src/main/resources/META-INF/resources/antdesignicons/${antdesigniconsVersion}")
-        from project(':ikonli-bootstrapicons-pack').file("src/main/resources/META-INF/resources/bootstrapicons/${bootstrapiconsVersion}")
-        from project(':ikonli-boxicons-pack').file("src/main/resources/META-INF/resources/boxicons/${boxiconsVersion}")
-        from project(':ikonli-bpmn-pack').file("src/main/resources/META-INF/resources/bpmn/${bpmnVersion}")
-        from project(':ikonli-bytedance-pack').file("src/main/resources/META-INF/resources/bytedance/${bytedanceVersion}")
-        from project(':ikonli-captainicon-pack').file("src/main/resources/META-INF/resources/captainicon/${captainiconVersion}")
-        from project(':ikonli-carbonicons-pack').file("src/main/resources/META-INF/resources/carbonicons/${carboniconsVersion}")
-        from project(':ikonli-codicons-pack').file("src/main/resources/META-INF/resources/codicons/${codiconsVersion}")
-        from project(':ikonli-coreui-pack').file("src/main/resources/META-INF/resources/coreui/${coreuiVersion}")
-        from project(':ikonli-dashicons-pack').file("src/main/resources/META-INF/resources/dashicons/${dashiconsVersion}")
-        from project(':ikonli-devicons-pack').file("src/main/resources/META-INF/resources/devicons/${deviconsVersion}")
-        from project(':ikonli-entypo-pack').file("src/main/resources/META-INF/resources/entypo/${entypoVersion}")
-        from project(':ikonli-elusive-pack').file("src/main/resources/META-INF/resources/elusive/${elusiveVersion}")
-        from project(':ikonli-evaicons-pack').file("src/main/resources/META-INF/resources/evaicons/${evaiconsVersion}")
-        from project(':ikonli-feather-pack').file("src/main/resources/META-INF/resources/feather/${featherVersion}")
-        from project(':ikonli-fileicons-pack').file("src/main/resources/META-INF/resources/fileicons/${fileiconsVersion}")
-        from project(':ikonli-fluentui-pack').file("src/main/resources/META-INF/resources/fluentui/${fluentuiVersion}")
-        from project(':ikonli-fontawesome-pack').file("src/main/resources/META-INF/resources/fontawesome/${fontawesomeVersion}")
-        from project(':ikonli-fontawesome5-pack').file("src/main/resources/META-INF/resources/fontawesome5/${fontawesome5Version}")
-        from project(':ikonli-fontelico-pack').file("src/main/resources/META-INF/resources/fontelico/${fontelicoVersion}")
-        from project(':ikonli-foundation-pack').file("src/main/resources/META-INF/resources/foundation/${foundationVersion}")
-        from project(':ikonli-hawcons-pack').file("src/main/resources/META-INF/resources/hawcons/${hawconsVersion}")
-        from project(':ikonli-icomoon-pack').file("src/main/resources/META-INF/resources/icomoon/${icomoonVersion}")
-        from project(':ikonli-ionicons-pack').file("src/main/resources/META-INF/resources/ionicons/${ioniconsVersion}")
-        from project(':ikonli-ionicons4-pack').file("src/main/resources/META-INF/resources/ionicons4/${ionicons4Version}")
-        from project(':ikonli-jamicons-pack').file("src/main/resources/META-INF/resources/jam/${jamiconsVersion}")
-        from project(':ikonli-ligaturesymbols-pack').file("src/main/resources/META-INF/resources/ligaturesymbols/${ligaturesymbolsVersion}")
-        from project(':ikonli-lineawesome-pack').file("src/main/resources/META-INF/resources/lineawesome/${lineawesomeVersion}")
-        from project(':ikonli-linecons-pack').file("src/main/resources/META-INF/resources/linecons/${lineconsVersion}")
-        from project(':ikonli-maki-pack').file("src/main/resources/META-INF/resources/maki/${makiVersion}")
-        from project(':ikonli-maki2-pack').file("src/main/resources/META-INF/resources/maki2/${maki2Version}")
-        from project(':ikonli-mapicons-pack').file("src/main/resources/META-INF/resources/mapicons/${mapiconsVersion}")
-        from project(':ikonli-material-pack').file("src/main/resources/META-INF/resources/material/${materialVersion}")
-        from project(':ikonli-material2-pack').file("src/main/resources/META-INF/resources/material2/${material2Version}")
-        from project(':ikonli-materialdesign-pack').file("src/main/resources/META-INF/resources/materialdesignicons/${materialdesignVersion}")
-        from project(':ikonli-materialdesign2-pack').file("src/main/resources/META-INF/resources/materialdesignicons2/${materialdesign2Version}")
-        from project(':ikonli-medicons-pack').file("src/main/resources/META-INF/resources/medicons/${mediconsVersion}")
-        from project(':ikonli-metrizeicons-pack').file("src/main/resources/META-INF/resources/metrizeicons/${metrizeiconsVersion}")
-        from project(':ikonli-microns-pack').file("src/main/resources/META-INF/resources/microns/${micronsVersion}")
-        from project(':ikonli-ociicons-pack').file("src/main/resources/META-INF/resources/ociicons/${ociiconsVersion}")
-        from project(':ikonli-octicons-pack').file("src/main/resources/META-INF/resources/octicons/${octiconsVersion}")
-        from project(':ikonli-openiconic-pack').file("src/main/resources/META-INF/resources/openiconic/${openiconicVersion}")
-        from project(':ikonli-paymentfont-pack').file("src/main/resources/META-INF/resources/paymentfont/${paymentfontVersion}")
-        from project(':ikonli-prestashopicons-pack').file("src/main/resources/META-INF/resources/prestashopicons/${prestashopiconsVersion}")
-        from project(':ikonli-remixicon-pack').file("src/main/resources/META-INF/resources/remixicon/${remixiconVersion}")
-        from project(':ikonli-runestroicons-pack').file("src/main/resources/META-INF/resources/runestroicons/${runestroiconsVersion}")
-        from project(':ikonli-simpleicons-pack').file("src/main/resources/META-INF/resources/simpleicons/${simpleiconsVersion}")
-        from project(':ikonli-simplelineicons-pack').file("src/main/resources/META-INF/resources/simplelineicons/${simplelineiconsVersion}")
-        from project(':ikonli-subway-pack').file("src/main/resources/META-INF/resources/subway/${subwayVersion}")
-        from project(':ikonli-themify-pack').file("src/main/resources/META-INF/resources/themify/${themifyVersion}")
-        from project(':ikonli-typicons-pack').file("src/main/resources/META-INF/resources/typicons/${typiconsVersion}")
-        from project(':ikonli-unicons-pack').file("src/main/resources/META-INF/resources/unicons/${uniconsVersion}")
-        from project(':ikonli-weathericons-pack').file("src/main/resources/META-INF/resources/weathericons/${weathericonsVersion}")
-        from project(':ikonli-websymbols-pack').file("src/main/resources/META-INF/resources/websymbols/${websymbolsVersion}")
-        from project(':ikonli-whhg-pack').file("src/main/resources/META-INF/resources/whhg/${whhgVersion}")
-        from project(':ikonli-win10-pack').file("src/main/resources/META-INF/resources/win10/${win10Version}")
-        from project(':ikonli-zondicons-pack').file("src/main/resources/META-INF/resources/zondicons/${zondiconsVersion}")
+        project.ext.versions.each { k, v ->
+            from(project(":ikonli-${k}-pack").file("src/main/resources/META-INF/resources/${k}/${v}")) {
+                into(k)
+            }
+        }
     }
 }
+
+println asciidoctor.attributes

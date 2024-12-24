@@ -1,7 +1,7 @@
 = Foundation
 
 ++++
-<link href='./css/foundation-icons.css' rel='stylesheet'>
+<link href='./foundation/css/foundation-icons.css' rel='stylesheet'>
 <style>
     .foundation {
         font-size: 32px;

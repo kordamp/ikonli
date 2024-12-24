@@ -1,7 +1,7 @@
 = Mapicons
 
 ++++
-<link href='./css/map-icons.css' rel='stylesheet'>
+<link href='./mapicons/css/map-icons.css' rel='stylesheet'>
 <style>
     .map-icon {
         font-size: 32px;

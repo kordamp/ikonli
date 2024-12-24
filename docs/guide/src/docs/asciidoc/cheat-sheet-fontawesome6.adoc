@@ -1,0 +1,47 @@
+= Fontawesome6
+
+Use the indicated enum type for each set.
+
+== Brands (FontAwesomeBrands)
+
+++++
+<link href='./fontawesome6/css/all.css' rel='stylesheet'>
+<link href='./fontawesome6/css/brands.css' rel='stylesheet'>
+<style>
+    .fa,
+    .fab {
+        font-size: 32px;
+    }
+</style>
+++++
+
+include::{gradle-projectdir}/build/tmp/_fontawesome6_brands_cheat_sheet.adoc[]
+
+== Regular (FontAwesomeRegular)
+
+++++
+<link href='./fontawesome6/css/regular.css' rel='stylesheet'>
+<style>
+    .fa,
+    .far {
+        font-size: 32px;
+    }
+</style>
+++++
+
+include::{gradle-projectdir}/build/tmp/_fontawesome6_regular_cheat_sheet.adoc[]
+
+== Solid (FontAwesomeSolid)
+
+++++
+<link href='./fontawesome6/css/all.css' rel='stylesheet'>
+<link href='./fontawesome6/css/solid.css' rel='stylesheet'>
+<style>
+    .fa,
+    .fas {
+        font-size: 32px;
+    }
+</style>
+++++
+
+include::{gradle-projectdir}/build/tmp/_fontawesome6_solid_cheat_sheet.adoc[]

@@ -3,7 +3,7 @@
 Use the indicated enum type for each set.
 
 ++++
-<link href='./css/bytedance-iconpack-thin.css' rel='stylesheet'>
+<link href='./bytedance/css/bytedance-iconpack-thin.css' rel='stylesheet'>
 <style>
     .bd1 {
         font-size: 32px;
@@ -13,11 +13,11 @@ Use the indicated enum type for each set.
 
 == Thin A-L (BytedanceIconsThinAL)
 
-include::{gradle-projectdir}/build/tmp/_bytedance_iconpack_thin_al_cheat_sheet.adoc[]
+include::{gradle-projectdir}/build/tmp/_bytedance_thinal_cheat_sheet.adoc[]
 
 == Thin M-Z (BytedanceIconsThinMZ)
 
-include::{gradle-projectdir}/build/tmp/_bytedance_iconpack_thin_mz_cheat_sheet.adoc[]
+include::{gradle-projectdir}/build/tmp/_bytedance_thinmz_cheat_sheet.adoc[]
 
 ++++
 <link href='./css/bytedance-iconpack-regular.css' rel='stylesheet'>
@@ -30,14 +30,14 @@ include::{gradle-projectdir}/build/tmp/_bytedance_iconpack_thin_mz_cheat_sheet.a
 
 == Regular A-L (BytedanceIconsRegularAL)
 
-include::{gradle-projectdir}/build/tmp/_bytedance_iconpack_regular_al_cheat_sheet.adoc[]
+include::{gradle-projectdir}/build/tmp/_bytedance_regularal_cheat_sheet.adoc[]
 
 == Regular M-Z (BytedanceIconsRegularMZ)
 
-include::{gradle-projectdir}/build/tmp/_bytedance_iconpack_regular_mz_cheat_sheet.adoc[]
+include::{gradle-projectdir}/build/tmp/_bytedance_regularmz_cheat_sheet.adoc[]
 
 ++++
-<link href='./css/bytedance-iconpack-bold.css' rel='stylesheet'>
+<link href='./bytedance/css/bytedance-iconpack-bold.css' rel='stylesheet'>
 <style>
     .bd3 {
         font-size: 32px;
@@ -47,14 +47,14 @@ include::{gradle-projectdir}/build/tmp/_bytedance_iconpack_regular_mz_cheat_shee
 
 == Bold A-L (BytedanceIconsBoldAL)
 
-include::{gradle-projectdir}/build/tmp/_bytedance_iconpack_bold_al_cheat_sheet.adoc[]
+include::{gradle-projectdir}/build/tmp/_bytedance_boldal_cheat_sheet.adoc[]
 
 == Bold M-Z (BytedanceIconsBoldMZ)
 
-include::{gradle-projectdir}/build/tmp/_bytedance_iconpack_bold_mz_cheat_sheet.adoc[]
+include::{gradle-projectdir}/build/tmp/_bytedance_boldmz_cheat_sheet.adoc[]
 
 ++++
-<link href='./css/bytedance-iconpack-extrabold.css' rel='stylesheet'>
+<link href='./bytedance/css/bytedance-iconpack-extrabold.css' rel='stylesheet'>
 <style>
     .bd4 {
         font-size: 32px;
@@ -64,8 +64,8 @@ include::{gradle-projectdir}/build/tmp/_bytedance_iconpack_bold_mz_cheat_sheet.a
 
 == ExtraBold A-L (BytedanceIconsExtraBoldAL)
 
-include::{gradle-projectdir}/build/tmp/_bytedance_iconpack_extrabold_al_cheat_sheet.adoc[]
+include::{gradle-projectdir}/build/tmp/_bytedance_extraboldal_cheat_sheet.adoc[]
 
 == ExtraBold M-Z (BytedanceIconsExtraBoldMZ)
 
-include::{gradle-projectdir}/build/tmp/_bytedance_iconpack_extrabold_mz_cheat_sheet.adoc[]
+include::{gradle-projectdir}/build/tmp/_bytedance_extraboldmz_cheat_sheet.adoc[]

@@ -1,7 +1,7 @@
 = Medicons
 
 ++++
-<link href='./css/medicons.css' rel='stylesheet'>
+<link href='./medicons/css/medicons.css' rel='stylesheet'>
 <style>
     .medicon {
         font-size: 32px;

@@ -3,7 +3,7 @@
 Use the indicated enum type for each set.
 
 ++++
-<link href='./css/materialdesignicons2.css' rel='stylesheet'>
+<link href='./materialdesign2/css/materialdesignicons2.css' rel='stylesheet'>
 <style>
     .mdi2 {
         font-size: 32px;

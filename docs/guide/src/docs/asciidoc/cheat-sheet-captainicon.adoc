@@ -1,7 +1,7 @@
 = Captainicon
 
 ++++
-<link href='./css/captainicon.css' rel='stylesheet'>
+<link href='./captainicon/css/captainicon.css' rel='stylesheet'>
 <style>
     .captainicon {
         font-size: 32px;

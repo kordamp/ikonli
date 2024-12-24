@@ -5,7 +5,7 @@ Use the indicated enum type for each set.
 == Line (UniconsLine)
 
 ++++
-<link href='./css/unicons-line.css' rel='stylesheet'>
+<link href='./unicons/css/unicons-line.css' rel='stylesheet'>
 <style>
     .unil {
         font-size: 32px;
@@ -18,7 +18,7 @@ include::{gradle-projectdir}/build/tmp/_unicons_line_cheat_sheet.adoc[]
 == Monochrome (UniconsMonochrome)
 
 ++++
-<link href='./css/unicons-monochrome.css' rel='stylesheet'>
+<link href='./unicons/css/unicons-monochrome.css' rel='stylesheet'>
 <style>
     .unim {
         font-size: 32px;
@@ -31,7 +31,7 @@ include::{gradle-projectdir}/build/tmp/_unicons_monochrome_cheat_sheet.adoc[]
 == Solid (UniconsSolid)
 
 ++++
-<link href='./css/unicons-solid.css' rel='stylesheet'>
+<link href='./unicons/css/unicons-solid.css' rel='stylesheet'>
 <style>
     .unis {
         font-size: 32px;

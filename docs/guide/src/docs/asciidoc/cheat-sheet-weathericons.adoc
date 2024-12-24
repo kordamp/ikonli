@@ -1,7 +1,7 @@
 = Weathericons
 
 ++++
-<link href='./css/weather-icons.css' rel='stylesheet'>
+<link href='./weathericons/css/weather-icons.css' rel='stylesheet'>
 <style>
     .wi {
         font-size: 32px;

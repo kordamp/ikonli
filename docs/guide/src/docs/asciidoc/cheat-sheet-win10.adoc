@@ -1,7 +1,7 @@
 = Win10
 
 ++++
-<link href='./css/icons8-win10.css' rel='stylesheet'>
+<link href='./win10/css/icons8-win10.css' rel='stylesheet'>
 <style>
     .win10 {
         font-size: 32px;

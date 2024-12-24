@@ -1,7 +1,7 @@
 = PrestaShopIcons
 
 ++++
-<link href='./css/prestashopicons.css' rel='stylesheet'>
+<link href='./prestashopicons/css/prestashopicons.css' rel='stylesheet'>
 <style>
     .ps {
         font-size: 32px;

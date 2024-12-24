@@ -1,7 +1,7 @@
 = Devicons
 
 ++++
-<link href='./css/devicons.min.css' rel='stylesheet'>
+<link href='./devicons/css/devicons.min.css' rel='stylesheet'>
 <style>
     .devicons {
         font-size: 32px;

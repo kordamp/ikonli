@@ -1,7 +1,7 @@
 = Typicons
 
 ++++
-<link href='./css/typicons.min.css' rel='stylesheet'>
+<link href='./typicons/css/typicons.min.css' rel='stylesheet'>
 <style>
     .typcn {
         font-size: 32px;

@@ -3,7 +3,7 @@
 == IOS
 
 ++++
-<link href='./css/ionicons4.css' rel='stylesheet'>
+<link href='./ionicons4/css/ionicons4.css' rel='stylesheet'>
 <style>
     .ion, .ionicons {
         font-size: 32px;
@@ -16,7 +16,7 @@ include::{gradle-projectdir}/build/tmp/_ionicons4_IOS_cheat_sheet.adoc[]
 == Material
 
 ++++
-<link href='./css/ionicons4.css' rel='stylesheet'>
+<link href='./ionicons4/css/ionicons4.css' rel='stylesheet'>
 <style>
     .ion, .ionicons {
         font-size: 32px;
@@ -29,7 +29,7 @@ include::{gradle-projectdir}/build/tmp/_ionicons4_Material_cheat_sheet.adoc[]
 == Logo
 
 ++++
-<link href='./css/ionicons4.css' rel='stylesheet'>
+<link href='./ionicons4/css/ionicons4.css' rel='stylesheet'>
 
 <style>
     .ion, .ionicons {

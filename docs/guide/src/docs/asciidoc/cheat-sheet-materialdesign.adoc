@@ -1,7 +1,7 @@
 = Material Design Icons
 
 ++++
-<link href='./css/materialdesignicons.css' rel='stylesheet'>
+<link href='./materialdesign/css/materialdesignicons.css' rel='stylesheet'>
 <style>
     .mdi {
         font-size: 32px;

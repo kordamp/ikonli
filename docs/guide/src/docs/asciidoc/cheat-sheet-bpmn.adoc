@@ -1,7 +1,7 @@
 = Bpmn
 
 ++++
-<link href='./css/bpmn.css' rel='stylesheet'>
+<link href='./bpmn/css/bpmn.css' rel='stylesheet'>
 <style>
     .bpmn {
         font-size: 32px;

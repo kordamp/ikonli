@@ -1,7 +1,7 @@
 = Octicons
 
 ++++
-<link href='./css/octicons.css' rel='stylesheet'>
+<link href='./octicons/css/octicons.css' rel='stylesheet'>
 <style>
     .octicon {
         font-size: 32px;

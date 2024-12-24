@@ -1,7 +1,7 @@
 = Remixicon
 
 ++++
-<link href='./css/remixicon.css' rel='stylesheet'>
+<link href='./remixicon/css/remixicon.css' rel='stylesheet'>
 <style>
     .remix {
         font-size: 32px;

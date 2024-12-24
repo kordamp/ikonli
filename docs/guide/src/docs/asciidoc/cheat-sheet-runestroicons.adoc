@@ -1,7 +1,7 @@
 = Runestroicons
 
 ++++
-<link href='./css/runestroicons.css' rel='stylesheet'>
+<link href='./runestroicons/css/runestroicons.css' rel='stylesheet'>
 <style>
     .ri {
         font-size: 32px;

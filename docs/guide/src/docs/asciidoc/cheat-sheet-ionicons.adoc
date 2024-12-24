@@ -1,7 +1,7 @@
 = Ionicons
 
 ++++
-<link href='./css/ionicons.css' rel='stylesheet'>
+<link href='./ionicons/css/ionicons.css' rel='stylesheet'>
 <style>
     .ion {
         font-size: 32px;
