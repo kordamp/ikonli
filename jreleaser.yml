@@ -31,6 +31,8 @@ project:
   license: Apache-2.0
   java:
     groupId: org.kordamp.ikonli
+    mainClass: org.kordamp.ikonli.browser.Launcher
+    mainModule: org.kordamp.ikonli.browser
     version: 11
   inceptionYear: 2015
   stereotype: CLI

@@ -44,8 +44,8 @@ jobs:
       - name: Setup Java
         uses: actions/setup-java@v4
         with:
-          java-version: ${{ vars.JAVA_VERSION }}
-          distribution: ${{ vars.JAVA_DISTRO }}
+          java-version: 21
+          distribution: zulu
           cache: gradle
 
       - name: Version
@@ -65,7 +65,7 @@ jobs:
           if-no-files-found: ignore
           retention-days: 1
           path: |
-            apps/ikonli-browser/build/distributions/ikonli-browser-*x86_64.zip
+            apps/ikonli-browser/build/distributions/ikonli-browser-*.zip
             apps/ikonli-browser/build/packagers/ikonli-browser-*.rpm
             apps/ikonli-browser/build/packagers/ikonli-browser-*.dmg
             apps/ikonli-browser/build/packagers/ikonli-browser-*.exe
@@ -86,15 +86,15 @@ jobs:
       - name: Download build artifacts
         uses: actions/download-artifact@v4
         with:
-          pattern: jpackage-*
+          pattern: artifacts-*
           merge-multiple: true
           path: artifacts
 
       - name: Setup Java
         uses: actions/setup-java@v4
         with:
-          java-version: ${{ vars.JAVA_VERSION }}
-          distribution: ${{ vars.JAVA_DISTRO }}
+          java-version: 21
+          distribution: zulu
           cache: gradle
 
       - name: Version

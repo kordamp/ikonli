@@ -127,31 +127,31 @@ processResources {
 
 ext {
     zuluPlatform = rootProject.javafx_platform == 'mac' ? 'macosx' : rootProject.javafx_platform
-    zuluHome = project.file("${buildDir}/jdks/zulu16Linux/${zuluVersion}-${zuluPlatform}_x64")
+    zuluHome = project.file("${buildDir}/jdks/zulu21Linux/${zuluVersion}-${zuluPlatform}_x64")
 }
 if (rootProject.javafx_platform == 'mac') {
-    zuluHome = project.file("${buildDir}/jdks/zulu16Osx/${zuluVersion}-${zuluPlatform}_x64/zulu-16.jdk/Contents/Home")
+    zuluHome = project.file("${buildDir}/jdks/zulu21Osx/${zuluVersion}-${zuluPlatform}_x64/zulu-21.jdk/Contents/Home")
 } else if (rootProject.javafx_platform == 'win') {
-    zuluHome = project.file("${buildDir}/jdks/zulu16Windows/${zuluVersion}-${zuluPlatform}_x64")
+    zuluHome = project.file("${buildDir}/jdks/zulu21Windows/${zuluVersion}-${zuluPlatform}_x64")
 }
 System.properties['badass.jlink.java.home']     = zuluHome.absolutePath
 System.properties['badass.jlink.jpackage.home'] = zuluHome.absolutePath
 
 jdks {
-    zulu16Linux {
-        platform = 'linux'
-        url      = "https://cdn.azul.com/zulu/bin/${zuluVersion}-linux_x64.tar.gz"
-        checksum = '90c534d2544dc1d183f364e3520c1067724476a68dcd326d91a9579de59627b3'
+    zulu21Linux {
+        platform = 'linux-x86_64'
+        url = 'https://cdn.azul.com/zulu/bin/zulu21.38.21-ca-jdk21.0.5-linux_x64.tar.gz'
+        checksum = '5320a33714f58c0104191d244759daa6a6d46819d447347ba9003132e5489d92'
     }
-    zulu16Windows {
-        platform = 'windows'
-        url      = "https://cdn.azul.com/zulu/bin/${zuluVersion}-win_x64.zip"
-        checksum = '42930e79a69736d2f2639f92cbb266c5c9b5f80f96a6f2f1422cd03e8e33b619'
+    zulu21Windows {
+        platform = 'windows-x86_64'
+        url = 'https://cdn.azul.com/zulu/bin/zulu21.38.21-ca-jdk21.0.5-win_x64.zip'
+        checksum = '8dea44fd3a6f7ad0f42f38abc1371075710b58bed9bd8f093c2ef2d450dd2672'
     }
-    zulu16Osx {
-        platform = 'osx'
-        url      = "https://cdn.azul.com/zulu/bin/${zuluVersion}-macosx_x64.zip"
-        checksum = '194e60b60dfb238c32975c5863c3d306181f964371e2b1327404a56689a34368'
+    zulu21Osx {
+        platform = 'osx-x86_64'
+        url = 'https://cdn.azul.com/zulu/bin/zulu21.38.21-ca-jdk21.0.5-macosx_x64.zip'
+        checksum = 'a77a9c67d8f9a2341674bcea7056d9d70f69ff0850dd3874303641cc9cec2dfc'
     }
 }
 
@@ -185,4 +185,9 @@ jlink {
 
 afterEvaluate {
     tasks.findByName('jpackageImage').dependsOn(tasks.findByName('jlinkZip'))
+    def copyJdksToCache = project.tasks.findByName('copyJdksToCache')
+    ['zulu21Linux', 'zulu21Windows', 'zulu21Osx',].each { jdk ->
+        def copyTask = project.tasks.findByName('copyJdkFromCache' + jdk.capitalize())
+        if (copyJdksToCache && copyTask) copyTask.dependsOn(copyJdksToCache)
+    }
 }
