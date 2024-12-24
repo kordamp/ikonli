@@ -45,6 +45,7 @@ module org.kordamp.ikonli.browser {
     requires org.kordamp.ikonli.fluentui;
     requires org.kordamp.ikonli.fontawesome;
     requires org.kordamp.ikonli.fontawesome5;
+    requires org.kordamp.ikonli.fontawesome6;
     requires org.kordamp.ikonli.fontelico;
     requires org.kordamp.ikonli.foundation;
     requires org.kordamp.ikonli.hawcons;
