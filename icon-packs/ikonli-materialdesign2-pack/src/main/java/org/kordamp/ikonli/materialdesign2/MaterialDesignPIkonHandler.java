@@ -20,11 +20,13 @@ package org.kordamp.ikonli.materialdesign2;
 import org.kordamp.ikonli.Ikon;
 import org.kordamp.ikonli.IkonHandler;
 import org.kordamp.jipsy.annotations.ServiceProviderFor;
+import org.osgi.service.component.annotations.Component;
 
 /**
  * @author Andres Almiray
  */
 @ServiceProviderFor(IkonHandler.class)
+@Component(service = IkonHandler.class)
 public class MaterialDesignPIkonHandler extends AbstractMaterialDesignIkonHandler {
     @Override
     public boolean supports(String description) {

@@ -19,11 +19,13 @@ package org.kordamp.ikonli.metrizeicons;
 
 import org.kordamp.ikonli.IkonProvider;
 import org.kordamp.jipsy.annotations.ServiceProviderFor;
+import org.osgi.service.component.annotations.Component;
 
 /**
  * @author Andres Almiray
  */
 @ServiceProviderFor(IkonProvider.class)
+@Component(service = IkonProvider.class)
 public class MetrizeIconsIkonProvider implements IkonProvider<MetrizeIcons> {
     @Override
     public Class<MetrizeIcons> getIkon() {

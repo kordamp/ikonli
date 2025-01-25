@@ -19,11 +19,13 @@ package org.kordamp.ikonli.codicons;
 
 import org.kordamp.ikonli.IkonProvider;
 import org.kordamp.jipsy.annotations.ServiceProviderFor;
+import org.osgi.service.component.annotations.Component;
 
 /**
  * @author Andres Almiray
  */
 @ServiceProviderFor(IkonProvider.class)
+@Component(service = IkonProvider.class)
 public class CodiconsIkonProvider implements IkonProvider<Codicons> {
     @Override
     public Class<Codicons> getIkon() {

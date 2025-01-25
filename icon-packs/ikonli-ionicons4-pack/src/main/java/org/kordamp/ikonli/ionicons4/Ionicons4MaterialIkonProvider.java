@@ -19,11 +19,13 @@ package org.kordamp.ikonli.ionicons4;
 
 import org.kordamp.ikonli.IkonProvider;
 import org.kordamp.jipsy.annotations.ServiceProviderFor;
+import org.osgi.service.component.annotations.Component;
 
 /**
  * @author Andres Almiray
  */
 @ServiceProviderFor(IkonProvider.class)
+@Component(service = IkonProvider.class)
 public class Ionicons4MaterialIkonProvider implements IkonProvider<Ionicons4Material> {
     @Override
     public Class<Ionicons4Material> getIkon() {

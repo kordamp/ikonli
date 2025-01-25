@@ -19,11 +19,13 @@ package org.kordamp.ikonli.fontawesome5;
 
 import org.kordamp.ikonli.IkonProvider;
 import org.kordamp.jipsy.annotations.ServiceProviderFor;
+import org.osgi.service.component.annotations.Component;
 
 /**
  * @author Andres Almiray
  */
 @ServiceProviderFor(IkonProvider.class)
+@Component(service = IkonProvider.class)
 public class FontAwesomeBrandsIkonProvider implements IkonProvider<FontAwesomeBrands> {
     @Override
     public Class<FontAwesomeBrands> getIkon() {

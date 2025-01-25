@@ -18,9 +18,10 @@
 module org.kordamp.ikonli.javafx {
     exports org.kordamp.ikonli.javafx;
 
-    requires org.kordamp.ikonli.core;
+    requires transitive org.kordamp.ikonli.core;
 
     requires javafx.base;
     requires javafx.graphics;
     requires javafx.controls;
+	requires static org.osgi.service.component.annotations;
 }

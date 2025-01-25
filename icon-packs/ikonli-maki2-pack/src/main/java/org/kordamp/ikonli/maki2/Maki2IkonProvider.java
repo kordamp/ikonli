@@ -19,11 +19,13 @@ package org.kordamp.ikonli.maki2;
 
 import org.kordamp.ikonli.IkonProvider;
 import org.kordamp.jipsy.annotations.ServiceProviderFor;
+import org.osgi.service.component.annotations.Component;
 
 /**
  * @author Andres Almiray
  */
 @ServiceProviderFor(IkonProvider.class)
+@Component(service = IkonProvider.class)
 public class Maki2IkonProvider implements IkonProvider<Maki2> {
     @Override
     public Class<Maki2> getIkon() {

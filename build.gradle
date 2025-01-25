@@ -17,6 +17,7 @@
  */
 plugins {
     id 'com.google.osdetector'
+	id 'biz.aQute.bnd.builder'
 }
 
 ext.javafx_platform = osdetector.os == 'osx' ? 'mac' : osdetector.os == 'windows' ? 'win' : osdetector.os
@@ -78,8 +79,31 @@ idea {
 subprojects { subproj ->
     if (!subproj.name.contains('guide') && !subproj.name.contains('bom')) {
         apply plugin: 'java-library'
+		apply plugin: 'biz.aQute.bnd.builder'  // Apply BND to subprojects
 
+        jar {
+			bundle {
+				bnd '''
+					Bundle-SymbolicName: ${project.name}
+					Bundle-Name: ${project.name}
+					Bundle-Version: ${project.version}
+					
+					Import-Package:         !javafx.*, *;
+					Export-Package:         *;
+					Bundle-ActivationPolicy: lazy
+					
+					# Remove private packages to prevent embedding
+            		Private-Package: !*
+					
+					-nouses: true
+					-noimportjava: true
+					'''
+			}
+		}
+		
         dependencies {
+        	compileOnly 'org.osgi:osgi.core:8.0.0'
+        	compileOnly 'org.osgi:org.osgi.service.component.annotations:1.5.1'
             testImplementation 'junit:junit:4.13.2'
         }
 

@@ -18,6 +18,7 @@
 module org.kordamp.ikonli.foundation {
     requires org.kordamp.ikonli.core;
     requires static org.kordamp.jipsy.annotations;
+	requires static org.osgi.service.component.annotations;
     exports org.kordamp.ikonli.foundation;
 
     provides org.kordamp.ikonli.IkonHandler

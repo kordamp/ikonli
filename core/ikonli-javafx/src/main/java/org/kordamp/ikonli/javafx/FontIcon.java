@@ -17,6 +17,17 @@
  */
 package org.kordamp.ikonli.javafx;
 
+import static java.util.Collections.unmodifiableList;
+import static java.util.Objects.requireNonNull;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+
+import org.kordamp.ikonli.Ikon;
+import org.kordamp.ikonli.IkonHandler;
+import org.kordamp.ikonli.IkonResolverProvider;
+
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.ObjectProperty;
 import javafx.css.CssMetaData;
@@ -33,15 +44,6 @@ import javafx.scene.paint.Paint;
 import javafx.scene.paint.RadialGradient;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
-import org.kordamp.ikonli.Ikon;
-import org.kordamp.ikonli.IkonHandler;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
-
-import static java.util.Collections.unmodifiableList;
-import static java.util.Objects.requireNonNull;
 
 /**
  * @author Andres Almiray
@@ -73,7 +75,7 @@ public class FontIcon extends Text implements Icon {
 
         iconCodeProperty().addListener((v, o, n) -> {
             if (n != null) {
-                IkonHandler ikonHandler = IkonResolver.getInstance().resolve(n.getDescription());
+                IkonHandler ikonHandler = IkonResolverProvider.getInstance(JavaFXFontLoader.getInstance()).resolve(n.getDescription());
                 setStyle(normalizeStyle(getStyle(), "-fx-font-family", "'" + ikonHandler.getFontFamily() + "'"));
                 int code = n.getCode();
                 if (code <= '\uFFFF') {
@@ -248,7 +250,7 @@ public class FontIcon extends Text implements Icon {
 
     public void setIconLiteral(String iconCode) {
         String[] parts = iconCode.split(":");
-        setIconCode(org.kordamp.ikonli.javafx.IkonResolver.getInstance().resolve(parts[0]).resolve(parts[0]));
+        setIconCode(IkonResolverProvider.getInstance(JavaFXFontLoader.getInstance()).resolve(parts[0]).resolve(parts[0]));
         resolveSize(iconCode, parts);
         resolvePaint(iconCode, parts);
     }

@@ -19,11 +19,13 @@ package org.kordamp.ikonli.icomoon;
 
 import org.kordamp.ikonli.IkonProvider;
 import org.kordamp.jipsy.annotations.ServiceProviderFor;
+import org.osgi.service.component.annotations.Component;
 
 /**
  * @author Andres Almiray
  */
 @ServiceProviderFor(IkonProvider.class)
+@Component(service = IkonProvider.class)
 public class IcomoonIkonProvider implements IkonProvider<Icomoon> {
     @Override
     public Class<Icomoon> getIkon() {

@@ -19,11 +19,13 @@ package org.kordamp.ikonli.websymbols;
 
 import org.kordamp.ikonli.IkonProvider;
 import org.kordamp.jipsy.annotations.ServiceProviderFor;
+import org.osgi.service.component.annotations.Component;
 
 /**
  * @author Andres Almiray
  */
 @ServiceProviderFor(IkonProvider.class)
+@Component(service = IkonProvider.class)
 public class WebsymbolsIkonProvider implements IkonProvider<Websymbols> {
     @Override
     public Class<Websymbols> getIkon() {

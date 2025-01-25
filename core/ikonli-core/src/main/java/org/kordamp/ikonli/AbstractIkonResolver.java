@@ -17,88 +17,87 @@
  */
 package org.kordamp.ikonli;
 
+import static java.util.Objects.requireNonNull;
+
 import java.util.Arrays;
 import java.util.ServiceLoader;
 import java.util.Set;
+import java.util.concurrent.CopyOnWriteArraySet;
 import java.util.logging.Logger;
-
-import static java.util.Objects.requireNonNull;
 
 /**
  * @author Andres Almiray
  */
-public class AbstractIkonResolver {
+public class AbstractIkonResolver implements IkonResolver {
     private static final String ORG_KORDAMP_IKONLI_STRICT = "org.kordamp.ikonli.strict";
     private final static Logger LOGGER = Logger.getLogger(AbstractIkonResolver.class.getName());
 
-    protected boolean registerHandler(IkonHandler handler, Set<IkonHandler> handlers, Set<IkonHandler> customHandlers) {
-        // check whether handler for this font is already loaded via classpath
-        if (isLoadedViaClasspath(handler, handlers)) {
+    protected final Set<IkonHandler> handlers = new CopyOnWriteArraySet<>();
+    protected final Set<IkonHandler> customHandlers = new CopyOnWriteArraySet<>();
+
+    @Override
+    public boolean registerHandler(IkonHandler handler) {
+    	requireNonNull(handler, "Handler must not be null");
+        if (isHandlerLoadedViaClasspath(handler)) {
             throwOrWarn(String.format("IkonHandler for %s is already loaded via classpath", handler.getFontFamily()));
             return false;
         }
         return customHandlers.add(handler);
     }
 
-    protected boolean unregisterHandler(IkonHandler handler, Set<IkonHandler> handlers, Set<IkonHandler> customHandlers) {
-        // check whether handler for this font is loaded via classpath
-        if (isLoadedViaClasspath(handler, handlers)) {
+    @Override
+    public boolean unregisterHandler(IkonHandler handler) {
+    	requireNonNull(handler, "Handler must not be null");
+        if (isHandlerLoadedViaClasspath(handler)) {
             throwOrWarn(String.format("IkonHandler for %s was loaded via classpath and can't be unregistered", handler.getFontFamily()));
             return false;
         }
         return customHandlers.remove(handler);
     }
 
-    protected IkonHandler resolve(String value, Set<IkonHandler> handlers, Set<IkonHandler> customHandlers) {
+    @Override
+    public IkonHandler resolve(String value) {
         requireNonNull(value, "Ikon description must not be null");
-        for (Set<IkonHandler> hs : Arrays.asList(handlers, customHandlers)) {
-            for (IkonHandler handler : hs) {
-                if (handler.supports(value)) {
-                    return handler;
-                }
-            }
-        }
-        throw new UnsupportedOperationException("Cannot resolve '" + value + "'");
+        return findHandler(value)
+            .orElseThrow(() -> new UnsupportedOperationException("Cannot resolve '" + value + "'"));
     }
 
-    private boolean isLoadedViaClasspath(IkonHandler handler, Set<IkonHandler> handlers) {
-        String fontFamily = handler.getFontFamily();
-        for (IkonHandler classpathHandler : handlers) {
-            if (classpathHandler.getFontFamily().equals(fontFamily)) {
-                return true;
-            }
-        }
-        return false;
+    protected java.util.Optional<IkonHandler> findHandler(String value) {
+        return Arrays.asList(handlers, customHandlers).stream()
+            .flatMap(Set::stream)
+            .filter(handler -> handler.supports(value))
+            .findFirst();
+    }
+
+    private boolean isHandlerLoadedViaClasspath(IkonHandler handler) {
+        return handlers.stream()
+            .anyMatch(h -> h.getFontFamily().equals(handler.getFontFamily()));
     }
 
     private void throwOrWarn(String message) {
-        if (strictChecksEnabled()) {
+        if (Boolean.getBoolean(ORG_KORDAMP_IKONLI_STRICT)) {
             throw new IllegalArgumentException(message);
-        } else {
-            LOGGER.warning(message);
         }
-    }
-
-    private boolean strictChecksEnabled() {
-        return System.getProperty(ORG_KORDAMP_IKONLI_STRICT) == null || Boolean.getBoolean(ORG_KORDAMP_IKONLI_STRICT);
+        LOGGER.warning(message);
     }
 
     public static ServiceLoader<IkonHandler> resolveServiceLoader() {
         // Check if handlers must be loaded from a ModuleLayer
-        if (null != IkonHandler.class.getModule().getLayer()) {
-            ServiceLoader<IkonHandler> handlers = ServiceLoader.load(IkonHandler.class.getModule().getLayer(), IkonHandler.class);
-            if (handlers.stream().count() > 0) {
-                return handlers;
+    	if (IkonHandler.class.getModule().getLayer() != null) {
+            ServiceLoader<IkonHandler> ikonHandlerServiceLoaders = ServiceLoader.load(
+                IkonHandler.class.getModule().getLayer(), 
+                IkonHandler.class
+            );
+            if (ikonHandlerServiceLoaders.findFirst().isPresent()) {
+                return ikonHandlerServiceLoaders;
             }
         }
 
-        // Check if the IkonHandler.class.classLoader works
-        ServiceLoader<IkonHandler> handlers = ServiceLoader.load(IkonHandler.class, IkonHandler.class.getClassLoader());
-        if (handlers.stream().count() > 0) {
-            return handlers;
-        }
-
-        // If *nothing* else works
-        return ServiceLoader.load(IkonHandler.class);
+    	ServiceLoader<IkonHandler> handlers = ServiceLoader.load(
+                IkonHandler.class, 
+                IkonHandler.class.getClassLoader()
+            );
+    	// Return if the IkonHandler.class.classLoader works or if *nothing* else works
+        return handlers.findFirst().isPresent() ? handlers : ServiceLoader.load(IkonHandler.class);
     }
 }

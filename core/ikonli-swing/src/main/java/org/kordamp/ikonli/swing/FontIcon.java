@@ -17,15 +17,23 @@
  */
 package org.kordamp.ikonli.swing;
 
-import org.kordamp.ikonli.Ikon;
-import org.kordamp.ikonli.IkonHandler;
-
-import javax.swing.*;
-import java.awt.*;
-import java.awt.image.BufferedImage;
-
 import static java.awt.GraphicsEnvironment.getLocalGraphicsEnvironment;
 import static java.util.Objects.requireNonNull;
+
+import java.awt.Color;
+import java.awt.Component;
+import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.RenderingHints;
+import java.awt.image.BufferedImage;
+
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+
+import org.kordamp.ikonli.Ikon;
+import org.kordamp.ikonli.IkonHandler;
+import org.kordamp.ikonli.IkonResolverProvider;
 
 /**
  * @author Andres Almiray
@@ -93,7 +101,7 @@ public class FontIcon implements Icon {
         requireNonNull(iconColor, "Argument 'iconFont' must not be null");
         this.ikon = ikon;
         synchronized (LOCK) {
-            IkonHandler ikonHandler = org.kordamp.ikonli.swing.IkonResolver.getInstance().resolve(ikon.getDescription());
+            IkonHandler ikonHandler = IkonResolverProvider.getInstance(SwingFontLoader.getInstance()).resolve(ikon.getDescription());
             font = ((Font) ikonHandler.getFont()).deriveFont(Font.PLAIN, iconSize);
             setProperties();
         }

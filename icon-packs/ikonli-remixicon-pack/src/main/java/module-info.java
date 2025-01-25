@@ -18,6 +18,7 @@
 module org.kordamp.ikonli.remixicon {
     requires org.kordamp.ikonli.core;
     requires static org.kordamp.jipsy.annotations;
+	requires static org.osgi.service.component.annotations;
     exports org.kordamp.ikonli.remixicon;
 
     provides org.kordamp.ikonli.IkonHandler

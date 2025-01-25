@@ -21,7 +21,7 @@ import org.kordamp.ikonli.AbstractIkonHandler;
 import org.kordamp.ikonli.Ikon;
 import org.kordamp.ikonli.IkonHandler;
 import org.kordamp.jipsy.annotations.ServiceProviderFor;
-
+import org.osgi.service.component.annotations.Component;
 import java.io.InputStream;
 import java.net.URL;
 
@@ -29,6 +29,7 @@ import java.net.URL;
  * @author Andres Almiray
  */
 @ServiceProviderFor(IkonHandler.class)
+@Component(service = IkonHandler.class)
 public class HawconsFilledIkonHandler extends AbstractIkonHandler {
     private static final String FONT_RESOURCE = "/META-INF/resources/hawcons/20140708/fonts/hawconsfilled.ttf";
 

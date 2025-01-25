@@ -19,11 +19,13 @@ package org.kordamp.ikonli.bytedance;
 
 import org.kordamp.ikonli.IkonProvider;
 import org.kordamp.jipsy.annotations.ServiceProviderFor;
+import org.osgi.service.component.annotations.Component;
 
 /**
  * @author LeeWyatt
  */
 @ServiceProviderFor(IkonProvider.class)
+@Component(service = IkonProvider.class)
 public class BytedanceIconsBoldMZIkonProvider implements IkonProvider<BytedanceIconsBoldMZ> {
     @Override
     public Class<BytedanceIconsBoldMZ> getIkon() {

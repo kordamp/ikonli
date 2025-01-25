@@ -19,11 +19,13 @@ package org.kordamp.ikonli.subway;
 
 import org.kordamp.ikonli.IkonProvider;
 import org.kordamp.jipsy.annotations.ServiceProviderFor;
+import org.osgi.service.component.annotations.Component;
 
 /**
  * @author Andres Almiray
  */
 @ServiceProviderFor(IkonProvider.class)
+@Component(service = IkonProvider.class)
 public class SubwayIkonProvider implements IkonProvider<Subway> {
     @Override
     public Class<Subway> getIkon() {

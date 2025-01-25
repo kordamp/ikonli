@@ -17,18 +17,20 @@
  */
 package org.kordamp.ikonli.bpmn;
 
+import java.io.InputStream;
+import java.net.URL;
+
 import org.kordamp.ikonli.AbstractIkonHandler;
 import org.kordamp.ikonli.Ikon;
 import org.kordamp.ikonli.IkonHandler;
 import org.kordamp.jipsy.annotations.ServiceProviderFor;
-
-import java.io.InputStream;
-import java.net.URL;
+import org.osgi.service.component.annotations.Component;
 
 /**
  * @author Andres Almiray
  */
 @ServiceProviderFor(IkonHandler.class)
+@Component(service = IkonHandler.class)
 public class BpmnIkonHandler extends AbstractIkonHandler {
     private static final String FONT_RESOURCE = "/META-INF/resources/bpmn/0.10.0/fonts/bpmn.ttf";
 

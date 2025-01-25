@@ -21,7 +21,7 @@ import org.kordamp.ikonli.AbstractIkonHandler;
 import org.kordamp.ikonli.Ikon;
 import org.kordamp.ikonli.IkonHandler;
 import org.kordamp.jipsy.annotations.ServiceProviderFor;
-
+import org.osgi.service.component.annotations.Component;
 import java.io.InputStream;
 import java.net.URL;
 
@@ -29,6 +29,7 @@ import java.net.URL;
  * @author Loïc Sculier aka typhon0
  */
 @ServiceProviderFor(IkonHandler.class)
+@Component(service = IkonHandler.class)
 public class Ionicons4LogoIkonHandler extends AbstractIkonHandler {
     private static final String FONT_RESOURCE = "/META-INF/resources/ionicons4/4.1.2/fonts/ionicons.ttf";
 

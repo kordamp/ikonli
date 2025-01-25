@@ -19,11 +19,13 @@ package org.kordamp.ikonli.whhg;
 
 import org.kordamp.ikonli.IkonProvider;
 import org.kordamp.jipsy.annotations.ServiceProviderFor;
+import org.osgi.service.component.annotations.Component;
 
 /**
  * @author Andres Almiray
  */
 @ServiceProviderFor(IkonProvider.class)
+@Component(service = IkonProvider.class)
 public class WhhgMZIkonProvider implements IkonProvider<WhhgMZ> {
     @Override
     public Class<WhhgMZ> getIkon() {

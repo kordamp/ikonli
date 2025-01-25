@@ -52,6 +52,7 @@ import org.kordamp.ikonli.bytedance.BytedanceIconsThinMZIkonProvider;
 module org.kordamp.ikonli.bytedance {
     requires org.kordamp.ikonli.core;
     requires static org.kordamp.jipsy.annotations;
+	requires static org.osgi.service.component.annotations;
     exports org.kordamp.ikonli.bytedance;
 
     provides org.kordamp.ikonli.IkonHandler

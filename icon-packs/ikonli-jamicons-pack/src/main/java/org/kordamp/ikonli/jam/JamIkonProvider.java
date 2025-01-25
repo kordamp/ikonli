@@ -19,11 +19,13 @@ package org.kordamp.ikonli.jam;
 
 import org.kordamp.ikonli.IkonProvider;
 import org.kordamp.jipsy.annotations.ServiceProviderFor;
+import org.osgi.service.component.annotations.Component;
 
 /**
  * @author Andres Almiray
  */
 @ServiceProviderFor(IkonProvider.class)
+@Component(service = IkonProvider.class)
 public class JamIkonProvider implements IkonProvider<Jam> {
     @Override
     public Class<Jam> getIkon() {
