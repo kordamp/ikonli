@@ -20,7 +20,7 @@ module org.kordamp.ikonli.websymbols {
     requires static org.kordamp.jipsy.annotations;
 	requires static org.osgi.service.component.annotations;
     exports org.kordamp.ikonli.websymbols;
-
+    
     provides org.kordamp.ikonli.IkonHandler
         with org.kordamp.ikonli.websymbols.WebsymbolsIkonHandler;
     provides org.kordamp.ikonli.IkonProvider

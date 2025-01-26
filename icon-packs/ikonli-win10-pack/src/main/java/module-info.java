@@ -20,7 +20,7 @@ module org.kordamp.ikonli.win10 {
     requires static org.kordamp.jipsy.annotations;
 	requires static org.osgi.service.component.annotations;
     exports org.kordamp.ikonli.win10;
-
+    
     provides org.kordamp.ikonli.IkonHandler
         with org.kordamp.ikonli.win10.Win10IkonHandler;
     provides org.kordamp.ikonli.IkonProvider

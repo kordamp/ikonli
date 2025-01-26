@@ -18,7 +18,7 @@
 module org.kordamp.ikonli.material2 {
     requires org.kordamp.ikonli.core;
     requires static org.kordamp.jipsy.annotations;
-	requires static org.osgi.service.component.annotations;
+    requires static org.osgi.service.component.annotations;
     exports org.kordamp.ikonli.material2;
 
     provides org.kordamp.ikonli.IkonHandler

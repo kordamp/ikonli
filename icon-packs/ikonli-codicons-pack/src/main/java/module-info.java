@@ -18,7 +18,7 @@
 module org.kordamp.ikonli.codicons {
     requires org.kordamp.ikonli.core;
     requires static org.kordamp.jipsy.annotations;
-	requires static org.osgi.service.component.annotations;
+    requires static org.osgi.service.component.annotations;
     exports org.kordamp.ikonli.codicons;
 
     provides org.kordamp.ikonli.IkonHandler

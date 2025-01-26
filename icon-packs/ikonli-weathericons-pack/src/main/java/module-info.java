@@ -20,7 +20,7 @@ module org.kordamp.ikonli.weathericons {
     requires static org.kordamp.jipsy.annotations;
 	requires static org.osgi.service.component.annotations;
     exports org.kordamp.ikonli.weathericons;
-
+    
     provides org.kordamp.ikonli.IkonHandler
         with org.kordamp.ikonli.weathericons.WeatherIconsIkonHandler;
     provides org.kordamp.ikonli.IkonProvider
