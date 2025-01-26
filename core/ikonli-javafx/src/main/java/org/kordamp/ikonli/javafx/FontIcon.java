@@ -17,17 +17,6 @@
  */
 package org.kordamp.ikonli.javafx;
 
-import static java.util.Collections.unmodifiableList;
-import static java.util.Objects.requireNonNull;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
-
-import org.kordamp.ikonli.Ikon;
-import org.kordamp.ikonli.IkonHandler;
-import org.kordamp.ikonli.IkonResolverProvider;
-
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.ObjectProperty;
 import javafx.css.CssMetaData;
@@ -44,6 +33,16 @@ import javafx.scene.paint.Paint;
 import javafx.scene.paint.RadialGradient;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
+import org.kordamp.ikonli.Ikon;
+import org.kordamp.ikonli.IkonHandler;
+import org.kordamp.ikonli.IkonResolverProvider;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+
+import static java.util.Collections.unmodifiableList;
+import static java.util.Objects.requireNonNull;
 
 /**
  * @author Andres Almiray

@@ -37,7 +37,7 @@ public class AbstractIkonResolver implements IkonResolver {
 
     @Override
     public boolean registerHandler(IkonHandler handler) {
-    	requireNonNull(handler, "Handler must not be null");
+        requireNonNull(handler, "Handler must not be null");
         if (isHandlerLoadedViaClasspath(handler)) {
             throwOrWarn(String.format("IkonHandler for %s is already loaded via classpath", handler.getFontFamily()));
             return false;
@@ -47,7 +47,7 @@ public class AbstractIkonResolver implements IkonResolver {
 
     @Override
     public boolean unregisterHandler(IkonHandler handler) {
-    	requireNonNull(handler, "Handler must not be null");
+        requireNonNull(handler, "Handler must not be null");
         if (isHandlerLoadedViaClasspath(handler)) {
             throwOrWarn(String.format("IkonHandler for %s was loaded via classpath and can't be unregistered", handler.getFontFamily()));
             return false;
@@ -83,7 +83,7 @@ public class AbstractIkonResolver implements IkonResolver {
 
     public static ServiceLoader<IkonHandler> resolveServiceLoader() {
         // Check if handlers must be loaded from a ModuleLayer
-    	if (IkonHandler.class.getModule().getLayer() != null) {
+        if (IkonHandler.class.getModule().getLayer() != null) {
             ServiceLoader<IkonHandler> ikonHandlerServiceLoaders = ServiceLoader.load(
                 IkonHandler.class.getModule().getLayer(), 
                 IkonHandler.class
@@ -93,11 +93,11 @@ public class AbstractIkonResolver implements IkonResolver {
             }
         }
 
-    	ServiceLoader<IkonHandler> handlers = ServiceLoader.load(
+        ServiceLoader<IkonHandler> handlers = ServiceLoader.load(
                 IkonHandler.class, 
                 IkonHandler.class.getClassLoader()
             );
-    	// Return if the IkonHandler.class.classLoader works or if *nothing* else works
+        // Return if the IkonHandler.class.classLoader works or if *nothing* else works
         return handlers.findFirst().isPresent() ? handlers : ServiceLoader.load(IkonHandler.class);
     }
 }

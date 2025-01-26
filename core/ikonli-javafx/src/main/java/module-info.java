@@ -23,5 +23,5 @@ module org.kordamp.ikonli.javafx {
     requires javafx.base;
     requires javafx.graphics;
     requires javafx.controls;
-	requires static org.osgi.service.component.annotations;
+    requires static org.osgi.service.component.annotations;
 }

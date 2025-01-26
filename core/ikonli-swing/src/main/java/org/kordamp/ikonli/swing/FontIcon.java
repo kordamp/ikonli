@@ -17,23 +17,16 @@
  */
 package org.kordamp.ikonli.swing;
 
-import static java.awt.GraphicsEnvironment.getLocalGraphicsEnvironment;
-import static java.util.Objects.requireNonNull;
-
-import java.awt.Color;
-import java.awt.Component;
-import java.awt.Font;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.RenderingHints;
-import java.awt.image.BufferedImage;
-
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
-
 import org.kordamp.ikonli.Ikon;
 import org.kordamp.ikonli.IkonHandler;
 import org.kordamp.ikonli.IkonResolverProvider;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.image.BufferedImage;
+
+import static java.awt.GraphicsEnvironment.getLocalGraphicsEnvironment;
+import static java.util.Objects.requireNonNull;
 
 /**
  * @author Andres Almiray

@@ -19,8 +19,8 @@ module org.kordamp.ikonli.core {
     exports org.kordamp.ikonli;
     requires static org.kordamp.jipsy.annotations;
     requires java.logging;
-	requires static org.osgi.service.component.annotations;
-	requires static osgi.core;
+    requires static org.osgi.service.component.annotations;
+    requires static osgi.core;
 
     uses org.kordamp.ikonli.IkonHandler;
 

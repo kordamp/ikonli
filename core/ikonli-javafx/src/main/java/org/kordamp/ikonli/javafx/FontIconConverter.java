@@ -17,12 +17,11 @@
  */
 package org.kordamp.ikonli.javafx;
 
-import org.kordamp.ikonli.Ikon;
-import org.kordamp.ikonli.IkonResolverProvider;
-
 import javafx.css.ParsedValue;
 import javafx.css.StyleConverter;
 import javafx.scene.text.Font;
+import org.kordamp.ikonli.Ikon;
+import org.kordamp.ikonli.IkonResolverProvider;
 
 /**
  * @author Andres Almiray

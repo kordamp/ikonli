@@ -21,5 +21,5 @@ module org.kordamp.ikonli.swing {
     requires transitive org.kordamp.ikonli.core;
 
     requires java.desktop;
-	requires static org.osgi.service.component.annotations;
+    requires static org.osgi.service.component.annotations;
 }
