@@ -17,14 +17,14 @@
  */
 package org.kordamp.ikonli.bpmn;
 
-import java.io.InputStream;
-import java.net.URL;
-
 import org.kordamp.ikonli.AbstractIkonHandler;
 import org.kordamp.ikonli.Ikon;
 import org.kordamp.ikonli.IkonHandler;
 import org.kordamp.jipsy.annotations.ServiceProviderFor;
 import org.osgi.service.component.annotations.Component;
+
+import java.io.InputStream;
+import java.net.URL;
 
 /**
  * @author Andres Almiray

@@ -22,6 +22,7 @@ import org.kordamp.ikonli.Ikon;
 import org.kordamp.ikonli.IkonHandler;
 import org.kordamp.jipsy.annotations.ServiceProviderFor;
 import org.osgi.service.component.annotations.Component;
+
 import java.io.InputStream;
 import java.net.URL;
 
