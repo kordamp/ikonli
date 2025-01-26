@@ -18,6 +18,7 @@
 package org.kordamp.ikonli;
 
 import org.kordamp.jipsy.annotations.ServiceProviderFor;
+import org.osgi.service.component.annotations.Component;
 
 import java.io.InputStream;
 import java.net.URL;
@@ -26,6 +27,7 @@ import java.net.URL;
  * @author Andres Almiray
  */
 @ServiceProviderFor(IkonHandler.class)
+@Component(service = IkonHandler.class)
 public class IkonliIkonResolver extends AbstractIkonHandler {
     private static final String FONT_RESOURCE = "/META-INF/resources/ikonli/0.0.0/fonts/ikonli.ttf";
 
