@@ -28,7 +28,7 @@ pluginManagement {
         id 'com.google.osdetector'      version osPluginVersion
         id 'org.beryx.jlink'            version jlinkPluginVersion
         id 'org.jreleaser.jdks'         version jreleaserPluginVersion
-		id 'biz.aQute.bnd.builder' 		version bndPluginVersion
+        id 'biz.aQute.bnd.builder' 		version bndPluginVersion
     }
 }
 
