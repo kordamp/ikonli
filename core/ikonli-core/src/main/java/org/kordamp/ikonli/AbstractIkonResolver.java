@@ -83,7 +83,7 @@ public class AbstractIkonResolver implements IkonResolver {
 
     public static ServiceLoader<IkonHandler> resolveServiceLoader() {
         // Check if handlers must be loaded from a ModuleLayer
-        if (IkonHandler.class.getModule().getLayer() != null) {
+        if (null != IkonHandler.class.getModule().getLayer()) {
             ServiceLoader<IkonHandler> ikonHandlerServiceLoaders = ServiceLoader.load(
                 IkonHandler.class.getModule().getLayer(), 
                 IkonHandler.class
