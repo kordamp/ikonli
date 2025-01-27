@@ -29,9 +29,9 @@ public class Launcher {
     }
 
     private static boolean printVersion(String[] args) {
-        if (args != null && args.length > 0) {
+        if (args != null) {
             for (String arg : args) {
-                if ("-version" .equals(arg) || "--version" .equals(arg)) {
+                if ("-version".equals(arg) || "--version".equals(arg)) {
                     System.out.println("Ikonli Browser " + Versions.IKONLI_VERSION);
                     return true;
                 }

@@ -307,7 +307,7 @@ public enum UniconsMonochrome implements Ikon {
     WORDPRESS_SIMPLE("unim-wordpress-simple", '\uea1a'),
     WRAP_TEXT("unim-wrap-text", '\uea1c'),
     YOUTUBE("unim-youtube", '\uea1d');
-    
+
     public static UniconsMonochrome findByDescription(String description) {
         for (UniconsMonochrome font : values()) {
             if (font.getDescription().equals(description)) {
@@ -317,8 +317,8 @@ public enum UniconsMonochrome implements Ikon {
         throw new IllegalArgumentException("Icon description '" + description + "' is invalid!");
     }
 
-    private String description;
-    private int code;
+    private final String description;
+    private final int code;
 
     UniconsMonochrome(String description, int code) {
         this.description = description;

@@ -18,9 +18,9 @@
 module org.kordamp.ikonli.zondicons {
     requires org.kordamp.ikonli.core;
     requires static org.kordamp.jipsy.annotations;
-	requires static org.osgi.service.component.annotations;
+    requires static org.osgi.service.component.annotations;
     exports org.kordamp.ikonli.zondicons;
-    
+
     provides org.kordamp.ikonli.IkonHandler
         with org.kordamp.ikonli.zondicons.ZondiconsIkonHandler;
     provides org.kordamp.ikonli.IkonProvider

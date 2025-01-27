@@ -141,8 +141,8 @@ public enum Microns implements Ikon {
         throw new IllegalArgumentException("Icon description '" + description + "' is invalid!");
     }
 
-    private String description;
-    private int code;
+    private final String description;
+    private final int code;
 
     Microns(String description, int code) {
         this.description = description;

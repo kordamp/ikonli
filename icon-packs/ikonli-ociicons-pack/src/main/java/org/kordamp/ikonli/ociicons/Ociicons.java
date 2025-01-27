@@ -90,8 +90,8 @@ public enum Ociicons implements Ikon {
     VNET("oci-vnet", '\ue93f'),
     WEB("oci-web", '\ue940');
 
-    private String description;
-    private int code;
+    private final String description;
+    private final int code;
 
     Ociicons(String description, int code) {
         this.description = description;

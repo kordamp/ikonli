@@ -1236,8 +1236,8 @@ public enum FluentUiFilledMZ implements Ikon {
         throw new IllegalArgumentException("Icon description '" + description + "' is invalid!");
     }
 
-    private String description;
-    private int code;
+    private final String description;
+    private final int code;
 
     FluentUiFilledMZ(int code) {
         this.description = "fltfmz-" + name().toLowerCase().replace("_", "-");

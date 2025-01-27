@@ -1196,8 +1196,8 @@ public enum BytedanceIconsBoldMZ implements Ikon {
         throw new IllegalArgumentException("Icon description '" + description + "' is invalid!");
     }
 
-    private String description;
-    private int code;
+    private final String description;
+    private final int code;
 
     BytedanceIconsBoldMZ(String description, int code) {
         this.description = description;

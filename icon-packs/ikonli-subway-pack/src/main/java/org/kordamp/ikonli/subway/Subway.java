@@ -329,7 +329,7 @@ public enum Subway implements Ikon {
     ZIP("subway-zip", '\uea2f'),
     ZOOM_IN("subway-zoom-in", '\uea31'),
     ZOOM_OUT("subway-zoom-out", '\uea30');
-    
+
     public static Subway findByDescription(String description) {
         for (Subway font : values()) {
             if (font.getDescription().equals(description)) {
@@ -339,8 +339,8 @@ public enum Subway implements Ikon {
         throw new IllegalArgumentException("Icon description '" + description + "' is invalid!");
     }
 
-    private String description;
-    private int code;
+    private final String description;
+    private final int code;
 
     Subway(String description, int code) {
         this.description = description;

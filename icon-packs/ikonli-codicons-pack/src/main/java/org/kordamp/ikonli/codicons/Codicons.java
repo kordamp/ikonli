@@ -363,8 +363,8 @@ public enum Codicons implements Ikon {
         throw new IllegalArgumentException("Icon description '" + description + "' is invalid!");
     }
 
-    private String description;
-    private int code;
+    private final String description;
+    private final int code;
 
     Codicons(String description, int code) {
         this.description = description;

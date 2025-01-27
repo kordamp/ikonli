@@ -16,6 +16,7 @@
     -fx-background-color: #120caf, linear-gradient(#1f52ff 10%, #120caf 30%, #1f52ff 100%);
     -fx-border-color: #120caf;
 }
+
 .internal-window,
 .internal-window .internal-window-titlebar {
     -fx-background-color: #1f52ff, linear-gradient(#5ca6ff 10%, #1f52ff 30%, #5ca6ff 100%);

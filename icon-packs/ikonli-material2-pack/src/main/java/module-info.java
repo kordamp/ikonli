@@ -23,7 +23,7 @@ module org.kordamp.ikonli.material2 {
 
     provides org.kordamp.ikonli.IkonHandler
         with org.kordamp.ikonli.material2.Material2ALIkonHandler,
-             org.kordamp.ikonli.material2.Material2MZIkonHandler,
+            org.kordamp.ikonli.material2.Material2MZIkonHandler,
             org.kordamp.ikonli.material2.Material2OutlinedALIkonHandler,
             org.kordamp.ikonli.material2.Material2OutlinedMZIkonHandler,
             org.kordamp.ikonli.material2.Material2RoundALIkonHandler,

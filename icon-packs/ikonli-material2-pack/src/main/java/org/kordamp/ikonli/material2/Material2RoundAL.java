@@ -750,7 +750,7 @@ public enum Material2RoundAL implements Ikon {
     LOW_PRIORITY("mdral-low_priority", '\ue3db'),
     LOYALTY("mdral-loyalty", '\ue3dc'),
     LUGGAGE("mdral-luggage", '\ue8bb');
-    
+
     public static Material2RoundAL findByDescription(String description) {
         for (Material2RoundAL font : values()) {
             if (font.getDescription().equals(description)) {
@@ -760,8 +760,8 @@ public enum Material2RoundAL implements Ikon {
         throw new IllegalArgumentException("Icon description '" + description + "' is invalid!");
     }
 
-    private String description;
-    private int code;
+    private final String description;
+    private final int code;
 
     Material2RoundAL(String description, int code) {
         this.description = description;

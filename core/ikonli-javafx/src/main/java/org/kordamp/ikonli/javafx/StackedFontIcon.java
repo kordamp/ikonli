@@ -54,8 +54,8 @@ public class StackedFontIcon extends StackPane implements Icon {
     private StyleableObjectProperty<Paint> iconColor;
     private double[] iconSizes = new double[0];
 
-    private ChangeListener<Number> iconSizeChangeListener = (v, o, n) -> setIconSizeOnChildren(n.intValue());
-    private ChangeListener<Paint> iconColorChangeListener = (v, o, n) -> setIconColorOnChildren(n);
+    private final ChangeListener<Number> iconSizeChangeListener = (v, o, n) -> setIconSizeOnChildren(n.intValue());
+    private final ChangeListener<Paint> iconColorChangeListener = (v, o, n) -> setIconColorOnChildren(n);
 
     public static void setIconSize(Node icon, double size) {
         if (icon != null && size >= 0d && size <= 1.0d) {
@@ -74,7 +74,7 @@ public class StackedFontIcon extends StackPane implements Icon {
     }
 
     private class NodeSizeListener implements MapChangeListener<Object, Object> {
-        private Node node;
+        private final Node node;
 
         private NodeSizeListener(Node node) {
             this.node = node;

@@ -28,12 +28,12 @@ public class OSGiIkonResolver extends AbstractIkonResolver implements IkonResolv
 
     public OSGiIkonResolver() {
     }
-    
+
     @Reference
     protected void setFontLoader(FontLoader fontLoader) {
         this.fontLoader = fontLoader;
     }
-    
+
     @Reference(
         cardinality = ReferenceCardinality.MULTIPLE,
         policyOption = ReferencePolicyOption.GREEDY,

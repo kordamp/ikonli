@@ -15,6 +15,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 import org.kordamp.ikonli.bytedance.BytedanceIconsBoldALIkonHandler;
 import org.kordamp.ikonli.bytedance.BytedanceIconsBoldALIkonProvider;
 import org.kordamp.ikonli.bytedance.BytedanceIconsBoldMZIkonHandler;
@@ -56,22 +57,22 @@ module org.kordamp.ikonli.bytedance {
     exports org.kordamp.ikonli.bytedance;
 
     provides org.kordamp.ikonli.IkonHandler
-            with BytedanceIconsThinALIkonHandler,
-                    BytedanceIconsThinMZIkonHandler,
-                    BytedanceIconsRegularALIkonHandler,
-                    BytedanceIconsRegularMZIkonHandler,
-                    BytedanceIconsBoldALIkonHandler,
-                    BytedanceIconsBoldMZIkonHandler,
-                    BytedanceIconsExtraBoldALIkonHandler,
-                    BytedanceIconsExtraBoldMZIkonHandler;
+        with BytedanceIconsThinALIkonHandler,
+            BytedanceIconsThinMZIkonHandler,
+            BytedanceIconsRegularALIkonHandler,
+            BytedanceIconsRegularMZIkonHandler,
+            BytedanceIconsBoldALIkonHandler,
+            BytedanceIconsBoldMZIkonHandler,
+            BytedanceIconsExtraBoldALIkonHandler,
+            BytedanceIconsExtraBoldMZIkonHandler;
     provides org.kordamp.ikonli.IkonProvider
-            with BytedanceIconsThinALIkonProvider,
-                    BytedanceIconsThinMZIkonProvider,
-                    BytedanceIconsRegularALIkonProvider,
-                    BytedanceIconsRegularMZIkonProvider,
-                    BytedanceIconsBoldALIkonProvider,
-                    BytedanceIconsBoldMZIkonProvider,
-                    BytedanceIconsExtraBoldALIkonProvider,
-                    BytedanceIconsExtraBoldMZIkonProvider;
+        with BytedanceIconsThinALIkonProvider,
+            BytedanceIconsThinMZIkonProvider,
+            BytedanceIconsRegularALIkonProvider,
+            BytedanceIconsRegularMZIkonProvider,
+            BytedanceIconsBoldALIkonProvider,
+            BytedanceIconsBoldMZIkonProvider,
+            BytedanceIconsExtraBoldALIkonProvider,
+            BytedanceIconsExtraBoldMZIkonProvider;
 
 }

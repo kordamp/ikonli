@@ -750,7 +750,7 @@ public enum Material2SharpAL implements Ikon {
     LOW_PRIORITY("mdsal-low_priority", '\ue3db'),
     LOYALTY("mdsal-loyalty", '\ue3dc'),
     LUGGAGE("mdsal-luggage", '\ue8bb');
-    
+
     public static Material2SharpAL findByDescription(String description) {
         for (Material2SharpAL font : values()) {
             if (font.getDescription().equals(description)) {
@@ -760,8 +760,8 @@ public enum Material2SharpAL implements Ikon {
         throw new IllegalArgumentException("Icon description '" + description + "' is invalid!");
     }
 
-    private String description;
-    private int code;
+    private final String description;
+    private final int code;
 
     Material2SharpAL(String description, int code) {
         this.description = description;

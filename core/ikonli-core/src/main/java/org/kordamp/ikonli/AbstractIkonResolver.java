@@ -17,13 +17,13 @@
  */
 package org.kordamp.ikonli;
 
-import static java.util.Objects.requireNonNull;
-
 import java.util.Arrays;
 import java.util.ServiceLoader;
 import java.util.Set;
 import java.util.concurrent.CopyOnWriteArraySet;
 import java.util.logging.Logger;
+
+import static java.util.Objects.requireNonNull;
 
 /**
  * @author Andres Almiray
@@ -85,7 +85,7 @@ public class AbstractIkonResolver implements IkonResolver {
         // Check if handlers must be loaded from a ModuleLayer
         if (null != IkonHandler.class.getModule().getLayer()) {
             ServiceLoader<IkonHandler> ikonHandlerServiceLoaders = ServiceLoader.load(
-                IkonHandler.class.getModule().getLayer(), 
+                IkonHandler.class.getModule().getLayer(),
                 IkonHandler.class
             );
             if (ikonHandlerServiceLoaders.findFirst().isPresent()) {
@@ -94,9 +94,9 @@ public class AbstractIkonResolver implements IkonResolver {
         }
 
         ServiceLoader<IkonHandler> handlers = ServiceLoader.load(
-                IkonHandler.class, 
-                IkonHandler.class.getClassLoader()
-            );
+            IkonHandler.class,
+            IkonHandler.class.getClassLoader()
+        );
         // Return if the IkonHandler.class.classLoader works or if *nothing* else works
         return handlers.findFirst().isPresent() ? handlers : ServiceLoader.load(IkonHandler.class);
     }

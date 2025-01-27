@@ -72,8 +72,8 @@ public enum Linecons implements Ikon {
     VYNIL("li-vynil", '\ue02d'),
     WORLD("li-world", '\ue02f');
 
-    private String description;
-    private int code;
+    private final String description;
+    private final int code;
 
     Linecons(String description, int code) {
         this.description = description;

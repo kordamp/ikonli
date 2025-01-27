@@ -33,8 +33,8 @@ public class AboutDialog {
 
         alert.getDialogPane().getScene()
             .getStylesheets().addAll(
-            IkonBrowser.class.getResource("common.css").toExternalForm(),
-            BootstrapFX.bootstrapFXStylesheet());
+                IkonBrowser.class.getResource("common.css").toExternalForm(),
+                BootstrapFX.bootstrapFXStylesheet());
         alert.getDialogPane().lookupButton(ButtonType.OK)
             .getStyleClass().addAll("btn", "btn-primary");
         alert.getDialogPane().getStyleClass().add("dialog-content");

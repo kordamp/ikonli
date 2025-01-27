@@ -17,14 +17,13 @@
  */
 package org.kordamp.ikonli.javafx;
 
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-
+import javafx.scene.text.Font;
 import org.kordamp.ikonli.FontLoader;
 import org.kordamp.ikonli.IkonHandler;
 import org.osgi.service.component.annotations.Component;
 
-import javafx.scene.text.Font;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 @Component(service = FontLoader.class)
 public class JavaFXFontLoader implements FontLoader {

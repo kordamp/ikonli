@@ -331,8 +331,8 @@ public enum Zondicons implements Ikon {
         throw new IllegalArgumentException("Icon description '" + description + "' is invalid!");
     }
 
-    private String description;
-    private int code;
+    private final String description;
+    private final int code;
 
     Zondicons(String description, int code) {
         this.description = description;

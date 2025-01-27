@@ -212,7 +212,7 @@ public enum UniconsSolid implements Ikon {
     WINDOW_MAXIMIZE("unis-window-maximize", '\ue9ba'),
     WINDOW_SECTION("unis-window-section", '\ue9bb'),
     WRAP_TEXT("unis-wrap-text", '\ue9bc');
-    
+
     public static UniconsSolid findByDescription(String description) {
         for (UniconsSolid font : values()) {
             if (font.getDescription().equals(description)) {
@@ -222,8 +222,8 @@ public enum UniconsSolid implements Ikon {
         throw new IllegalArgumentException("Icon description '" + description + "' is invalid!");
     }
 
-    private String description;
-    private int code;
+    private final String description;
+    private final int code;
 
     UniconsSolid(String description, int code) {
         this.description = description;

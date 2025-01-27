@@ -134,7 +134,7 @@ if (rootProject.javafx_platform == 'mac') {
 } else if (rootProject.javafx_platform == 'win') {
     zuluHome = project.file("${buildDir}/jdks/zulu21Windows/${zuluVersion}-${zuluPlatform}_x64")
 }
-System.properties['badass.jlink.java.home']     = zuluHome.absolutePath
+System.properties['badass.jlink.java.home'] = zuluHome.absolutePath
 System.properties['badass.jlink.jpackage.home'] = zuluHome.absolutePath
 
 jdks {

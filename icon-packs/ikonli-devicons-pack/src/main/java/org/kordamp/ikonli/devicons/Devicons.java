@@ -224,8 +224,8 @@ public enum Devicons implements Ikon {
         throw new IllegalArgumentException("Icon description '" + description + "' is invalid!");
     }
 
-    private String description;
-    private int code;
+    private final String description;
+    private final int code;
 
     Devicons(String description, int code) {
         this.description = description;

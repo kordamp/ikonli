@@ -18,6 +18,7 @@
 package org.kordamp.ikonli.bytedance;
 
 import org.kordamp.ikonli.Ikon;
+
 /**
  * @author LeeWyatt
  */
@@ -1527,8 +1528,8 @@ public enum BytedanceIconsRegularAL implements Ikon {
         throw new IllegalArgumentException("Icon description '" + description + "' is invalid!");
     }
 
-    private String description;
-    private int code;
+    private final String description;
+    private final int code;
 
     BytedanceIconsRegularAL(String description, int code) {
         this.description = description;

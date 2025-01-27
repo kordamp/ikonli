@@ -676,7 +676,7 @@ public enum Material2SharpMZ implements Ikon {
     ZOOM_IN("mdsmz-zoom_in", '\ue741'),
     ZOOM_OUT("mdsmz-zoom_out", '\ue742'),
     ZOOM_OUT_MAP("mdsmz-zoom_out_map", '\ue743');
-    
+
     public static Material2SharpMZ findByDescription(String description) {
         for (Material2SharpMZ font : values()) {
             if (font.getDescription().equals(description)) {
@@ -686,8 +686,8 @@ public enum Material2SharpMZ implements Ikon {
         throw new IllegalArgumentException("Icon description '" + description + "' is invalid!");
     }
 
-    private String description;
-    private int code;
+    private final String description;
+    private final int code;
 
     Material2SharpMZ(String description, int code) {
         this.description = description;

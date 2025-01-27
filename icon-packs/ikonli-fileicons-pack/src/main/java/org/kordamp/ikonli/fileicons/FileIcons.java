@@ -927,7 +927,7 @@ public enum FileIcons implements Ikon {
     ZIMPL("file-zimpl", '\uec8a'),
     ZORINOS("file-zorinos", '\uec8b'),
     ZORK("file-zork", '\uec8c');
-    
+
     public static FileIcons findByDescription(String description) {
         for (FileIcons font : values()) {
             if (font.getDescription().equals(description)) {
@@ -937,8 +937,8 @@ public enum FileIcons implements Ikon {
         throw new IllegalArgumentException("Icon description '" + description + "' is invalid!");
     }
 
-    private String description;
-    private int code;
+    private final String description;
+    private final int code;
 
     FileIcons(String description, int code) {
         this.description = description;

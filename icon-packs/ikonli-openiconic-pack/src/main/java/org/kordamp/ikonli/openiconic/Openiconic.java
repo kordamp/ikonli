@@ -246,7 +246,8 @@ public enum Openiconic implements Ikon {
     X("oi-x", '\ue0db'),
     YEN("oi-yen", '\ue0dc'),
     ZOOM_IN("oi-zoom-in", '\ue0dd'),
-    ZOOM_OUT("oi-zoom-out", '\ue0de'),;
+    ZOOM_OUT("oi-zoom-out", '\ue0de'),
+    ;
 
     public static Openiconic findByDescription(String description) {
         for (Openiconic font : values()) {
@@ -257,8 +258,8 @@ public enum Openiconic implements Ikon {
         throw new IllegalArgumentException("Icon description '" + description + "' is invalid!");
     }
 
-    private String description;
-    private int code;
+    private final String description;
+    private final int code;
 
     Openiconic(String description, int code) {
         this.description = description;

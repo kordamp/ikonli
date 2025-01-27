@@ -1426,11 +1426,11 @@ public enum FluentUiRegularAL implements Ikon {
         throw new IllegalArgumentException("Icon description '" + description + "' is invalid!");
     }
 
-    private String description;
-    private int code;
+    private final String description;
+    private final int code;
 
     FluentUiRegularAL(int code) {
-        this.description = "fltral-"+name().toLowerCase().replace("_","-");
+        this.description = "fltral-" + name().toLowerCase().replace("_", "-");
         this.code = code;
     }
 

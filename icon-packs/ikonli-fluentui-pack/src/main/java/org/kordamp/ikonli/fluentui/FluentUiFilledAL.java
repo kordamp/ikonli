@@ -1429,8 +1429,8 @@ public enum FluentUiFilledAL implements Ikon {
         throw new IllegalArgumentException("Icon description '" + description + "' is invalid!");
     }
 
-    private String description;
-    private int code;
+    private final String description;
+    private final int code;
 
     FluentUiFilledAL(int code) {
         this.description = "fltfal-" + name().toLowerCase().replace("_", "-");

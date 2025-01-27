@@ -19,7 +19,7 @@ apply plugin: 'application'
 
 application {
     mainModule = 'org.kordamp.ikonli.sampler.swing'
-    mainClass  = 'org.kordamp.ikonli.sampler.swing.Sampler'
+    mainClass = 'org.kordamp.ikonli.sampler.swing.Sampler'
 }
 
 dependencies {

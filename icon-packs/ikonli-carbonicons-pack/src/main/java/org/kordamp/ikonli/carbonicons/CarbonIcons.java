@@ -1476,7 +1476,7 @@ public enum CarbonIcons implements Ikon {
     ZOOM_PAN("ci-zoom-pan", '\ueee5'),
     ZOOM_RESET("ci-zoom-reset", '\ueee6'),
     Z_AXIS("ci-z-axis", '\ueedf');
-    
+
     public static CarbonIcons findByDescription(String description) {
         for (CarbonIcons font : values()) {
             if (font.getDescription().equals(description)) {
@@ -1486,8 +1486,8 @@ public enum CarbonIcons implements Ikon {
         throw new IllegalArgumentException("Icon description '" + description + "' is invalid!");
     }
 
-    private String description;
-    private int code;
+    private final String description;
+    private final int code;
 
     CarbonIcons(String description, int code) {
         this.description = description;

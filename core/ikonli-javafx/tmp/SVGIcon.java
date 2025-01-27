@@ -286,9 +286,15 @@ public class SVGIcon extends Region implements Icon {
     }
 
     private static Paint resolvePaintValue(String iconCode, String value) {
-        try { return Color.valueOf(value); } catch (IllegalArgumentException e1) {
-            try { return LinearGradient.valueOf(value); } catch (IllegalArgumentException e2) {
-                try { return RadialGradient.valueOf(value); } catch (IllegalArgumentException e3) {
+        try {
+            return Color.valueOf(value);
+        } catch (IllegalArgumentException e1) {
+            try {
+                return LinearGradient.valueOf(value);
+            } catch (IllegalArgumentException e2) {
+                try {
+                    return RadialGradient.valueOf(value);
+                } catch (IllegalArgumentException e3) {
                     throw invalidDescription(iconCode, e3);
                 }
             }

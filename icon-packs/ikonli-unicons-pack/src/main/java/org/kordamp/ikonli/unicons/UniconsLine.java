@@ -1209,7 +1209,7 @@ public enum UniconsLine implements Ikon {
     YEN_CIRCLE("unil-yen-circle", '\ued9e'),
     YIN_YANG("unil-yin-yang", '\ueda0'),
     YOUTUBE("unil-youtube", '\ueda1');
-    
+
     public static UniconsLine findByDescription(String description) {
         for (UniconsLine font : values()) {
             if (font.getDescription().equals(description)) {
@@ -1219,8 +1219,8 @@ public enum UniconsLine implements Ikon {
         throw new IllegalArgumentException("Icon description '" + description + "' is invalid!");
     }
 
-    private String description;
-    private int code;
+    private final String description;
+    private final int code;
 
     UniconsLine(String description, int code) {
         this.description = description;
