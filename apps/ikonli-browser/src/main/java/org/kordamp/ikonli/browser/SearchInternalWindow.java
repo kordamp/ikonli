@@ -17,27 +17,6 @@
  */
 package org.kordamp.ikonli.browser;
 
-import static java.util.EnumSet.allOf;
-import static java.util.Objects.requireNonNull;
-import static javafx.collections.FXCollections.observableArrayList;
-
-import org.kordamp.desktoppanefx.scene.layout.DesktopPane;
-import org.kordamp.desktoppanefx.scene.layout.InternalWindow;
-import org.kordamp.ikonli.Ikon;
-import org.kordamp.ikonli.IkonProvider;
-import org.kordamp.ikonli.boxicons.BoxiconsRegular;
-import org.kordamp.ikonli.browser.internal.JavaFXThreadProxyObservableList;
-import org.kordamp.ikonli.javafx.FontIcon;
-import org.tbee.javafx.scene.layout.MigPane;
-
-import java.util.ArrayList;
-import java.util.EnumSet;
-import java.util.List;
-import java.util.Optional;
-import java.util.ServiceLoader;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-
 import eu.hansolo.tilesfx.tools.FlowGridPane;
 import javafx.application.Platform;
 import javafx.beans.binding.Bindings;
@@ -64,6 +43,26 @@ import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.CornerRadii;
 import javafx.scene.paint.Color;
+import org.kordamp.desktoppanefx.scene.layout.DesktopPane;
+import org.kordamp.desktoppanefx.scene.layout.InternalWindow;
+import org.kordamp.ikonli.Ikon;
+import org.kordamp.ikonli.IkonProvider;
+import org.kordamp.ikonli.boxicons.BoxiconsRegular;
+import org.kordamp.ikonli.browser.internal.JavaFXThreadProxyObservableList;
+import org.kordamp.ikonli.javafx.FontIcon;
+import org.tbee.javafx.scene.layout.MigPane;
+
+import java.util.ArrayList;
+import java.util.EnumSet;
+import java.util.List;
+import java.util.Optional;
+import java.util.ServiceLoader;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+import static java.util.EnumSet.allOf;
+import static java.util.Objects.requireNonNull;
+import static javafx.collections.FXCollections.observableArrayList;
 
 /**
  * @author Andres Almiray
