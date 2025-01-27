@@ -19,11 +19,13 @@ package org.kordamp.ikonli.mapicons;
 
 import org.kordamp.ikonli.IkonProvider;
 import org.kordamp.jipsy.annotations.ServiceProviderFor;
+import org.osgi.service.component.annotations.Component;
 
 /**
  * @author Andres Almiray
  */
 @ServiceProviderFor(IkonProvider.class)
+@Component(service = IkonProvider.class)
 public class MapiconsIkonProvider implements IkonProvider<Mapicons> {
     @Override
     public Class<Mapicons> getIkon() {

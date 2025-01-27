@@ -18,7 +18,8 @@
 module org.kordamp.ikonli.swing {
     exports org.kordamp.ikonli.swing;
 
-    requires org.kordamp.ikonli.core;
+    requires transitive org.kordamp.ikonli.core;
 
     requires java.desktop;
+    requires static org.osgi.service.component.annotations;
 }

@@ -19,11 +19,13 @@ package org.kordamp.ikonli.fluentui;
 
 import org.kordamp.ikonli.IkonProvider;
 import org.kordamp.jipsy.annotations.ServiceProviderFor;
+import org.osgi.service.component.annotations.Component;
 
 /**
  * @author Andres Almiray
  */
 @ServiceProviderFor(IkonProvider.class)
+@Component(service = IkonProvider.class)
 public class FluentUiRegularALIkonProvider implements IkonProvider<FluentUiRegularAL> {
     @Override
     public Class<FluentUiRegularAL> getIkon() {

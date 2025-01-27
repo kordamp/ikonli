@@ -21,6 +21,7 @@ import org.kordamp.ikonli.AbstractIkonHandler;
 import org.kordamp.ikonli.Ikon;
 import org.kordamp.ikonli.IkonHandler;
 import org.kordamp.jipsy.annotations.ServiceProviderFor;
+import org.osgi.service.component.annotations.Component;
 
 import java.io.InputStream;
 import java.net.URL;
@@ -29,6 +30,7 @@ import java.net.URL;
  * @author Andres Almiray
  */
 @ServiceProviderFor(IkonHandler.class)
+@Component(service = IkonHandler.class)
 public class FontAwesomeRegularIkonHandler extends AbstractIkonHandler {
     private static final String FONT_RESOURCE = "/META-INF/resources/fontawesome6/6.5.2/fonts/fa-regular-400.ttf";
 
@@ -54,6 +56,6 @@ public class FontAwesomeRegularIkonHandler extends AbstractIkonHandler {
 
     @Override
     public String getFontFamily() {
-        return "Font Awesome 5 Free Regular";
+        return "Font Awesome 6 Free Regular";
     }
 }

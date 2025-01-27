@@ -18,8 +18,9 @@
 module org.kordamp.ikonli.whhg {
     requires org.kordamp.ikonli.core;
     requires static org.kordamp.jipsy.annotations;
+	requires static org.osgi.service.component.annotations;
     exports org.kordamp.ikonli.whhg;
-
+    
     provides org.kordamp.ikonli.IkonHandler
         with org.kordamp.ikonli.whhg.WhhgALIkonHandler,
             org.kordamp.ikonli.whhg.WhhgMZIkonHandler;

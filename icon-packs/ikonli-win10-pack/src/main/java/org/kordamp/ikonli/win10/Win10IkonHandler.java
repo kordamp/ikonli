@@ -21,6 +21,7 @@ import org.kordamp.ikonli.AbstractIkonHandler;
 import org.kordamp.ikonli.Ikon;
 import org.kordamp.ikonli.IkonHandler;
 import org.kordamp.jipsy.annotations.ServiceProviderFor;
+import org.osgi.service.component.annotations.Component;
 
 import java.io.InputStream;
 import java.net.URL;
@@ -29,6 +30,7 @@ import java.net.URL;
  * @author Andres Almiray
  */
 @ServiceProviderFor(IkonHandler.class)
+@Component(service = IkonHandler.class)
 public class Win10IkonHandler extends AbstractIkonHandler {
     private static final String FONT_RESOURCE = "/META-INF/resources/win10/1.0.1/fonts/icons8-win10.ttf";
 

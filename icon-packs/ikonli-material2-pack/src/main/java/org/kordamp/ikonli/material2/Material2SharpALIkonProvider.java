@@ -19,11 +19,13 @@ package org.kordamp.ikonli.material2;
 
 import org.kordamp.ikonli.IkonProvider;
 import org.kordamp.jipsy.annotations.ServiceProviderFor;
+import org.osgi.service.component.annotations.Component;
 
 /**
  * @author Andres Almiray
  */
 @ServiceProviderFor(IkonProvider.class)
+@Component(service = IkonProvider.class)
 public class Material2SharpALIkonProvider implements IkonProvider<Material2SharpAL> {
     @Override
     public Class<Material2SharpAL> getIkon() {

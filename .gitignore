@@ -15,3 +15,5 @@ jdks
 .bach/workspace
 .bach/external-tools
 .bach/external-modules
+bin
+.settings

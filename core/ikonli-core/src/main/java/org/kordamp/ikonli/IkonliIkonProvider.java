@@ -18,11 +18,13 @@
 package org.kordamp.ikonli;
 
 import org.kordamp.jipsy.annotations.ServiceProviderFor;
+import org.osgi.service.component.annotations.Component;
 
 /**
  * @author Andres Almiray
  */
 @ServiceProviderFor(IkonProvider.class)
+@Component(service = IkonProvider.class)
 public class IkonliIkonProvider implements IkonProvider<Ikonli> {
     @Override
     public Class<Ikonli> getIkon() {
