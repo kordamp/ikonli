@@ -24,8 +24,9 @@ import org.osgi.service.component.annotations.Component;
 /**
  * @author Andres Almiray
  */
-@ServiceProviderFor(IkonProvider.class)
-@Component(service = IkonProvider.class)
+@org.kordamp.jipsy.annotations.ServiceProviderFor(IkonProvider.class)
+@org.osgi.service.component.annotations.Component(service = IkonProvider.class)
+@org.kordamp.ikonli.infra.nativeimage.annotations.NativeImage
 public class CaptainiconIkonProvider implements IkonProvider<Captainicon> {
     @Override
     public Class<Captainicon> getIkon() {

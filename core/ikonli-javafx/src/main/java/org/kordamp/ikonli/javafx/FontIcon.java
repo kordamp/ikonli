@@ -47,6 +47,7 @@ import static java.util.Objects.requireNonNull;
 /**
  * @author Andres Almiray
  */
+@org.kordamp.ikonli.infra.nativeimage.annotations.NativeImage
 public class FontIcon extends Text implements Icon {
     private static final double EPSILON = 0.000001d;
     protected StyleableIntegerProperty iconSize;

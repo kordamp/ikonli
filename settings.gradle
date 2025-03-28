@@ -48,7 +48,7 @@ apply plugin: 'org.kordamp.gradle.kordamp-parentbuild'
 rootProject.name = 'ikonli'
 
 projects {
-    directories = ['docs', 'core', 'icon-packs', 'apps']
+    directories = ['docs', 'core', 'icon-packs', 'apps', 'infra']
 
     plugins {
         all {
@@ -57,7 +57,7 @@ projects {
         path(':') {
             id 'org.kordamp.gradle.java-project'
         }
-        dirs(['apps']) {
+        dirs(['apps', 'infra']) {
             id 'java-library'
         }
         dirs(['core', 'icon-packs']) {

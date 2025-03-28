@@ -24,8 +24,8 @@ import org.osgi.service.component.annotations.Component;
 /**
  * @author LeeWyatt
  */
-@ServiceProviderFor(IkonProvider.class)
-@Component(service = IkonProvider.class)
+@org.kordamp.jipsy.annotations.ServiceProviderFor(IkonProvider.class)
+@org.osgi.service.component.annotations.Component(service = IkonProvider.class)
 public class BytedanceIconsThinMZIkonProvider implements IkonProvider<BytedanceIconsThinMZ> {
     @Override
     public Class<BytedanceIconsThinMZ> getIkon() {

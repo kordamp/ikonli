@@ -19,6 +19,7 @@ module org.kordamp.ikonli.unicons {
     requires org.kordamp.ikonli.core;
     requires static org.kordamp.jipsy.annotations;
     requires static org.osgi.service.component.annotations;
+    requires static org.kordamp.ikonli.infra.nativeimage.annotations;
     exports org.kordamp.ikonli.unicons;
 
     provides org.kordamp.ikonli.IkonHandler

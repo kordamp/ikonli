@@ -22,4 +22,5 @@ module org.kordamp.ikonli.swing {
 
     requires java.desktop;
     requires static org.osgi.service.component.annotations;
+    requires static org.kordamp.ikonli.infra.nativeimage.annotations;
 }

@@ -19,7 +19,6 @@ package org.kordamp.ikonli.swing;
 
 import org.kordamp.ikonli.FontLoader;
 import org.kordamp.ikonli.IkonHandler;
-import org.osgi.service.component.annotations.Component;
 
 import java.awt.Font;
 import java.awt.FontFormatException;
@@ -29,7 +28,7 @@ import java.io.InputStream;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-@Component(service = FontLoader.class)
+@org.osgi.service.component.annotations.Component(service = FontLoader.class)
 public class SwingFontLoader implements FontLoader {
     private static final Map<String, Font> FONTS = new ConcurrentHashMap<>();
 

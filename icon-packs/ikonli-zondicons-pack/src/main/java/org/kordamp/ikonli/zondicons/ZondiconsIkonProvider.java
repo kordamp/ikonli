@@ -18,14 +18,13 @@
 package org.kordamp.ikonli.zondicons;
 
 import org.kordamp.ikonli.IkonProvider;
-import org.kordamp.jipsy.annotations.ServiceProviderFor;
-import org.osgi.service.component.annotations.Component;
 
 /**
  * @author Andres Almiray
  */
-@ServiceProviderFor(IkonProvider.class)
-@Component(service = IkonProvider.class)
+@org.kordamp.jipsy.annotations.ServiceProviderFor(IkonProvider.class)
+@org.osgi.service.component.annotations.Component(service = IkonProvider.class)
+@org.kordamp.ikonli.infra.nativeimage.annotations.NativeImage
 public class ZondiconsIkonProvider implements IkonProvider<Zondicons> {
     @Override
     public Class<Zondicons> getIkon() {

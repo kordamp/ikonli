@@ -37,6 +37,7 @@ import static java.util.Objects.requireNonNull;
 /**
  * @author Andres Almiray
  */
+@org.kordamp.ikonli.infra.nativeimage.annotations.NativeImage
 public class FontIcon implements Icon {
     private static final Object LOCK = new Object[0];
 

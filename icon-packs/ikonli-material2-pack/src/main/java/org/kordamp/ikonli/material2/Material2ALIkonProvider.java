@@ -24,8 +24,9 @@ import org.osgi.service.component.annotations.Component;
 /**
  * @author Andres Almiray
  */
-@ServiceProviderFor(IkonProvider.class)
-@Component(service = IkonProvider.class)
+@org.kordamp.jipsy.annotations.ServiceProviderFor(IkonProvider.class)
+@org.osgi.service.component.annotations.Component(service = IkonProvider.class)
+@org.kordamp.ikonli.infra.nativeimage.annotations.NativeImage
 public class Material2ALIkonProvider implements IkonProvider<Material2AL> {
     @Override
     public Class<Material2AL> getIkon() {

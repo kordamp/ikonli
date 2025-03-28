@@ -24,8 +24,8 @@ import org.osgi.service.component.annotations.Component;
 /**
  * @author Andres Almiray
  */
-@ServiceProviderFor(IkonProvider.class)
-@Component(service = IkonProvider.class)
+@org.kordamp.jipsy.annotations.ServiceProviderFor(IkonProvider.class)
+@org.osgi.service.component.annotations.Component(service = IkonProvider.class)
 public class Material2SharpMZIkonProvider implements IkonProvider<Material2SharpMZ> {
     @Override
     public Class<Material2SharpMZ> getIkon() {

@@ -23,6 +23,8 @@ import org.kordamp.ikonli.IkonProvider;
  * @author Andres Almiray
  */
 @org.kordamp.jipsy.annotations.ServiceProviderFor(IkonProvider.class)
+@org.osgi.service.component.annotations.Component(service = IkonProvider.class)
+@org.kordamp.ikonli.infra.nativeimage.annotations.NativeImage
 public class BootstrapIconsIkonProvider implements IkonProvider<BootstrapIcons> {
     @Override
     public Class<BootstrapIcons> getIkon() {

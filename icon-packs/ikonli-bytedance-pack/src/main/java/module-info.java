@@ -16,23 +16,6 @@
  * limitations under the License.
  */
 
-import org.kordamp.ikonli.bytedance.BytedanceIconsBoldALIkonHandler;
-import org.kordamp.ikonli.bytedance.BytedanceIconsBoldALIkonProvider;
-import org.kordamp.ikonli.bytedance.BytedanceIconsBoldMZIkonHandler;
-import org.kordamp.ikonli.bytedance.BytedanceIconsBoldMZIkonProvider;
-import org.kordamp.ikonli.bytedance.BytedanceIconsExtraBoldALIkonHandler;
-import org.kordamp.ikonli.bytedance.BytedanceIconsExtraBoldALIkonProvider;
-import org.kordamp.ikonli.bytedance.BytedanceIconsExtraBoldMZIkonHandler;
-import org.kordamp.ikonli.bytedance.BytedanceIconsExtraBoldMZIkonProvider;
-import org.kordamp.ikonli.bytedance.BytedanceIconsRegularALIkonHandler;
-import org.kordamp.ikonli.bytedance.BytedanceIconsRegularALIkonProvider;
-import org.kordamp.ikonli.bytedance.BytedanceIconsRegularMZIkonHandler;
-import org.kordamp.ikonli.bytedance.BytedanceIconsRegularMZIkonProvider;
-import org.kordamp.ikonli.bytedance.BytedanceIconsThinALIkonHandler;
-import org.kordamp.ikonli.bytedance.BytedanceIconsThinALIkonProvider;
-import org.kordamp.ikonli.bytedance.BytedanceIconsThinMZIkonHandler;
-import org.kordamp.ikonli.bytedance.BytedanceIconsThinMZIkonProvider;
-
 /*
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -54,25 +37,25 @@ module org.kordamp.ikonli.bytedance {
     requires org.kordamp.ikonli.core;
     requires static org.kordamp.jipsy.annotations;
     requires static org.osgi.service.component.annotations;
+    requires static org.kordamp.ikonli.infra.nativeimage.annotations;
     exports org.kordamp.ikonli.bytedance;
 
     provides org.kordamp.ikonli.IkonHandler
-        with BytedanceIconsThinALIkonHandler,
-            BytedanceIconsThinMZIkonHandler,
-            BytedanceIconsRegularALIkonHandler,
-            BytedanceIconsRegularMZIkonHandler,
-            BytedanceIconsBoldALIkonHandler,
-            BytedanceIconsBoldMZIkonHandler,
-            BytedanceIconsExtraBoldALIkonHandler,
-            BytedanceIconsExtraBoldMZIkonHandler;
+        with org.kordamp.ikonli.bytedance.BytedanceIconsThinALIkonHandler,
+            org.kordamp.ikonli.bytedance.BytedanceIconsThinMZIkonHandler,
+            org.kordamp.ikonli.bytedance.BytedanceIconsRegularALIkonHandler,
+            org.kordamp.ikonli.bytedance.BytedanceIconsRegularMZIkonHandler,
+            org.kordamp.ikonli.bytedance.BytedanceIconsBoldALIkonHandler,
+            org.kordamp.ikonli.bytedance.BytedanceIconsBoldMZIkonHandler,
+            org.kordamp.ikonli.bytedance.BytedanceIconsExtraBoldALIkonHandler,
+            org.kordamp.ikonli.bytedance.BytedanceIconsExtraBoldMZIkonHandler;
     provides org.kordamp.ikonli.IkonProvider
-        with BytedanceIconsThinALIkonProvider,
-            BytedanceIconsThinMZIkonProvider,
-            BytedanceIconsRegularALIkonProvider,
-            BytedanceIconsRegularMZIkonProvider,
-            BytedanceIconsBoldALIkonProvider,
-            BytedanceIconsBoldMZIkonProvider,
-            BytedanceIconsExtraBoldALIkonProvider,
-            BytedanceIconsExtraBoldMZIkonProvider;
-
+        with org.kordamp.ikonli.bytedance.BytedanceIconsThinALIkonProvider,
+            org.kordamp.ikonli.bytedance.BytedanceIconsThinMZIkonProvider,
+            org.kordamp.ikonli.bytedance.BytedanceIconsRegularALIkonProvider,
+            org.kordamp.ikonli.bytedance.BytedanceIconsRegularMZIkonProvider,
+            org.kordamp.ikonli.bytedance.BytedanceIconsBoldALIkonProvider,
+            org.kordamp.ikonli.bytedance.BytedanceIconsBoldMZIkonProvider,
+            org.kordamp.ikonli.bytedance.BytedanceIconsExtraBoldALIkonProvider,
+            org.kordamp.ikonli.bytedance.BytedanceIconsExtraBoldMZIkonProvider;
 }

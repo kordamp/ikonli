@@ -119,6 +119,9 @@ subprojects { subproj ->
             compileOnly 'org.osgi:osgi.core:8.0.0'
             compileOnly 'org.osgi:org.osgi.service.component.annotations:1.5.1'
             testImplementation 'junit:junit:4.13.2'
+
+            compileOnly project(':ikonli-nativeimage-annotations')
+            annotationProcessor project(':ikonli-nativeimage-processor')
         }
     }
 

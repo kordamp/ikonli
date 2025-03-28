@@ -18,14 +18,12 @@
 package org.kordamp.ikonli.antdesignicons;
 
 import org.kordamp.ikonli.IkonProvider;
-import org.kordamp.jipsy.annotations.ServiceProviderFor;
-import org.osgi.service.component.annotations.Component;
 
 /**
  * @author Andres Almiray
  */
-@ServiceProviderFor(IkonProvider.class)
-@Component(service = IkonProvider.class)
+@org.kordamp.jipsy.annotations.ServiceProviderFor(IkonProvider.class)
+@org.osgi.service.component.annotations.Component(service = IkonProvider.class)
 public class AntDesignIconsOutlinedIkonProvider implements IkonProvider<AntDesignIconsOutlined> {
     @Override
     public Class<AntDesignIconsOutlined> getIkon() {

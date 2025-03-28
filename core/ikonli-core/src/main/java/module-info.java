@@ -21,6 +21,7 @@ module org.kordamp.ikonli.core {
     requires java.logging;
     requires static org.osgi.service.component.annotations;
     requires static osgi.core;
+    requires static org.kordamp.ikonli.infra.nativeimage.annotations;
 
     uses org.kordamp.ikonli.IkonHandler;
 
