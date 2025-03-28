@@ -17,7 +17,6 @@
  */
 plugins {
     id 'com.google.osdetector'
-	id 'biz.aQute.bnd.builder'
 }
 
 ext.javafx_platform = osdetector.os == 'osx' ? 'mac' : osdetector.os == 'windows' ? 'win' : osdetector.os
@@ -49,10 +48,6 @@ config {
     }
 }
 
-allprojects {
-    apply plugin: 'idea'
-}
-
 idea {
     project {
         jdkName '11'
@@ -78,9 +73,27 @@ idea {
 
 subprojects { subproj ->
     if (!subproj.name.contains('guide') && !subproj.name.contains('bom')) {
-        apply plugin: 'java-library'
-        apply plugin: 'biz.aQute.bnd.builder'  // Apply BND to subprojects
+        tasks.named('compileJava') {
+            options.javaModuleVersion = provider { project.version }
+        }
 
+        license {
+            mapping {
+                fxml = 'XML_STYLE'
+            }
+            exclude '**/*.ttf'
+            exclude '**/*.eot'
+            exclude '**/*.svg'
+            exclude '**/*.otf'
+            exclude '**/*.woff'
+            exclude '**/*.woff2'
+            exclude '**/*.css'
+            exclude '**/*.md'
+            exclude '**/*.txt'
+        }
+    }
+
+    if (subproj.projectDir.parentFile.name.contains('core') || subproj.name.endsWith('-pack')) {
         jar {
             bundle {
                 bnd '''
@@ -100,30 +113,11 @@ subprojects { subproj ->
                     '''
             }
         }
-		
+
         dependencies {
-        	compileOnly 'org.osgi:osgi.core:8.0.0'
-        	compileOnly 'org.osgi:org.osgi.service.component.annotations:1.5.1'
+            compileOnly 'org.osgi:osgi.core:8.0.0'
+            compileOnly 'org.osgi:org.osgi.service.component.annotations:1.5.1'
             testImplementation 'junit:junit:4.13.2'
-        }
-
-        tasks.named('compileJava') {
-            options.javaModuleVersion = provider { project.version }
-        }
-
-        license {
-            mapping {
-                fxml = 'XML_STYLE'
-            }
-            exclude '**/*.ttf'
-            exclude '**/*.eot'
-            exclude '**/*.svg'
-            exclude '**/*.otf'
-            exclude '**/*.woff'
-            exclude '**/*.woff2'
-            exclude '**/*.css'
-            exclude '**/*.md'
-            exclude '**/*.txt'
         }
     }
 
@@ -165,3 +159,52 @@ project.rootProject.gradle.addBuildListener(new BuildAdapter() {
             }
     }
 })
+
+profiles {
+    profile('sbom') {
+        activation {
+            property {
+                key   = 'sbom'
+                value = true
+            }
+        }
+        action {
+            println 'SBOM generation is turned ON'
+
+            gradleProjects {
+                subprojects {
+                    dirs(['core', 'icon-packs']) {
+                        cyclonedxBom {
+                            includeConfigs = ['runtimeClasspath']
+                            projectType = 'library'
+                            outputName = "${project.name}-${project.version}-cyclonedx".toString()
+                            destination = file('build/reports/cyclonedx')
+                            includeLicenseText = false
+
+                            def lic = new org.cyclonedx.model.License()
+                            lic.setId('Apache-2.0')
+                            lic.setUrl('https://www.apache.org/licenses/LICENSE-2.0')
+                            def attachmentText = new org.cyclonedx.model.AttachmentText()
+                            attachmentText.setText('')
+                            lic.setLicenseText(attachmentText)
+                            licenseChoice { lc ->
+                                lc.addLicense(lic)
+                            }
+                        }
+
+                        publishing {
+                            publications {
+                                main(MavenPublication) {
+                                    artifact classifier: 'cyclonedx', source: new File(cyclonedxBom.destination.get(), cyclonedxBom.outputName.get() + '.xml')
+                                    artifact classifier: 'cyclonedx', source: new File(cyclonedxBom.destination.get(), cyclonedxBom.outputName.get() + '.json')
+                                }
+                            }
+                        }
+
+                        project.generatePomFileForMainPublication.dependsOn(cyclonedxBom)
+                    }
+                }
+            }
+        }
+    }
+}

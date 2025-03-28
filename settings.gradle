@@ -28,7 +28,6 @@ pluginManagement {
         id 'com.google.osdetector'      version osPluginVersion
         id 'org.beryx.jlink'            version jlinkPluginVersion
         id 'org.jreleaser.jdks'         version jreleaserPluginVersion
-        id 'biz.aQute.bnd.builder' 		version bndPluginVersion
     }
 }
 
@@ -40,6 +39,8 @@ buildscript {
     }
     dependencies {
         classpath "org.kordamp.gradle:kordamp-parentbuild:$kordampBuildVersion"
+        classpath "org.cyclonedx:cyclonedx-gradle-plugin:$cyclonedxPluginVersion"
+        classpath "biz.aQute.bnd.builder:biz.aQute.bnd.builder.gradle.plugin:$bndPluginVersion"
     }
 }
 apply plugin: 'org.kordamp.gradle.kordamp-parentbuild'
@@ -48,6 +49,23 @@ rootProject.name = 'ikonli'
 
 projects {
     directories = ['docs', 'core', 'icon-packs', 'apps']
+
+    plugins {
+        all {
+            id 'idea'
+        }
+        path(':') {
+            id 'org.kordamp.gradle.java-project'
+        }
+        dirs(['apps']) {
+            id 'java-library'
+        }
+        dirs(['core', 'icon-packs']) {
+            id 'java-library'
+            id 'biz.aQute.bnd.builder'
+            id 'org.cyclonedx.bom'
+        }
+    }
 }
 
 enforce {
