@@ -75,6 +75,7 @@ subprojects { subproj ->
     if (!subproj.name.contains('guide') && !subproj.name.contains('bom')) {
         tasks.named('compileJava') {
             options.javaModuleVersion = provider { project.version }
+            options.release = Integer.parseInt(subproj.rootProject.findProperty('targetCompatibility'))
         }
 
         license {
