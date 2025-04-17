@@ -24,8 +24,6 @@ import org.kordamp.ikonli.Ikon;
  */
 public enum MaterialDesignX implements Ikon {
     XAMARIN("mdi2x-xamarin", "F0845"),
-    XAMARIN_OUTLINE("mdi2x-xamarin-outline", "F0846"),
-    XING("mdi2x-xing", "F05BE"),
     XML("mdi2x-xml", "F05C0"),
     XMPP("mdi2x-xmpp", "F07FF");
 
@@ -38,8 +36,8 @@ public enum MaterialDesignX implements Ikon {
         throw new IllegalArgumentException("Icon description '" + description + "' is invalid!");
     }
 
-    private String description;
-    private int code;
+    private final String description;
+    private final int code;
 
     MaterialDesignX(String description, String code) {
         this.description = description;

@@ -23,6 +23,8 @@ import org.kordamp.ikonli.Ikon;
  * @author Andres Almiray
  */
 public enum MaterialDesignV implements Ikon {
+    VACUUM("mdi2v-vacuum", "F19A1"),
+    VACUUM_OUTLINE("mdi2v-vacuum-outline", "F19A2"),
     VALVE("mdi2v-valve", "F1066"),
     VALVE_CLOSED("mdi2v-valve-closed", "F1067"),
     VALVE_OPEN("mdi2v-valve-open", "F1068"),
@@ -47,8 +49,13 @@ public enum MaterialDesignV implements Ikon {
     VECTOR_INTERSECTION("mdi2v-vector-intersection", "F055D"),
     VECTOR_LINE("mdi2v-vector-line", "F055E"),
     VECTOR_LINK("mdi2v-vector-link", "F0FE8"),
-    VECTOR_POINT("mdi2v-vector-point", "F055F"),
+    VECTOR_POINT("mdi2v-vector-point", "F01C4"),
+    VECTOR_POINT_EDIT("mdi2v-vector-point-edit", "F09E8"),
+    VECTOR_POINT_MINUS("mdi2v-vector-point-minus", "F1B78"),
+    VECTOR_POINT_PLUS("mdi2v-vector-point-plus", "F1B79"),
+    VECTOR_POINT_SELECT("mdi2v-vector-point-select", "F055F"),
     VECTOR_POLYGON("mdi2v-vector-polygon", "F0560"),
+    VECTOR_POLYGON_VARIANT("mdi2v-vector-polygon-variant", "F1856"),
     VECTOR_POLYLINE("mdi2v-vector-polyline", "F0561"),
     VECTOR_POLYLINE_EDIT("mdi2v-vector-polyline-edit", "F1225"),
     VECTOR_POLYLINE_MINUS("mdi2v-vector-polyline-minus", "F1226"),
@@ -58,12 +65,19 @@ public enum MaterialDesignV implements Ikon {
     VECTOR_RECTANGLE("mdi2v-vector-rectangle", "F05C6"),
     VECTOR_SELECTION("mdi2v-vector-selection", "F0562"),
     VECTOR_SQUARE("mdi2v-vector-square", "F0001"),
+    VECTOR_SQUARE_CLOSE("mdi2v-vector-square-close", "F1857"),
+    VECTOR_SQUARE_EDIT("mdi2v-vector-square-edit", "F18D9"),
+    VECTOR_SQUARE_MINUS("mdi2v-vector-square-minus", "F18DA"),
+    VECTOR_SQUARE_OPEN("mdi2v-vector-square-open", "F1858"),
+    VECTOR_SQUARE_PLUS("mdi2v-vector-square-plus", "F18DB"),
+    VECTOR_SQUARE_REMOVE("mdi2v-vector-square-remove", "F18DC"),
     VECTOR_TRIANGLE("mdi2v-vector-triangle", "F0563"),
     VECTOR_UNION("mdi2v-vector-union", "F0564"),
     VHS("mdi2v-vhs", "F0A1B"),
     VIBRATE("mdi2v-vibrate", "F0566"),
     VIBRATE_OFF("mdi2v-vibrate-off", "F0CD9"),
     VIDEO("mdi2v-video", "F0567"),
+    VIDEO_2D("mdi2v-video-2d", "F1A1C"),
     VIDEO_3D("mdi2v-video-3d", "F07FD"),
     VIDEO_3D_OFF("mdi2v-video-3d-off", "F13D9"),
     VIDEO_3D_VARIANT("mdi2v-video-3d-variant", "F0ED1"),
@@ -80,6 +94,8 @@ public enum MaterialDesignV implements Ikon {
     VIDEO_INPUT_HDMI("mdi2v-video-input-hdmi", "F0841"),
     VIDEO_INPUT_SCART("mdi2v-video-input-scart", "F0F8C"),
     VIDEO_INPUT_SVIDEO("mdi2v-video-input-svideo", "F0842"),
+    VIDEO_MARKER("mdi2v-video-marker", "F19A9"),
+    VIDEO_MARKER_OUTLINE("mdi2v-video-marker-outline", "F19AA"),
     VIDEO_MINUS("mdi2v-video-minus", "F09B2"),
     VIDEO_MINUS_OUTLINE("mdi2v-video-minus-outline", "F02BA"),
     VIDEO_OFF("mdi2v-video-off", "F0568"),
@@ -88,6 +104,7 @@ public enum MaterialDesignV implements Ikon {
     VIDEO_PLUS("mdi2v-video-plus", "F09B3"),
     VIDEO_PLUS_OUTLINE("mdi2v-video-plus-outline", "F01D3"),
     VIDEO_STABILIZATION("mdi2v-video-stabilization", "F091B"),
+    VIDEO_STANDARD_DEFINITION("mdi2v-video-standard-definition", "F1CA0"),
     VIDEO_SWITCH("mdi2v-video-switch", "F0569"),
     VIDEO_SWITCH_OUTLINE("mdi2v-video-switch-outline", "F0790"),
     VIDEO_VINTAGE("mdi2v-video-vintage", "F0A1C"),
@@ -106,12 +123,17 @@ public enum MaterialDesignV implements Ikon {
     VIEW_COMPACT("mdi2v-view-compact", "F0E6B"),
     VIEW_COMPACT_OUTLINE("mdi2v-view-compact-outline", "F0E6C"),
     VIEW_DASHBOARD("mdi2v-view-dashboard", "F056E"),
+    VIEW_DASHBOARD_EDIT("mdi2v-view-dashboard-edit", "F1947"),
+    VIEW_DASHBOARD_EDIT_OUTLINE("mdi2v-view-dashboard-edit-outline", "F1948"),
     VIEW_DASHBOARD_OUTLINE("mdi2v-view-dashboard-outline", "F0A1D"),
     VIEW_DASHBOARD_VARIANT("mdi2v-view-dashboard-variant", "F0843"),
     VIEW_DASHBOARD_VARIANT_OUTLINE("mdi2v-view-dashboard-variant-outline", "F1489"),
     VIEW_DAY("mdi2v-view-day", "F056F"),
     VIEW_DAY_OUTLINE("mdi2v-view-day-outline", "F148A"),
+    VIEW_GALLERY("mdi2v-view-gallery", "F1888"),
+    VIEW_GALLERY_OUTLINE("mdi2v-view-gallery-outline", "F1889"),
     VIEW_GRID("mdi2v-view-grid", "F0570"),
+    VIEW_GRID_COMPACT("mdi2v-view-grid-compact", "F1C61"),
     VIEW_GRID_OUTLINE("mdi2v-view-grid-outline", "F11D9"),
     VIEW_GRID_PLUS("mdi2v-view-grid-plus", "F0F8D"),
     VIEW_GRID_PLUS_OUTLINE("mdi2v-view-grid-plus-outline", "F11DA"),
@@ -136,12 +158,15 @@ public enum MaterialDesignV implements Ikon {
     VIOLIN("mdi2v-violin", "F060F"),
     VIRTUAL_REALITY("mdi2v-virtual-reality", "F0894"),
     VIRUS("mdi2v-virus", "F13B6"),
+    VIRUS_OFF("mdi2v-virus-off", "F18E1"),
+    VIRUS_OFF_OUTLINE("mdi2v-virus-off-outline", "F18E2"),
     VIRUS_OUTLINE("mdi2v-virus-outline", "F13B7"),
-    VK("mdi2v-vk", "F0579"),
     VLC("mdi2v-vlc", "F057C"),
-    VOICE_OFF("mdi2v-voice-off", "F0ED4"),
     VOICEMAIL("mdi2v-voicemail", "F057D"),
+    VOLCANO("mdi2v-volcano", "F1A83"),
+    VOLCANO_OUTLINE("mdi2v-volcano-outline", "F1A84"),
     VOLLEYBALL("mdi2v-volleyball", "F09B4"),
+    VOLUME_EQUAL("mdi2v-volume-equal", "F1B10"),
     VOLUME_HIGH("mdi2v-volume-high", "F057E"),
     VOLUME_LOW("mdi2v-volume-low", "F057F"),
     VOLUME_MEDIUM("mdi2v-volume-medium", "F0580"),
@@ -167,8 +192,8 @@ public enum MaterialDesignV implements Ikon {
         throw new IllegalArgumentException("Icon description '" + description + "' is invalid!");
     }
 
-    private String description;
-    private int code;
+    private final String description;
+    private final int code;
 
     MaterialDesignV(String description, String code) {
         this.description = description;

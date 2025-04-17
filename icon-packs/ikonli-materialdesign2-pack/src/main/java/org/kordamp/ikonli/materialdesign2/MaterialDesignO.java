@@ -30,17 +30,34 @@ public enum MaterialDesignO implements Ikon {
     OCTAGON("mdi2o-octagon", "F03C3"),
     OCTAGON_OUTLINE("mdi2o-octagon-outline", "F03C4"),
     OCTAGRAM("mdi2o-octagram", "F06F9"),
+    OCTAGRAM_EDIT("mdi2o-octagram-edit", "F1C34"),
+    OCTAGRAM_EDIT_OUTLINE("mdi2o-octagram-edit-outline", "F1C35"),
+    OCTAGRAM_MINUS("mdi2o-octagram-minus", "F1C36"),
+    OCTAGRAM_MINUS_OUTLINE("mdi2o-octagram-minus-outline", "F1C37"),
     OCTAGRAM_OUTLINE("mdi2o-octagram-outline", "F0775"),
+    OCTAGRAM_PLUS("mdi2o-octagram-plus", "F1C38"),
+    OCTAGRAM_PLUS_OUTLINE("mdi2o-octagram-plus-outline", "F1C39"),
+    OCTAHEDRON("mdi2o-octahedron", "F1950"),
+    OCTAHEDRON_OFF("mdi2o-octahedron-off", "F1951"),
     ODNOKLASSNIKI("mdi2o-odnoklassniki", "F03C5"),
     OFFER("mdi2o-offer", "F121B"),
     OFFICE_BUILDING("mdi2o-office-building", "F0991"),
+    OFFICE_BUILDING_COG("mdi2o-office-building-cog", "F1949"),
+    OFFICE_BUILDING_COG_OUTLINE("mdi2o-office-building-cog-outline", "F194A"),
     OFFICE_BUILDING_MARKER("mdi2o-office-building-marker", "F1520"),
     OFFICE_BUILDING_MARKER_OUTLINE("mdi2o-office-building-marker-outline", "F1521"),
+    OFFICE_BUILDING_MINUS("mdi2o-office-building-minus", "F1BAA"),
+    OFFICE_BUILDING_MINUS_OUTLINE("mdi2o-office-building-minus-outline", "F1BAB"),
     OFFICE_BUILDING_OUTLINE("mdi2o-office-building-outline", "F151F"),
+    OFFICE_BUILDING_PLUS("mdi2o-office-building-plus", "F1BA8"),
+    OFFICE_BUILDING_PLUS_OUTLINE("mdi2o-office-building-plus-outline", "F1BA9"),
+    OFFICE_BUILDING_REMOVE("mdi2o-office-building-remove", "F1BAC"),
+    OFFICE_BUILDING_REMOVE_OUTLINE("mdi2o-office-building-remove-outline", "F1BAD"),
     OIL("mdi2o-oil", "F03C7"),
     OIL_LAMP("mdi2o-oil-lamp", "F0F19"),
     OIL_LEVEL("mdi2o-oil-level", "F1053"),
     OIL_TEMPERATURE("mdi2o-oil-temperature", "F0FF8"),
+    OM("mdi2o-om", "F0973"),
     OMEGA("mdi2o-omega", "F03C9"),
     ONE_UP("mdi2o-one-up", "F0BAD"),
     ONEPASSWORD("mdi2o-onepassword", "F0881"),
@@ -76,8 +93,8 @@ public enum MaterialDesignO implements Ikon {
         throw new IllegalArgumentException("Icon description '" + description + "' is invalid!");
     }
 
-    private String description;
-    private int code;
+    private final String description;
+    private final int code;
 
     MaterialDesignO(String description, String code) {
         this.description = description;

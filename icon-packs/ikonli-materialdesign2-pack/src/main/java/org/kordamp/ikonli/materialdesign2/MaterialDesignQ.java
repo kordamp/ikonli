@@ -35,6 +35,7 @@ public enum MaterialDesignQ implements Ikon {
     QUALITY_HIGH("mdi2q-quality-high", "F0435"),
     QUALITY_LOW("mdi2q-quality-low", "F0A0C"),
     QUALITY_MEDIUM("mdi2q-quality-medium", "F0A0D"),
+    QUEUE_FIRST_IN_LAST_OUT("mdi2q-queue-first-in-last-out", "F1CAF"),
     QUORA("mdi2q-quora", "F0D29");
 
     public static MaterialDesignQ findByDescription(String description) {
@@ -46,8 +47,8 @@ public enum MaterialDesignQ implements Ikon {
         throw new IllegalArgumentException("Icon description '" + description + "' is invalid!");
     }
 
-    private String description;
-    private int code;
+    private final String description;
+    private final int code;
 
     MaterialDesignQ(String description, String code) {
         this.description = description;

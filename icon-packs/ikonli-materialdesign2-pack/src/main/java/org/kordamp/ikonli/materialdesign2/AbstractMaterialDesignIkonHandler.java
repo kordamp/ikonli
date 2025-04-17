@@ -26,7 +26,7 @@ import java.net.URL;
  * @author Andres Almiray
  */
 public abstract class AbstractMaterialDesignIkonHandler extends AbstractIkonHandler {
-    private static final String FONT_RESOURCE = "/META-INF/resources/materialdesignicons2/5.8.55/fonts/materialdesignicons-webfont.ttf";
+    private static final String FONT_RESOURCE = "/META-INF/resources/materialdesign2/7.4.47/fonts/materialdesignicons-webfont.ttf";
 
     @Override
     public URL getFontResource() {

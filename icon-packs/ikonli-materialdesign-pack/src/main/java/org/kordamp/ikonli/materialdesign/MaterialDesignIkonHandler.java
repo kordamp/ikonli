@@ -32,7 +32,7 @@ import java.net.URL;
 @ServiceProviderFor(IkonHandler.class)
 @Component(service = IkonHandler.class)
 public class MaterialDesignIkonHandler extends AbstractIkonHandler {
-    private static final String FONT_RESOURCE = "/META-INF/resources/materialdesignicons/1.7.22/fonts/MaterialDesignIcons.ttf";
+    private static final String FONT_RESOURCE = "/META-INF/resources/materialdesign/1.7.22/fonts/MaterialDesignIcons.ttf";
 
     @Override
     public boolean supports(String description) {

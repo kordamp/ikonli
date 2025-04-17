@@ -26,6 +26,7 @@ public enum MaterialDesignK implements Ikon {
     KABADDI("mdi2k-kabaddi", "F0D87"),
     KANGAROO("mdi2k-kangaroo", "F1558"),
     KARATE("mdi2k-karate", "F082C"),
+    KAYAKING("mdi2k-kayaking", "F08AF"),
     KEG("mdi2k-keg", "F0305"),
     KETTLE("mdi2k-kettle", "F05FA"),
     KETTLE_ALERT("mdi2k-kettle-alert", "F1317"),
@@ -33,10 +34,13 @@ public enum MaterialDesignK implements Ikon {
     KETTLE_OFF("mdi2k-kettle-off", "F131B"),
     KETTLE_OFF_OUTLINE("mdi2k-kettle-off-outline", "F131C"),
     KETTLE_OUTLINE("mdi2k-kettle-outline", "F0F56"),
+    KETTLE_POUR_OVER("mdi2k-kettle-pour-over", "F173C"),
     KETTLE_STEAM("mdi2k-kettle-steam", "F1319"),
     KETTLE_STEAM_OUTLINE("mdi2k-kettle-steam-outline", "F131A"),
     KETTLEBELL("mdi2k-kettlebell", "F1300"),
     KEY("mdi2k-key", "F0306"),
+    KEY_ALERT("mdi2k-key-alert", "F1983"),
+    KEY_ALERT_OUTLINE("mdi2k-key-alert-outline", "F1984"),
     KEY_ARROW_RIGHT("mdi2k-key-arrow-right", "F1312"),
     KEY_CHAIN("mdi2k-key-chain", "F1574"),
     KEY_CHAIN_VARIANT("mdi2k-key-chain-variant", "F1575"),
@@ -53,6 +57,7 @@ public enum MaterialDesignK implements Ikon {
     KEYBOARD_BACKSPACE("mdi2k-keyboard-backspace", "F030D"),
     KEYBOARD_CAPS("mdi2k-keyboard-caps", "F030E"),
     KEYBOARD_CLOSE("mdi2k-keyboard-close", "F030F"),
+    KEYBOARD_CLOSE_OUTLINE("mdi2k-keyboard-close-outline", "F1C00"),
     KEYBOARD_ESC("mdi2k-keyboard-esc", "F12B7"),
     KEYBOARD_F1("mdi2k-keyboard-f1", "F12AB"),
     KEYBOARD_F10("mdi2k-keyboard-f10", "F12B4"),
@@ -74,12 +79,18 @@ public enum MaterialDesignK implements Ikon {
     KEYBOARD_SETTINGS_OUTLINE("mdi2k-keyboard-settings-outline", "F09FA"),
     KEYBOARD_SPACE("mdi2k-keyboard-space", "F1050"),
     KEYBOARD_TAB("mdi2k-keyboard-tab", "F0312"),
+    KEYBOARD_TAB_REVERSE("mdi2k-keyboard-tab-reverse", "F0325"),
     KEYBOARD_VARIANT("mdi2k-keyboard-variant", "F0313"),
     KHANDA("mdi2k-khanda", "F10FD"),
     KICKSTARTER("mdi2k-kickstarter", "F0745"),
+    KITE("mdi2k-kite", "F1985"),
+    KITE_OUTLINE("mdi2k-kite-outline", "F1986"),
+    KITESURFING("mdi2k-kitesurfing", "F1744"),
     KLINGON("mdi2k-klingon", "F135B"),
     KNIFE("mdi2k-knife", "F09FB"),
     KNIFE_MILITARY("mdi2k-knife-military", "F09FC"),
+    KNOB("mdi2k-knob", "F1B96"),
+    KOALA("mdi2k-koala", "F173F"),
     KODI("mdi2k-kodi", "F0314"),
     KUBERNETES("mdi2k-kubernetes", "F10FE");
 
@@ -92,8 +103,8 @@ public enum MaterialDesignK implements Ikon {
         throw new IllegalArgumentException("Icon description '" + description + "' is invalid!");
     }
 
-    private String description;
-    private int code;
+    private final String description;
+    private final int code;
 
     MaterialDesignK(String description, String code) {
         this.description = description;

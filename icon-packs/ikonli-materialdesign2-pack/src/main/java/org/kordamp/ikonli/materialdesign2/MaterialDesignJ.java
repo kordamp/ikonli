@@ -30,7 +30,6 @@ public enum MaterialDesignJ implements Ikon {
     JIRA("mdi2j-jira", "F0303"),
     JQUERY("mdi2j-jquery", "F087D"),
     JSFIDDLE("mdi2j-jsfiddle", "F0304"),
-    JUDAISM("mdi2j-judaism", "F097A"),
     JUMP_ROPE("mdi2j-jump-rope", "F12FF");
 
     public static MaterialDesignJ findByDescription(String description) {
@@ -42,8 +41,8 @@ public enum MaterialDesignJ implements Ikon {
         throw new IllegalArgumentException("Icon description '" + description + "' is invalid!");
     }
 
-    private String description;
-    private int code;
+    private final String description;
+    private final int code;
 
     MaterialDesignJ(String description, String code) {
         this.description = description;

@@ -23,7 +23,6 @@ import org.kordamp.ikonli.Ikon;
  * @author Andres Almiray
  */
 public enum MaterialDesignY implements Ikon {
-    Y_COMBINATOR("mdi2y-y-combinator", "F0624"),
     YAHOO("mdi2y-yahoo", "F0B4F"),
     YEAST("mdi2y-yeast", "F05C1"),
     YIN_YANG("mdi2y-yin-yang", "F0680"),
@@ -44,8 +43,8 @@ public enum MaterialDesignY implements Ikon {
         throw new IllegalArgumentException("Icon description '" + description + "' is invalid!");
     }
 
-    private String description;
-    private int code;
+    private final String description;
+    private final int code;
 
     MaterialDesignY(String description, String code) {
         this.description = description;

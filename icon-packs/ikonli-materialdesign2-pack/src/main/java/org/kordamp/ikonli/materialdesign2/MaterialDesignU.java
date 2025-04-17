@@ -30,10 +30,13 @@ public enum MaterialDesignU implements Ikon {
     ULTRA_HIGH_DEFINITION("mdi2u-ultra-high-definition", "F07F9"),
     UMBRACO("mdi2u-umbraco", "F0549"),
     UMBRELLA("mdi2u-umbrella", "F054A"),
+    UMBRELLA_BEACH("mdi2u-umbrella-beach", "F188A"),
+    UMBRELLA_BEACH_OUTLINE("mdi2u-umbrella-beach-outline", "F188B"),
     UMBRELLA_CLOSED("mdi2u-umbrella-closed", "F09B0"),
     UMBRELLA_CLOSED_OUTLINE("mdi2u-umbrella-closed-outline", "F13E2"),
     UMBRELLA_CLOSED_VARIANT("mdi2u-umbrella-closed-variant", "F13E1"),
     UMBRELLA_OUTLINE("mdi2u-umbrella-outline", "F054B"),
+    UNDERWEAR_OUTLINE("mdi2u-underwear-outline", "F1D0F"),
     UNDO("mdi2u-undo", "F054C"),
     UNDO_VARIANT("mdi2u-undo-variant", "F054D"),
     UNFOLD_LESS_HORIZONTAL("mdi2u-unfold-less-horizontal", "F054E"),
@@ -47,18 +50,23 @@ public enum MaterialDesignU implements Ikon {
     UNICYCLE("mdi2u-unicycle", "F15E5"),
     UNITY("mdi2u-unity", "F06AF"),
     UNREAL("mdi2u-unreal", "F09B1"),
-    UNTAPPD("mdi2u-untappd", "F0551"),
     UPDATE("mdi2u-update", "F06B0"),
     UPLOAD("mdi2u-upload", "F0552"),
+    UPLOAD_BOX("mdi2u-upload-box", "F1D10"),
+    UPLOAD_BOX_OUTLINE("mdi2u-upload-box-outline", "F1D11"),
+    UPLOAD_CIRCLE("mdi2u-upload-circle", "F1D12"),
+    UPLOAD_CIRCLE_OUTLINE("mdi2u-upload-circle-outline", "F1D13"),
     UPLOAD_LOCK("mdi2u-upload-lock", "F1373"),
     UPLOAD_LOCK_OUTLINE("mdi2u-upload-lock-outline", "F1374"),
     UPLOAD_MULTIPLE("mdi2u-upload-multiple", "F083D"),
+    UPLOAD_MULTIPLE_OUTLINE("mdi2u-upload-multiple-outline", "F1D14"),
     UPLOAD_NETWORK("mdi2u-upload-network", "F06F6"),
     UPLOAD_NETWORK_OUTLINE("mdi2u-upload-network-outline", "F0CD8"),
     UPLOAD_OFF("mdi2u-upload-off", "F10C6"),
     UPLOAD_OFF_OUTLINE("mdi2u-upload-off-outline", "F10C7"),
     UPLOAD_OUTLINE("mdi2u-upload-outline", "F0E07"),
     USB("mdi2u-usb", "F0553"),
+    USB_C_PORT("mdi2u-usb-c-port", "F1CBF"),
     USB_FLASH_DRIVE("mdi2u-usb-flash-drive", "F129E"),
     USB_FLASH_DRIVE_OUTLINE("mdi2u-usb-flash-drive-outline", "F129F"),
     USB_PORT("mdi2u-usb-port", "F11F0");
@@ -72,8 +80,8 @@ public enum MaterialDesignU implements Ikon {
         throw new IllegalArgumentException("Icon description '" + description + "' is invalid!");
     }
 
-    private String description;
-    private int code;
+    private final String description;
+    private final int code;
 
     MaterialDesignU(String description, String code) {
         this.description = description;

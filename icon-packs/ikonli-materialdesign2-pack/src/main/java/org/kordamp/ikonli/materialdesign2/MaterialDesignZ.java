@@ -51,8 +51,8 @@ public enum MaterialDesignZ implements Ikon {
         throw new IllegalArgumentException("Icon description '" + description + "' is invalid!");
     }
 
-    private String description;
-    private int code;
+    private final String description;
+    private final int code;
 
     MaterialDesignZ(String description, String code) {
         this.description = description;
