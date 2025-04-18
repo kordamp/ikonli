@@ -132,15 +132,16 @@ subprojects { subproj ->
             annotationProcessor "org.kordamp.jipsy:jipsy-processor:${jipsyVersion}"
         }
 
-        tasks.processResources.dependsOn(tasks.register('generateNativeImageResource', org.kordamp.ikonli.gradle.NativeImageResourceGeneratorTask) { t ->
+        def generateNativeImageResource = tasks.register('generateNativeImageResource', org.kordamp.ikonli.gradle.NativeImageResourceGeneratorTask) {
             String ipn = project.name - 'ikonli-' - '-pack'
 
-            t.outputDirectory.set(file('build/resources/main/META-INF/native-image'))
-            t.groupId.set(project.group)
-            t.artifactId.set(project.name)
-            t.version.set(project."${ipn}Version")
-            t.iconPackName.set(ipn)
-        })
+            outputDirectory = layout.buildDirectory.dir("generated/native-image")
+            groupId = project.group
+            artifactId = project.name
+            version = project."${ipn}Version"
+            iconPackName = ipn
+        }
+        sourceSets.main.resources.srcDir(generateNativeImageResource)
     }
 }
 
