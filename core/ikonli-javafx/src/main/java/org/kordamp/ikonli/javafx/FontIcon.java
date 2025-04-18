@@ -19,6 +19,8 @@ package org.kordamp.ikonli.javafx;
 
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 import javafx.css.CssMetaData;
 import javafx.css.StyleOrigin;
 import javafx.css.Styleable;
@@ -53,6 +55,7 @@ public class FontIcon extends Text implements Icon {
     protected StyleableIntegerProperty iconSize;
     protected StyleableObjectProperty<Paint> iconColor;
     private StyleableObjectProperty<Ikon> iconCode;
+    private final StringProperty units;
 
     public FontIcon() {
         getStyleClass().setAll("ikonli-font-icon");
@@ -87,6 +90,8 @@ public class FontIcon extends Text implements Icon {
                 }
             }
         });
+
+        units = new SimpleStringProperty("px");
     }
 
     public FontIcon(String iconCode) {
@@ -97,6 +102,10 @@ public class FontIcon extends Text implements Icon {
     public FontIcon(Ikon iconCode) {
         this();
         setIconCode(iconCode);
+    }
+
+    public StringProperty unitsProperty() {
+        return units;
     }
 
     @Override
@@ -133,11 +142,16 @@ public class FontIcon extends Text implements Icon {
                 Font font = FontIcon.this.getFont();
                 if (Math.abs(font.getSize() - n.doubleValue()) >= EPSILON) {
                     FontIcon.this.setFont(Font.font(font.getFamily(), n.doubleValue()));
-                    FontIcon.this.setStyle(normalizeStyle(getStyle(), "-fx-font-size", n.intValue() + "px"));
+                    FontIcon.this.setStyle(normalizeStyle(getStyle(), "-fx-font-size", n.intValue() + resolveUnits()));
                 }
             });
         }
         return iconSize;
+    }
+
+    private String resolveUnits() {
+        String u = units.get();
+        return null == u || u.isBlank() ? "px" : u;
     }
 
     @Override

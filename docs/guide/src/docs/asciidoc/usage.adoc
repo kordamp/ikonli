@@ -85,6 +85,10 @@ di-java:32
 di-java:64:BLUE
 ----
 
+.Icon Size Units
+
+The default unit for icon size is _px_. You may set a different value using the `units` property, such as _em_.
+
 .Stylable Properties
 
 `{api_link_fonticon_javafx}` exposes properties that can be styled using CSS. It defines a node class named `ikonli-font-icon`.
