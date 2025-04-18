@@ -4,7 +4,7 @@
 :project-repo:    maven
 :project-name:    ikonli
 :project-group:   org.kordamp.ikonli
-:project-version: 12.3.1
+:project-version: 12.4.0
 
 image:https://img.shields.io/github/actions/workflow/status/{project-owner}/{project-name}/early-access.yml?branch=master&logo=github&label=Build["Build Status", link="https://github.com/{project-owner}/{project-name}/actions"]
 image:https://img.shields.io/maven-central/v/{project-group}/{project-name}-core.svg?label=maven[link="https://search.maven.org/#search|ga|1|{project-group}"]
