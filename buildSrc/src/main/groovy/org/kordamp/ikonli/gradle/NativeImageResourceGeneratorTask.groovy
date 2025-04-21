@@ -20,45 +20,35 @@ package org.kordamp.ikonli.gradle
 import groovy.transform.CompileStatic
 import org.gradle.api.DefaultTask
 import org.gradle.api.file.DirectoryProperty
-import org.gradle.api.model.ObjectFactory
 import org.gradle.api.provider.Property
 import org.gradle.api.tasks.Input
 import org.gradle.api.tasks.OutputDirectory
 import org.gradle.api.tasks.TaskAction
 
-import javax.inject.Inject
 import java.nio.file.Files
 
 @CompileStatic
-class NativeImageResourceGeneratorTask extends DefaultTask {
+abstract class NativeImageResourceGeneratorTask extends DefaultTask {
     @OutputDirectory
-    final DirectoryProperty outputDirectory
+    abstract DirectoryProperty getOutputDirectory()
 
     @Input
-    final Property<String> groupId
+    abstract Property<String> getGroupId()
 
     @Input
-    final Property<String> artifactId
+    abstract  Property<String> getArtifactId()
 
     @Input
-    final Property<String> version
+    abstract  Property<String> getVersion()
 
     @Input
-    final Property<String> iconPackName
-
-    @Inject
-    NativeImageResourceGeneratorTask(ObjectFactory objects) {
-        outputDirectory = objects.directoryProperty()
-        groupId = objects.property(String)
-        artifactId = objects.property(String)
-        version = objects.property(String)
-        iconPackName = objects.property(String)
-    }
+    abstract  Property<String> getIconPackName()
 
     @TaskAction
     void generateResourceConfigFile() {
-        File resourceConfig = outputDirectory.get().file("${groupId.get()}/${artifactId.get()}/resources-config.json").asFile
-        Files.createDirectories(resourceConfig.parentFile.toPath())
+        def outputDir = outputDirectory.get().asFile.toPath()
+        def resourceConfig = outputDir.resolve("META-INF/native-image/${groupId.get()}/${artifactId.get()}/resources-config.json")
+        Files.createDirectories(resourceConfig.parent)
 
         resourceConfig.text = """
 {
