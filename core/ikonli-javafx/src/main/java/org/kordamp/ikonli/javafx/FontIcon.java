@@ -208,7 +208,11 @@ public class FontIcon extends Text implements Icon {
             };
 
             iconCode.addListener((v, o, n) -> {
-                if (!iconCode.isBound()) {
+                // n is null when CSS resets the property to its declared initial value
+                // (StyleableProperties.ICON_CODE declares null) during a stylesheet change;
+                // the strict public setter must not see it. Same guard as the constructor's
+                // iconCodeProperty() listener.
+                if (!iconCode.isBound() && n != null) {
                     FontIcon.this.setIconCode(n);
                 }
             });
