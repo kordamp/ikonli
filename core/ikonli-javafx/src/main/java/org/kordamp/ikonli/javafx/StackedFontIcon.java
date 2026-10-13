@@ -289,8 +289,8 @@ public class StackedFontIcon extends StackPane implements Icon {
                 SizeConverter.getInstance(), 16.0) {
 
                 @Override
-                public boolean isSettable(StackedFontIcon fontIcon) {
-                    return true;
+                public boolean isSettable(StackedFontIcon node) {
+                    return node.iconSize == null || !node.iconSize.isBound();
                 }
 
                 @Override
@@ -305,7 +305,7 @@ public class StackedFontIcon extends StackPane implements Icon {
 
                 @Override
                 public boolean isSettable(StackedFontIcon node) {
-                    return true;
+                    return node.iconColor == null || !node.iconColor.isBound();
                 }
 
                 @Override

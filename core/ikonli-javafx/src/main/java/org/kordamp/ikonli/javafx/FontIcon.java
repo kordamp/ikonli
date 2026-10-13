@@ -343,8 +343,8 @@ public class FontIcon extends Text implements Icon {
                 SizeConverter.getInstance(), 8) {
 
                 @Override
-                public boolean isSettable(FontIcon icon) {
-                    return true;
+                public boolean isSettable(FontIcon node) {
+                    return node.iconSize == null || !node.iconSize.isBound();
                 }
 
                 @Override
@@ -359,7 +359,7 @@ public class FontIcon extends Text implements Icon {
 
                 @Override
                 public boolean isSettable(FontIcon node) {
-                    return true;
+                    return node.iconColor == null || !node.iconColor.isBound();
                 }
 
                 @Override
@@ -374,7 +374,7 @@ public class FontIcon extends Text implements Icon {
 
                 @Override
                 public boolean isSettable(FontIcon node) {
-                    return true;
+                    return node.iconCode == null || !node.iconCode.isBound();
                 }
 
                 @Override
